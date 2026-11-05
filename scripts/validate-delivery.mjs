@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 export const root = fileURLToPath(new URL('../', import.meta.url));
 const dataNames = ['method-map.json', 'method-map.csv', 'atlas-methods.json', 'atlas-methods.csv', 'atlas-source-notes.json', 'dynamic-scenes.json', 'primary-verification.json', 'delivery-audit.json'];
-const scriptNames = ['build-atlas.mjs', 'validate-delivery.mjs', 'viewer.test.mjs', 'viewer.template.html', 'package.json', 'package-lock.json', 'CORPUS.md'];
+const scriptNames = ['build-atlas.mjs', 'build-repo-deepdives.mjs', 'validate-delivery.mjs', 'validate-repo-deepdives.mjs', 'viewer.test.mjs', 'implementation.test.mjs', 'browser-test-utils.mjs', 'viewer.template.html', 'implementation.template.html', 'package.json', 'package-lock.json', 'CORPUS.md'];
 const walk = directory => fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => entry.isDirectory() ? walk(path.join(directory, entry.name)) : [path.join(directory, entry.name)]);
 
 export function publicationFiles() {
@@ -64,12 +64,14 @@ export function validateDelivery() {
       const content = text.replace(/```[\s\S]*?```/g, '');
       for (const match of content.matchAll(/\]\((<[^>]+>|[^)\s]+)(?:\s+"[^"]*")?\)/g)) checkLink(file, match[1]);
     }
-    if (file.endsWith('index.html')) {
+    if (file.endsWith('index.html') || file.endsWith('implementation-atlas.html')) {
       for (const match of text.split('<script type="application/json"')[0].matchAll(/(?:href|src)="([^"]+)"/g)) checkLink(file, match[1]);
       assert.ok(!/<script[^>]+src=|<link[^>]+(?:fonts|stylesheet)/i.test(text), 'Viewer has external script/style dependency');
-      const match = text.match(/<script type="application\/json" id="atlas-data">([\s\S]*?)<\/script>/);
-      assert.ok(match, 'Missing embedded offline data');
-      assert.deepEqual(JSON.parse(match[1]), atlas, 'Embedded data differs from public method JSON');
+      if(file.endsWith('index.html')){
+        const match = text.match(/<script type="application\/json" id="atlas-data">([\s\S]*?)<\/script>/);
+        assert.ok(match, 'Missing embedded offline data');
+        assert.deepEqual(JSON.parse(match[1]), atlas, 'Embedded data differs from public method JSON');
+      }
     }
   }
   assert.deepEqual(errors, [], errors.join('\n'));

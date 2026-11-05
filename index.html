@@ -40,7 +40,7 @@
 </div></header>
 <div class="shell">
 <nav aria-label="图谱章节">
-  <button data-view="panorama" aria-current="page">技术全景</button><button data-view="timeline">发展时间线</button><button data-view="methods">算法与方法</button><button data-view="loops">动态闭环</button><button data-view="evidence">证据与选型</button><button data-view="reading">深入阅读</button>
+  <button data-view="panorama" aria-current="page">技术全景</button><button data-view="timeline">发展时间线</button><button data-view="methods">算法与方法</button><button data-view="loops">动态闭环</button><button data-view="implementations">开源实现</button><button data-view="evidence">证据与选型</button><button data-view="reading">深入阅读</button>
 </nav>
 <main>
 <section id="panorama" class="view">
@@ -62,6 +62,16 @@
     <svg id="flow" class="flow-svg" viewBox="0 0 920 360" role="group" aria-label="六阶段递归机制流程"></svg>
     <div id="step-detail" class="step-detail" aria-live="polite"></div><div class="loop-steps" id="all-steps"></div><p id="scene-note" class="scene-note"></p><a id="scene-source">机制来源 / 详细解释</a>
   </div>
+</section>
+<section id="implementations" class="view" hidden>
+  <div class="panel"><h2>六个近期活跃、较受关注的公开实现</h2><p class="muted">2026-11-05 star 快照，不是全站排名。固定 commit、72 个源码模块、架构与流程图、理论与操作说明。非商业许可项目单列，不冒充统一 OSI 开源。</p><div class="grid">
+    <article class="card"><h3>GenericAgent · 14,395★</h3><p>最小模型—工具循环与文件化经验资产；不要把 self-evolving 定位直接当元递归证明。</p><a href="docs/repo_deepdive/implementation-atlas.html?repo=genericagent">架构与动态路径</a> · <a href="docs/repo_deepdive/cases/genericagent.md">详细讲解</a></article>
+    <article class="card"><h3>GEPA · 7,288★</h3><p>反思变异、评估适配与样本级互补候选。外层优化器与底层模型通常冻结。</p><a href="docs/repo_deepdive/implementation-atlas.html?repo=gepa">架构与动态路径</a> · <a href="docs/repo_deepdive/cases/gepa.md">详细讲解</a></article>
+    <article class="card"><h3>SoL-Pi · 3,639★</h3><p>四种 opt-in 执行/信息流优化，证据可召回；发布 runtime 不等于全部自动研究器。</p><a href="docs/repo_deepdive/implementation-atlas.html?repo=sol-pi">架构与动态路径</a> · <a href="docs/repo_deepdive/cases/sol-pi.md">详细讲解</a></article>
+    <article class="card"><h3>HyperAgents · 2,867★</h3><p>task/meta agent、patch 与 archive；默认父代选择和可选可编辑机制要分开。非商业许可。</p><a href="docs/repo_deepdive/implementation-atlas.html?repo=hyperagents">架构与动态路径</a> · <a href="docs/repo_deepdive/cases/hyperagents.md">详细讲解</a></article>
+    <article class="card"><h3>RRSI · 1,725★</h3><p>critic、性能 floor、费用/novelty 和 domain guards，限制 Harness 搜索方向。</p><a href="docs/repo_deepdive/implementation-atlas.html?repo=rrsi">架构与动态路径</a> · <a href="docs/repo_deepdive/cases/rrsi.md">详细讲解</a></article>
+    <article class="card"><h3>OpenRSI · 872★</h3><p>按机器学习工程关联性补选。解释 Evo 实际搜索与 Gym/ERL 分层，非商业与上游许可分别说明。</p><a href="docs/repo_deepdive/implementation-atlas.html?repo=openrsi">架构与动态路径</a> · <a href="docs/repo_deepdive/cases/openrsi.md">详细讲解</a></article>
+  </div><p><a href="docs/repo_deepdive/README.md">完整实现索引</a> · <a href="docs/repo_deepdive/overview.md">横向方法与实践选型</a></p><p class="muted">本次验证固定源码、锚点、文档和图，不冒称已运行研究仓库或复现论文 benchmark。企业内实践在授权本地位置交付，不进入公开仓库。</p></div>
 </section>
 <section id="evidence" class="view" hidden>
   <div class="panel"><h2>选择算法前，先选择可信反馈</h2><div class="table-wrap"><table><thead><tr><th>任务条件</th><th>优先尝试</th><th>必须检查</th></tr></thead><tbody><tr><td>答案/执行真值便宜</td><td>自训练、可验证 RL、自博弈任务生成</td><td>监督来源、奖励漏洞、采样与训练成本</td></tr><tr><td>固定模型但重复犯同类错误</td><td>反思、经验提炼、技能积累</td><td>记忆寿命、语义正确、负迁移</td></tr><tr><td>工具、路由、上下文是瓶颈</td><td>小范围 Harness 编辑与回归</td><td>可变接口、组件贡献、跨模型适配</td></tr><tr><td>实验昂贵但有历史</td><td>受约束回放与研究经验继承</td><td>支持集外失效、离线/在线排名、总成本</td></tr><tr><td>模型与框架相互制约</td><td>有预算归因的共演化</td><td>旧/新模型 × 旧/新 Harness 交叉矩阵</td></tr><tr><td>要声称“更会改进”</td><td>改进器演化与配对继续实验</td><td>同起点、同预算、后继收益与留出依赖</td></tr></tbody></table></div></div>
@@ -89,7 +99,7 @@
   const $=id=>document.getElementById(id);
   const escape=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const kinds={method:'方法',benchmark:'基准/环境',framework:'框架',theory:'理论/议程'};
-  const chapters=['panorama','timeline','methods','loops','evidence','reading'];
+  const chapters=['panorama','timeline','methods','loops','implementations','evidence','reading'];
   const urlSafe=value=>{const url=new URL(value,location.href);if(!['https:','http:','file:'].includes(url.protocol))throw new Error('不支持的链接协议');if(location.hostname==='hyfine.github.io'&&!/^(?:https?:|#)/.test(value)&&url.pathname.endsWith('.md')){const prefix='/rsi-atlas/';if(!url.pathname.startsWith(prefix))throw new Error('文档链接越出图谱路径');return 'https://github.com/hyfine/rsi-atlas/blob/main/'+escape(url.pathname.slice(prefix.length)+url.hash);}return escape(value);};
   const tags=method=>method.families.map(code=>'<span class="tag">'+escape(code+' · '+atlas.families[code].name)+'</span>').join('')+'<span class="tag boundary">'+escape(kinds[method.kind]??method.kind)+'</span>'+(method.in_recent_window?'<span class="tag recent">近一年首发</span>':'');
   $('method-count').textContent=atlas.methods.length;

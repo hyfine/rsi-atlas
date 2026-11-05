@@ -2,8 +2,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+execFileSync(process.execPath,[path.join(root,'scripts/build-repo-deepdives.mjs')],{cwd:root,stdio:'inherit'});
 const read = name => JSON.parse(fs.readFileSync(path.join(root, name), 'utf8'));
 const base = read('data/method-map.json');
 const notes = read('data/atlas-source-notes.json');

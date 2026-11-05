@@ -12,6 +12,7 @@
 |---|---|
 | 先看清领域如何发展、各路线如何连接 | [技术全景](docs/zh/01_RSI_Technical_Panorama.md) · [动态全景站](https://hyfine.github.io/rsi-atlas/) |
 | 各算法究竟更新什么、如何实现、怎样选型 | [算法手册](docs/zh/04_Algorithm_Handbook.md) |
+| 热门公开实现怎样把机制落到代码 | [六仓库源码深读](docs/repo_deepdive/README.md) · [架构与动态路径](docs/repo_deepdive/implementation-atlas.html) |
 | 最近一年有哪些方法，最新论文是什么 | [近一年研究与最新方法](docs/zh/06_Latest_Year_Research.md) |
 | 训练、自博弈、环境演化与自动研究 | [训练与环境专题](docs/zh/chapters/02_Training_Environments_and_AI_Research.md) |
 | 记忆、技能、工作流、Harness 演化 | [Agent 与 Harness 专题](docs/zh/chapters/03_Agent_Skills_and_Harness.md) |

@@ -1,10 +1,10 @@
 {
   "status": "passed",
-  "checked_at": "2026-11-05T10:48:31.034Z",
+  "checked_at": "2026-11-05T11:19:54.148Z",
   "schema_and_links": {
     "ok": true,
-    "publication_files": 82,
-    "local_links_checked": 282,
+    "publication_files": 102,
+    "local_links_checked": 376,
     "methods": 66,
     "recent_methods": 38,
     "dynamic_scenes": 10,
@@ -42,6 +42,12 @@
     {
       "width": 360,
       "height": 780,
+      "view": "implementations",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 360,
+      "height": 780,
       "view": "evidence",
       "horizontal_overflow": false
     },
@@ -78,6 +84,12 @@
     {
       "width": 390,
       "height": 844,
+      "view": "implementations",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
       "view": "evidence",
       "horizontal_overflow": false
     },
@@ -114,6 +126,12 @@
     {
       "width": 1440,
       "height": 900,
+      "view": "implementations",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
       "view": "evidence",
       "horizontal_overflow": false
     },
@@ -150,6 +168,12 @@
     {
       "width": 1600,
       "height": 1000,
+      "view": "implementations",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1600,
+      "height": 1000,
       "view": "evidence",
       "horizontal_overflow": false
     },
@@ -186,6 +210,12 @@
     {
       "width": 1920,
       "height": 1080,
+      "view": "implementations",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
       "view": "evidence",
       "horizontal_overflow": false
     },
@@ -222,6 +252,12 @@
     {
       "width": 2048,
       "height": 1320,
+      "view": "implementations",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 2048,
+      "height": 1320,
       "view": "evidence",
       "horizontal_overflow": false
     },
@@ -233,8 +269,15 @@
     }
   ],
   "runtime_exceptions": [],
-  "visual_review": "selected_dark_screenshots_inspected_at_390_1440; previous_geometry_reviewed_at_2048; theme_switch_and_containment_tested",
-  "screenshot_publication": "ephemeral_local_check_only; not included_in_Git",
+  "visual_review": "public_implementation_screenshots_inspected_at_390_and_1440; main_viewer_geometry_previously_reviewed",
+  "implementation_deepdive": {
+    "public_repositories": 6,
+    "pinned_source_modules": 72,
+    "source_flow_steps": 59,
+    "source_anchors_verified": 170,
+    "research_code_or_paid_models_executed": false,
+    "browser_walkthroughs": "all_six_passed"
+  },
   "screenshot_files": [
     ".delivery-check/panorama-390.png",
     ".delivery-check/loops-390.png",
