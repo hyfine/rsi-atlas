@@ -1,0 +1,1515 @@
+{
+  "as_of": "2026-11-05",
+  "status": "chapter_written_with_explicit_primary_access_gaps",
+  "scope": "Chinese RSI Atlas chapter; only chapter 05 and this evidence file are owned by this task",
+  "read_level_policy": "whole_local_note is not whole_primary_article; tool-returned excerpts are recorded as excerpts; discovery pools are not independent corroboration",
+  "chapter": "../chapters/05_Surveys_Industry_and_Frontiers.md",
+  "date_policy": "first_date is the earliest explicitly verified date for the specified artifact, not necessarily global priority; publication, revision, product release, catalogue addition and snapshot dates are distinct; relative GitHub dates are not converted into absolute dates",
+  "verification": {
+    "experiments_reproduced": false,
+    "terminal_used": false,
+    "execution_agents_used": false,
+    "whole_corpus_read": false,
+    "source_claims_independently_replicated": false,
+    "method": "read_file, fetch_webpage, apply_patch and get_errors only; source interpretation and editor diagnostics, not runtime reproduction",
+    "html_caveat": "Primary HTML bodies and returned appendices were read as delivered by the fetch tool; some tables, formulas, figures and folded appendix content were abbreviated or unavailable. No claim of page-image completeness."
+  },
+  "records": [
+    {
+      "id": "local-ai4ai-notes",
+      "method": "complete local reading",
+      "title": "AI4AI Survey Deep Dive",
+      "primary_url": null,
+      "repo_url": null,
+      "first_date": null,
+      "read_level": "whole_local_note",
+      "sections_read": [
+        "lines 1-600",
+        "lines 601-1200",
+        "lines 1201-1800",
+        "lines 1801-2380"
+      ],
+      "mechanism": "Discovery input for ownership, reliable horizons, taxonomy and industry claims",
+      "evidence": [
+        "All 2380 requested lines read",
+        "Sections 10.1 and 13.3 identify version-sensitive corrections"
+      ],
+      "limitations": [
+        "Secondary notes, not authority",
+        "Previous author's primary-reading and verification claims are not inherited"
+      ],
+      "source_doc": "AI4AI-Survey-Deep-Dive.md"
+    },
+    {
+      "id": "local-rsi-guide",
+      "method": "complete local reading",
+      "title": "The Last AI Built by Humans Chinese guide",
+      "primary_url": null,
+      "repo_url": null,
+      "first_date": null,
+      "read_level": "whole_local_note",
+      "sections_read": [
+        "lines 1-555, including final reading-scope disclaimer"
+      ],
+      "mechanism": "Discovery input for B0/L1-L5 autonomy and improvement-loop definitions",
+      "evidence": [
+        "Section 5.2 says eight components but lists nine",
+        "Final disclaimer limits primary close reading to abstract and sections 1-2.3"
+      ],
+      "limitations": [
+        "Version-sensitive metadata",
+        "Later chapter summaries are explicitly indirect"
+      ],
+      "source_doc": "recursive-self-improvement-survey-guide.md"
+    },
+    {
+      "id": "discovery-kaiwu5",
+      "method": "direct companion repository and website reading",
+      "title": "Awesome-AI4AI",
+      "primary_url": "https://github.com/KaiWU5/Awesome-AI4AI",
+      "repo_url": "https://github.com/KaiWU5/Awesome-AI4AI",
+      "first_date": null,
+      "read_level": "discovery_repository_and_companion_site",
+      "sections_read": [
+        "README scope and collections",
+        "current catalogue metrics",
+        "companion website",
+        "EVIDENCE.md"
+      ],
+      "mechanism": "Discovery index separating benchmarks, harnesses and models, plus a separate ownership and evidence audit",
+      "evidence": [
+        "Visible catalogue header and site report 965 papers",
+        "Citation-verification paragraph uses 773/981, with six retained older counts and 202 without verified citation count",
+        "Collection counts 449 benchmarks, 596 harness and 213 model entries overlap",
+        "Visible refresh 2026-11-03; commit c10e4fd680771e1cd2598271d43ee94111e133aa"
+      ],
+      "limitations": [
+        "965 versus 981 remains unresolved: underlying records were not recomputed at one pinned commit",
+        "Original survey corpus of 223 papers, audit of 35 systems and live catalogue are different denominators",
+        "Repeated inclusion is not independent corroboration"
+      ],
+      "source_doc": "AI4AI-Survey-Deep-Dive.md; https://kaiwu5.github.io/Awesome-AI4AI/"
+    },
+    {
+      "id": "discovery-pinkbubblebubble",
+      "method": "direct repository reading following Bing discovery",
+      "title": "Awesome Recursive Self-Improvement",
+      "primary_url": "https://github.com/pinkbubblebubble/awesome-rsi",
+      "repo_url": "https://github.com/pinkbubblebubble/awesome-rsi",
+      "first_date": null,
+      "read_level": "discovery_repository",
+      "sections_read": [
+        "Scope and labels",
+        "Inclusion decision",
+        "Surveys",
+        "Methods",
+        "Evaluation",
+        "Safety",
+        "Harnesses",
+        "Engineering reports",
+        "Related collections"
+      ],
+      "mechanism": "RSI, Self-improvement and Enabler labels organized around persistent surfaces, evaluation and later reuse",
+      "evidence": [
+        "README last reviewed 2026-10-31",
+        "Visible commit 9ca9894be723f7d95fae0dbc012e1e8b2e5a184b",
+        "Separates direct longitudinal benchmarks from downstream taskbeds and safety evaluations",
+        "Explicitly cross-links Prism, LobeHub and Theseus collections"
+      ],
+      "limitations": [
+        "Its repeated-reuse wording is broader than a strict requirement to improve the updater",
+        "Directly reading the index is not reading every linked study",
+        "Descriptions are curator judgments, not independent replications"
+      ],
+      "source_doc": "Root discovery requirement; Bing query for pinkbubblebubble awesome-rsi"
+    },
+    {
+      "id": "discovery-lobehub",
+      "method": "direct repository reading",
+      "title": "Awesome RSI: A Research Map",
+      "primary_url": "https://github.com/lobehub/awesome-rsi",
+      "repo_url": "https://github.com/lobehub/awesome-rsi",
+      "first_date": null,
+      "read_level": "discovery_repository",
+      "sections_read": [
+        "Scope and Terminology",
+        "Model-level",
+        "Harness-level",
+        "Multi-agent",
+        "Automated R&D",
+        "Benchmarks",
+        "Frameworks",
+        "Blogs"
+      ],
+      "mechanism": "Organizational map with task gain, retained gain and improver gain, and an explicit substrate category",
+      "evidence": [
+        "Visible commit 632ab5065bf579c7d1daa71bdaab801fdefd3698",
+        "Distinguishes structural recursion from demonstrated improvement",
+        "Taxonomy explicitly not mutually exclusive"
+      ],
+      "limitations": [
+        "Extensible runtimes need not implement self-improvement",
+        "The listed year for When AI Builds Itself is not accepted as a verified first date",
+        "Linked articles were not all read"
+      ],
+      "source_doc": "Root discovery requirement"
+    },
+    {
+      "id": "discovery-picrew",
+      "method": "direct repository reading following Bing discovery",
+      "title": "Awesome RSI evidence-led catalogue",
+      "primary_url": "https://github.com/Picrew/awesome-rsi",
+      "repo_url": "https://github.com/Picrew/awesome-rsi",
+      "first_date": null,
+      "read_level": "discovery_repository",
+      "sections_read": [
+        "Company research blogs",
+        "Papers and official code",
+        "Active projects",
+        "Scope and curation",
+        "Maintenance"
+      ],
+      "mechanism": "Co-locates mechanism, boundary, first publication date and release-surface notes",
+      "evidence": [
+        "Metadata snapshot and last verified 2026-10-07",
+        "32 blogs + 49 papers + 14 active GitHub projects = 95 resources, not systems",
+        "Visible commit c00955f1d7754a25e9c299df6a440240cb498101",
+        "Explicit official-code versus official-artifacts-only distinction"
+      ],
+      "limitations": [
+        "Activity selection is not research-quality evidence",
+        "Catalogue verification statements belong to its curators and are not inherited",
+        "Dates are followed to primary sources before use in this chapter's timeline"
+      ],
+      "source_doc": "Root discovery requirement; Bing query for Picrew awesome-rsi"
+    },
+    {
+      "id": "discovery-theseus",
+      "method": "direct companion repository reading",
+      "title": "Theseus Labs Awesome RSI",
+      "primary_url": "https://github.com/theseus-labs-rsi/awesome-rsi",
+      "repo_url": "https://github.com/theseus-labs-rsi/awesome-rsi",
+      "first_date": null,
+      "read_level": "discovery_repository",
+      "sections_read": [
+        "Taxonomy",
+        "Literature counts",
+        "Industry cases",
+        "Recent additions"
+      ],
+      "mechanism": "Companion discovery pool organized around responsibility levels in The Last AI Built by Humans",
+      "evidence": [
+        "Visible commit 74ee83ec39ae5653d1ff3a151f78042a7774c9a4",
+        "Reports 524 entries: 491 baseline + 28 table-derived + five later additions",
+        "Level counts 219/161/65/45/34",
+        "Five additions named GPTSwarm, Dream-RSI, AIDE2, Harness-Zero and Meta Context Engineering"
+      ],
+      "limitations": [
+        "Classification is not certification",
+        "The older local 243-record snapshot is a different commit",
+        "Catalogue additions are not first-publication dates"
+      ],
+      "source_doc": "recursive-self-improvement-survey-guide.md; AI4AI-Survey-Deep-Dive.md sections 9.3 and 10"
+    },
+    {
+      "id": "discovery-prism",
+      "method": "direct companion repository and website reading",
+      "title": "Prism-Shadow Awesome RSI",
+      "primary_url": "https://prism-shadow.github.io/awesome-rsi/",
+      "repo_url": "https://github.com/Prism-Shadow/awesome-rsi",
+      "first_date": null,
+      "read_level": "discovery_repository_and_companion_site",
+      "sections_read": [
+        "Methods",
+        "Benchmarks",
+        "Systems",
+        "Taxonomy",
+        "Recent additions"
+      ],
+      "mechanism": "Nine-dimensional method index linked to a two-perspective RSI survey",
+      "evidence": [
+        "Current site reports 119 methods, 33 benchmarks, three systems and 354 citation links",
+        "Linked primary survey identified as 2610.14625"
+      ],
+      "limitations": [
+        "Methods, benchmarks, systems and citation edges are different units",
+        "Recently added dates record curation, not original publication",
+        "No full-corpus reading claim"
+      ],
+      "source_doc": "Root discovery requirement"
+    },
+    {
+      "id": "discovery-lee1003",
+      "method": "direct repository reading following Bing discovery",
+      "title": "Towards AI That Improves Itself: A Survey of Recursive Self-Improvement",
+      "primary_url": "https://github.com/Lee1003-lee/Awesome-RSI-Research",
+      "repo_url": "https://github.com/Lee1003-lee/Awesome-RSI-Research",
+      "first_date": null,
+      "read_level": "discovery_repository_not_full_paper",
+      "sections_read": [
+        "Background",
+        "RSI framework",
+        "Evolution families",
+        "Frontier dimensions",
+        "Evidence-boundary disclaimer"
+      ],
+      "mechanism": "State inheritance; Proposal-Feedback-Optimization with six components; behavior, agent-system, model/data and research-process families",
+      "evidence": [
+        "Minimal RSI distinguished from recursive progress that improves the improver",
+        "Seven properties: reliability, efficiency, diversity, persistence, adaptability, controllability and generalization",
+        "Explicit taxonomy-is-not-certification warning",
+        "Visible commit 27512254db318eea140c4bb0e9b1a1a60d9bfa61; linked OpenReview forum I3fKQbRUGy"
+      ],
+      "limitations": [
+        "Repository explanation, not full manuscript coverage",
+        "Historical bibliography years are not automatically adopted as first-publication dates",
+        "Overlap with other lists is not independent corroboration"
+      ],
+      "source_doc": "Root discovery requirement; https://lee1003-lee.github.io/Awesome-RSI-Research/"
+    },
+    {
+      "id": "survey-ai4ai",
+      "method": "local full-note reading plus primary companion artifact and author explanation",
+      "title": "AI4AI Survey: From Long-Horizon Agents to Recursive Self-Improvement - Definitions, Reliable Horizons, and Open Problems",
+      "primary_url": "https://www.preprints.org/manuscript/202608.2108/v1",
+      "repo_url": "https://github.com/KaiWU5/Awesome-AI4AI",
+      "first_date": null,
+      "read_level": "companion_evidence_and_author_page_primary_pdf_unread",
+      "sections_read": [
+        "EVIDENCE.md schema 2.0.0, rubric and all 35 returned system rows",
+        "Author site explanation",
+        "All local Deep Dive sections"
+      ],
+      "mechanism": "D1 editable object, D2 self-reference, D3 stage ownership, D4 feedback grounding, D5 gain/retention/human-comparison/transfer evidence",
+      "evidence": [
+        "DOI 10.20944/preprints202608.2108.v1",
+        "Stages goal, plan, execute, feedback and repair",
+        "HUM/MIX/SYS includes design-time human artifacts",
+        "Purposeful sample frozen 2026-08-04 and verified 2026-08-13",
+        "Goal SYS 0, execution SYS 35, repair SYS 23, feedback SYS 0, matched-human evidence one"
+      ],
+      "limitations": [
+        "Preprints access protection and raw PDF extraction failure prevent full-paper claim",
+        "R is broad retention/further-improvement evidence, not recursive compounding",
+        "Y/N/NR must remain distinct",
+        "Sample not a field prevalence census",
+        "Author blog simplifies stage ownership and retains a Zenodo DOI in BibTeX despite linking the Preprints DOI"
+      ],
+      "source_doc": "AI4AI-Survey-Deep-Dive.md; https://raw.githubusercontent.com/KaiWU5/Awesome-AI4AI/main/EVIDENCE.md; https://simpleagentlab.com/ai4ai/"
+    },
+    {
+      "id": "survey-theseus",
+      "method": "primary version history and HTML reading",
+      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+      "primary_url": "https://arxiv.org/html/2609.11873v3",
+      "repo_url": "https://github.com/theseus-labs-rsi/awesome-rsi",
+      "first_date": "2026-09-10",
+      "read_level": "primary_html_body_and_returned_appendices",
+      "sections_read": [
+        "Sections 1-7",
+        "References",
+        "Appendices A-C",
+        "Submission history"
+      ],
+      "mechanism": "B0 task-local output; L1 execution; L2 strategy; L3 learner-conditioned future experience; L4 deployment/environmental adaptation; L5 inherited changes to improvement mechanisms",
+      "evidence": [
+        "v2 2026-09-15, v3 2026-09-22",
+        "Structural L5 requires revision, retention and later invocation",
+        "Effective L5 adds independent, comparable-budget successor evidence",
+        "External mission, resources, protected evaluation and deployment veto can remain",
+        "v3 has nine loop concepts and eight industry cases; section 5.1 includes workspace experiments"
+      ],
+      "limitations": [
+        "Some HTML table cells and figure details abbreviated",
+        "Levels are responsibility descriptions rather than capability/safety ranks",
+        "HCI is not an RSI detector",
+        "Ambiguous .75 interpretation in earlier notes not resolved from implementation"
+      ],
+      "source_doc": "recursive-self-improvement-survey-guide.md; AI4AI-Survey-Deep-Dive.md sections 10 and 13.3"
+    },
+    {
+      "id": "survey-prism",
+      "method": "primary HTML and abstract-page reading",
+      "title": "From Existing Methods to New Research Ideas: Two Perspectives on Recursive Self-Improvement",
+      "primary_url": "https://arxiv.org/html/2610.14625v1",
+      "repo_url": "https://github.com/Prism-Shadow/awesome-rsi",
+      "first_date": "2026-10-10",
+      "read_level": "primary_html_body_and_returned_appendix",
+      "sections_read": [
+        "Definition and taxonomy",
+        "Section 3 including 3.6",
+        "Sections 4.1-4.2",
+        "Appendix A"
+      ],
+      "mechanism": "Nine dimensions in four groups: artifact; updater/topology; mode/frequency/experience scope; feedback source/type/acceptance criterion",
+      "evidence": [
+        "Manuscript face date October 9 differs from first arXiv submission October 10",
+        "Self/Teacher/Joint updater; Sequential/Tree/Graph topology; offline/online/hybrid modes",
+        "Section 3.6 discusses changes such as diagnostic logging that enable later improvements without immediate score gain",
+        "Section 4.1 relates methods to eleven learning mechanisms"
+      ],
+      "limitations": [
+        "Broader persistent-self-modification scope than strict updater-improvement RSI",
+        "Numeric model ratings are score feedback but not execution ground truth",
+        "Section 4.2 ideas including plasticity, freeze-thaw branch allocation and adversarial dropout are proposals, not established results"
+      ],
+      "source_doc": "https://prism-shadow.github.io/awesome-rsi/"
+    },
+    {
+      "id": "survey-bounded-research",
+      "method": "primary HTML and version-history reading",
+      "title": "Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops",
+      "primary_url": "https://arxiv.org/html/2607.07663v2",
+      "repo_url": "https://github.com/deepgrounding/recursive-self-improvement",
+      "first_date": "2026-07-08",
+      "read_level": "primary_html_body_method_and_data_statement",
+      "sections_read": [
+        "Sections 1-9",
+        "Survey method",
+        "Data availability",
+        "References",
+        "Submission history"
+      ],
+      "mechanism": "Deployment-time evolution, training-time iteration, self-evaluation and automated research; separate human-in/on/closed-loop axis",
+      "evidence": [
+        "v2 2026-09-06",
+        "1250 records = 871 seed + 379 supplement; category counts 393/340/318/139/60",
+        "Single annotator, rule-based classification and manual overrides disclosed",
+        "Approximately 54 peripheral supplement records remain counted but not used as evidential citations",
+        "Section 5.4 separates direction evaluation from generation and recognizing stale objectives"
+      ],
+      "limitations": [
+        "Open-ended RSI definition without fixed external anchor is stronger than Theseus bounded L5",
+        "Corpus is a sample, not a census; growth analysis uses seed pool only",
+        "Verification hierarchy is qualitative, not an empirically established law",
+        "Formal verification depends on specification and assumptions; fixed external evaluators can still be wrong"
+      ],
+      "source_doc": "Mandatory survey 2607.07663; root discovery lists"
+    },
+    {
+      "id": "requested-openreview-hash",
+      "method": "exact requested PDF fetch attempt",
+      "title": "User-specified OpenReview PDF: identity not verified",
+      "primary_url": "https://openreview.net/pdf/31dec7fbd91569b094bab29e73f62a44cf28094c.pdf",
+      "repo_url": null,
+      "first_date": null,
+      "read_level": "access_blocked_no_primary_text",
+      "sections_read": [],
+      "mechanism": null,
+      "evidence": [
+        "Exact hash URL requested",
+        "Returned browser-verification content rather than manuscript"
+      ],
+      "limitations": [
+        "No full-text reading",
+        "No verified mapping between this hash and CGO1hDTHNe",
+        "Candidate Reliable survey must not substitute for the exact artifact"
+      ],
+      "source_doc": "Explicit user-supplied OpenReview PDF URL"
+    },
+    {
+      "id": "survey-reliable-companion",
+      "method": "author companion-site reading after direct PDF and forum access failures",
+      "title": "Diving into Reliable Self-Evolving Agents: A Survey",
+      "primary_url": "https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/",
+      "repo_url": "https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents",
+      "first_date": null,
+      "read_level": "author_companion_page_not_full_paper",
+      "sections_read": [
+        "Taxonomy",
+        "Reliability ladder",
+        "Companion corpus explanation"
+      ],
+      "mechanism": "Deepest active semantic change: L0 output, L1 model, L2 scaffold, L3 improver, L4 criterion; evidence/control outside each editable boundary",
+      "evidence": [
+        "Companion links OpenReview forum CGO1hDTHNe and Preprints 202609.0913",
+        "Structural RSI starts at improver level L3",
+        "Website reports 549 manuscript-used works"
+      ],
+      "limitations": [
+        "Not proven identical to requested PDF hash",
+        "Author-hosted PDF text extraction failed",
+        "Forum and API metadata access returned browser verification",
+        "L3 is not Theseus L3",
+        "Catalogue use is not independent evidence of successful reliability"
+      ],
+      "source_doc": "DuckDuckGo exact-title search; https://openreview.net/forum?id=CGO1hDTHNe"
+    },
+    {
+      "id": "survey-trustworthy",
+      "method": "primary HTML reading and versioned audit-link inspection",
+      "title": "Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
+      "primary_url": "https://arxiv.org/html/2610.35193v1",
+      "repo_url": "https://github.com/pujiayue/Trustworthy-RSI",
+      "first_date": "2026-10-26",
+      "read_level": "primary_html_body_and_returned_appendix",
+      "sections_read": [
+        "Sections 1-8",
+        "Section 7.2 paired continuations",
+        "Section 7.3 joint assessment",
+        "Appendix A",
+        "References"
+      ],
+      "mechanism": "Policy h, inductive bias B and bias updater U as functional roles; diagnosis/proposal/evaluation/implementation; improvement validity, constraint preservation and effective oversight",
+      "evidence": [
+        "Same initial h/B/persistent state and matched continuation budgets for old/new updater comparison",
+        "Discovery and validation costs reported separately from continuation costs",
+        "Mandatory properties must hold at each scheduled checkpoint on the same successor trajectory",
+        "301 cited works; 20 studies by 13 dimensions = 260 cells, including 40 targeted primary checks",
+        "Audit commit 854de7b3fa6c018a0c1e3e83df8e08dd801369d1"
+      ],
+      "limitations": [
+        "Not all 260 cells received equally deep primary checks",
+        "No experiments independently reproduced here",
+        "Some tables compressed by HTML extraction",
+        "Logging or a stop interface alone does not demonstrate effective oversight"
+      ],
+      "source_doc": "Mandatory survey 2610.35193; https://github.com/pujiayue/Trustworthy-RSI/tree/854de7b3fa6c018a0c1e3e83df8e08dd801369d1/audit"
+    },
+    {
+      "id": "industry-alphaevolve",
+      "method": "first-party technical article reading",
+      "title": "AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms",
+      "primary_url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+      "repo_url": null,
+      "first_date": "2025-05-14",
+      "read_level": "official_technical_article",
+      "sections_read": [
+        "Mechanism",
+        "Data-centre application",
+        "Gemini kernel application",
+        "Availability"
+      ],
+      "mechanism": "Gemini proposals, automated executable evaluators and evolutionary program archive",
+      "evidence": [
+        "Publisher reports 0.7% worldwide compute recovery",
+        "Specific kernel speedup of 23% corresponds to about 1% training-time reduction in the article",
+        "Successful programs can enter AI training and computing infrastructure"
+      ],
+      "limitations": [
+        "Publisher-reported deployment results, not independent replication",
+        "Target program improvement is not demonstrated recursive training of the Gemini proposer",
+        "Results notebook or early access does not establish full search implementation release",
+        "Linked arXiv 2506.13131 not fully read in this session"
+      ],
+      "source_doc": "AI4AI-Survey-Deep-Dive.md; Picrew and other root lists"
+    },
+    {
+      "id": "industry-harness2",
+      "method": "primary HTML and arXiv submission-history reading",
+      "title": "Harness^2: Recursive Agent Harnessing for an Open World",
+      "primary_url": "https://arxiv.org/html/2610.14224v1",
+      "repo_url": "https://github.com/google-research/harness2",
+      "first_date": "2026-10-09",
+      "read_level": "primary_html_body_and_returned_appendices",
+      "sections_read": [
+        "Sections 1-6",
+        "Appendices A-H",
+        "A.1 comparison definitions",
+        "B benchmark splits",
+        "E.2 retrospective reuse",
+        "E.6 failures",
+        "F limitations",
+        "G future directions",
+        "H returned prompts"
+      ],
+      "mechanism": "Task-level Propose-Probe-Compose with invariant/domain edits, followed by updates to an improvement library used on later tasks",
+      "evidence": [
+        "Google Cloud AI Research and Northwestern University affiliations",
+        "Eight editable execution components; each task starts from common H0",
+        "Weights, stage instructions and decision rules stay fixed; library changes",
+        "Three shuffled streams per reported configuration",
+        "WorkBuddy test halves 40/35/25; JobBench 34 test tasks; LAB 100 test tasks",
+        "Total token comparison includes execution and improvement",
+        "Separate same-model editor/executor experiments"
+      ],
+      "limitations": [
+        "Default editor is Opus 4.8, not the executor",
+        "Behavioral contrast does not establish correctness or transfer",
+        "LAB Partial is per-criterion pass rate",
+        "Leave-one-out rerun can use later-task experience and is offline, not online gain",
+        "Nine regressions include weaker selection and shared wrong premises",
+        "Repository is author-linked; no implementation or benchmark run performed here"
+      ],
+      "source_doc": "Google Research targeted search; https://arxiv.org/abs/2610.14224"
+    },
+    {
+      "id": "industry-dgm",
+      "method": "first-party technical blog reading",
+      "title": "The Darwin Godel Machine: AI that improves itself by rewriting its own code",
+      "primary_url": "https://sakana.ai/dgm/",
+      "repo_url": "https://github.com/jennyzzt/dgm",
+      "first_date": "2025-05-30",
+      "read_level": "official_technical_article",
+      "sections_read": [
+        "Self-modification",
+        "Archive search",
+        "Coding experiments",
+        "Transfer",
+        "Reward hacking and safety"
+      ],
+      "mechanism": "Fixed foundation model edits Python coding-agent implementation; empirically evaluated branches remain in an archive",
+      "evidence": [
+        "Blog reports SWE-bench setting 20% to 50% and Polyglot 14.2% to 30.7%",
+        "Reports cross-model/language transfer",
+        "Documents fabricated tool logs and removal of hallucination-detection markers"
+      ],
+      "limitations": [
+        "first_date here is blog date, not arXiv paper priority",
+        "Scores are subset/protocol-specific and not adopted as whole-benchmark general results",
+        "Archive and parent selection externally specified",
+        "Full paper 2505.22954 not read here; no reproduction",
+        "Open-ended archive is not evidence of unbounded effective acceleration"
+      ],
+      "source_doc": "AI4AI-Survey-Deep-Dive.md; all seven discovery pools contain overlapping DGM references"
+    },
+    {
+      "id": "industry-sakana-rsi-lab",
+      "method": "first-party research-agenda page reading",
+      "title": "Introducing Sakana AI's Recursive Self-Improvement Lab",
+      "primary_url": "https://sakana.ai/rsi-lab/",
+      "repo_url": null,
+      "first_date": null,
+      "read_level": "official_research_agenda",
+      "sections_read": [
+        "Research lineage",
+        "Agent-native model and AI Scientist loop",
+        "Responsible RSI",
+        "Scientific advisor update"
+      ],
+      "mechanism": "Proposed strategic loop from agent-native models to AI scientists to improved models",
+      "evidence": [
+        "Links LLM-Squared, DGM, ShinkaEvolve, ALE-Agent, Digital Red Queen and AI Scientist",
+        "Current text includes September 2026 advisor addition",
+        "Commits to negative results and verifiable safeguards"
+      ],
+      "limitations": [
+        "Research-group announcement and roadmap, not a complete-loop experiment",
+        "Picrew supplies June 5 but day not independently established from returned primary page",
+        "Later page additions must not be assigned to original publication day"
+      ],
+      "source_doc": "Bing site:sakana.ai RSI Lab search; Picrew catalogue"
+    },
+    {
+      "id": "industry-mass",
+      "method": "official announcement and detailed technical companion reading",
+      "title": "Recursive Self-Improvement through Multi-Agent Self-Supervision",
+      "primary_url": "https://pub.sakana.ai/mass/",
+      "repo_url": "https://github.com/SakanaAI/mass",
+      "first_date": "2026-10-12",
+      "read_level": "official_detailed_technical_article_and_footnotes",
+      "sections_read": [
+        "Homogeneous RSI",
+        "Workflow inner loop",
+        "LoRA outer loop",
+        "Results",
+        "Role generalization",
+        "Training-token efficiency",
+        "Optimizer/evaluator ablations",
+        "All returned footnotes"
+      ],
+      "mechanism": "One model supplies executor, optimizer and evaluator; workflow search selects teams; selected team trajectories train the shared model; updated weights resume all three roles",
+      "evidence": [
+        "Two rounds from Qwen3.6-27B in qwen-code",
+        "12 synthetic tasks: nine designated train, three held out; eight actually contribute training data",
+        "Task descriptions generated by GPT-5.5 before loop",
+        "External GPT-5.5 and Opus 4.8 judgments withheld from MASS",
+        "Research-benchmark score/output-token ratios 1.2-1.6; Terminal-Bench 2.0 0.96 and SWE-bench Verified 0.94",
+        "Fixed-base executor with first-round-discovered workflows wins 64% against base-search workflows"
+      ],
+      "limitations": [
+        "Date is official announcement, not independently verified paper first date",
+        "Fixed-executor transfer does not isolate optimizer from other changing roles during search",
+        "Supervised-token efficiency excludes data generation, search, validation, input tokens and later updates",
+        "External judge agreement is not correctness",
+        "Small synthetic task set, one excluded training task and two finite rounds",
+        "Mutual-information estimates concern workflow text, not actual execution information flow",
+        "Full arXiv 2610.12176 paper not yet read"
+      ],
+      "source_doc": "https://sakana.ai/mass/; https://arxiv.org/abs/2610.12176"
+    },
+    {
+      "id": "industry-anthropic-rsi",
+      "method": "official institute article and returned footnote reading",
+      "title": "When AI builds itself",
+      "primary_url": "https://www.anthropic.com/institute/recursive-self-improvement",
+      "repo_url": null,
+      "first_date": null,
+      "read_level": "official_article_and_footnotes",
+      "sections_read": [
+        "Internal engineering metrics",
+        "Research assistance",
+        "Research-direction judgment",
+        "Bottlenecks",
+        "Governance",
+        "Footnotes including training-code benchmark caveat"
+      ],
+      "mechanism": "AI assistance across engineering and research; analysis of conditions needed to close successor development",
+      "evidence": [
+        "Explicit full RSI not yet reached and not inevitable",
+        "More than 80% of merged production code attributed to Claude as of May",
+        "Eightfold code-line increase is not treated as eightfold productivity",
+        "Selected 129 human detours differ from 127 already-good human choices, where model wins about 20%",
+        "Visible update 2026-09-18"
+      ],
+      "limitations": [
+        "Original day not visible; secondary May/June and list-year conflicts retained",
+        "Observational internal metrics, not controlled causal productivity",
+        "Small fixed training-code benchmark speedup not frontier-training speedup",
+        "Human review, research taste, compute and deployment remain bottlenecks"
+      ],
+      "source_doc": "AI4AI-Survey-Deep-Dive.md; https://simpleagentlab.com/ai4ai/; industry searches"
+    },
+    {
+      "id": "industry-anthropic-w2s",
+      "method": "official alignment research article reading",
+      "title": "Automated Weak-to-Strong Researcher",
+      "primary_url": "https://alignment.anthropic.com/2026/automated-w2s-researcher/",
+      "repo_url": "https://github.com/safety-research/automated-w2s-research",
+      "first_date": "2026-04",
+      "read_level": "official_technical_article",
+      "sections_read": [
+        "Experimental setup",
+        "Nine-agent search",
+        "Results",
+        "Reward hacks",
+        "Scaling transfer",
+        "Idea diversity"
+      ],
+      "mechanism": "Research agents propose and test weak-to-strong supervision methods on external student models",
+      "evidence": [
+        "Qwen1.5-0.5B-Chat to Qwen3-4B-Base supervision setting",
+        "Nine agents, about 800 cumulative hours, approximately five days and $18000",
+        "Reported PGR .97 versus human-tuned .23 in this setup",
+        "Production-scale improvement about .5 point and within noise",
+        "Diverse initial directions helped in this setting"
+      ],
+      "limitations": [
+        "Unlimited evaluation access turns nominal test into validation",
+        "Cherry-picked seeds, extracted labels and shortcuts invalidated some wins",
+        "Researcher model not itself retrained",
+        "Day-level date not verified from primary returned page; Picrew April 14 remains secondary",
+        "No universal conclusion about human-seeded ideas"
+      ],
+      "source_doc": "Anthropic Institute links; Picrew discovery"
+    },
+    {
+      "id": "industry-anthropic-alignment",
+      "method": "official alignment research article reading",
+      "title": "Automated Alignment Researchers",
+      "primary_url": "https://alignment.anthropic.com/2026/automated-alignment-researchers/",
+      "repo_url": "https://github.com/YuehHanChen/automated_alignment_researcher",
+      "first_date": "2026-08",
+      "read_level": "official_technical_article_main_body",
+      "sections_read": [
+        "Sections 1-8",
+        "Experimental protocols",
+        "Capability gates",
+        "Human idea baseline",
+        "Cheating analysis",
+        "Transfer"
+      ],
+      "mechanism": "Opus 4.8 researchers search literature, data and training methods for characterized alignment failures under independent evaluation and capability gates",
+      "evidence": [
+        "Ten alignment-failure categories",
+        "28 humans supplied 30 one-shot methods across seven failures",
+        "39 of 1601 trajectories flagged cheating",
+        "Petri used as independent test after other held-out metrics used for method selection",
+        "Restricted larger-model data-generation experiment does not show general alignment equivalence"
+      ],
+      "limitations": [
+        "Human participants could not iterate, so not a matched research-budget comparison",
+        "Cheating categories overlap",
+        "Folded appendices returned only headings",
+        "No persistence test after extensive later RL",
+        "Day-level August 28 appears in secondary catalogue but not adopted without primary verification",
+        "Human seed ideas did not help here, unlike w2s setup"
+      ],
+      "source_doc": "Anthropic links; paper lead https://arxiv.org/abs/2608.28945"
+    },
+    {
+      "id": "industry-openai-acceleration",
+      "method": "official internal-research report reading",
+      "title": "Research acceleration: a view inside OpenAI",
+      "primary_url": "https://openai.com/index/research-acceleration-view-inside-openai/",
+      "repo_url": null,
+      "first_date": "2026-09-06",
+      "read_level": "official_report_returned_body",
+      "sections_read": [
+        "Internal activity",
+        "Long task intervention",
+        "Experiments",
+        "Human role",
+        "Researcher roadmap"
+      ],
+      "mechanism": "Supervised agents assist research, debugging and experimentation",
+      "evidence": [
+        "Mid-August activity 3.1 eight-hour agent-days per human workday",
+        "More than half successful 4-8-hour tasks required human intervention",
+        "Compute grew concurrently",
+        "Humans retain priorities, result decisions, scaling, pause and deployment",
+        "Current role described as supervised research intern"
+      ],
+      "limitations": [
+        "Activity is not productivity",
+        "Concurrent compute growth confounds experimental throughput",
+        "Some methods or appendices not returned by UI extraction",
+        "Researcher-by-March-2028 is future goal, not achieved capability"
+      ],
+      "source_doc": "Industry first-party search"
+    },
+    {
+      "id": "industry-meta-capacity",
+      "method": "official engineering report reading",
+      "title": "Capacity efficiency at Meta: how unified AI agents optimize performance at hyperscale",
+      "primary_url": "https://engineering.fb.com/2026/04/16/developer-tools/capacity-efficiency-at-meta-how-unified-ai-agents-optimize-performance-at-hyperscale/",
+      "repo_url": null,
+      "first_date": "2026-04-16",
+      "read_level": "official_engineering_article",
+      "sections_read": [
+        "Unified MCP tools",
+        "Engineer-authored skills",
+        "Regression repair",
+        "Human-reviewed PRs",
+        "Efficiency examples"
+      ],
+      "mechanism": "Tool- and skill-supported diagnosis and repair under engineer review",
+      "evidence": [
+        "Reported diagnosis example roughly ten hours to thirty minutes",
+        "Agent produces reviewable fixes"
+      ],
+      "limitations": [
+        "Hundreds of MW refer to overall capacity program, not isolated agent causal impact",
+        "Fixed expert procedures are not demonstrated updater evolution",
+        "Public implementation not established"
+      ],
+      "source_doc": "Industry first-party search"
+    },
+    {
+      "id": "industry-meta-second-brain",
+      "method": "official engineering article reading",
+      "title": "Organizational second brain: AI that learns from experts",
+      "primary_url": "https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/",
+      "repo_url": null,
+      "first_date": "2026-09-02",
+      "read_level": "official_engineering_article",
+      "sections_read": [
+        "Knowledge architecture",
+        "Expert feedback",
+        "Evolution cycle",
+        "Adversarial review",
+        "Regression testing",
+        "Performance"
+      ],
+      "mechanism": "Expert corrections trigger diagnosis, minimal knowledge/recipe edits, review, lint, targeted replay, regression and human-approved promotion",
+      "evidence": [
+        "More than 200 structured files with depends_on/referenced_by",
+        "Facts and procedural recipes separated",
+        "Accepted correction becomes regression case",
+        "No base-model retraining"
+      ],
+      "limitations": [
+        "Approximately 80% token/turn reduction comes from recipe restructuring, not each evolution cycle",
+        "Zero-regression statement is limited company observation",
+        "Fresh context does not guarantee independent errors",
+        "Public implementation not established"
+      ],
+      "source_doc": "Industry first-party search"
+    },
+    {
+      "id": "industry-foundry-optimizer",
+      "method": "official product-preview documentation reading",
+      "title": "Microsoft Foundry Agent Optimizer",
+      "primary_url": "https://devblogs.microsoft.com/foundry/agent-optimizer-build2026/",
+      "repo_url": null,
+      "first_date": "2026-06-03",
+      "read_level": "official_product_preview_article",
+      "sections_read": [
+        "Editable surfaces",
+        "Baseline and candidate evaluation",
+        "Manual promotion",
+        "Configuration examples",
+        "Preview status"
+      ],
+      "mechanism": "Optimizes instructions, skills, deployment model choice and local function-tool descriptions against supplied tasks",
+      "evidence": [
+        "Private preview announced",
+        "External MCP tools excluded",
+        "Candidates ranked and manually promoted/versioned"
+      ],
+      "limitations": [
+        ".60 to .92 is a demo example, not general empirical gain",
+        "Self-generated evaluation from instructions is not independent correctness",
+        "Public preview promised thirty days later but not separately verified released",
+        "No documented API example executed"
+      ],
+      "source_doc": "Industry first-party search"
+    },
+    {
+      "id": "industry-sol-pi",
+      "method": "primary HTML, abstract history and official repository reading",
+      "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+      "primary_url": "https://arxiv.org/html/2609.20519v1",
+      "repo_url": "https://github.com/NVlabs/SoL-Pi",
+      "first_date": "2026-09-17",
+      "read_level": "primary_html_body_and_repository_readme",
+      "sections_read": [
+        "Sections 1-5",
+        "Search protocol",
+        "Four retained mechanisms",
+        "EdgeBench split and operating points",
+        "Terminal-Bench and IMO results",
+        "Section 5.1",
+        "Repository opt-in defaults"
+      ],
+      "mechanism": "Independent disposable auto-research lineages retain action fusion, cache-aware compaction, ObservationPack and evidence-preserving log reduction",
+      "evidence": [
+        "152 directions; 535 environments = 495 repository + 40 synthetic; over 3000 runs and 60000 interactions",
+        "Search orchestration edits discarded while candidates/evidence retained",
+        "EdgeBench 51 = 11 one-way acceptance + 40 final generalization",
+        "Full stack GPT-5.6 Sol 44.833 to 42.003 score, about 49% traffic and 33.2% cost reduction",
+        "Full stack Opus 5 44.756 to 42.224 score, 44.7% traffic and 33.5% cost reduction",
+        "Terminal-Bench 4 CPU-only: 18/$286.45 versus 15/$211.12",
+        "IMO six tasks: Codex five, Pi three, SoL-Pi three",
+        "Repository commit 219568034fa54ed121ede80961655e33dfb9d0e3; all four mechanisms opt-in, disabled by default"
+      ],
+      "limitations": [
+        "93.7% and 94.3% score retention are not equal capability",
+        "Performance operating points are separately selected single-mechanism ablations",
+        "Two-hour swarm comparison one run per condition",
+        "Section 5.1 calls recursive efficient improvement a future vision",
+        "Discovery-cost amortization not established",
+        "MIT extension release is not full live auto-research infrastructure",
+        "Reducer can transmit logs to configured remote model; archives persist locally",
+        "Compaction gate omits separate summarization-call price"
+      ],
+      "source_doc": "Bing SoL-Pi search; https://arxiv.org/abs/2609.20519"
+    },
+    {
+      "id": "industry-seed-for-seed",
+      "method": "official model-release article reading",
+      "title": "Seed2.1 Officially Released: Advancing AI Productivity",
+      "primary_url": "https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity",
+      "repo_url": null,
+      "first_date": "2026-06-23",
+      "read_level": "official_model_release_article",
+      "sections_read": [
+        "Agent capabilities",
+        "Coding",
+        "Foundation capabilities",
+        "Seed for Seed R&D workflow",
+        "Conclusion and outlook"
+      ],
+      "mechanism": "Seed participates in evaluation construction, capability diagnosis, SFT synthesis, RL infrastructure optimization and executable paper-method research",
+      "evidence": [
+        "Hours to multi-day research tasks described",
+        "Execution/evaluation/diagnosis/optimization roles cooperate",
+        "Product access announced through Doubao and Volcano Engine"
+      ],
+      "limitations": [
+        "No matched ablation isolates agent contribution to model improvement",
+        "Workflow duration is not an improvement-rate measurement",
+        "Release benchmarks do not prove recursive updater improvement",
+        "Public internal research framework not established"
+      ],
+      "source_doc": "Bing site:seed.bytedance.com Seed2.1 Seed for Seed"
+    },
+    {
+      "id": "industry-zai-infra",
+      "method": "first-party engineering report reading",
+      "title": "GLM built its inference infrastructure",
+      "primary_url": "https://z.ai/blog/glm-built-its-inference-infrastructure",
+      "repo_url": null,
+      "first_date": "2026-09-17",
+      "read_level": "official_engineering_article",
+      "sections_read": [
+        "Infrastructure process",
+        "KDA numerical issue",
+        "DeepEP/Mooncake concurrency",
+        "Reusable optimization skeletons",
+        "Human responsibilities",
+        "RSI limitation"
+      ],
+      "mechanism": "Local measurable engineering feedback produces tested infrastructure edits and reusable patterns with applicability constraints",
+      "evidence": [
+        "Company reports less than two weeks, about threefold serving throughput and 100000+ domestic accelerators",
+        "KDA CP issue traced to tl.dot TF32 accumulation, with tf32x3 precision setting",
+        "DeepEP 1.2.1 intranode dispatch/combine holding GIL blocks Mooncake transfer submission",
+        "Report explicitly says full recursive self-improvement not yet reached"
+      ],
+      "limitations": [
+        "Company-reported results, not independent replication",
+        "Microbenchmark gains require end-to-end validation",
+        "Humans retain numerical, concurrency and production review",
+        "Upstream FLA PR 1180 linked but not separately audited here",
+        "No full Infra Agent implementation established"
+      ],
+      "source_doc": "Industry requirement; https://github.com/fla-org/flash-linear-attention/pull/1180"
+    },
+    {
+      "id": "industry-frontis-ma1",
+      "method": "primary HTML, arXiv history and official repository reading",
+      "title": "Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering",
+      "primary_url": "https://arxiv.org/html/2607.28568v1",
+      "repo_url": "https://github.com/FrontisAI/OpenRSI",
+      "first_date": "2026-07-30",
+      "read_level": "primary_html_body_returned_appendices_and_release_readme",
+      "sections_read": [
+        "Sections 1-10",
+        "Appendices A-E",
+        "6.2 controlled model/harness comparisons",
+        "6.5 search efficiency",
+        "6.6 transfer",
+        "8 limitations",
+        "D repeated-run caveats",
+        "Repository News and license"
+      ],
+      "mechanism": "OpenMLE-Gym executable tasks; SFT/RL-trained Draft/Improve/Debug/Crossover operators; OpenMLE-Evo experience-guided long-horizon search",
+      "evidence": [
+        "Horizon Research/Frontis.AI and Tsinghua-led collaboration with other universities",
+        "5758 quality-gated tasks and 26259 SFT examples reported",
+        "22-task MLE-Bench Lite, 12 sandbox GPU-hours per task, RTX4090 limited to 12GB",
+        "Same harness base-to-35B Medal Average 39.39% to 60.61%",
+        "Evo-Max system 71.21% adds priors and asynchronous search",
+        "NatureBench Lite ten-task matched comparisons 5/10 to 7/10 for model and 2/10 to 5/10 for framework",
+        "Standard versus original AIRA-Evo comparison includes 66 matched task-runs",
+        "Repository News: initial release July31, sandbox August9; commit 71ae803a035d5e3b78c19fa49ed9f67d0550cbaa"
+      ],
+      "limitations": [
+        "Operator vocabulary and outer evolutionary machinery largely fixed, explicitly acknowledged in section 8",
+        "General-purpose harness references single-run; some standard deviations lost in HTML extraction",
+        "Ten transfer tasks give ten percentage points per task",
+        "Search changes combined, not isolated contribution of parent-selection weights",
+        "Remote serving cost separate from sandbox GPU-hours",
+        "Public repository CC BY-NC 4.0, not unrestricted commercial license",
+        "External weights/data/services separate from source; no local reproduction"
+      ],
+      "source_doc": "AI4AI-Survey-Deep-Dive.md section 13.3; https://arxiv.org/abs/2607.28568; https://github.com/FrontisAI/OpenRSI"
+    },
+    {
+      "id": "identity-frontis-transposition",
+      "method": "direct comparison of both arXiv abstract pages",
+      "title": "Frontis identifier correction: 2607.28568 versus 2607.28586",
+      "primary_url": "https://arxiv.org/abs/2607.28586",
+      "repo_url": null,
+      "first_date": "2026-07-30",
+      "read_level": "primary_metadata_identity_check",
+      "sections_read": [
+        "Title",
+        "Authors",
+        "Abstract",
+        "Submission history",
+        "Subject"
+      ],
+      "mechanism": "Disambiguates two valid but unrelated identifiers rather than treating a transposition as an alias",
+      "evidence": [
+        "2607.28568 is Frontis-MA1",
+        "2607.28586 is Boundedness of polarized foliated surfaces by Yen-An Chen and Minzhe Zhu in math.AG"
+      ],
+      "limitations": [
+        "No substantive reading of the unrelated mathematics paper, which is not an RSI source"
+      ],
+      "source_doc": "AI4AI-Survey-Deep-Dive.md section 13.3"
+    },
+    {
+      "id": "industry-metarsi",
+      "method": "primary v1 HTML, current abstract history and companion-page reading",
+      "title": "MetaRSI / RSI2: A Meta-Recursive Self-Improving System for Recursive Self-Improving Systems Themselves",
+      "primary_url": "https://arxiv.org/html/2609.06396v1",
+      "repo_url": "https://github.com/CosmosMind-ai/RSI-Harness",
+      "first_date": "2026-09-03",
+      "read_level": "primary_v1_html_body_and_returned_appendices",
+      "sections_read": [
+        "Sections 1-7",
+        "4.1-4.7 contracts and scheduling",
+        "5.1-5.4 experiments",
+        "6.2 knowledge boundary",
+        "6.6 release scope",
+        "6.7 proposed laws",
+        "Appendices A-F",
+        "ArXiv abstract and submission history"
+      ],
+      "mechanism": "Typed Data/Harness/Model operators share fixed evidence compiler; scheduler changes order and operator proposal policies; outer fixed meta-agent revises scheduling instructions",
+      "evidence": [
+        "first_date refers to official project-page visible date; arXiv v1 September6 and v2 September9",
+        "No stronger external model in model-driven loop roles; execution oracle remains external",
+        "Five independent outer seeds and separately metered improvement/meta budgets reported",
+        "Term2 forks same S1 and compares original/new improver under same continuation budget: +4.9 versus +7.2 average points",
+        "Five terms remain diminishing-return trajectories",
+        "Training candidates start from fixed base over cumulative data rather than previous adapter",
+        "v1 directly links CosmosMind RSI-Harness repository and HF artifact"
+      ],
+      "limitations": [
+        "Experiments confined to executable coding and closed-form science/math",
+        "v2 full text not read; official PDF extraction failed",
+        "Same-model blind re-solve supports self-consistency, not missing-knowledge truth",
+        "Outermost meta-agent remains fixed",
+        "Meta-discovery costs must be included in total economics",
+        "Five laws and Every Domain positioning are refutable author claims, not established universal laws",
+        "Protected evaluator is not necessarily correct or immune to indirect overfitting",
+        "Affiliations embedded in an image were not fully text-verified"
+      ],
+      "source_doc": "https://cosmosmind.ai/research/metarsi-v1; https://arxiv.org/abs/2609.06396; Trustworthy RSI reference"
+    },
+    {
+      "id": "release-rsi-harness",
+      "method": "official repository release-boundary reading",
+      "title": "RSIH: Pi coding agent plus Genome configuration layer",
+      "primary_url": "https://github.com/CosmosMind-ai/RSI-Harness",
+      "repo_url": "https://github.com/CosmosMind-ai/RSI-Harness",
+      "first_date": null,
+      "read_level": "official_repository_readme",
+      "sections_read": [
+        "Genome interface",
+        "GEE",
+        "Invariants",
+        "Twelve components",
+        "Current status",
+        "Development release disclaimer"
+      ],
+      "mechanism": "Versionable configuration bundle over immutable Pi core; interactive history-grounded generation asks for confirmation before writing",
+      "evidence": [
+        "Visible commit 7bf09774bbe205956ec5a46e5f934602224cc437",
+        "Default without Genome described as Pi behavior except config directory",
+        "Twelve component contracts and schema validation",
+        "README explicitly states no benchmark, data-generation, training or evaluation code"
+      ],
+      "limitations": [
+        "Partial runtime component, not complete MetaRSI experimental release",
+        "Schema validation is not behavioral improvement validation",
+        "No pre-publication redaction gate; private transcript-derived bundles can contain sensitive residue",
+        "Install/test commands were not run",
+        "Not a default autonomous model-weight learning loop"
+      ],
+      "source_doc": "https://arxiv.org/html/2609.06396v1 section 6.6"
+    },
+    {
+      "id": "industry-recursive-flint",
+      "method": "official model-release article reading",
+      "title": "Introducing Recursive Flint",
+      "primary_url": "https://recursive.com/updates/introducing-recursive-flint",
+      "repo_url": "https://github.com/recursive-oss/rec",
+      "first_date": "2026-10-18",
+      "read_level": "official_release_article",
+      "sections_read": [
+        "Architecture",
+        "Eureka Machine contributions",
+        "Local inference",
+        "Release links",
+        "Future research loop"
+      ],
+      "mechanism": "Automated research system reportedly contributes to architecture, data, training, quantization and kernels; release is model plus inference engine",
+      "evidence": [
+        "40B total / 2.5B active MoE",
+        "Visible October18 release date; page metadata says November2",
+        "Weights linked at https://huggingface.co/RecursiveSI/flint with Apache2.0",
+        "Supports 512k context and recommends no more than 256k",
+        "Eureka-as-better-researcher feedback explicitly framed as future bet"
+      ],
+      "limitations": [
+        "Model and engine availability do not establish Eureka implementation availability",
+        "M4Pro above125tokens/s refers to short context; 128k session plot excludes prefill",
+        "No paired improver test established from release article",
+        "Earliest Eureka research article not yet read"
+      ],
+      "source_doc": "Industry requirement; https://recursive.com/updates/first-steps-toward-automated-ai-research lead"
+    },
+    {
+      "id": "industry-gair-801",
+      "method": "official repository reading and technical-report PDF extraction attempt",
+      "title": "No Second Run: Does RSI Stop at Frontier Pre-training?",
+      "primary_url": "https://github.com/GAIR-NLP/801-30B",
+      "repo_url": "https://github.com/GAIR-NLP/801-30B",
+      "first_date": null,
+      "read_level": "official_readme_report_pdf_unread",
+      "sections_read": [
+        "Thesis",
+        "Six local loops",
+        "Shared context infrastructure",
+        "1T recipe comparison",
+        "Tiny-SFT caveat",
+        "Release status"
+      ],
+      "mechanism": "Debugging, headroom and experience-to-metric local loops inside an unrepeated pretraining run; shared cross-team evidence supports later decisions",
+      "evidence": [
+        "SII and Xinxu AI attribution",
+        "Reported30B-A3B,11.8Ttokens,three months",
+        "Explicit no end-to-end loop over a single run that cannot be repeated",
+        "Matched1T recipe averages47.78/51.96/56.83 combine multiple changes",
+        "Release lists report and Tiny-SFT dataset; base weights coming soon",
+        "Visible commit8b5dc7dc50abf1b896afa8e0488dc081006e243b"
+      ],
+      "limitations": [
+        "Exact first day not derived from relative yesterday",
+        "report.pdf extraction failed",
+        "Combined data/recipe/diagnosis changes do not isolate agent causality",
+        "Tiny-SFT comparisons with fully posttrained systems not like-for-like",
+        "Only-two-globally promotional claim not adopted",
+        "Shared context accumulation not independently demonstrated updater gain"
+      ],
+      "source_doc": "Bing GAIR 801-30B search; https://raw.githubusercontent.com/GAIR-NLP/801-30B/main/report.pdf; https://huggingface.co/datasets/SII-GAIR-NLP/801-30B-A3B-tiny-sft-dataset"
+    },
+    {
+      "id": "industry-sequoia-trajectory",
+      "method": "publisher transcript reading",
+      "title": "Continual learning: How AI agents get better with every use",
+      "primary_url": "https://sequoiacap.com/podcast/continual-learning-how-ai-agents-get-better-with-every-use",
+      "repo_url": null,
+      "first_date": "2026-11-04",
+      "read_level": "podcast_transcript_returned_text",
+      "sections_read": [
+        "Arjun Karanam/Trajectory discussion",
+        "Trace and model specification",
+        "Feedback",
+        "Update routing",
+        "Infrastructure wishes",
+        "Customer-data discussion"
+      ],
+      "mechanism": "Production traces become specification/reward and updates routed to model weights, harness or context",
+      "evidence": [
+        "Page metadata2026-11-04T19:38UTC",
+        "Complete subagent traces, replayable production evals, harness primitives and open weights/routers identified as needs",
+        "Delayed negative feedback can contradict immediate approval",
+        "Sequoia is host/publisher, not experimental method author"
+      ],
+      "limitations": [
+        "Interview/product thesis, not controlled continual-learning evaluation",
+        "Some transcript paragraphs abbreviated",
+        "Synthetic customer-distribution data is not proof of differential privacy or permission compliance",
+        "Beta/product roadmap not evidence of sustained RSI"
+      ],
+      "source_doc": "Industry requirement: Sequoia continual-learning podcast"
+    },
+    {
+      "id": "industry-aide2",
+      "method": "primary HTML and arXiv submission-history reading",
+      "title": "Recursive self-improvement of AI research agents",
+      "primary_url": "https://arxiv.org/html/2609.26457v1",
+      "repo_url": null,
+      "first_date": "2026-09-22",
+      "read_level": "primary_html_body_and_returned_appendices",
+      "sections_read": [
+        "Sections 1-5",
+        "2.1-2.2 inner/outer loop distinction",
+        "3.2 repeated improvements",
+        "3.3 held-out transfer",
+        "3.5 active and inactive mechanisms",
+        "3.6 ignition test",
+        "Appendices A-E"
+      ],
+      "mechanism": "Fixed AIDEhuman outer agent rewrites inner research-agent code under fixed per-task budgets; accepted descendants become later edit targets; separate ignition test replaces outer improver",
+      "evidence": [
+        "Weco AI authorship",
+        "Main eight-day run: initial agent plus99 proposals, seven accepted rewrites; two additional complete runs accepted two and four",
+        "Outer private selection grade differs from four external benchmarks unused for selection",
+        "Ignition starts both arms at AIDE47 with three50-step seeds each; AIDE47 versus AIDEhuman outer means .780 versus .782",
+        "Search-arm bandit and bounded context mechanisms described",
+        "Selection-penalty replay shows no change to candidate ranking",
+        "Agent patched a held-out scoring script to prevent one failure aborting all test cases"
+      ],
+      "limitations": [
+        "Ignition explicitly inconclusive; does not establish improved self-improver or equivalence",
+        "More outer seeds and external evaluation of each final agent needed",
+        "Outer selection rule and backbone models fixed in main search",
+        "WeatherBench2 is one optimization task, not whole-domain competence",
+        "Some evaluations are cost-capped, others step-capped; not all resources matched",
+        "Evaluator-script repair requires separate boundary audit",
+        "Public complete implementation not established; no full benchmark scores reconstructed from empty extracted table cells"
+      ],
+      "source_doc": "Theseus companion additions; Picrew and LobeHub; https://arxiv.org/abs/2609.26457"
+    },
+    {
+      "id": "audit-product-not-recursion",
+      "method": "primary meta-research HTML and submission-history reading",
+      "title": "Auditing the Product, Not the Recursion: The Evaluation Evidence Behind Recursive Self-Improvement Claims",
+      "primary_url": "https://arxiv.org/html/2610.27610v1",
+      "repo_url": null,
+      "first_date": "2026-10-20",
+      "read_level": "primary_html_body_and_returned_appendices",
+      "sections_read": [
+        "Sections 1-10",
+        "3 claim framework",
+        "4 propositions and assumptions",
+        "5 search/coding methods",
+        "6 counts and sensitivity",
+        "7 cases",
+        "9 limitations",
+        "Appendices A-D"
+      ],
+      "mechanism": "Claim-indexed coding separates product, accumulation, full-loop repeatability, improver gain and compounding; different comparison designs answer different causal questions",
+      "evidence": [
+        "Search frozen2026-10-17:173 records,114 eligible studies,90 strong-label RSI studies",
+        "Strong-label selection-independent product evaluation54/90 versus broad81/90; audited full-loop reruns20/90",
+        "26 improver claimants;23 related comparisons but only4 identical-start matched-budget earlier/later improver comparisons",
+        "LLM-assisted first coding, independent human random sample, third-reader adjudication and separate blind improver coding",
+        "Strict shared-state design distinguishes same score from identical artifacts",
+        "Paper itself does not conclude current loops fail to improve"
+      ],
+      "limitations": [
+        "Counts describe reported designs, not successful demonstrations or all experiments performed",
+        "Phrase-based arXiv frame omits non-RSI-labelled work;20 anchors selected rather than representative",
+        "Many codes outside checked subsets not individually human-reviewed",
+        "Adjudicated sample suggests overall coding overcredits product independence and undercounts scope gaps",
+        "Intervals do not cover coding error or missed papers",
+        "E4 bundle can combine evidence from different experiments and is not single-experiment certification",
+        "Propositions use stylized assumptions and are not universal empirical laws",
+        "This session read the audit, not all114 underlying papers; full dataset release only promised in article"
+      ],
+      "source_doc": "Trustworthy RSI and pinkbubblebubble leads; https://arxiv.org/abs/2610.27610"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-05-14",
+      "type": "official_article",
+      "record_id": "industry-alphaevolve"
+    },
+    {
+      "date": "2025-05-30",
+      "type": "official_blog_not_paper_first_date",
+      "record_id": "industry-dgm"
+    },
+    {
+      "date": "2026-04-16",
+      "type": "engineering_report",
+      "record_id": "industry-meta-capacity"
+    },
+    {
+      "date": "2026-06-03",
+      "type": "private_preview_announcement",
+      "record_id": "industry-foundry-optimizer"
+    },
+    {
+      "date": "2026-06-23",
+      "type": "model_release_article",
+      "record_id": "industry-seed-for-seed"
+    },
+    {
+      "date": "2026-07-08",
+      "type": "arxiv_v1",
+      "record_id": "survey-bounded-research"
+    },
+    {
+      "date": "2026-07-30",
+      "type": "arxiv_v1",
+      "record_id": "industry-frontis-ma1"
+    },
+    {
+      "date": "2026-07-31",
+      "type": "model_data_stack_release_news",
+      "record_id": "industry-frontis-ma1"
+    },
+    {
+      "date": "2026-08-04",
+      "type": "audit_frozen_snapshot_not_publication",
+      "record_id": "survey-ai4ai"
+    },
+    {
+      "date": "2026-08-09",
+      "type": "sandbox_release_news",
+      "record_id": "industry-frontis-ma1"
+    },
+    {
+      "date": "2026-09-02",
+      "type": "engineering_report",
+      "record_id": "industry-meta-second-brain"
+    },
+    {
+      "date": "2026-09-06",
+      "type": "official_research_usage_report",
+      "record_id": "industry-openai-acceleration"
+    },
+    {
+      "date": "2026-09-06",
+      "type": "arxiv_v1_after_project_page",
+      "record_id": "industry-metarsi"
+    },
+    {
+      "date": "2026-09-10",
+      "type": "arxiv_v1_v3_read_separately",
+      "record_id": "survey-theseus"
+    },
+    {
+      "date": "2026-09-17",
+      "type": "arxiv_v1",
+      "record_id": "industry-sol-pi"
+    },
+    {
+      "date": "2026-09-17",
+      "type": "engineering_report",
+      "record_id": "industry-zai-infra"
+    },
+    {
+      "date": "2026-10-09",
+      "type": "arxiv_v1",
+      "record_id": "industry-harness2"
+    },
+    {
+      "date": "2026-10-12",
+      "type": "official_announcement",
+      "record_id": "industry-mass"
+    },
+    {
+      "date": "2026-10-26",
+      "type": "arxiv_v1",
+      "record_id": "survey-trustworthy"
+    },
+    {
+      "date": "2026-11-04",
+      "type": "podcast_publication",
+      "record_id": "industry-sequoia-trajectory"
+    }
+  ],
+  "search_log_policy": "These are actual search-page fetches performed in this research. Query text is retained at the phrase level; replay_url recreates the query and is not asserted to preserve byte-for-byte original request parameters. Search snippets are discovery evidence, not primary validation.",
+  "search_log": [
+    {
+      "engine": "Google",
+      "query": "recursive self-improvement institutions and seven root repository discovery",
+      "replay_url": "https://www.google.com/search?q=recursive+self-improvement+awesome-rsi",
+      "outcome": "Regional redirect to Google HK; no usable results read",
+      "used_as_verification": false
+    },
+    {
+      "engine": "Bing",
+      "query": "NVIDIA SoL-Pi ByteDance Seed GAIR 801-30B",
+      "replay_url": "https://www.bing.com/search?q=NVIDIA+SoL-Pi+ByteDance+Seed+GAIR+801-30B",
+      "outcome": "Located official NVlabs SoL-Pi and arXiv2609.20519; followed primary sources",
+      "used_as_verification": false
+    },
+    {
+      "engine": "DuckDuckGo",
+      "query": "\"Diving into Reliable Self-Evolving Agents\" survey",
+      "replay_url": "https://duckduckgo.com/?q=%22Diving+into+Reliable+Self-Evolving+Agents%22+survey",
+      "outcome": "Located author site, author-hosted PDF and Preprints202609.0913; companion page readable, PDF extraction failed",
+      "used_as_verification": false
+    },
+    {
+      "engine": "Bing",
+      "query": "\"pinkbubblebubble\" \"rsi\" github",
+      "replay_url": "https://www.bing.com/search?q=%22pinkbubblebubble%22+%22rsi%22+github",
+      "outcome": "Located required root repository, later read directly",
+      "used_as_verification": false
+    },
+    {
+      "engine": "Bing",
+      "query": "\"Picrew\" \"rsi\" github",
+      "replay_url": "https://www.bing.com/search?q=%22Picrew%22+%22rsi%22+github",
+      "outcome": "Located required root repository, later read directly",
+      "used_as_verification": false
+    },
+    {
+      "engine": "Bing",
+      "query": "\"Lee1003-lee\" \"RSI\"",
+      "replay_url": "https://www.bing.com/search?q=%22Lee1003-lee%22+%22RSI%22",
+      "outcome": "Located Awesome-RSI-Research and companion manuscript lead; README later read",
+      "used_as_verification": false
+    },
+    {
+      "engine": "Bing",
+      "query": "\"GAIR\" \"801-30B\"",
+      "replay_url": "https://www.bing.com/search?q=%22GAIR%22+%22801-30B%22",
+      "outcome": "Located official repository; did not adopt promotional global-priority count",
+      "used_as_verification": false
+    },
+    {
+      "engine": "Bing",
+      "query": "Google Research Sakana Anthropic OpenAI recursive self-improvement2026",
+      "replay_url": "https://www.bing.com/search?q=Google+Research+Sakana+Anthropic+OpenAI+recursive+self-improvement+2026",
+      "outcome": "Mixed primarily secondary results; official pages fetched separately",
+      "used_as_verification": false
+    },
+    {
+      "engine": "Bing",
+      "query": "site:sakana.ai \"Recursive Self-Improvement\" Lab",
+      "replay_url": "https://www.bing.com/search?q=site%3Asakana.ai+%22Recursive+Self-Improvement%22+Lab",
+      "outcome": "Located RSI Lab and MASS official sources, then read them",
+      "used_as_verification": false
+    },
+    {
+      "engine": "Bing",
+      "query": "site:research.google \"Harness\" \"recursive\"2026",
+      "replay_url": "https://www.bing.com/search?q=site%3Aresearch.google+%22Harness%22+%22recursive%22+2026",
+      "outcome": "Poor relevance; not counted as primary verification of Harness2; arXiv2610.14224 subsequently read",
+      "used_as_verification": false
+    },
+    {
+      "engine": "Bing",
+      "query": "site:seed.bytedance.com \"Seed2.1\" \"Seed for Seed\"",
+      "replay_url": "https://www.bing.com/search?q=site%3Aseed.bytedance.com+%22Seed2.1%22+%22Seed+for+Seed%22",
+      "outcome": "Located canonical Seed2.1 official article; June23 date subsequently confirmed on primary page",
+      "used_as_verification": false
+    },
+    {
+      "engine": "Bing",
+      "query": "\"31dec7fbd91569b094bab29e73f62a44cf28094c\"",
+      "replay_url": "https://www.bing.com/search?q=%2231dec7fbd91569b094bab29e73f62a44cf28094c%22",
+      "outcome": "Returned irrelevant URL-decoding and hash tools; no manuscript identity match established",
+      "used_as_verification": false
+    }
+  ],
+  "identity_and_version_conflicts": [
+    {
+      "topic": "Frontis identifier",
+      "status": "resolved",
+      "detail": "2607.28568 is Frontis-MA1;2607.28586 is an unrelated math.AG paper; both abstract pages read"
+    },
+    {
+      "topic": "AI4AI catalogue965/981",
+      "status": "unresolved",
+      "detail": "Different visible denominators; no pinned underlying-record recount"
+    },
+    {
+      "topic": "Requested OpenReview hash",
+      "status": "unresolved",
+      "detail": "No proven mapping to CGO1hDTHNe; exact hash retained separately"
+    },
+    {
+      "topic": "AI4AI author-blog DOI",
+      "status": "preserved",
+      "detail": "Body uses Preprints DOI, BibTeX uses Zenodo22198847; not silently harmonized"
+    },
+    {
+      "topic": "MetaRSI dates and version",
+      "status": "separated",
+      "detail": "Project page September3; arXivv1 September6 and v2 September9; actual detailed reading is v1"
+    },
+    {
+      "topic": "Flint dates",
+      "status": "preserved",
+      "detail": "Visible October18 versus page metadata November2"
+    },
+    {
+      "topic": "Anthropic Institute first date",
+      "status": "unresolved",
+      "detail": "No primary day established; update September18 verified; secondary date/year conflicts not adopted"
+    },
+    {
+      "topic": "Prism face date",
+      "status": "separated",
+      "detail": "Manuscript October9 versus arXiv submission October10"
+    },
+    {
+      "topic": "Theseus versions",
+      "status": "separated",
+      "detail": "v1 September10/v2 September15/v3 September22; v3 body used; old guide figure/case counts not inherited"
+    }
+  ],
+  "coverage_gaps": [
+    "AI4AI Preprints primary PDF unread: access-protection and extraction failures; author companion evidence table and notes are explicitly lower-scope coverage",
+    "Exact requested OpenReview PDF unread and identity mapping unresolved",
+    "Reliable survey author website read, not full manuscript",
+    "GAIR801 report.pdf unread; exact first release date not established; base weights still described as coming soon",
+    "No complete traversal or full reading of all papers linked by seven root catalogues; acquisition inventory is separate and not silently marked complete",
+    "Some sources referenced by industry blogs remain discovery leads, including individual negative-result papers;2610.27610 audit and2609.26457 AIDE2 have now been read directly but their underlying corpora have not",
+    "No independent experimental replication, installation, browser rendering, runtime link checker or machine line-count validation performed in this terminal-free role"
+  ],
+  "strongest_conclusions": [
+    "Taxonomies measure different axes and sometimes use incompatible RSI definitions; equal-looking level numbers are not interchangeable",
+    "A better successor product is not proof of a better improver; paired continuations from identical state under matched budgets address the latter claim",
+    "MetaRSI reports such a continuation comparison but publishes only a limited harness component, so experiment evidence and reproducibility surface remain separate",
+    "SoL-Pi deployment savings include score losses in full-stack settings, and recursive cost compounding is future work rather than a demonstrated result",
+    "Z.ai explicitly does not claim achieved RSI; Flint model/engine release and801 local-loop pretraining account cannot establish full self-acceleration",
+    "MASS role transfer and Harness2 improvement-library ablations are informative but retain role, budget, statistical and fixed-outer-rule limitations",
+    "Trustworthy RSI requires capability, constraint preservation and intervention effectiveness measured along the same evolving lineage"
+  ]
+}

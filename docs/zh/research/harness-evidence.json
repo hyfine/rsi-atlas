@@ -1,0 +1,1006 @@
+[
+  {
+    "id": "yunjue",
+    "method": "Yunjue Agent",
+    "title": "Yunjue Agent Tech Report: A Fully Reproducible, Zero-Start In-Situ Self-Evolving Agent System for Open-Ended Tasks",
+    "primary_url": "https://arxiv.org/abs/2601.18226",
+    "repo_url": "https://github.com/YunjueTech/Yunjue-Agent",
+    "first_date": "2026-01-26",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "v1 sections 1-8",
+      "v1 Appendix A evaluation protocols",
+      "v1 Appendix B",
+      "v1 Appendix C captions",
+      "abstract-page version history"
+    ],
+    "mechanism": "固定工作流和上下文设计、无模型权重更新；Manager 检索工具，Developer 按缺口生成，Executor 执行，批次结束后 LLM Aggregator/Merger 聚类吸收为持久工具库。C 类；L1/L2 边界，不是自改写元算法。",
+    "evidence": [
+      "第2节明确 M_t=<W_0,C_0,T_t>；第1节 binary signal 的例子是代码正常运行或抛异常，不是开放任务答案真值。",
+      "第3.2节以功能语义聚类与合并抑制重复工具。",
+      "第5.3节 EGL=1000*sum(new tools)/sum(tool invocations)，是收敛监测指标而非权重训练 loss。",
+      "第5.2节 HLE 工具库 warm-start xSciQA 报告76.5到80.2，新工具数13到0。"
+    ],
+    "limitations": [
+      "本次读取v1正文；元数据说明v2于2026-02-06发布，未将v1数值冒充v2复核结果。",
+      "工具执行成功不保证语义正确；最后任务成绩使用官方评分流程，不能说全系统只靠二元工具验证。",
+      "v1主文和表格的部分DeepSearchQA数字不一致，故不以其极值做比较。",
+      "完整读取本地00_RSI_overview.md 528行作为待核线索，未修改原文。"
+    ],
+    "source_doc": "https://arxiv.org/html/2601.18226v1",
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "method_sections",
+      "version": "v1",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2601.18226v1",
+          "sections": [
+            "1",
+            "2",
+            "3.1-3.3",
+            "4",
+            "5.1-5.4",
+            "7",
+            "Appendix A",
+            "Tables 1-3"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "演化状态为固定工作流、固定上下文设计、可变工具库；不做模型权重更新。",
+          "locator": "2; 3.1"
+        },
+        {
+          "claim": "工具二元反馈例子是代码运行成功或异常，不是开放任务答案真值；任务最终成绩另用官方协议。",
+          "locator": "1; Appendix A Evaluation protocols"
+        },
+        {
+          "claim": "Integrator汇总历史和中间输出形成回答；Aggregator和Merger才负责批次语义聚类与工具合并。",
+          "locator": "3.3 The Yunjue agent system"
+        },
+        {
+          "claim": "HLE工具库warm-start使xSciQA从76.5到80.2、新工具13到0；EGL为每查询新增工具总数除调用总数再乘1000。",
+          "locator": "5.2 Table 1; 5.3 Equation 1"
+        },
+        {
+          "claim": "外部基线大多取自公开报告；工作流/记忆共同演化与稳定性正则化尚为未来工作。",
+          "locator": "4 Baselines; Appendix A; 7"
+        }
+      ],
+      "corrections": [
+        "修正继承专题中Integrator负责入库的职责误写；旧JSON未对此角色单独断言。"
+      ],
+      "limitations": [
+        "本轮方法与实验核对限定v1，不把v2仅元数据记录提升为v2正文阅读。",
+        "未运行工具代码或复现实验；批次工具增长趋缓不是通用能力收敛证明。",
+        "未把HTML中空缺的完整提示附录当作已读算法实现。"
+      ]
+    }
+  },
+  {
+    "id": "skillmoo",
+    "method": "SkillMOO",
+    "title": "SkillMOO: Multi-Objective Optimization of Agent Skills for Software Engineering",
+    "primary_url": "https://arxiv.org/abs/2604.09297",
+    "repo_url": "https://github.com/gjz78910/SkillMOO",
+    "first_date": "2026-04-10",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "v3 sections 1-6",
+      "Tables 1-4",
+      "Data Availability Statement",
+      "abstract-page version history"
+    ],
+    "mechanism": "任务特定技能bundle的LLM编辑与NSGA-II非支配排序/拥挤距离选择；目标min(-pass,cost)，GLM-5 solver和optimizer固定，种群4、3代。C类L1优化，未证明改进器自演化。",
+    "evidence": [
+      "16个SkillsBench SE任务，测试扩充至40-43项并人工检查。",
+      "第5.2节搜索费1.76-13.73美元，作者估算纯成本回本5-682次复用，中位数45。",
+      "38个筛选后的编辑记录中删除和替换常伴随收益，原文明确属于描述性证据。"
+    ],
+    "limitations": [
+      "单模型、单基准、按任务优化；跨新任务和跨模型迁移属于未来工作。",
+      "摘要页v3写最高31.7%成本下降/21pp；HTML摘要和部分正文写32.1%/42pp，不统一转述这些极值。",
+      "搜索档案筛选造成幸存者偏差；不能将编辑相关性视为因果效果。",
+      "首发2026-04-10，所读v3为2026-08-05。"
+    ],
+    "source_doc": "https://arxiv.org/html/2604.09297v3"
+  },
+  {
+    "id": "ahe",
+    "method": "AHE",
+    "title": "Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses",
+    "primary_url": "https://arxiv.org/abs/2604.25850",
+    "repo_url": "https://github.com/china-qijizhifeng/agentic-harness-engineering",
+    "first_date": "2026-04-28",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "v4 sections 1-5",
+      "Limitations",
+      "Appendix A",
+      "Appendix B architecture and edit constraints",
+      "Appendix C case studies",
+      "Appendix D",
+      "abstract-page version history"
+    ],
+    "mechanism": "七类文件级组件、分层轨迹报告、带修复/回归预测的change manifest；rollout-clean-attribute-rollback-distill-edit-commit循环，基础模型与验证基础设施固定。C+D；固定外层优化，L1/L2边界。",
+    "evidence": [
+      "十轮约32小时，全部89个TB2任务用于演化，69.7%到77.0%。",
+      "冻结迁移SWE-bench Verified：75.2%到75.6%，token均值526k到461k。",
+      "跨模型不再演化：DeepSeek-V4-Flash +10.1pp、Qwen3.6-Plus +6.3pp、Gemini-3.1-Flash-Lite +5.1pp。",
+      "系统提示单独移植降至67.4%；第4.4.2节回归预测召回11.1%。"
+    ],
+    "limitations": [
+      "不能把TB2演化任务成绩当作未见任务成绩。",
+      "组件效果非可加；十轮单次搜索及超时/推理预算耦合限制外推。",
+      "token均值排除基础设施中断试次，成功率把这些试次算失败。",
+      "所读v4发布于2026-05-18；非独立复现。"
+    ],
+    "source_doc": "https://arxiv.org/html/2604.25850v4"
+  },
+  {
+    "id": "rho",
+    "method": "RHO",
+    "title": "Evolving Agents in the Dark: Retrospective Harness Optimization via Self-Preference",
+    "primary_url": "https://arxiv.org/abs/2606.05922",
+    "repo_url": "https://github.com/wbopan/retro-harness",
+    "first_date": "2026-06-04",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "v3 sections 1-7",
+      "Limitations and Ethics",
+      "Appendices C-G",
+      "Appendix B ranking protocol",
+      "abstract-page version history"
+    ],
+    "mechanism": "难度/多样性DPP选择10任务，3次group rollout抽取self-validation和self-consistency，3个候选以相对原始轨迹的平均自偏好选优；正分才更新。C+D，主实验为单轮L1。",
+    "evidence": [
+      "GPT-5.5/Codex同一骨干承担solve、optimize、rank；优化无标签，官方判分仅用于留出评估。",
+      "Table1报告SWE-Pro .59到.78、TB2 .71到.76、GAIA2 .29到.37。",
+      "优化阶段103次agent调用；共享coreset选择、最终测试和embedding成本单列。",
+      "第6.3节更弱自偏好候选测试.85，高于所选.78。"
+    ],
+    "limitations": [
+      "只验证单轮；原文明言不声称多轮单调或复利。",
+      "三领域分别适配，不是一个harness跨基准迁移。",
+      "可重置重试前提；自偏好排序、轨迹污染与仅提示级测试隔离仍有风险。",
+      "所读v3为2026-08-29；不得把HarnessPro复测RHO数字替代原论文数字。"
+    ],
+    "source_doc": "https://arxiv.org/html/2606.05922v3"
+  },
+  {
+    "id": "dream-rsi",
+    "method": "Dream-RSI",
+    "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+    "primary_url": "https://arxiv.org/abs/2609.14858",
+    "repo_url": "https://github.com/zhengkid/Dream-RSI",
+    "first_date": "2026-09-14",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "v1 sections 1-7 and replay prompt",
+      "v2 sections 1-7",
+      "v2 Appendix B experimental settings",
+      "v2 Appendix D prefix-only constraints",
+      "abstract-page version history",
+      "local Dream-RSI-Paper-Explained.md all 366 lines"
+    ],
+    "mechanism": "固定发现agent、固定策略开发agent与评价器；演化探索策略代码。在线发现树成为确定性prefix-only回放世界，策略离线选优后再部署，扩充下一轮历史。D+F主类、C/B历史载体；L2及局部元优化，不是权重或神经世界模型训练。",
+    "evidence": [
+      "v2于2026-10-06发布；3域8任务扩大为4域9任务，新增harness optimization。",
+      "v1线性质量-成本+并行式在v2改为预算偏好扫描的归一化hypervolume减并行惩罚；每离线阶段当前+3新策略，M=4。",
+      "候选含当前策略，只保证固定历史平均回放分不退步。",
+      "Lasso Pro：550调用/3587.1ms变317/2931.0ms，均值优势主要来自RCV1，其余五个留出数据集更慢。",
+      "新增TB2.1全89任务每题2次评价，seed .7247到.8090；没有该域固定探索对照，作者估算额外完整搜索超过100000美元。"
+    ],
+    "limitations": [
+      "仅记录树支持集，无未见节点外推，无任意在线策略的无偏价值保证。",
+      "零新增发现执行不等于策略生成和全生命周期成本为零。",
+      "162倍调用比跨不同骨干，不是FLOPs或费用加速。",
+      "ConvDiv全历史消融1.90/786对当前历史1.59/430并非等预算。",
+      "原图为arXiv非独占分发许可，不能由公开可读推断可任意再许可。"
+    ],
+    "source_doc": "https://arxiv.org/html/2609.14858v2"
+  },
+  {
+    "id": "sol-pi",
+    "method": "SoL-Pi",
+    "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+    "primary_url": "https://arxiv.org/abs/2609.20519",
+    "repo_url": "https://github.com/NVlabs/SoL-Pi",
+    "first_date": "2026-09-17",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "v1 sections 1-5",
+      "Tables 1-4",
+      "section 5.1 future recursion limitation",
+      "abstract-page submission history"
+    ],
+    "mechanism": "152方向、535开发环境的隔离离线研究谱系，能力门后效率门与非支配选择；冻结四机制Action Fusion、Online Context Compact、ObservationPack、Evidence-Preserving Reducer。D类L1；多代自加速是未来愿景。",
+    "evidence": [
+      "495仓库环境加40验证器驱动合成环境；51个EdgeBench公开任务分11单向接纳+40最终泛化。",
+      "GPT-5.6 Sol完整栈相对Pi：2.1538B到1.0990B tokens；费用1339到894；分数44.833到42.003。",
+      "Opus5无再搜索完整栈：费用1741到1158，分数44.756到42.224。",
+      "TB4 CPU子集Pi解18/63、SoL-Pi解15/63，费用降低而完成数下降。"
+    ],
+    "limitations": [
+      "Efficiency完整栈与Performance单组件择优不同，不可拼接指标。",
+      "记录token traffic包括缓存读写，不等于独立生成token或FLOPs。",
+      "压缩门不单独给摘要调用定价；需要端到端账单。",
+      "每个谱系修改后的orchestration代码丢弃；第5.1节明确递归效率复利未由本研究证明。",
+      "正文图像为arXiv非独占分发许可。"
+    ],
+    "source_doc": "https://arxiv.org/html/2609.20519v1",
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "method_sections",
+      "version": "v1",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2609.20519v1",
+          "sections": [
+            "abstract",
+            "submission history: 2026-09-17"
+          ]
+        },
+        {
+          "url": "https://arxiv.org/html/2609.20519v1",
+          "sections": [
+            "2.1-2.5",
+            "3.1-3.5",
+            "Tables 1-4",
+            "5.1"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "一手摘要确认相对Pi的recorded token traffic下降44.7-49.0%、API费用约降三分之一；这是作者报告，不是overview摘录的独立复现。",
+          "locator": "v1 abstract; Tables 1-2"
+        },
+        {
+          "claim": "152方向；535开发环境由495仓库任务和40合成环境组成；能力容差与效率指标在研究开始前固定。",
+          "locator": "2.1-2.3"
+        },
+        {
+          "claim": "Action Fusion、Online Context Compact、ObservationPack、Evidence-Preserving Reducer分别改变动作组合、压缩时机、可恢复观察与证据提取。",
+          "locator": "2.4-2.5"
+        },
+        {
+          "claim": "超过10KiB观察前两次完整发送，之后句柄化；至少4KiB的指定构建/测试日志可经Reducer，schema/hash/退出码/引文/大小验证失败回原文。",
+          "locator": "2.4"
+        },
+        {
+          "claim": "2.5声明11题单向接纳和40题最终评估；3.1主表使用51题公开集，不能把主表数字重标为40题纯留出成绩。",
+          "locator": "2.5; 3.1"
+        },
+        {
+          "claim": "Sol完整栈相对Pi：流量2.1538B到1.0990B，费用1339到894，均分44.833到42.003。",
+          "locator": "Table 1"
+        },
+        {
+          "claim": "Opus5无再搜索完整栈相对Pi：流量2.3697B到1.3101B，费用1741到1158，均分44.756到42.224。",
+          "locator": "Table 2"
+        },
+        {
+          "claim": "TB4 CPU子集Pi18/63、SoL-Pi15/63；Efficiency完整栈与按骨干择优Performance单组件不同。",
+          "locator": "Tables 2-4"
+        },
+        {
+          "claim": "定价为2026-08-17；多代递归效率复利与搜索规模规律仍属未来研究。",
+          "locator": "Table 1 note; 5.1"
+        }
+      ],
+      "limitations": [
+        "没有独立复现，不把摘要节省百分比表述为本章测量。",
+        "traffic含缓存读写，不等于生成token、FLOPs或墙钟时间。",
+        "未取得单列40题最终分区的实验表；保留作者分区声明与主表统计范围之间的区别。",
+        "完整栈均分下降；不能从comparable一词推导能力无损。",
+        "表内成本不含完整搜索摊销；按不同触发任务子集比较不足以辨认机制交互的因果效应。"
+      ]
+    }
+  },
+  {
+    "id": "rrsi",
+    "method": "RRSI",
+    "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
+    "primary_url": "https://arxiv.org/abs/2609.24972",
+    "repo_url": "https://github.com/google-research/rrsi",
+    "first_date": "2026-09-21",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "v3 sections 1-6",
+      "Limitations",
+      "Appendices B-F",
+      "Tables 2-7",
+      "abstract-page version history"
+    ],
+    "mechanism": "固定骨干与提案/批评协议，开放harness编辑空间；余弦退火原子编辑预算、历史归因和停滞探索；泄漏critic、历史最佳噪声底线、分段成本接纳与结构剪枝。D+C；L1/L2边界，不是L3或参数范数训练。",
+    "evidence": [
+      "Table2工作区：无正则evolve92.8/OOD40.3/3.80M；RRSI90.5/43.6/2.42M；初始89.4/39.7/1.56M。",
+      "公式4为编辑数余弦退火；公式5为S_hat>=S_best-delta；增益超过噪声时DeltaC<=beta0+beta1*DeltaS；带内用另一个成本/结构新颖性条件。",
+      "Table4：Gemini3.5Flash演化产物不改动迁到3.1FlashLite，TB2.1从11.2到14.6。",
+      "预算编码20轮/工作区20轮/工程40轮。"
+    ],
+    "limitations": [
+      "L0/L1/L2 regularization仅类比，不优化连续范数惩罚；勿与本章递归等级混淆。",
+      "优于无正则成本但仍贵于初始harness；摘要30%与表格不宜混用。",
+      "部分正文OOD最大值与摘要4.3不一致，使用具名表格数据而非统一极值。",
+      "有限evolve set和多编辑共用候选分导致统计选择与归因局限。",
+      "所读v3发布于2026-10-04。"
+    ],
+    "source_doc": "https://arxiv.org/html/2609.24972v3",
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "method_sections",
+      "version": "v3",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2609.24972v3",
+          "sections": [
+            "2",
+            "3.1-3.3",
+            "4.1-4.3",
+            "D.1-D.3",
+            "E.1-E.2",
+            "Tables 2-7",
+            "Limitations"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "模型权重固定；正则化提案与接纳，不优化代码或模型参数的连续范数惩罚。",
+          "locator": "2; 3.1; Appendix D"
+        },
+        {
+          "claim": "余弦退火约束可归因编辑数量；历史最佳底线与分段成本条件均须满足。D.3的S-star更新只使用被选中的下一版本。",
+          "locator": "Equations 4-7, 9, 17; D.3 Final round selection"
+        },
+        {
+          "claim": "噪声带内权重非负；编码实例w_s=0，微小涨分不能单独获得接纳资格。",
+          "locator": "D.3 Acceptance when the gain does not exceed the noise tolerance"
+        },
+        {
+          "claim": "工作区无正则演化92.8/40.3/3.80M，RRSI90.5/43.6/2.42M，初始89.4/39.7/1.56M，依次为evolve分、OOD均值、每trial policy tokens。",
+          "locator": "Table 2"
+        },
+        {
+          "claim": "冻结Gemini 3.5 Flash产物迁至3.1 Flash Lite，Terminal-Bench 2.1从11.2到14.6；不同于各模型独立搜索。",
+          "locator": "Tables 3-4"
+        },
+        {
+          "claim": "编码/工作区20轮、工程40轮；作者另报告独立搜索复跑，工作区OOD均值43.6和43.7。",
+          "locator": "Tables 5 and 7; E.2"
+        }
+      ],
+      "limitations": [
+        "本轮阅读具名方法和实验章节，不声称通读所有正文或运行复现。",
+        "摘要极值不替代具名表格；省token相对无正则演化，仍贵于初始harness。",
+        "噪声带、critic与作者重复实验均不构成任意分布外任务上的单调保证。",
+        "旧字段保留上一轮证据；本轮补充澄清历史最佳分的实现更新范围。"
+      ]
+    }
+  },
+  {
+    "id": "harness2",
+    "method": "Harness^2",
+    "title": "Harness^2: Recursive Agent Harnessing for an Open World",
+    "primary_url": "https://arxiv.org/abs/2610.14224",
+    "repo_url": "https://github.com/google-research/harness2",
+    "first_date": "2026-10-09",
+    "read_level": "fulltext_sections_and_official_repo",
+    "sections_read": [
+      "v1 sections 1-6",
+      "Appendices A-G",
+      "Appendix H reflection constraints",
+      "official repository README",
+      "abstract-page submission history"
+    ],
+    "mechanism": "每任务公共seed，invariant/domain两类Propose-Probe-Compose；可并行扩宽或顺序精炼。结束后持久存可执行harness和有证据的改进经验，供后续改进读取。C+D+F、明确L2；改进库状态变化但阶段规则固定，L3边界需注明。",
+    "evidence": [
+      "原始Google Research仓库确认精确arXiv2610.14224与首发2026-10-09。",
+      "第2.3节明确模型权重、阶段指令、决策规则不变，更新的是improvement library；新任务不直接继承前一任务完整execution harness。",
+      "Table3在Gemini3.5Flash/OpenCode k=1：full77.5/36.0，无库74.4/34.2（WorkBuddy/JobBench）。",
+      "AppendixE.2 leave-one-out可访问未来任务经验，作者明确不是在线收益估计。",
+      "论文CC BY 4.0；仓库Apache-2.0，许可证https://github.com/google-research/harness2/blob/main/LICENSE。"
+    ],
+    "limitations": [
+      "行为对照不保证答案正确或跨任务迁移。",
+      "预算k提前设定，平行并不减少总计算，#Steps只度量executor不等于全流程。",
+      "官方README提示网络不受限且Codex sandbox禁用，公开rubric可达需额外网络约束。",
+      "具体递归深度是本文解释，不能把维护经验库等同自重写改进算法。"
+    ],
+    "source_doc": "https://arxiv.org/html/2610.14224v1"
+  },
+  {
+    "id": "harnesspro",
+    "method": "HarnessPro",
+    "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
+    "primary_url": "https://arxiv.org/abs/2610.26770",
+    "repo_url": "https://github.com/pzs19/HarnessPro",
+    "first_date": "2026-10-19",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "v2 sections 1-6",
+      "Algorithm 1",
+      "Tables 1-4",
+      "Appendix A",
+      "Appendix C test-synthesis protocol",
+      "Appendix D selected runtime artifacts",
+      "abstract-page version history"
+    ],
+    "mechanism": "Analyzer/Planner/Editor/TestSynth生成候选；10训练任务coreset、3训练rollouts，训练-验证-测试分离；生成测试一次后固定；性能底线+Pareto过滤+归一化加权平方距离选至多三代表。C+D；固定改进框架，非L3。",
+    "evidence": [
+      "lite/medium/heavy性能/成本权重(1,2)/(1,1)/(2,1)，父代加入候选池；TB2/SWE-Pro3epoch、ProgramBench4。",
+      "GPT5.5/Codex TB2统一复测RHO76.3%/$1.09对heavy80.8%/$0.72。",
+      "初步生成测试对比直接LLM判断，失败召回41.7%到83.3%。",
+      "ProgramBench P是每任务测试通过比例宏平均，不是整题通过率。",
+      "所读v2发布2026-10-20，论文CC BY4.0 https://creativecommons.org/licenses/by/4.0/。"
+    ],
+    "limitations": [
+      "无官方标签不等于无验证；合成测试可能有共同错误且反复复用验证集仍会产生选择偏差。",
+      "原归一化式要求非零极差，复现应处理退化维度。",
+      "成本是部署token账单，未自动摊销全部搜索费；延迟为辅助指标。",
+      "两模型各自演化不是同一产物不改动跨模型迁移。"
+    ],
+    "source_doc": "https://arxiv.org/html/2610.26770v2",
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "method_sections",
+      "version": "v2",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2610.26770v2",
+          "sections": [
+            "3",
+            "4.1-4.3",
+            "Algorithm 1",
+            "5.1-5.5",
+            "Tables 2-4",
+            "A.1-A.2",
+            "C.3",
+            "D runtime artifacts (selected excerpts)"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "训练轨迹改候选、验证指标选优；TestSynth只根据公开任务和初始轨迹生成一次测试并冻结，不访问官方标签或grader。",
+          "locator": "3; 4.1-4.3; Algorithm 1; Equation 6"
+        },
+        {
+          "claim": "先执行初始质量底线和Pareto过滤，再以归一化加权平方距离选lite/medium/heavy；权重为(1,2)/(1,1)/(2,1)。",
+          "locator": "Equations 7-9; A.2"
+        },
+        {
+          "claim": "训练coreset为10题，每父代每训练题3次rollout；TB2/SWE-Pro/ProgramBench演化3/3/4epoch，测试59/100/100题，最终汇总3/3/2次运行。",
+          "locator": "5.1; A.1"
+        },
+        {
+          "claim": "失败召回41.7%到83.3%是合并TB2和SWE-Pro训练任务的初步检测实验。",
+          "locator": "4.3; Figure 2"
+        },
+        {
+          "claim": "GPT5.5/Codex的TB2：RHO76.3%/$1.09、heavy80.8%/$0.72；同表含RHO+Iteration等轮数对照，非等完整搜索费用。",
+          "locator": "Table 2; 5.1 Baselines"
+        },
+        {
+          "claim": "中间轮测试指标只作可视化，不参与选择；不是所有测试结果都仅在最终表格出现。",
+          "locator": "5.4; Figure 4 caption"
+        },
+        {
+          "claim": "测试生成和自审在同一次agent调用中完成，无独立reviewer；不能将初始产物作为oracle。",
+          "locator": "C.3 Test Synthesizer Configuration"
+        },
+        {
+          "claim": "部署费用区分缓存token；延迟不计最终判分；基础设施失败被排除并重试。",
+          "locator": "3 Cost and Latency; A.2; Table 4"
+        }
+      ],
+      "limitations": [
+        "本轮为方法及实验章节阅读，不是独立运行复现。",
+        "固定生成测试可能固定错误；多轮复用验证数据仍有自适应选择偏差。",
+        "表中费用没有自动包含提案、测试合成和全部搜索费用。",
+        "按骨干分别优化不证明同一产物不改动跨模型迁移。",
+        "旧字段保留上一轮证据；本轮明确中间轮测试曲线与选择过程的区别。"
+      ]
+    }
+  },
+  {
+    "id": "genericagent",
+    "method": "GenericAgent",
+    "title": "GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0)",
+    "primary_url": "https://arxiv.org/abs/2604.17091",
+    "repo_url": "https://github.com/lsdefine/GenericAgent",
+    "first_date": "2026-04-18",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "2.2-2.3 architecture, memory and consolidation",
+      "3.3 exploration and limitations",
+      "4.3-4.5 experiments",
+      "5 discussion"
+    ],
+    "mechanism": "固定模型权重与九个原子工具接口，把验证过的执行经验凝练为事实、SOP 和复用脚本，分层按需取回；自主探索可参考技能树和使用统计。",
+    "evidence": [
+      "表8相似GitHub研究工作流九轮总token从222203到23010，模型调用32到5。",
+      "上下文经过输出截断、标签压缩、FIFO淘汰与工作检查点维护。",
+      "技能树任务打分含广度、深度、效用、创新；自主任务有30轮上限。"
+    ],
+    "limitations": [
+      "长期探索权重自适应仍未充分验证；日志整理和高级技能树维护存在人工环节。",
+      "核心架构自更新是未来工作，不是已完成L3。",
+      "字符/token启发式对CJK可低估上下文占用。",
+      "有限重复任务上的效率下降不支持边际成本趋零或普遍OOD保证。"
+    ],
+    "source_doc": "https://arxiv.org/html/2604.17091v1"
+  },
+  {
+    "id": "skill1",
+    "method": "Skill1",
+    "title": "Skill1: Unified Evolution of Skill-Augmented Agents via Reinforcement Learning",
+    "primary_url": "https://arxiv.org/abs/2605.06130",
+    "repo_url": "https://github.com/AlphaLab-USTC/Skill1",
+    "first_date": "2026-05-07",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "2-3 formulation, rewards and joint optimization",
+      "Algorithm 1",
+      "4 experiments and cost",
+      "5 limitations",
+      "Appendices B-D"
+    ],
+    "mechanism": "单一可训练策略生成查询、重排技能、执行与蒸馏；冻结encoder检索top5。终局二元奖励直接训练利用，技能EMA监督排序，结果减库中最佳效用作为蒸馏代理奖励。",
+    "evidence": [
+      "Qwen2.5-7B-Instruct参数和技能库共同变化，每任务16rollouts，库从空开始且上限5000。",
+      "EMA更新所有被检索技能，不只是被选择技能；排序使用REINFORCE式目标，利用与蒸馏使用分开优势的GRPO。",
+      "ALFWorld成功率97.5，去库80.9；WebShop成功率82.9与部分得分89.7不同。",
+      "八张H800上ALFWorld训练约30小时，单步387-494秒，无库GRPO约290秒。"
+    ],
+    "limitations": [
+      "同检索相关性不是因果信用；蒸馏残差不是未来独立收益的直接测量。",
+      "RetroAgent重跑，多数其他基线借用既有论文成绩。",
+      "仅两个文本环境，固定奖励分解及训练算法，不是完整L3。",
+      "附录C另列UCB/greedy选取配置，与正文可训练排序的接口关系需代码复现核对；本文未做代码审计。"
+    ],
+    "source_doc": "https://arxiv.org/html/2605.06130v3"
+  },
+  {
+    "id": "cosplay",
+    "method": "COS-PLAY",
+    "title": "Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Tasks",
+    "primary_url": "https://arxiv.org/abs/2604.20987",
+    "repo_url": "https://github.com/wuxiyang1996/COS-PLAY",
+    "first_date": "2026-04-22",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "3-4 skill contracts and co-evolution",
+      "5 experiments",
+      "6 limitations",
+      "Appendices C, E, F, G"
+    ],
+    "mechanism": "Qwen3-8B决策agent与技能库agent共同训练。轨迹分段、效果契约验证和curator审核控制技能实体化、细化、合并、拆分与退休；五个功能LoRA以GRPO优化。",
+    "evidence": [
+      "每游戏60条GPT-5.4教师轨迹进行SFT冷启动，因此无技能标签不等于零数据或无训练。",
+      "动作奖励为环境奖励加0.1倍技能遵从塑形及切换代价。",
+      "六游戏文本观测，八张A100，各游戏7-25共同演化步骤。",
+      "正文25.1%指相对GPT-5.4的单人游戏平均奖励提升；主表HTML数字缺失，未重建逐格成绩。",
+      "Math-500为46.40到44.60，MMLU-Pro为61.99到61.15。"
+    ],
+    "limitations": [
+      "奖励计算无额外LLM调用不等于整个系统无推理或训练成本。",
+      "摘要关于四个前沿基线的措辞比正文GPT-5.4比较宽泛。",
+      "正文及附录A说多玩家训练对手GPT-5-mini，附录H却解释为共享模型对称self-play，存在描述不一致。",
+      "效果契约依赖文本状态摘要；跨模态和广域迁移仍是未来方向。"
+    ],
+    "source_doc": "https://arxiv.org/html/2604.20987v1"
+  },
+  {
+    "id": "adas",
+    "method": "ADAS / Meta Agent Search",
+    "title": "Automated Design of Agentic Systems",
+    "primary_url": "https://arxiv.org/abs/2408.08435",
+    "repo_url": "https://github.com/ShengranHu/ADAS",
+    "first_date": "2024-08-15",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "2 ADAS formulation",
+      "3 Meta Agent Search",
+      "4 experiments and transfer",
+      "6 future work",
+      "Appendices H-J"
+    ],
+    "mechanism": "固定meta agent读取历史agent档案，生成forward代码，经过两轮设计反思与验证评估；错误最多修复五次，候选及指标回写档案。",
+    "evidence": [
+      "ARC25轮，其他域30轮；GPT-4系列设计，GPT-3.5执行。",
+      "ARC从不超过5x5网格子集抽20验证题和60测试题，并非完整ARC。",
+      "有跨任务和跨模型迁移实验；正文4.3按源模型test accuracy选ARC top3转移对象。",
+      "附录J单次搜索及评价ARC约500美元，其余域约300美元。"
+    ],
+    "limitations": [
+      "higher-order ADAS、自改meta agent、在线持续学习、多目标搜索是未来工作。",
+      "档案反馈不等于发现的agent接管改进器，本文主要归D/L1。",
+      "单步QA任务上的组合推理实验不是长期真实工具交互验证。",
+      "部分表格数值在HTML为空，未据空单元格推断成绩。"
+    ],
+    "source_doc": "https://arxiv.org/html/2408.08435v2"
+  },
+  {
+    "id": "aflow",
+    "method": "AFlow",
+    "title": "AFlow: Automating Agentic Workflow Generation",
+    "primary_url": "https://arxiv.org/abs/2410.10762",
+    "repo_url": "https://github.com/FoundationAgents/AFlow",
+    "first_date": "2024-10-14",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "3 formulation and fixed search dimensions",
+      "4 MCTS variant",
+      "5 experiments",
+      "Appendix A.6 stopping",
+      "Appendix D costs"
+    ],
+    "mechanism": "MCTS变体的节点是完整代码工作流；从top候选及初始模板混合抽样，LLM编辑提示和连接，验证执行五次后回传修改成败经验。模型、温度、格式及搜索器固定。",
+    "evidence": [
+      "混合选择均匀权重0.2、指数分数系数0.4；最多20轮，top3均分连续5轮不升早停。",
+      "先20%验证/80%测试分区，再选高方差验证子集。",
+      "Table2冻结工作流跨执行模型迁移存在，但专用工作流仍有模型适配差异。",
+      "AppendixD的4.55%费用配置与GPT4o IO基本持平；胜过它的是5.92%或8.05%配置。"
+    ],
+    "limitations": [
+      "推理费用不含搜索摊销。",
+      "六任务均分混合F1、solve rate、pass@1，不是统一准确率。",
+      "全文含有限迭代最优性讨论，本文不将非零改进概率解读为有限预算全局最优证明。",
+      "主要D/L1离线设计，MCTS及优化模型并未自行修改。"
+    ],
+    "source_doc": "https://arxiv.org/html/2410.10762v4"
+  },
+  {
+    "id": "godel-agent",
+    "method": "Godel Agent",
+    "title": "Godel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement",
+    "primary_url": "https://arxiv.org/abs/2410.04444",
+    "repo_url": "https://github.com/Arvid-pku/Godel_Agent",
+    "first_date": "2024-10-06",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "3 recursive formulation",
+      "4 monkey-patching implementation",
+      "5 experiments",
+      "6 robustness and Game of 24",
+      "7 and Limitations",
+      "Appendices B and D"
+    ],
+    "mechanism": "运行时检查并monkey-patch任务策略与改进逻辑；主函数递归使下一层调用修改后的函数，更新对象包含I本身。",
+    "evidence": [
+      "每任务6个独立周期，每周期最多30轮，验证后测试。",
+      "Gödel-base限制执行模型；Gödel-free可请求GPT4o等更强模型。",
+      "100次MGSM优化中92%有暂时下降，4%意外终止，14%最终比初始差。",
+      "Game of24案例报告改写解题搜索、错误分析、日志与并行优化机制。",
+      "AppendixD称30轮过程约15美元，此处未统一与ADAS成本核算边界。"
+    ],
+    "limitations": [
+      "程序层D+F/L3原型不等于形式化证明有益或无限持续增长。",
+      "权重训练列为未来方向；目标、环境接口和实验预算仍预设。",
+      "改坏递归模块会丧失继续优化能力；错误率统计不是互斥类别。",
+      "HTML标题为Recursively Self-Improvement，与abstract页Recursive Self-Improvement措辞不同。"
+    ],
+    "source_doc": "https://arxiv.org/html/2410.04444v4"
+  },
+  {
+    "id": "dgm",
+    "method": "Darwin Godel Machine",
+    "title": "Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
+    "primary_url": "https://arxiv.org/abs/2505.22954",
+    "repo_url": "https://github.com/jennyzzt/dgm",
+    "first_date": "2025-05-29",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "3-4 algorithm and experiments",
+      "5-6 safety and limitations",
+      "Appendices C.2-C.4",
+      "Appendix E.1 cost",
+      "Appendix H objective hacking",
+      "Appendix J fixed outer search"
+    ],
+    "mechanism": "档案父代实际实现自己的代码修改，固定o1诊断模块提供改进任务；能编译且保留代码编辑功能的后代入档，即使并非立即更优。",
+    "evidence": [
+      "主实验80轮，父代选择偏好高分与少可运行子代，外层档案维护和抽样不可编辑。",
+      "SWE所用子集20%到50%；Polyglot搜索子集14%到38%，完整复测14.2%到30.7%。",
+      "SWE产物转Polyglot28.9%对初始14.2%；反向24.5%对20%。",
+      "SWE200题跨模型o3-mini23%到33%，Claude3.7 19%到59.5%。",
+      "单SWE搜索约两周22000美元，主要消融约10000美元。"
+    ],
+    "limitations": [
+      "求解器不见私有测试，但诊断提示含private test patch与评价日志；并非完全隔离。",
+      "附录H发现删除日志标记绕过幻觉评价的objective hacking。",
+      "没有训练基础模型；改进整个外层搜索属于未来工作。",
+      "本文L2加局部L3边界，不把编码benchmark进步等同所有领域元改进能力提升。"
+    ],
+    "source_doc": "https://arxiv.org/html/2505.22954v3"
+  },
+  {
+    "id": "reflexion",
+    "method": "Reflexion",
+    "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    "primary_url": "https://arxiv.org/abs/2303.11366",
+    "repo_url": null,
+    "first_date": "2023-03-20",
+    "read_level": "abstract_metadata_only",
+    "sections_read": [
+      "v4 abstract",
+      "submission history"
+    ],
+    "mechanism": "把任务反馈转换为语言反思并保留在episodic memory，影响后续尝试而不更新权重。",
+    "evidence": [
+      "摘要明确反馈可为标量或语言、可来自外部或内部模拟。",
+      "v4于2023-10-10修订；first_date保留最早v1日期。"
+    ],
+    "limitations": [
+      "未阅读正文，不据摘要补写具体重试预算、算法超参数或评测隔离。",
+      "记忆寿命影响L0/L1判断，摘要不足以证明L3。",
+      "repo_url为空表示本轮未核实官方仓库，不表示没有开源实现。"
+    ],
+    "source_doc": "https://arxiv.org/abs/2303.11366v4"
+  },
+  {
+    "id": "voyager",
+    "method": "Voyager",
+    "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+    "primary_url": "https://arxiv.org/abs/2305.16291",
+    "repo_url": null,
+    "first_date": "2023-05-25",
+    "read_level": "abstract_metadata_only",
+    "sections_read": [
+      "v2 abstract",
+      "submission history"
+    ],
+    "mechanism": "自动课程、可执行技能库、环境反馈及执行错误驱动的迭代提示，共同支持Minecraft持续探索；GPT4黑盒调用而非参数微调。",
+    "evidence": [
+      "摘要报告技能库在新Minecraft世界解决新任务。",
+      "官方项目入口https://voyager.minedojo.org/由摘要给出。"
+    ],
+    "limitations": [
+      "未复核全文实验协议，摘要倍数不用于本章横向排名。",
+      "游戏内迁移不等于现实世界或任意工具域泛化。",
+      "本文B+C/L2边界不代表课程生成程序本身发生改写。"
+    ],
+    "source_doc": "https://arxiv.org/abs/2305.16291v2"
+  },
+  {
+    "id": "expel",
+    "method": "ExpeL",
+    "title": "ExpeL: LLM Agents Are Experiential Learners",
+    "primary_url": "https://arxiv.org/abs/2308.10144",
+    "repo_url": null,
+    "first_date": "2023-08-20",
+    "read_level": "abstract_metadata_only",
+    "sections_read": [
+      "v3 abstract",
+      "submission history"
+    ],
+    "mechanism": "在训练任务上收集经验、抽取自然语言知识，推理时检索洞见与历史经验，不需要参数更新。",
+    "evidence": [
+      "摘要明确经验获取与推理复用分离，并报告迁移探索。",
+      "最早提交2023-08-20，不能以AAAI2024或v3的2024-12-20作为首发。"
+    ],
+    "limitations": [
+      "未读正文，未核实完整检索规则、经验编辑操作、成本或停止超参数。",
+      "C/L1历史定位，不据摘要声明元改进器进化。"
+    ],
+    "source_doc": "https://arxiv.org/abs/2308.10144v3"
+  },
+  {
+    "id": "opro",
+    "method": "OPRO",
+    "title": "Large Language Models as Optimizers",
+    "primary_url": "https://arxiv.org/abs/2309.03409",
+    "repo_url": "https://github.com/google-deepmind/opro",
+    "first_date": "2023-09-07",
+    "read_level": "abstract_metadata_only",
+    "sections_read": [
+      "v3 abstract",
+      "submission history"
+    ],
+    "mechanism": "LLM根据包含历史候选及其数值的提示生成新候选，评价后追加历史；重要应用是任务指令优化。",
+    "evidence": [
+      "摘要明确生成、评估、回填候选的迭代链。",
+      "官网仓库链接来自原摘要，v3为2024-04-15。"
+    ],
+    "limitations": [
+      "属于邻近prompt优化，不据多轮迭代认定L3。",
+      "未复核正文预算与结果口径，不使用摘要最大提升值做横评。"
+    ],
+    "source_doc": "https://arxiv.org/abs/2309.03409v3"
+  },
+  {
+    "id": "dspy",
+    "method": "DSPy",
+    "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines",
+    "primary_url": "https://arxiv.org/abs/2310.03714",
+    "repo_url": "https://github.com/stanfordnlp/dspy",
+    "first_date": "2023-10-05",
+    "read_level": "abstract_metadata_only",
+    "sections_read": [
+      "v1 abstract",
+      "submission history"
+    ],
+    "mechanism": "用声明式模块表示文本变换图，编译器依据给定指标优化组合，模块可通过收集示例以及提示、微调等技术配置学习。",
+    "evidence": [
+      "摘要同时包含prompting、finetuning、augmentation与reasoning组合，不是所有DSPy配置都不训练权重。"
+    ],
+    "limitations": [
+      "框架不是单一递归算法，更新对象与层级取决于编译器及应用配置。",
+      "未核实全文算法或最新库实现，引用限定原论文v1摘要。"
+    ],
+    "source_doc": "https://arxiv.org/abs/2310.03714v1"
+  },
+  {
+    "id": "textgrad",
+    "method": "TextGrad",
+    "title": "TextGrad: Automatic Differentiation via Text",
+    "primary_url": "https://arxiv.org/abs/2406.07496",
+    "repo_url": null,
+    "first_date": "2024-06-11",
+    "read_level": "abstract_metadata_only",
+    "sections_read": [
+      "v1 abstract",
+      "submission history"
+    ],
+    "mechanism": "将LLM语言反馈沿计算图传回变量，改进复合系统中的提示、代码等对象；文本梯度并非神经权重数值求导。",
+    "evidence": [
+      "原摘要举问答、代码、提示及结构优化应用，更新变量不限于单一prompt。"
+    ],
+    "limitations": [
+      "一次答案优化与持久组件优化应分别判断L0/L1。",
+      "未读正文，不把自动反馈传播理解为improver程序自行演化。"
+    ],
+    "source_doc": "https://arxiv.org/abs/2406.07496v1"
+  },
+  {
+    "id": "gepa",
+    "method": "GEPA",
+    "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
+    "primary_url": "https://arxiv.org/abs/2507.19457",
+    "repo_url": "https://github.com/gepa-ai/gepa",
+    "first_date": "2025-07-25",
+    "read_level": "abstract_metadata_only",
+    "sections_read": [
+      "v2 abstract",
+      "submission history"
+    ],
+    "mechanism": "从推理和工具执行轨迹做语言反思，提出并测试提示修改，组合候选前沿的互补经验。",
+    "evidence": [
+      "摘要给出Genetic-Pareto名称与轨迹反思机制，v2为2026-02-14。"
+    ],
+    "limitations": [
+      "未读正文，不把其前沿维度擅自替换为性能与成本。",
+      "本文D/L1邻近技术定位；摘要对GRPO的指标与rollout倍数未用于跨论文同预算排名。"
+    ],
+    "source_doc": "https://arxiv.org/abs/2507.19457v2"
+  },
+  {
+    "id": "hyperagents",
+    "method": "Hyperagents / DGM-H",
+    "title": "Hyperagents",
+    "primary_url": "https://arxiv.org/abs/2603.19461",
+    "repo_url": null,
+    "first_date": "2026-03-19",
+    "read_level": "abstract_metadata_only",
+    "sections_read": [
+      "v2 abstract",
+      "submission history; v2 2026-11-01"
+    ],
+    "mechanism": "摘要提出把task agent与可修改自身的meta agent放进一个可编辑程序，试图解除DGM中下游编码能力与自修改能力必须对齐的假设。",
+    "evidence": [
+      "摘要报告persistent memory和performance tracking等元层改变，以及跨域、跨运行的积累迁移。",
+      "https://arxiv.org/html/2603.19461v2返回HTTP404。"
+    ],
+    "limitations": [
+      "未获得正文，未核实完整算法、控制组、预算、停止或固定外层范围。",
+      "本文仅标D+F/L3候选，不将标题和摘要当作无限自加速证明。",
+      "RSIHub中的同名recipe是另一论文的适配，不能替代原实现证据。",
+      "repo_url为空表示本轮未核实直接官方仓库链接。"
+    ],
+    "source_doc": "https://arxiv.org/abs/2603.19461v2"
+  },
+  {
+    "id": "rsihub",
+    "method": "RSIHub",
+    "title": "RSIHub: A Composable Framework for Agent-Evolution Methods",
+    "primary_url": "https://arxiv.org/abs/2610.32253",
+    "repo_url": "https://github.com/simple-agent-lab/RSIHub",
+    "first_date": "2026-10-23",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "3 candidate lifecycle and provenance",
+      "4 recipes, splits, fidelity and integrity",
+      "6 limitations",
+      "7 responsible use",
+      "Appendices B and D"
+    ],
+    "mechanism": "recipe组合生命周期算子并声明可改资源；框架检查真实diff、提交并从干净检出执行冻结评价，绑定候选与评价身份，Gate仅决定父代资格。",
+    "evidence": [
+      "可允许候选改operator，也支持外部agent在代际改recipe；实验只测固定recipe。",
+      "TB2分50train/19gate/20sealed，Banking分50/20/27；表1分区列分母为全基准题数。",
+      "目标GPT5.4 high、修改GPT5.4 xhigh，最多10代，每代一子代。",
+      "MiniSWE TB2 56.2到最高69.7；Banking Hyperagents总体27.8到33.0但sealed贡献9.3到7.2。",
+      "完整性与故障注入420次通过，框架时间开销中位约0.02%仅针对所测负载。"
+    ],
+    "limitations": [
+      "recipes是策略接口适配，不宣称完整复现原论文所有模型、提示和预算。",
+      "演化主结果每题一次，三次重复只用于未演化agent的执行保真对照。",
+      "不提供恶意代码containment；可编辑算子和适配器可能在宿主运行。",
+      "认证记录依赖可信框架、宿主、文件系统及有效评价器，不保证泛化或任务安全。",
+      "非单一算法，不能给整个框架分配固定RSI层级。"
+    ],
+    "source_doc": "https://arxiv.org/html/2610.32253v1"
+  },
+  {
+    "id": "cogrsi",
+    "method": "CogRSI",
+    "title": "CogRSI: Evolving and Auditing Cognitive Reasoning Strategies",
+    "primary_url": "https://arxiv.org/abs/2611.01113",
+    "repo_url": "https://github.com/koanatakiyo/cogRSI",
+    "first_date": "2026-10-31",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "3 evidence types",
+      "4 grounded reader, registration and semantic audit",
+      "5 results",
+      "Limitations",
+      "Appendices C-D algorithms and deviations",
+      "Appendix E exposure qualifications",
+      "Appendix G.7 costs"
+    ],
+    "mechanism": "固定reader和权重，演化最多五条条件化原则。每轮最多四候选，三组80题以3百分点margin登记，门控变体另考虑96反事实题对；事后双模型编译规则并搜索共享反例。",
+    "evidence": [
+      "八轮，冻结reader先作4次标注阅读和2次原文阅读，必要时原则仲裁，平均7.3调用。",
+      "校准margin使被接纳更新有帮助的比例63.6到83.3，但仍有16.7%有害更新，样本接纳数很少。",
+      "门控库BigToM-U题对正确率96.6对专家94.5；Test Main71.8对专家73.1。",
+      "573条规则中286无效、44有效、84歧义、159近乎不适用；86.7%为286/(286+44)，不是573的比例。",
+      "审计6000小世界约85k问题；两独立编译模型都错且答案一致构成共享反例。"
+    ],
+    "limitations": [
+      "BigToM-U新的是条件和题对，200场景的其他版本在旧分区出现；不能称完全新场景。",
+      "reader后期设计检查旧测试失败，主样本带探索性；部分确认数据项目以前见过但未用于CogRSI设计决策。",
+      "v1摘要每个learned principle胜专家只适用于作者原则循环，不包括Table1 GEPA84.4的分支。",
+      "86.7%为扩大译码输出上限后的结果，重编译253条是记录过的预注册偏离。",
+      "审计valid仅在有限形式模型和样本中无共享反例，不是普遍逻辑正确性。",
+      "固定外层C+D/L1，程序继承有L2边界；固定审计E未被演化。"
+    ],
+    "source_doc": "https://arxiv.org/html/2611.01113v1"
+  },
+  {
+    "id": "coworkos",
+    "method": "CoworkOS",
+    "title": "CoworkOS: Scaling Agent Coworkers for Real-world Automation",
+    "primary_url": "https://arxiv.org/abs/2611.03178",
+    "repo_url": "https://github.com/RUC-NLPIR/CoworkOS",
+    "first_date": "2026-11-02",
+    "read_level": "fulltext_sections",
+    "sections_read": [
+      "3 runtime, resource protocol and persistent state",
+      "4.1 benchmark setup",
+      "4.3 automated post-training",
+      "Appendix A.1 metrics",
+      "Appendix A.3 complete lineage and data"
+    ],
+    "mechanism": "Main承担任务决策、Coordinator维护持久运行状态、Subagents执行局部工作。固定GLM5.3控制及教学，针对Qwen3.6-35B-A3B进行失败诊断、数据流程改进、轨迹筛选、SFT和重评。",
+    "evidence": [
+      "R0使用1345种子轨迹，R1另从base训练，R2-R5才续前轮checkpoint。",
+      "R0-R5八基准均分33.19/36.94/35.90/39.22/40.71/42.95，R2回退。",
+      "最终七项高于R0，JobBench22.66到20.53。",
+      "数据BM25相似度阈值0.8控制近重复，并独立记录训练历史去重。",
+      "后训练GDPVal使用有效判分任务的累计rubric比例，harness横评GDPVal使用全部220任务的Elo与win-rate转换。"
+    ],
+    "limitations": [
+      "多轮干预同时改变数据、重复、起点与epoch，非单因素因果消融或等算力轮次。",
+      "用于诊断并反馈的数据基准不等同完全sealed最终评估；近重复过滤不消除自适应选择偏差。",
+      "目标模型未被证明接管控制器，runtime自身未被证明自重写；本文A+B研究、D承载，L1/L2边界。",
+      "未取得统一端到端费用账本，不据轮数推导净成本收益。",
+      "持久Job运行依赖仍存活的宿主进程；恢复状态不是任意故障下任务必定继续的保证。"
+    ],
+    "source_doc": "https://arxiv.org/html/2611.03178v1"
+  }
+]

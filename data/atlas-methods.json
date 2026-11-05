@@ -1,0 +1,2374 @@
+{
+  "cutoff": "2026-11-05",
+  "window_start": "2025-11-05",
+  "taxonomy_semantics": "author_operational_categories_not_field_standard_or_certification",
+  "relationship_semantics": "taxonomy_chronology_and_explicit_feedback_are_distinct",
+  "families": {
+    "A": {
+      "name": "模型与训练",
+      "state": "模型权重、训练算法与训练配方"
+    },
+    "B": {
+      "name": "数据、任务与环境",
+      "state": "课程、任务生成器、模拟器与回放环境"
+    },
+    "C": {
+      "name": "Agent 记忆与技能",
+      "state": "跨任务经验、技能库与可复用程序"
+    },
+    "D": {
+      "name": "Harness 与工作流",
+      "state": "提示、工具、控制代码、路由与协作结构"
+    },
+    "E": {
+      "name": "评价器与验证过程",
+      "state": "反馈信号、奖励模型、测试与晋级规则"
+    },
+    "F": {
+      "name": "AI 研发与元改进",
+      "state": "实验与搜索策略、改进算子和优化过程"
+    }
+  },
+  "methods": [
+    {
+      "id": "arxiv:cs/0309048",
+      "method": "Goedel Machine",
+      "title": "Goedel Machines: Self-Referential Universal Problem Solvers Making Provably Optimal Self-Improvements",
+      "date": "2003-09-25",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/cs/0309048",
+      "date_source": "https://arxiv.org/abs/cs/0309048",
+      "families": [
+        "F"
+      ],
+      "significance_and_limits": "可证明自修改的理论奠基；不将理论最优性等同于现代 Agent 的实验表现。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "theory",
+      "mechanism": "可证明自修改的理论奠基；不将理论最优性等同于现代 Agent 的实验表现。",
+      "limitations": [
+        "代表作索引未声明全文复核；具体方法与实验见专题。"
+      ],
+      "chapter": "docs/zh/04_Algorithm_Handbook.md",
+      "reading_scope": "代表作元数据与方法摘要；未声明全文精读",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:1712.01815",
+      "method": "AlphaZero",
+      "title": "Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm",
+      "date": "2017-12-05",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/1712.01815",
+      "date_source": "https://export.arxiv.org/api/query?id_list=1712.01815",
+      "families": [
+        "A",
+        "B"
+      ],
+      "significance_and_limits": "自博弈训练的基础参照；不是自主改写改进器的直接证据。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "自博弈训练的基础参照；不是自主改写改进器的直接证据。",
+      "limitations": [
+        "代表作索引未声明全文复核；具体方法与实验见专题。"
+      ],
+      "chapter": "docs/zh/04_Algorithm_Handbook.md",
+      "reading_scope": "代表作元数据与方法摘要；未声明全文精读",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:1901.01753",
+      "method": "POET",
+      "title": "Paired Open-Ended Trailblazer (POET): Endlessly Generating Increasingly Complex and Diverse Learning Environments and Their Solutions",
+      "date": "2019-01-07",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/1901.01753",
+      "date_source": "https://arxiv.org/abs/1901.01753",
+      "families": [
+        "B"
+      ],
+      "significance_and_limits": "Environment-policy pairs co-evolve through environment mutation, minimal-criterion admission, novelty selection, within-environment ES optimization and direct/proposal policy transfer.",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "Environment-policy pairs co-evolve through environment mutation, minimal-criterion admission, novelty selection, within-environment ES optimization and direct/proposal policy transfer.",
+      "limitations": [
+        "Section 5 acknowledges bounded environment encodings and fixed morphology.",
+        "Direct-path control matches ancestor-path ES cost, not necessarily total population-wide research cost.",
+        "No proof of unbounded complexity or self-rewriting optimizer; current repository URL not yet independently confirmed."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "User-requested primary research expansion; not a linked paper in the two original notes"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2006.08381",
+      "method": "DreamCoder",
+      "title": "DreamCoder: Growing generalizable, interpretable knowledge with wake-sleep Bayesian program learning",
+      "date": "2020-06-15",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2006.08381",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2006.08381",
+      "families": [
+        "C",
+        "F"
+      ],
+      "significance_and_limits": "程序库积累与搜索学习相互促进的早期代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "程序库积累与搜索学习相互促进的早期代表。",
+      "limitations": [
+        "代表作索引未声明全文复核；具体方法与实验见专题。"
+      ],
+      "chapter": "docs/zh/04_Algorithm_Handbook.md",
+      "reading_scope": "代表作元数据与方法摘要；未声明全文精读",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2012.02096",
+      "method": "PAIRED",
+      "title": "Emergent Complexity and Zero-shot Transfer via Unsupervised Environment Design",
+      "date": "2020-12-03",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2012.02096",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2012.02096",
+      "families": [
+        "B"
+      ],
+      "significance_and_limits": "无监督环境设计与课程生成的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "无监督环境设计与课程生成的代表。",
+      "limitations": [
+        "代表作索引未声明全文复核；具体方法与实验见专题。"
+      ],
+      "chapter": "docs/zh/04_Algorithm_Handbook.md",
+      "reading_scope": "代表作元数据与方法摘要；未声明全文精读",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2203.14465",
+      "method": "STaR",
+      "title": "STaR: Bootstrapping Reasoning With Reasoning",
+      "date": "2022-03-28",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2203.14465",
+      "date_source": "https://arxiv.org/abs/2203.14465",
+      "families": [
+        "A"
+      ],
+      "significance_and_limits": "Generate reasoning with current model, filter by provided correct answers, rationalize failures using answer hints, remove hints for training, and fine-tune anew from the original base each round.",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "Generate reasoning with current model, filter by provided correct answers, rationalize failures using answer hints, remove hints for training, and fine-tune anew from the original base each round.",
+      "limitations": [
+        "Needs supplied questions, correct answers and seed reasoning examples; not supervision-free.",
+        "Correct final answers can accompany false or unfaithful rationales; Section 6 and Appendix G discuss this.",
+        "HTML mirror content was read, not claimed as a complete primary-host full-text reading; no unverified official repo asserted."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：author_paper_html_mirror_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "User priority list; S3Gym/Aspire primary related-work sections supplied corroborating leads"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2212.08073",
+      "method": "Constitutional AI",
+      "title": "Constitutional AI: Harmlessness from AI Feedback",
+      "date": "2022-12-15",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2212.08073",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2212.08073",
+      "families": [
+        "A",
+        "E"
+      ],
+      "significance_and_limits": "AI 反馈和规范约束下的对齐训练基础。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "AI 反馈和规范约束下的对齐训练基础。",
+      "limitations": [
+        "代表作索引未声明全文复核；具体方法与实验见专题。"
+      ],
+      "chapter": "docs/zh/04_Algorithm_Handbook.md",
+      "reading_scope": "代表作元数据与方法摘要；未声明全文精读",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2212.10560",
+      "method": "Self-Instruct",
+      "title": "Self-Instruct: Aligning Language Models with Self-Generated Instructions",
+      "date": "2022-12-20",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2212.10560",
+      "date_source": "https://arxiv.org/abs/2212.10560",
+      "families": [
+        "A",
+        "B"
+      ],
+      "significance_and_limits": "An existing LM expands a human-seeded task pool with instructions and input-output examples, filters invalid/near-duplicate instances, then instruction-tunes the original model on the collected corpus.",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "An existing LM expands a human-seeded task pool with instructions and input-output examples, filters invalid/near-duplicate instances, then instruction-tunes the original model on the collected corpus.",
+      "limitations": [
+        "Task-pool feedback is not evidence that generator weights are updated every generation batch.",
+        "ROUGE filtering cannot certify semantic correctness; seed bias, long-tail coverage and API reproducibility remain issues.",
+        "No empirical percentage is reproduced without a table-bound claim; official repo link is supplied by the paper."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：author_paper_html_mirror_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "User-requested primary research expansion"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2303.11366",
+      "method": "Reflexion",
+      "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+      "date": "2023-03-20",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2303.11366",
+      "date_source": "https://arxiv.org/abs/2303.11366",
+      "families": [
+        "C"
+      ],
+      "significance_and_limits": "把任务反馈转换为语言反思并保留在episodic memory，影响后续尝试而不更新权重。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "把任务反馈转换为语言反思并保留在episodic memory，影响后续尝试而不更新权重。",
+      "limitations": [
+        "未阅读正文，不据摘要补写具体重试预算、算法超参数或评测隔离。",
+        "记忆寿命影响L0/L1判断，摘要不足以证明L3。",
+        "repo_url为空表示本轮未核实官方仓库，不表示没有开源实现。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：abstract_metadata_only；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/abs/2303.11366v4",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2303.17651",
+      "method": "Self-Refine",
+      "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+      "date": "2023-03-30",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2303.17651",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2303.17651",
+      "families": [
+        "C"
+      ],
+      "significance_and_limits": "保留作输出自修订的边界对照，不把一次任务内迭代称为持久 RSI。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "保留作输出自修订的边界对照，不把一次任务内迭代称为持久 RSI。",
+      "limitations": [
+        "代表作索引未声明全文复核；具体方法与实验见专题。"
+      ],
+      "chapter": "docs/zh/04_Algorithm_Handbook.md",
+      "reading_scope": "代表作元数据与方法摘要；未声明全文精读",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2305.16291",
+      "method": "Voyager",
+      "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+      "date": "2023-05-25",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2305.16291",
+      "date_source": "https://arxiv.org/abs/2305.16291",
+      "families": [
+        "C"
+      ],
+      "significance_and_limits": "自动课程、可执行技能库、环境反馈及执行错误驱动的迭代提示，共同支持Minecraft持续探索；GPT4黑盒调用而非参数微调。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "自动课程、可执行技能库、环境反馈及执行错误驱动的迭代提示，共同支持Minecraft持续探索；GPT4黑盒调用而非参数微调。",
+      "limitations": [
+        "未复核全文实验协议，摘要倍数不用于本章横向排名。",
+        "游戏内迁移不等于现实世界或任意工具域泛化。",
+        "本文B+C/L2边界不代表课程生成程序本身发生改写。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：abstract_metadata_only；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/abs/2305.16291v2",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2308.08998",
+      "method": "ReST",
+      "title": "Reinforced Self-Training (ReST) for Language Modeling",
+      "date": "2023-08-17",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2308.08998",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2308.08998",
+      "families": [
+        "A"
+      ],
+      "significance_and_limits": "生成、筛选、再训练闭环的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "生成、筛选、再训练闭环的代表。",
+      "limitations": [
+        "代表作索引未声明全文复核；具体方法与实验见专题。"
+      ],
+      "chapter": "docs/zh/04_Algorithm_Handbook.md",
+      "reading_scope": "代表作元数据与方法摘要；未声明全文精读",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2309.16797",
+      "method": "Promptbreeder",
+      "title": "Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution",
+      "date": "2023-09-28",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2309.16797",
+      "date_source": "https://arxiv.org/abs/2309.16797",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "任务提示与变异提示共同演化的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "任务提示与变异提示共同演化的代表。",
+      "limitations": [
+        "代表作索引未声明全文复核；具体方法与实验见专题。"
+      ],
+      "chapter": "docs/zh/04_Algorithm_Handbook.md",
+      "reading_scope": "代表作元数据与方法摘要；未声明全文精读",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2310.02304",
+      "method": "Self-Taught Optimizer (STOP)",
+      "title": "Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation",
+      "date": "2023-10-03",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2310.02304",
+      "date_source": "https://arxiv.org/abs/2310.02304",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "摘要明确说明固定 LM 驱动的种子 improver 生成并选择程序，再以自身作为待改进程序；产物改变后续程序改进方式。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "摘要明确说明固定 LM 驱动的种子 improver 生成并选择程序，再以自身作为待改进程序；产物改变后续程序改进方式。",
+      "limitations": "https://arxiv.org/html/2310.02304v1 和 v3 均 404；https://ar5iv.labs.arxiv.org/html/2310.02304 返回 fatal conversion error，无正文；OpenReview https://openreview.net/forum?id=46Zgqo4QIU 返回浏览器验证页；不据二手材料引用任务数、算法细节或实验表格；官方 README 已核对，但未审计或运行实现。",
+      "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
+      "reading_scope": "继承既有专题记录：primary_abstract_and_official_readme_fulltext_html_unavailable；本次不重复声明全文阅读",
+      "source_doc": "用户指定编号；Bing 实际搜索；The Last AI Built by Humans §3.6.1 仅作线索而非原文替代",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2310.03714",
+      "method": "DSPy",
+      "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines",
+      "date": "2023-10-05",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2310.03714",
+      "date_source": "https://arxiv.org/abs/2310.03714",
+      "families": [
+        "D"
+      ],
+      "significance_and_limits": "用声明式模块表示文本变换图，编译器依据给定指标优化组合，模块可通过收集示例以及提示、微调等技术配置学习。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "用声明式模块表示文本变换图，编译器依据给定指标优化组合，模块可通过收集示例以及提示、微调等技术配置学习。",
+      "limitations": [
+        "框架不是单一递归算法，更新对象与层级取决于编译器及应用配置。",
+        "未核实全文算法或最新库实现，引用限定原论文v1摘要。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：abstract_metadata_only；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/abs/2310.03714v1",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2312.06585",
+      "method": "ReST-EM",
+      "title": "Beyond Human Data: Scaling Self-Training for Problem-Solving with Language Models",
+      "date": "2023-12-11",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2312.06585",
+      "date_source": "https://arxiv.org/abs/2312.06585",
+      "families": [
+        "A"
+      ],
+      "significance_and_limits": "Generate/E-step samples solutions to external training prompts and filters by binary feedback; Improve/M-step resets to the base model and fine-tunes on retained outputs before next-round resampling.",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "Generate/E-step samples solutions to external training prompts and filters by binary feedback; Improve/M-step resets to the base model and fine-tunes on retained outputs before next-round resampling.",
+      "limitations": [
+        "External questions and reward remain necessary.",
+        "Exact EM monotonicity does not guarantee test improvement under finite sampling, reset and approximate optimization; APPS regressions are reported.",
+        "No author-endorsed code repository URL confirmed in inspected paper."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "Primary related-work leads from Aspire and S3Gym, supplemented by original paper"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2401.01335",
+      "method": "SPIN",
+      "title": "Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models",
+      "date": "2024-01-02",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2401.01335",
+      "date_source": "https://arxiv.org/abs/2401.01335",
+      "families": [
+        "A"
+      ],
+      "significance_and_limits": "Fixed SFT targets are contrasted with responses sampled from the previous policy, using a log-ratio logistic objective; updated policy becomes next opponent and reference.",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "Fixed SFT targets are contrasted with responses sampled from the previous policy, using a log-ratio logistic objective; updated policy becomes next opponent and reference.",
+      "limitations": [
+        "No new preference labels is not no external target data.",
+        "Population-level global-optimum statements do not prove finite neural training convergence or open-ended RSI.",
+        "Synthetic response generation and growing training pools must enter matched-compute accounting."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "User priority list; Aspire related-work lead"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2401.10020",
+      "method": "Self-Rewarding Language Models",
+      "title": "Self-Rewarding Language Models",
+      "date": "2024-01-18",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2401.10020",
+      "date_source": "https://arxiv.org/abs/2401.10020",
+      "families": [
+        "A",
+        "E"
+      ],
+      "significance_and_limits": "Instruction-following model also judges its candidate responses; self-scored preference pairs train the next model by iterative DPO. IFT/EFT seed data initialize both roles.",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "Instruction-following model also judges its candidate responses; self-scored preference pairs train the next model by iterative DPO. IFT/EFT seed data initialize both roles.",
+      "limitations": [
+        "Self-reward does not mean all pipeline components are autonomous or no human seed exists.",
+        "Section 6 discusses response-length growth, reward hacking and correlated judge biases; limited iterations in one setting do not establish indefinitely compounding gains.",
+        "No author-endorsed code repository URL confirmed; do not substitute a third-party reimplementation without labeling it."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "User priority list; S3Gym/Aspire primary related-work leads"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2406.07496",
+      "method": "TextGrad",
+      "title": "TextGrad: Automatic \"Differentiation\" via Text",
+      "date": "2024-06-11",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2406.07496",
+      "date_source": "https://arxiv.org/abs/2406.07496",
+      "families": [
+        "D"
+      ],
+      "significance_and_limits": "将LLM语言反馈沿计算图传回变量，改进复合系统中的提示、代码等对象；文本梯度并非神经权重数值求导。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "将LLM语言反馈沿计算图传回变量，改进复合系统中的提示、代码等对象；文本梯度并非神经权重数值求导。",
+      "limitations": [
+        "一次答案优化与持久组件优化应分别判断L0/L1。",
+        "未读正文，不把自动反馈传播理解为improver程序自行演化。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：abstract_metadata_only；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/abs/2406.07496v1",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2408.08435",
+      "method": "ADAS / Meta Agent Search",
+      "title": "Automated Design of Agentic Systems",
+      "date": "2024-08-15",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2408.08435",
+      "date_source": "https://arxiv.org/abs/2408.08435",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "固定meta agent读取历史agent档案，生成forward代码，经过两轮设计反思与验证评估；错误最多修复五次，候选及指标回写档案。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "固定meta agent读取历史agent档案，生成forward代码，经过两轮设计反思与验证评估；错误最多修复五次，候选及指标回写档案。",
+      "limitations": [
+        "higher-order ADAS、自改meta agent、在线持续学习、多目标搜索是未来工作。",
+        "档案反馈不等于发现的agent接管改进器，本文主要归D/L1。",
+        "单步QA任务上的组合推理实验不是长期真实工具交互验证。",
+        "部分表格数值在HTML为空，未据空单元格推断成绩。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2408.08435v2",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2410.10762",
+      "method": "AFlow",
+      "title": "AFlow: Automating Agentic Workflow Generation",
+      "date": "2024-10-14",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2410.10762",
+      "date_source": "https://arxiv.org/abs/2410.10762",
+      "families": [
+        "D"
+      ],
+      "significance_and_limits": "MCTS变体的节点是完整代码工作流；从top候选及初始模板混合抽样，LLM编辑提示和连接，验证执行五次后回传修改成败经验。模型、温度、格式及搜索器固定。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "MCTS变体的节点是完整代码工作流；从top候选及初始模板混合抽样，LLM编辑提示和连接，验证执行五次后回传修改成败经验。模型、温度、格式及搜索器固定。",
+      "limitations": [
+        "推理费用不含搜索摊销。",
+        "六任务均分混合F1、solve rate、pass@1，不是统一准确率。",
+        "全文含有限迭代最优性讨论，本文不将非零改进概率解读为有限预算全局最优证明。",
+        "主要D/L1离线设计，MCTS及优化模型并未自行修改。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2410.10762v4",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2504.15228",
+      "method": "SICA",
+      "title": "A Self-Improving Coding Agent",
+      "date": "2025-04-21",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2504.15228",
+      "date_source": "https://arxiv.org/abs/2504.15228",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "Agent 修改自身编码实现的直接自改进代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "Agent 修改自身编码实现的直接自改进代表。",
+      "limitations": [
+        "代表作索引未声明全文复核；具体方法与实验见专题。"
+      ],
+      "chapter": "docs/zh/04_Algorithm_Handbook.md",
+      "reading_scope": "代表作元数据与方法摘要；未声明全文精读",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2504.16084",
+      "method": "TTRL",
+      "title": "TTRL: Test-Time Reinforcement Learning",
+      "date": "2025-04-22",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2504.16084",
+      "date_source": "https://arxiv.org/abs/2504.16084",
+      "families": [
+        "A"
+      ],
+      "significance_and_limits": "测试时参数适应的代表；与外部记忆和 Harness 修改分开讨论。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "测试时参数适应的代表；与外部记忆和 Harness 修改分开讨论。",
+      "limitations": [
+        "代表作索引未声明全文复核；具体方法与实验见专题。"
+      ],
+      "chapter": "docs/zh/04_Algorithm_Handbook.md",
+      "reading_scope": "代表作元数据与方法摘要；未声明全文精读",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2505.03335",
+      "method": "Absolute Zero Reasoner (AZR)",
+      "title": "Absolute Zero: Reinforced Self-play Reasoning with Zero Data",
+      "date": "2025-05-06",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2505.03335",
+      "date_source": "https://arxiv.org/abs/2505.03335",
+      "families": [
+        "A",
+        "B",
+        "E"
+      ],
+      "significance_and_limits": "One model proposes and solves deduction, abduction and induction tasks grounded in deterministic Python execution; a finite-rollout learnability reward trains task proposal while correctness rewards train solutions, with task-role-relative advantages.",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "One model proposes and solves deduction, abduction and induction tasks grounded in deterministic Python execution; a finite-rollout learnability reward trains task proposal while correctness rewards train solutions, with task-role-relative advantages.",
+      "limitations": [
+        "No curated external post-training dataset does not erase pretrained knowledge, task templates, identity-triplet initialization or evaluator assumptions.",
+        "Learnability is a success-rate proxy rather than direct downstream improvement; finite execution tests do not prove full correctness or program determinism.",
+        "Task-internal answer shortcuts and benchmark contamination are distinct risks.",
+        "Code restrictions are not a security containment proof; official repo link is author-provided, not runtime-validated."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "User priority list and Aspire related-work lead"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2505.22954",
+      "method": "Darwin Godel Machine",
+      "title": "Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
+      "date": "2025-05-29",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2505.22954",
+      "date_source": "https://arxiv.org/abs/2505.22954",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "档案父代实际实现自己的代码修改，固定o1诊断模块提供改进任务；能编译且保留代码编辑功能的后代入档，即使并非立即更优。",
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "primary_abstract_and_submission_history",
+      "kind": "method",
+      "mechanism": "档案父代实际实现自己的代码修改，固定o1诊断模块提供改进任务；能编译且保留代码编辑功能的后代入档，即使并非立即更优。",
+      "limitations": [
+        "求解器不见私有测试，但诊断提示含private test patch与评价日志；并非完全隔离。",
+        "附录H发现删除日志标记绕过幻觉评价的objective hacking。",
+        "没有训练基础模型；改进整个外层搜索属于未来工作。",
+        "本文L2加局部L3边界，不把编码benchmark进步等同所有领域元改进能力提升。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2505.22954v3",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2506.10943",
+      "method": "SEAL",
+      "title": "Self-Adapting Language Models",
+      "date": "2025-06-12",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2506.10943",
+      "date_source": "https://arxiv.org/abs/2506.10943",
+      "families": [
+        "A",
+        "B",
+        "F"
+      ],
+      "significance_and_limits": "学习生成自适应训练数据与更新指令的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "学习生成自适应训练数据与更新指令的代表。",
+      "limitations": [
+        "代表作索引未声明全文复核；具体方法与实验见专题。"
+      ],
+      "chapter": "docs/zh/04_Algorithm_Handbook.md",
+      "reading_scope": "代表作元数据与方法摘要；未声明全文精读",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2506.13131",
+      "method": "AlphaEvolve",
+      "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+      "date": "2025-06-16",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2506.13131",
+      "date_source": "https://arxiv.org/abs/2506.13131",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "Human-specified mutable program blocks and evaluators drive an evolutionary program database; Gemini-generated diffs pass evaluation cascades. A separate meta-prompt database can evolve mutation instructions.",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "Human-specified mutable program blocks and evaluators drive an evolutionary program database; Gemini-generated diffs pass evaluation cascades. A separate meta-prompt database can evolve mutation instructions.",
+      "limitations": [
+        "repo_url is a results/verification repository, not a released full framework.",
+        "Correctness evidence differs by application: by-construction constraints, executable checks and expert confirmation must not all be called formal proof.",
+        "Local meta-prompt evolution is real, but does not establish unbounded general self-rewriting or recurrent research-efficiency gains.",
+        "First date records arXiv submission; the earlier institution announcement is a separate event."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt_and_institution_page；本次不重复声明全文阅读",
+      "source_doc": [
+        "User-requested AI research expansion; Google DeepMind institution page and white paper"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2507.19457",
+      "method": "GEPA",
+      "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
+      "date": "2025-07-25",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2507.19457",
+      "date_source": "https://arxiv.org/abs/2507.19457",
+      "families": [
+        "D"
+      ],
+      "significance_and_limits": "从推理和工具执行轨迹做语言反思，提出并测试提示修改，组合候选前沿的互补经验。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "从推理和工具执行轨迹做语言反思，提出并测试提示修改，组合候选前沿的互补经验。",
+      "limitations": [
+        "未读正文，不把其前沿维度擅自替换为性能与成本。",
+        "本文D/L1邻近技术定位；摘要对GRPO的指标与rollout倍数未用于跨论文同预算排名。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：abstract_metadata_only；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/abs/2507.19457v2",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": false,
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2601.18226",
+      "method": "Yunjue Agent",
+      "title": "Yunjue Agent Tech Report: A Fully Reproducible, Zero-Start In-Situ Self-Evolving Agent System for Open-Ended Tasks",
+      "date": "2026-01-26",
+      "primary_url": "https://arxiv.org/abs/2601.18226",
+      "date_source": "https://arxiv.org/abs/2601.18226",
+      "families": [
+        "C"
+      ],
+      "kind": "method",
+      "mechanism": "固定工作流和上下文设计、无模型权重更新；Manager 检索工具，Developer 按缺口生成，Executor 执行，批次结束后 LLM Aggregator/Merger 聚类吸收为持久工具库。C 类；L1/L2 边界，不是自改写元算法。",
+      "limitations": [
+        "本次读取v1正文；元数据说明v2于2026-02-06发布，未将v1数值冒充v2复核结果。",
+        "工具执行成功不保证语义正确；最后任务成绩使用官方评分流程，不能说全系统只靠二元工具验证。",
+        "v1主文和表格的部分DeepSearchQA数字不一致，故不以其极值做比较。",
+        "完整读取本地00_RSI_overview.md 528行作为待核线索，未修改原文。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2601.18226v1",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "固定工作流和上下文设计、无模型权重更新；Manager 检索工具，Developer 按缺口生成，Executor 执行，批次结束后 LLM Aggregator/Merger 聚类吸收为持久工具库。C 类；L1/L2 边界，不是自改写元算法。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2603.06333",
+      "method": "SAHOO",
+      "title": "SAHOO: Safeguarded Alignment for High-Order Optimization Objectives in Recursive Self-Improvement",
+      "date": "2026-03-06",
+      "primary_url": "https://arxiv.org/abs/2603.06333",
+      "date_source": "https://arxiv.org/abs/2603.06333",
+      "families": [
+        "D",
+        "E"
+      ],
+      "kind": "method",
+      "mechanism": "以语义、词汇、结构、分布漂移的加权 GDI，结合约束评分和回归风险触发停止；附录 A.2/C.3 描述用质量与漂移反馈构造下一轮改进提示。",
+      "limitations": "校准量 §3 写六任务而摘要/§4 写十八任务；§4 同时出现 27.5% 与 173/189(约91.5%) 收敛口径；不复用这些冲突统计。GDI 测相对基线差异而非真正对齐；CPS 平均与仅零分停止不能代替逐条关键约束；高斯独立增量是假设，不是自适应闭环的无条件安全证明；未运行仓库。",
+      "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
+      "reading_scope": "继承既有专题记录：primary_fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "用户指定核心源；Trustworthy RSI 引用仅作发现线索",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "以语义、词汇、结构、分布漂移的加权 GDI，结合约束评分和回归风险触发停止；附录 A.2/C.3 描述用质量与漂移反馈构造下一轮改进提示。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2603.08640",
+      "method": "PostTrainBench",
+      "title": "PostTrainBench: Can LLM Agents Automate LLM Post-Training?",
+      "date": "2026-03-09",
+      "primary_url": "https://arxiv.org/abs/2603.08640",
+      "date_source": "https://arxiv.org/abs/2603.08640",
+      "families": [
+        "A",
+        "E"
+      ],
+      "kind": "benchmark",
+      "mechanism": "A CLI research agent chooses data and training recipes for a supplied base model under a target benchmark and resource limit, submits a checkpoint, and is audited for contamination/model substitution.",
+      "limitations": [
+        "Target-specific optimization is not a broadly capable instruct model or recursive controller replacement.",
+        "Fixed chat templates make format repair part of observed gains.",
+        "Original paper, hardened later releases and Lite differ in aggregation and invalid-run rules; do not combine rankings without protocol reconciliation.",
+        "Judge-based audit and explicit prompt rules are not robust permission enforcement or contamination proofs."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "Aspire and recent research-system comparisons, verified against the original benchmark paper"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "A CLI research agent chooses data and training recipes for a supplied base model under a target benchmark and resource limit, submits a checkpoint, and is audited for contamination/model substitution.",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2603.19461",
+      "method": "Hyperagents / DGM-H",
+      "title": "Hyperagents",
+      "date": "2026-03-19",
+      "primary_url": "https://arxiv.org/abs/2603.19461",
+      "date_source": "https://arxiv.org/abs/2603.19461",
+      "families": [
+        "D",
+        "F"
+      ],
+      "kind": "method",
+      "mechanism": "摘要提出把task agent与可修改自身的meta agent放进一个可编辑程序，试图解除DGM中下游编码能力与自修改能力必须对齐的假设。",
+      "limitations": [
+        "未获得正文，未核实完整算法、控制组、预算、停止或固定外层范围。",
+        "本文仅标D+F/L3候选，不将标题和摘要当作无限自加速证明。",
+        "RSIHub中的同名recipe是另一论文的适配，不能替代原实现证据。",
+        "repo_url为空表示本轮未核实直接官方仓库链接。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：abstract_metadata_only；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/abs/2603.19461v2",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "摘要提出把task agent与可修改自身的meta agent放进一个可编辑程序，试图解除DGM中下游编码能力与自修改能力必须对齐的假设。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2604.09297",
+      "method": "SkillMOO",
+      "title": "SkillMOO: Multi-Objective Optimization of Agent Skills for Software Engineering",
+      "date": "2026-04-10",
+      "primary_url": "https://arxiv.org/abs/2604.09297",
+      "date_source": "https://arxiv.org/abs/2604.09297",
+      "families": [
+        "C",
+        "D"
+      ],
+      "kind": "method",
+      "mechanism": "任务特定技能bundle的LLM编辑与NSGA-II非支配排序/拥挤距离选择；目标min(-pass,cost)，GLM-5 solver和optimizer固定，种群4、3代。C类L1优化，未证明改进器自演化。",
+      "limitations": [
+        "单模型、单基准、按任务优化；跨新任务和跨模型迁移属于未来工作。",
+        "摘要页v3写最高31.7%成本下降/21pp；HTML摘要和部分正文写32.1%/42pp，不统一转述这些极值。",
+        "搜索档案筛选造成幸存者偏差；不能将编辑相关性视为因果效果。",
+        "首发2026-04-10，所读v3为2026-08-05。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2604.09297v3",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "任务特定技能bundle的LLM编辑与NSGA-II非支配排序/拥挤距离选择；目标min(-pass,cost)，GLM-5 solver和optimizer固定，种群4、3代。C类L1优化，未证明改进器自演化。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2604.17091",
+      "method": "GenericAgent",
+      "title": "GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0)",
+      "date": "2026-04-18",
+      "primary_url": "https://arxiv.org/abs/2604.17091",
+      "date_source": "https://arxiv.org/abs/2604.17091",
+      "families": [
+        "C"
+      ],
+      "kind": "method",
+      "mechanism": "固定模型权重与九个原子工具接口，把验证过的执行经验凝练为事实、SOP 和复用脚本，分层按需取回；自主探索可参考技能树和使用统计。",
+      "limitations": [
+        "长期探索权重自适应仍未充分验证；日志整理和高级技能树维护存在人工环节。",
+        "核心架构自更新是未来工作，不是已完成L3。",
+        "字符/token启发式对CJK可低估上下文占用。",
+        "有限重复任务上的效率下降不支持边际成本趋零或普遍OOD保证。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2604.17091v1",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "固定模型权重与九个原子工具接口，把验证过的执行经验凝练为事实、SOP 和复用脚本，分层按需取回；自主探索可参考技能树和使用统计。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2604.20987",
+      "method": "COS-PLAY",
+      "title": "Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Tasks",
+      "date": "2026-04-22",
+      "primary_url": "https://arxiv.org/abs/2604.20987",
+      "date_source": "https://arxiv.org/abs/2604.20987",
+      "families": [
+        "A",
+        "C"
+      ],
+      "kind": "method",
+      "mechanism": "Qwen3-8B决策agent与技能库agent共同训练。轨迹分段、效果契约验证和curator审核控制技能实体化、细化、合并、拆分与退休；五个功能LoRA以GRPO优化。",
+      "limitations": [
+        "奖励计算无额外LLM调用不等于整个系统无推理或训练成本。",
+        "摘要关于四个前沿基线的措辞比正文GPT-5.4比较宽泛。",
+        "正文及附录A说多玩家训练对手GPT-5-mini，附录H却解释为共享模型对称self-play，存在描述不一致。",
+        "效果契约依赖文本状态摘要；跨模态和广域迁移仍是未来方向。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2604.20987v1",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "Qwen3-8B决策agent与技能库agent共同训练。轨迹分段、效果契约验证和curator审核控制技能实体化、细化、合并、拆分与退休；五个功能LoRA以GRPO优化。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2604.25850",
+      "method": "AHE",
+      "title": "Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses",
+      "date": "2026-04-28",
+      "primary_url": "https://arxiv.org/abs/2604.25850",
+      "date_source": "https://arxiv.org/abs/2604.25850",
+      "families": [
+        "C",
+        "D"
+      ],
+      "kind": "method",
+      "mechanism": "七类文件级组件、分层轨迹报告、带修复/回归预测的change manifest；rollout-clean-attribute-rollback-distill-edit-commit循环，基础模型与验证基础设施固定。C+D；固定外层优化，L1/L2边界。",
+      "limitations": [
+        "不能把TB2演化任务成绩当作未见任务成绩。",
+        "组件效果非可加；十轮单次搜索及超时/推理预算耦合限制外推。",
+        "token均值排除基础设施中断试次，成功率把这些试次算失败。",
+        "所读v4发布于2026-05-18；非独立复现。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2604.25850v4",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "七类文件级组件、分层轨迹报告、带修复/回归预测的change manifest；rollout-clean-attribute-rollback-distill-edit-commit循环，基础模型与验证基础设施固定。C+D；固定外层优化，L1/L2边界。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2605.06130",
+      "method": "Skill1",
+      "title": "Skill1: Unified Evolution of Skill-Augmented Agents via Reinforcement Learning",
+      "date": "2026-05-07",
+      "primary_url": "https://arxiv.org/abs/2605.06130",
+      "date_source": "https://arxiv.org/abs/2605.06130",
+      "families": [
+        "A",
+        "C"
+      ],
+      "kind": "method",
+      "mechanism": "单一可训练策略生成查询、重排技能、执行与蒸馏；冻结encoder检索top5。终局二元奖励直接训练利用，技能EMA监督排序，结果减库中最佳效用作为蒸馏代理奖励。",
+      "limitations": [
+        "同检索相关性不是因果信用；蒸馏残差不是未来独立收益的直接测量。",
+        "RetroAgent重跑，多数其他基线借用既有论文成绩。",
+        "仅两个文本环境，固定奖励分解及训练算法，不是完整L3。",
+        "附录C另列UCB/greedy选取配置，与正文可训练排序的接口关系需代码复现核对；本文未做代码审计。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2605.06130v3",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "单一可训练策略生成查询、重排技能、执行与蒸馏；冻结encoder检索top5。终局二元奖励直接训练利用，技能EMA监督排序，结果减库中最佳效用作为蒸馏代理奖励。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2606.05922",
+      "method": "RHO",
+      "title": "Evolving Agents in the Dark: Retrospective Harness Optimization via Self-Preference",
+      "date": "2026-06-04",
+      "primary_url": "https://arxiv.org/abs/2606.05922",
+      "date_source": "https://arxiv.org/abs/2606.05922",
+      "families": [
+        "C",
+        "D"
+      ],
+      "kind": "method",
+      "mechanism": "难度/多样性DPP选择10任务，3次group rollout抽取self-validation和self-consistency，3个候选以相对原始轨迹的平均自偏好选优；正分才更新。C+D，主实验为单轮L1。",
+      "limitations": [
+        "只验证单轮；原文明言不声称多轮单调或复利。",
+        "三领域分别适配，不是一个harness跨基准迁移。",
+        "可重置重试前提；自偏好排序、轨迹污染与仅提示级测试隔离仍有风险。",
+        "所读v3为2026-08-29；不得把HarnessPro复测RHO数字替代原论文数字。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2606.05922v3",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "难度/多样性DPP选择10任务，3次group rollout抽取self-validation和self-consistency，3个候选以相对原始轨迹的平均自偏好选优；正分才更新。C+D，主实验为单轮L1。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2607.25886",
+      "method": "RSIBench-Data",
+      "title": "RSIBench-Data: Benchmarking Data-Centric Research for Recursive Self-Improvement",
+      "date": "2026-07-28",
+      "primary_url": "https://arxiv.org/abs/2607.25886",
+      "date_source": "https://arxiv.org/abs/2607.25886",
+      "families": [
+        "B",
+        "E"
+      ],
+      "kind": "benchmark",
+      "mechanism": "固定 base model、Tinker LoRA SFT、Harbor/E2B 评测与受限训练配置；研究者改数据策略，根据 selection feedback 选 checkpoint，再做 official evaluation。",
+      "limitations": "§6 明确 selection 与 official evaluation 复用同一任务子集，fresh environments 不代表独立 holdout；总成本不止 valid-candidate Tinker；§5.5 同族探索的所有适配 checkpoint 仍低于 unadapted reference；固定研究者/外部 rollout 支持不构成完整递归自举。",
+      "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
+      "reading_scope": "继承既有专题记录：primary_fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "用户指定评测范围；一手 v1 正文，特别是摘要不能替代的 §6 限制",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "固定 base model、Tinker LoRA SFT、Harbor/E2B 评测与受限训练配置；研究者改数据策略，根据 selection feedback 选 checkpoint，再做 official evaluation。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2607.28568",
+      "method": "Frontis-MA1 / OpenMLE / OpenRSI",
+      "title": "Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering",
+      "date": "2026-07-30",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2607.28568",
+      "date_source": "https://arxiv.org/abs/2607.28568",
+      "families": [
+        "A",
+        "F"
+      ],
+      "significance_and_limits": "Executable MLE environments support SFT and RL of Draft/Improve/Debug/Crossover operators; trained operators are reused in experience-guided evolutionary search. Training-state selection differs from inference parent selection.",
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "Executable MLE environments support SFT and RL of Draft/Improve/Debug/Crossover operators; trained operators are reused in experience-guided evolutionary search. Training-state selection differs from inference parent selection.",
+      "limitations": [
+        "Original note transposes 2607.28568 to 2607.28586; the latter was checked and is Boundedness of polarized foliated surfaces.",
+        "Section 8 says the evolutionary system remains largely fixed; not proof of general autonomous RSI.",
+        "Sandbox-compute matching excludes remote model-serving and prior post-training costs; some general-agent references were evaluated once.",
+        "Equation 1 clips before exponentiation; note pseudocode reverses that order.",
+        "No code execution or independent replication performed in this batch; external HTML extraction loses some table cells and mathematical formatting."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt_and_repository_page；本次不重复声明全文阅读",
+      "source_doc": [
+        "OpenRSI_详解.md: all lines 1-1046 read in non-overlapping chunks",
+        "Self-Developing-Agents-技术详细讲解.md: all lines 1-1780 read; original notes treated as leads only"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": true,
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2608.31111",
+      "method": "Aspire",
+      "title": "Aspire: Can Models Self-Evolve from Vague Goals?",
+      "date": "2026-08-31",
+      "primary_url": "https://arxiv.org/abs/2608.31111",
+      "date_source": "https://arxiv.org/abs/2608.31111",
+      "families": [
+        "B",
+        "E"
+      ],
+      "kind": "benchmark",
+      "mechanism": "Vague-goal benchmark separates the model being updated, its harness, the decision model and controller-only evaluator. Candidates undergo provenance checks, protocol-specific selection and weight rollback.",
+      "limitations": [
+        "Retained nonnegative score is induced by rollback, not a guarantee of learning or generalization.",
+        "Adaptive-feedback selection reuses a fixed hidden evaluation slice; no separate confirmation slice for the retained gain.",
+        "RQ1 is descriptive, not isolated prompt-only causality; RQ3 is one-step harness generation, not recursive handoff.",
+        "Training GPU-hours omit inference, deployment, judging and idle time.",
+        "No author-endorsed code repository URL was confirmed in the inspected project page or paper metadata; null is not a claim that no repository exists.",
+        "Paper display date and project launch date can differ from verified arXiv v1 date."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt_and_project_page；本次不重复声明全文阅读",
+      "source_doc": [
+        "Self-Developing-Agents-技术详细讲解.md: chapters 0-2, 5-6; entire document read"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "Vague-goal benchmark separates the model being updated, its harness, the decision model and controller-only evaluator. Candidates undergo provenance checks, protocol-specific selection and weight rollback.",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2608.31100",
+      "method": "S3Gym",
+      "title": "S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?",
+      "date": "2026-08-31",
+      "primary_url": "https://arxiv.org/abs/2608.31100",
+      "date_source": "https://arxiv.org/abs/2608.31100",
+      "families": [
+        "B",
+        "E"
+      ],
+      "kind": "benchmark",
+      "mechanism": "Self-testing, self-judging, consolidation and update are separated from stricter held-out evaluation. Agent self-scores estimate immediate reward; verifier rewards and terminal scores are withheld during exploration. History, summary and auxiliary parameter training are distinct persistence paths.",
+      "limitations": [
+        "Parameter-training study is not a matched comparison with context methods; do not generalize one trajectory to all SFT.",
+        "Negative-transfer causes remain hypotheses; local correlation is not causal evidence that judging cannot help.",
+        "AUC+ discards below-baseline losses and raw areas are not comparable across game scales; NABA normalization changes rankings.",
+        "Appendix A.2 describes Chess as hidden-rule piece-position prediction, not ordinary chess.",
+        "No author-endorsed code repository URL confirmed in inspected sources; original note's unfinished-training characterization not adopted as verified fact."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt_and_project_page；本次不重复声明全文阅读",
+      "source_doc": [
+        "Self-Developing-Agents-技术详细讲解.md: chapters 0-1, 3, 5-6; entire document read"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "Self-testing, self-judging, consolidation and update are separated from stricter held-out evaluation. Agent self-scores estimate immediate reward; verifier rewards and terminal scores are withheld during exploration. History, summary and auxiliary parameter training are distinct persistence paths.",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2609.01437",
+      "method": "HarnessDev",
+      "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+      "date": "2026-09-01",
+      "primary_url": "https://arxiv.org/abs/2609.01437",
+      "date_source": "https://arxiv.org/abs/2609.01437",
+      "families": [
+        "D",
+        "E"
+      ],
+      "kind": "benchmark",
+      "mechanism": "Creator builds a persistent executable harness, then frozen versions are evaluated under self or fixed executors. Evolution feedback is separated from post-freeze held-out evaluation.",
+      "limitations": [
+        "Direction agreement is descriptive, not a calibrated coin-flip significance test; switches are dependent.",
+        "One trajectory per creator-runtime cell does not establish population-level stability; held-out analysis covers only SWE-Pro.",
+        "Observed execution of a component does not establish its causal benefit.",
+        "Creation portability and separate fixed-executor evolution are different experiments.",
+        "No official repository URL confirmed in inspected sources; this chapter intentionally limits treatment to training-system attribution."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt_and_project_page；本次不重复声明全文阅读",
+      "source_doc": [
+        "Self-Developing-Agents-技术详细讲解.md: chapters 0-1, 4-6; entire document read"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "Creator builds a persistent executable harness, then frozen versions are evaluated under self or fixed executors. Evolution feedback is separated from post-freeze held-out evaluation.",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2609.04280",
+      "method": "EvoHarnessBench",
+      "title": "EvoHarnessBench: Can Your Agents Keep Pace with an Evolving Harness?",
+      "date": "2026-09-03",
+      "primary_url": "https://arxiv.org/abs/2609.04280",
+      "date_source": "https://arxiv.org/abs/2609.04280",
+      "families": [
+        "D",
+        "E"
+      ],
+      "kind": "benchmark",
+      "mechanism": "由基准提供单调扩张的工具/技能/专家池，外层harness演化与内层记忆/技能等状态适应分开；按阶段及任务cohort测保留、适应和成本。",
+      "limitations": "外部供给增长不是 agent 自创工具库或改进器演化；当前不含能力删除/替换；技能必需性标注是启发式；不同轴的实例非独立任务副本；搜索页日期9月2日与abstract history不一致，采用权威v1 UTC提交日期9月3日；未运行。",
+      "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
+      "reading_scope": "继承既有专题记录：primary_fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "用户指定评测范围；一手 abstract history 与 v3 正文",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "由基准提供单调扩张的工具/技能/专家池，外层harness演化与内层记忆/技能等状态适应分开；按阶段及任务cohort测保留、适应和成本。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2609.06396",
+      "method": "MetaRSI / RSI2",
+      "title": "MetaRSI / RSI2: A Meta-Recursive Self-Improving System for Recursive Self-Improving Systems Themselves",
+      "date": "2026-09-06",
+      "primary_url": "https://arxiv.org/abs/2609.06396",
+      "date_source": "https://arxiv.org/abs/2609.06396",
+      "families": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F"
+      ],
+      "kind": "method",
+      "mechanism": "统一受保护执行内核上的 Data/Harness/Model 算子；水平调度顺序、垂直改写提案策略、term 间更新调度策略。最外层 meta 参数固定；Model-RSI 从固定基座和累计数据重新训练候选。",
+      "limitations": "作者实验，未独立复现；五轮边际收益均递减；同一 sealed split 跨 term 复用，gate verdict 到 meta policy 的信息流需审计；元预算须纳入端到端成本；同模型盲解仍共享错误；五条规律是待反驳主张。公开仓库不含完整训练/评测实现。",
+      "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
+      "reading_scope": "继承既有专题记录：primary_fulltext_sections_and_official_project；本次不重复声明全文阅读",
+      "source_doc": "00_RSI_overview.md: Update; CosmosMind / MetaRSI",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "统一受保护执行内核上的 Data/Harness/Model 算子；水平调度顺序、垂直改写提案策略、term 间更新调度策略。最外层 meta 参数固定；Model-RSI 从固定基座和累计数据重新训练候选。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2609.11873",
+      "method": "RSI autonomy roadmap / HCI",
+      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+      "date": "2026-09-10",
+      "primary_url": "https://arxiv.org/abs/2609.11873",
+      "date_source": "https://arxiv.org/abs/2609.11873",
+      "families": [
+        "F"
+      ],
+      "kind": "theory",
+      "mechanism": "以自治责任划分 B0 和 L1-L5，区分修改机制的结构递归与同预算下产生更强后继的有效递归；HCI 描述归一化剩余空间闭合。",
+      "limitations": "作者 L1-L5 不等于本图谱 L0-L3；综述和公司初步案例不是全部独立复现；HCI 受基线和协议家族选择影响；示意未来值不能作为观测或预测置信区间。",
+      "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
+      "reading_scope": "继承既有专题记录：primary_fulltext_sections_survey；本次不重复声明全文阅读",
+      "source_doc": "00_RSI_overview.md: Theseus Lab; Update",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "以自治责任划分 B0 和 L1-L5，区分修改机制的结构递归与同预算下产生更强后继的有效递归；HCI 描述归一化剩余空间闭合。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2609.14858",
+      "method": "Dream-RSI",
+      "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+      "date": "2026-09-14",
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "primary_url": "https://arxiv.org/abs/2609.14858",
+      "date_source": "https://arxiv.org/abs/2609.14858",
+      "families": [
+        "B",
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "Completed discovery trees become prefix-observable replay worlds. A fixed agent rewrites executable exploration-policy code; candidate policies are evaluated on all archived worlds and the highest replay-scoring one is redeployed online. Online discoveries enlarge the history pool. Base models, evaluator and execution interfaces remain fixed.",
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary",
+      "kind": "method",
+      "mechanism": "Completed discovery trees become prefix-observable replay worlds. A fixed agent rewrites executable exploration-policy code; candidate policies are evaluated on all archived worlds and the highest replay-scoring one is redeployed online. Online discoveries enlarge the history pool. Base models, evaluator and execution interfaces remain fixed.",
+      "limitations": [
+        "Replay cannot estimate unobserved branches or counterfactual agent generations; online ordering can change context and outcome distributions. These are Atlas deductions from the documented interface, not a quoted impossibility theorem.",
+        "Incumbent retention guarantees only in-pool replay nondecrease; repeated selection can overfit the simulator.",
+        "Discovery-agent calls exclude policy-development calls and do not equal full token, evaluator, GPU or wall-clock cost.",
+        "Section 5 all-history versus current-history ablation uses different realized calls, so it is not an equal-compute history-capacity intervention.",
+        "Scientific tasks include a controlled fixed-exploration baseline; expensive harness search does not. No base-model training or independent replication performed here."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_method_and_experiment_excerpts；本次不重复声明全文阅读",
+      "source_doc": [
+        "00_RSI_overview.md: Update and Dream-RSI entries used as discovery leads only",
+        "Existing catalog arxiv:2609.14858 metadata_sources and version history"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "in_recent_window": true,
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2609.20519",
+      "method": "SoL-Pi",
+      "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+      "date": "2026-09-17",
+      "primary_url": "https://arxiv.org/abs/2609.20519",
+      "date_source": "https://arxiv.org/abs/2609.20519",
+      "families": [
+        "D",
+        "F"
+      ],
+      "kind": "method",
+      "mechanism": "152方向、535开发环境的隔离离线研究谱系，能力门后效率门与非支配选择；冻结四机制Action Fusion、Online Context Compact、ObservationPack、Evidence-Preserving Reducer。D类L1；多代自加速是未来愿景。",
+      "limitations": [
+        "Efficiency完整栈与Performance单组件择优不同，不可拼接指标。",
+        "记录token traffic包括缓存读写，不等于独立生成token或FLOPs。",
+        "压缩门不单独给摘要调用定价；需要端到端账单。",
+        "每个谱系修改后的orchestration代码丢弃；第5.1节明确递归效率复利未由本研究证明。",
+        "正文图像为arXiv非独占分发许可。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2609.20519v1",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "152方向、535开发环境的隔离离线研究谱系，能力门后效率门与非支配选择；冻结四机制Action Fusion、Online Context Compact、ObservationPack、Evidence-Preserving Reducer。D类L1；多代自加速是未来愿景。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2609.24972",
+      "method": "RRSI",
+      "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
+      "date": "2026-09-21",
+      "primary_url": "https://arxiv.org/abs/2609.24972",
+      "date_source": "https://arxiv.org/abs/2609.24972",
+      "families": [
+        "D"
+      ],
+      "kind": "method",
+      "mechanism": "固定骨干与提案/批评协议，开放harness编辑空间；余弦退火原子编辑预算、历史归因和停滞探索；泄漏critic、历史最佳噪声底线、分段成本接纳与结构剪枝。D+C；L1/L2边界，不是L3或参数范数训练。",
+      "limitations": [
+        "L0/L1/L2 regularization仅类比，不优化连续范数惩罚；勿与本章递归等级混淆。",
+        "优于无正则成本但仍贵于初始harness；摘要30%与表格不宜混用。",
+        "部分正文OOD最大值与摘要4.3不一致，使用具名表格数据而非统一极值。",
+        "有限evolve set和多编辑共用候选分导致统计选择与归因局限。",
+        "所读v3发布于2026-10-04。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2609.24972v3",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "固定骨干与提案/批评协议，开放harness编辑空间；余弦退火原子编辑预算、历史归因和停滞探索；泄漏critic、历史最佳噪声底线、分段成本接纳与结构剪枝。D+C；L1/L2边界，不是L3或参数范数训练。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2609.30652",
+      "method": "Dynamic Co-Evolution (DCE) + Self-Refined Concise Learning (SRCL)",
+      "title": "Recursive Self-Improvement via On-Policy Distillation for Reasoning",
+      "date": "2026-09-25",
+      "primary_url": "https://arxiv.org/abs/2609.30652",
+      "date_source": "https://arxiv.org/abs/2609.30652",
+      "families": [
+        "A"
+      ],
+      "kind": "method",
+      "mechanism": "Student on-policy prefixes are scored by a stop-gradient copy of the current checkpoint with privileged reference-solution context. Each update refreshes both roles; SRCL adds cross-entropy on shorter, naturally terminated, structurally valid, answer-correct self-rewrites generated without the reference.",
+      "limitations": [
+        "Reference solutions remain external supervision; teacher refresh and prompt placement both differ from standard OPSD.",
+        "Average@12 is not pass@12; identical caps are not equal realized tokens.",
+        "Appendix D has one trajectory per refresh schedule; Appendix F reports late instability at small scale.",
+        "No official repo URL confirmed in inspected primary pages."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "User priority list, independent primary-paper expansion"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "Student on-policy prefixes are scored by a stop-gradient copy of the current checkpoint with privileged reference-solution context. Each update refreshes both roles; SRCL adds cross-entropy on shorter, naturally terminated, structurally valid, answer-correct self-rewrites generated without the reference.",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2609.33180",
+      "method": "REUSE: Risk-controlled Evaluation Under Sequential Evolution",
+      "title": "Which Self-Improvements Should We Trust? Reliable Self-Improvement When Agents Reuse Their Benchmarks",
+      "date": "2026-09-27",
+      "primary_url": "https://arxiv.org/abs/2609.33180",
+      "date_source": "https://arxiv.org/abs/2609.33180",
+      "families": [
+        "E"
+      ],
+      "kind": "method",
+      "mechanism": "以 decision-only 反馈约束样本对提案的影响，为所有可能的promotion histories、轮次和候选分配总错误预算；配对检验并保存不反馈给提案者的累计收益证书。",
+      "limitations": "分数、证书或其他侧信道反馈不属于decision-only保证；有限holdout仍有检测能力限制；独立heldout对population gain只是估计；style baselines非原系统复现；未证明所有安全/成本指标的联合改善。本文示例Hoeffding LCB是另行标注的新鲜样本协议，不冒充REUSE公式。",
+      "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
+      "reading_scope": "继承既有专题记录：primary_fulltext_sections_theory_and_experiment；本次不重复声明全文阅读",
+      "source_doc": "自主发现：Trustworthy RSI参考文献；一手摘要与 v2 正文",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "以 decision-only 反馈约束样本对提案的影响，为所有可能的promotion histories、轮次和候选分配总错误预算；配对检验并保存不反馈给提案者的累计收益证书。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2609.36054",
+      "method": "AI R&D acceleration scenario and governance",
+      "title": "What if automating AI R&D triggers an intelligence explosion?",
+      "date": "2026-09-28",
+      "primary_url": "https://arxiv.org/abs/2609.36054",
+      "date_source": "https://arxiv.org/abs/2609.36054",
+      "families": [
+        "F"
+      ],
+      "kind": "theory",
+      "mechanism": "摘要分析研发自动化可能压缩进展时间的反馈情景及其治理后果，不是新的可执行 RSI 算法。",
+      "limitations": "https://arxiv.org/html/2609.36054v2 返回404；未读取全文，不归因具体章节、模型公式或量化预测；不是已经实现智能爆炸的实验证据。",
+      "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
+      "reading_scope": "继承既有专题记录：primary_abstract_verified_fulltext_html_unavailable；本次不重复声明全文阅读",
+      "source_doc": "00_RSI_overview.md: Update 2026.9.28",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "摘要分析研发自动化可能压缩进展时间的反馈情景及其治理后果，不是新的可执行 RSI 算法。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2609.35561",
+      "method": "RSI-Master",
+      "title": "RSI-Master: Structuring Experiments to Guide Autonomous Model Improvement",
+      "date": "2026-09-28",
+      "primary_url": "https://arxiv.org/abs/2609.35561",
+      "date_source": "https://arxiv.org/abs/2609.35561",
+      "families": [
+        "D",
+        "F"
+      ],
+      "kind": "framework",
+      "mechanism": "Experiment OS constrains model-development actions and stores linked experiments; a separate Worker/Reviewer research DAG grows through Main Agent orchestration based on evidence review.",
+      "limitations": [
+        "Target checkpoint improvement is not demonstrated replacement of the research backbone.",
+        "Unweighted task average is not interchangeable with other PostTrainBench weighted aggregates.",
+        "Cross-domain results include separate task-specific training runs, not a single general model transferred untouched.",
+        "Zero recorded hacking is scope-bound auditing with LLM and human checks, not proof of no future exploits or evaluator independence.",
+        "Wall-clock and target-GPU budgets do not by themselves establish equal research/API compute."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "User priority list, independent primary-paper expansion"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "Experiment OS constrains model-development actions and stores linked experiments; a separate Worker/Reviewer research DAG grows through Main Agent orchestration based on evidence review.",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2610.14224",
+      "method": "Harness^2",
+      "title": "Harness^2: Recursive Agent Harnessing for an Open World",
+      "date": "2026-10-09",
+      "primary_url": "https://arxiv.org/abs/2610.14224",
+      "date_source": "https://arxiv.org/abs/2610.14224",
+      "families": [
+        "C",
+        "D",
+        "F"
+      ],
+      "kind": "method",
+      "mechanism": "每任务公共seed，invariant/domain两类Propose-Probe-Compose；可并行扩宽或顺序精炼。结束后持久存可执行harness和有证据的改进经验，供后续改进读取。C+D+F、明确L2；改进库状态变化但阶段规则固定，L3边界需注明。",
+      "limitations": [
+        "行为对照不保证答案正确或跨任务迁移。",
+        "预算k提前设定，平行并不减少总计算，#Steps只度量executor不等于全流程。",
+        "官方README提示网络不受限且Codex sandbox禁用，公开rubric可达需额外网络约束。",
+        "具体递归深度是本文解释，不能把维护经验库等同自重写改进算法。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections_and_official_repo；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2610.14224v1",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "每任务公共seed，invariant/domain两类Propose-Probe-Compose；可并行扩宽或顺序精炼。结束后持久存可执行harness和有证据的改进经验，供后续改进读取。C+D+F、明确L2；改进库状态变化但阶段规则固定，L3边界需注明。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2610.18083",
+      "method": "AReaL-RSI",
+      "title": "AReaL-RSI: Adaptive Scaling and Coordination of Recursive Self-Improvement",
+      "date": "2026-10-13",
+      "primary_url": "https://arxiv.org/abs/2610.18083",
+      "date_source": "https://arxiv.org/abs/2610.18083",
+      "families": [
+        "C",
+        "D",
+        "F"
+      ],
+      "kind": "framework",
+      "mechanism": "Persistent researcher agents receive task-conditioned orientations; leader-mediated conditional memory retains sources and applicability; post-campaign review versions orientation, knowledge and skills for later campaigns without backbone updates.",
+      "limitations": [
+        "Researcher asset evolution is not model-weight RL despite the AReaL name.",
+        "Architecture permits reuse but cross-campaign benefit is unmeasured.",
+        "Task subsets and resource allocation differ from Codex-Goal; repeated-run uncertainty unavailable.",
+        "Source/reference checks do not certify semantic correctness; recipient testing is prescribed rather than enforced.",
+        "No official repo URL confirmed in inspected paper or metadata."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "User priority list, independent primary-paper expansion"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "Persistent researcher agents receive task-conditioned orientations; leader-mediated conditional memory retains sources and applicability; post-campaign review versions orientation, knowledge and skills for later campaigns without backbone updates.",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2610.22740",
+      "method": "R2Orch",
+      "title": "R$^2$Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop",
+      "date": "2026-10-15",
+      "primary_url": "https://arxiv.org/abs/2610.22740",
+      "date_source": "https://arxiv.org/abs/2610.22740",
+      "families": [
+        "D",
+        "F"
+      ],
+      "kind": "method",
+      "mechanism": "Learned Director constructs graphs executed by frozen Workers. Proposer chooses tasks by candidate-skill-hidden learnability; randomized visible/hidden groups estimate skill benefit, guiding Bayesian-bootstrap withdrawal and failure-to-skill revision while policies train.",
+      "limitations": [
+        "Initial skills are manually customized and tasks come from supplied training pools; zero-skill deployment is not zero-data training.",
+        "Theory is local and conditional: stochastic Worker outcome variance can exceed Director-controllable variance.",
+        "Within-group randomization does not remove across-round task, model and context drift or joint skill interactions.",
+        "Outer withdrawal/update rules remain fixed; no claim that the system autonomously redesigns these rules."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "User priority list, independent primary-paper expansion"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "Learned Director constructs graphs executed by frozen Workers. Proposer chooses tasks by candidate-skill-hidden learnability; randomized visible/hidden groups estimate skill benefit, guiding Bayesian-bootstrap withdrawal and failure-to-skill revision while policies train.",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2610.25078",
+      "method": "CoEvo-RSI",
+      "title": "CoEvo-RSI: When Harnesses Evolve, Which Models Should Follow?",
+      "date": "2026-10-18",
+      "primary_url": "https://arxiv.org/abs/2610.25078",
+      "date_source": "https://arxiv.org/abs/2610.25078",
+      "families": [
+        "A",
+        "D",
+        "F"
+      ],
+      "kind": "method",
+      "mechanism": "Fixed-parameter meta-agent uses an evolutionary archive to select historical harness bases and separately select or TIES-merge checkpoints; chosen pairs generate verifier-accepted SFT trajectories, then validation gates promotion among incumbent, inherited and adapted pairs.",
+      "limitations": [
+        "TIMR is observable interface violation, not complete capability alignment or causal explanation of task gains.",
+        "SFT targets are own accepted trajectories, but a stronger external fixed meta-agent directs search.",
+        "Specialized held-out results do not establish unrelated-domain generality or improved meta-agent.",
+        "API expenditure and rollout counts are not total training cost; validation is repeatedly used for selection."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "User priority list, independent primary-paper expansion"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "Fixed-parameter meta-agent uses an evolutionary archive to select historical harness bases and separately select or TIES-merge checkpoints; chosen pairs generate verifier-accepted SFT trajectories, then validation gates promotion among incumbent, inherited and adapted pairs.",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2610.26770",
+      "method": "HarnessPro",
+      "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
+      "date": "2026-10-19",
+      "primary_url": "https://arxiv.org/abs/2610.26770",
+      "date_source": "https://arxiv.org/abs/2610.26770",
+      "families": [
+        "D"
+      ],
+      "kind": "method",
+      "mechanism": "Analyzer/Planner/Editor/TestSynth生成候选；10训练任务coreset、3训练rollouts，训练-验证-测试分离；生成测试一次后固定；性能底线+Pareto过滤+归一化加权平方距离选至多三代表。C+D；固定改进框架，非L3。",
+      "limitations": [
+        "无官方标签不等于无验证；合成测试可能有共同错误且反复复用验证集仍会产生选择偏差。",
+        "原归一化式要求非零极差，复现应处理退化维度。",
+        "成本是部署token账单，未自动摊销全部搜索费；延迟为辅助指标。",
+        "两模型各自演化不是同一产物不改动跨模型迁移。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2610.26770v2",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "Analyzer/Planner/Editor/TestSynth生成候选；10训练任务coreset、3训练rollouts，训练-验证-测试分离；生成测试一次后固定；性能底线+Pareto过滤+归一化加权平方距离选至多三代表。C+D；固定改进框架，非L3。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_abstract_and_method_sections_4"
+    },
+    {
+      "id": "arxiv:2610.32026",
+      "method": "RSI-Opt",
+      "title": "RSI-Opt: Recursive Self-Improvement Optimizer Agents For Model Training",
+      "date": "2026-10-23",
+      "primary_url": "https://arxiv.org/abs/2610.32026",
+      "date_source": "https://arxiv.org/abs/2610.32026",
+      "families": [
+        "D",
+        "F"
+      ],
+      "kind": "method",
+      "mechanism": "固定 meta-agent 根据运行证据演化 optimizer-agent 的 prompt、playbook、代码库与决策调度；训练内按固定决策机会修改更新器；合法候选包含低分者都进入档案。",
+      "limitations": [
+        "LLM、meta-agent 指令、评分与划分冻结；不是 meta-agent 自修改。",
+        "运行期只读参考资产可复制后编辑；固定更新次数与决策机会不代表 token、时延和费用相同。",
+        "论文区分演化评分与 raw-space 描述性 z 总结；不是显著性检验。",
+        "图注指向附录中的历史留出暴露记录；本次尚未完成附录审计。",
+        "需要同预算独立提案对照才能隔离经验继承本身的收益。"
+      ],
+      "chapter": "docs/zh/04_Algorithm_Handbook.md",
+      "reading_scope": "本次直接核验摘要、submission history 与 v1 方法 §3 及相关正文片段；未独立复现。",
+      "source_doc": "https://arxiv.org/html/2610.32026v1#S3",
+      "evidence_origin": "direct_primary_method_sections",
+      "significance_and_limits": "跨运行演化优化器 Agent 政策；固定 meta-agent、评价协议与训练更新预算。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_abstract_and_method_sections_3"
+    },
+    {
+      "id": "arxiv:2610.32253",
+      "method": "RSIHub",
+      "title": "RSIHub: A Composable Framework for Agent-Evolution Methods",
+      "date": "2026-10-23",
+      "primary_url": "https://arxiv.org/abs/2610.32253",
+      "date_source": "https://arxiv.org/abs/2610.32253",
+      "families": [
+        "D",
+        "F"
+      ],
+      "kind": "framework",
+      "mechanism": "recipe组合生命周期算子并声明可改资源；框架检查真实diff、提交并从干净检出执行冻结评价，绑定候选与评价身份，Gate仅决定父代资格。",
+      "limitations": [
+        "recipes是策略接口适配，不宣称完整复现原论文所有模型、提示和预算。",
+        "演化主结果每题一次，三次重复只用于未演化agent的执行保真对照。",
+        "不提供恶意代码containment；可编辑算子和适配器可能在宿主运行。",
+        "认证记录依赖可信框架、宿主、文件系统及有效评价器，不保证泛化或任务安全。",
+        "非单一算法，不能给整个框架分配固定RSI层级。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2610.32253v1",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "recipe组合生命周期算子并声明可改资源；框架检查真实diff、提交并从干净检出执行冻结评价，绑定候选与评价身份，Gate仅决定父代资格。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2610.34386",
+      "method": "ParetoRSI-Gym",
+      "title": "ParetoRSI-Gym: Can AI Agents Improve Language Models Across Multiple Domains?",
+      "date": "2026-10-25",
+      "primary_url": "https://arxiv.org/abs/2610.34386",
+      "date_source": "https://arxiv.org/abs/2610.34386",
+      "families": [
+        "A",
+        "B",
+        "E"
+      ],
+      "kind": "benchmark",
+      "mechanism": "An agent revises a multi-domain data pool and written principles using proxy traces, selects a historical checkpoint and bounded LoRA SFT settings, then evaluates final/proxy-selected checkpoints on unexposed generalization suites.",
+      "limitations": [
+        "Average improvement need not be Pareto improvement; some score gains reflect output-format learning.",
+        "Persistent-history wording and data-only shorthand are not fully consistent with detailed execution protocol; this chapter retains the distinction.",
+        "Automatic decontamination does not exclude semantic or pretrained overlap.",
+        "Moving proprietary backbones, narrow language/domain scope and unequal replication limit comparisons; no official repository URL confirmed."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "Discovered through arXiv recursive self-improvement search on 2026-11-05; followed to primary HTML"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "An agent revises a multi-domain data pool and written principles using proxy traces, selects a historical checkpoint and bounded LoRA SFT settings, then evaluates final/proxy-selected checkpoints on unexposed generalization suites.",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2610.35193",
+      "method": "Trustworthy RSI evidence framework",
+      "title": "Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
+      "date": "2026-10-26",
+      "primary_url": "https://arxiv.org/abs/2610.35193",
+      "date_source": "https://arxiv.org/abs/2610.35193",
+      "families": [
+        "E",
+        "F"
+      ],
+      "kind": "theory",
+      "mechanism": "以 improvement validity、constraint preservation、effective oversight 三视角，审计单次更新、跨后继继承与改进器修改；要求 matched paired continuations 和独立报告评测。",
+      "limitations": "综述的直接 RSI、相邻系统与前瞻主张不可混同；未独立核查其全部 301 引用或 260 编码格；结构保护不等于已验证的纵向安全；长期联合能力/安全/干预证据仍有限。",
+      "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
+      "reading_scope": "继承既有专题记录：primary_fulltext_sections_survey；本次不重复声明全文阅读",
+      "source_doc": "00_RSI_overview.md: Update 2026.10.26",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "以 improvement validity、constraint preservation、effective oversight 三视角，审计单次更新、跨后继继承与改进器修改；要求 matched paired continuations 和独立报告评测。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "inherited_evidence_not_newly_fulltext_verified"
+    },
+    {
+      "id": "arxiv:2611.03698",
+      "method": "RSI-Dojo / RSI-Craft",
+      "title": "Training LLM Agents to Automate LLM Post-Training with RSI-Dojo",
+      "date": "2026-10-29",
+      "primary_url": "https://arxiv.org/abs/2611.03698",
+      "date_source": "https://arxiv.org/abs/2611.03698",
+      "families": [
+        "A",
+        "B",
+        "F"
+      ],
+      "kind": "framework",
+      "mechanism": "RSI-Craft converts research artifacts and InspectAI tasks into executable post-training environments, filters reliability/discriminability, collects guided frontier-model trajectories and applies process/outcome filtering before SFT of researcher models.",
+      "limitations": [
+        "Researcher training from frontier demonstrations is not teacher-free self-improvement.",
+        "Task discrimination filters depend on reference model capabilities and may suppress difficult or narrow domains.",
+        "Mixed official and adapted evaluation results do not imply identical hardware/tool access or complete compute matching.",
+        "Stronger self-successor loop remains future work; no official repository URL confirmed in inspected primary pages."
+      ],
+      "chapter": "docs/zh/chapters/02_Training_Environments_and_AI_Research.md",
+      "reading_scope": "继承既有专题记录：primary_html_excerpt；本次不重复声明全文阅读",
+      "source_doc": [
+        "Discovered through arXiv recursive self-improvement search on 2026-11-05; followed to primary HTML"
+      ],
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "RSI-Craft converts research artifacts and InspectAI tasks into executable post-training environments, filters reliability/discriminability, collects guided frontier-model trajectories and applies process/outcome filtering before SFT of researcher models.",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2611.01113",
+      "method": "CogRSI",
+      "title": "CogRSI: Evolving and Auditing Cognitive Reasoning Strategies",
+      "date": "2026-10-31",
+      "primary_url": "https://arxiv.org/abs/2611.01113",
+      "date_source": "https://arxiv.org/abs/2611.01113",
+      "families": [
+        "C",
+        "D",
+        "E"
+      ],
+      "kind": "method",
+      "mechanism": "固定reader和权重，演化最多五条条件化原则。每轮最多四候选，三组80题以3百分点margin登记，门控变体另考虑96反事实题对；事后双模型编译规则并搜索共享反例。",
+      "limitations": [
+        "BigToM-U新的是条件和题对，200场景的其他版本在旧分区出现；不能称完全新场景。",
+        "reader后期设计检查旧测试失败，主样本带探索性；部分确认数据项目以前见过但未用于CogRSI设计决策。",
+        "v1摘要每个learned principle胜专家只适用于作者原则循环，不包括Table1 GEPA84.4的分支。",
+        "86.7%为扩大译码输出上限后的结果，重编译253条是记录过的预注册偏离。",
+        "审计valid仅在有限形式模型和样本中无共享反例，不是普遍逻辑正确性。",
+        "固定外层C+D/L1，程序继承有L2边界；固定审计E未被演化。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2611.01113v1",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "固定reader和权重，演化最多五条条件化原则。每轮最多四候选，三组80题以3百分点margin登记，门控变体另考虑96反事实题对；事后双模型编译规则并搜索共享反例。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2611.03178",
+      "method": "CoworkOS",
+      "title": "CoworkOS:Scaling Agent Coworkers for Real-world Automation",
+      "date": "2026-11-02",
+      "primary_url": "https://arxiv.org/abs/2611.03178",
+      "date_source": "https://arxiv.org/abs/2611.03178",
+      "families": [
+        "C",
+        "D",
+        "F"
+      ],
+      "kind": "framework",
+      "mechanism": "Main承担任务决策、Coordinator维护持久运行状态、Subagents执行局部工作。固定GLM5.3控制及教学，针对Qwen3.6-35B-A3B进行失败诊断、数据流程改进、轨迹筛选、SFT和重评。",
+      "limitations": [
+        "多轮干预同时改变数据、重复、起点与epoch，非单因素因果消融或等算力轮次。",
+        "用于诊断并反馈的数据基准不等同完全sealed最终评估；近重复过滤不消除自适应选择偏差。",
+        "目标模型未被证明接管控制器，runtime自身未被证明自重写；本文A+B研究、D承载，L1/L2边界。",
+        "未取得统一端到端费用账本，不据轮数推导净成本收益。",
+        "持久Job运行依赖仍存活的宿主进程；恢复状态不是任意故障下任务必定继续的保证。"
+      ],
+      "chapter": "docs/zh/chapters/03_Agent_Skills_and_Harness.md",
+      "reading_scope": "继承既有专题记录：fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "https://arxiv.org/html/2611.03178v1",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "Main承担任务决策、Coordinator维护持久运行状态、Subagents执行局部工作。固定GLM5.3控制及教学，针对Qwen3.6-35B-A3B进行失败诊断、数据流程改进、轨迹筛选、SFT和重评。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    },
+    {
+      "id": "arxiv:2611.02797",
+      "method": "SelfImprove-Bench",
+      "title": "SelfImprove-Bench: Evaluating Generalization in Self-Improving Agents",
+      "date": "2026-11-02",
+      "primary_url": "https://arxiv.org/abs/2611.02797",
+      "date_source": "https://arxiv.org/abs/2611.02797",
+      "families": [
+        "B",
+        "E"
+      ],
+      "kind": "benchmark",
+      "mechanism": "固定 backbone，在 held-in 任务流演化 prompts/memory/harness；由基准接口在 held-in 任务上评候选，冻结状态后测试 G0 重放、G1 新实例、G2 新难度、G3 同类新任务、G4 跨能力任务；分析修改轨迹。",
+      "limitations": "游戏泛化不等于开放研究能力；候选方法初始 harness 不同；部分 reference 是启发式而非最优上界，分数/HCI 可超过 1；近零分母不稳定；描述哈希去重不保证底层游戏状态不同；附录 A.4 是看到机器标签后的复核一致性，不是盲评准确率；未运行仓库。",
+      "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
+      "reading_scope": "继承既有专题记录：primary_fulltext_sections；本次不重复声明全文阅读",
+      "source_doc": "自主发现: https://arxiv.org/search/?query=SelfImprove-Bench&searchtype=all&abstracts=show&order=-announced_date_first&size=50; Google 搜索跳转，发现依据为 arXiv 搜索与一手正文",
+      "evidence_origin": "inherited_versioned_topical_notes",
+      "significance_and_limits": "固定 backbone，在 held-in 任务流演化 prompts/memory/harness；由基准接口在 held-in 任务上评候选，冻结状态后测试 G0 重放、G1 新实例、G2 新难度、G3 同类新任务、G4 跨能力任务；分析修改轨迹。",
+      "in_recent_window": true,
+      "date_basis": "arxiv_v1_or_primary_first_public_evidence_not_revision_or_project_date",
+      "supervision_verification": "date_and_abstract"
+    }
+  ],
+  "dynamics": {
+    "semantics": "authored_mechanism_illustrations_not_measured_experiment_traces",
+    "scenes": [
+      {
+        "id": "gate",
+        "title": "通用 RSI：独立晋级与回滚",
+        "object": "被允许修改的持久状态",
+        "fixed": "最终评价器、权限边界、资源上限",
+        "source": "docs/zh/04_Algorithm_Handbook.md",
+        "note": "本图是建议协议，不是任何单篇论文的实现；不合格候选被拒绝，不假设每轮进步。",
+        "steps": [
+          {
+            "label": "观察旧版本",
+            "detail": "保存状态、运行条件、任务分布与失败轨迹。建立可重复基线，区分缺数据、缺技能和控制故障。"
+          },
+          {
+            "label": "提出候选",
+            "detail": "在预注册的可变接口中提出修改。记录理由与预期影响；不能同时改评分规则以迎合新候选。"
+          },
+          {
+            "label": "隔离执行",
+            "detail": "按相同资源上限执行候选。保存成功、失败、超时和依赖信息，宿主限制候选的权限。"
+          },
+          {
+            "label": "开发集选择",
+            "detail": "使用允许暴露的开发信号排序候选。相同验证集被反复使用会产生适应偏差，不再称最终盲测。"
+          },
+          {
+            "label": "独立晋级",
+            "detail": "冻结候选，使用轮换晋级验证及最终盲测检查质量、风险、成本和迁移。失败则保留旧版本。"
+          },
+          {
+            "label": "持久部署与回流",
+            "detail": "只有通过验收的版本进入下轮。另测新系统是否真正参与下轮改进，以及改进效率是否改善。"
+          }
+        ]
+      },
+      {
+        "id": "selftrain",
+        "title": "STaR / ReST-EM：生成—筛选—学习",
+        "object": "生成模型、筛选轨迹与训练产物",
+        "fixed": "题目与答案/执行真值、论文规定的训练调度",
+        "source": "https://arxiv.org/abs/2312.06585",
+        "note": "这是共同结构；STaR 的答案条件 rationalization 与 ReST-EM 的 E/M 调度不同。原始方法的基座重置不能省略。",
+        "steps": [
+          {
+            "label": "准备外部真值",
+            "detail": "保留问题、已知答案或测试。自生成的是轨迹，不能把已有监督说成凭空产生的真值。"
+          },
+          {
+            "label": "当前模型采样",
+            "detail": "固定本阶段策略，生成多个回答或程序。记录采样预算，更多采样本身可能改善结果。"
+          },
+          {
+            "label": "筛选成功轨迹",
+            "detail": "只保留通过答案/程序检查的样本。STaR 还可对失败题在答案条件下生成解释，再移除答案提示。"
+          },
+          {
+            "label": "监督更新",
+            "detail": "按各论文的参数初始化和训练调度学习筛选轨迹。正确答案不保证推理过程忠实，有限 SGD 不提供测试单调保证。"
+          },
+          {
+            "label": "独立任务评价",
+            "detail": "在未用于过滤的数据上检查质量和成本。对比相同总预算的单轮更多采样与多轮训练。"
+          },
+          {
+            "label": "新模型再生成",
+            "detail": "更新后的生成器参与下一轮数据生成。持久回流存在，但改进程序本身仍可完全固定。"
+          }
+        ]
+      },
+      {
+        "id": "selfplay",
+        "title": "Absolute Zero：可执行任务自博弈",
+        "object": "任务提案与求解策略",
+        "fixed": "执行器、任务接口与人工定义的奖励",
+        "source": "https://arxiv.org/abs/2505.03335",
+        "note": "无对应的人类训练数据集不等于无预训练、无人工设计或无外部约束。",
+        "steps": [
+          {
+            "label": "提案任务",
+            "detail": "在规定的程序任务空间生成可执行挑战。任务接口限定可探索的能力范围。"
+          },
+          {
+            "label": "执行与可解性检查",
+            "detail": "通过执行建立可核查信息，检查格式与有效性。执行器只能覆盖规格内性质。"
+          },
+          {
+            "label": "生成求解轨迹",
+            "detail": "策略求解经过筛选的任务。保留尝试、失败与输出，而不只记录拿到奖励的样本。"
+          },
+          {
+            "label": "构造角色奖励",
+            "detail": "根据任务有效性、难度和求解结果形成训练信号。奖励函数属于设计选择，不是开放世界真值。"
+          },
+          {
+            "label": "策略学习",
+            "detail": "更新提案/求解能力并测量任务分布。防止题目变容易、覆盖收缩或执行漏洞被利用。"
+          },
+          {
+            "label": "生成下一轮挑战",
+            "detail": "新策略改变后续任务与轨迹。再做外部分布评价，不能仅凭内生奖励上升宣布通用能力提升。"
+          }
+        ]
+      },
+      {
+        "id": "skills",
+        "title": "技能路线：持久工具与经验整合",
+        "object": "技能、工具、检索与适用条件",
+        "fixed": "基础模型与工作流，可依据具体方法变化",
+        "source": "https://arxiv.org/abs/2601.18226",
+        "note": "本图综合 Yunjue / Voyager 类结构；两者具体环境、课程和验证方式不同。工具不抛异常不是任务正确。",
+        "steps": [
+          {
+            "label": "检索已有技能",
+            "detail": "用任务条件检索可执行程序和经验。记录检索成本与误命中，不默认所有旧技能都可迁移。"
+          },
+          {
+            "label": "组合执行",
+            "detail": "组合已有工具完成任务，区分运行异常、功能错误与最终任务失败。"
+          },
+          {
+            "label": "识别能力缺口",
+            "detail": "只有真实缺口才触发新技能生成。不能把所有失败都归因于工具不够多。"
+          },
+          {
+            "label": "生成并验证",
+            "detail": "生成新技能，运行隔离测试与功能检查；标明依赖、来源、版本和适用条件。"
+          },
+          {
+            "label": "去重合并入库",
+            "detail": "聚类、合并、回归测试并版本化。删减冗余与失效技能，防止错误知识固化。"
+          },
+          {
+            "label": "后续任务复用",
+            "detail": "测未见任务与新环境迁移。如果新库也参与下一次技能获取，才进一步讨论改进回流。"
+          }
+        ]
+      },
+      {
+        "id": "harness",
+        "title": "HarnessPro：性能—成本前沿",
+        "object": "提示、技能、工具和控制结构",
+        "fixed": "初始生成测试、性能底线、骨干和最终官方测试",
+        "source": "https://arxiv.org/html/2610.26770v2#S4.SS1",
+        "note": "生成测试只生成一次并固定；Pareto 三档代表没有单一全序赢家。搜索费用与部署费用分开。",
+        "steps": [
+          {
+            "label": "建立初始轨迹",
+            "detail": "在 coreset 和验证任务收集初始 Harness 轨迹；DPP 平衡难度与多样性。"
+          },
+          {
+            "label": "冻结生成测试",
+            "detail": "由任务和初始轨迹生成测试，仅一次；在该信号上记录初始性能底线。生成测试可能继承错误先验。"
+          },
+          {
+            "label": "诊断并编辑候选",
+            "detail": "多个角色分析错误、冗余和成本，提出不同质量—成本优先级的 Harness 修改。"
+          },
+          {
+            "label": "同测试评价",
+            "detail": "对新旧候选使用固定生成测试，测通过率与执行费用。低于性能底线的候选被筛除。"
+          },
+          {
+            "label": "保留三档前沿",
+            "detail": "去除被支配候选，再以归一化加权平方距离选择 lite、medium、heavy，适应不同预算。"
+          },
+          {
+            "label": "回流与最终盲测",
+            "detail": "代表候选进入下一 epoch；结束后冻结产物，使用官方测试验收。开发前沿上进步不保证留出不退化。"
+          }
+        ]
+      },
+      {
+        "id": "dream",
+        "title": "Dream-RSI：离线回放与在线发现",
+        "object": "探索策略代码与发现历史",
+        "fixed": "基础发现 Agent、评价器与执行接口",
+        "source": "https://arxiv.org/html/2609.14858v2",
+        "note": "回放仅支持已记录树与合法前缀；不是训练神经世界模型，也不能无偏评价任意未见动作。",
+        "steps": [
+          {
+            "label": "在线发现",
+            "detail": "探索策略编排固定发现 Agent，执行昂贵实验并保存发现历史树与成本。"
+          },
+          {
+            "label": "构建回放世界",
+            "detail": "将已发生的发现树变成确定性回放环境。prefix-only 约束防止策略偷看尚未揭示的历史。"
+          },
+          {
+            "label": "提出探索策略",
+            "detail": "开发候选策略代码，改变选择、预算分配和探索行为；基础 Agent 保持不变。"
+          },
+          {
+            "label": "同历史离线评价",
+            "detail": "在同一历史支持集比较质量—成本偏好和并行惩罚。当前策略作为候选只提供此历史内的保底。"
+          },
+          {
+            "label": "冻结选中策略",
+            "detail": "保留适当策略并记录离线评价。离线成本较低不表示策略提案或总发现成本为零。"
+          },
+          {
+            "label": "返回在线扩展",
+            "detail": "部署策略并产生新发现历史，进入下一轮。单独检验离线排名与在线收益的对应及支持集外失效。"
+          }
+        ]
+      },
+      {
+        "id": "meta",
+        "title": "MetaRSI：三算子、双轴与调度",
+        "object": "数据、Harness、训练产物、算子提案与调度策略",
+        "fixed": "受保护执行/评价内核与最外层 meta-policy",
+        "source": "https://arxiv.org/html/2609.06396v2",
+        "note": "这是论文结构示意；开放科学是议程，实验主要在代码与闭式科学。三算子不是本图谱的三个递归等级。",
+        "steps": [
+          {
+            "label": "观察诊断",
+            "detail": "统一内核收集当前系统失败和证据。目标模型承担多个角色，不消除同模型的共享错误。"
+          },
+          {
+            "label": "水平选顺序",
+            "detail": "选择 Data-RSI、Harness-RSI、Model-RSI 的有类型组合；需要当前版本新鲜证据。"
+          },
+          {
+            "label": "垂直改提案",
+            "detail": "优化各算子的提案策略。Harness 不改权重；Model 候选按论文规定从基座和累计数据训练。"
+          },
+          {
+            "label": "执行与选择",
+            "detail": "受保护代码验证边界、执行、选择与导出。候选生成权不等于发布权。"
+          },
+          {
+            "label": "按 term 改调度",
+            "detail": "依据完整 term 结果更新路由、预算、停止和垂直优化时机。最外层机制仍冻结，递归层数有限。"
+          },
+          {
+            "label": "配对继续验证",
+            "detail": "从同一个系统分叉，比较旧/新改进器同预算的后续收益；另核对跨 term 留出访问依赖。"
+          }
+        ]
+      },
+      {
+        "id": "coevo",
+        "title": "CoEvo-RSI：模型—Harness 双向继承",
+        "object": "模型 checkpoint、Harness 与轨迹数据",
+        "fixed": "任务评价及预先约定的实验预算",
+        "source": "https://arxiv.org/abs/2610.25078",
+        "note": "依据原摘要与已有专题证据的结构示意；共演化不自动证明不断加速。",
+        "steps": [
+          {
+            "label": "读取共同档案",
+            "detail": "meta-agent 读取历史框架、模型 checkpoint 和执行反馈，保留成败谱系。"
+          },
+          {
+            "label": "继承框架设计",
+            "detail": "利用旧设计提出当前 Harness，避免单一路线从头搜索或过早锁定。"
+          },
+          {
+            "label": "选择/合并模型",
+            "detail": "从历史 checkpoint 选择或合并可用能力，而不是每次假定最新模型最合适。"
+          },
+          {
+            "label": "框架下轨迹适配",
+            "detail": "在选定 Harness 下收集拒绝采样的自身轨迹，使用 SFT 对齐执行要求。"
+          },
+          {
+            "label": "测脑—身体匹配",
+            "detail": "做旧/新模型与旧/新 Harness 的交叉评价；固定搜索、训练、执行资源，隔离联合收益。"
+          },
+          {
+            "label": "双向历史回流",
+            "detail": "合格组合进入档案，为下一轮提供框架和模型继承。跟踪泛化和改进成本，而非只看当前垂直应用分数。"
+          }
+        ]
+      },
+      {
+        "id": "evaluation",
+        "title": "评价器：校准、冻结与独立审计",
+        "object": "候选评价器、反馈规则与校准资产",
+        "fixed": "独立审计集、最终报告集、发布权限与规格",
+        "source": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
+        "note": "这是 E 家族建议协议，不是某篇论文共同实现；评价器自评分提升不是正确性的证明。",
+        "steps": [
+          {
+            "label": "记录反馈失效",
+            "detail": "记录奖励投机、裁判分歧、测试遗漏与真实任务失败。区分评分器错误、规格缺失和求解器错误。"
+          },
+          {
+            "label": "建立校准资产",
+            "detail": "用独立来源、可执行真值或人工审定样本建立校准任务，明确评价器适用范围与不确定性。"
+          },
+          {
+            "label": "提出评价器更新",
+            "detail": "在允许接口中更新裁判、测试或奖励模型。保留版本与来源，被测系统不能修改最终报告规则。"
+          },
+          {
+            "label": "独立校准检查",
+            "detail": "测试可靠性、误差、对抗鲁棒性和新分布表现。与旧评价器比较，并报告假阳性和假阴性。"
+          },
+          {
+            "label": "冻结并授权发布",
+            "detail": "外部准入流程决定是否部署。拒绝候选时继续使用旧版，不能通过候选自评分宣布晋级。"
+          },
+          {
+            "label": "后继链再审计",
+            "detail": "新评价器进入允许的开发闭环，但最终报告集保持隔离。跨代重复访问和评价器漂移需要持续检查。"
+          }
+        ]
+      },
+      {
+        "id": "rsiopt",
+        "title": "RSI-Opt：跨运行政策与训练内适应",
+        "object": "prompt、playbook、代码库、decision cadence",
+        "fixed": "LLM、meta-agent 指令、任务划分、评价规则与决策机会数量",
+        "source": "https://arxiv.org/html/2610.32026v1#S3",
+        "note": "固定 meta-agent 修改 optimizer-agent 的策略，不是 meta-agent 自修改。合法低分候选也入档；历史留出暴露与成本仍需审计。",
+        "steps": [
+          {
+            "label": "选择父代政策",
+            "detail": "在已评价档案中采样父代，偏好高分但抑制重复扩展同一分支。"
+          },
+          {
+            "label": "修改跨运行资产",
+            "detail": "固定 meta-agent 依据运行摘要更新提示、经验手册、优化器代码库和决策时机；可做 CPU proxy 实验。"
+          },
+          {
+            "label": "验证候选结构",
+            "detail": "检查模板字段、Python 语法和大小；无效候选进入有上限的修复流程。格式通过不是功能收益证明。"
+          },
+          {
+            "label": "训练内优化适应",
+            "detail": "内层 Agent 看损失/诊断，编辑工作区更新器并短窗口试跑。架构、数据和更新次数固定；最终指标 withheld。"
+          },
+          {
+            "label": "外层评价与归档",
+            "detail": "外层读取最终指标，按同任务/种子评分；所有合法候选入档，包括低于父代者。标准化分数不是显著性检验。"
+          },
+          {
+            "label": "政策继承与迁移",
+            "detail": "下一代继承经验和工具，另测留出任务与跨模型转移；匹配预算的独立提案对照仍是重要缺口。"
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "checked_on": "2026-11-05",
+    "window_start": "2025-11-05",
+    "cutoff": "2026-11-05",
+    "scope": "selected_primary_sources_not_exhaustive",
+    "verification_method": "direct_arxiv_abstract_and_submission_history; selected_method_sections",
+    "latest_verified_first_submission": "2026-11-02",
+    "independent_experiments_reproduced": false,
+    "papers": [
+      {
+        "id": "arxiv:2611.03178",
+        "date": "2026-11-02",
+        "version": "v1",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2611.02797",
+        "date": "2026-11-02",
+        "version": "v1",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2611.01113",
+        "date": "2026-10-31",
+        "version": "v1",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2611.03698",
+        "date": "2026-10-29",
+        "version": "v1",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2610.34386",
+        "date": "2026-10-25",
+        "version": "v1",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2610.32026",
+        "date": "2026-10-23",
+        "version": "v1",
+        "level": "date_abstract_and_method_sections_3"
+      },
+      {
+        "id": "arxiv:2610.32253",
+        "date": "2026-10-23",
+        "version": "v1",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2610.26770",
+        "date": "2026-10-19",
+        "version": "v2",
+        "level": "date_abstract_and_method_sections_4"
+      },
+      {
+        "id": "arxiv:2610.25078",
+        "date": "2026-10-18",
+        "version": "v1",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2610.18083",
+        "date": "2026-10-13",
+        "version": "v1",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2609.35561",
+        "date": "2026-09-28",
+        "version": "v2",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2609.30652",
+        "date": "2026-09-25",
+        "version": "v1",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2609.24972",
+        "date": "2026-09-21",
+        "version": "v3",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2609.20519",
+        "date": "2026-09-17",
+        "version": "v1",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2609.14858",
+        "date": "2026-09-14",
+        "version": "v2",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2609.06396",
+        "date": "2026-09-06",
+        "version": "v2",
+        "level": "date_and_abstract",
+        "project_date": "2026-09-03"
+      },
+      {
+        "id": "arxiv:2607.28568",
+        "date": "2026-07-30",
+        "version": "v1",
+        "level": "date_and_abstract"
+      },
+      {
+        "id": "arxiv:2603.19461",
+        "date": "2026-03-19",
+        "version": "v2",
+        "version_date": "2026-11-01",
+        "level": "date_and_abstract"
+      }
+    ],
+    "search_notes": [
+      "Primary candidate discovery used existing dated topical evidence and web searches.",
+      "Searches for 2026-10-24 through 2026-11-05 did not establish any later first submission than 2026-11-02.",
+      "Failure to discover later papers is not evidence that no such papers exist.",
+      "Inherited full-text reading notes retain their original scope and are not counted as new full-text reviews."
+    ]
+  }
+}

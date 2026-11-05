@@ -1,0 +1,88 @@
+# RSI 方法时间索引与机制地图
+
+[技术全景](01_RSI_Technical_Panorama.md) · [算法手册](04_Algorithm_Handbook.md) · [最新研究](06_Latest_Year_Research.md) · [动态图](../../index.html#timeline)
+
+截至 2026-11-05，精选 66 个方法与支撑研究，其中 38 个首发于 2025-11-05—2026-11-05。这是代表性选择，不是穷尽或全部全文精读声明。日期以原始首发证据为准，修订与项目公告不移入新首发节点。
+
+![分类关系，不是技术继承](../../pics/rsi-family.svg)
+
+![三条并行路线；等宽阶段而非真实时间比例尺](../../pics/rsi-timeline.svg)
+
+旧静态时间图只显示里程碑；[动态时间线](../../index.html#timeline)包含下表全部精选节点，并可按对象与近期窗口筛选。
+
+家族：A 模型与训练；B 数据/任务/环境；C 记忆与技能；D Harness；E 评价；F 研究与改进器。基准、框架和理论不冒充算法。
+
+| 首发 | 方法与原文 | 家族 | 类型 | 机制与边界 | 技术解释 |
+|---|---|---|---|---|---|
+| 2003-09-25 | [Goedel Machine](https://arxiv.org/abs/cs/0309048) | F | 理论/议程 | 可证明自修改的理论奠基；不将理论最优性等同于现代 Agent 的实验表现。 | [详解](04_Algorithm_Handbook.md) |
+| 2017-12-05 | [AlphaZero](https://arxiv.org/abs/1712.01815) | A, B | 方法 | 自博弈训练的基础参照；不是自主改写改进器的直接证据。 | [详解](04_Algorithm_Handbook.md) |
+| 2019-01-07 | [POET](https://arxiv.org/abs/1901.01753) | B | 方法 | Environment-policy pairs co-evolve through environment mutation, minimal-criterion admission, novelty selection, within-environment ES optimization and direct/proposal policy transfer. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2020-06-15 | [DreamCoder](https://arxiv.org/abs/2006.08381) | C, F | 方法 | 程序库积累与搜索学习相互促进的早期代表。 | [详解](04_Algorithm_Handbook.md) |
+| 2020-12-03 | [PAIRED](https://arxiv.org/abs/2012.02096) | B | 方法 | 无监督环境设计与课程生成的代表。 | [详解](04_Algorithm_Handbook.md) |
+| 2022-03-28 | [STaR](https://arxiv.org/abs/2203.14465) | A | 方法 | Generate reasoning with current model, filter by provided correct answers, rationalize failures using answer hints, remove hints for training, and fine-tune anew from the original base each round. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2022-12-15 | [Constitutional AI](https://arxiv.org/abs/2212.08073) | A, E | 方法 | AI 反馈和规范约束下的对齐训练基础。 | [详解](04_Algorithm_Handbook.md) |
+| 2022-12-20 | [Self-Instruct](https://arxiv.org/abs/2212.10560) | A, B | 方法 | An existing LM expands a human-seeded task pool with instructions and input-output examples, filters invalid/near-duplicate instances, then instruction-tunes the original model on the collected corpus. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2023-03-20 | [Reflexion](https://arxiv.org/abs/2303.11366) | C | 方法 | 把任务反馈转换为语言反思并保留在episodic memory，影响后续尝试而不更新权重。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2023-03-30 | [Self-Refine](https://arxiv.org/abs/2303.17651) | C | 方法 | 保留作输出自修订的边界对照，不把一次任务内迭代称为持久 RSI。 | [详解](04_Algorithm_Handbook.md) |
+| 2023-05-25 | [Voyager](https://arxiv.org/abs/2305.16291) | C | 方法 | 自动课程、可执行技能库、环境反馈及执行错误驱动的迭代提示，共同支持Minecraft持续探索；GPT4黑盒调用而非参数微调。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2023-08-17 | [ReST](https://arxiv.org/abs/2308.08998) | A | 方法 | 生成、筛选、再训练闭环的代表。 | [详解](04_Algorithm_Handbook.md) |
+| 2023-09-28 | [Promptbreeder](https://arxiv.org/abs/2309.16797) | D, F | 方法 | 任务提示与变异提示共同演化的代表。 | [详解](04_Algorithm_Handbook.md) |
+| 2023-10-03 | [Self-Taught Optimizer (STOP)](https://arxiv.org/abs/2310.02304) | D, F | 方法 | 摘要明确说明固定 LM 驱动的种子 improver 生成并选择程序，再以自身作为待改进程序；产物改变后续程序改进方式。 | [详解](chapters/04_Meta_RSI_Evaluation_and_Safety.md) |
+| 2023-10-05 | [DSPy](https://arxiv.org/abs/2310.03714) | D | 方法 | 用声明式模块表示文本变换图，编译器依据给定指标优化组合，模块可通过收集示例以及提示、微调等技术配置学习。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2023-12-11 | [ReST-EM](https://arxiv.org/abs/2312.06585) | A | 方法 | Generate/E-step samples solutions to external training prompts and filters by binary feedback; Improve/M-step resets to the base model and fine-tunes on retained outputs before next-round resampling. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2024-01-02 | [SPIN](https://arxiv.org/abs/2401.01335) | A | 方法 | Fixed SFT targets are contrasted with responses sampled from the previous policy, using a log-ratio logistic objective; updated policy becomes next opponent and reference. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2024-01-18 | [Self-Rewarding Language Models](https://arxiv.org/abs/2401.10020) | A, E | 方法 | Instruction-following model also judges its candidate responses; self-scored preference pairs train the next model by iterative DPO. IFT/EFT seed data initialize both roles. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2024-06-11 | [TextGrad](https://arxiv.org/abs/2406.07496) | D | 方法 | 将LLM语言反馈沿计算图传回变量，改进复合系统中的提示、代码等对象；文本梯度并非神经权重数值求导。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2024-08-15 | [ADAS / Meta Agent Search](https://arxiv.org/abs/2408.08435) | D, F | 方法 | 固定meta agent读取历史agent档案，生成forward代码，经过两轮设计反思与验证评估；错误最多修复五次，候选及指标回写档案。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2024-10-14 | [AFlow](https://arxiv.org/abs/2410.10762) | D | 方法 | MCTS变体的节点是完整代码工作流；从top候选及初始模板混合抽样，LLM编辑提示和连接，验证执行五次后回传修改成败经验。模型、温度、格式及搜索器固定。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2025-04-21 | [SICA](https://arxiv.org/abs/2504.15228) | D, F | 方法 | Agent 修改自身编码实现的直接自改进代表。 | [详解](04_Algorithm_Handbook.md) |
+| 2025-04-22 | [TTRL](https://arxiv.org/abs/2504.16084) | A | 方法 | 测试时参数适应的代表；与外部记忆和 Harness 修改分开讨论。 | [详解](04_Algorithm_Handbook.md) |
+| 2025-05-06 | [Absolute Zero Reasoner (AZR)](https://arxiv.org/abs/2505.03335) | A, B, E | 方法 | One model proposes and solves deduction, abduction and induction tasks grounded in deterministic Python execution; a finite-rollout learnability reward trains task proposal while correctness rewards train solutions, with task-role-relative advantages. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2025-05-29 | [Darwin Godel Machine](https://arxiv.org/abs/2505.22954) | D, F | 方法 | 档案父代实际实现自己的代码修改，固定o1诊断模块提供改进任务；能编译且保留代码编辑功能的后代入档，即使并非立即更优。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2025-06-12 | [SEAL](https://arxiv.org/abs/2506.10943) | A, B, F | 方法 | 学习生成自适应训练数据与更新指令的代表。 | [详解](04_Algorithm_Handbook.md) |
+| 2025-06-16 | [AlphaEvolve](https://arxiv.org/abs/2506.13131) | D, F | 方法 | Human-specified mutable program blocks and evaluators drive an evolutionary program database; Gemini-generated diffs pass evaluation cascades. A separate meta-prompt database can evolve mutation instructions. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2025-07-25 | [GEPA](https://arxiv.org/abs/2507.19457) | D | 方法 | 从推理和工具执行轨迹做语言反思，提出并测试提示修改，组合候选前沿的互补经验。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-01-26 | [Yunjue Agent](https://arxiv.org/abs/2601.18226) | C | 方法 | 固定工作流和上下文设计、无模型权重更新；Manager 检索工具，Developer 按缺口生成，Executor 执行，批次结束后 LLM Aggregator/Merger 聚类吸收为持久工具库。C 类；L1/L2 边界，不是自改写元算法。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-03-06 | [SAHOO](https://arxiv.org/abs/2603.06333) | D, E | 方法 | 以语义、词汇、结构、分布漂移的加权 GDI，结合约束评分和回归风险触发停止；附录 A.2/C.3 描述用质量与漂移反馈构造下一轮改进提示。 | [详解](chapters/04_Meta_RSI_Evaluation_and_Safety.md) |
+| 2026-03-09 | [PostTrainBench](https://arxiv.org/abs/2603.08640) | A, E | 基准/环境 | A CLI research agent chooses data and training recipes for a supplied base model under a target benchmark and resource limit, submits a checkpoint, and is audited for contamination/model substitution. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2026-03-19 | [Hyperagents / DGM-H](https://arxiv.org/abs/2603.19461) | D, F | 方法 | 摘要提出把task agent与可修改自身的meta agent放进一个可编辑程序，试图解除DGM中下游编码能力与自修改能力必须对齐的假设。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-04-10 | [SkillMOO](https://arxiv.org/abs/2604.09297) | C, D | 方法 | 任务特定技能bundle的LLM编辑与NSGA-II非支配排序/拥挤距离选择；目标min(-pass,cost)，GLM-5 solver和optimizer固定，种群4、3代。C类L1优化，未证明改进器自演化。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-04-18 | [GenericAgent](https://arxiv.org/abs/2604.17091) | C | 方法 | 固定模型权重与九个原子工具接口，把验证过的执行经验凝练为事实、SOP 和复用脚本，分层按需取回；自主探索可参考技能树和使用统计。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-04-22 | [COS-PLAY](https://arxiv.org/abs/2604.20987) | A, C | 方法 | Qwen3-8B决策agent与技能库agent共同训练。轨迹分段、效果契约验证和curator审核控制技能实体化、细化、合并、拆分与退休；五个功能LoRA以GRPO优化。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-04-28 | [AHE](https://arxiv.org/abs/2604.25850) | C, D | 方法 | 七类文件级组件、分层轨迹报告、带修复/回归预测的change manifest；rollout-clean-attribute-rollback-distill-edit-commit循环，基础模型与验证基础设施固定。C+D；固定外层优化，L1/L2边界。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-05-07 | [Skill1](https://arxiv.org/abs/2605.06130) | A, C | 方法 | 单一可训练策略生成查询、重排技能、执行与蒸馏；冻结encoder检索top5。终局二元奖励直接训练利用，技能EMA监督排序，结果减库中最佳效用作为蒸馏代理奖励。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-06-04 | [RHO](https://arxiv.org/abs/2606.05922) | C, D | 方法 | 难度/多样性DPP选择10任务，3次group rollout抽取self-validation和self-consistency，3个候选以相对原始轨迹的平均自偏好选优；正分才更新。C+D，主实验为单轮L1。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-07-28 | [RSIBench-Data](https://arxiv.org/abs/2607.25886) | B, E | 基准/环境 | 固定 base model、Tinker LoRA SFT、Harbor/E2B 评测与受限训练配置；研究者改数据策略，根据 selection feedback 选 checkpoint，再做 official evaluation。 | [详解](chapters/04_Meta_RSI_Evaluation_and_Safety.md) |
+| 2026-07-30 | [Frontis-MA1 / OpenMLE / OpenRSI](https://arxiv.org/abs/2607.28568) | A, F | 方法 | Executable MLE environments support SFT and RL of Draft/Improve/Debug/Crossover operators; trained operators are reused in experience-guided evolutionary search. Training-state selection differs from inference parent selection. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2026-08-31 | [Aspire](https://arxiv.org/abs/2608.31111) | B, E | 基准/环境 | Vague-goal benchmark separates the model being updated, its harness, the decision model and controller-only evaluator. Candidates undergo provenance checks, protocol-specific selection and weight rollback. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2026-08-31 | [S3Gym](https://arxiv.org/abs/2608.31100) | B, E | 基准/环境 | Self-testing, self-judging, consolidation and update are separated from stricter held-out evaluation. Agent self-scores estimate immediate reward; verifier rewards and terminal scores are withheld during exploration. History, summary and auxiliary parameter training are distinct persistence paths. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2026-09-01 | [HarnessDev](https://arxiv.org/abs/2609.01437) | D, E | 基准/环境 | Creator builds a persistent executable harness, then frozen versions are evaluated under self or fixed executors. Evolution feedback is separated from post-freeze held-out evaluation. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2026-09-03 | [EvoHarnessBench](https://arxiv.org/abs/2609.04280) | D, E | 基准/环境 | 由基准提供单调扩张的工具/技能/专家池，外层harness演化与内层记忆/技能等状态适应分开；按阶段及任务cohort测保留、适应和成本。 | [详解](chapters/04_Meta_RSI_Evaluation_and_Safety.md) |
+| 2026-09-06 | [MetaRSI / RSI2](https://arxiv.org/abs/2609.06396) | A, B, C, D, F | 方法 | 统一受保护执行内核上的 Data/Harness/Model 算子；水平调度顺序、垂直改写提案策略、term 间更新调度策略。最外层 meta 参数固定；Model-RSI 从固定基座和累计数据重新训练候选。 | [详解](chapters/04_Meta_RSI_Evaluation_and_Safety.md) |
+| 2026-09-10 | [RSI autonomy roadmap / HCI](https://arxiv.org/abs/2609.11873) | F | 理论/议程 | 以自治责任划分 B0 和 L1-L5，区分修改机制的结构递归与同预算下产生更强后继的有效递归；HCI 描述归一化剩余空间闭合。 | [详解](chapters/04_Meta_RSI_Evaluation_and_Safety.md) |
+| 2026-09-14 | [Dream-RSI](https://arxiv.org/abs/2609.14858) | B, D, F | 方法 | Completed discovery trees become prefix-observable replay worlds. A fixed agent rewrites executable exploration-policy code; candidate policies are evaluated on all archived worlds and the highest replay-scoring one is redeployed online. Online discoveries enlarge the history pool. Base models, evaluator and execution interfaces remain fixed. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2026-09-17 | [SoL-Pi](https://arxiv.org/abs/2609.20519) | D, F | 方法 | 152方向、535开发环境的隔离离线研究谱系，能力门后效率门与非支配选择；冻结四机制Action Fusion、Online Context Compact、ObservationPack、Evidence-Preserving Reducer。D类L1；多代自加速是未来愿景。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-09-21 | [RRSI](https://arxiv.org/abs/2609.24972) | D | 方法 | 固定骨干与提案/批评协议，开放harness编辑空间；余弦退火原子编辑预算、历史归因和停滞探索；泄漏critic、历史最佳噪声底线、分段成本接纳与结构剪枝。D+C；L1/L2边界，不是L3或参数范数训练。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-09-25 | [Dynamic Co-Evolution (DCE) + Self-Refined Concise Learning (SRCL)](https://arxiv.org/abs/2609.30652) | A | 方法 | Student on-policy prefixes are scored by a stop-gradient copy of the current checkpoint with privileged reference-solution context. Each update refreshes both roles; SRCL adds cross-entropy on shorter, naturally terminated, structurally valid, answer-correct self-rewrites generated without the reference. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2026-09-27 | [REUSE: Risk-controlled Evaluation Under Sequential Evolution](https://arxiv.org/abs/2609.33180) | E | 方法 | 以 decision-only 反馈约束样本对提案的影响，为所有可能的promotion histories、轮次和候选分配总错误预算；配对检验并保存不反馈给提案者的累计收益证书。 | [详解](chapters/04_Meta_RSI_Evaluation_and_Safety.md) |
+| 2026-09-28 | [AI R&D acceleration scenario and governance](https://arxiv.org/abs/2609.36054) | F | 理论/议程 | 摘要分析研发自动化可能压缩进展时间的反馈情景及其治理后果，不是新的可执行 RSI 算法。 | [详解](chapters/04_Meta_RSI_Evaluation_and_Safety.md) |
+| 2026-09-28 | [RSI-Master](https://arxiv.org/abs/2609.35561) | D, F | 框架 | Experiment OS constrains model-development actions and stores linked experiments; a separate Worker/Reviewer research DAG grows through Main Agent orchestration based on evidence review. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2026-10-09 | [Harness^2](https://arxiv.org/abs/2610.14224) | C, D, F | 方法 | 每任务公共seed，invariant/domain两类Propose-Probe-Compose；可并行扩宽或顺序精炼。结束后持久存可执行harness和有证据的改进经验，供后续改进读取。C+D+F、明确L2；改进库状态变化但阶段规则固定，L3边界需注明。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-10-13 | [AReaL-RSI](https://arxiv.org/abs/2610.18083) | C, D, F | 框架 | Persistent researcher agents receive task-conditioned orientations; leader-mediated conditional memory retains sources and applicability; post-campaign review versions orientation, knowledge and skills for later campaigns without backbone updates. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2026-10-15 | [R2Orch](https://arxiv.org/abs/2610.22740) | D, F | 方法 | Learned Director constructs graphs executed by frozen Workers. Proposer chooses tasks by candidate-skill-hidden learnability; randomized visible/hidden groups estimate skill benefit, guiding Bayesian-bootstrap withdrawal and failure-to-skill revision while policies train. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2026-10-18 | [CoEvo-RSI](https://arxiv.org/abs/2610.25078) | A, D, F | 方法 | Fixed-parameter meta-agent uses an evolutionary archive to select historical harness bases and separately select or TIES-merge checkpoints; chosen pairs generate verifier-accepted SFT trajectories, then validation gates promotion among incumbent, inherited and adapted pairs. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2026-10-19 | [HarnessPro](https://arxiv.org/abs/2610.26770) | D | 方法 | Analyzer/Planner/Editor/TestSynth生成候选；10训练任务coreset、3训练rollouts，训练-验证-测试分离；生成测试一次后固定；性能底线+Pareto过滤+归一化加权平方距离选至多三代表。C+D；固定改进框架，非L3。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-10-23 | [RSI-Opt](https://arxiv.org/abs/2610.32026) | D, F | 方法 | 固定 meta-agent 根据运行证据演化 optimizer-agent 的 prompt、playbook、代码库与决策调度；训练内按固定决策机会修改更新器；合法候选包含低分者都进入档案。 | [详解](04_Algorithm_Handbook.md) |
+| 2026-10-23 | [RSIHub](https://arxiv.org/abs/2610.32253) | D, F | 框架 | recipe组合生命周期算子并声明可改资源；框架检查真实diff、提交并从干净检出执行冻结评价，绑定候选与评价身份，Gate仅决定父代资格。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-10-25 | [ParetoRSI-Gym](https://arxiv.org/abs/2610.34386) | A, B, E | 基准/环境 | An agent revises a multi-domain data pool and written principles using proxy traces, selects a historical checkpoint and bounded LoRA SFT settings, then evaluates final/proxy-selected checkpoints on unexposed generalization suites. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2026-10-26 | [Trustworthy RSI evidence framework](https://arxiv.org/abs/2610.35193) | E, F | 理论/议程 | 以 improvement validity、constraint preservation、effective oversight 三视角，审计单次更新、跨后继继承与改进器修改；要求 matched paired continuations 和独立报告评测。 | [详解](chapters/04_Meta_RSI_Evaluation_and_Safety.md) |
+| 2026-10-29 | [RSI-Dojo / RSI-Craft](https://arxiv.org/abs/2611.03698) | A, B, F | 框架 | RSI-Craft converts research artifacts and InspectAI tasks into executable post-training environments, filters reliability/discriminability, collects guided frontier-model trajectories and applies process/outcome filtering before SFT of researcher models. | [详解](chapters/02_Training_Environments_and_AI_Research.md) |
+| 2026-10-31 | [CogRSI](https://arxiv.org/abs/2611.01113) | C, D, E | 方法 | 固定reader和权重，演化最多五条条件化原则。每轮最多四候选，三组80题以3百分点margin登记，门控变体另考虑96反事实题对；事后双模型编译规则并搜索共享反例。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-11-02 | [CoworkOS](https://arxiv.org/abs/2611.03178) | C, D, F | 框架 | Main承担任务决策、Coordinator维护持久运行状态、Subagents执行局部工作。固定GLM5.3控制及教学，针对Qwen3.6-35B-A3B进行失败诊断、数据流程改进、轨迹筛选、SFT和重评。 | [详解](chapters/03_Agent_Skills_and_Harness.md) |
+| 2026-11-02 | [SelfImprove-Bench](https://arxiv.org/abs/2611.02797) | B, E | 基准/环境 | 固定 backbone，在 held-in 任务流演化 prompts/memory/harness；由基准接口在 held-in 任务上评候选，冻结状态后测试 G0 重放、G1 新实例、G2 新难度、G3 同类新任务、G4 跨能力任务；分析修改轨迹。 | [详解](chapters/04_Meta_RSI_Evaluation_and_Safety.md) |
+
+## 证据与导出
+
+[完整方法卡与限制](../../data/atlas-methods.json) · [CSV](../../data/atlas-methods.csv) · [本次直接核验](../../data/primary-verification.json) · [继承专题阅读证据](research/)
+
+正文阅读记录属于此前文档作者的版本化工作，不表示本次监督再次全文读完。日期/摘要、方法章节、图像审阅与独立复现是不同证据层级。作者结果不等于本项目测量，分类连线不等于继承，重复搜索也不等于元递归。

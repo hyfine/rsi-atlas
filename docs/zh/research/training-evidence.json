@@ -1,0 +1,883 @@
+[
+  {
+    "id": "poet",
+    "method": "POET",
+    "title": "Paired Open-Ended Trailblazer (POET): Endlessly Generating Increasingly Complex and Diverse Learning Environments and Their Solutions",
+    "primary_url": "https://arxiv.org/abs/1901.01753",
+    "repo_url": null,
+    "first_date": "2019-01-07",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v3: sections 2.2-2.3, 3, 4.1-4.3, 5, supplemental 6.1-6.2",
+      "arXiv submission history"
+    ],
+    "mechanism": "Environment-policy pairs co-evolve through environment mutation, minimal-criterion admission, novelty selection, within-environment ES optimization and direct/proposal policy transfer.",
+    "evidence": [
+      "https://arxiv.org/html/1901.01753v3#S3 : Algorithm 2 describes environment generation, paired optimization and transfer.",
+      "https://arxiv.org/html/1901.01753v3#S6 : Algorithms 3-4 detail minimal criteria, archive novelty and ES-based transfer.",
+      "Section 4.3 compares direct optimization, direct-path curriculum and no-transfer controls; no performance magnitude is reproduced in this chapter."
+    ],
+    "limitations": [
+      "Section 5 acknowledges bounded environment encodings and fixed morphology.",
+      "Direct-path control matches ancestor-path ES cost, not necessarily total population-wide research cost.",
+      "No proof of unbounded complexity or self-rewriting optimizer; current repository URL not yet independently confirmed."
+    ],
+    "source_doc": [
+      "User-requested primary research expansion; not a linked paper in the two original notes"
+    ]
+  },
+  {
+    "id": "star",
+    "method": "STaR",
+    "title": "STaR: Bootstrapping Reasoning With Reasoning",
+    "primary_url": "https://arxiv.org/abs/2203.14465",
+    "repo_url": null,
+    "first_date": "2022-03-28",
+    "read_level": "author_paper_html_mirror_excerpt",
+    "sections_read": [
+      "ar5iv rendering: sections 3.1-3.2, 4.1, 4.4-4.5, 5-6, appendix G",
+      "arXiv v1/v2 submission history"
+    ],
+    "mechanism": "Generate reasoning with current model, filter by provided correct answers, rationalize failures using answer hints, remove hints for training, and fine-tune anew from the original base each round.",
+    "evidence": [
+      "https://ar5iv.labs.arxiv.org/html/2203.14465#S3 : Algorithm 1 and text explicitly state reset to the original pretrained model each round; current trained model generates next-round data."
+    ],
+    "limitations": [
+      "Needs supplied questions, correct answers and seed reasoning examples; not supervision-free.",
+      "Correct final answers can accompany false or unfaithful rationales; Section 6 and Appendix G discuss this.",
+      "HTML mirror content was read, not claimed as a complete primary-host full-text reading; no unverified official repo asserted."
+    ],
+    "source_doc": [
+      "User priority list; S3Gym/Aspire primary related-work sections supplied corroborating leads"
+    ]
+  },
+  {
+    "id": "self-instruct",
+    "method": "Self-Instruct",
+    "title": "Self-Instruct: Aligning Language Models with Self-Generated Instructions",
+    "primary_url": "https://arxiv.org/abs/2212.10560",
+    "repo_url": "https://github.com/yizhongw/self-instruct",
+    "first_date": "2022-12-20",
+    "read_level": "author_paper_html_mirror_excerpt",
+    "sections_read": [
+      "ar5iv rendering: sections 2.1-2.3, 3.3, 4.1-4.5, 8, appendix A.1-A.3",
+      "arXiv submission history and author code link"
+    ],
+    "mechanism": "An existing LM expands a human-seeded task pool with instructions and input-output examples, filters invalid/near-duplicate instances, then instruction-tunes the original model on the collected corpus.",
+    "evidence": [
+      "https://ar5iv.labs.arxiv.org/html/2212.10560#S2 : classification uses output-first generation, other tasks use input-first; Section 2.3 places fine-tuning after data generation."
+    ],
+    "limitations": [
+      "Task-pool feedback is not evidence that generator weights are updated every generation batch.",
+      "ROUGE filtering cannot certify semantic correctness; seed bias, long-tail coverage and API reproducibility remain issues.",
+      "No empirical percentage is reproduced without a table-bound claim; official repo link is supplied by the paper."
+    ],
+    "source_doc": [
+      "User-requested primary research expansion"
+    ]
+  },
+  {
+    "id": "rest-em",
+    "method": "ReST-EM",
+    "title": "Beyond Human Data: Scaling Self-Training for Problem-Solving with Language Models",
+    "primary_url": "https://arxiv.org/abs/2312.06585",
+    "repo_url": null,
+    "first_date": "2023-12-11",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v4: sections 2-3, 4 comparison table, 5.1-5.4, 6",
+      "arXiv submission history"
+    ],
+    "mechanism": "Generate/E-step samples solutions to external training prompts and filters by binary feedback; Improve/M-step resets to the base model and fine-tunes on retained outputs before next-round resampling.",
+    "evidence": [
+      "https://arxiv.org/html/2312.06585v4#S3 : EM interpretation, Algorithm 1 and explicit differences from original ReST.",
+      "https://arxiv.org/html/2312.06585v4#S5.SS3 : larger single-round sample pool, one-solution-per-question and reset-vs-continuation ablations."
+    ],
+    "limitations": [
+      "External questions and reward remain necessary.",
+      "Exact EM monotonicity does not guarantee test improvement under finite sampling, reset and approximate optimization; APPS regressions are reported.",
+      "No author-endorsed code repository URL confirmed in inspected paper."
+    ],
+    "source_doc": [
+      "Primary related-work leads from Aspire and S3Gym, supplemented by original paper"
+    ]
+  },
+  {
+    "id": "spin",
+    "method": "SPIN",
+    "title": "Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models",
+    "primary_url": "https://arxiv.org/abs/2401.01335",
+    "repo_url": "https://github.com/uclaml/SPIN",
+    "first_date": "2024-01-02",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v3: sections 3-5, 6.1-6.3, 7, appendix B.2",
+      "arXiv submission history and author code link"
+    ],
+    "mechanism": "Fixed SFT targets are contrasted with responses sampled from the previous policy, using a log-ratio logistic objective; updated policy becomes next opponent and reference.",
+    "evidence": [
+      "https://arxiv.org/html/2401.01335v3#S4.SS1 : Equation 4.7 and Algorithm 1.",
+      "Section 5 specifies realizability and loss assumptions; Section 6.1 identifies UltraChat targets as model-generated dialogue despite human-data terminology in the formal setup."
+    ],
+    "limitations": [
+      "No new preference labels is not no external target data.",
+      "Population-level global-optimum statements do not prove finite neural training convergence or open-ended RSI.",
+      "Synthetic response generation and growing training pools must enter matched-compute accounting."
+    ],
+    "source_doc": [
+      "User priority list; Aspire related-work lead"
+    ]
+  },
+  {
+    "id": "self-rewarding-lms",
+    "method": "Self-Rewarding Language Models",
+    "title": "Self-Rewarding Language Models",
+    "primary_url": "https://arxiv.org/abs/2401.10020",
+    "repo_url": null,
+    "first_date": "2024-01-18",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v3: sections 2.1-2.4, 3.1.1-3.1.3, 3.2.1-3.2.2, 6, appendices A.3-A.5",
+      "arXiv submission history"
+    ],
+    "mechanism": "Instruction-following model also judges its candidate responses; self-scored preference pairs train the next model by iterative DPO. IFT/EFT seed data initialize both roles.",
+    "evidence": [
+      "https://arxiv.org/html/2401.10020v3#S2 : model/data iteration and self-reward pipeline.",
+      "Section 3.1.3: fixed Llama 2-Chat generates prompts; evolving model generates and judges responses; Claude 2 is used for validation early stopping.",
+      "Section 3.1.1: EFT justifications are model-generated and filtered for agreement with human rankings."
+    ],
+    "limitations": [
+      "Self-reward does not mean all pipeline components are autonomous or no human seed exists.",
+      "Section 6 discusses response-length growth, reward hacking and correlated judge biases; limited iterations in one setting do not establish indefinitely compounding gains.",
+      "No author-endorsed code repository URL confirmed; do not substitute a third-party reimplementation without labeling it."
+    ],
+    "source_doc": [
+      "User priority list; S3Gym/Aspire primary related-work leads"
+    ]
+  },
+  {
+    "id": "deepseek-r1",
+    "method": "DeepSeek-R1 / R1-Zero",
+    "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+    "primary_url": "https://arxiv.org/abs/2501.12948",
+    "repo_url": "https://github.com/deepseek-ai/DeepSeek-R1",
+    "first_date": "2025-01-22",
+    "read_level": "primary_html_excerpt_and_repository_page",
+    "sections_read": [
+      "HTML v1: sections 2.2-2.4, 3 evaluation setup, 4.1-4.2, 5",
+      "arXiv submission history",
+      "official repository introduction/model summary"
+    ],
+    "mechanism": "R1-Zero uses GRPO directly from pretrained base with rule-based accuracy and format rewards. R1 adds cold-start SFT, reasoning RL, rejection-sampled/general SFT and later RL; released distilled models use teacher-generated SFT.",
+    "evidence": [
+      "https://arxiv.org/html/2501.12948v1#S2 : documented distinction among R1-Zero, R1 and distillation.",
+      "Official repository links the same paper and confirms models are based on DeepSeek-V3-Base."
+    ],
+    "limitations": [
+      "Zero refers to no preliminary reasoning SFT, not no tasks, answers, tests, pretraining or human reward design.",
+      "On-policy learning under a fixed optimizer is not proof of autonomous research or optimizer self-modification.",
+      "First date is arXiv submission, not a model release date; this chapter's mechanism cites v1, not later Nature-aligned revision."
+    ],
+    "source_doc": [
+      "User priority list; OpenRSI original note RLVR comparison; original paper and lab repository"
+    ]
+  },
+  {
+    "id": "absolute-zero",
+    "method": "Absolute Zero Reasoner (AZR)",
+    "title": "Absolute Zero: Reinforced Self-play Reasoning with Zero Data",
+    "primary_url": "https://arxiv.org/abs/2505.03335",
+    "repo_url": "https://github.com/LeapLabTHU/Absolute-Zero-Reasoner",
+    "first_date": "2025-05-06",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v1: sections 2.1-2.2, 3.1-3.3.5, 4.1-4.2, 6, appendices B, C.4, D.2-D.5",
+      "arXiv submission history and author code/project links"
+    ],
+    "mechanism": "One model proposes and solves deduction, abduction and induction tasks grounded in deterministic Python execution; a finite-rollout learnability reward trains task proposal while correctness rewards train solutions, with task-role-relative advantages.",
+    "evidence": [
+      "https://arxiv.org/html/2505.03335v1#S3.SS1 : Equation 4 sets proposer reward to zero at sampled success rates zero or one and otherwise to one minus sampled success rate.",
+      "Sections 3.2-3.3: output-equivalence abduction, held-out induction cases, validation and deterministic execution checks.",
+      "Appendix D.5 discusses global variables carrying potential answer information and their retention in later self-play."
+    ],
+    "limitations": [
+      "No curated external post-training dataset does not erase pretrained knowledge, task templates, identity-triplet initialization or evaluator assumptions.",
+      "Learnability is a success-rate proxy rather than direct downstream improvement; finite execution tests do not prove full correctness or program determinism.",
+      "Task-internal answer shortcuts and benchmark contamination are distinct risks.",
+      "Code restrictions are not a security containment proof; official repo link is author-provided, not runtime-validated."
+    ],
+    "source_doc": [
+      "User priority list and Aspire related-work lead"
+    ]
+  },
+  {
+    "id": "frontis-ma1",
+    "method": "Frontis-MA1 / OpenMLE / OpenRSI",
+    "rechecked_on": "2026-11-05",
+    "version_read": "v1",
+    "version_date": "2026-07-30",
+    "recheck_scope": "Primary arXiv HTML method and experiment passages re-read in this A/B update: sections 2-6, 8, appendices B.1-B.6, C.1/C.4, D.1-D.2 and E. Not a complete repository audit or experimental reproduction.",
+    "numeric_claims": [
+      {
+        "claim_id": "frontis-fixed-harness",
+        "url": "https://arxiv.org/html/2607.28568v1#S6.SS2",
+        "locator": "Sections 6.1-6.2, Table 1, Appendix D.1",
+        "values": [
+          "39.39%",
+          "60.61%",
+          "71.21%"
+        ],
+        "protocol": "Author-reported Medal Average on 22 MLE-Bench Lite tasks; three runs for standard OpenMLE configurations; 12 sandbox GPU-hours per task on RTX 4090 capped at 12 GB. 71.21% uses Evo-Max, not the fixed-harness model-only comparison.",
+        "source_phrase": "Under the identical standard OpenMLE-Evo harness",
+        "limitation": "Remote LLM serving, teacher generation and prior post-training are not equalized by the sandbox budget; general-agent references were evaluated once."
+      },
+      {
+        "claim_id": "frontis-nature-transfer",
+        "url": "https://arxiv.org/html/2607.28568v1#S6.SS6",
+        "locator": "Section 6.6, Table 2, Appendix D.2",
+        "values": [
+          "50%",
+          "70%",
+          "20%"
+        ],
+        "protocol": "Author-reported Match-SOTA on fixed 10-task NatureBench Lite subset; four hours per task, web search disabled. Fixed adapter model swap: 50% to 70%; fixed base-model harness swap: 20% to 50%.",
+        "source_phrase": "Holding the NatureBench adapter fixed",
+        "limitation": "Each task shifts this small-subset rate by ten percentage points; not general scientific capability."
+      }
+    ],
+    "title": "Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering",
+    "primary_url": "https://arxiv.org/abs/2607.28568",
+    "repo_url": "https://github.com/FrontisAI/OpenRSI",
+    "first_date": "2026-07-30",
+    "read_level": "primary_html_excerpt_and_repository_page",
+    "sections_read": [
+      "HTML v1: sections 1-9, author affiliations, appendices A, B.1-B.6, C.1-C.5, D.1-D.2, E (retrieved excerpts, not certified complete text)",
+      "arXiv submission history",
+      "official repository README and release announcement"
+    ],
+    "mechanism": "Executable MLE environments support SFT and RL of Draft/Improve/Debug/Crossover operators; trained operators are reused in experience-guided evolutionary search. Training-state selection differs from inference parent selection.",
+    "evidence": [
+      "https://arxiv.org/html/2607.28568v1#S6.SS2 : Table 1, Qwen3.6-35B-A3B vs Frontis-MA1-35B under fixed OpenMLE-Evo, Medal Average 39.39% vs 60.61%; 22-task MLE-Bench Lite, three runs, 12 hours/task on RTX 4090 capped at 12 GB. Evo-Max reaches 71.21% but changes the search system.",
+      "https://arxiv.org/html/2607.28568v1#S6.SS6 : Table 2, ten-task NatureBench Lite, four-hour task budget, web search disabled; fixed adapter model swap gives 50% to 70% Match-SOTA; fixed base model harness swap gives 20% to 50%.",
+      "Official repository first release is 2026-07-31, distinct from arXiv submission."
+    ],
+    "limitations": [
+      "Original note transposes 2607.28568 to 2607.28586; the latter was checked and is Boundedness of polarized foliated surfaces.",
+      "Section 8 says the evolutionary system remains largely fixed; not proof of general autonomous RSI.",
+      "Sandbox-compute matching excludes remote model-serving and prior post-training costs; some general-agent references were evaluated once.",
+      "Equation 1 clips before exponentiation; note pseudocode reverses that order.",
+      "No code execution or independent replication performed in this batch; external HTML extraction loses some table cells and mathematical formatting."
+    ],
+    "source_doc": [
+      "OpenRSI_详解.md: all lines 1-1046 read in non-overlapping chunks",
+      "Self-Developing-Agents-技术详细讲解.md: all lines 1-1780 read; original notes treated as leads only"
+    ]
+  },
+  {
+    "id": "aspire",
+    "method": "Aspire",
+    "title": "Aspire: Can Models Self-Evolve from Vague Goals?",
+    "primary_url": "https://arxiv.org/abs/2608.31111",
+    "repo_url": null,
+    "first_date": "2026-08-31",
+    "read_level": "primary_html_excerpt_and_project_page",
+    "sections_read": [
+      "HTML v1: sections 1-6, appendices A.1-A.3, B, C.1-C.6, D (retrieved excerpts)",
+      "arXiv submission history",
+      "https://self-developing-agents.github.io/"
+    ],
+    "mechanism": "Vague-goal benchmark separates the model being updated, its harness, the decision model and controller-only evaluator. Candidates undergo provenance checks, protocol-specific selection and weight rollback.",
+    "evidence": [
+      "https://arxiv.org/html/2608.31111v1#S4.SS3 : all reported runs keep the initial decision model fixed, even though between-round promotion is supported by the interface.",
+      "Section 4.3 and Appendix C.3 Table 4: final-only, 24 runs, Qwen3.5-4B/9B Self over six goals with two runs each and 40 training GPU-hours/run; 3 terminal runs exceed base, 21 roll back.",
+      "Section 4.3 Figure 7 and Appendix C.4: adaptive-feedback has 30 configuration-goal cells, 28 evaluated, 21 eligible, one retained improvement; one run per cell."
+    ],
+    "limitations": [
+      "Retained nonnegative score is induced by rollback, not a guarantee of learning or generalization.",
+      "Adaptive-feedback selection reuses a fixed hidden evaluation slice; no separate confirmation slice for the retained gain.",
+      "RQ1 is descriptive, not isolated prompt-only causality; RQ3 is one-step harness generation, not recursive handoff.",
+      "Training GPU-hours omit inference, deployment, judging and idle time.",
+      "No author-endorsed code repository URL was confirmed in the inspected project page or paper metadata; null is not a claim that no repository exists.",
+      "Paper display date and project launch date can differ from verified arXiv v1 date."
+    ],
+    "source_doc": [
+      "Self-Developing-Agents-技术详细讲解.md: chapters 0-2, 5-6; entire document read"
+    ]
+  },
+  {
+    "id": "s3gym",
+    "method": "S3Gym",
+    "title": "S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?",
+    "primary_url": "https://arxiv.org/abs/2608.31100",
+    "repo_url": null,
+    "first_date": "2026-08-31",
+    "read_level": "primary_html_excerpt_and_project_page",
+    "sections_read": [
+      "HTML v1: sections 1-7, appendix A.1-A.4 (retrieved excerpts)",
+      "arXiv submission history",
+      "https://self-developing-agents.github.io/#evidence"
+    ],
+    "mechanism": "Self-testing, self-judging, consolidation and update are separated from stricter held-out evaluation. Agent self-scores estimate immediate reward; verifier rewards and terminal scores are withheld during exploration. History, summary and auxiliary parameter training are distinct persistence paths.",
+    "evidence": [
+      "https://arxiv.org/html/2608.31100v1#S6.SS2 : Table 6, blockwise correlations -0.010 and -0.018 relate event agreement and negative calibration error to subsequent strict-mode gain; seven models, seven games, two context conditions.",
+      "https://arxiv.org/html/2608.31100v1#S6.SS1 : separate Qwen3-8B study, 20 checkpoints including base; PvZ starts at 23 and every one of 19 updated checkpoints scores 6.",
+      "Section 4.4: disjoint exploration/evaluation seeds; evaluation trajectories are not added to history, memory or training data."
+    ],
+    "limitations": [
+      "Parameter-training study is not a matched comparison with context methods; do not generalize one trajectory to all SFT.",
+      "Negative-transfer causes remain hypotheses; local correlation is not causal evidence that judging cannot help.",
+      "AUC+ discards below-baseline losses and raw areas are not comparable across game scales; NABA normalization changes rankings.",
+      "Appendix A.2 describes Chess as hidden-rule piece-position prediction, not ordinary chess.",
+      "No author-endorsed code repository URL confirmed in inspected sources; original note's unfinished-training characterization not adopted as verified fact."
+    ],
+    "source_doc": [
+      "Self-Developing-Agents-技术详细讲解.md: chapters 0-1, 3, 5-6; entire document read"
+    ]
+  },
+  {
+    "id": "harnessdev",
+    "method": "HarnessDev",
+    "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+    "primary_url": "https://arxiv.org/abs/2609.01437",
+    "repo_url": null,
+    "first_date": "2026-09-01",
+    "read_level": "primary_html_excerpt_and_project_page",
+    "sections_read": [
+      "HTML v1: sections 1-6, appendices B-D and relevant E-I excerpts",
+      "arXiv submission history",
+      "https://self-developing-agents.github.io/#evidence"
+    ],
+    "mechanism": "Creator builds a persistent executable harness, then frozen versions are evaluated under self or fixed executors. Evolution feedback is separated from post-freeze held-out evaluation.",
+    "evidence": [
+      "https://arxiv.org/html/2609.01437v1#S4.SS3 : 34/64 comparable switches (53.1%) have feedback and held-out scores move in the same direction, across nine single lineages. Feedback uses SWE-Pro-100 and Terminal-Bench-89; held-out uses SWE-Pro-630 only.",
+      "https://arxiv.org/html/2609.01437v1#S6.SS1 : development environment remains fixed; reuse of evolved harness as the next development environment is future work.",
+      "Section 3.5 and Appendix B.4: execution-token reporting excludes creator, judge and probe usage."
+    ],
+    "limitations": [
+      "Direction agreement is descriptive, not a calibrated coin-flip significance test; switches are dependent.",
+      "One trajectory per creator-runtime cell does not establish population-level stability; held-out analysis covers only SWE-Pro.",
+      "Observed execution of a component does not establish its causal benefit.",
+      "Creation portability and separate fixed-executor evolution are different experiments.",
+      "No official repository URL confirmed in inspected sources; this chapter intentionally limits treatment to training-system attribution."
+    ],
+    "source_doc": [
+      "Self-Developing-Agents-技术详细讲解.md: chapters 0-1, 4-6; entire document read"
+    ]
+  },
+  {
+    "id": "on-policy-rsi",
+    "method": "Dynamic Co-Evolution (DCE) + Self-Refined Concise Learning (SRCL)",
+    "rechecked_on": "2026-11-05",
+    "version_read": "v1",
+    "version_date": "2026-09-25",
+    "recheck_scope": "Primary HTML sections 2.2-5.8 and appendices C-F, J, M-N re-read; method, main table and ablation passages, not an independent training run.",
+    "numeric_claims": [
+      {
+        "claim_id": "opd-main-8b",
+        "url": "https://arxiv.org/html/2609.30652v1#S5.SS1",
+        "locator": "Section 5.1, Table 1; evaluation protocol Section 4.1",
+        "values": [
+          "65.97%",
+          "30.35%",
+          "19,046",
+          "17,561",
+          "7.80%",
+          "6,009"
+        ],
+        "protocol": "Author-reported Qwen3-8B non-thinking Average@12 on all 30 questions each from AIME24/25/26 and HMMT February 2025, 12 responses/question, 32K cap. DCE+SRCL vs OPSD accuracy: 65.97% vs 30.35%. Length reduction 7.80% is relative to DCE (19,046 to 17,561), not OPSD (6,009).",
+        "source_phrase": "This effect is not uniform at the smallest scale",
+        "limitation": "Average@12 is not pass@12; best checkpoints can differ by training step; output-token accounting excludes prompts and training."
+      },
+      {
+        "claim_id": "opd-same-step",
+        "url": "https://arxiv.org/html/2609.30652v1#S5.SS1",
+        "locator": "Section 5.1 matched-trajectory paragraph; Appendix C Table 11",
+        "values": [
+          "100",
+          "64.93%",
+          "19,036",
+          "65.97%",
+          "17,561"
+        ],
+        "protocol": "At optimizer step 100, Qwen3-8B DCE vs DCE+SRCL: 64.93% / 19,036 output tokens versus 65.97% / 17,561, under the same four-cohort evaluation.",
+        "limitation": "One trajectory does not supply independent training-seed uncertainty."
+      },
+      {
+        "claim_id": "opd-training-budget",
+        "url": "https://arxiv.org/html/2609.30652v1#A10",
+        "locator": "Appendix J Table 24; Section 4.3",
+        "values": [
+          "14,717",
+          "128",
+          "512",
+          "12K",
+          "200",
+          "42"
+        ],
+        "protocol": "14,717 OpenThoughts problems; rank-128 LoRA; eight H100 GPUs; first 512 reference tokens in privileged context; one 12K rollout and a greedy 12K rewrite per example; up to 200 optimizer steps with seed 42.",
+        "limitation": "Shared problems and generation caps do not establish equal total training FLOPs or teacher/refinement costs."
+      }
+    ],
+    "title": "Recursive Self-Improvement via On-Policy Distillation for Reasoning",
+    "primary_url": "https://arxiv.org/abs/2609.30652",
+    "repo_url": null,
+    "first_date": "2026-09-25",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v1: sections 2.2-3.3, 4.1-4.3, 5.1-5.8, appendices C-F, J, M-N",
+      "arXiv submission history"
+    ],
+    "mechanism": "Student on-policy prefixes are scored by a stop-gradient copy of the current checkpoint with privileged reference-solution context. Each update refreshes both roles; SRCL adds cross-entropy on shorter, naturally terminated, structurally valid, answer-correct self-rewrites generated without the reference.",
+    "evidence": [
+      "https://arxiv.org/html/2609.30652v1#S3 : Equations 3-7; main guidance is Forward KL q_teacher || p_student, not Reverse KL.",
+      "https://arxiv.org/html/2609.30652v1#S5.SS1 : Table 1, Qwen3-8B DCE+SRCL 65.97% vs OPSD 30.35% Average@12, four 30-problem math cohorts, 12 samples per question, non-thinking, 32K cap; same training shard but not claimed equal whole-system compute.",
+      "Sections 5.6-5.8 isolate teacher refresh, reference placement and inference-budget controls."
+    ],
+    "limitations": [
+      "Reference solutions remain external supervision; teacher refresh and prompt placement both differ from standard OPSD.",
+      "Average@12 is not pass@12; identical caps are not equal realized tokens.",
+      "Appendix D has one trajectory per refresh schedule; Appendix F reports late instability at small scale.",
+      "No official repo URL confirmed in inspected primary pages."
+    ],
+    "source_doc": [
+      "User priority list, independent primary-paper expansion"
+    ]
+  },
+  {
+    "id": "rsi-master",
+    "method": "RSI-Master",
+    "title": "RSI-Master: Structuring Experiments to Guide Autonomous Model Improvement",
+    "primary_url": "https://arxiv.org/abs/2609.35561",
+    "repo_url": "https://github.com/DorothyDUUU/RSI-Master",
+    "first_date": "2026-09-28",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v2 (2026-09-30): sections 2.1-2.3, 3.1-3.6, appendices A.1-A.3, B, C-D, E.1-E.2 excerpts",
+      "arXiv submission history and author code link"
+    ],
+    "mechanism": "Experiment OS constrains model-development actions and stores linked experiments; a separate Worker/Reviewer research DAG grows through Main Agent orchestration based on evidence review.",
+    "evidence": [
+      "https://arxiv.org/html/2609.35561v2#S2 : experiment graph and research graph have separate update events and are coupled by experiment ownership.",
+      "https://arxiv.org/html/2609.35561v2#S3.SS2 : Table 2, Qwen3-4B-Base target, Kimi-K3 research backbone, seven-task unweighted mean 54.49 vs strongest agent baseline 46.53; Appendix A.1 specifies 12-hour research runs, one H100 for 4B and restricted external model APIs."
+    ],
+    "limitations": [
+      "Target checkpoint improvement is not demonstrated replacement of the research backbone.",
+      "Unweighted task average is not interchangeable with other PostTrainBench weighted aggregates.",
+      "Cross-domain results include separate task-specific training runs, not a single general model transferred untouched.",
+      "Zero recorded hacking is scope-bound auditing with LLM and human checks, not proof of no future exploits or evaluator independence.",
+      "Wall-clock and target-GPU budgets do not by themselves establish equal research/API compute."
+    ],
+    "source_doc": [
+      "User priority list, independent primary-paper expansion"
+    ]
+  },
+  {
+    "id": "areal-rsi",
+    "method": "AReaL-RSI",
+    "title": "AReaL-RSI: Adaptive Scaling and Coordination of Recursive Self-Improvement",
+    "primary_url": "https://arxiv.org/abs/2610.18083",
+    "repo_url": null,
+    "first_date": "2026-10-13",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v1: sections 1-5 and 7",
+      "arXiv submission history and institutional author block"
+    ],
+    "mechanism": "Persistent researcher agents receive task-conditioned orientations; leader-mediated conditional memory retains sources and applicability; post-campaign review versions orientation, knowledge and skills for later campaigns without backbone updates.",
+    "evidence": [
+      "https://arxiv.org/html/2610.18083v1#S4 : weights, permissions, orchestration and leader policy stay fixed; accepted profile publication does not require demonstrated future-task improvement.",
+      "https://arxiv.org/html/2610.18083v1#S5 : compares allocated-resource system outcomes and parallel configurations; explicitly does not establish equal-compute efficiency or cross-campaign evolution gains."
+    ],
+    "limitations": [
+      "Researcher asset evolution is not model-weight RL despite the AReaL name.",
+      "Architecture permits reuse but cross-campaign benefit is unmeasured.",
+      "Task subsets and resource allocation differ from Codex-Goal; repeated-run uncertainty unavailable.",
+      "Source/reference checks do not certify semantic correctness; recipient testing is prescribed rather than enforced.",
+      "No official repo URL confirmed in inspected paper or metadata."
+    ],
+    "source_doc": [
+      "User priority list, independent primary-paper expansion"
+    ]
+  },
+  {
+    "id": "r2orch",
+    "method": "R2Orch",
+    "title": "R2Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop",
+    "primary_url": "https://arxiv.org/abs/2610.22740",
+    "repo_url": "https://github.com/beita6969/R2Orch",
+    "first_date": "2026-10-15",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v2 (2026-10-22): sections 3-5, Limitations, appendices A.1-A.9 excerpts, B-D",
+      "arXiv v1/v2 history and author code link"
+    ],
+    "mechanism": "Learned Director constructs graphs executed by frozen Workers. Proposer chooses tasks by candidate-skill-hidden learnability; randomized visible/hidden groups estimate skill benefit, guiding Bayesian-bootstrap withdrawal and failure-to-skill revision while policies train.",
+    "evidence": [
+      "https://arxiv.org/html/2610.22740v2#S4.SS2 : Equation 8 defines recursive learnability 4*p_minus*(1-p_minus); operational reward also uses shrinkage, collapse and compute terms.",
+      "https://arxiv.org/html/2610.22740v2#S4.SS3 : Equation 11 randomizes skill visibility within task; Equation 14 uses posterior expected positive benefit and minimum evidence.",
+      "Appendix D specifies shared Workers/tasks/budget controls and zero-skill evaluation; no headline scores reproduced."
+    ],
+    "limitations": [
+      "Initial skills are manually customized and tasks come from supplied training pools; zero-skill deployment is not zero-data training.",
+      "Theory is local and conditional: stochastic Worker outcome variance can exceed Director-controllable variance.",
+      "Within-group randomization does not remove across-round task, model and context drift or joint skill interactions.",
+      "Outer withdrawal/update rules remain fixed; no claim that the system autonomously redesigns these rules."
+    ],
+    "source_doc": [
+      "User priority list, independent primary-paper expansion"
+    ]
+  },
+  {
+    "id": "coevo-rsi",
+    "method": "CoEvo-RSI",
+    "title": "CoEvo-RSI: When Harnesses Evolve, Which Models Should Follow?",
+    "primary_url": "https://arxiv.org/abs/2610.25078",
+    "repo_url": "https://github.com/SuJQ0722/CoEvo-RSI",
+    "first_date": "2026-10-18",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v1: sections 3.1-3.3, 4.1-4.4, appendices A.1-A.5, B-C and E excerpts",
+      "arXiv submission history and author code link"
+    ],
+    "mechanism": "Fixed-parameter meta-agent uses an evolutionary archive to select historical harness bases and separately select or TIES-merge checkpoints; chosen pairs generate verifier-accepted SFT trajectories, then validation gates promotion among incumbent, inherited and adapted pairs.",
+    "evidence": [
+      "https://arxiv.org/html/2610.25078v1#S3.SS1 : fixed meta-agent parameters phi; objective scores model-harness pairs under fixed constraints.",
+      "https://arxiv.org/html/2610.25078v1#S3.SS3 : independent model inheritance, TIES merging, pair-specific rejection-sampled SFT and promotion.",
+      "Section 4.3 contrasts harness-only, model-only and latest-only variants; Appendix B bounds TIMR's interpretation."
+    ],
+    "limitations": [
+      "TIMR is observable interface violation, not complete capability alignment or causal explanation of task gains.",
+      "SFT targets are own accepted trajectories, but a stronger external fixed meta-agent directs search.",
+      "Specialized held-out results do not establish unrelated-domain generality or improved meta-agent.",
+      "API expenditure and rollout counts are not total training cost; validation is repeatedly used for selection."
+    ],
+    "source_doc": [
+      "User priority list, independent primary-paper expansion"
+    ]
+  },
+  {
+    "id": "ai-scientist",
+    "method": "AI Scientist",
+    "title": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery",
+    "primary_url": "https://arxiv.org/abs/2408.06292",
+    "repo_url": "https://github.com/SakanaAI/AI-Scientist",
+    "first_date": "2024-08-12",
+    "read_level": "primary_html_excerpt_and_institution_page",
+    "sections_read": [
+      "HTML v3: sections 3-6, 8-9; selected appendix prompts and artifact descriptions",
+      "arXiv submission history",
+      "https://sakana.ai/ai-scientist/ (institution announcement dated 2024-08-13)"
+    ],
+    "mechanism": "Human-seeded code templates support idea generation, literature checks, experiment iteration, plots, manuscript generation and automated review; a growing archive conditions later ideas.",
+    "evidence": [
+      "https://arxiv.org/html/2408.06292v3#S3 : staged research pipeline.",
+      "https://arxiv.org/html/2408.06292v3#S6 : main experiments generate ideas without waiting for completed-paper review scores to enter the archive.",
+      "https://arxiv.org/html/2408.06292v3#S9 : closed-loop model improvement and direct self-code research are future directions."
+    ],
+    "limitations": [
+      "Automated acceptance scores are not independent validation of generated scientific claims.",
+      "Sections 5 and 8 document implementation errors, unfair comparisons, leakage and unsupported reported results.",
+      "Historical reviewer data and different manuscript versions limit judge comparisons.",
+      "Human-developed later system versions do not establish self-produced successors; generated example papers are artifacts, not independent corroboration."
+    ],
+    "source_doc": [
+      "User-requested AI research expansion; Sakana primary institution page led to the original paper"
+    ]
+  },
+  {
+    "id": "ai-scientist-v2",
+    "method": "AI Scientist-v2",
+    "title": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search",
+    "primary_url": "https://arxiv.org/abs/2504.08066",
+    "repo_url": "https://github.com/SakanaAI/AI-Scientist-v2",
+    "first_date": "2025-04-10",
+    "read_level": "primary_html_excerpt_and_institution_page",
+    "sections_read": [
+      "HTML v1: sections 3.1-3.4, 4.1-4.2, 5, appendix A, selected C.1-C.3 author audits",
+      "arXiv submission history",
+      "https://sakana.ai/ai-scientist-first-publication/ (2025-03-12 announcement, 2025-04-07 update)"
+    ],
+    "mechanism": "An experiment manager moves among prototype, tuning, research and ablation stages; parallel experiment trees include debug, replication and aggregation nodes, with VLM figure feedback and manuscript reflection.",
+    "evidence": [
+      "https://arxiv.org/html/2504.08066v1#S3.SS2 : experiment stages and node-selection mechanisms.",
+      "https://arxiv.org/html/2504.08066v1#S4.SS2 : humans selected starting ideas and best complete manuscripts across multiple seeds; selected runs themselves were not manually edited.",
+      "Sections 4.1-4.2: one of three submitted manuscripts exceeded the ICBINB workshop review threshold and was withdrawn under prior agreement; not main-track publication or an unselected-run success rate.",
+      "https://github.com/SakanaAI/AI-Scientist-ICLR2025-Workshop-Experiment : author-linked experiment artifacts."
+    ],
+    "limitations": [
+      "No demonstrated self-development from v1 into v2.",
+      "Template-free does not remove human topic, budget, selection and workflow choices; Appendix C.3 discloses manual dataset acquisition/subsampling for one application.",
+      "Author audits document dataset overlap, unused implemented methods and narrative/experiment mismatches; no independent reproduction performed here."
+    ],
+    "source_doc": [
+      "User-requested AI research expansion; primary Sakana announcement and paper"
+    ]
+  },
+  {
+    "id": "alphaevolve",
+    "method": "AlphaEvolve",
+    "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+    "primary_url": "https://arxiv.org/abs/2506.13131",
+    "repo_url": "https://github.com/google-deepmind/alphaevolve_results",
+    "first_date": "2025-06-16",
+    "read_level": "primary_html_excerpt_and_institution_page",
+    "sections_read": [
+      "HTML v1: sections 2.1-2.6, 3.1-3.3, 4, 6; selected appendix result descriptions",
+      "arXiv submission history",
+      "DeepMind institution announcement dated 2025-05-14"
+    ],
+    "mechanism": "Human-specified mutable program blocks and evaluators drive an evolutionary program database; Gemini-generated diffs pass evaluation cascades. A separate meta-prompt database can evolve mutation instructions.",
+    "evidence": [
+      "https://arxiv.org/html/2506.13131v1#S2.SS2 : optional meta-prompt evolution; Section 4 includes a no-meta-prompt ablation for tensor decomposition.",
+      "https://arxiv.org/html/2506.13131v1#S3.SS3.SSS2 : real-TPU Gemini matrix-multiplication tiling heuristic, half of collected input shapes used for training and half for evaluation; reported average kernel speedup 23% and corresponding overall training-time reduction 1% vs expert heuristic.",
+      "https://arxiv.org/html/2506.13131v1#S6 : model distillation remains a next step and infrastructure feedback does not demonstrate autonomous repeated base-model promotion."
+    ],
+    "limitations": [
+      "repo_url is a results/verification repository, not a released full framework.",
+      "Correctness evidence differs by application: by-construction constraints, executable checks and expert confirmation must not all be called formal proof.",
+      "Local meta-prompt evolution is real, but does not establish unbounded general self-rewriting or recurrent research-efficiency gains.",
+      "First date records arXiv submission; the earlier institution announcement is a separate event."
+    ],
+    "source_doc": [
+      "User-requested AI research expansion; Google DeepMind institution page and white paper"
+    ]
+  },
+  {
+    "id": "shinkaevolve",
+    "method": "ShinkaEvolve",
+    "title": "ShinkaEvolve: Towards Open-Ended And Sample-Efficient Program Evolution",
+    "primary_url": "https://arxiv.org/abs/2509.19349",
+    "repo_url": "https://github.com/SakanaAI/ShinkaEvolve",
+    "first_date": "2025-09-17",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v1: sections 3.1-3.3, 4.1-4.4, 5-6; appendices A and B.1-B.4; C.4 displayed loss implementation",
+      "arXiv submission history and author code link"
+    ],
+    "mechanism": "Archive and island-based program evolution combines quality/exposure-aware parent sampling, embedding/LLM novelty rejection, relative-improvement bandit model selection and meta-scratchpad guidance.",
+    "evidence": [
+      "https://arxiv.org/html/2509.19349v1#S3 : program and discovery-guidance feedback paths.",
+      "https://arxiv.org/html/2509.19349v1#S4.SS4 : MoE load-balancing loss discovery evaluated on a larger but related architecture; no headline gain reproduced here.",
+      "Appendices B.2-B.3 show task-specific component activation: dynamic LLM selection disabled in AIME, embedding novelty filtering disabled in ALE-Bench."
+    ],
+    "limitations": [
+      "Objectives, candidate models and outer update rules remain human-defined; Section 6 leaves autonomous objective generation and stronger self-reference to future work.",
+      "Program-evaluation counts do not measure all rejected proposals, API calls or downstream training costs.",
+      "Main MoE iteration count differs from configuration Table 5, and the threshold expression in Section 4.4 differs from the displayed C.4 code; unresolved version/detail inconsistency, not silently reconciled.",
+      "No runtime reproduction or full repository audit performed."
+    ],
+    "source_doc": [
+      "DuckDuckGo AI Scientist / AlphaEvolve discovery query led to SakanaAI/ShinkaEvolve; primary paper expansion"
+    ]
+  },
+  {
+    "id": "mle-bench",
+    "method": "MLE-bench",
+    "title": "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering",
+    "primary_url": "https://arxiv.org/abs/2410.07095",
+    "repo_url": "https://github.com/openai/mle-bench",
+    "first_date": "2024-10-09",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v6: sections 2.1-2.3, 3.1-3.4, 4.1-4.2, 6-7; appendices A.3-A.6",
+      "arXiv submission history and author code link"
+    ],
+    "mechanism": "Offline Kaggle tasks with locally implemented graders and often reconstructed data splits evaluate agents that train separate predictive models and submit predictions; a local validity endpoint does not expose a score.",
+    "evidence": [
+      "https://arxiv.org/html/2410.07095v6#S2 : task construction, historical private-leaderboard comparisons and submission rules.",
+      "https://arxiv.org/html/2410.07095v6#S4 : familiarity and obfuscated-description contamination probes.",
+      "Section 6 and Appendix A.5 distinguish benchmark coverage, historical-competition differences and infrastructure isolation."
+    ],
+    "limitations": [
+      "Benchmark rather than a self-improvement algorithm; no recursive researcher handoff is established by its existence.",
+      "Reconstructed splits and modern agent tools differ from original competition conditions.",
+      "No detected copying or familiarity effect for tested models does not exclude subtler or future-model contamination.",
+      "Runtime, attempt count, model serving and training hardware must be reported separately."
+    ],
+    "source_doc": [
+      "OpenRSI evaluation context, verified against the original benchmark paper"
+    ]
+  },
+  {
+    "id": "posttrainbench",
+    "method": "PostTrainBench",
+    "title": "PostTrainBench: Can LLM Agents Automate LLM Post-Training?",
+    "primary_url": "https://arxiv.org/abs/2603.08640",
+    "repo_url": "https://github.com/aisa-group/PostTrainBench",
+    "first_date": "2026-03-09",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v2: sections 2.1-2.2, 3.1-3.2, 4, 5.1-5.5, 7; appendices B, C and E",
+      "arXiv submission history and author project/code links"
+    ],
+    "mechanism": "A CLI research agent chooses data and training recipes for a supplied base model under a target benchmark and resource limit, submits a checkpoint, and is audited for contamination/model substitution.",
+    "evidence": [
+      "https://arxiv.org/html/2603.08640v2#S2 : original protocol allows ten hours on one H100 and reports API and GPU expenses separately.",
+      "Appendices B/E permit benchmark queries and viewing questions while prohibiting their use in training; not an untouched post-selection confirmation suite.",
+      "https://arxiv.org/html/2603.08640v2#S5.SS3 : contamination, model substitution and API-use failures; Section 7 acknowledges judge errors and uneven run replication."
+    ],
+    "limitations": [
+      "Target-specific optimization is not a broadly capable instruct model or recursive controller replacement.",
+      "Fixed chat templates make format repair part of observed gains.",
+      "Original paper, hardened later releases and Lite differ in aggregation and invalid-run rules; do not combine rankings without protocol reconciliation.",
+      "Judge-based audit and explicit prompt rules are not robust permission enforcement or contamination proofs."
+    ],
+    "source_doc": [
+      "Aspire and recent research-system comparisons, verified against the original benchmark paper"
+    ]
+  },
+  {
+    "id": "paretorsi-gym",
+    "method": "ParetoRSI-Gym",
+    "title": "ParetoRSI-Gym: Can AI Agents Improve Language Models Across Multiple Domains?",
+    "primary_url": "https://arxiv.org/abs/2610.34386",
+    "repo_url": null,
+    "first_date": "2026-10-25",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v1: sections 2.1-2.4, 3.1-3.4, 4.1-4.3, Limitations; appendices A-B, C, D.1-D.3, F-G",
+      "arXiv submission history"
+    ],
+    "mechanism": "An agent revises a multi-domain data pool and written principles using proxy traces, selects a historical checkpoint and bounded LoRA SFT settings, then evaluates final/proxy-selected checkpoints on unexposed generalization suites.",
+    "evidence": [
+      "https://arxiv.org/html/2610.34386v1#S2.SS3 : checkpoints can restart, branch or continue; fixed training family does not mean all hyperparameters are fixed.",
+      "https://arxiv.org/html/2610.34386v1#S3.SS4 : Final, Proxy Best and Domain Best are distinct; Domain Best combines different rounds and is not one deployable checkpoint.",
+      "Section 3.2 and Appendix B preserve conversation history despite Section 2.2 describing principles as the only evidence channel.",
+      "Appendix D.3 shows that a cross-domain improvement can later be partly lost; no headline average is reproduced here."
+    ],
+    "limitations": [
+      "Average improvement need not be Pareto improvement; some score gains reflect output-format learning.",
+      "Persistent-history wording and data-only shorthand are not fully consistent with detailed execution protocol; this chapter retains the distinction.",
+      "Automatic decontamination does not exclude semantic or pretrained overlap.",
+      "Moving proprietary backbones, narrow language/domain scope and unequal replication limit comparisons; no official repository URL confirmed."
+    ],
+    "source_doc": [
+      "Discovered through arXiv recursive self-improvement search on 2026-11-05; followed to primary HTML"
+    ]
+  },
+  {
+    "id": "rsi-dojo",
+    "method": "RSI-Dojo / RSI-Craft",
+    "title": "Training LLM Agents to Automate LLM Post-Training with RSI-Dojo",
+    "primary_url": "https://arxiv.org/abs/2611.03698",
+    "repo_url": null,
+    "first_date": "2026-10-29",
+    "read_level": "primary_html_excerpt",
+    "sections_read": [
+      "HTML v1: sections 3.1-3.3, 4.1-4.3, 5.1-5.3, 6-7",
+      "arXiv submission history (v1 date is October despite November identifier)"
+    ],
+    "mechanism": "RSI-Craft converts research artifacts and InspectAI tasks into executable post-training environments, filters reliability/discriminability, collects guided frontier-model trajectories and applies process/outcome filtering before SFT of researcher models.",
+    "evidence": [
+      "https://arxiv.org/html/2611.03698v1#S3 : environment construction and trajectory filters.",
+      "https://arxiv.org/html/2611.03698v1#S4.SS2 : adapted hardware, self-hosted web-search limitation and predownloaded resources; evaluation excludes extra trajectory-collection guidance.",
+      "https://arxiv.org/html/2611.03698v1#S7 : explicit statement that trained models improve smaller targets, not improved successors of themselves."
+    ],
+    "limitations": [
+      "Researcher training from frontier demonstrations is not teacher-free self-improvement.",
+      "Task discrimination filters depend on reference model capabilities and may suppress difficult or narrow domains.",
+      "Mixed official and adapted evaluation results do not imply identical hardware/tool access or complete compute matching.",
+      "Stronger self-successor loop remains future work; no official repository URL confirmed in inspected primary pages."
+    ],
+    "source_doc": [
+      "Discovered through arXiv recursive self-improvement search on 2026-11-05; followed to primary HTML"
+    ]
+  },
+  {
+    "id": "dream-rsi",
+    "method": "Dream-RSI",
+    "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+    "primary_url": "https://arxiv.org/abs/2609.14858",
+    "repo_url": "https://github.com/zhengkid/Dream-RSI",
+    "first_date": "2026-09-14",
+    "version_read": "v2",
+    "version_date": "2026-10-06",
+    "checked_on": "2026-11-05",
+    "read_level": "primary_html_method_and_experiment_excerpts",
+    "sections_read": [
+      "Primary HTML v2: sections 2-3, 4.1-4.4, 5, Appendix B.1-B.2 and D.2",
+      "Catalog version history and abstract; author repository link supplied by the primary paper"
+    ],
+    "mechanism": "Completed discovery trees become prefix-observable replay worlds. A fixed agent rewrites executable exploration-policy code; candidate policies are evaluated on all archived worlds and the highest replay-scoring one is redeployed online. Online discoveries enlarge the history pool. Base models, evaluator and execution interfaces remain fixed.",
+    "persistent_state": [
+      "B: archived discovery trees, snapshots, execution outcomes and replay pool",
+      "D/F boundary: executable exploration-policy versions, not neural base-model weights"
+    ],
+    "sources": [
+      {
+        "url": "https://arxiv.org/html/2609.14858v2",
+        "version": "v2",
+        "sections": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "B.1-B.2",
+          "D.2"
+        ],
+        "reading_scope": "Retrieved original method and experimental passages; not certified full-paper reading or complete source-code audit."
+      }
+    ],
+    "evidence": [
+      "Section 3: 'Only the policy code changes'; models, evaluator and execution interfaces stay fixed.",
+      "Section 3 replay: 'no outcome outside' the recorded tree is produced. Candidate development can use historical feedback, but the executed policy is restricted to revealed prefixes.",
+      "Section 3 Equation 1 scores normalized quality-cost hypervolume minus a sequential-rounds/calls penalty; selection includes the incumbent. Nondecrease holds on the same replay pool, not on future online outcomes.",
+      "Appendix D.2 prohibits unrevealed scores, hardcoded winning cell IDs and raw trace access inside the policy; prompt rules alone are not verified isolation."
+    ],
+    "numeric_claims": [
+      {
+        "claim_id": "dream-lasso-controlled",
+        "url": "https://arxiv.org/html/2609.14858v2#S4.SS3",
+        "locator": "Section 4.3, Figure 4 and Appendix B.1-B.2",
+        "values": [
+          "3587.1",
+          "2931.0",
+          "550",
+          "317",
+          "17",
+          "162"
+        ],
+        "protocol": "Author-reported Gemini-3.1-Pro, five rounds for Dream-RSI and Recursive Fixed Exploration; discovery uses 17 synthetic instances, final runtime measured on six held-out datasets. Mean runtime 3587.1 to 2931.0 ms, discovery calls 550 to 317. The approximately 162x SimpleTES comparison uses a different backbone.",
+        "source_phrase": "average improvement over fixed exploration is driven by RCV1",
+        "limitation": "The other five Pro evaluation datasets become slower; calls are not total compute, token cost or latency."
+      },
+      {
+        "claim_id": "dream-kernel",
+        "url": "https://arxiv.org/html/2609.14858v2#S4.SS1",
+        "locator": "Section 4.1 Figure 3; Appendix B.1-B.2",
+        "values": [
+          "2.43",
+          "1.79",
+          "2.09",
+          "1.44"
+        ],
+        "protocol": "Four representative KernelBench tasks, Gemini-3.1-Pro, L40S, nine rounds, correctness checks plus inverse-runtime scoring. VGG16/LayerNorm require 2.43x/1.79x fewer generations at comparable performance; ConvDiv/ConvMax attain 2.09x/1.44x performance at comparable discovery-call budgets.",
+        "limitation": "Not all KernelBench tasks; no single common speedup metric across different quality-versus-budget comparisons. Some Appendix B table budget cells are absent in text extraction, so exact numerical per-round caps are not reproduced."
+      },
+      {
+        "claim_id": "dream-harness",
+        "url": "https://arxiv.org/html/2609.14858v2#S4.SS4",
+        "locator": "Section 4 preamble, Section 4.4 Figure 5",
+        "values": [
+          "0.7247",
+          "0.8090",
+          "89"
+        ],
+        "protocol": "Terminus-Kira seed, Claude Opus 4.8 for discovery, policy development and harness execution; full 89-task Terminal-Bench 2.1, two runs/task. Author-reported score 0.7247 to 0.8090.",
+        "source_phrase": "omit the fixed-policy comparison",
+        "limitation": "Fixed-exploration full-search ablation was not performed for cost reasons; full-suite score participates in discovery, not an untouched confirmation set."
+      }
+    ],
+    "limitations": [
+      "Replay cannot estimate unobserved branches or counterfactual agent generations; online ordering can change context and outcome distributions. These are Atlas deductions from the documented interface, not a quoted impossibility theorem.",
+      "Incumbent retention guarantees only in-pool replay nondecrease; repeated selection can overfit the simulator.",
+      "Discovery-agent calls exclude policy-development calls and do not equal full token, evaluator, GPU or wall-clock cost.",
+      "Section 5 all-history versus current-history ablation uses different realized calls, so it is not an equal-compute history-capacity intervention.",
+      "Scientific tasks include a controlled fixed-exploration baseline; expensive harness search does not. No base-model training or independent replication performed here."
+    ],
+    "source_doc": [
+      "00_RSI_overview.md: Update and Dream-RSI entries used as discovery leads only",
+      "Existing catalog arxiv:2609.14858 metadata_sources and version history"
+    ]
+  }
+]

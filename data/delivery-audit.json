@@ -1,0 +1,246 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-05T10:44:08.062Z",
+  "schema_and_links": {
+    "ok": true,
+    "publication_files": 82,
+    "local_links_checked": 282,
+    "methods": 66,
+    "recent_methods": 38,
+    "dynamic_scenes": 10,
+    "primary_checks": 18,
+    "warnings": 0
+  },
+  "browser": "real_headless_chrome_via_CDP",
+  "scenes_checked": 10,
+  "filters_and_animation": "passed",
+  "viewport_receipts": [
+    {
+      "width": 360,
+      "height": 780,
+      "view": "panorama",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 360,
+      "height": 780,
+      "view": "methods",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 360,
+      "height": 780,
+      "view": "loops",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 360,
+      "height": 780,
+      "view": "timeline",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 360,
+      "height": 780,
+      "view": "evidence",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 360,
+      "height": 780,
+      "view": "reading",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "view": "panorama",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "view": "methods",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "view": "loops",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "view": "timeline",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "view": "evidence",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "view": "reading",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "view": "panorama",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "view": "methods",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "view": "loops",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "view": "timeline",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "view": "evidence",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "view": "reading",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1600,
+      "height": 1000,
+      "view": "panorama",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1600,
+      "height": 1000,
+      "view": "methods",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1600,
+      "height": 1000,
+      "view": "loops",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1600,
+      "height": 1000,
+      "view": "timeline",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1600,
+      "height": 1000,
+      "view": "evidence",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1600,
+      "height": 1000,
+      "view": "reading",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "view": "panorama",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "view": "methods",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "view": "loops",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "view": "timeline",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "view": "evidence",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "view": "reading",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 2048,
+      "height": 1320,
+      "view": "panorama",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 2048,
+      "height": 1320,
+      "view": "methods",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 2048,
+      "height": 1320,
+      "view": "loops",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 2048,
+      "height": 1320,
+      "view": "timeline",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 2048,
+      "height": 1320,
+      "view": "evidence",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 2048,
+      "height": 1320,
+      "view": "reading",
+      "horizontal_overflow": false
+    }
+  ],
+  "runtime_exceptions": [],
+  "visual_review": "selected_dark_screenshots_inspected_at_390_1440_2048; theme_switch_and_containment_tested",
+  "screenshot_publication": "ephemeral_local_check_only; not included_in_Git",
+  "screenshot_files": [
+    ".delivery-check/panorama-390.png",
+    ".delivery-check/loops-390.png",
+    ".delivery-check/panorama-1440.png",
+    ".delivery-check/loops-1440.png",
+    ".delivery-check/panorama-2048.png",
+    ".delivery-check/loops-2048.png"
+  ]
+}

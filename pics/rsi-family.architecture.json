@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "RSI 方法家族：改进了哪个持久状态？",
+    "quality_profile": "showcase",
+    "viewBox": [850, 500],
+    "legend": { "mode": "hidden" }
+  },
+  "components": [
+    { "id": "rsi-state", "type": "external", "label": "RSI 改进对象", "sublabel": "跨轮次保留的系统状态", "tag": "分类关系，不是继承关系", "pos": [25, 210], "size": [200, 90] },
+    { "id": "model-training", "type": "backend", "label": "A. 模型与训练", "sublabel": "STaR · ReST · SPIN · SEAL · OpenRSI", "tag": "权重与训练配方", "pos": [345, 20], "size": [475, 60] },
+    { "id": "tasks-environments", "type": "cloud", "label": "B. 数据、任务与环境", "sublabel": "POET · PAIRED · Self-Instruct · Absolute Zero", "tag": "课程与任务生成", "pos": [345, 100], "size": [475, 60] },
+    { "id": "memory-skills", "type": "database", "label": "C. Agent 记忆与技能", "sublabel": "DreamCoder · Reflexion · Voyager", "tag": "经验与可复用程序", "pos": [345, 180], "size": [475, 60] },
+    { "id": "harness-workflows", "type": "frontend", "label": "D. Harness 与工作流", "sublabel": "DSPy · TextGrad · ADAS · AFlow · GEPA", "tag": "控制代码与协作结构", "pos": [345, 260], "size": [475, 60] },
+    { "id": "evaluation-verification", "type": "security", "label": "E. 评价器与验证过程", "sublabel": "Constitutional AI · Self-Rewarding LM · Absolute Zero", "tag": "反馈信号与准入规则", "pos": [345, 340], "size": [475, 60] },
+    { "id": "research-meta", "type": "messagebus", "label": "F. AI 研发与元改进", "sublabel": "Goedel Machine · STOP · SICA · AlphaEvolve · Dream-RSI", "tag": "搜索与改进机制", "pos": [345, 420], "size": [475, 60] }
+  ],
+  "connections": [
+    { "id": "classify-a", "from": "rsi-state", "to": "model-training" },
+    { "id": "classify-b", "from": "rsi-state", "to": "tasks-environments" },
+    { "id": "classify-c", "from": "rsi-state", "to": "memory-skills" },
+    { "id": "classify-d", "from": "rsi-state", "to": "harness-workflows" },
+    { "id": "classify-e", "from": "rsi-state", "to": "evaluation-verification" },
+    { "id": "classify-f", "from": "rsi-state", "to": "research-meta" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "可交叉的分类", "items": ["同一方法可以改变多个对象；按主要状态归组，不强行排他。"] },
+    { "dot": "amber", "title": "边界对照", "items": ["Self-Refine 是任务内输出修订；自反馈不自动构成持久 RSI。"] },
+    { "dot": "emerald", "title": "2026 年交叉路线", "items": ["OpenRSI 跨 A/F；Dream-RSI 跨 B/D/F。近期代表不等于经典。"] }
+  ]
+}

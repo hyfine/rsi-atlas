@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "RSI 发展时间轴：三条并行路线与代表作",
+    "quality_profile": "showcase",
+    "viewBox": [1004, 520],
+    "legend": { "mode": "hidden" }
+  },
+  "components": [
+    { "id": "selfplay-curriculum", "type": "cloud", "label": "2017-2020", "sublabel": "AlphaZero · POET", "tag": "自博弈与课程", "pos": [24, 36], "size": [130, 66] },
+    { "id": "reasoning-bootstrap", "type": "backend", "label": "2022", "sublabel": "STaR · Self-Instruct", "tag": "推理与数据自举", "pos": [188, 36], "size": [130, 66] },
+    { "id": "reward-training", "type": "security", "label": "2024", "sublabel": "Self-Rewarding LM", "tag": "训练与评价联动", "pos": [516, 36], "size": [130, 66] },
+    { "id": "self-adaptation", "type": "backend", "label": "2025", "sublabel": "Absolute Zero · SEAL", "tag": "任务生成与适应", "pos": [680, 36], "size": [130, 66] },
+    { "id": "memory-tooling", "type": "database", "label": "2023", "sublabel": "Reflexion · Voyager", "tag": "经验与控制积累", "pos": [352, 220], "size": [130, 66] },
+    { "id": "workflow-search", "type": "frontend", "label": "2024", "sublabel": "ADAS · AFlow", "tag": "程序与结构搜索", "pos": [516, 220], "size": [130, 66] },
+    { "id": "self-modifying-agents", "type": "frontend", "label": "2025", "sublabel": "SICA · DGM · GEPA", "tag": "Agent/Harness 演化", "pos": [680, 220], "size": [130, 66] },
+    { "id": "replay-exploration", "type": "cloud", "label": "2026-09-14", "sublabel": "Dream-RSI", "tag": "探索策略演化", "pos": [844, 220], "size": [130, 66] },
+    { "id": "provable-rewrite", "type": "external", "label": "2003-09-25", "sublabel": "Goedel Machine", "tag": "可证明自修改", "pos": [24, 404], "size": [130, 66] },
+    { "id": "optimizer-evolution", "type": "messagebus", "label": "2023", "sublabel": "STOP · Promptbreeder", "tag": "改进器演化", "pos": [352, 404], "size": [130, 66] },
+    { "id": "algorithm-discovery", "type": "messagebus", "label": "2025-06-16", "sublabel": "AlphaEvolve", "tag": "算法与实验搜索", "pos": [680, 404], "size": [130, 66] },
+    { "id": "learned-operators", "type": "messagebus", "label": "2026-07-30", "sublabel": "OpenRSI", "tag": "学习改进算子", "pos": [844, 404], "size": [130, 66] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "训练与环境", "wraps": ["selfplay-curriculum", "reasoning-bootstrap", "reward-training", "self-adaptation"], "pad": 18 },
+    { "kind": "region", "label": "记忆与控制", "wraps": ["memory-tooling", "workflow-search", "self-modifying-agents", "replay-exploration"], "pad": 18 },
+    { "kind": "region", "label": "研究与元改进", "wraps": ["provable-rewrite", "optimizer-evolution", "algorithm-discovery", "learned-operators"], "pad": 18 }
+  ],
+  "connections": [
+    { "from": "selfplay-curriculum", "to": "reasoning-bootstrap" },
+    { "from": "reasoning-bootstrap", "to": "reward-training" },
+    { "from": "reward-training", "to": "self-adaptation" },
+    { "from": "memory-tooling", "to": "workflow-search" },
+    { "from": "workflow-search", "to": "self-modifying-agents" },
+    { "from": "self-modifying-agents", "to": "replay-exploration" },
+    { "from": "provable-rewrite", "to": "optimizer-evolution" },
+    { "from": "optimizer-evolution", "to": "algorithm-discovery" },
+    { "from": "algorithm-discovery", "to": "learned-operators" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "时间口径", "items": ["使用论文首次公开时间；阶段等宽，不是连续时间比例尺。"] },
+    { "dot": "amber", "title": "连线含义", "items": ["只表示路线内的时间先后，不宣称技术继承或能力单调增长。"] },
+    { "dot": "emerald", "title": "代表性而非全集", "items": ["同年方法压缩展示；逐篇日期、跨家族标签和原文链接见附表。"] }
+  ]
+}

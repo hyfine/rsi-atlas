@@ -1,0 +1,531 @@
+{
+  "cutoff": "2026-11-05",
+  "scope": "representative_methods_not_exhaustive",
+  "relationship_semantics": "taxonomy_and_chronology_not_proven_technical_lineage",
+  "families": {
+    "A": {
+      "name": "模型与训练",
+      "state": "模型权重、训练算法与训练配方"
+    },
+    "B": {
+      "name": "数据、任务与环境",
+      "state": "课程、任务生成器、模拟器与回放环境"
+    },
+    "C": {
+      "name": "Agent 记忆与技能",
+      "state": "跨任务经验、技能库与可复用程序"
+    },
+    "D": {
+      "name": "Harness 与工作流",
+      "state": "提示、工具、控制代码、路由与协作结构"
+    },
+    "E": {
+      "name": "评价器与验证过程",
+      "state": "反馈信号、奖励模型、测试与晋级规则"
+    },
+    "F": {
+      "name": "AI 研发与元改进",
+      "state": "实验与搜索策略、改进算子和优化过程"
+    }
+  },
+  "methods": [
+    {
+      "id": "arxiv:cs/0309048",
+      "method": "Goedel Machine",
+      "title": "Goedel Machines: Self-Referential Universal Problem Solvers Making Provably Optimal Self-Improvements",
+      "date": "2003-09-25",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/cs/0309048",
+      "date_source": "https://arxiv.org/abs/cs/0309048",
+      "families": [
+        "F"
+      ],
+      "significance_and_limits": "可证明自修改的理论奠基；不将理论最优性等同于现代 Agent 的实验表现。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:1712.01815",
+      "method": "AlphaZero",
+      "title": "Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm",
+      "date": "2017-12-05",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/1712.01815",
+      "date_source": "https://export.arxiv.org/api/query?id_list=1712.01815",
+      "families": [
+        "A",
+        "B"
+      ],
+      "significance_and_limits": "自博弈训练的基础参照；不是自主改写改进器的直接证据。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:1901.01753",
+      "method": "POET",
+      "title": "Paired Open-Ended Trailblazer (POET): Endlessly Generating Increasingly Complex and Diverse Learning Environments and Their Solutions",
+      "date": "2019-01-07",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/1901.01753",
+      "date_source": "https://arxiv.org/abs/1901.01753",
+      "families": [
+        "B"
+      ],
+      "significance_and_limits": "环境与求解策略共同演化的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2006.08381",
+      "method": "DreamCoder",
+      "title": "DreamCoder: Growing generalizable, interpretable knowledge with wake-sleep Bayesian program learning",
+      "date": "2020-06-15",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2006.08381",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2006.08381",
+      "families": [
+        "C",
+        "F"
+      ],
+      "significance_and_limits": "程序库积累与搜索学习相互促进的早期代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2012.02096",
+      "method": "PAIRED",
+      "title": "Emergent Complexity and Zero-shot Transfer via Unsupervised Environment Design",
+      "date": "2020-12-03",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2012.02096",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2012.02096",
+      "families": [
+        "B"
+      ],
+      "significance_and_limits": "无监督环境设计与课程生成的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2203.14465",
+      "method": "STaR",
+      "title": "STaR: Bootstrapping Reasoning With Reasoning",
+      "date": "2022-03-28",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2203.14465",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2203.14465",
+      "families": [
+        "A"
+      ],
+      "significance_and_limits": "以自身推理轨迹自举训练的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2212.08073",
+      "method": "Constitutional AI",
+      "title": "Constitutional AI: Harmlessness from AI Feedback",
+      "date": "2022-12-15",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2212.08073",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2212.08073",
+      "families": [
+        "A",
+        "E"
+      ],
+      "significance_and_limits": "AI 反馈和规范约束下的对齐训练基础。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2212.10560",
+      "method": "Self-Instruct",
+      "title": "Self-Instruct: Aligning Language Models with Self-Generated Instructions",
+      "date": "2022-12-20",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2212.10560",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2212.10560",
+      "families": [
+        "A",
+        "B"
+      ],
+      "significance_and_limits": "自生成指令数据改善模型的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2303.11366",
+      "method": "Reflexion",
+      "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+      "date": "2023-03-20",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2303.11366",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2303.11366",
+      "families": [
+        "C"
+      ],
+      "significance_and_limits": "语言反馈与情景记忆改进 Agent 行为的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2303.17651",
+      "method": "Self-Refine",
+      "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+      "date": "2023-03-30",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2303.17651",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2303.17651",
+      "families": [
+        "C"
+      ],
+      "significance_and_limits": "保留作输出自修订的边界对照，不把一次任务内迭代称为持久 RSI。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2305.16291",
+      "method": "Voyager",
+      "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+      "date": "2023-05-25",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2305.16291",
+      "date_source": "https://arxiv.org/abs/2305.16291",
+      "families": [
+        "C"
+      ],
+      "significance_and_limits": "可执行技能库与开放式探索的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2308.08998",
+      "method": "ReST",
+      "title": "Reinforced Self-Training (ReST) for Language Modeling",
+      "date": "2023-08-17",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2308.08998",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2308.08998",
+      "families": [
+        "A"
+      ],
+      "significance_and_limits": "生成、筛选、再训练闭环的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2309.16797",
+      "method": "Promptbreeder",
+      "title": "Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution",
+      "date": "2023-09-28",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2309.16797",
+      "date_source": "https://arxiv.org/abs/2309.16797",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "任务提示与变异提示共同演化的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2310.02304",
+      "method": "STOP",
+      "title": "Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation",
+      "date": "2023-10-03",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2310.02304",
+      "date_source": "https://arxiv.org/abs/2310.02304",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "改进代码生成优化器本身的直接自改进代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2310.03714",
+      "method": "DSPy",
+      "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines",
+      "date": "2023-10-05",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2310.03714",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2310.03714",
+      "families": [
+        "D"
+      ],
+      "significance_and_limits": "声明式 LM 程序与自动优化管线的基础。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2312.06585",
+      "method": "ReST-EM",
+      "title": "Beyond Human Data: Scaling Self-Training for Problem-Solving with Language Models",
+      "date": "2023-12-11",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2312.06585",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2312.06585",
+      "families": [
+        "A"
+      ],
+      "significance_and_limits": "使用可验证问题求解反馈进行自训练的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2401.01335",
+      "method": "SPIN",
+      "title": "Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models",
+      "date": "2024-01-02",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2401.01335",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2401.01335",
+      "families": [
+        "A"
+      ],
+      "significance_and_limits": "利用不同轮次模型构造自博弈微调的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2401.10020",
+      "method": "Self-Rewarding LM",
+      "title": "Self-Rewarding Language Models",
+      "date": "2024-01-18",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2401.10020",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2401.10020",
+      "families": [
+        "A",
+        "E"
+      ],
+      "significance_and_limits": "模型同时参与回答和奖励判断的代表，也用于讨论内生评价风险。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2406.07496",
+      "method": "TextGrad",
+      "title": "TextGrad: Automatic \"Differentiation\" via Text",
+      "date": "2024-06-11",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2406.07496",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2406.07496",
+      "families": [
+        "D"
+      ],
+      "significance_and_limits": "以自然语言反馈优化复合计算系统的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2408.08435",
+      "method": "ADAS",
+      "title": "Automated Design of Agentic Systems",
+      "date": "2024-08-15",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2408.08435",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2408.08435",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "自动设计 Agent 代码和结构的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2410.10762",
+      "method": "AFlow",
+      "title": "AFlow: Automating Agentic Workflow Generation",
+      "date": "2024-10-14",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2410.10762",
+      "date_source": "https://export.arxiv.org/api/query?id_list=2410.10762",
+      "families": [
+        "D"
+      ],
+      "significance_and_limits": "自动搜索 Agent 工作流的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2504.15228",
+      "method": "SICA",
+      "title": "A Self-Improving Coding Agent",
+      "date": "2025-04-21",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2504.15228",
+      "date_source": "https://arxiv.org/abs/2504.15228",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "Agent 修改自身编码实现的直接自改进代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2504.16084",
+      "method": "TTRL",
+      "title": "TTRL: Test-Time Reinforcement Learning",
+      "date": "2025-04-22",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2504.16084",
+      "date_source": "https://arxiv.org/abs/2504.16084",
+      "families": [
+        "A"
+      ],
+      "significance_and_limits": "测试时参数适应的代表；与外部记忆和 Harness 修改分开讨论。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2505.03335",
+      "method": "Absolute Zero",
+      "title": "Absolute Zero: Reinforced Self-play Reasoning with Zero Data",
+      "date": "2025-05-06",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2505.03335",
+      "date_source": "https://arxiv.org/abs/2505.03335",
+      "families": [
+        "A",
+        "B",
+        "E"
+      ],
+      "significance_and_limits": "任务生成、求解与执行反馈相结合的自博弈代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2505.22954",
+      "method": "DGM",
+      "title": "Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
+      "date": "2025-05-29",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2505.22954",
+      "date_source": "https://arxiv.org/abs/2505.22954",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "以编码 Agent 存档和实证测试支持代码自修改；不是 Goedel Machine 理论证明的工程实现。",
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "primary_abstract_and_submission_history"
+    },
+    {
+      "id": "arxiv:2506.10943",
+      "method": "SEAL",
+      "title": "Self-Adapting Language Models",
+      "date": "2025-06-12",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2506.10943",
+      "date_source": "https://arxiv.org/abs/2506.10943",
+      "families": [
+        "A",
+        "B",
+        "F"
+      ],
+      "significance_and_limits": "学习生成自适应训练数据与更新指令的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2506.13131",
+      "method": "AlphaEvolve",
+      "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+      "date": "2025-06-16",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2506.13131",
+      "date_source": "https://arxiv.org/abs/2506.13131",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "代码进化与外部可执行评价的代表；算法发现不自动等同于改进器递归。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2507.19457",
+      "method": "GEPA",
+      "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
+      "date": "2025-07-25",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2507.19457",
+      "date_source": "https://arxiv.org/abs/2507.19457",
+      "families": [
+        "D"
+      ],
+      "significance_and_limits": "反思式程序提示演化与多目标候选保留的代表。",
+      "local_pdf_retained": true,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2607.28568",
+      "method": "Frontis-MA1 / OpenRSI",
+      "title": "Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering",
+      "date": "2026-07-30",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2607.28568",
+      "date_source": "https://arxiv.org/abs/2607.28568",
+      "families": [
+        "A",
+        "F"
+      ],
+      "significance_and_limits": "学习机器学习工程改进算子并结合搜索；需要分开测量模型与搜索框架的贡献。",
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2609.14858",
+      "method": "Dream-RSI",
+      "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+      "date": "2026-09-14",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2609.14858",
+      "date_source": "https://arxiv.org/abs/2609.14858",
+      "families": [
+        "B",
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "通过发现历史回放优化探索策略；底层 Agent 不变，不应直接称为基础模型世界知识训练。",
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "existing_primary_metadata_and_method_summary"
+    }
+  ]
+}

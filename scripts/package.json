@@ -1,0 +1,13 @@
+{
+  "name": "rsi-atlas",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build-atlas.mjs",
+    "validate": "node validate-delivery.mjs",
+    "test": "node --test viewer.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

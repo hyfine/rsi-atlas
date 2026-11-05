@@ -1,0 +1,35 @@
+{
+  "checked_on": "2026-11-05",
+  "window_start": "2025-11-05",
+  "cutoff": "2026-11-05",
+  "scope": "selected_primary_sources_not_exhaustive",
+  "verification_method": "direct_arxiv_abstract_and_submission_history; selected_method_sections",
+  "latest_verified_first_submission": "2026-11-02",
+  "independent_experiments_reproduced": false,
+  "papers": [
+    {"id":"arxiv:2611.03178","date":"2026-11-02","version":"v1","level":"date_and_abstract"},
+    {"id":"arxiv:2611.02797","date":"2026-11-02","version":"v1","level":"date_and_abstract"},
+    {"id":"arxiv:2611.01113","date":"2026-10-31","version":"v1","level":"date_and_abstract"},
+    {"id":"arxiv:2611.03698","date":"2026-10-29","version":"v1","level":"date_and_abstract"},
+    {"id":"arxiv:2610.34386","date":"2026-10-25","version":"v1","level":"date_and_abstract"},
+    {"id":"arxiv:2610.32026","date":"2026-10-23","version":"v1","level":"date_abstract_and_method_sections_3"},
+    {"id":"arxiv:2610.32253","date":"2026-10-23","version":"v1","level":"date_and_abstract"},
+    {"id":"arxiv:2610.26770","date":"2026-10-19","version":"v2","level":"date_abstract_and_method_sections_4"},
+    {"id":"arxiv:2610.25078","date":"2026-10-18","version":"v1","level":"date_and_abstract"},
+    {"id":"arxiv:2610.18083","date":"2026-10-13","version":"v1","level":"date_and_abstract"},
+    {"id":"arxiv:2609.35561","date":"2026-09-28","version":"v2","level":"date_and_abstract"},
+    {"id":"arxiv:2609.30652","date":"2026-09-25","version":"v1","level":"date_and_abstract"},
+    {"id":"arxiv:2609.24972","date":"2026-09-21","version":"v3","level":"date_and_abstract"},
+    {"id":"arxiv:2609.20519","date":"2026-09-17","version":"v1","level":"date_and_abstract"},
+    {"id":"arxiv:2609.14858","date":"2026-09-14","version":"v2","level":"date_and_abstract"},
+    {"id":"arxiv:2609.06396","date":"2026-09-06","version":"v2","level":"date_and_abstract","project_date":"2026-09-03"},
+    {"id":"arxiv:2607.28568","date":"2026-07-30","version":"v1","level":"date_and_abstract"},
+    {"id":"arxiv:2603.19461","date":"2026-03-19","version":"v2","version_date":"2026-11-01","level":"date_and_abstract"}
+  ],
+  "search_notes": [
+    "Primary candidate discovery used existing dated topical evidence and web searches.",
+    "Searches for 2026-10-24 through 2026-11-05 did not establish any later first submission than 2026-11-02.",
+    "Failure to discover later papers is not evidence that no such papers exist.",
+    "Inherited full-text reading notes retain their original scope and are not counted as new full-text reviews."
+  ]
+}
