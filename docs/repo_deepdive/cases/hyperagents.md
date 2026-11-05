@@ -43,6 +43,7 @@
 
 默认循环是 score_prop；select_next_parent.py 中最终 random.choice 的路径是可选实现，不能推断整个默认系统随机选父代。
 
+
 ## 3. 运行架构与核心模块
 
 真实入口：[__main__](https://github.com/facebookresearch/HyperAgents/blob/59a68f672dfb92c74aeb7e61535d776fb36e172d/generate_loop.py#L1025)。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。

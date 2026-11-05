@@ -50,6 +50,7 @@ M_t = 消息历史 + memory/SOP/Skill；执行是 Run(模型,工具,M_t,任务)�
 
 README 的 self-evolving 定位不能替代代码中的统一 Skill 学习、评分、版本化或回滚证据。
 
+
 ## 3. 运行架构与核心模块
 
 真实入口：[module entrypoint (no top-level def/class symbol matched)](https://github.com/lsdefine/GenericAgent/blob/73f71a49874700f85e9d92126cb8d9531abde54a/frontends/tui_v3.py#L1)。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。

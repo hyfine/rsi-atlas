@@ -50,6 +50,7 @@
 
 项目配置优先且不与用户配置合并；扩展不自主改写 Pi 的模型、认证、provider 或主循环。
 
+
 ## 3. 运行架构与核心模块
 
 真实入口：[solPiExtension](https://github.com/NVlabs/SoL-Pi/blob/219568034fa54ed121ede80961655e33dfb9d0e3/src/sol-pi/index.ts#L49)。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。

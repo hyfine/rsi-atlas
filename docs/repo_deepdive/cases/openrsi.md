@@ -43,6 +43,7 @@ Evo 持久状态是解代码、父节点/经验、Journal、SolutionsDatabase �
 
 本次源码深读重点是 Evo；Gym/ERL 按实际 release 与许可证边界说明，不把论文整栈训练结果写成本次已经复现。
 
+
 ## 3. 运行架构与核心模块
 
 真实入口：[main](https://github.com/FrontisAI/OpenRSI/blob/71ae803a035d5e3b78c19fa49ed9f67d0550cbaa/OpenMLE-Evo/scripts/evaluate_airaevo.py#L295)。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。

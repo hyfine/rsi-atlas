@@ -43,6 +43,7 @@ H_t、S_t、C_t、历史最高 S*、候选 diff/commit、组件新颖性、journ
 
 成本门槛和 novelty 是选择规则，不是自学习出来的评价真值；benchmark 与 scorer 仍应保护在可变面之外。
 
+
 ## 3. 运行架构与核心模块
 
 真实入口：[drive](https://github.com/google-research/rrsi/blob/be50316e1db05914068a973f322770ef08ed7ba1/rrsi/driver.py#L54)。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。
