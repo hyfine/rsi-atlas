@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "checked_at": "2026-11-05T10:44:08.062Z",
+  "checked_at": "2026-11-05T10:48:31.034Z",
   "schema_and_links": {
     "ok": true,
     "publication_files": 82,
@@ -233,7 +233,7 @@
     }
   ],
   "runtime_exceptions": [],
-  "visual_review": "selected_dark_screenshots_inspected_at_390_1440_2048; theme_switch_and_containment_tested",
+  "visual_review": "selected_dark_screenshots_inspected_at_390_1440; previous_geometry_reviewed_at_2048; theme_switch_and_containment_tested",
   "screenshot_publication": "ephemeral_local_check_only; not included_in_Git",
   "screenshot_files": [
     ".delivery-check/panorama-390.png",
