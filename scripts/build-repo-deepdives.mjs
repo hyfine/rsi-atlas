@@ -58,7 +58,7 @@ const flowDiagrams = {
   G_9 --> G_3
   G_2["G-2 optimize_anything：另一套公开API"]
   G_2 --> G_6["G-6 _build_engine / OA registry"]
-  G_6 -.按config.engine分派.-> NOTE["AutoResearch / BestOfN / Gepa / MetaHarness 等实现"]`,
+  G_6 -. "按 config.engine 分派" .-> NOTE["AutoResearch / BestOfN / Gepa / MetaHarness 等实现"]`,
   'sol-pi':`flowchart TD
   S_1["S-1 Pi加载扩展"] --> S_3["S-3 配置读取"]
   S_3 --> S_2{"S-2 按feature flags注册"}

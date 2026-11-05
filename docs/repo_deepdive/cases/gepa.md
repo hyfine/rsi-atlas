@@ -123,7 +123,7 @@ flowchart TD
   G_9 --> G_3
   G_2["G-2 optimize_anything：另一套公开API"]
   G_2 --> G_6["G-6 _build_engine / OA registry"]
-  G_6 -.按config.engine分派.-> NOTE["AutoResearch / BestOfN / Gepa / MetaHarness 等实现"]
+  G_6 -. "按 config.engine 分派" .-> NOTE["AutoResearch / BestOfN / Gepa / MetaHarness 等实现"]
 ```
 
 图中模块 ID 对应 §3.1 的固定源码表；STOP/RAW/RECEIPT/NOTE 是相邻源码条件与输出语义的阅读说明，不是新发明的类。具体分支以 §4.2 定位表为准；动态图逐步顺序是代表性阅读路径，而非声明每个分支都发生在同一运行中。
