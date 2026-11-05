@@ -49,6 +49,11 @@
 
 优化 prompt 不等于更新底层 LLM；用户提供的 evaluator 决定了优化目标和投机空间。
 
+### 2.3 实际 API 与引擎选择
+
+经典 optimize 使用 core/engine.py 的 GEPAEngine。当前 optimize_anything 则通过 _optimize_to_result、_build_engine 和 gepa.oa.registry.get_engine_cls(config.engine) 构造并运行独立 OA Engine；其注册实现包括 AutoResearchEngine、BestOfNEngine、GepaEngine、MetaHarnessEngine。API 名称不是实际算法选择，不能把通用入口直接连到经典 GEPAEngine。构造/分派的固定源码见模块 G-6；本文动态图主路径选择经典 API，通用 API 分支单列。
+
+
 ## 3. 运行架构与核心模块
 
 真实入口：[optimize](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/api.py#L53)。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。
@@ -60,7 +65,7 @@ flowchart LR
   G_3["G-3 搜索引擎"]
   G_4["G-4 候选与前沿状态"]
   G_5["G-5 评估适配接口"]
-  G_6["G-6 候选提案结构"]
+  G_6["G-6 通用API引擎分派"]
   G_7["G-7 反思变异"]
   G_8["G-8 反思模型"]
   G_9["G-9 候选合并"]
@@ -68,7 +73,7 @@ flowchart LR
   G_11["G-11 状态初始化"]
   G_12["G-12 结果对象"]
   G_1 -- "经典 API 构造核心 engine" --> G_3
-  G_2 -- "optimize-anything 进入优化 engine" --> G_3
+  G_2 -- "通用API按config.engine选择独立OA Engine" --> G_6
   G_3 -- "读写候选/评估状态" --> G_4
   G_3 -- "请求系统评估" --> G_5
   G_3 -- "选择父候选" --> G_10
@@ -87,7 +92,7 @@ flowchart LR
 | G-3 | 搜索引擎 / `GEPAEngine` | 搜索、评估、接受/拒绝与预算循环 | [src/gepa/core/engine.py:113](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/core/engine.py#L113) |
 | G-4 | 候选与前沿状态 / `GEPAState` | 候选、评估缓存、历史和 Pareto 状态 | [src/gepa/core/state.py:217](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/core/state.py#L217) |
 | G-5 | 评估适配接口 / `GEPAAdapter` | 评估与 reflective dataset 接口 | [src/gepa/core/adapter.py:101](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/core/adapter.py#L101) |
-| G-6 | 候选提案结构 / `CandidateProposal` | 候选提案数据结构 | [src/gepa/proposer/base.py:31](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/proposer/base.py#L31) |
+| G-6 | 通用API引擎分派 / `_build_engine` | 通用API经get_engine_cls(config.engine)选择并构造OA Engine；不直接调用经典GEPAEngine | [src/gepa/optimize_anything.py:574](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/optimize_anything.py#L574) |
 | G-7 | 反思变异 / `ReflectiveMutationProposer` | 基于轨迹/反思生成新候选 | [src/gepa/proposer/reflective_mutation/reflective_mutation.py:45](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/proposer/reflective_mutation/reflective_mutation.py#L45) |
 | G-8 | 反思模型 / `StatelessReflectionLM` | 反思模型适配 | [src/gepa/proposer/reflective_mutation/reflection_lm.py:96](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/proposer/reflective_mutation/reflection_lm.py#L96) |
 | G-9 | 候选合并 / `MergeProposer` | 合并 Pareto 候选 | [src/gepa/proposer/merge.py:217](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/proposer/merge.py#L217) |
@@ -117,7 +122,8 @@ flowchart TD
   G_4 -.可选合并.-> G_9["G-9 MergeProposer"]
   G_9 --> G_3
   G_2["G-2 optimize_anything：另一套公开API"]
-  G_2 -.不是经典API后的必经步骤.-> NOTE["按该API实际实现选择路径"]
+  G_2 --> G_6["G-6 _build_engine / OA registry"]
+  G_6 -.按config.engine分派.-> NOTE["AutoResearch / BestOfN / Gepa / MetaHarness 等实现"]
 ```
 
 图中模块 ID 对应 §3.1 的固定源码表；STOP/RAW/RECEIPT/NOTE 是相邻源码条件与输出语义的阅读说明，不是新发明的类。具体分支以 §4.2 定位表为准；动态图逐步顺序是代表性阅读路径，而非声明每个分支都发生在同一运行中。
@@ -177,7 +183,7 @@ flowchart TD
 | 阅读定位 | 实际步骤 / 条件与边界 | 源码 |
 |---|---|---|
 | F1 | 经典入口接收 seed_candidate、数据集、task LM、reflection LM 与预算。 | [src/gepa/api.py:53](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/api.py#L53) |
-| F2 | 任意文本入口由 optimize_anything 启动，显式接收 candidate evaluator 与 objective。 | [src/gepa/optimize_anything.py:95](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/optimize_anything.py#L95) |
+| F2 | 通用optimize_anything经_build_engine和OA registry按config.engine分派，可选择AutoResearch/BestOfN/Gepa/MetaHarness等实现；不是经典GEPAEngine的同一调用路径。 | [src/gepa/optimize_anything.py:574](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/optimize_anything.py#L574) |
 | F3 | 初始化 GEPAState，包括候选、缓存和 Pareto 相关状态。 | [src/gepa/core/state.py:1115](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/core/state.py#L1115) |
 | F4 | GEPAEngine 执行迭代、评估、候选接受/拒绝和预算控制。 | [src/gepa/core/engine.py:113](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/core/engine.py#L113) |
 | F5 | 通过 GEPAAdapter 对 batch 执行并产生轨迹、输出和分数。 | [src/gepa/core/adapter.py:101](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/core/adapter.py#L101) |

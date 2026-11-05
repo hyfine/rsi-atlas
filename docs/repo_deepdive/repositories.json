@@ -31,6 +31,7 @@
       "practice": "先实现一个边界明确的 evaluator/adapter，返回分数及真正有用的失败信息。再设总 metric 调用预算，并把最终独立测试留在优化器之外。",
       "experiment": "同 evaluator、同任务、同模型和同 metric 预算比较随机编辑、仅反思、加互补候选保留、加合并。报告优化器与部署两类费用，不把论文数字当作本次复现。",
       "frozen_warning": "优化 prompt 不等于更新底层 LLM；用户提供的 evaluator 决定了优化目标和投机空间。",
+      "api_boundary": "经典 optimize 使用 core/engine.py 的 GEPAEngine。当前 optimize_anything 则通过 _optimize_to_result、_build_engine 和 gepa.oa.registry.get_engine_cls(config.engine) 构造并运行独立 OA Engine；其注册实现包括 AutoResearchEngine、BestOfNEngine、GepaEngine、MetaHarnessEngine。API 名称不是实际算法选择，不能把通用入口直接连到经典 GEPAEngine。构造/分派的固定源码见模块 G-6；本文动态图主路径选择经典 API，通用 API 分支单列。",
       "improvements": ["将评估数据、adapter 与候选版本写入不可变 manifest。","限制轨迹旁信息中的敏感内容和标准答案泄漏。","观察前沿大小、缓存命中与反思调用成本。","对冻结最佳候选进行跨划分和跨模型确认。"]
     },
     {

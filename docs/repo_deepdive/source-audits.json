@@ -300,11 +300,11 @@
         },
         {
           "id": "G-6",
-          "label": "candidate proposal",
-          "path": "src/gepa/proposer/base.py",
-          "line": 31,
-          "symbol": "CandidateProposal",
-          "role": "候选提案数据结构"
+          "label": "generic API engine dispatch",
+          "path": "src/gepa/optimize_anything.py",
+          "line": 574,
+          "symbol": "_build_engine",
+          "role": "通用API经get_engine_cls(config.engine)选择并构造OA Engine；不直接调用经典GEPAEngine"
         },
         {
           "id": "G-7",
@@ -364,9 +364,9 @@
         },
         {
           "label": "F2",
-          "detail": "任意文本入口由 optimize_anything 启动，显式接收 candidate evaluator 与 objective。",
+          "detail": "通用optimize_anything经_build_engine和OA registry按config.engine分派，可选择AutoResearch/BestOfN/Gepa/MetaHarness等实现；不是经典GEPAEngine的同一调用路径。",
           "path": "src/gepa/optimize_anything.py",
-          "line": 95
+          "line": 574
         },
         {
           "label": "F3",
@@ -447,8 +447,8 @@
         },
         {
           "from": "G-2",
-          "to": "G-3",
-          "label": "optimize-anything 进入优化 engine"
+          "to": "G-6",
+          "label": "通用API按config.engine选择独立OA Engine"
         },
         {
           "from": "G-3",

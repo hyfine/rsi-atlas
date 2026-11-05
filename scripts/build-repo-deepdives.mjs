@@ -9,7 +9,7 @@ const metadata = JSON.parse(fs.readFileSync(path.join(directory, 'repositories.j
 const audits = JSON.parse(fs.readFileSync(path.join(directory, 'source-audits.json'), 'utf8'));
 const labels = {
   genericagent:['执行循环','Agent 初始化','工具 schema','系统提示','模型会话','流式请求与重试','Claude 可选路由','浏览器执行底座','工具分发','历史压缩','CLI 包入口','兼容旧入口'],
-  gepa:['经典优化 API','通用文本 API','搜索引擎','候选与前沿状态','评估适配接口','候选提案结构','反思变异','反思模型','候选合并','候选选择','状态初始化','结果对象'],
+  gepa:['经典优化 API','通用文本 API','搜索引擎','候选与前沿状态','评估适配接口','通用API引擎分派','反思变异','反思模型','候选合并','候选选择','状态初始化','结果对象'],
   'sol-pi':['扩展入口','按开关注册','配置加载','执行融合','后续命令 schema','观察归档对象','观察账本','证据 reducer','证据回执校验','在线压缩扩展','压缩经济判定','在线状态'],
   hyperagents:['演化主循环','单代候选执行','Agent 系统接口','外部模型调用','元代理','任务代理','默认父代选择','可选开放式选择','存档与分数工具','容器执行','任务划分','领域评价'],
   rrsi:['轮次控制','运行状态','历史分析','候选工作区','critic 预检','评价结果','费用接纳规则','综合资格判定','轮次赢家选择','历史持久化','Git 分支管理','模型调用'],
@@ -57,7 +57,8 @@ const flowDiagrams = {
   G_4 -.可选合并.-> G_9["G-9 MergeProposer"]
   G_9 --> G_3
   G_2["G-2 optimize_anything：另一套公开API"]
-  G_2 -.不是经典API后的必经步骤.-> NOTE["按该API实际实现选择路径"]`,
+  G_2 --> G_6["G-6 _build_engine / OA registry"]
+  G_6 -.按config.engine分派.-> NOTE["AutoResearch / BestOfN / Gepa / MetaHarness 等实现"]`,
   'sol-pi':`flowchart TD
   S_1["S-1 Pi加载扩展"] --> S_3["S-3 配置读取"]
   S_3 --> S_2{"S-2 按feature flags注册"}
@@ -185,6 +186,7 @@ ${repo.frozen.map(value=>`- ${value}`).join('\n')}
 
 ${repo.frozen_warning}
 
+${repo.api_boundary?`### 2.3 实际 API 与引擎选择\n\n${repo.api_boundary}\n\n`:''}
 ## 3. 运行架构与核心模块
 
 真实入口：[${repo.entry.symbol}](${repo.entry.source})。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。
