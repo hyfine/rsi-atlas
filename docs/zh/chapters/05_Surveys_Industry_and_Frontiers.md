@@ -1,21 +1,22 @@
 # 第五章：综述、产业证据与研究前沿
 
-> 整合说明：本章继承此前作者的版本化阅读与审计记录，不表示本次监督重新阅读全文。先前笔记原稿不公开，链接指向[来源说明](../Reading_Notes_Provenance.md)。本次直接核验新增内容另见[近期研究](../06_Latest_Year_Research.md)。
+> 阅读范围说明：本章保留专题作者截至 2026-11-05 的版本化阅读与审计记录；正文中的“本次／本轮”指该来源记录，不表示本次公开同步重新精读论文或独立复现。私有笔记原稿不公开，见[来源说明](../Reading_Notes_Provenance.md)；日期、近期入口与未决来源见[近期研究](../06_Latest_Year_Research.md)。
 
 [返回 RSI 技术全景](../01_RSI_Technical_Panorama.md)
 
 > 范围截止日：2026-11-05。本文讨论可检查的机制、作者报告的实验和公开交付物，不给机构排“RSI 等级榜”。
 > 最重要的区分：更好的答案、更好的持久系统、更好的改进器，是三种不同主张。
 > 原文作者的实验不等于本章复现；公开仓库不等于完整实验代码；综述收录不等于独立验证。
+> 本轮近期覆盖窗口：2025-11-05 至 2026-11-05，含两端。overview 的 35 个 arXiv ID 已全部显式映射，另补 12 篇；论文首发、修订、产品发布与检索页日期分开。完整补齐表和网页处置见 §11。
 
 ## 1. 如何使用本章
 
-本章完整读取了 [../AI4AI-Survey-Deep-Dive.md](../Reading_Notes_Provenance.md) 的 2380 行和 [../recursive-self-improvement-survey-guide.md](../Reading_Notes_Provenance.md) 的 555 行。
-它们提供发现线索，但不承担一手证据的角色，也不把先前作者的“全文阅读”“已复现”声明转记成本次工作。
+前一轮研究记录登记了 [../AI4AI-Survey-Deep-Dive.md](../Reading_Notes_Provenance.md) 的 2380 行和 [../recursive-self-improvement-survey-guide.md](../Reading_Notes_Provenance.md) 的 555 行本地全文阅读。
+本轮保留这些记录及其有价值的纠偏，但只重新读取 overview、本章和证据文件，核验所选 catalog 原始摘要及少量官方 HTML；不把前一轮或笔记作者的“全文阅读”“已复现”声明转记成本轮一手阅读。
 研究记录与检索日志见 [../research/surveys-evidence.json](../research/surveys-evidence.json)。
 
 阅读顺序建议：先看 §2 的来源边界，再读 §3 的原始分类，最后用 §6 的案例和 §7 的对照设计检验自己的系统。
-本章没有把几百篇清单逐篇读完，也没有运行任何论文实验、安装研究框架或使用采集终端。
+本章没有把几百篇清单逐篇读完，也没有运行任何论文实验或安装研究框架。本轮本地命令仅用于只读解析、文字备份和验证，没有下载 PDF、权重、重新 clone 或运行 corpus 采集命令。
 网页工具返回的正文可能压缩表格、公式或折叠附录；下文的“正文已读”只指实际返回的文字，不等同于逐页图像核验。
 
 ### 1.1 证据标签
@@ -74,7 +75,7 @@ Prism 项目站显示 119 methods、33 benchmarks、3 systems、354 citation lin
 ### 3.1 AI4AI：责任归属与收益证据
 
 来源：[Preprints 202608.2108v1](https://www.preprints.org/manuscript/202608.2108/v1)、[EVIDENCE.md](https://raw.githubusercontent.com/KaiWU5/Awesome-AI4AI/main/EVIDENCE.md)、[作者说明](https://simpleagentlab.com/ai4ai/)。
-本次 PDF 下载页受访问保护，原始 PDF 文本抽取失败；以下结合完整本地笔记与直接读取的作者配套证据表，不标记为论文全文已读。
+前一轮记录的 PDF 访问及文本抽取未成功；本轮只检查出版方 HTML，仍返回 Akamai 保护页，不请求 PDF。以下保留前一轮本地笔记与作者配套证据表的分析，不标记为本轮论文全文已读。
 
 AI4AI 不是把“AI 帮人做研究”与“系统改变自身改进器”都塞进一个强度等级。
 其 D1–D5 分别询问可修改对象、自指关系、阶段责任、反馈依据与经验支持；最有用的是把实现机制和主张强度分栏。
@@ -167,10 +168,12 @@ formal/execution/learned judge/intrinsic signal 的验证层次是定性分析�
 ### 3.5 指定 OpenReview 文件与可靠性综述
 
 用户指定文件为 [OpenReview PDF](https://openreview.net/pdf/31dec7fbd91569b094bab29e73f62a44cf28094c.pdf)。
-本次该精确 URL 返回浏览器验证，未取得正文，也尚未通过文件元数据证明它与候选论文完全一致。
+前一轮对该精确 URL 的尝试返回浏览器验证；本轮遵守不下载 PDF 的约束，没有请求该文件，仍未取得其正文或身份元数据。
 不能把搜索到的相似来源写成“该 PDF 已读”；这是一项仍然开放的身份与全文覆盖缺口。
 
-另已读取 [Diving into Reliable Self-Evolving Agents 作者站](https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/)，其关联 [OpenReview forum](https://openreview.net/forum?id=CGO1hDTHNe) 和 Preprints 202609.0913。
+overview 将其标为 *Towards AI That Improves Itself: A Survey of Recursive Self-Improvement*。本轮读取的 [Lee 作者仓库](https://github.com/Lee1003-lee/Awesome-RSI-Research) 使用同题标题，并链接 [I3fKQbRUGy 论坛](https://openreview.net/forum?id=I3fKQbRUGy)；论坛 HTML 仍被浏览器验证阻挡。标题和作者入口相符是线索，不足以证明这个 hash 文件与论坛附件完全一致，也不能确认 overview 所记 2026-09-28 是首发日。
+
+前一轮另读取了 [Diving into Reliable Self-Evolving Agents 作者站](https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/)，其关联 [OpenReview forum](https://openreview.net/forum?id=CGO1hDTHNe) 和 Preprints 202609.0913。这是不同综述，不替代指定文件。
 下面是该作者站明确展示的分类，不冒充精确 hash 文件的全文内容。
 其层级按“最深的活跃语义修改”区分：L0 output、L1 model、L2 scaffold、L3 improver、L4 criterion。
 结构递归从 L3 改进器修改开始；这里的 L3 与 Theseus 的 L3 不同，数值不能直接换算。
@@ -418,11 +421,13 @@ Eureka Machine 参与架构、数据、训练、量化和 kernel，是公司报�
 “更强模型将使 Eureka 成为更好研究者”在发布文中仍是未来押注。
 M4 Pro 超过 125 token/s 是短上下文表述；长会话图不含 prefill，不能与其他完整端到端测量直接对比。
 
+本轮补读 [Flint 官方模型卡](https://huggingface.co/RecursiveSI/flint) 的发布物、评测、训练、运行限制及许可段落。卡片列出 BF16 checkpoint、配置、tokenizer、chat template 和 SGLang serving kit，并说明不同来源评测设置不完全一致；模型卡的实际配置与公告中的架构容量叙述应分别引用。只读卡片，没有获取权重或运行安装示例；权重许可也不替代 hosted API 的条款。
+
 [GAIR 801-30B README](https://github.com/GAIR-NLP/801-30B) 的标题直接问：RSI 是否止步于前沿预训练？
 作者说明整次不能重跑的训练无法形成端到端闭环，实践中闭合的是基础设施／数据调试、配方／pilot／主训练 headroom、经验转指标等六个局部回路。
 共享上下文基础设施保存跨团队失败和证据，使后来决策受益；这是可分析的组织累积，不自动等于因果识别的 updater 改善。
 匹配 1T token 的 recipe 平均结果同时变化了数据、配方和诊断，不能只归功于 agent。
-本次读取 README，报告 PDF 抽取失败；Tiny-SFT 与完整 post-trained 模型的比较也不是同类对照。
+前一轮报告 PDF 抽取失败；本轮只重新读取 README，不请求 PDF。Tiny-SFT 与完整 post-trained 模型的比较也不是同类对照。
 公开的是报告入口与 [Tiny-SFT 数据集](https://huggingface.co/datasets/SII-GAIR-NLP/801-30B-A3B-tiny-sft-dataset)，base weights 仍标 coming soon。
 
 ### 6.10 生产持续学习：播客提出的是产品假说
@@ -521,7 +526,7 @@ MASS 的固定 executor 迁移测试前进一步，却仍不足以把搜索时�
 第三，最稀缺的资产常是可重放、可归因、可移交的证据和可运行验收，而不是更长的自我反思文本。
 第四，可监督性必须跟随整个演化谱系；只证明初始系统安全或终点系统高分，都不足以批准中间自动更新。
 
-## 9. 时间线：20 个有明确日期的节点
+## 9. 时间线：20 个有明确日期的节点，含窗口外历史背景
 
 表中日期是指定类型的日期，不宣称都是全球首次；一篇论文的 revisions 不作为新方法重复计数。
 本表也不纳入只见“昨天”的 801 仓库提交，以及未核对原始日期的 Anthropic Institute 页面。
@@ -553,6 +558,8 @@ MASS 的固定 executor 迁移测试前进一步，却仍不足以把搜索时�
 
 ### 10.1 覆盖声明
 
+下表保留前一轮的证据登记，不是本轮重新阅读原文的清单；本轮摘要和网页核验范围以 §11 及证据文件的 `recent_coverage_update` 为准。
+
 | 来源组 | 实际阅读深度 | 剩余边界 |
 | --- | --- | --- |
 | 两份指定本地笔记 | 全文 2380 + 555 行 | 不等于其所有被引论文全文 |
@@ -577,7 +584,7 @@ MASS 的固定 executor 迁移测试前进一步，却仍不足以把搜索时�
 - Genuine RSI：[v3 正文](https://arxiv.org/html/2609.11873v3)、[配套目录](https://github.com/theseus-labs-rsi/awesome-rsi)。
 - Prism：[2610.14625v1](https://arxiv.org/html/2610.14625v1)、[交互索引](https://prism-shadow.github.io/awesome-rsi/)。
 - Bounded-to-research survey：[2607.07663v2](https://arxiv.org/html/2607.07663v2)。
-- 指定文件：[OpenReview hash PDF](https://openreview.net/pdf/31dec7fbd91569b094bab29e73f62a44cf28094c.pdf)；候选相关来源：[Reliable 作者站](https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/)。
+- 指定文件：[OpenReview hash PDF](https://openreview.net/pdf/31dec7fbd91569b094bab29e73f62a44cf28094c.pdf)；同题作者入口：[Lee 仓库](https://github.com/Lee1003-lee/Awesome-RSI-Research) 与 [候选论坛](https://openreview.net/forum?id=I3fKQbRUGy)；不同综述另列：[Reliable 作者站](https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/)。
 - Trustworthy RSI：[2610.35193v1](https://arxiv.org/html/2610.35193v1)、[审计 commit](https://github.com/pujiayue/Trustworthy-RSI/tree/854de7b3fa6c018a0c1e3e83df8e08dd801369d1/audit)。
 - Harness²：[原文](https://arxiv.org/html/2610.14224v1)、[作者代码入口](https://github.com/google-research/harness2)。
 - MASS：[详细技术文章](https://pub.sakana.ai/mass/)、[论文入口](https://arxiv.org/abs/2610.12176)、[作者代码入口](https://github.com/SakanaAI/mass)。
@@ -588,5 +595,123 @@ MASS 的固定 executor 迁移测试前进一步，却仍不足以把搜索时�
 - AIDE²：[2609.26457v1](https://arxiv.org/html/2609.26457v1)；评测元研究：[2610.27610v1](https://arxiv.org/html/2610.27610v1)。
 
 其余官方文章直接链接于相应案例与时间线；同一来源重复出现仅为导航，不增加独立证据数量。
+
+## 11. 近期覆盖补齐与行业判断
+
+### 11.1 窗口、分母与阅读深度
+
+本节回答一个具体覆盖问题：**原 [overview](../Reading_Notes_Provenance.md) 已列的来源是否全部得到处理，哪些论文应进入近期方法地图，哪些不能按新算法计数？**
+
+窗口为 **2025-11-05 至 2026-11-05**，按现有 catalog 已核验的论文首次公开日筛选，而不是最新版本日。用既有 `extractLinks` 和 `paperIdentity` 提取，并以 `marked` 排除代码块后，得到 **69 个唯一外链、35 个唯一 arXiv ID**。35 个 ID 全部显式加入扩展映射，缺失为零；其中 **32 篇在窗口内**。AFlow 是历史方法，TRM 和 Recurrent Depth 是窗口外的内部递归计算边界例子。
+
+额外选择 **12 篇** overview 未列的近期工作，覆盖 2025 年 11、12 月及 2026 年 1 至 7 月。扩展配置共 **47 条**，含综述、理论讨论、框架、基准与边界例子，不能称为“47 个新算法”；其中 **44 条**首发在窗口内。该覆盖阶段记录的构建快照为 **74 条**，保留作历史记录；本次公开同步只读核对的[当前方法数据](../../../data/atlas-methods.json)为 **84 条，其中 54 条首发在窗口内**。这些数对应不同集合，不是精读篇数，也不证明全领域已穷尽。
+
+这里的 **摘要核验** 是本轮完整读取 catalog 中保存的原始摘要及版本元数据；表中版本指所读摘要的 resolved version。**正文部分核验**只用于实际返回的官方网页段落，**无法核验**保留访问保护或身份不明状态。既有 PDF 文件、下载状态、目录收录和前一轮全文记录均不自动升级本轮阅读等级。本节不新增摘要中的性能数字，也没有独立复现实验。
+
+逐 URL 的原始覆盖账本是私有研究记录，不在公开库分发；可公开的覆盖与访问缺口见[近期研究](../06_Latest_Year_Research.md)，逐篇版本和网页段落依据见[研究证据](../research/surveys-evidence.json)。其中的检索及构建检查属于原专题记录，本次文件同步未重跑。PDF policy 仍暂停，核心保留清单仍为 27 篇，本次同步没有新增 PDF 或权重。
+
+### 11.2 原 overview 已列、初始地图遗漏的补齐表
+
+下表的“补入”相对于初始 30 条基础清单；已有的 HarnessPro、CoEvo-RSI、SoL-Pi、RSIHub 四个扩展种子也包含在其中，不声称本轮首次发现它们。AFlow、OpenRSI、Dream-RSI 原已在基础清单，本轮显式写入后由构建器按 ID 去重。A 为模型训练，B 为数据任务环境，C 为记忆技能，D 为 Harness 工作流，E 为评价验证，F 为研发与元改进。
+
+| 论文首发日 | 原文与本轮摘要版本 | 类型 / 家族 | 初始地图处置 | 机制与必须保留的边界 |
+| --- | --- | --- | --- | --- |
+| 2024-10-14 | [AFlow，v4](https://arxiv.org/abs/2410.10762v4) | 方法 / D | 已有，去重 | MCTS 搜索代码工作流；历史方法，不冒充窗口内首发 |
+| 2025-02-07 | [Recurrent Depth，v2](https://arxiv.org/abs/2502.05171v2) | boundary / A | 补入边界 | 推理时重复 latent block；不是跨任务持久 RSI |
+| 2025-10-06 | [TRM，v1](https://arxiv.org/abs/2510.04871v1) | boundary / A | 补入边界 | 小网络内部递归推理；不等于更新未来任务的改进器 |
+| 2026-01-26 | [Yunjue，v2](https://arxiv.org/abs/2601.18226v2) | 框架 / C,D | 补入 | 交互到工具合成、优化、复用；二元工具反馈不是通用真值 |
+| 2026-04-10 | [SkillMOO，v3](https://arxiv.org/abs/2604.09297v3) | 方法 / C,D | 补入 | 技能束的成功率与成本 Pareto 选择；选择规则不因此自行演化 |
+| 2026-04-18 | [GenericAgent，v1](https://arxiv.org/abs/2604.17091v1) | 框架 / C,D | 补入 | 层次记忆、SOP、代码与上下文密度；不是权重训练证明 |
+| 2026-04-22 | [COSPLAY，v1](https://arxiv.org/abs/2604.20987v1) | 方法 / A,C | 补入 | 决策模型与技能库共同学习；游戏证据不等于开放研究能力 |
+| 2026-04-28 | [AHE，v4](https://arxiv.org/abs/2604.25850v4) | 方法 / C,D,E | 补入 | 组件、轨迹、编辑预测可观察；可归因修改不等于外层规则递归 |
+| 2026-05-07 | [Skill1，v3](https://arxiv.org/abs/2605.06130v3) | 方法 / A,C | 补入 | 联合训练技能选择、使用和蒸馏；奖励制度本身仍需另查 |
+| 2026-06-04 | [RHO，v3](https://arxiv.org/abs/2606.05922v3) | 方法 / D,E | 补入 | 重解历史困难任务并自偏好选编辑；共享评价盲点仍在 |
+| 2026-07-30 | [Frontis-MA1 / OpenRSI，v1](https://arxiv.org/abs/2607.28568v1) | 框架 / A,B,F | 已有，去重 | MLE 环境、算子后训练与搜索；模型和搜索贡献分开 |
+| 2026-08-31 | [ASPIRE，v1](https://arxiv.org/abs/2608.31111v1) | 基准 / A,B,D,E | 补入 | 从模糊目标自选训练与自评；隐藏评价揭示局部提升失真 |
+| 2026-08-31 | [S3Gym，v1](https://arxiv.org/abs/2608.31100v1) | 基准 / B,C,E | 补入 | 自测试、自判断、经验利用分开测；存在不稳定与负迁移 |
+| 2026-09-01 | [HarnessDev，v1](https://arxiv.org/abs/2609.01437v1) | 基准 / D,E | 补入 | 创建与演化可运行 Harness；执行模型依赖和留出迁移要分开 |
+| 2026-09-06 | [MetaRSI / RSI2，v2](https://arxiv.org/abs/2609.06396v2) | 框架 / A,B,D,F | 补入 | 数据、Harness、模型算子与调度策略；开放领域仍是外推目标 |
+| 2026-09-10 | [The Last AI Built by Humans，v3](https://arxiv.org/abs/2609.11873v3) | 综述 / F | 补入综述 | 责任变化路线图；非算法、非能力等级认证 |
+| 2026-09-14 | [Dream-RSI，v2](https://arxiv.org/abs/2609.14858v2) | 方法 / B,D,F | 已有，去重 | 发现树回放优化探索；基础 agent 不变，非通用世界模型训练 |
+| 2026-09-14 | [RSIAgent，v2](https://arxiv.org/abs/2609.15364v2) | 框架 / B,C,E | 补入 | 先广后深探索，冻结环境记忆给下游；非参数更新 |
+| 2026-09-17 | [SoL-Pi，v1](https://arxiv.org/abs/2609.20519v1) | 方法 / D,F | 补入 | 研究循环筛选高效 Harness 机制；质量、费用、发现成本分账 |
+| 2026-09-18 | [Designer-RSI，v1](https://arxiv.org/abs/2609.22086v1) | 方法 / C,D | 补入 | 程序记忆扩展与修订，匹配回放准入；设计评分无可靠程序 oracle |
+| 2026-09-21 | [RRSI，v3](https://arxiv.org/abs/2609.24972v3) | 方法 / D,E | 补入 | 编辑预算与 critic/pruner 正则化；不保证后继单调提高 |
+| 2026-09-22 | [AIDE2，v1](https://arxiv.org/abs/2609.26457v1) | 方法 / D,F | 补入 | 自身代码的接受式重写；产品收益与 ignition 结论分开 |
+| 2026-09-25 | [DCE + SRCL，v1](https://arxiv.org/abs/2609.30652v1) | 方法 / A,B,E | 补入 | teacher 随 student 更新及简洁重写；标准答案仍是外部监督 |
+| 2026-09-28 | [RSI-Master，v2](https://arxiv.org/abs/2609.35561v2) | 框架 / A,D,E,F | 补入 | 受约束实验 OS 与 reviewer 研究 DAG；协议内防作弊非通用保证 |
+| 2026-09-28 | [AI R&D intelligence-explosion analysis，v2](https://arxiv.org/abs/2609.36054v2) | 理论讨论 / F | 补入讨论 | 分析自动化反馈与政策风险；不是已经发生爆炸的实验 |
+| 2026-10-08 | [MASS，v1](https://arxiv.org/abs/2610.12176v1) | 方法 / A,D,E | 补入 | 工作流演化与共享模型 SFT 交替；同源角色仍有共同盲点 |
+| 2026-10-13 | [AReaL-RSI，v1](https://arxiv.org/abs/2610.18083v1) | 框架 / C,D,F | 补入 | 持续团队、条件化共享记忆与技能；权重不更新，需整机预算 |
+| 2026-10-14 | [SwarmRSI，v3](https://arxiv.org/abs/2610.20431v3) | 框架 / C,D,F | 补入 | 用实验证据变异与重组假设及程序；经验迁移非改进器因果隔离 |
+| 2026-10-15 | [R2Orch，v2；overview 作 Orch](https://arxiv.org/abs/2610.22740v2) | 方法 / A,B,C,D | 补入 | 任务自博弈、技能内化与撤除；需独立迁移评价 |
+| 2026-10-18 | [CoEvo-RSI，v1](https://arxiv.org/abs/2610.25078v1) | 框架 / A,D,F | 补入 | 历史档案协调模型和 Harness；模型选择、训练、框架贡献分开 |
+| 2026-10-19 | [HarnessPro，v2](https://arxiv.org/abs/2610.26770v2) | 方法 / D,E | 补入 | 自生成测试与性能成本前沿；无标签不等于独立正确性 |
+| 2026-10-23 | [RSIHub，v1](https://arxiv.org/abs/2610.32253v1) | 框架 / D,E,F | 补入 | 可组合演化 recipe、谱系与外置评价；优化集收益未必迁移 |
+| 2026-10-26 | [Trustworthy RSI，v1](https://arxiv.org/abs/2610.35193v1) | 综述 / E,F | 补入综述 | 改进有效性、约束保持、有效监督；非“可信 RSI 已完成” |
+| 2026-10-31 | [CogRSI，v1](https://arxiv.org/abs/2611.01113v1) | 方法 / C,E | 补入 | 学书面推理原则并译为代码审计；准确率高不保证规则为真 |
+| 2026-11-02 | [CoworkOS，v1](https://arxiv.org/abs/2611.03178v1) | 框架 / C,D,F | 补入 | 可恢复工作区、语义记忆与委派；后训练案例不是 runtime 自演化 |
+
+### 11.3 overview 之外的 12 篇近期补充
+
+这是一组填补时间和机制空白的选择，不是“所有 2025 年底工作”或“全年新作已穷尽”的声明。指定的 [HF 检索入口](https://huggingface.co/papers/date/2026-11-05?q=recursive+self-improvement) 实际返回 SAHOO、2607.07663 综述和 Frontis-MA1；它是发现来源，URL 中的 2026-11-05 不能证明这些论文当天首发。以下日级日期均来自已有 catalog 的原始来源记录。
+
+| 论文首发日 | 原文与所读摘要版本 | 类型 / 家族 | 补充的机制与限制 |
+| --- | --- | --- | --- |
+| 2025-11-13 | [AgentEvolver，v1](https://arxiv.org/abs/2511.10395v1) | 框架 / A,B,C | 自提问生成任务、自导航复用经验、自归因分奖励；作者将实验称为初步证据 |
+| 2025-11-17 | [Live-SWE-agent，v3](https://arxiv.org/abs/2511.13646v3) | 方法 / D | 解题过程中从最小 scaffold 自修改；摘要未建立跨任务继承，不按标题认证严格 RSI |
+| 2025-11-20 | [Agent0，v2](https://arxiv.org/abs/2511.16043v2) | 方法 / A,B | 课程与执行 agent 以工具参与的任务协同演化；零外部数据不是零先验、零环境 |
+| 2025-12-02 | [Self-Improving VLM Judges，v1](https://arxiv.org/abs/2512.05145v1) | 方法 / A,B,E | 合成质量层次和判断轨迹再训练 judge；自设质量等级不等于独立真值 |
+| 2025-12-18 | [SAGE，v2](https://arxiv.org/abs/2512.17102v2) | 方法 / A,C | 顺序任务链继承技能，技能整合奖励联合训练；主要结果使用带专家经验的 SFT 起点 |
+| 2026-01-06 | [MemRL，v2](https://arxiv.org/abs/2601.03192v2) | 方法 / C | 环境反馈学习情景记忆效用与两阶段检索；不更新权重，也不自动改变改进规则 |
+| 2026-02-02 | [MemSkill，v2](https://arxiv.org/abs/2602.02474v2) | 方法 / C,F | 同时学习技能选择并修订记忆提取、整合、裁剪技能；designer 自身变强仍需另证 |
+| 2026-03-06 | [SAHOO，v1](https://arxiv.org/abs/2603.06333v1) | 框架 / E,F | 漂移检测、约束检查和回归风险；有限任务与校准周期不构成长期对齐保证 |
+| 2026-04-01 | [Meta-TTL，v4](https://arxiv.org/abs/2604.00830v4) | 方法 / D,F | 内环度量改进策略，外环反思式元训练；学 updater 不等于外层规则已递归加速 |
+| 2026-05-09 | [RewardHarness，v2](https://arxiv.org/abs/2605.08703v2) | 框架 / C,D,E | 从偏好示例演化评价工具与技能；免参数训练不是免人类偏好数据 |
+| 2026-06-01 | [Adaptive Auto-Harness，v3](https://arxiv.org/abs/2606.01770v3) | 框架 / C,D | 分离持久演化工作区和部署 Harness，持续修订知识；档案增长不能抵消分布漂移 |
+| 2026-07-08 | [Bounded Refinement to Research Loops，v2](https://arxiv.org/abs/2607.07663v2) | 综述 / A,D,E,F | 改进对象与闭环程度两轴及验证层次；分析框架不是新算法或普适实证定律 |
+
+本轮没有为这 12 篇重新创建 catalog 记录，也没有为了扩展地图请求 PDF。Agent0、SAGE、Meta-TTL、Adaptive Auto-Harness 的后续修订跨越数月，表中的机制据当前已保存摘要，**不声称最新版本的每项贡献都已经存在于首发版**。
+
+### 11.4 近期趋势及成熟度判断
+
+| 趋势 | 这轮来源支持的机制变化 | 能承认的成熟度与仍缺的证据 |
+| --- | --- | --- |
+| 从固定训练集走向可学习课程和信用分配 | AgentEvolver、Agent0，再到 R2Orch 的任务选择与技能撤除 | 有明确训练过程及作者报告；仍需检验任务有效性、外部验证依赖和未见分布，而非“没有人类数据即无限自生知识” |
+| 从记忆内容更新走向记忆操作更新 | SAGE、MemRL、MemSkill，再到 Skill1、Designer-RSI | 可区分存了什么、如何取用、怎样改写更新技能；需要分别冻结库、选择器、designer，防止把联合提升全归给元改进 |
+| 从修改提示走向可运行 Harness 的工程控制 | Live-SWE-agent、AHE、RHO、RRSI、HarnessPro、RSIHub | 可编辑产物、观测、谱系与成本前沿更明确；最终分数仍要接受跨任务、跨模型和等预算检验 |
+| 评价器成为可变对象，也成为失效来源 | VLM Judges、RewardHarness、SAHOO、CogRSI | 有评价学习和局部审计机制；同源 judge、少量校准、规则错误及准入集过拟合阻止直接宣布长期可信 |
+| 研发策略和模型/Harness 协同成为研究对象 | Meta-TTL、OpenRSI、MetaRSI、AIDE2、CoEvo-RSI、SwarmRSI | 优化 updater 比只改产品更接近问题核心；仍需同起点续跑对照、完整发现成本及负结果，不能由多 agent 或多轮数推导自加速 |
+| 基准开始直接测“更新是否值得保留” | ASPIRE、S3Gym、HarnessDev 与 Seed 项目页 | 目标错配、经验不迁移、代码有机制但运行不触发是可检验失败模式；建立诊断能力不等于已解决这些失败 |
+
+成熟度至少分三栏：**组件可用性、作者报告的行为收益、改进器收益的因果证据**。这不是新的级别排行榜。本轮摘要核验足以建立机制入口和边界，不能替代论文正文的消融、置信区间、数据污染检查或独立复现。旧章的 MetaRSI paired continuation 与 AIDE2 ignition 分析仍有价值，但其具体实验依据留在原版本记录中，不与当前摘要混写。
+
+### 11.5 overview 的行业、产品与非 arXiv 页面，单列核验
+
+下表不纳入“35 个 arXiv ID”的分母；网页日期只标注所读载体，不制造论文首发日。表中原文入口均保留，所有其他目录和项目链接也在覆盖账本中逐 URL 登记。
+
+| 原始来源 | 本轮实际证据 | 日期处理 | 能支持什么，不能支持什么 |
+| --- | --- | --- | --- |
+| [Flint 官方公告](https://recursive.com/updates/introducing-recursive-flint) | 部分正文：研发贡献、运行交付、下一步，以及页面日期 | 可见 2026-10-18；元数据 11-02；overview 注 10-21，保留冲突 | 公司描述 Eureka 参与研发，并发布模型/引擎；未来更强模型反哺 Eureka 仍是押注，不是已测出的递归加速 |
+| [Flint HF 模型卡](https://huggingface.co/RecursiveSI/flint) | 发布物、评测协议、配置、训练、限制、许可段落 | 没有据本次返回内容建立日级首发 | 可以确认卡片陈述的 checkpoint 与 serving kit 边界；不下载权重，不把模型发布等同 Eureka 开源，不跨运行条件拼排名 |
+| [GLM inference infrastructure](https://z.ai/blog/glm-built-its-inference-infrastructure) | 可归因反馈、正确性、并发、优化模板及结论 | 页面显示 2026-09-17 | 人类定目标和边界，agent 提假设、修改、实验；公司明确说尚未达到 RSI，内部工程结果不是独立复现实验 |
+| [GAIR 801-30B](https://github.com/GAIR-NLP/801-30B) | README 的局部回路、共享上下文、比较限制与 Release | “yesterday”不转换为首发日 | 可重跑的 debugging/headroom/experience-to-metric 回路，不是整次预训练可重跑；报告和 Tiny-SFT 有入口，base weights 仍 coming soon，PDF 未请求 |
+| [Reef 官方仓库](https://github.com/Human-Agent-Society/reef) | README 的 Serve/Observe/Grow/Commit、权重与 Harness 路径 | 相对提交/发布时间不转换为首发日 | 反馈与交互关联，候选按 recipe/evaluator 晋级并版本交付；工程接口存在不证明长期持续增益，未安装或运行 |
+| [Seed / TokenWave Self-Developing Agents](https://self-developing-agents.github.io/) | 三个基准、失败模式及 evidence-boundary 段落 | 项目页明确标 2026-09-01；不覆盖论文 v1 日期 | 目标选择、经验迁移、固定 executor 下的 Harness 演化是不同检验；页面报告的失败比“闭环已运行”更能约束强主张 |
+| [指定 OpenReview hash 文件](https://openreview.net/pdf/31dec7fbd91569b094bab29e73f62a44cf28094c.pdf)；[同题作者仓库](https://github.com/Lee1003-lee/Awesome-RSI-Research)；[候选论坛](https://openreview.net/forum?id=I3fKQbRUGy) | 仓库标题和 Paper 链接已读；论坛 HTML 返回验证页；没有请求 PDF | overview 的 2026-09-28 未升级为一手日期 | 同题作者入口可作为线索；hash 身份与正文仍未核验，不能用 Reliable survey 替代 |
+| [AI4AI 出版页](https://www.preprints.org/manuscript/202608.2108)；[配套仓库](https://github.com/KaiWU5/Awesome-AI4AI)；[项目站](https://kaiwu5.github.io/Awesome-AI4AI/) | 出版方 HTML 本轮仍被 Akamai 保护；前一轮配套证据记录保留 | 不从 URL 月份补日级首发 | 责任与证据审计可作分析入口；不据此宣布论文全文已读，活目录数与原审计样本仍分开 |
+| [Sequoia / Trajectory 访谈](https://sequoiacap.com/podcast/continual-learning-how-ai-agents-get-better-with-every-use) | 发布方 transcript 的轨迹、spec、反馈、更新路由及隐私问答 | 页面 metadata：2026-11-04 | 是生产持续学习的产品与研究论点；没有匹配学习曲线，不把合成客户分布数据当作差分隐私或授权证明 |
+
+对工业宣称最有用的读法不是问“哪家已经完成 RSI”，而是问：**发布物是什么、谁决定目标、什么信号允许更新、接受的变化是否在后续任务实际调用，以及有什么对照能排除更多计算或更好基座的贡献。** GLM 和 801 的局部工程闭环值得记录；Flint 的模型交付也是真实的产品证据类型，但这些与开放的、有效自加速的研究系统仍是不同主张。
+
+### 11.6 日期、版本和覆盖的具体纠偏
+
+- **AReaL-RSI 的 `20226.10.13` 是 overview 的用户笔误。** 本轮不改原文件；使用 catalog 指向原始 submission history 的 2026-10-13，绝不把手工备注本身作为日期证据。
+- AFlow 首发为 2024-10-14，2025-04-15 是 v4 修订；TRM 和 Recurrent Depth 的首发也在窗口外。三者有导航价值，但不计为近一年新作。
+- CogRSI 虽使用 `2611.01113` 标识，核验的首发为 2026-10-31；不按编号月份反推提交日期。
+- overview 的 Orch 对应当前 R2Orch v2；SoL-Pi 的论文日期与行业报道不是同一分母。MASS 论文为 2026-10-08，旧章的 10-12 是官方发布文章。
+- RHO 的 2026-08-29、SkillMOO 的 08-05、AHE 的 05-18、SwarmRSI 的 11-02 均按相应修订记录保留，不把它们移动为新的首发节点。
+- Flint 的日期冲突按 §11.5 原样保留，不选最便于叙事的一个日期。
+- “69/69 已处理”表示每个唯一 URL 都有处置结论，不表示 69 篇文章全文已读。AI4AI 和指定 OpenReview 文件仍有正文缺口；仅登记的仓库没有被隐式称为完整实现审计。
 
 [返回 RSI 技术全景](../01_RSI_Technical_Panorama.md)

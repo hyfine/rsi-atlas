@@ -1,89 +1,93 @@
-# RSI Atlas · 递归自我改进技术全景
+<p align="center"><a href="README.md"><strong>English</strong></a> · <a href="README.zh-CN.md">简体中文 →</a></p>
 
-**从“更好的答案”到“更好的系统”，再到“更会改进的改进器”。**
+<a href="https://hyfine.github.io/rsi-atlas/"><img src="pics/project-hero.svg" alt="RSI Atlas — source-grounded recursive self-improvement research map"></a>
 
-研究截点：**2026-11-05**。近一年窗口：**2025-11-05—2026-11-05**。中文技术解释、原始论文入口、可离线播放的动态流程和可审计证据，集中在一个仓库。
+# RSI Atlas
 
-> 这是研究导航和机制分析，不是 RSI 能力认证，也不是论文实验复现。分类是本图谱的操作性框架；作者报告、本文解释、工程建议分别标明。全量目录包含邻近领域和未经人工复核的候选，不能把目录数量解释成已精读数量。
+**One source of truth for recursive self-improvement: mechanisms, institutions, timelines and inspectable implementations.**
 
-## 开始阅读
+[Explore the live atlas](https://hyfine.github.io/rsi-atlas/) · [Family timeline](https://hyfine.github.io/rsi-atlas/#timeline) · [Institutions](https://hyfine.github.io/rsi-atlas/#institutions) · [中文切换](README.zh-CN.md)
 
-| 想解决的问题 | 入口 |
+## Start with the questions that matter
+
+What changes? What persists? Does the successor actually participate in the next improvement? Who independently checks the result?
+
+The site opens in **English**, with a visible **中文 / English** switch. Browse chronological, **family-lane** and **institution-lane** timelines; choose an inclusive start/end interval, a last-12-month window, a family, an institution and an organization type. Revisions never move a paper's first-submission node. Missing affiliations and ambiguous release dates stay visible.
+
+| Public snapshot | Coverage |
+|---|---:|
+| Curated research and related release records | 88 |
+| Records dated within 2025-11-06—2026-11-06 | 58 |
+| Records with primary affiliation/publisher attribution | 88 |
+| Operational improvement families | 6 |
+| Playable mechanism scenarios | 10 |
+| Source-pinned open implementation case studies | 6 |
+| Snapshot cutoff | 2026-11-06 |
+
+These are evidence and collection counts, **not counts of replicated algorithms**. Institutions reflect the cited author block or release publisher, not ownership, endorsement, current employment or capability rankings. Assignment is non-exclusive; unverified records remain labelled.
+
+## Focus: four ways to improve a harness — or its improver
+
+- **[Harness²](https://arxiv.org/abs/2610.14224)** — Task-level recursion performs contrastive Propose–Probe–Compose over executable harness edits. Invariant and domain-specific candidates are executed on the current task; their behavioral contrasts guide selective composition. After the task, an improvement library retains the adopted executable harness and supported lessons. Subsequent tasks restart from the common execution harness but use the updated library to guide refinement. Model weights, stage instructions and decision rules remain fixed.
+- **[Evo²](https://arxiv.org/abs/2610.13025)** — A shared-parameter policy acts as both Proposer and Reflector. Harness tree search produces autonomous edits, feedback-directed revisions and cross-branch strategy transfers. Evaluated modifications supply training experience for EvoTIDE: trajectory recovery through edit extraction and prefix continuation, an SFT warm start, then interleaved GRPO for both roles. Updated evolver weights guide subsequent search, while the task executor remains fixed.
+- **[RRSI](https://arxiv.org/abs/2609.24972)** — RRSI leaves the harness edit space open while regularizing proposal and selection. It anneals the number of independent edits, conditions proposals on an evidence ledger and redirects stalled search toward untried components. A pre-evaluation critic screens leakage; admissibility combines a best-ever noise-adjusted floor, gain-dependent token-cost control, a separate within-noise-band rule and domain guards. Unproductive components become pruning targets.
+- **[OO-Harness](https://arxiv.org/abs/2610.28380)** — OO-Harness evolves a hierarchy of executable harness classes on discovery tasks. An evolution agent clusters execution needs, selects a parent and creates subclasses through inheritance, overrides and new methods. Cluster-local evaluations determine acceptance and supply design/routing lessons. Deployment freezes the hierarchy and lessons. A router uses the task and observable base execution to choose one complete specialized class or reuse the base result; ancestor classes are not separately executed agents.
+
+[Detailed focus review, flow diagrams and evidence limits](docs/zh/10_Harness_Focus.md) · [All supplied updates and institutional sources](docs/zh/11_Institutions_and_Updates.md)
+
+Evo² here is **weight–harness co-evolution of an evolver**, not the genomic Evo 2 model and not CoEvo-RSI. New code availability is not assumed where no official implementation was verified.
+
+## Explore the landscape
+
+![Actual non-exclusive family counts](pics/project-charts.svg)
+
+| Improvement object | Category architecture | Representative flow |
+|---|---|---|
+| A. Models & training | [Open architecture](pics/family-a-architecture.html) | [Play flow](pics/family-a-flow.html) |
+| B. Data & environments | [Open architecture](pics/family-b-architecture.html) | [Play flow](pics/family-b-flow.html) |
+| C. Memory & skills | [Open architecture](pics/family-c-architecture.html) | [Play flow](pics/family-c-flow.html) |
+| D. Harness & workflows | [Open architecture](pics/family-d-architecture.html) | [Play flow](pics/family-d-flow.html) |
+| E. Evaluation | [Open architecture](pics/family-e-architecture.html) | [Play flow](pics/family-e-flow.html) |
+| F. Meta-improvement | [Open architecture](pics/family-f-architecture.html) | [Play flow](pics/family-f-flow.html) |
+
+Family diagrams are **project-authored conceptual architectures**, not universal algorithms or copied paper figures. [Six family explanations](docs/zh/08_Family_Architectures.md) and [six explicitly licensed paper figures/details](docs/zh/09_Paper_Figures.md) are kept separate.
+
+## From papers to code
+
+[Six implementation deep dives](docs/repo_deepdive/README.md) · [Interactive source walkthroughs](docs/repo_deepdive/implementation-atlas.html)
+
+GenericAgent · GEPA · SoL-Pi · HyperAgents · RRSI · OpenRSI. Fixed commits, 72 module mappings, architecture and branching workflows, setup requirements, limitations and practical comparisons. Source-available/non-commercial licenses are distinguished from permissive open source. These reviews did not execute paid research experiments.
+
+## Read deeper
+
+The interface and summaries are bilingual; the comprehensive technical chapters remain in Chinese and link to original papers.
+
+| Topic | Guide |
 |---|---|
-| 先看清领域如何发展、各路线如何连接 | [技术全景](docs/zh/01_RSI_Technical_Panorama.md) · [动态全景站](https://hyfine.github.io/rsi-atlas/) |
-| 各 family 的整体思想与组件架构 | [A–F 六张独立架构图](docs/zh/08_Family_Architectures.md) |
-| 论文内部已有架构图与复用许可 | [原论文图、作者署名与图像状态](docs/zh/09_Paper_Figures.md) |
-| 各算法究竟更新什么、如何实现、怎样选型 | [算法手册](docs/zh/04_Algorithm_Handbook.md) |
-| 热门公开实现怎样把机制落到代码 | [六仓库源码深读](docs/repo_deepdive/README.md) · [架构与动态路径](docs/repo_deepdive/implementation-atlas.html) |
-| 最近一年有哪些方法，最新论文是什么 | [近一年研究与最新方法](docs/zh/06_Latest_Year_Research.md) |
-| 训练、自博弈、环境演化与自动研究 | [训练与环境专题](docs/zh/chapters/02_Training_Environments_and_AI_Research.md) |
-| 记忆、技能、工作流、Harness 演化 | [Agent 与 Harness 专题](docs/zh/chapters/03_Agent_Skills_and_Harness.md) |
-| 元改进、泛化、成本与安全怎么验证 | [Meta-RSI 与评测专题](docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md) |
-| 产业案例、综述边界及未解决问题 | [综述与前沿专题](docs/zh/chapters/05_Surveys_Industry_and_Frontiers.md) |
-| 逐篇日期、方法分类、来源与阅读层级 | [方法数据](data/atlas-methods.json) · [代表作时间索引](docs/zh/03_Method_Map_and_Timeline.md) |
-| 更多文献线索 | [全量分卷目录](catalog/index.md) · [经典阅读清单](catalog/classics.md) |
-| 想继续维护，而不只看一次 | [维护与验收协议](docs/zh/07_Maintenance_and_Review.md) |
+| Landscape and chronology | [Panorama](docs/zh/01_RSI_Technical_Panorama.md) · [Method map](docs/zh/03_Method_Map_and_Timeline.md) |
+| Theory, mechanisms and implementation choices | [Algorithm handbook](docs/zh/04_Algorithm_Handbook.md) |
+| Training and task/environment evolution | [Training and environments](docs/zh/chapters/02_Training_Environments_and_AI_Research.md) |
+| Memory, skills and harnesses | [Agent systems](docs/zh/chapters/03_Agent_Skills_and_Harness.md) |
+| Meta-improvement, evaluation and safety | [Evidence and evaluation](docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md) |
+| Industry and surveys | [Sources and frontiers](docs/zh/chapters/05_Surveys_Industry_and_Frontiers.md) |
+| Original source inventory | [Full catalog](catalog/index.md) · [Classic reading list](catalog/classics.md) |
+| Maintenance and consolidation | [Contributing](CONTRIBUTING.md) · [Consolidation](docs/maintenance/CONSOLIDATION.md) |
 
-## 一张图理解 RSI
-
-![六个改进对象家族](pics/rsi-family.svg)
-
-![三条并行发展路线](pics/rsi-timeline.svg)
-
-**六类对象：** A 模型与训练；B 数据、任务与环境；C 记忆与技能；D Harness 与工作流；E 评价器；F 研究与改进器。
-
-**四种闭环：** L0 任务内修订；L1 固定改进器下的持久适应；L2 更新产物参与下一轮改进；L3 改进机制本身改变并被后续使用。这是反馈深度，不是成熟度或安全等级。
-
-## 动态图不只是装饰
-
-[打开自包含 HTML](index.html)，或者访问[在线图谱](https://hyfine.github.io/rsi-atlas/)。
-
-- 六家族全景、可筛选真实日期时间线、逐篇方法详情和原文跳转。
-- 十个可播放闭环：通用晋级、自训练、自博弈、技能积累、Harness 搜索、Dream-RSI、MetaRSI、CoEvo-RSI、评价器校准、RSI-Opt。
-- 支持播放/暂停、单步、复位、速度选择、键盘操作、明暗主题与减少动态效果设置。
-- 每一步解释变化对象、冻结边界、反馈来源和验证局限；**动画是机制示意，不是假造实验轨迹**。
-- 数据内嵌、无 CDN、无遥测；下载单个 HTML 即可离线使用。论文原文和 Markdown 章节仍需要网络或完整仓库。
-
-## 最新论文与主要转向
-
-近一年不是“全部 2025 年经典”，也不是“最近修订过的旧论文”。已直接复核的近期原始来源包括：
-
-- 2026-11-02：[CoworkOS](https://arxiv.org/abs/2611.03178)、[SelfImprove-Bench](https://arxiv.org/abs/2611.02797)。
-- 2026-10-31：[CogRSI](https://arxiv.org/abs/2611.01113)：提高准确率的规则仍可能语义错误。
-- 2026-10-29：[RSI-Dojo](https://arxiv.org/abs/2611.03698)：可执行后训练环境与训练模型做后训练的能力。
-- 2026-10-25：[ParetoRSI-Gym](https://arxiv.org/abs/2610.34386)：多领域收益与退化需要同时测量。
-- 2026-10-23：[RSI-Opt](https://arxiv.org/abs/2610.32026)、[RSIHub](https://arxiv.org/abs/2610.32253)。
-- 2026-10-19 / 18：[HarnessPro](https://arxiv.org/abs/2610.26770)、[CoEvo-RSI](https://arxiv.org/abs/2610.25078)。
-- 2026-09：[MetaRSI](https://arxiv.org/abs/2609.06396)、[Dream-RSI](https://arxiv.org/abs/2609.14858)、[SoL-Pi](https://arxiv.org/abs/2609.20519)、[RRSI](https://arxiv.org/abs/2609.24972)。
-
-检索截至 11 月 5 日，不保证数据库已经完整索引截止日的所有新稿。当前直接核验的最新首发日期是 11 月 2 日；arXiv 编号月份不总等于 submission history 的日期。详细范围见[近期研究](docs/zh/06_Latest_Year_Research.md)。
-
-## 可复现构建与检查
-
-Node.js 22+，无需安装依赖：
+## Rebuild locally — no runtime dependencies
 
 ```sh
 node scripts/build-atlas.mjs
 node scripts/validate-delivery.mjs
-node --test scripts/viewer.test.mjs
+node --test scripts/*.test.mjs
 ```
 
-本地笔记另有自己的相对图片路径时，显式同步并核验，不只更新公开仓库：
+Node.js 22+; Chrome/Chromium enables real-browser checks. Builds use local source data: no CDN, telemetry, translation requests, model calls or paper downloads. The standalone HTML views can be opened offline. Skipped browser checks are never called a visual pass.
 
-```sh
-node scripts/build-family-diagrams.mjs --notes-root /path/to/RSI-notes
-RSI_NOTES_ROOT=/path/to/RSI-notes node --test scripts/family.test.mjs
-```
+**Only this repository is maintained.** Former external notebooks were moved into a verified, local-only immutable archive; richer public prose was integrated here. Raw PDFs, private engineering cases, original logs and old acquisition tools remain ignored under local storage and are not published. See [the consolidation protocol](docs/maintenance/CONSOLIDATION.md).
 
-目标笔记根目录需要含 `chapters/`。脚本同步六家族的架构/流程 SVG 与独立 HTML、获准论文图，并只更新对应图块；不会用公开旧章节覆盖本地新增正文。
+## Evidence, reuse and limits
 
-浏览器实测需要本机 Chrome/Chromium；测试找不到浏览器时明确标记 skipped，不能当成视觉通过。公开构建不调用模型、不下载论文、不执行研究仓库源码。
-
-原始语料采集工具及日志只保留在作者工作区，不进入公开 Git；[语料说明](scripts/CORPUS.md)解释其边界。论文 PDF、模型权重、下载缓存和个人路径不公开再分发。家族 SVG/HTML 是本项目原创；另外收录六幅明确 CC BY 4.0 的论文图或标记局部，逐图注明作者、版本、图号、裁取范围和来源；其余原图未经授权不复制。
-
-## 最重要的结论
-
-1. 参数冻结不代表没有学习；持久的技能、记忆和执行结构也是能力载体。
-2. 一次优化、多轮搜索、递归改进与改进效率提高是不同命题。
-3. 验证吞吐、留出泛化、跨模型迁移和端到端成本比单条上涨曲线更重要。
-4. 2026 年前沿集中在多对象协同、元改进、低成本验证与经验继承；尚不能据此宣称开放世界的无限加速已实现。
+- First submissions, revisions, corporate display dates and collection dates are distinct. The official Flint page has an explicitly retained date conflict; a supplied OpenReview reference and WeChat article remain access-challenged rather than substituted or invented.
+- Better output, persistent adaptation, recursive reuse and a more effective improver are different claims. An upward score curve is not proof of open-ended acceleration.
+- [Third-party notices](THIRD_PARTY_NOTICES.md) preserve runtime/icon terms and six CC BY 4.0 figure attributions. Paper links do not grant redistribution rights.
+- All method-level reading scopes, source URLs and caveats are inspectable in [the public dataset](data/atlas-methods.json).

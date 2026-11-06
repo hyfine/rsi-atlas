@@ -28,6 +28,24 @@
       "完整读取本地00_RSI_overview.md 528行作为待核线索，未修改原文。"
     ],
     "source_doc": "https://arxiv.org/html/2601.18226v1",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2601.18226",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-01-26",
+      "latest_version": "v2",
+      "latest_version_date": "2026-02-06",
+      "date_source": "https://arxiv.org/abs/2601.18226"
+    },
     "round_review": {
       "reviewed_on": "2026-11-05",
       "read_level": "method_sections",
@@ -105,7 +123,53 @@
       "搜索档案筛选造成幸存者偏差；不能将编辑相关性视为因果效果。",
       "首发2026-04-10，所读v3为2026-08-05。"
     ],
-    "source_doc": "https://arxiv.org/html/2604.09297v3"
+    "source_doc": "https://arxiv.org/html/2604.09297v3",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2604.09297",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-04-10",
+      "latest_version": "v3",
+      "latest_version_date": "2026-08-05",
+      "date_source": "https://arxiv.org/abs/2604.09297"
+    },
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "abstract",
+      "version": "v3",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2604.09297v3",
+          "sections": [
+            "abstract",
+            "submission history"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "LLM提出技能bundle编辑，NSGA-II按通过率与推理费用做Pareto选择；不是只追求加技能或最高通过率。",
+          "locator": "v3 abstract"
+        },
+        {
+          "claim": "本轮摘要页极值仍为31.7%成本下降和21个百分点增益，与旧记录中HTML极值不同。",
+          "locator": "v3 abstract"
+        }
+      ],
+      "limitations": [
+        "本轮未重读方法和实验正文；旧NSGA-II实现、搜索预算、回本次数依赖保留的v3章节记录。",
+        "未解决摘要与HTML的数值不一致，不用两者极值进行跨方法排名。"
+      ]
+    }
   },
   {
     "id": "ahe",
@@ -137,7 +201,53 @@
       "token均值排除基础设施中断试次，成功率把这些试次算失败。",
       "所读v4发布于2026-05-18；非独立复现。"
     ],
-    "source_doc": "https://arxiv.org/html/2604.25850v4"
+    "source_doc": "https://arxiv.org/html/2604.25850v4",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2604.25850",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-04-28",
+      "latest_version": "v4",
+      "latest_version_date": "2026-05-18",
+      "date_source": "https://arxiv.org/abs/2604.25850"
+    },
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "abstract",
+      "version": "v4",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2604.25850v4",
+          "sections": [
+            "abstract",
+            "submission history"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "组件文件化、分层轨迹证据、编辑预测与下一轮实际结果对照构成三类可观测性。",
+          "locator": "v4 abstract"
+        },
+        {
+          "claim": "十轮TB2 69.7%到77.0%；摘要明确冻结harness迁往另一基准和其他模型，不是所有模型重新搜索。",
+          "locator": "v4 abstract"
+        }
+      ],
+      "limitations": [
+        "本轮仅摘要；回归召回、组件消融、费用分母与精确SWE指标保留旧正文记录，不声称本轮重新测量。",
+        "摘要中的一般性解释不外推为所有提示策略均不能迁移。"
+      ]
+    }
   },
   {
     "id": "rho",
@@ -167,7 +277,53 @@
       "可重置重试前提；自偏好排序、轨迹污染与仅提示级测试隔离仍有风险。",
       "所读v3为2026-08-29；不得把HarnessPro复测RHO数字替代原论文数字。"
     ],
-    "source_doc": "https://arxiv.org/html/2606.05922v3"
+    "source_doc": "https://arxiv.org/html/2606.05922v3",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2606.05922",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-06-04",
+      "latest_version": "v3",
+      "latest_version_date": "2026-08-29",
+      "date_source": "https://arxiv.org/abs/2606.05922"
+    },
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "abstract",
+      "version": "v3",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2606.05922v3",
+          "sections": [
+            "abstract",
+            "submission history"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "过去轨迹选困难且多样的coreset，重解后以self-validation与self-consistency诊断，再按配对自偏好选候选。",
+          "locator": "v3 abstract"
+        },
+        {
+          "claim": "摘要明确单轮SWE-Bench Pro从59%到78%，不是多轮递归复利实验。",
+          "locator": "v3 abstract"
+        }
+      ],
+      "limitations": [
+        "本轮未重读完整方法，具体rank阈值与103次调用口径沿用旧章节证据。",
+        "无外部标签的演化不表示最终测试不用官方判分；原论文数字不替代HarnessPro中的统一复测。"
+      ]
+    }
   },
   {
     "id": "dream-rsi",
@@ -231,6 +387,24 @@
       "正文图像为arXiv非独占分发许可。"
     ],
     "source_doc": "https://arxiv.org/html/2609.20519v1",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2609.20519",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-09-17",
+      "latest_version": "v1",
+      "latest_version_date": "2026-09-17",
+      "date_source": "https://arxiv.org/abs/2609.20519"
+    },
     "round_review": {
       "reviewed_on": "2026-11-05",
       "read_level": "method_sections",
@@ -330,6 +504,24 @@
       "所读v3发布于2026-10-04。"
     ],
     "source_doc": "https://arxiv.org/html/2609.24972v3",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2609.24972",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-09-21",
+      "latest_version": "v3",
+      "latest_version_date": "2026-10-04",
+      "date_source": "https://arxiv.org/abs/2609.24972"
+    },
     "round_review": {
       "reviewed_on": "2026-11-05",
       "read_level": "method_sections",
@@ -445,6 +637,24 @@
       "两模型各自演化不是同一产物不改动跨模型迁移。"
     ],
     "source_doc": "https://arxiv.org/html/2610.26770v2",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2610.26770",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-10-19",
+      "latest_version": "v2",
+      "latest_version_date": "2026-10-20",
+      "date_source": "https://arxiv.org/abs/2610.26770"
+    },
     "round_review": {
       "reviewed_on": "2026-11-05",
       "read_level": "method_sections",
@@ -533,7 +743,49 @@
       "字符/token启发式对CJK可低估上下文占用。",
       "有限重复任务上的效率下降不支持边际成本趋零或普遍OOD保证。"
     ],
-    "source_doc": "https://arxiv.org/html/2604.17091v1"
+    "source_doc": "https://arxiv.org/html/2604.17091v1",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2604.17091",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-04-18",
+      "latest_version": "v1",
+      "latest_version_date": "2026-04-18",
+      "date_source": "https://arxiv.org/abs/2604.17091"
+    },
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "abstract",
+      "version": "v1",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2604.17091v1",
+          "sections": [
+            "abstract",
+            "submission history"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "原子工具、按需分层记忆、执行经历到SOP/代码的凝练与上下文截断压缩，目标是有限上下文中的决策相关信息。",
+          "locator": "v1 abstract"
+        }
+      ],
+      "limitations": [
+        "本轮未重读正文；九工具、表8 token曲线及人工维护边界沿用旧v1章节记录。",
+        "摘要中的持续演化不证明核心架构自重写或边际费用趋零。"
+      ]
+    }
   },
   {
     "id": "skill1",
@@ -563,7 +815,49 @@
       "仅两个文本环境，固定奖励分解及训练算法，不是完整L3。",
       "附录C另列UCB/greedy选取配置，与正文可训练排序的接口关系需代码复现核对；本文未做代码审计。"
     ],
-    "source_doc": "https://arxiv.org/html/2605.06130v3"
+    "source_doc": "https://arxiv.org/html/2605.06130v3",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2605.06130",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-05-07",
+      "latest_version": "v3",
+      "latest_version_date": "2026-05-12",
+      "date_source": "https://arxiv.org/abs/2605.06130"
+    },
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "abstract",
+      "version": "v3",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2605.06130v3",
+          "sections": [
+            "abstract",
+            "submission history"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "单一策略联合训练技能选择、利用与蒸馏，共享任务结果信号；外部技能库和参数学习不是互斥路线。",
+          "locator": "v3 abstract"
+        }
+      ],
+      "limitations": [
+        "本轮未重读奖励、优化器及成本正文；旧EMA/GRPO公式与训练数字仍依赖v3具名章节。",
+        "摘要的低频/高频描述不能独立证明频谱定理或因果信用分配。"
+      ]
+    }
   },
   {
     "id": "cosplay",
@@ -593,7 +887,49 @@
       "正文及附录A说多玩家训练对手GPT-5-mini，附录H却解释为共享模型对称self-play，存在描述不一致。",
       "效果契约依赖文本状态摘要；跨模态和广域迁移仍是未来方向。"
     ],
-    "source_doc": "https://arxiv.org/html/2604.20987v1"
+    "source_doc": "https://arxiv.org/html/2604.20987v1",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2604.20987",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-04-22",
+      "latest_version": "v1",
+      "latest_version_date": "2026-04-22",
+      "date_source": "https://arxiv.org/abs/2604.20987"
+    },
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "abstract",
+      "version": "v1",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2604.20987v1",
+          "sections": [
+            "abstract",
+            "submission history"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "决策agent学习技能检索和动作，技能库agent从无技能标签rollout提取、细化与更新带契约的技能。",
+          "locator": "v1 abstract"
+        }
+      ],
+      "limitations": [
+        "本轮仅摘要；五LoRA、奖励、教师SFT与游戏训练预算依赖旧正文记录。",
+        "摘要25.1%与四个前沿基线的措辞较宽，保留旧正文限定，不扩大为统一成功率或全面胜出。"
+      ]
+    }
   },
   {
     "id": "adas",
@@ -1001,6 +1337,377 @@
       "未取得统一端到端费用账本，不据轮数推导净成本收益。",
       "持久Job运行依赖仍存活的宿主进程；恢复状态不是任意故障下任务必定继续的保证。"
     ],
-    "source_doc": "https://arxiv.org/html/2611.03178v1"
+    "source_doc": "https://arxiv.org/html/2611.03178v1",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2611.03178",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-11-02",
+      "latest_version": "v1",
+      "latest_version_date": "2026-11-02",
+      "date_source": "https://arxiv.org/abs/2611.03178"
+    },
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "abstract",
+      "version": "v1",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2611.03178v1",
+          "sections": [
+            "abstract",
+            "submission history"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "模型负责动作、委派与接纳，runtime维护状态反馈；持久工作区、语义记忆和Job日志支撑跨会话连续性。",
+          "locator": "v1 abstract"
+        },
+        {
+          "claim": "GLM-5.3控制研究，目标为Qwen3.6-35B-A3B后训练；摘要五轮八基准均分33.19到42.95。",
+          "locator": "v1 abstract"
+        }
+      ],
+      "limitations": [
+        "本轮未重读第4.3节与附录A.3；R0/R1起点差异、R2回退和去重细节沿用旧正文证据。",
+        "持续执行不自动证明runtime自改写；摘要终点增益不能变成单调、等算力或独立留出结论。"
+      ]
+    }
+  },
+  {
+    "id": "designer-rsi",
+    "method": "Designer-RSI",
+    "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
+    "primary_url": "https://arxiv.org/abs/2609.22086",
+    "repo_url": null,
+    "first_date": "2026-09-18",
+    "read_level": "abstract",
+    "sections_read": [
+      "v1 abstract",
+      "submission history"
+    ],
+    "mechanism": "冻结模型，外部自然语言程序性技能库通过widening补充未覆盖子任务、deepening根据成功失败经历修订；matched replay gate接纳修复失败而不损害已观察成功的更新。",
+    "evidence": [
+      "原摘要明确无权重更新、无需人类标签，但采用自动评分。",
+      "持久产物是可复用设计过程知识，不必是程序源码。"
+    ],
+    "limitations": [
+      "仅摘要阅读；检索、回放重复、统计接纳阈值、完整费用和隐私处理协议均待正文核查。",
+      "自动评审不是真值，观察到的回归约束不保证未来任务无回退。",
+      "未从overview的机构分组推断归属；官方仓库尚未核实。"
+    ],
+    "source_doc": "https://arxiv.org/abs/2609.22086v1",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2609.22086",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-09-18",
+      "latest_version": "v1",
+      "latest_version_date": "2026-09-18",
+      "date_source": "https://arxiv.org/abs/2609.22086"
+    },
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "abstract",
+      "version": "v1",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2609.22086v1",
+          "sections": [
+            "abstract",
+            "submission history"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "模型冻结、自然语言程序性技能库的拓宽与加深，以及matched replay gate。",
+          "locator": "v1 abstract"
+        }
+      ],
+      "limitations": [
+        "未阅读方法或实验正文；本章不引用摘要极值作同预算横评。"
+      ]
+    }
+  },
+  {
+    "id": "harnessdev",
+    "method": "HarnessDev",
+    "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+    "primary_url": "https://arxiv.org/abs/2609.01437",
+    "repo_url": null,
+    "first_date": "2026-09-01",
+    "read_level": "abstract",
+    "sections_read": [
+      "v1 abstract",
+      "submission history"
+    ],
+    "mechanism": "评估模型产生可运行基础设施的能力：Creation从最小seed和少量案例构建harness，Evolution从自产harness按下游执行反馈修改；留出任务能力与执行token费用分开测量。",
+    "evidence": [
+      "摘要报告六个创建模型、四个领域、五个下游基准和2207个不同实例。",
+      "演化增益不稳定，只部分迁移到留出任务；固定runtime模型对照显示依赖实际执行模型。"
+    ],
+    "limitations": [
+      "基准不是单一优化算法，不赋予统一L3等级。",
+      "仅摘要；创建/搜索总预算、seed内容、分区与隔离实现、重复次数待正文核查。",
+      "不从overview Seed标题推定机构归属；未核实直接官方仓库。"
+    ],
+    "source_doc": "https://arxiv.org/abs/2609.01437v1",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2609.01437",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-09-01",
+      "latest_version": "v1",
+      "latest_version_date": "2026-09-01",
+      "date_source": "https://arxiv.org/abs/2609.01437"
+    },
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "abstract",
+      "version": "v1",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2609.01437v1",
+          "sections": [
+            "abstract",
+            "submission history"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "Creation/Evolution评测阶段、冻结权重的harness变量、留出表现和执行token成本、六创建模型/四域/五基准/2207实例以及有限迁移。",
+          "locator": "v1 abstract"
+        }
+      ],
+      "limitations": [
+        "数字仅为原摘要覆盖范围，未复核正文表格或完整预算。"
+      ]
+    }
+  },
+  {
+    "id": "coevo-rsi",
+    "method": "CoEvo-RSI",
+    "title": "CoEvo-RSI: When Harnesses Evolve, Which Models Should Follow?",
+    "primary_url": "https://arxiv.org/abs/2610.25078",
+    "repo_url": null,
+    "first_date": "2026-10-18",
+    "read_level": "abstract",
+    "sections_read": [
+      "v1 abstract",
+      "submission history"
+    ],
+    "mechanism": "meta-agent从共享演化档案双向继承历史harness和模型能力，选择/合并checkpoint，并在选定harness下使用自身rejection-sampled轨迹进行SFT；A+D联动，历史档案为C载体。",
+    "evidence": [
+      "摘要明确权重适配采用SFT而非全冻结harness搜索。",
+      "历史模型checkpoint与执行要求共同影响继承选择，不是单纯提示重写。"
+    ],
+    "limitations": [
+      "仅摘要；合并系数、筛选oracle、SFT预算和完整消融未核实。",
+      "跨垂域应用成绩不等于同一冻结产物跨域迁移；摘要未证明meta-agent程序自修改。",
+      "未核实直接官方仓库或机构归属。"
+    ],
+    "source_doc": "https://arxiv.org/abs/2610.25078v1",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2610.25078",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-10-18",
+      "latest_version": "v1",
+      "latest_version_date": "2026-10-18",
+      "date_source": "https://arxiv.org/abs/2610.25078"
+    },
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "abstract",
+      "version": "v1",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2610.25078v1",
+          "sections": [
+            "abstract",
+            "submission history"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "共享档案与执行反馈支持历史harness开发、模型checkpoint选择或合并，以及自生成筛选轨迹的SFT适配。",
+          "locator": "v1 abstract"
+        }
+      ],
+      "limitations": [
+        "不据摘要写出具体搜索、合并算法或元递归等级；不采用未复核的跨模型优越性数字。"
+      ]
+    }
+  },
+  {
+    "id": "r2orch",
+    "method": "R2Orch",
+    "title": "R2Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop",
+    "primary_url": "https://arxiv.org/abs/2610.22740",
+    "repo_url": "https://github.com/beita6969/R2Orch",
+    "first_date": "2026-10-15",
+    "read_level": "abstract",
+    "sections_read": [
+      "v2 abstract",
+      "submission history: v1 2026-10-15, v2 2026-10-22"
+    ],
+    "mechanism": "内层自选任务self-play编排学习，外层Recursive Learnability在技能撤回过程中维持不同rollout结果；失败凝练成技能、技能内化到参数、受控比较通过后撤回技能，再寻找新失败。",
+    "evidence": [
+      "摘要明确skills into parameters，因此不是基础权重冻结的prompt搜索。",
+      "Skill Withdrawal以不用技能也表现相当的受控比较为条件，而非简单缩短技能列表。",
+      "原摘要直接链接官方仓库；overview的Orch为同一arXiv记录。"
+    ],
+    "limitations": [
+      "仅摘要；实际参数优化器、模型共享关系、统计等效阈值、重复次数和总预算均待正文核查。",
+      "zero-skill deployment为推进方向，不据此宣称所有任务已无辅助依赖。",
+      "外层改变内层学习条件不等于改进器源码已自修改。"
+    ],
+    "source_doc": "https://arxiv.org/abs/2610.22740v2",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2610.22740",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2026-10-15",
+      "latest_version": "v2",
+      "latest_version_date": "2026-10-22",
+      "date_source": "https://arxiv.org/abs/2610.22740"
+    },
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "abstract",
+      "version": "v2",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2610.22740v2",
+          "sections": [
+            "abstract",
+            "submission history"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "Recursive Learnability、内外两层自博弈与Skill Withdrawal，将失败、外部技能和模型参数相连。",
+          "locator": "v2 abstract"
+        }
+      ],
+      "limitations": [
+        "未阅读方法及实验正文或执行仓库；不猜写奖励公式。"
+      ]
+    }
+  },
+  {
+    "id": "sica",
+    "method": "SICA",
+    "title": "A Self-Improving Coding Agent",
+    "primary_url": "https://arxiv.org/abs/2504.15228",
+    "repo_url": null,
+    "first_date": "2025-04-21",
+    "read_level": "abstract",
+    "sections_read": [
+      "v2 abstract",
+      "submission history: v1 2025-04-21, v2 2025-05-16"
+    ],
+    "mechanism": "具备基本编码工具的agent编辑自己的代理源码，通过LLM反思和代码更新形成非梯度的改进；与提示字符串优化或技能库入库区分。",
+    "evidence": [
+      "原摘要明确agent system edits itself，报告的SWE-bench Verified成绩是随机子集。",
+      "不能把DGM的档案保留、父代抽样和固定外层细节移植给SICA。"
+    ],
+    "limitations": [
+      "经典参照，仅摘要阅读；未核查完整搜索预算、外层可写范围、独立留出或具体停止规则。",
+      "不从摘要推断所有改进机制可改写或赋予统一L3等级；官方仓库本轮未核实。"
+    ],
+    "source_doc": "https://arxiv.org/abs/2504.15228v2",
+    "catalog_check": {
+      "path": "private-evidence/rsi-atlas/data/catalog.json",
+      "id": "arxiv:2504.15228",
+      "checked_on": "2026-11-05",
+      "fields_read": [
+        "abstract",
+        "date",
+        "latest_version_date",
+        "resolved_version",
+        "primary_url",
+        "date_source",
+        "source_urls"
+      ],
+      "first_date": "2025-04-21",
+      "latest_version": "v2",
+      "latest_version_date": "2025-05-16",
+      "date_source": "https://arxiv.org/abs/2504.15228"
+    },
+    "round_review": {
+      "reviewed_on": "2026-11-05",
+      "read_level": "abstract",
+      "version": "v2",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2504.15228v2",
+          "sections": [
+            "abstract",
+            "submission history"
+          ]
+        }
+      ],
+      "supported_claims": [
+        {
+          "claim": "反思驱动的agent源码自修改、非梯度代码学习，以及SWE-bench随机子集范围。",
+          "locator": "v2 abstract"
+        }
+      ],
+      "limitations": [
+        "不补写全文算法、预算或L3结论；未独立复现实验。"
+      ]
+    }
   }
 ]

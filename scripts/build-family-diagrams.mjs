@@ -58,8 +58,8 @@ function paperGuide(manifest,prefix){
   return `# 论文原图：来源、版本与复用许可\n\n与家族原创架构分开：下列为明确 CC BY 4.0 的原论文 HTML/PDF 图形区域截图，不是本文重绘，也不是全领域共享的算法。局部裁图明确标记，仅转换显示/裁取区域，未改动图内内容；完整图与图注通过原文访问。作者结论不等于本文复现。\n\n目前嵌入 ${manifest.figures.length} 幅已核验图或明确标记的局部，其余条目保留原文与明确的图像状态；不声称所有论文已经配图，也不为未知图号制造“Figure 1”。arXiv 非独占分发许可不自动授予本项目再分发权。\n\n${manifest.figures.map(figure=>`## ${figure.paper}\n\n![${figure.paper} 原论文 ${figure.figure}](${prefix}${figure.asset})\n\n**原图：**${figure.figure}，${figure.version}。[原论文图位置](${figure.source_url}) · [许可：CC BY 4.0](${figure.license_url})。\n\n**作者署名：**${figure.authors.map(markdown).join('；')}。\n\n**如何读图：**${figure.explanation}\n\n**版本与变更：**${figure.changes}。图内原有标签保留英文，不将其伪装为中文原创家族图。文件 SHA-256：\`${figure.sha256}\`。\n`).join('\n')}\n## 全部精选论文的图像状态\n\n| 论文 | 状态 | 来源 |\n|---|---|---|\n${manifest.papers.map(paper=>`| ${markdown(paper.method)} | ${paper.status==='included_cc_by'?'已嵌入授权原图/明确局部':paper.status==='link_only_license_not_granted'?'所查版本未提供再分发许可，仅链接':'尚未逐图核验，仅链接'} | [原文](${paper.primary_url})${paper.license_url?` · [所查许可](${paper.license_url})`:''} |`).join('\n')}\n`;
 }
 
-function wireChapters(destination,mode,families,manifest){
-  const chapterRoot=mode==='public'?path.join(destination,'docs/zh/chapters'):path.join(destination,'chapters');
+function wireChapters(destination,families,manifest){
+  const chapterRoot=path.join(destination,'docs/zh/chapters');
   const targets={a:'02_Training_Environments_and_AI_Research.md',b:'02_Training_Environments_and_AI_Research.md',c:'03_Agent_Skills_and_Harness.md',d:'03_Agent_Skills_and_Harness.md',e:'04_Meta_RSI_Evaluation_and_Safety.md',f:'04_Meta_RSI_Evaluation_and_Safety.md'};
   const attachments=[];
   for(const name of new Set(Object.values(targets))){
@@ -71,7 +71,7 @@ function wireChapters(destination,mode,families,manifest){
       const start=`<!-- family-${family.id}-architecture:start -->`,end=`<!-- family-${family.id}-architecture:end -->`;
       const asset=path.relative(chapterRoot,path.join(destination,'pics',`family-${family.id}-architecture.svg`)).split(path.sep).join('/');
       const html=asset.replace(/\.svg$/,'.html');
-      const guideName=mode==='public'?'../08_Family_Architectures.md':'../04_Family_Architectures.md';
+      const guideName='../08_Family_Architectures.md';
       const block=`${start}\n![${family.code} 家族整体思想架构](${asset})\n\n[交互架构](${html}) · [六家族说明](${guideName})。${family.idea} 这是家族级原创架构；下方流程图是代表方法或参考协议，二者不互相替代。\n${end}\n\n`;
       const old=new RegExp(`${start}[\\s\\S]*?${end}\\s*`);
       if(old.test(text))text=text.replace(old,block);
@@ -89,7 +89,7 @@ function wireChapters(destination,mode,families,manifest){
       const block=`${start}\n![${figure.paper} 原论文 ${figure.figure}](${asset})\n\n原论文 ${figure.figure}（${figure.version}），[作者原文及图注](${figure.source_url})；[CC BY 4.0](${figure.license_url})。${figure.authors.join('；')}。${figure.changes}。${figure.explanation}\n${end}\n\n`;
       const prior=new RegExp(`${start}[\\s\\S]*?${end}\\s*`);
       if(prior.test(text)){text=text.replace(prior,block);attachments.push({paper:figure.paper,chapter:name,placement:'existing_paper_block'});continue;}
-      const heading=new RegExp(`^#{2,4}[^\\n]*${figure.heading_pattern}[^\\n]*$`,'mi');
+      const heading=new RegExp(`^#{2,4}[^\\n]*(?:${figure.heading_pattern})[^\\n]*$`,'mi');
       const match=text.match(heading);
       if(match){text=text.replace(heading,value=>value+'\n\n'+block.trimEnd());attachments.push({paper:figure.paper,chapter:name,placement:'paper_heading'});}
       else{
@@ -105,12 +105,11 @@ function wireChapters(destination,mode,families,manifest){
   return attachments;
 }
 
-export function buildFamilyDiagrams(notesRoot){
+export function buildFamilyDiagrams(){
   const catalog=read('data/family-architectures.json'),scenes=read('data/dynamic-scenes.json');
   const manifest=read('data/paper-figures.json');
   const template=fs.readFileSync(path.join(root,'scripts/family.template.html'),'utf8');
   assert.equal(template.split('__FAMILY_DATA__').length,2);
-  const assets=[];
   for(const family of catalog.families){
     assert.equal(family.nodes.length,8);
     const scene=scenes.scenes.find(item=>item.id===family.scene);
@@ -122,28 +121,15 @@ export function buildFamilyDiagrams(notesRoot){
       const payload=JSON.stringify({family,scene,default_view:kind}).replaceAll('<','\\u003c');
       const html=template.replace('__ARCHITECTURE_SVG__',architecture).replace('__FLOW_SVG__',flow).replace('__FAMILY_DATA__',payload);
       fs.writeFileSync(path.join(root,'pics',filename+'.html'),html);
-      assets.push(`pics/${filename}.svg`,`pics/${filename}.html`);
     }
   }
   fs.writeFileSync(path.join(root,'docs/zh/08_Family_Architectures.md'),guide(catalog.families,'../../','09_Paper_Figures.md'));
   fs.writeFileSync(path.join(root,'docs/zh/09_Paper_Figures.md'),paperGuide(manifest,'../../'));
-  const publicAttachments=wireChapters(root,'public',catalog.families,manifest);
-  if(notesRoot){
-    notesRoot=path.resolve(notesRoot);
-    assert.ok(notesRoot!==root,'Notes mirror must not equal public repository');
-    assert.ok(fs.statSync(path.join(notesRoot,'chapters')).isDirectory());
-    fs.mkdirSync(path.join(notesRoot,'pics/papers'),{recursive:true});
-    for(const asset of [...assets,...manifest.figures.map(figure=>figure.asset)]){
-      fs.copyFileSync(path.join(root,asset),path.join(notesRoot,asset));
-    }
-    fs.writeFileSync(path.join(notesRoot,'04_Family_Architectures.md'),guide(catalog.families,'','05_Paper_Figures.md'));
-    fs.writeFileSync(path.join(notesRoot,'05_Paper_Figures.md'),paperGuide(manifest,''));
-    wireChapters(notesRoot,'local',catalog.families,manifest);
-  }
-  return {families:catalog.families.length,architecture_svgs:6,architecture_html:6,flow_svgs:6,flow_html:6,licensed_paper_figures:manifest.figures.length,notes_mirrored:Boolean(notesRoot),paper_attachments:publicAttachments};
+  const publicAttachments=wireChapters(root,catalog.families,manifest);
+  const count=catalog.families.length;
+  return {families:count,architecture_svgs:count,architecture_html:count,flow_svgs:count,flow_html:count,licensed_paper_figures:manifest.figures.length,paper_attachments:publicAttachments};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
-  const index=process.argv.indexOf('--notes-root');
-  if(index>=0)assert.ok(process.argv[index+1],'--notes-root requires an explicit directory');
-  console.log(JSON.stringify(buildFamilyDiagrams(index>=0?process.argv[index+1]:undefined)));
+  assert.equal(process.argv.length,2,'Only the canonical repository is maintained; external notes mirroring has been retired');
+  console.log(JSON.stringify(buildFamilyDiagrams()));
 }

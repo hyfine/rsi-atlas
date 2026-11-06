@@ -1,5 +1,43 @@
 {
   "cutoff": "2026-11-05",
+  "recent_window_start": "2025-11-05",
+  "source_overview_ids": [
+    "arxiv:2611.03178",
+    "arxiv:2611.01113",
+    "arxiv:2610.35193",
+    "arxiv:2610.32253",
+    "arxiv:2610.26770",
+    "arxiv:2610.25078",
+    "arxiv:2610.22740",
+    "arxiv:2610.20431",
+    "arxiv:2610.18083",
+    "arxiv:2610.12176",
+    "arxiv:2609.35561",
+    "arxiv:2609.36054",
+    "arxiv:2609.30652",
+    "arxiv:2609.26457",
+    "arxiv:2609.24972",
+    "arxiv:2609.22086",
+    "arxiv:2609.14858",
+    "arxiv:2609.15364",
+    "arxiv:2609.11873",
+    "arxiv:2609.06396",
+    "arxiv:2606.05922",
+    "arxiv:2604.09297",
+    "arxiv:2604.25850",
+    "arxiv:2410.10762",
+    "arxiv:2604.17091",
+    "arxiv:2601.18226",
+    "arxiv:2605.06130",
+    "arxiv:2510.04871",
+    "arxiv:2502.05171",
+    "arxiv:2604.20987",
+    "arxiv:2607.28568",
+    "arxiv:2608.31111",
+    "arxiv:2608.31100",
+    "arxiv:2609.01437",
+    "arxiv:2609.20519"
+  ],
   "scope": "representative_methods_not_exhaustive",
   "relationship_semantics": "taxonomy_and_chronology_not_proven_technical_lineage",
   "families": {
@@ -41,6 +79,8 @@
         "F"
       ],
       "significance_and_limits": "可证明自修改的理论奠基；不将理论最优性等同于现代 Agent 的实验表现。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -58,6 +98,8 @@
         "B"
       ],
       "significance_and_limits": "自博弈训练的基础参照；不是自主改写改进器的直接证据。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -74,6 +116,8 @@
         "B"
       ],
       "significance_and_limits": "环境与求解策略共同演化的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -91,6 +135,8 @@
         "F"
       ],
       "significance_and_limits": "程序库积累与搜索学习相互促进的早期代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -107,6 +153,8 @@
         "B"
       ],
       "significance_and_limits": "无监督环境设计与课程生成的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -123,6 +171,8 @@
         "A"
       ],
       "significance_and_limits": "以自身推理轨迹自举训练的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -140,6 +190,8 @@
         "E"
       ],
       "significance_and_limits": "AI 反馈和规范约束下的对齐训练基础。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -157,6 +209,8 @@
         "B"
       ],
       "significance_and_limits": "自生成指令数据改善模型的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -173,6 +227,8 @@
         "C"
       ],
       "significance_and_limits": "语言反馈与情景记忆改进 Agent 行为的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -189,6 +245,8 @@
         "C"
       ],
       "significance_and_limits": "保留作输出自修订的边界对照，不把一次任务内迭代称为持久 RSI。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -205,6 +263,8 @@
         "C"
       ],
       "significance_and_limits": "可执行技能库与开放式探索的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -221,6 +281,8 @@
         "A"
       ],
       "significance_and_limits": "生成、筛选、再训练闭环的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -238,6 +300,8 @@
         "F"
       ],
       "significance_and_limits": "任务提示与变异提示共同演化的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -255,6 +319,8 @@
         "F"
       ],
       "significance_and_limits": "改进代码生成优化器本身的直接自改进代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -271,6 +337,8 @@
         "D"
       ],
       "significance_and_limits": "声明式 LM 程序与自动优化管线的基础。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -287,6 +355,8 @@
         "A"
       ],
       "significance_and_limits": "使用可验证问题求解反馈进行自训练的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -303,6 +373,8 @@
         "A"
       ],
       "significance_and_limits": "利用不同轮次模型构造自博弈微调的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -320,6 +392,8 @@
         "E"
       ],
       "significance_and_limits": "模型同时参与回答和奖励判断的代表，也用于讨论内生评价风险。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -336,6 +410,8 @@
         "D"
       ],
       "significance_and_limits": "以自然语言反馈优化复合计算系统的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -353,6 +429,8 @@
         "F"
       ],
       "significance_and_limits": "自动设计 Agent 代码和结构的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -368,10 +446,30 @@
       "families": [
         "D"
       ],
-      "significance_and_limits": "自动搜索 Agent 工作流的代表。",
+      "significance_and_limits": "以 MCTS、代码修改和执行反馈搜索工作流；2024 年首发的历史方法，不把 2025 年修订当作近一年新作，也不据此认定改进器自我提升。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
-      "evidence": "existing_primary_metadata_and_method_summary"
+      "evidence": "catalog_primary_abstract_reviewed:v4; first-public metadata reviewed; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2502.05171",
+      "method": "Recurrent Depth",
+      "title": "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach",
+      "date": "2025-02-07",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2502.05171",
+      "date_source": "https://arxiv.org/abs/2502.05171",
+      "families": [
+        "A"
+      ],
+      "significance_and_limits": "推理时重复执行 recurrent block，在潜空间增加内部计算深度；没有由此建立跨任务持久更新或改进器演化，不等于跨任务 RSI，且首发在窗口外。",
+      "kind": "boundary",
+      "in_recent_window": false,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; no full-text verification in this pass"
     },
     {
       "id": "arxiv:2504.15228",
@@ -386,6 +484,8 @@
         "F"
       ],
       "significance_and_limits": "Agent 修改自身编码实现的直接自改进代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -402,6 +502,8 @@
         "A"
       ],
       "significance_and_limits": "测试时参数适应的代表；与外部记忆和 Harness 修改分开讨论。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -420,6 +522,8 @@
         "E"
       ],
       "significance_and_limits": "任务生成、求解与执行反馈相结合的自博弈代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -437,6 +541,8 @@
         "F"
       ],
       "significance_and_limits": "以编码 Agent 存档和实证测试支持代码自修改；不是 Goedel Machine 理论证明的工程实现。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": false,
       "full_text_review_claimed": false,
       "evidence": "primary_abstract_and_submission_history"
@@ -455,6 +561,8 @@
         "F"
       ],
       "significance_and_limits": "学习生成自适应训练数据与更新指令的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -472,6 +580,8 @@
         "F"
       ],
       "significance_and_limits": "代码进化与外部可执行评价的代表；算法发现不自动等同于改进器递归。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
@@ -488,9 +598,394 @@
         "D"
       ],
       "significance_and_limits": "反思式程序提示演化与多目标候选保留的代表。",
+      "kind": "method",
+      "in_recent_window": false,
       "local_pdf_retained": true,
       "full_text_review_claimed": false,
       "evidence": "existing_primary_metadata_and_method_summary"
+    },
+    {
+      "id": "arxiv:2510.04871",
+      "method": "TRM",
+      "title": "Less is More: Recursive Reasoning with Tiny Networks",
+      "date": "2025-10-06",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2510.04871",
+      "date_source": "https://arxiv.org/abs/2510.04871",
+      "families": [
+        "A"
+      ],
+      "significance_and_limits": "小网络在单次问题求解中递归细化内部状态；这是内部递归计算，不等于跨任务 RSI 或持久改进器更新，2025 年 10 月首发也不在近一年窗口内。",
+      "kind": "boundary",
+      "in_recent_window": false,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2511.10395",
+      "method": "AgentEvolver",
+      "title": "AgentEvolver: Towards Efficient Self-Evolving Agent System",
+      "date": "2025-11-13",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2511.10395",
+      "date_source": "https://arxiv.org/abs/2511.10395",
+      "families": [
+        "A",
+        "B",
+        "C"
+      ],
+      "significance_and_limits": "自提问生成任务，自导航复用经验，自归因给轨迹状态与动作分配奖励；减少人工任务构造不等于取消环境反馈，摘要将实验明确称为初步证据。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2511.13646",
+      "method": "Live-SWE-agent",
+      "title": "Live-SWE-agent: Can Software Engineering Agents Self-Evolve on the Fly?",
+      "date": "2025-11-17",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2511.13646",
+      "date_source": "https://arxiv.org/abs/2511.13646",
+      "families": [
+        "D"
+      ],
+      "significance_and_limits": "从最小 bash scaffold 出发，在解决软件任务时修改自身 scaffold 实现；摘要支持运行时自修改，未建立跨任务继承或新改进器续跑更强，不能按标题升级为严格 RSI。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v3; cross-task persistence not established by abstract; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2511.16043",
+      "method": "Agent0",
+      "title": "Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning",
+      "date": "2025-11-20",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2511.16043",
+      "date_source": "https://arxiv.org/abs/2511.16043",
+      "families": [
+        "A",
+        "B"
+      ],
+      "significance_and_limits": "同源课程 agent 与执行 agent 多步协同演化，工具扩展解题能力又推动课程生成更难任务；零外部数据不是零先验、零工具或无验证假设。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; 2026 revision not treated as first publication; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2512.05145",
+      "method": "Self-Improving VLM Judges",
+      "title": "Self-Improving VLM Judges Without Human Annotations",
+      "date": "2025-12-02",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2512.05145",
+      "date_source": "https://arxiv.org/abs/2512.05145",
+      "families": [
+        "A",
+        "B",
+        "E"
+      ],
+      "significance_and_limits": "合成不同质量的多模态回答，按预期质量筛选判断与推理轨迹，再训练评价器；免人工偏好标注不使自设质量等级变成独立真值。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2512.17102",
+      "method": "SAGE",
+      "title": "Reinforcement Learning for Self-Improving Agent with Skill Library",
+      "date": "2025-12-18",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2512.17102",
+      "date_source": "https://arxiv.org/abs/2512.17102",
+      "families": [
+        "A",
+        "C"
+      ],
+      "significance_and_limits": "Sequential Rollout 让相似任务链继承技能库，用技能整合奖励联合优化生成和使用；作者主要结果依赖带专家经验的 SFT 起点，不能转述成零监督通用演化。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; 2026 revision not treated as first publication; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2601.03192",
+      "method": "MemRL",
+      "title": "MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory",
+      "date": "2026-01-06",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2601.03192",
+      "date_source": "https://arxiv.org/abs/2601.03192",
+      "families": [
+        "C"
+      ],
+      "significance_and_limits": "固定推理模型，用环境反馈在情景记忆上学习效用，并通过两阶段检索筛选可用经验；运行时记忆强化学习不是模型参数更新，检索收益也非改进规则自演化证明。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2601.18226",
+      "method": "Yunjue Agent",
+      "title": "Yunjue Agent Tech Report: A Fully Reproducible, Zero-Start In-Situ Self-Evolving Agent System for Open-Ended Tasks",
+      "date": "2026-01-26",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2601.18226",
+      "date_source": "https://arxiv.org/abs/2601.18226",
+      "families": [
+        "C",
+        "D"
+      ],
+      "significance_and_limits": "把顺序交互经验转成工具合成、优化与复用，并以并行批次探索工具空间；工具执行的二元反馈不能推广为所有开放任务都有正确性真值。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2602.02474",
+      "method": "MemSkill",
+      "title": "MemSkill: Learning and Evolving Memory Skills for Self-Evolving Agents",
+      "date": "2026-02-02",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2602.02474",
+      "date_source": "https://arxiv.org/abs/2602.02474",
+      "families": [
+        "C",
+        "F"
+      ],
+      "significance_and_limits": "controller 学习选择记忆技能，executor 按技能写记忆，designer 根据困难案例修订技能集合；记忆操作本身成为可变对象，但 designer 的改进规则是否变强仍需单独测试。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2603.06333",
+      "method": "SAHOO",
+      "title": "SAHOO: Safeguarded Alignment for High-Order Optimization Objectives in Recursive Self-Improvement",
+      "date": "2026-03-06",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2603.06333",
+      "date_source": "https://arxiv.org/abs/2603.06333",
+      "families": [
+        "E",
+        "F"
+      ],
+      "significance_and_limits": "组合目标漂移检测、约束保持检查与回归风险量化，约束连续修改；有限任务与少量校准周期的结果不能保证长期对齐，也不把无幻觉检测等同完备真值。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; specified Hugging Face search page used only for discovery; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2604.00830",
+      "method": "Meta-TTL",
+      "title": "Meta-TTL: Meta-Learning Self-Improvement Policies for Language Agents",
+      "date": "2026-04-01",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2604.00830",
+      "date_source": "https://arxiv.org/abs/2604.00830",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "内环测候选自改进策略如何利用跨 episode 经验，外环以平衡改进分数做反思式元训练；学到 updater 是更直接的元改进证据，但不证明外层元训练机制也递归加速。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v4; later revision not treated as first publication; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2604.09297",
+      "method": "SkillMOO",
+      "title": "SkillMOO: Multi-Objective Optimization of Agent Skills for Software Engineering",
+      "date": "2026-04-10",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2604.09297",
+      "date_source": "https://arxiv.org/abs/2604.09297",
+      "families": [
+        "C",
+        "D"
+      ],
+      "significance_and_limits": "对技能束做 LLM 编辑，以 NSGA-II 同时选择成功率和推理成本；技能组合的 Pareto 改善不等于选择算法本身演化，也不能省略搜索成本。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v3; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2604.17091",
+      "method": "GenericAgent",
+      "title": "GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0)",
+      "date": "2026-04-18",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2604.17091",
+      "date_source": "https://arxiv.org/abs/2604.17091",
+      "families": [
+        "C",
+        "D"
+      ],
+      "significance_and_limits": "用按需层次记忆、上下文压缩及经验证轨迹生成 SOP 和可执行工具；上下文利用和跨任务经验积累不自动证明模型权重或改进规则变强。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2604.20987",
+      "method": "COSPLAY",
+      "title": "Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Tasks",
+      "date": "2026-04-22",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2604.20987",
+      "date_source": "https://arxiv.org/abs/2604.20987",
+      "families": [
+        "A",
+        "C"
+      ],
+      "significance_and_limits": "决策模型学习技能检索与动作，技能库 agent 从无标签 rollout 提取、修订技能及使用契约；游戏环境内的协同收益不能直接外推开放领域研究能力。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2604.25850",
+      "method": "AHE",
+      "title": "Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses",
+      "date": "2026-04-28",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2604.25850",
+      "date_source": "https://arxiv.org/abs/2604.25850",
+      "families": [
+        "C",
+        "D",
+        "E"
+      ],
+      "significance_and_limits": "把可编辑组件文件化、轨迹证据分层，并用下一轮结果检验每次编辑的预期；可追踪编辑与迁移证据不等于整个外层演化规则自我改进。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v4; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2605.06130",
+      "method": "Skill1",
+      "title": "Skill1: Unified Evolution of Skill-Augmented Agents via Reinforcement Learning",
+      "date": "2026-05-07",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2605.06130",
+      "date_source": "https://arxiv.org/abs/2605.06130",
+      "families": [
+        "A",
+        "C"
+      ],
+      "significance_and_limits": "同一策略以任务结果信号联合学习技能选择、使用和蒸馏，并分解信号给不同阶段分配信用；技能与策略协同不等于奖励或训练制度也自动演化。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v3; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2605.08703",
+      "method": "RewardHarness",
+      "title": "RewardHarness: Self-Evolving Agentic Post-Training",
+      "date": "2026-05-09",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2605.08703",
+      "date_source": "https://arxiv.org/abs/2605.08703",
+      "families": [
+        "C",
+        "D",
+        "E"
+      ],
+      "significance_and_limits": "用偏好示例比较奖励判断，演化图像编辑评价所需工具与技能库，再为下游 RL 提供奖励；评价框架免参数训练不等于无人工偏好数据，奖励器与学生收益须分开。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2606.01770",
+      "method": "Adaptive Auto-Harness",
+      "title": "Adaptive Auto-Harness: Sustained Self-Improvement for Agentic System Deployment on Open-Ended Task Streams",
+      "date": "2026-06-01",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2606.01770",
+      "date_source": "https://arxiv.org/abs/2606.01770",
+      "families": [
+        "C",
+        "D"
+      ],
+      "significance_and_limits": "分离持久演化工作区与可部署 Harness，在任务流上替换演化过程并修订累计知识；档案增长不保证持续收益，跨任务有效经验也会因分布变化失效。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v3; November revision not treated as first publication; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2606.05922",
+      "method": "RHO",
+      "title": "Evolving Agents in the Dark: Retrospective Harness Optimization via Self-Preference",
+      "date": "2026-06-04",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2606.05922",
+      "date_source": "https://arxiv.org/abs/2606.05922",
+      "families": [
+        "D",
+        "E"
+      ],
+      "significance_and_limits": "重解历史困难任务，以自验证、自一致和成对自偏好选择 Harness 修改；无需外部评分不等于评价独立或正确，需保留共同盲点与迁移边界。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v3; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2607.07663",
+      "method": "Bounded Refinement to Research Loops (survey)",
+      "title": "Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops",
+      "date": "2026-07-08",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2607.07663",
+      "date_source": "https://arxiv.org/abs/2607.07663",
+      "families": [
+        "A",
+        "D",
+        "E",
+        "F"
+      ],
+      "significance_and_limits": "按改进对象与闭环程度组织文献，单列评价信号、共同错误和研究方向选择瓶颈；验证层次是综述分析，不是新算法或已测得的跨领域定律。",
+      "kind": "survey",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; specified Hugging Face page used only for discovery; earlier chapter body evidence kept separately; no full-text verification in this pass"
     },
     {
       "id": "arxiv:2607.28568",
@@ -502,12 +997,114 @@
       "date_source": "https://arxiv.org/abs/2607.28568",
       "families": [
         "A",
+        "B",
         "F"
       ],
-      "significance_and_limits": "学习机器学习工程改进算子并结合搜索；需要分开测量模型与搜索框架的贡献。",
+      "significance_and_limits": "以可执行 MLE 环境训练 Draft、Improve、Debug、Crossover 算子，再组合长程搜索；必须分开模型训练、搜索框架和预算贡献，不把外部 ML 产物优化等同整机自演化。",
+      "kind": "framework",
+      "in_recent_window": true,
       "local_pdf_retained": false,
       "full_text_review_claimed": false,
-      "evidence": "existing_primary_metadata_and_method_summary"
+      "evidence": "catalog_primary_abstract_reviewed:v1; earlier chapter body evidence kept separately; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2608.31111",
+      "method": "ASPIRE (vague-goal benchmark)",
+      "title": "Aspire: Can Models Self-Evolve from Vague Goals?",
+      "date": "2026-08-31",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2608.31111",
+      "date_source": "https://arxiv.org/abs/2608.31111",
+      "families": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "significance_and_limits": "只给模糊能力目标，由 agent 自选数据、更新方式与自评，最终用隐藏专家任务评价；这是诊断目标操作化及负迁移的基准，不是已成功的自进化算法。",
+      "kind": "benchmark",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2608.31100",
+      "method": "S3Gym",
+      "title": "S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?",
+      "date": "2026-08-31",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2608.31100",
+      "date_source": "https://arxiv.org/abs/2608.31100",
+      "families": [
+        "B",
+        "C",
+        "E"
+      ],
+      "significance_and_limits": "在有执行验证器的交互环境中分开自由探索与严格留出，比较历史上下文、摘要记忆和参数训练；能认出成功动作不保证反馈转成可迁移策略。",
+      "kind": "benchmark",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2609.01437",
+      "method": "HarnessDev",
+      "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+      "date": "2026-09-01",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2609.01437",
+      "date_source": "https://arxiv.org/abs/2609.01437",
+      "families": [
+        "D",
+        "E"
+      ],
+      "significance_and_limits": "评价从最小种子创建可运行 Harness 并继续演化的能力，同时测留出任务和执行成本；创建、演化与跨执行模型迁移必须分开，不把基准名称当算法。",
+      "kind": "benchmark",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2609.06396",
+      "method": "MetaRSI / RSI2",
+      "title": "MetaRSI / RSI2: A Meta-Recursive Self-Improving System for Recursive Self-Improving Systems Themselves",
+      "date": "2026-09-06",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2609.06396",
+      "date_source": "https://arxiv.org/abs/2609.06396",
+      "families": [
+        "A",
+        "B",
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "组合数据、Harness、模型算子，更新算子提案策略与跨轮调度；实验范围仍是代码和闭式科学题，跨真实开放领域适用性是研究主张而非已证定律。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; earlier chapter v1 body evidence kept separately; no v2 full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2609.11873",
+      "method": "The Last AI Built by Humans (survey and roadmap)",
+      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+      "date": "2026-09-10",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2609.11873",
+      "date_source": "https://arxiv.org/abs/2609.11873",
+      "families": [
+        "F"
+      ],
+      "significance_and_limits": "按执行、策略、经验获取、环境适应与元改进的责任变化组织路线图；责任分类和初步案例不是能力等级认证，也不是一个名为 RSI 的新算法。",
+      "kind": "survey",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v3; earlier chapter body evidence kept separately; no full-text verification in this pass"
     },
     {
       "id": "arxiv:2609.14858",
@@ -522,10 +1119,365 @@
         "D",
         "F"
       ],
-      "significance_and_limits": "通过发现历史回放优化探索策略；底层 Agent 不变，不应直接称为基础模型世界知识训练。",
+      "significance_and_limits": "把历史发现树构成回放模拟器，低成本离策略比较探索策略，再回到在线发现扩展历史；基础 agent 不变，历史覆盖的搜索空间不等于学到通用世界模型。",
+      "kind": "method",
+      "in_recent_window": true,
       "local_pdf_retained": false,
       "full_text_review_claimed": false,
-      "evidence": "existing_primary_metadata_and_method_summary"
+      "evidence": "catalog_primary_abstract_reviewed:v2; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2609.15364",
+      "method": "RSIAgent",
+      "title": "RSIAgent: Autonomous Exploration for Recursive Self-improvement in New Environments",
+      "date": "2026-09-14",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2609.15364",
+      "date_source": "https://arxiv.org/abs/2609.15364",
+      "families": [
+        "B",
+        "C",
+        "E"
+      ],
+      "significance_and_limits": "课程、行动与验证 agent 先广后深探索新环境，保留动作条件与后果知识，再冻结记忆供下游使用；不是参数训练，环境内记忆收益需与跨环境泛化分开。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2609.20519",
+      "method": "SoL-Pi",
+      "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+      "date": "2026-09-17",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2609.20519",
+      "date_source": "https://arxiv.org/abs/2609.20519",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "自动研究循环筛出动作执行、压缩、观察处理及委派读取等可复用 Harness 机制；token 流量、API 成本与任务质量分开报告，部署节省不证明改进器递归加速。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; overview excerpt read; earlier chapter body evidence kept separately; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2609.22086",
+      "method": "Designer-RSI",
+      "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
+      "date": "2026-09-18",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2609.22086",
+      "date_source": "https://arxiv.org/abs/2609.22086",
+      "families": [
+        "C",
+        "D"
+      ],
+      "significance_and_limits": "从用户任务轨迹扩展与修订外部程序性技能，用匹配回放门槛修失败且保成功；模型冻结且设计任务没有可靠程序真值，自动评分仍可能带来选择偏差。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2609.24972",
+      "method": "RRSI",
+      "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
+      "date": "2026-09-21",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2609.24972",
+      "date_source": "https://arxiv.org/abs/2609.24972",
+      "families": [
+        "D",
+        "E"
+      ],
+      "significance_and_limits": "对 Harness 提案施加退火编辑预算，并以 critic/pruner 排除基准特化、昂贵或无效修改；正则化旨在减少过拟合，不保证每个后继单调提升。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v3; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2609.26457",
+      "method": "AIDE2",
+      "title": "Recursive self-improvement of AI research agents",
+      "date": "2026-09-22",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2609.26457",
+      "date_source": "https://arxiv.org/abs/2609.26457",
+      "families": [
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "提出并测试研究 agent 自身源码修改，将接受的后继作为下一轮编辑对象；产品迁移收益不等于新改进器更强，旧章另记 ignition 对照尚无确定结论。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; earlier chapter ignition-test body evidence kept separately; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2609.30652",
+      "method": "DCE + SRCL (on-policy self-distillation)",
+      "title": "Recursive Self-Improvement via On-Policy Distillation for Reasoning",
+      "date": "2026-09-25",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2609.30652",
+      "date_source": "https://arxiv.org/abs/2609.30652",
+      "families": [
+        "A",
+        "B",
+        "E"
+      ],
+      "significance_and_limits": "让带标准答案上下文的 teacher 副本随 student 更新，并加入经验证的简洁重写训练；没有外部 teacher 模型不等于没有外部答案或验证信号。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2609.36054",
+      "method": "AI R&D intelligence-explosion analysis",
+      "title": "What if automating AI R&D triggers an intelligence explosion?",
+      "date": "2026-09-28",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2609.36054",
+      "date_source": "https://arxiv.org/abs/2609.36054",
+      "families": [
+        "F"
+      ],
+      "significance_and_limits": "分析研发自动化可能产生的加速反馈、风险与政策回应；情景论证与初步观察不是已经发生智能爆炸的实验，也不命名为一种改进算法。",
+      "kind": "theory",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2609.35561",
+      "method": "RSI-Master",
+      "title": "RSI-Master: Structuring Experiments to Guide Autonomous Model Improvement",
+      "date": "2026-09-28",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2609.35561",
+      "date_source": "https://arxiv.org/abs/2609.35561",
+      "families": [
+        "A",
+        "D",
+        "E",
+        "F"
+      ],
+      "significance_and_limits": "Experiment OS 约束实验动作并保留记录，Worker/Reviewer 在研究 DAG 中比较证据以避免方向锁定；特定协议下的防作弊结果不是任意研发环境的保证。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2610.12176",
+      "method": "MASS",
+      "title": "Recursive Self-Improvement through Multi-Agent Self-Supervision",
+      "date": "2026-10-08",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2610.12176",
+      "date_source": "https://arxiv.org/abs/2610.12176",
+      "families": [
+        "A",
+        "D",
+        "E"
+      ],
+      "significance_and_limits": "同一模型提出、执行和评价多 agent 工作流，再以所选轨迹微调共享模型并重启搜索；同源监督保留共同盲点，训练目标 token 不等于端到端成本。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; earlier official technical-article evidence kept separately; no paper full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2610.18083",
+      "method": "AReaL-RSI",
+      "title": "AReaL-RSI: Adaptive Scaling and Coordination of Recursive Self-Improvement",
+      "date": "2026-10-13",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2610.18083",
+      "date_source": "https://arxiv.org/abs/2610.18083",
+      "families": [
+        "C",
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "leader 组织持续研究，带适用条件共享记忆，并跨 campaign 更新角色方向、知识和技能；底层权重不更新，扩展计算应按整机资源与可评估结果比较。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; overview year 20226 is a user typo, not date evidence; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2610.20431",
+      "method": "SwarmRSI",
+      "title": "SwarmRSI: Recursive Self-Improvement through Evolving Scientific Agent Swarm",
+      "date": "2026-10-14",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2610.20431",
+      "date_source": "https://arxiv.org/abs/2610.20431",
+      "families": [
+        "C",
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "用跨 agent 实验证据同时修订假设与实现，再重组保留假设和互补程序组件；累计经验迁移不等于已隔离出群体改进器自身的递归增益。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v3; November revision is not first publication; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2610.22740",
+      "method": "R2Orch (overview: Orch)",
+      "title": "R$^2$Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop",
+      "date": "2026-10-15",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2610.22740",
+      "date_source": "https://arxiv.org/abs/2610.22740",
+      "families": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "significance_and_limits": "自博弈选择可学习任务，失败蒸馏成技能、技能内化到参数，再经受控比较撤去不再必要的技能；技能撤除与同源信号需要独立迁移验证。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; revised title distinguished from overview alias Orch; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2610.25078",
+      "method": "CoEvo-RSI",
+      "title": "CoEvo-RSI: When Harnesses Evolve, Which Models Should Follow?",
+      "date": "2026-10-18",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2610.25078",
+      "date_source": "https://arxiv.org/abs/2610.25078",
+      "families": [
+        "A",
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "共享演化档案与执行反馈协调 Harness 修改、模型 checkpoint 选择或合并及后续适配；需交叉冻结组件，分开检验模型替换、训练与框架收益。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2610.26770",
+      "method": "HarnessPro",
+      "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
+      "date": "2026-10-19",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2610.26770",
+      "date_source": "https://arxiv.org/abs/2610.26770",
+      "families": [
+        "D",
+        "E"
+      ],
+      "significance_and_limits": "以自生成测试和性能成本多目标选择演化 Harness，保留不同部署预算的候选；无标签测试不是正确性真值，也不能把搜索预算收益全归因于结构改进。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v2; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2610.32253",
+      "method": "RSIHub",
+      "title": "RSIHub: A Composable Framework for Agent-Evolution Methods",
+      "date": "2026-10-23",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2610.32253",
+      "date_source": "https://arxiv.org/abs/2610.32253",
+      "families": [
+        "D",
+        "E",
+        "F"
+      ],
+      "significance_and_limits": "以 recipe、可复用算子及可变资源声明组合演化方法，共享执行、恢复、谱系与外置评价；框架可组合性和训练任务收益不证明留出迁移或递归增益。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2610.35193",
+      "method": "Trustworthy RSI (survey)",
+      "title": "Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
+      "date": "2026-10-26",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2610.35193",
+      "date_source": "https://arxiv.org/abs/2610.35193",
+      "families": [
+        "E",
+        "F"
+      ],
+      "significance_and_limits": "按真实改进、约束保持与有效监督审视更新及其后继，要求把验证责任与可变改进机制分开；这是证据与风险综述，不是一个已完成可信 RSI 的算法。",
+      "kind": "survey",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; earlier chapter body evidence kept separately; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2611.01113",
+      "method": "CogRSI",
+      "title": "CogRSI: Evolving and Auditing Cognitive Reasoning Strategies",
+      "date": "2026-10-31",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2611.01113",
+      "date_source": "https://arxiv.org/abs/2611.01113",
+      "families": [
+        "C",
+        "E"
+      ],
+      "significance_and_limits": "演化故事心智推理的书面原则，用校准涨分与反事实门槛筛选，再把原则译成代码审计；任务准确率提升仍可能伴随原则本身错误。",
+      "kind": "method",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; submission history gives October 31 despite 2611 identifier; no full-text verification in this pass"
+    },
+    {
+      "id": "arxiv:2611.03178",
+      "method": "CoworkOS",
+      "title": "CoworkOS:Scaling Agent Coworkers for Real-world Automation",
+      "date": "2026-11-02",
+      "date_basis": "first_public_paper_version_not_product_announcement",
+      "primary_url": "https://arxiv.org/abs/2611.03178",
+      "date_source": "https://arxiv.org/abs/2611.03178",
+      "families": [
+        "C",
+        "D",
+        "F"
+      ],
+      "significance_and_limits": "将模型策略与运行时状态管理分离，以层次工作区、语义记忆及同步或异步委派维持长期工作；持续后训练案例不证明运行时或改进器已自主进化。",
+      "kind": "framework",
+      "in_recent_window": true,
+      "local_pdf_retained": false,
+      "full_text_review_claimed": false,
+      "evidence": "catalog_primary_abstract_reviewed:v1; no full-text verification in this pass"
     }
   ]
 }

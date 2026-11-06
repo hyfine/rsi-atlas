@@ -6,6 +6,7 @@ import { execFileSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import { validateDelivery, root } from './validate-delivery.mjs';
 import { chromePath, connectBrowser as openTestBrowser } from './browser-test-utils.mjs';
+const recentCount=JSON.parse(fs.readFileSync(path.join(root,'data/atlas-methods.json'),'utf8')).methods.filter(record=>record.in_recent_window).length;
 
 test('offline schema, sources, recent-year shape and local links', () => {
   const result = validateDelivery();
@@ -39,13 +40,13 @@ test('real Chrome: filters, modal, ten animated scenes, themes and responsive co
     assert.equal(await evaluate(`document.querySelectorAll('#method-list .method-card').length`), 1);
     await evaluate(`document.querySelector('#method-list [data-method]').click()`);
     assert.equal(await evaluate(`document.getElementById('method-dialog').open`), true);
-    assert.match(await evaluate(`document.getElementById('dialog-body').textContent`), /固定|冻结/);
+    assert.match(await evaluate(`document.getElementById('dialog-body').textContent`), /fixed|frozen|固定|冻结/i);
     await page('Input.dispatchKeyEvent', { type: 'keyDown', key: 'Escape', code: 'Escape', windowsVirtualKeyCode: 27, nativeVirtualKeyCode: 27 });
     await page('Input.dispatchKeyEvent', { type: 'keyUp', key: 'Escape', code: 'Escape', windowsVirtualKeyCode: 27, nativeVirtualKeyCode: 27 });
     await waitFor(`document.getElementById('method-dialog').open === false`);
     await evaluate(`document.getElementById('search').value='';document.getElementById('search').dispatchEvent(new Event('input'))`);
     await click('recent');
-    assert.equal(await evaluate(`document.querySelectorAll('#method-list .method-card').length`), 38);
+    assert.equal(await evaluate(`document.querySelectorAll('#method-list .method-card').length`), recentCount);
     await click('recent');
     passedChecks++;
   });
@@ -80,7 +81,7 @@ test('real Chrome: filters, modal, ten animated scenes, themes and responsive co
     await evaluate(`location.hash='timeline'`);
     await waitFor(`document.getElementById('timeline').hidden === false`);
     await click('timeline-latest');
-    assert.equal(await evaluate(`document.querySelectorAll('#timeline-list .event').length`), 38);
+    assert.equal(await evaluate(`document.querySelectorAll('#timeline-list .event').length`), recentCount);
     assert.ok(await evaluate(`document.getElementById('timeline-list').textContent.includes('2026-11-02')`));
     await click('timeline-latest');
     passedChecks++;
@@ -89,7 +90,7 @@ test('real Chrome: filters, modal, ten animated scenes, themes and responsive co
     fs.mkdirSync(path.join(root, '.delivery-check'), { recursive: true });
     for (const [width, height] of [[360,780],[390,844],[1440,900],[1600,1000],[1920,1080],[2048,1320]]) {
       await page('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: width < 600 });
-      for (const view of ['panorama', 'methods', 'loops', 'timeline', 'implementations', 'evidence', 'reading']) {
+      for (const view of ['panorama', 'methods', 'loops', 'timeline', 'institutions', 'implementations', 'evidence', 'reading']) {
         await evaluate(`location.hash=${JSON.stringify(view)}`);
         await waitFor(`document.getElementById(${JSON.stringify(view)}).hidden === false`);
         const metrics = await evaluate(`({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,view:location.hash})`);
@@ -100,6 +101,7 @@ test('real Chrome: filters, modal, ten animated scenes, themes and responsive co
         for (const view of ['panorama', 'loops']) {
           await evaluate(`location.hash=${JSON.stringify(view)};document.documentElement.dataset.theme='dark';window.scrollTo(0,0)`);
           await waitFor(`document.getElementById(${JSON.stringify(view)}).hidden === false`);
+          await waitFor(`document.getAnimations().filter(animation=>Number.isFinite(animation.effect.getComputedTiming().endTime)).every(animation=>animation.playState!=='running')`);
           const shot = await page('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
           fs.writeFileSync(path.join(root, '.delivery-check', `${view}-${width}.png`), Buffer.from(shot.data, 'base64'));
         }

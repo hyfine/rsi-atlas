@@ -1,12 +1,12 @@
 {
   "status": "passed",
-  "checked_at": "2026-11-06T01:48:38.412Z",
+  "checked_at": "2026-11-06T03:29:55.285Z",
   "schema_and_links": {
     "ok": true,
-    "publication_files": 133,
-    "local_links_checked": 433,
-    "methods": 66,
-    "recent_methods": 38,
+    "publication_files": 150,
+    "local_links_checked": 491,
+    "methods": 88,
+    "recent_methods": 58,
     "dynamic_scenes": 10,
     "primary_checks": 18,
     "warnings": 0
@@ -42,6 +42,12 @@
     {
       "width": 360,
       "height": 780,
+      "view": "institutions",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 360,
+      "height": 780,
       "view": "implementations",
       "horizontal_overflow": false
     },
@@ -84,6 +90,12 @@
     {
       "width": 390,
       "height": 844,
+      "view": "institutions",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
       "view": "implementations",
       "horizontal_overflow": false
     },
@@ -126,6 +138,12 @@
     {
       "width": 1440,
       "height": 900,
+      "view": "institutions",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
       "view": "implementations",
       "horizontal_overflow": false
     },
@@ -168,6 +186,12 @@
     {
       "width": 1600,
       "height": 1000,
+      "view": "institutions",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1600,
+      "height": 1000,
       "view": "implementations",
       "horizontal_overflow": false
     },
@@ -210,6 +234,12 @@
     {
       "width": 1920,
       "height": 1080,
+      "view": "institutions",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
       "view": "implementations",
       "horizontal_overflow": false
     },
@@ -247,6 +277,12 @@
       "width": 2048,
       "height": 1320,
       "view": "timeline",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 2048,
+      "height": 1320,
+      "view": "institutions",
       "horizontal_overflow": false
     },
     {
@@ -269,21 +305,7 @@
     }
   ],
   "runtime_exceptions": [],
-  "visual_review": "all_six_family_architecture_screenshots_inspected; six_licensed_paper_captures_inspected; theme_toggle_tested",
-  "family_diagrams": {
-    "checked_on": "2026-11-06",
-    "family_architectures": 6,
-    "standalone_architecture_html": 6,
-    "representative_flow_svgs": 6,
-    "standalone_flow_html": 6,
-    "licensed_paper_figures_or_labelled_details": 6,
-    "paper_figure_status_entries": 66,
-    "exact_missing_notes_reference_fixed": "../pics/family-e-flow.svg",
-    "local_mirror_byte_identity": "30_assets_verified",
-    "combined_document_and_browser_checks": "15_passed_0_failed_0_skipped",
-    "svg_text_bounds": "all_six_families_passed",
-    "rebuild_idempotency": "passed"
-  },
+  "visual_review": "screenshots_generated_requires_human_inspection",
   "screenshot_files": [
     ".delivery-check/panorama-390.png",
     ".delivery-check/loops-390.png",

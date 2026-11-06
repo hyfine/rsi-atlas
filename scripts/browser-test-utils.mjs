@@ -49,7 +49,12 @@ export async function connectBrowser(t,url,readyExpression){
   const page=(method,params)=>call(method,params,attached.sessionId);
   await page('Runtime.enable');await page('Page.enable');
   async function evaluate(expression){
-    const result=await page('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});
+    let result;
+    try{
+      result=await page('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});
+    }catch(error){
+      throw new Error(`Browser evaluation failed: ${expression.slice(0,240)}`,{cause:error});
+    }
     if(result.exceptionDetails)throw new Error(result.exceptionDetails.exception?.description??result.exceptionDetails.text);
     return result.result.value;
   }

@@ -59,19 +59,19 @@ test('family assets, paper placement and generated guides rebuild without duplic
   for(const family of families)assert.equal(chapters.split(`<!-- family-${family.id}-architecture:start -->`).length,2);
   for(const figure of figures.figures)assert.equal(chapters.split(`<!-- paper-figure-${figure.id}:start -->`).length,2);
 });
-test('explicit local notes mirror repairs the exact missing family-e relative image',t=>{
-  const notes=process.env.RSI_NOTES_ROOT;
-  if(!notes){t.skip('Set RSI_NOTES_ROOT to verify a local notes mirror; not claimed by public-only checks');return;}
-  for(const asset of [...assets,...figures.figures.map(figure=>figure.asset)])assert.equal(sha(fs.readFileSync(path.join(notes,asset))),sha(fs.readFileSync(path.join(root,asset))),`Stale/missing notes asset ${asset}`);
-  const missing=path.resolve(notes,'chapters','../pics/family-e-flow.svg');
-  assert.match(fs.readFileSync(missing,'utf8'),/^<svg/);
-  const files=fs.readdirSync(path.join(notes,'chapters')).filter(name=>name.endsWith('.md')).map(name=>path.join(notes,'chapters',name));
-  files.push(path.join(notes,'04_Family_Architectures.md'),path.join(notes,'05_Paper_Figures.md'));
+test('canonical chapters resolve the formerly missing family-e image without an external mirror',()=>{
+  const chapterRoot=path.join(root,'docs/zh/chapters');
+  const evaluation=fs.readFileSync(path.join(chapterRoot,'04_Meta_RSI_Evaluation_and_Safety.md'),'utf8');
+  const reference=evaluation.match(/!\[[^\]]*\]\(([^)]+family-e-flow\.svg)\)/);
+  assert.ok(reference,'The evaluation family must retain its visible representative flow');
+  assert.equal(path.resolve(chapterRoot,reference[1]),path.join(root,'pics/family-e-flow.svg'));
+  const files=fs.readdirSync(chapterRoot).filter(name=>name.endsWith('.md')).map(name=>path.join(chapterRoot,name));
+  files.push(path.join(root,'docs/zh/08_Family_Architectures.md'),path.join(root,'docs/zh/09_Paper_Figures.md'));
   for(const file of files){
     const text=fs.readFileSync(file,'utf8');
     for(const match of text.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)){
       if(/^https?:/.test(match[1]))continue;
-      assert.ok(fs.existsSync(path.resolve(path.dirname(file),decodeURIComponent(match[1]))),`Missing note image ${path.basename(file)}: ${match[1]}`);
+      assert.ok(fs.existsSync(path.resolve(path.dirname(file),decodeURIComponent(match[1]))),`Missing canonical image ${path.basename(file)}: ${match[1]}`);
     }
   }
 });

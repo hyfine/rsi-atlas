@@ -1,0 +1,24 @@
+name: Validate atlas
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  offline-build-and-browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Require browser
+        run: google-chrome --version
+      - name: Build and validate
+        run: |
+          node scripts/build-atlas.mjs
+          node scripts/validate-delivery.mjs
+      - name: Regression and real browser tests
+        run: node --test scripts/*.test.mjs
+      - name: Generated output remains current
+        run: git diff --exit-code -- . ':!data/delivery-audit.json'

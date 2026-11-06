@@ -1,0 +1,4678 @@
+{
+  "checked_on": "2026-11-06",
+  "semantics": "primary_author_affiliations_of_cited_version_or_publisher; timeline_dates_are_v1; nonexclusive_not_employment_ownership_or_quality",
+  "institutions": [
+    {
+      "id": "adobe",
+      "name": "Adobe",
+      "name_zh": "Adobe",
+      "type": "company",
+      "aliases": [
+        "Adobe"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2609.22086v1"
+      ]
+    },
+    {
+      "id": "advantage-ai-agent-lab-a3-lab",
+      "name": "Advantage AI Agent Lab (A3 Lab)",
+      "name_zh": "Advantage AI Agent Lab (A3 Lab)",
+      "type": "lab",
+      "aliases": [
+        "Advantage AI Agent Lab (A3 Lab)"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2604.17091v1#page=1"
+      ]
+    },
+    {
+      "id": "aether-ai",
+      "name": "Aether AI",
+      "name_zh": "Aether AI",
+      "type": "unknown",
+      "aliases": [
+        "Aether AI"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.15364v2#page=1"
+      ]
+    },
+    {
+      "id": "agency-for-science-technology-and-research-a-star",
+      "name": "Agency for Science, Technology and Research (A*STAR)",
+      "name_zh": "Agency for Science, Technology and Research (A*STAR)",
+      "type": "lab",
+      "aliases": [
+        "Agency for Science, Technology and Research (A*STAR)"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2610.25078v1#page=1"
+      ]
+    },
+    {
+      "id": "agent-native-research-lab",
+      "name": "Agent-Native Research Lab",
+      "name_zh": "Agent-Native Research Lab",
+      "type": "lab",
+      "aliases": [
+        "Agent-Native Research Lab"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.11873v3#page=1"
+      ]
+    },
+    {
+      "id": "ai-policy-institute",
+      "name": "AI Policy Institute",
+      "name_zh": "AI Policy Institute",
+      "type": "unknown",
+      "aliases": [
+        "AI Policy Institute"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1"
+      ]
+    },
+    {
+      "id": "alibaba-group",
+      "name": "Alibaba Group",
+      "name_zh": "Alibaba Group",
+      "type": "company",
+      "aliases": [
+        "Alibaba Group"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2511.10395v1#page=1"
+      ]
+    },
+    {
+      "id": "allen-institute-for-artificial-intelligence",
+      "name": "Allen Institute for Artificial Intelligence",
+      "name_zh": "Allen Institute for Artificial Intelligence",
+      "type": "research_institute",
+      "aliases": [
+        "Allen Institute for Artificial Intelligence"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2212.10560v2#page=1",
+        "https://arxiv.org/pdf/2303.17651v2#page=1"
+      ]
+    },
+    {
+      "id": "alphaavatar",
+      "name": "AlphaAvatar",
+      "name_zh": "AlphaAvatar",
+      "type": "unknown",
+      "aliases": [
+        "AlphaAvatar"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2607.07663v2#page=1"
+      ]
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "name_zh": "Amazon",
+      "type": "company",
+      "aliases": [
+        "Amazon"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2606.01770v3"
+      ]
+    },
+    {
+      "id": "amazon-alexa-ai",
+      "name": "Amazon Alexa AI",
+      "name_zh": "Amazon Alexa AI",
+      "type": "lab",
+      "aliases": [
+        "Amazon Alexa AI"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2310.03714v1#page=1"
+      ]
+    },
+    {
+      "id": "ant-group",
+      "name": "Ant Group",
+      "name_zh": "Ant Group",
+      "type": "company",
+      "aliases": [
+        "Ant Group"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.18083v1"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "name_zh": "Anthropic",
+      "type": "company",
+      "aliases": [
+        "Anthropic"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1",
+        "https://arxiv.org/pdf/2212.08073v1#page=1"
+      ]
+    },
+    {
+      "id": "arizona-state-university",
+      "name": "Arizona State University",
+      "name_zh": "Arizona State University",
+      "type": "university",
+      "aliases": [
+        "ASU",
+        "Arizona State University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2305.16291v1#page=1",
+        "https://arxiv.org/pdf/2212.10560v2#page=1"
+      ]
+    },
+    {
+      "id": "aws-agentic-ai",
+      "name": "AWS Agentic AI",
+      "name_zh": "AWS Agentic AI",
+      "type": "lab",
+      "aliases": [
+        "AWS Agentic AI"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2512.17102v2#page=1"
+      ]
+    },
+    {
+      "id": "aws-generative-ai-innovation-center",
+      "name": "AWS Generative AI Innovation Center",
+      "name_zh": "AWS Generative AI Innovation Center",
+      "type": "lab",
+      "aliases": [
+        "AWS Generative AI Innovation Center"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2603.06333v1#page=1"
+      ]
+    },
+    {
+      "id": "beijing-institute-for-general-artificial-intelligence",
+      "name": "Beijing Institute for General Artificial Intelligence",
+      "name_zh": "Beijing Institute for General Artificial Intelligence",
+      "type": "lab",
+      "aliases": [
+        "Beijing Institute for General Artificial Intelligence"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2610.32253v1#page=1",
+        "https://arxiv.org/pdf/2505.03335v1#page=1"
+      ]
+    },
+    {
+      "id": "berkeley-ai-research-bair",
+      "name": "Berkeley AI Research (BAIR)",
+      "name_zh": "Berkeley AI Research (BAIR)",
+      "type": "lab",
+      "aliases": [
+        "Berkeley AI Research (BAIR)"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2012.02096v2#page=1"
+      ]
+    },
+    {
+      "id": "bespokelabs-ai",
+      "name": "BespokeLabs.ai",
+      "name_zh": "BespokeLabs.ai",
+      "type": "unknown",
+      "aliases": [
+        "BespokeLabs.ai"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2507.19457v1#page=1"
+      ]
+    },
+    {
+      "id": "brown-university",
+      "name": "Brown University",
+      "name_zh": "Brown University",
+      "type": "university",
+      "aliases": [
+        "Brown University"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2609.22086v1"
+      ]
+    },
+    {
+      "id": "bytedance-inc",
+      "name": "ByteDance Inc.",
+      "name_zh": "ByteDance Inc.",
+      "type": "company",
+      "aliases": [
+        "ByteDance Inc."
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.33295v1#page=1",
+        "https://arxiv.org/pdf/2609.11873v3#page=1",
+        "https://arxiv.org/pdf/2611.03698v1#page=1"
+      ]
+    },
+    {
+      "id": "bytedance-seed",
+      "name": "ByteDance Seed",
+      "name_zh": "ByteDance Seed",
+      "type": "lab",
+      "aliases": [
+        "ByteDance Seed"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2608.31111v1#page=1",
+        "https://arxiv.org/pdf/2608.31100v1#page=1",
+        "https://arxiv.org/pdf/2609.01437v1#page=1"
+      ]
+    },
+    {
+      "id": "calera-capital",
+      "name": "Calera Capital",
+      "name_zh": "Calera Capital",
+      "type": "company",
+      "aliases": [
+        "Calera Capital"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2310.03714v1#page=1"
+      ]
+    },
+    {
+      "id": "california-institute-of-technology",
+      "name": "California Institute of Technology",
+      "name_zh": "California Institute of Technology",
+      "type": "university",
+      "aliases": [
+        "Caltech"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2305.16291v1#page=1"
+      ]
+    },
+    {
+      "id": "cambridge-ai-safety-hub-caish",
+      "name": "Cambridge AI Safety Hub (CAISH)",
+      "name_zh": "Cambridge AI Safety Hub (CAISH)",
+      "type": "unknown",
+      "aliases": [
+        "Cambridge AI Safety Hub (CAISH)"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2603.06333v1#page=1"
+      ]
+    },
+    {
+      "id": "carnegie-mellon-university",
+      "name": "Carnegie Mellon University",
+      "name_zh": "Carnegie Mellon University",
+      "type": "university",
+      "aliases": [
+        "Carnegie Mellon University"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2609.35561v2",
+        "https://arxiv.org/pdf/2310.03714v1#page=1",
+        "https://arxiv.org/pdf/2303.17651v2#page=1",
+        "https://arxiv.org/pdf/2605.08703v2#page=1"
+      ]
+    },
+    {
+      "id": "casp",
+      "name": "CASP",
+      "name_zh": "CASP",
+      "type": "unknown",
+      "aliases": [
+        "CASP"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1"
+      ]
+    },
+    {
+      "id": "center-for-brains-minds-and-machines",
+      "name": "Center for Brains, Minds, and Machines",
+      "name_zh": "Center for Brains, Minds, and Machines",
+      "type": "lab",
+      "aliases": [
+        "Center for Brains, Minds, and Machines"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2006.08381v1#page=1"
+      ]
+    },
+    {
+      "id": "chan-zuckerberg-biohub",
+      "name": "Chan Zuckerberg Biohub",
+      "name_zh": "Chan Zuckerberg Biohub",
+      "type": "research_institute",
+      "aliases": [
+        "Chan Zuckerberg Biohub"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2406.07496v1#page=1"
+      ]
+    },
+    {
+      "id": "city-university-of-hong-kong",
+      "name": "City University of Hong Kong",
+      "name_zh": "City University of Hong Kong",
+      "type": "university",
+      "aliases": [
+        "City University of Hong Kong"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2606.05922v3"
+      ]
+    },
+    {
+      "id": "cosmosmind",
+      "name": "CosmosMind",
+      "name_zh": "CosmosMind",
+      "type": "unknown",
+      "aliases": [
+        "CosmosMind"
+      ],
+      "sources": [
+        "https://cosmosmind.ai/research/metarsi-v1"
+      ]
+    },
+    {
+      "id": "csail",
+      "name": "CSAIL",
+      "name_zh": "CSAIL",
+      "type": "lab",
+      "aliases": [
+        "CSAIL"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2006.08381v1#page=1"
+      ]
+    },
+    {
+      "id": "dashworks-technologies-inc",
+      "name": "Dashworks Technologies, Inc.",
+      "name_zh": "Dashworks Technologies, Inc.",
+      "type": "company",
+      "aliases": [
+        "Dashworks Technologies, Inc."
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2310.03714v1#page=1"
+      ]
+    },
+    {
+      "id": "databricks",
+      "name": "Databricks",
+      "name_zh": "Databricks",
+      "type": "company",
+      "aliases": [
+        "Databricks"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2507.19457v1#page=1"
+      ]
+    },
+    {
+      "id": "deepgrounding",
+      "name": "DeepGrounding",
+      "name_zh": "DeepGrounding",
+      "type": "unknown",
+      "aliases": [
+        "DeepGrounding"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2607.07663v2#page=1"
+      ]
+    },
+    {
+      "id": "deepmind",
+      "name": "DeepMind",
+      "name_zh": "DeepMind",
+      "type": "lab",
+      "aliases": [
+        "DeepMind"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/1712.01815v1#page=1"
+      ]
+    },
+    {
+      "id": "deepwisdom",
+      "name": "DeepWisdom",
+      "name_zh": "DeepWisdom",
+      "type": "company",
+      "aliases": [
+        "DeepWisdom"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2410.10762v4"
+      ]
+    },
+    {
+      "id": "douyin-group",
+      "name": "Douyin Group",
+      "name_zh": "Douyin Group",
+      "type": "company",
+      "aliases": [
+        "Douyin Group"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2610.32253v1#page=1"
+      ]
+    },
+    {
+      "id": "east-china-normal-university",
+      "name": "East China Normal University",
+      "name_zh": "East China Normal University",
+      "type": "university",
+      "aliases": [
+        "East China Normal University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2611.03178v1#page=22"
+      ]
+    },
+    {
+      "id": "ellis-institute-tubingen",
+      "name": "ELLIS Institute Tübingen",
+      "name_zh": "ELLIS Institute Tübingen",
+      "type": "research_institute",
+      "aliases": [
+        "ELLIS Institute Tübingen"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2502.05171v2#page=1",
+        "https://arxiv.org/pdf/2603.08640v2#page=1"
+      ]
+    },
+    {
+      "id": "emory-university",
+      "name": "Emory University",
+      "name_zh": "Emory University",
+      "type": "university",
+      "aliases": [
+        "Emory University"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2606.01770v3"
+      ]
+    },
+    {
+      "id": "etude-ai",
+      "name": "Etude AI",
+      "name_zh": "Etude AI",
+      "type": "unknown",
+      "aliases": [
+        "Etude AI"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2605.08703v2#page=1"
+      ]
+    },
+    {
+      "id": "evolvent-ai",
+      "name": "Evolvent AI",
+      "name_zh": "Evolvent AI",
+      "type": "unknown",
+      "aliases": [
+        "Evolvent AI"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2607.25886v1#page=1"
+      ]
+    },
+    {
+      "id": "fair-at-meta",
+      "name": "FAIR at Meta",
+      "name_zh": "FAIR at Meta",
+      "type": "lab",
+      "aliases": [
+        "FAIR at Meta"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2512.05145v1#page=1",
+        "https://arxiv.org/pdf/2603.19461v2#page=1"
+      ]
+    },
+    {
+      "id": "forethought",
+      "name": "Forethought",
+      "name_zh": "Forethought",
+      "type": "nonprofit",
+      "aliases": [
+        "Forethought"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1"
+      ]
+    },
+    {
+      "id": "foundation-for-american-innovation",
+      "name": "Foundation for American Innovation",
+      "name_zh": "Foundation for American Innovation",
+      "type": "nonprofit",
+      "aliases": [
+        "Foundation for American Innovation"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1"
+      ]
+    },
+    {
+      "id": "frontis-ai",
+      "name": "Frontis.AI",
+      "name_zh": "Frontis.AI",
+      "type": "unknown",
+      "aliases": [
+        "Frontis.AI"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.11873v3#page=1",
+        "https://arxiv.org/pdf/2607.28568v1#page=1"
+      ]
+    },
+    {
+      "id": "fudan-university",
+      "name": "Fudan University",
+      "name_zh": "Fudan University",
+      "type": "university",
+      "aliases": [
+        "Fudan University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2611.03178v1#page=22",
+        "https://arxiv.org/html/2610.22740v2",
+        "https://arxiv.org/html/2604.25850v4",
+        "https://arxiv.org/html/2410.10762v4",
+        "https://arxiv.org/pdf/2604.17091v1#page=1"
+      ]
+    },
+    {
+      "id": "georgia-institute-of-technology",
+      "name": "Georgia Institute of Technology",
+      "name_zh": "Georgia Institute of Technology",
+      "type": "university",
+      "aliases": [
+        "Georgia Institute of Technology"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2605.08703v2#page=1",
+        "https://arxiv.org/pdf/2609.01437v1#page=1"
+      ]
+    },
+    {
+      "id": "good-start-labs",
+      "name": "Good Start Labs",
+      "name_zh": "Good Start Labs",
+      "type": "unknown",
+      "aliases": [
+        "Good Start Labs"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2604.20987v1#page=1"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "name_zh": "Google",
+      "type": "company",
+      "aliases": [
+        "Google"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.14858v2#page=1",
+        "https://arxiv.org/pdf/2511.16043v2#page=1",
+        "https://arxiv.org/pdf/2603.06333v1#page=1",
+        "https://arxiv.org/pdf/2610.34386v1#page=1"
+      ]
+    },
+    {
+      "id": "google-cloud-ai-research",
+      "name": "Google Cloud AI Research",
+      "name_zh": "Google Cloud AI Research",
+      "type": "lab",
+      "aliases": [
+        "Google Cloud AI Research"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2610.14224v1#page=1",
+        "https://arxiv.org/pdf/2609.24972v3#page=1",
+        "https://arxiv.org/pdf/2610.28380v1#page=1"
+      ]
+    },
+    {
+      "id": "google-deepmind",
+      "name": "Google DeepMind",
+      "name_zh": "Google DeepMind",
+      "type": "lab",
+      "aliases": [
+        "Google DeepMind"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.14858v2#page=1",
+        "https://arxiv.org/pdf/2610.13025v1#page=1",
+        "https://arxiv.org/pdf/2308.08998v2#page=1",
+        "https://arxiv.org/pdf/2309.16797v1#page=1",
+        "https://arxiv.org/pdf/2312.06585v4#page=1",
+        "https://arxiv.org/pdf/2506.13131v1#page=1"
+      ]
+    },
+    {
+      "id": "google-research",
+      "name": "Google Research",
+      "name_zh": "Google Research",
+      "type": "lab",
+      "aliases": [
+        "Google Research"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2203.14465v1#page=1",
+        "https://arxiv.org/pdf/2012.02096v2#page=1",
+        "https://arxiv.org/pdf/2303.17651v2#page=1",
+        "https://arxiv.org/pdf/2308.08998v2#page=1"
+      ]
+    },
+    {
+      "id": "govai",
+      "name": "GovAI",
+      "name_zh": "GovAI",
+      "type": "nonprofit",
+      "aliases": [
+        "GovAI"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1"
+      ]
+    },
+    {
+      "id": "guidelight",
+      "name": "Guidelight",
+      "name_zh": "Guidelight",
+      "type": "unknown",
+      "aliases": [
+        "Guidelight"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1"
+      ]
+    },
+    {
+      "id": "harbin-institute-of-technology",
+      "name": "Harbin Institute of Technology",
+      "name_zh": "Harbin Institute of Technology",
+      "type": "university",
+      "aliases": [
+        "Harbin Institute of Technology"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2601.18226v2#page=1"
+      ]
+    },
+    {
+      "id": "horizon-research",
+      "name": "Horizon Research",
+      "name_zh": "Horizon Research",
+      "type": "unknown",
+      "aliases": [
+        "Horizon Research"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2607.28568v1#page=1"
+      ]
+    },
+    {
+      "id": "huawei-technologies-co-ltd",
+      "name": "Huawei Technologies Co., Ltd.",
+      "name_zh": "Huawei Technologies Co., Ltd.",
+      "type": "company",
+      "aliases": [
+        "Huawei Technologies Co., Ltd."
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.20431v3"
+      ]
+    },
+    {
+      "id": "huazhong-university-of-science-and-technology",
+      "name": "Huazhong University of Science and Technology",
+      "name_zh": "Huazhong University of Science and Technology",
+      "type": "university",
+      "aliases": [
+        "Huazhong University of Science and Technology"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.20431v3"
+      ]
+    },
+    {
+      "id": "humanlaya",
+      "name": "Humanlaya",
+      "name_zh": "Humanlaya",
+      "type": "unknown",
+      "aliases": [
+        "Humanlaya"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.11873v3#page=1",
+        "https://arxiv.org/pdf/2611.02797v1#page=1"
+      ]
+    },
+    {
+      "id": "idsia",
+      "name": "IDSIA",
+      "name_zh": "IDSIA",
+      "type": "research_institute",
+      "aliases": [
+        "IDSIA"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/cs/0309048v5#page=1"
+      ]
+    },
+    {
+      "id": "igent-ai",
+      "name": "iGent AI",
+      "name_zh": "iGent AI",
+      "type": "unknown",
+      "aliases": [
+        "iGent AI"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2504.15228v2#page=1"
+      ]
+    },
+    {
+      "id": "iit-bombay",
+      "name": "IIT Bombay",
+      "name_zh": "IIT Bombay",
+      "type": "university",
+      "aliases": [
+        "IIT Bombay"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2310.03714v1#page=1"
+      ]
+    },
+    {
+      "id": "illinois-institute-of-technology",
+      "name": "Illinois Institute of Technology",
+      "name_zh": "Illinois Institute of Technology",
+      "type": "university",
+      "aliases": [
+        "Illinois Institute of Technology"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2607.07663v2#page=1"
+      ]
+    },
+    {
+      "id": "institute-for-law-ai",
+      "name": "Institute for Law & AI",
+      "name_zh": "Institute for Law & AI",
+      "type": "unknown",
+      "aliases": [
+        "Institute for Law & AI"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1"
+      ]
+    },
+    {
+      "id": "johannes-gutenberg-university-mainz",
+      "name": "Johannes Gutenberg University Mainz",
+      "name_zh": "Johannes Gutenberg University Mainz",
+      "type": "university",
+      "aliases": [
+        "Johannes Gutenberg University Mainz"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2604.09297v3"
+      ]
+    },
+    {
+      "id": "johns-hopkins-university",
+      "name": "Johns Hopkins University",
+      "name_zh": "Johns Hopkins University",
+      "type": "university",
+      "aliases": [
+        "Johns Hopkins University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2212.10560v2#page=1"
+      ]
+    },
+    {
+      "id": "king-abdullah-university-of-science-and-technology",
+      "name": "King Abdullah University of Science and Technology",
+      "name_zh": "King Abdullah University of Science and Technology",
+      "type": "university",
+      "aliases": [
+        "King Abdullah University of Science and Technology"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2410.10762v4"
+      ]
+    },
+    {
+      "id": "king-s-college-london",
+      "name": "King's College London",
+      "name_zh": "King's College London",
+      "type": "university",
+      "aliases": [
+        "King's College London"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2604.09297v3"
+      ]
+    },
+    {
+      "id": "klingai-research",
+      "name": "KlingAI Research",
+      "name_zh": "KlingAI Research",
+      "type": "lab",
+      "aliases": [
+        "KlingAI Research"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2605.08703v2#page=1"
+      ]
+    },
+    {
+      "id": "kuaishou-technology",
+      "name": "Kuaishou Technology",
+      "name_zh": "Kuaishou Technology",
+      "type": "company",
+      "aliases": [
+        "Kuaishou Technology"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.26770v1"
+      ]
+    },
+    {
+      "id": "lawrence-livermore-national-laboratory",
+      "name": "Lawrence Livermore National Laboratory",
+      "name_zh": "Lawrence Livermore National Laboratory",
+      "type": "lab",
+      "aliases": [
+        "Lawrence Livermore National Laboratory"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2502.05171v2#page=1"
+      ]
+    },
+    {
+      "id": "lawzero",
+      "name": "LawZero",
+      "name_zh": "LawZero",
+      "type": "nonprofit",
+      "aliases": [
+        "LawZero"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1"
+      ]
+    },
+    {
+      "id": "leiden-university",
+      "name": "Leiden University",
+      "name_zh": "Leiden University",
+      "type": "university",
+      "aliases": [
+        "Leiden University"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.20431v3"
+      ]
+    },
+    {
+      "id": "m-a-p",
+      "name": "M-A-P",
+      "name_zh": "M-A-P",
+      "type": "unknown",
+      "aliases": [
+        "M-A-P"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2608.31111v1#page=1",
+        "https://arxiv.org/pdf/2608.31100v1#page=1",
+        "https://arxiv.org/pdf/2609.01437v1#page=1"
+      ]
+    },
+    {
+      "id": "massachusetts-institute-of-technology",
+      "name": "Massachusetts Institute of Technology",
+      "name_zh": "Massachusetts Institute of Technology",
+      "type": "university",
+      "aliases": [
+        "MIT",
+        "Massachusetts Institute of Technology"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2507.19457v1#page=1",
+        "https://arxiv.org/pdf/2506.10943v1#page=1",
+        "https://arxiv.org/pdf/2006.08381v1#page=1",
+        "https://arxiv.org/pdf/2303.11366v4#page=1",
+        "https://arxiv.org/pdf/2609.20519v1#page=1"
+      ]
+    },
+    {
+      "id": "max-planck-institute-for-intelligent-systems",
+      "name": "Max Planck Institute for Intelligent Systems",
+      "name_zh": "Max Planck Institute for Intelligent Systems",
+      "type": "research_institute",
+      "aliases": [
+        "Max Planck Institute for Intelligent Systems"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2502.05171v2#page=1",
+        "https://arxiv.org/pdf/2603.08640v2#page=1"
+      ]
+    },
+    {
+      "id": "meituan",
+      "name": "Meituan",
+      "name_zh": "Meituan",
+      "type": "company",
+      "aliases": [
+        "Meituan"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2605.06130v3#page=1"
+      ]
+    },
+    {
+      "id": "memtensor-shanghai-technology-co-ltd",
+      "name": "MemTensor (Shanghai) Technology Co., Ltd.",
+      "name_zh": "MemTensor (Shanghai) Technology Co., Ltd.",
+      "type": "company",
+      "aliases": [
+        "MemTensor (Shanghai) Technology Co., Ltd."
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2601.03192v2#page=1"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "name_zh": "Meta",
+      "type": "company",
+      "aliases": [
+        "Meta"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2401.10020v3#page=1"
+      ]
+    },
+    {
+      "id": "meta-ai",
+      "name": "Meta AI",
+      "name_zh": "Meta AI",
+      "type": "lab",
+      "aliases": [
+        "Meta AI"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2609.30652v1"
+      ]
+    },
+    {
+      "id": "meta-superintelligence-labs",
+      "name": "Meta Superintelligence Labs",
+      "name_zh": "Meta Superintelligence Labs",
+      "type": "lab",
+      "aliases": [
+        "Meta Superintelligence Labs"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2603.19461v2#page=1"
+      ]
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "name_zh": "Microsoft",
+      "type": "company",
+      "aliases": [
+        "Microsoft"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1",
+        "https://arxiv.org/pdf/2310.03714v1#page=1"
+      ]
+    },
+    {
+      "id": "microsoft-research",
+      "name": "Microsoft Research",
+      "name_zh": "Microsoft Research",
+      "type": "lab",
+      "aliases": [
+        "Microsoft Research"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2310.02304v3#page=1"
+      ]
+    },
+    {
+      "id": "microsoft-research-asia",
+      "name": "Microsoft Research Asia",
+      "name_zh": "Microsoft Research Asia",
+      "type": "lab",
+      "aliases": [
+        "Microsoft Research Asia"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2606.05922v3"
+      ]
+    },
+    {
+      "id": "mila",
+      "name": "Mila",
+      "name_zh": "Mila",
+      "type": "lab",
+      "aliases": [
+        "Mila"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1",
+        "https://arxiv.org/html/2410.10762v4",
+        "https://arxiv.org/pdf/2312.06585v4#page=1"
+      ]
+    },
+    {
+      "id": "modelbest",
+      "name": "ModelBest",
+      "name_zh": "ModelBest",
+      "type": "unknown",
+      "aliases": [
+        "ModelBest"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.11873v3#page=1"
+      ]
+    },
+    {
+      "id": "mohamed-bin-zayed-university-of-artificial-intelligence",
+      "name": "Mohamed bin Zayed University of Artificial Intelligence",
+      "name_zh": "Mohamed bin Zayed University of Artificial Intelligence",
+      "type": "university",
+      "aliases": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2604.20987v1#page=1"
+      ]
+    },
+    {
+      "id": "nanjing-university",
+      "name": "Nanjing University",
+      "name_zh": "Nanjing University",
+      "type": "university",
+      "aliases": [
+        "Nanjing University"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2604.09297v3",
+        "https://arxiv.org/html/2410.10762v4"
+      ]
+    },
+    {
+      "id": "nanyang-technological-university",
+      "name": "Nanyang Technological University",
+      "name_zh": "Nanyang Technological University",
+      "type": "university",
+      "aliases": [
+        "Nanyang Technological University"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2611.01113v1",
+        "https://arxiv.org/pdf/2602.02474v2#page=1"
+      ]
+    },
+    {
+      "id": "national-university-of-singapore",
+      "name": "National University of Singapore",
+      "name_zh": "National University of Singapore",
+      "type": "university",
+      "aliases": [
+        "National University of Singapore"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2611.03178v1#page=22",
+        "https://arxiv.org/pdf/2610.25078v1#page=1",
+        "https://arxiv.org/html/2610.22740v2",
+        "https://arxiv.org/pdf/2601.03192v2#page=1",
+        "https://arxiv.org/pdf/2604.00830v4#page=1",
+        "https://arxiv.org/pdf/2605.06130v3#page=1",
+        "https://arxiv.org/pdf/2607.25886v1#page=1"
+      ]
+    },
+    {
+      "id": "neurospin",
+      "name": "NeuroSpin",
+      "name_zh": "NeuroSpin",
+      "type": "research_institute",
+      "aliases": [
+        "NeuroSpin"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2006.08381v1#page=1"
+      ]
+    },
+    {
+      "id": "new-york-university",
+      "name": "New York University",
+      "name_zh": "New York University",
+      "type": "university",
+      "aliases": [
+        "New York University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2401.10020v3#page=1",
+        "https://arxiv.org/pdf/2603.19461v2#page=1"
+      ]
+    },
+    {
+      "id": "northeastern-university",
+      "name": "Northeastern University",
+      "name_zh": "Northeastern University",
+      "type": "university",
+      "aliases": [
+        "Northeastern University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2303.11366v4#page=1",
+        "https://arxiv.org/pdf/2603.06333v1#page=1",
+        "https://arxiv.org/html/2606.01770v3"
+      ]
+    },
+    {
+      "id": "northwestern-university",
+      "name": "Northwestern University",
+      "name_zh": "Northwestern University",
+      "type": "university",
+      "aliases": [
+        "Northwestern University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2610.14224v1#page=1"
+      ]
+    },
+    {
+      "id": "ntu",
+      "name": "NTU",
+      "name_zh": "NTU",
+      "type": "unknown",
+      "aliases": [
+        "NTU"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.20519v1#page=1"
+      ]
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "name_zh": "NVIDIA",
+      "type": "company",
+      "aliases": [
+        "NVIDIA"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2305.16291v1#page=1",
+        "https://arxiv.org/pdf/2303.17651v2#page=1",
+        "https://arxiv.org/pdf/2609.20519v1#page=1"
+      ]
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "name_zh": "OpenAI",
+      "type": "company",
+      "aliases": [
+        "OpenAI"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1",
+        "https://arxiv.org/pdf/2310.02304v3#page=1"
+      ]
+    },
+    {
+      "id": "peking-university",
+      "name": "Peking University",
+      "name_zh": "Peking University",
+      "type": "university",
+      "aliases": [
+        "Peking University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2611.03178v1#page=22",
+        "https://arxiv.org/html/2604.25850v4"
+      ]
+    },
+    {
+      "id": "pennsylvania-state-university",
+      "name": "Pennsylvania State University",
+      "name_zh": "Pennsylvania State University",
+      "type": "university",
+      "aliases": [
+        "Pennsylvania State University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2505.03335v1#page=1",
+        "https://arxiv.org/html/2606.01770v3"
+      ]
+    },
+    {
+      "id": "princeton-university",
+      "name": "Princeton University",
+      "name_zh": "Princeton University",
+      "type": "university",
+      "aliases": [
+        "Princeton University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2303.11366v4#page=1"
+      ]
+    },
+    {
+      "id": "purdue-university",
+      "name": "Purdue University",
+      "name_zh": "Purdue University",
+      "type": "university",
+      "aliases": [
+        "Purdue University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.33180v2#page=1",
+        "https://arxiv.org/pdf/2610.32026v1#page=1"
+      ]
+    },
+    {
+      "id": "queen-s-university-belfast",
+      "name": "Queen's University Belfast",
+      "name_zh": "Queen's University Belfast",
+      "type": "university",
+      "aliases": [
+        "Queen's University Belfast"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2604.09297v3"
+      ]
+    },
+    {
+      "id": "recursive",
+      "name": "Recursive",
+      "name_zh": "Recursive",
+      "type": "company",
+      "aliases": [
+        "Recursive"
+      ],
+      "sources": [
+        "https://recursive.com/updates/introducing-recursive-flint"
+      ]
+    },
+    {
+      "id": "recursive-superintelligence",
+      "name": "Recursive Superintelligence",
+      "name_zh": "Recursive Superintelligence",
+      "type": "unknown",
+      "aliases": [
+        "Recursive Superintelligence"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2511.16043v2#page=1"
+      ]
+    },
+    {
+      "id": "renmin-university-of-china",
+      "name": "Renmin University of China",
+      "name_zh": "Renmin University of China",
+      "type": "university",
+      "aliases": [
+        "Renmin University of China"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2611.03178v1#page=22",
+        "https://arxiv.org/html/2610.35193v1",
+        "https://arxiv.org/html/2410.10762v4"
+      ]
+    },
+    {
+      "id": "sakana-ai",
+      "name": "Sakana AI",
+      "name_zh": "Sakana AI",
+      "type": "company",
+      "aliases": [
+        "Sakana AI"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.12176v1",
+        "https://arxiv.org/pdf/2505.22954v1#page=1"
+      ]
+    },
+    {
+      "id": "salesforce-research",
+      "name": "Salesforce Research",
+      "name_zh": "Salesforce Research",
+      "type": "lab",
+      "aliases": [
+        "Salesforce Research"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.04280v3#page=1"
+      ]
+    },
+    {
+      "id": "samsung-sail-montreal",
+      "name": "Samsung SAIL Montréal",
+      "name_zh": "Samsung SAIL Montréal",
+      "type": "lab",
+      "aliases": [
+        "Samsung SAIL Montréal"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2510.04871v1#page=1"
+      ]
+    },
+    {
+      "id": "sensetime-group-inc",
+      "name": "SenseTime Group Inc.",
+      "name_zh": "SenseTime Group Inc.",
+      "type": "company",
+      "aliases": [
+        "SenseTime Group Inc."
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2610.25078v1#page=1"
+      ]
+    },
+    {
+      "id": "shanghai-ai-lab",
+      "name": "Shanghai AI Lab",
+      "name_zh": "Shanghai AI Lab",
+      "type": "lab",
+      "aliases": [
+        "Shanghai AI Lab"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.11873v3#page=1",
+        "https://arxiv.org/pdf/2504.16084v3#page=1",
+        "https://arxiv.org/pdf/2611.02797v1#page=1"
+      ]
+    },
+    {
+      "id": "shanghai-innovation-institute",
+      "name": "Shanghai Innovation Institute",
+      "name_zh": "Shanghai Innovation Institute",
+      "type": "research_institute",
+      "aliases": [
+        "Shanghai Innovation Institute"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2601.03192v2#page=1"
+      ]
+    },
+    {
+      "id": "shanghai-jiao-tong-university",
+      "name": "Shanghai Jiao Tong University",
+      "name_zh": "Shanghai Jiao Tong University",
+      "type": "university",
+      "aliases": [
+        "Shanghai Jiao Tong University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2611.03178v1#page=22",
+        "https://arxiv.org/pdf/2610.32253v1#page=1",
+        "https://arxiv.org/html/2610.26770v1",
+        "https://arxiv.org/html/2609.35561v2",
+        "https://arxiv.org/pdf/2609.11873v3#page=1",
+        "https://arxiv.org/pdf/2601.03192v2#page=1",
+        "https://arxiv.org/pdf/2611.03698v1#page=1",
+        "https://arxiv.org/pdf/2611.02797v1#page=1"
+      ]
+    },
+    {
+      "id": "shanghai-qiji-zhifeng-co-ltd",
+      "name": "Shanghai Qiji Zhifeng Co., Ltd.",
+      "name_zh": "Shanghai Qiji Zhifeng Co., Ltd.",
+      "type": "company",
+      "aliases": [
+        "Shanghai Qiji Zhifeng Co., Ltd."
+      ],
+      "sources": [
+        "https://arxiv.org/html/2604.25850v4"
+      ]
+    },
+    {
+      "id": "shenzhen-aquaintelling-technology",
+      "name": "Shenzhen Aquaintelling Technology",
+      "name_zh": "Shenzhen Aquaintelling Technology",
+      "type": "unknown",
+      "aliases": [
+        "Shenzhen Aquaintelling Technology"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2604.17091v1#page=1"
+      ]
+    },
+    {
+      "id": "simple-agent-lab",
+      "name": "Simple Agent Lab",
+      "name_zh": "Simple Agent Lab",
+      "type": "lab",
+      "aliases": [
+        "Simple Agent Lab"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2610.32253v1#page=1"
+      ]
+    },
+    {
+      "id": "singapore-university-of-technology-and-design",
+      "name": "Singapore University of Technology and Design",
+      "name_zh": "Singapore University of Technology and Design",
+      "type": "university",
+      "aliases": [
+        "Singapore University of Technology and Design"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2608.31111v1#page=1",
+        "https://arxiv.org/pdf/2609.01437v1#page=1"
+      ]
+    },
+    {
+      "id": "stanford-university",
+      "name": "Stanford University",
+      "name_zh": "Stanford University",
+      "type": "university",
+      "aliases": [
+        "Stanford University",
+        "Stanford"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2611.01113v1",
+        "https://arxiv.org/pdf/2203.14465v1#page=1",
+        "https://arxiv.org/pdf/2310.03714v1#page=1",
+        "https://arxiv.org/pdf/2507.19457v1#page=1",
+        "https://arxiv.org/pdf/2305.16291v1#page=1",
+        "https://arxiv.org/pdf/2609.24972v3#page=1",
+        "https://arxiv.org/pdf/2310.02304v3#page=1",
+        "https://arxiv.org/pdf/2406.07496v1#page=1",
+        "https://arxiv.org/pdf/2511.16043v2#page=1",
+        "https://arxiv.org/pdf/2603.06333v1#page=1"
+      ]
+    },
+    {
+      "id": "super-intelligence-team-xiaohongshu-inc",
+      "name": "Super Intelligence Team, Xiaohongshu Inc.",
+      "name_zh": "Super Intelligence Team, Xiaohongshu Inc.",
+      "type": "company",
+      "aliases": [
+        "Super Intelligence Team, Xiaohongshu Inc."
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.11873v3#page=1"
+      ]
+    },
+    {
+      "id": "tehran-polytechnic",
+      "name": "Tehran Polytechnic",
+      "name_zh": "Tehran Polytechnic",
+      "type": "university",
+      "aliases": [
+        "Tehran Polytechnic"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2212.10560v2#page=1"
+      ]
+    },
+    {
+      "id": "the-chinese-university-of-hong-kong",
+      "name": "The Chinese University of Hong Kong",
+      "name_zh": "The Chinese University of Hong Kong",
+      "type": "university",
+      "aliases": [
+        "The Chinese University of Hong Kong"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2611.03698v1#page=1"
+      ]
+    },
+    {
+      "id": "the-chinese-university-of-hong-kong-shenzhen",
+      "name": "The Chinese University of Hong Kong, Shenzhen",
+      "name_zh": "The Chinese University of Hong Kong, Shenzhen",
+      "type": "university",
+      "aliases": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.22740v2"
+      ]
+    },
+    {
+      "id": "the-hong-kong-university-of-science-and-technology",
+      "name": "The Hong Kong University of Science and Technology",
+      "name_zh": "The Hong Kong University of Science and Technology",
+      "type": "university",
+      "aliases": [
+        "The Hong Kong University of Science and Technology"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.18083v1",
+        "https://arxiv.org/html/2410.10762v4"
+      ]
+    },
+    {
+      "id": "the-hong-kong-university-of-science-and-technology-guangzhou",
+      "name": "The Hong Kong University of Science and Technology (Guangzhou)",
+      "name_zh": "The Hong Kong University of Science and Technology (Guangzhou)",
+      "type": "university",
+      "aliases": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2410.10762v4"
+      ]
+    },
+    {
+      "id": "the-ohio-state-university",
+      "name": "The Ohio State University",
+      "name_zh": "The Ohio State University",
+      "type": "university",
+      "aliases": [
+        "The Ohio State University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2610.34386v1#page=1"
+      ]
+    },
+    {
+      "id": "theseus-labs",
+      "name": "Theseus Labs",
+      "name_zh": "Theseus Labs",
+      "type": "lab",
+      "aliases": [
+        "Theseus Labs"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.11873v3#page=1",
+        "https://arxiv.org/pdf/2611.02797v1#page=1"
+      ]
+    },
+    {
+      "id": "thoughtful-lab",
+      "name": "Thoughtful Lab",
+      "name_zh": "Thoughtful Lab",
+      "type": "lab",
+      "aliases": [
+        "Thoughtful Lab"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2603.08640v2#page=1"
+      ]
+    },
+    {
+      "id": "tokenwave-ai",
+      "name": "TokenWave.AI",
+      "name_zh": "TokenWave.AI",
+      "type": "unknown",
+      "aliases": [
+        "TokenWave.AI"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2608.31111v1#page=1",
+        "https://arxiv.org/pdf/2608.31100v1#page=1",
+        "https://arxiv.org/pdf/2609.01437v1#page=1"
+      ]
+    },
+    {
+      "id": "tongji-university",
+      "name": "Tongji University",
+      "name_zh": "Tongji University",
+      "type": "university",
+      "aliases": [
+        "Tongji University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2610.32253v1#page=1"
+      ]
+    },
+    {
+      "id": "tongyi-lab",
+      "name": "Tongyi Lab",
+      "name_zh": "Tongyi Lab",
+      "type": "lab",
+      "aliases": [
+        "Tongyi Lab"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2511.10395v1#page=1"
+      ]
+    },
+    {
+      "id": "tsinghua-university",
+      "name": "Tsinghua University",
+      "name_zh": "Tsinghua University",
+      "type": "university",
+      "aliases": [
+        "Tsinghua University"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.26770v1",
+        "https://arxiv.org/html/2610.22740v2",
+        "https://arxiv.org/pdf/2609.11873v3#page=1",
+        "https://arxiv.org/pdf/2505.03335v1#page=1",
+        "https://arxiv.org/pdf/2607.28568v1#page=1",
+        "https://arxiv.org/pdf/2504.16084v3#page=1",
+        "https://arxiv.org/pdf/2602.02474v2#page=1",
+        "https://arxiv.org/pdf/2605.08703v2#page=1",
+        "https://arxiv.org/pdf/2611.03698v1#page=1"
+      ]
+    },
+    {
+      "id": "tu-munchen",
+      "name": "TU München",
+      "name_zh": "TU München",
+      "type": "university",
+      "aliases": [
+        "TU München"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/cs/0309048v5#page=1"
+      ]
+    },
+    {
+      "id": "tubingen-ai-center",
+      "name": "Tübingen AI Center",
+      "name_zh": "Tübingen AI Center",
+      "type": "research_institute",
+      "aliases": [
+        "Tübingen AI Center"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2502.05171v2#page=1",
+        "https://arxiv.org/pdf/2603.08640v2#page=1"
+      ]
+    },
+    {
+      "id": "two-sigma-investments",
+      "name": "Two Sigma Investments",
+      "name_zh": "Two Sigma Investments",
+      "type": "company",
+      "aliases": [
+        "Two Sigma Investments"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2310.03714v1#page=1"
+      ]
+    },
+    {
+      "id": "uber-ai-labs",
+      "name": "Uber AI Labs",
+      "name_zh": "Uber AI Labs",
+      "type": "lab",
+      "aliases": [
+        "Uber AI Labs"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/1901.01753v1#page=1"
+      ]
+    },
+    {
+      "id": "universite-de-montreal",
+      "name": "Université de Montréal",
+      "name_zh": "Université de Montréal",
+      "type": "university",
+      "aliases": [
+        "Université de Montréal"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1",
+        "https://arxiv.org/html/2410.10762v4"
+      ]
+    },
+    {
+      "id": "university-college-london",
+      "name": "University College London",
+      "name_zh": "University College London",
+      "type": "university",
+      "aliases": [
+        "University College London"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1",
+        "https://arxiv.org/html/2604.09297v3"
+      ]
+    },
+    {
+      "id": "university-of-bristol",
+      "name": "University of Bristol",
+      "name_zh": "University of Bristol",
+      "type": "university",
+      "aliases": [
+        "University of Bristol"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2504.15228v2#page=1"
+      ]
+    },
+    {
+      "id": "university-of-british-columbia",
+      "name": "University of British Columbia",
+      "name_zh": "University of British Columbia",
+      "type": "university",
+      "aliases": [
+        "University of British Columbia"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1",
+        "https://arxiv.org/pdf/2505.22954v1#page=1",
+        "https://arxiv.org/pdf/2408.08435v2#page=1",
+        "https://arxiv.org/pdf/2603.19461v2#page=1",
+        "https://arxiv.org/pdf/2605.08703v2#page=1"
+      ]
+    },
+    {
+      "id": "university-of-california-san-diego",
+      "name": "University of California San Diego",
+      "name_zh": "University of California San Diego",
+      "type": "university",
+      "aliases": [
+        "University of California San Diego"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.15364v2#page=1",
+        "https://arxiv.org/pdf/2303.17651v2#page=1"
+      ]
+    },
+    {
+      "id": "university-of-california-berkeley",
+      "name": "University of California, Berkeley",
+      "name_zh": "University of California, Berkeley",
+      "type": "university",
+      "aliases": [
+        "University of California, Berkeley",
+        "UC Berkeley"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2610.32253v1#page=1",
+        "https://arxiv.org/html/2610.12176v1",
+        "https://arxiv.org/pdf/2609.36054v2#page=1",
+        "https://arxiv.org/pdf/2310.03714v1#page=1",
+        "https://arxiv.org/pdf/2507.19457v1#page=1",
+        "https://arxiv.org/pdf/2012.02096v2#page=1",
+        "https://arxiv.org/pdf/2610.34386v1#page=1"
+      ]
+    },
+    {
+      "id": "university-of-california-los-angeles",
+      "name": "University of California, Los Angeles",
+      "name_zh": "University of California, Los Angeles",
+      "type": "university",
+      "aliases": [
+        "University of California, Los Angeles"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2401.01335v3"
+      ]
+    },
+    {
+      "id": "university-of-california-riverside",
+      "name": "University of California, Riverside",
+      "name_zh": "University of California, Riverside",
+      "type": "university",
+      "aliases": [
+        "University of California, Riverside"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2609.30652v1"
+      ]
+    },
+    {
+      "id": "university-of-cambridge",
+      "name": "University of Cambridge",
+      "name_zh": "University of Cambridge",
+      "type": "university",
+      "aliases": [
+        "University of Cambridge"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1",
+        "https://arxiv.org/pdf/2603.06333v1#page=1"
+      ]
+    },
+    {
+      "id": "university-of-chinese-academy-of-sciences",
+      "name": "University of Chinese Academy of Sciences",
+      "name_zh": "University of Chinese Academy of Sciences",
+      "type": "university",
+      "aliases": [
+        "University of Chinese Academy of Sciences"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.35193v1"
+      ]
+    },
+    {
+      "id": "university-of-duisburg-essen",
+      "name": "University of Duisburg-Essen",
+      "name_zh": "University of Duisburg-Essen",
+      "type": "university",
+      "aliases": [
+        "University of Duisburg-Essen"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2604.09297v3"
+      ]
+    },
+    {
+      "id": "university-of-edinburgh",
+      "name": "University of Edinburgh",
+      "name_zh": "University of Edinburgh",
+      "type": "university",
+      "aliases": [
+        "University of Edinburgh"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2603.19461v2#page=1"
+      ]
+    },
+    {
+      "id": "university-of-groningen",
+      "name": "University of Groningen",
+      "name_zh": "University of Groningen",
+      "type": "university",
+      "aliases": [
+        "University of Groningen"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.20431v3"
+      ]
+    },
+    {
+      "id": "university-of-illinois-chicago",
+      "name": "University of Illinois Chicago",
+      "name_zh": "University of Illinois Chicago",
+      "type": "university",
+      "aliases": [
+        "University of Illinois Chicago"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.33295v1#page=1",
+        "https://arxiv.org/pdf/2609.15364v2#page=1",
+        "https://arxiv.org/pdf/2602.02474v2#page=1"
+      ]
+    },
+    {
+      "id": "university-of-illinois-urbana-champaign",
+      "name": "University of Illinois Urbana-Champaign",
+      "name_zh": "University of Illinois Urbana-Champaign",
+      "type": "university",
+      "aliases": [
+        "University of Illinois Urbana-Champaign",
+        "University of Illinois, Urbana-Champaign"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.22740v2",
+        "https://arxiv.org/pdf/2610.13025v1#page=1",
+        "https://arxiv.org/pdf/2610.28380v1#page=1",
+        "https://arxiv.org/pdf/2511.13646v3#page=1",
+        "https://arxiv.org/pdf/2602.02474v2#page=1",
+        "https://arxiv.org/html/2606.01770v3",
+        "https://arxiv.org/pdf/2610.34386v1#page=1"
+      ]
+    },
+    {
+      "id": "university-of-maryland-college-park",
+      "name": "University of Maryland, College Park",
+      "name_zh": "University of Maryland, College Park",
+      "type": "university",
+      "aliases": [
+        "University of Maryland, College Park"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.14858v2#page=1",
+        "https://arxiv.org/pdf/2502.05171v2#page=1",
+        "https://arxiv.org/pdf/2604.20987v1#page=1"
+      ]
+    },
+    {
+      "id": "university-of-massachusetts-amherst",
+      "name": "University of Massachusetts Amherst",
+      "name_zh": "University of Massachusetts Amherst",
+      "type": "university",
+      "aliases": [
+        "University of Massachusetts Amherst"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1"
+      ]
+    },
+    {
+      "id": "university-of-north-carolina-at-chapel-hill",
+      "name": "University of North Carolina at Chapel Hill",
+      "name_zh": "University of North Carolina at Chapel Hill",
+      "type": "university",
+      "aliases": [
+        "UNC-Chapel Hill",
+        "University of North Carolina at Chapel Hill"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.24972v3#page=1",
+        "https://arxiv.org/pdf/2511.16043v2#page=1",
+        "https://arxiv.org/pdf/2609.04280v3#page=1"
+      ]
+    },
+    {
+      "id": "university-of-notre-dame",
+      "name": "University of Notre Dame",
+      "name_zh": "University of Notre Dame",
+      "type": "university",
+      "aliases": [
+        "Notre Dame"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2507.19457v1#page=1"
+      ]
+    },
+    {
+      "id": "university-of-oxford",
+      "name": "University of Oxford",
+      "name_zh": "University of Oxford",
+      "type": "university",
+      "aliases": [
+        "University of Oxford"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1"
+      ]
+    },
+    {
+      "id": "university-of-science-and-technology-of-china",
+      "name": "University of Science and Technology of China",
+      "name_zh": "University of Science and Technology of China",
+      "type": "university",
+      "aliases": [
+        "University of Science and Technology of China"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2610.32253v1#page=1",
+        "https://arxiv.org/pdf/2601.03192v2#page=1",
+        "https://arxiv.org/pdf/2601.18226v2#page=1",
+        "https://arxiv.org/pdf/2605.06130v3#page=1"
+      ]
+    },
+    {
+      "id": "university-of-southern-california",
+      "name": "University of Southern California",
+      "name_zh": "University of Southern California",
+      "type": "university",
+      "aliases": [
+        "University of Southern California"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2604.20987v1#page=1"
+      ]
+    },
+    {
+      "id": "university-of-texas-at-austin",
+      "name": "University of Texas at Austin",
+      "name_zh": "University of Texas at Austin",
+      "type": "university",
+      "aliases": [
+        "UT Austin"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2305.16291v1#page=1"
+      ]
+    },
+    {
+      "id": "university-of-toronto",
+      "name": "University of Toronto",
+      "name_zh": "University of Toronto",
+      "type": "university",
+      "aliases": [
+        "University of Toronto"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1"
+      ]
+    },
+    {
+      "id": "university-of-tubingen",
+      "name": "University of Tübingen",
+      "name_zh": "University of Tübingen",
+      "type": "university",
+      "aliases": [
+        "University of Tübingen"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2603.08640v2#page=1"
+      ]
+    },
+    {
+      "id": "university-of-virginia",
+      "name": "University of Virginia",
+      "name_zh": "University of Virginia",
+      "type": "university",
+      "aliases": [
+        "University of Virginia"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1",
+        "https://arxiv.org/pdf/2609.14858v2#page=1"
+      ]
+    },
+    {
+      "id": "university-of-warwick",
+      "name": "University of Warwick",
+      "name_zh": "University of Warwick",
+      "type": "university",
+      "aliases": [
+        "University of Warwick"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.26770v1"
+      ]
+    },
+    {
+      "id": "university-of-washington",
+      "name": "University of Washington",
+      "name_zh": "University of Washington",
+      "type": "university",
+      "aliases": [
+        "University of Washington"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2212.10560v2#page=1",
+        "https://arxiv.org/pdf/2303.17651v2#page=1",
+        "https://arxiv.org/pdf/2512.05145v1#page=1",
+        "https://arxiv.org/pdf/2610.34386v1#page=1"
+      ]
+    },
+    {
+      "id": "university-of-waterloo",
+      "name": "University of Waterloo",
+      "name_zh": "University of Waterloo",
+      "type": "university",
+      "aliases": [
+        "University of Waterloo"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2609.35561v2",
+        "https://arxiv.org/pdf/2605.08703v2#page=1"
+      ]
+    },
+    {
+      "id": "university-of-wisconsin-madison",
+      "name": "University of Wisconsin–Madison",
+      "name_zh": "University of Wisconsin–Madison",
+      "type": "university",
+      "aliases": [
+        "University of Wisconsin–Madison"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2512.17102v2#page=1",
+        "https://arxiv.org/pdf/2609.04280v3#page=1"
+      ]
+    },
+    {
+      "id": "vector-institute",
+      "name": "Vector Institute",
+      "name_zh": "Vector Institute",
+      "type": "lab",
+      "aliases": [
+        "Vector Institute"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.36054v2#page=1",
+        "https://arxiv.org/pdf/2505.22954v1#page=1",
+        "https://arxiv.org/pdf/2408.08435v2#page=1",
+        "https://arxiv.org/pdf/2603.19461v2#page=1",
+        "https://arxiv.org/pdf/2605.08703v2#page=1"
+      ]
+    },
+    {
+      "id": "vinuniversity",
+      "name": "VinUniversity",
+      "name_zh": "VinUniversity",
+      "type": "university",
+      "aliases": [
+        "VinUniversity"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2611.01113v1"
+      ]
+    },
+    {
+      "id": "washington-university-in-st-louis",
+      "name": "Washington University in St. Louis",
+      "name_zh": "Washington University in St. Louis",
+      "type": "university",
+      "aliases": [
+        "Washington University in St. Louis"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2609.24972v3#page=1"
+      ]
+    },
+    {
+      "id": "weco-ai",
+      "name": "Weco AI",
+      "name_zh": "Weco AI",
+      "type": "company",
+      "aliases": [
+        "Weco AI"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2609.26457v1"
+      ]
+    },
+    {
+      "id": "wuhan-university",
+      "name": "Wuhan University",
+      "name_zh": "Wuhan University",
+      "type": "university",
+      "aliases": [
+        "Wuhan University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2605.06130v3#page=1"
+      ]
+    },
+    {
+      "id": "xidian-university",
+      "name": "Xidian University",
+      "name_zh": "Xidian University",
+      "type": "university",
+      "aliases": [
+        "Xidian University"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2601.03192v2#page=1"
+      ]
+    },
+    {
+      "id": "yunjue-technology",
+      "name": "Yunjue Technology",
+      "name_zh": "Yunjue Technology",
+      "type": "unknown",
+      "aliases": [
+        "Yunjue Technology"
+      ],
+      "sources": [
+        "https://arxiv.org/pdf/2601.18226v2#page=1"
+      ]
+    },
+    {
+      "id": "z-ai-co-ltd",
+      "name": "Z.AI Co., Ltd.",
+      "name_zh": "Z.AI Co., Ltd.",
+      "type": "company",
+      "aliases": [
+        "Z.AI Co., Ltd."
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.26770v1"
+      ]
+    },
+    {
+      "id": "zhejiang-university",
+      "name": "Zhejiang University",
+      "name_zh": "Zhejiang University",
+      "type": "university",
+      "aliases": [
+        "Zhejiang University"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.18083v1",
+        "https://arxiv.org/pdf/2605.06130v3#page=1"
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "record_id": "arxiv:2611.03178",
+      "institution_id": "renmin-university-of-china",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.03178v1#page=22",
+      "evidence": "Author Contributions, Affiliations: institution 1."
+    },
+    {
+      "record_id": "arxiv:2611.03178",
+      "institution_id": "fudan-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.03178v1#page=22",
+      "evidence": "Author Contributions, Affiliations: institution 2."
+    },
+    {
+      "record_id": "arxiv:2611.03178",
+      "institution_id": "peking-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.03178v1#page=22",
+      "evidence": "Author Contributions, Affiliations: institution 3."
+    },
+    {
+      "record_id": "arxiv:2611.03178",
+      "institution_id": "shanghai-jiao-tong-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.03178v1#page=22",
+      "evidence": "Author Contributions, Affiliations: institution 4."
+    },
+    {
+      "record_id": "arxiv:2611.03178",
+      "institution_id": "national-university-of-singapore",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.03178v1#page=22",
+      "evidence": "Author Contributions, Affiliations: institution 5."
+    },
+    {
+      "record_id": "arxiv:2611.03178",
+      "institution_id": "east-china-normal-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.03178v1#page=22",
+      "evidence": "Author Contributions, Affiliations: institution 6; independently repeated on https://coworkos-ai.github.io/."
+    },
+    {
+      "record_id": "arxiv:2611.01113",
+      "institution_id": "nanyang-technological-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2611.01113v1",
+      "evidence": "Author block explicitly lists Nanyang Technological University, Singapore."
+    },
+    {
+      "record_id": "arxiv:2611.01113",
+      "institution_id": "stanford-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2611.01113v1",
+      "evidence": "Xinliang Zhou's affiliation is Stanford University."
+    },
+    {
+      "record_id": "arxiv:2611.01113",
+      "institution_id": "vinuniversity",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2611.01113v1",
+      "evidence": "Anh Tuan Luu's author block additionally lists VinUniversity, Vietnam."
+    },
+    {
+      "record_id": "arxiv:2610.35193",
+      "institution_id": "renmin-university-of-china",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.35193v1",
+      "evidence": "Most authors list the Gaoling School of Artificial Intelligence, Renmin University of China."
+    },
+    {
+      "record_id": "arxiv:2610.35193",
+      "institution_id": "university-of-chinese-academy-of-sciences",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.35193v1",
+      "evidence": "Junhao Zhang lists University of Chinese Academy of Sciences."
+    },
+    {
+      "record_id": "arxiv:2610.32253",
+      "institution_id": "university-of-california-berkeley",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.32253v1#page=1",
+      "evidence": "Numbered author affiliation 1."
+    },
+    {
+      "record_id": "arxiv:2610.32253",
+      "institution_id": "university-of-science-and-technology-of-china",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.32253v1#page=1",
+      "evidence": "Numbered author affiliation 2."
+    },
+    {
+      "record_id": "arxiv:2610.32253",
+      "institution_id": "douyin-group",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.32253v1#page=1",
+      "evidence": "Numbered author affiliation 3."
+    },
+    {
+      "record_id": "arxiv:2610.32253",
+      "institution_id": "shanghai-jiao-tong-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.32253v1#page=1",
+      "evidence": "Numbered author affiliation 4."
+    },
+    {
+      "record_id": "arxiv:2610.32253",
+      "institution_id": "tongji-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.32253v1#page=1",
+      "evidence": "Numbered author affiliation 5."
+    },
+    {
+      "record_id": "arxiv:2610.32253",
+      "institution_id": "beijing-institute-for-general-artificial-intelligence",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.32253v1#page=1",
+      "evidence": "Numbered author affiliation 6."
+    },
+    {
+      "record_id": "arxiv:2610.32253",
+      "institution_id": "simple-agent-lab",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.32253v1#page=1",
+      "evidence": "Numbered author affiliation 7."
+    },
+    {
+      "record_id": "recursive:flint",
+      "institution_id": "recursive",
+      "relation": "publisher",
+      "source_url": "https://recursive.com/updates/introducing-recursive-flint",
+      "evidence": "Official Recursive release introduces Recursive Flint and describes Recursive's Eureka Machine."
+    },
+    {
+      "record_id": "arxiv:2610.26770",
+      "institution_id": "tsinghua-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.26770v1",
+      "evidence": "Zhuoshi Pan, ZhiYuan Feng, H. Vicky Zhao and Jie Tang list Tsinghua University."
+    },
+    {
+      "record_id": "arxiv:2610.26770",
+      "institution_id": "z-ai-co-ltd",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.26770v1",
+      "evidence": "Yukuo Cen lists Z.AI Co., Ltd."
+    },
+    {
+      "record_id": "arxiv:2610.26770",
+      "institution_id": "shanghai-jiao-tong-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.26770v1",
+      "evidence": "Honglin Lin lists Shanghai Jiao Tong University."
+    },
+    {
+      "record_id": "arxiv:2610.26770",
+      "institution_id": "university-of-warwick",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.26770v1",
+      "evidence": "Junru Lu lists University of Warwick."
+    },
+    {
+      "record_id": "arxiv:2610.26770",
+      "institution_id": "kuaishou-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.26770v1",
+      "evidence": "Zhongxia Chen and Shuo Yang list Kuaishou–Kuaishou Technology."
+    },
+    {
+      "record_id": "arxiv:2610.25078",
+      "institution_id": "national-university-of-singapore",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.25078v1#page=1",
+      "evidence": "Institution explicitly listed beneath the authors."
+    },
+    {
+      "record_id": "arxiv:2610.25078",
+      "institution_id": "agency-for-science-technology-and-research-a-star",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.25078v1#page=1",
+      "evidence": "Research agency explicitly listed beneath the authors."
+    },
+    {
+      "record_id": "arxiv:2610.25078",
+      "institution_id": "sensetime-group-inc",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.25078v1#page=1",
+      "evidence": "Company explicitly listed beneath the authors."
+    },
+    {
+      "record_id": "arxiv:2610.22740",
+      "institution_id": "the-chinese-university-of-hong-kong-shenzhen",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.22740v2",
+      "evidence": "Mingda Zhang, Yun Huang, Na Zhao, Jian Wang and Xiaoying Tang list this institution."
+    },
+    {
+      "record_id": "arxiv:2610.22740",
+      "institution_id": "fudan-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.22740v2",
+      "evidence": "Qiang Huang and Rui Qian list Fudan University."
+    },
+    {
+      "record_id": "arxiv:2610.22740",
+      "institution_id": "university-of-illinois-urbana-champaign",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.22740v2",
+      "evidence": "Yanjin Li lists University of Illinois Urbana-Champaign."
+    },
+    {
+      "record_id": "arxiv:2610.22740",
+      "institution_id": "tsinghua-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.22740v2",
+      "evidence": "Qichao Zhao lists Tsinghua University."
+    },
+    {
+      "record_id": "arxiv:2610.22740",
+      "institution_id": "national-university-of-singapore",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.22740v2",
+      "evidence": "Tiesunlong Shen lists National University of Singapore."
+    },
+    {
+      "record_id": "arxiv:2610.20431",
+      "institution_id": "huawei-technologies-co-ltd",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.20431v3",
+      "evidence": "Author-affiliation block explicitly lists Huawei Technologies Co., Ltd."
+    },
+    {
+      "record_id": "arxiv:2610.20431",
+      "institution_id": "leiden-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.20431v3",
+      "evidence": "Author-affiliation block explicitly lists Leiden University."
+    },
+    {
+      "record_id": "arxiv:2610.20431",
+      "institution_id": "university-of-groningen",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.20431v3",
+      "evidence": "Author-affiliation block explicitly lists University of Groningen."
+    },
+    {
+      "record_id": "arxiv:2610.20431",
+      "institution_id": "huazhong-university-of-science-and-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.20431v3",
+      "evidence": "Author-affiliation block explicitly lists Huazhong University of Science and Technology."
+    },
+    {
+      "record_id": "arxiv:2610.18083",
+      "institution_id": "ant-group",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.18083v1",
+      "evidence": "Numbered author affiliation 1: Ant Group."
+    },
+    {
+      "record_id": "arxiv:2610.18083",
+      "institution_id": "zhejiang-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.18083v1",
+      "evidence": "Numbered author affiliation 2: Zhejiang University."
+    },
+    {
+      "record_id": "arxiv:2610.18083",
+      "institution_id": "the-hong-kong-university-of-science-and-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.18083v1",
+      "evidence": "Numbered author affiliation 3: HKUST."
+    },
+    {
+      "record_id": "arxiv:2610.12176",
+      "institution_id": "university-of-california-berkeley",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.12176v1",
+      "evidence": "Hyunin Lee, Donghyun Lee, Somayeh Sojoudi and Matei Zaharia list UC Berkeley."
+    },
+    {
+      "record_id": "arxiv:2610.12176",
+      "institution_id": "sakana-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2610.12176v1",
+      "evidence": "Jinglue Xu, Jeffrey Seely and Yujin Tang list Sakana AI; a footnote also identifies Hyunin Lee's internship there."
+    },
+    {
+      "record_id": "arxiv:2609.35561",
+      "institution_id": "shanghai-jiao-tong-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2609.35561v2",
+      "evidence": "Institution explicitly listed in the author-affiliation block."
+    },
+    {
+      "record_id": "arxiv:2609.35561",
+      "institution_id": "carnegie-mellon-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2609.35561v2",
+      "evidence": "Institution explicitly listed in the author-affiliation block."
+    },
+    {
+      "record_id": "arxiv:2609.35561",
+      "institution_id": "university-of-waterloo",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2609.35561v2",
+      "evidence": "Institution explicitly listed in the author-affiliation block."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "govai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Alan Chan and Sam Manning list GovAI. https://www.governance.ai/about-us identifies it as an independent 501(c)(3) nonprofit."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "casp",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Christoph Winter and Sören Mindermann list CASP; expansion and institutional type were not established."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "university-of-cambridge",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Christoph Winter and Sören Mindermann list University of Cambridge."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "institute-for-law-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Christoph Winter lists Institute for Law & AI. https://law-ai.org/ describes an independent think tank; its requested type was left unresolved."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "university-of-massachusetts-amherst",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Andrew Barto's listed affiliation."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "openai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Jakub Pachocki's listed affiliation."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "university-of-toronto",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Geoffrey Hinton and Sheila A. McIlraith list University of Toronto."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "vector-institute",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Geoffrey Hinton, Sheila A. McIlraith and Jeff Clune list Vector Institute; https://vectorinstitute.ai/about/ describes an AI research institute."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "microsoft",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Eric Horvitz's listed affiliation."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "mila",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Yoshua Bengio lists Mila (Quebec AI Institute)."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "universite-de-montreal",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Yoshua Bengio's listed university affiliation."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "lawzero",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Yoshua Bengio lists LawZero; https://lawzero.org/en explicitly describes a nonprofit startup."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "university-of-california-berkeley",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Dawn Song's listed affiliation."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "anthropic",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Jack Clark and Anton Korinek list Anthropic."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "university-of-oxford",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Hilary Greaves, Ben Bariach and Philip H. S. Torr list University of Oxford."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "university-of-virginia",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Anton Korinek's listed university affiliation."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "foundation-for-american-innovation",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Samuel Hammond and Sam Manning list this foundation; https://www.thefai.org/about-us confirms 501(c)(3) nonprofit status."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "university-college-london",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Thore Graepel's listed affiliation."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "university-of-british-columbia",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Jeff Clune's listed university affiliation."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "guidelight",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Girish Sastry lists Guidelight; institutional type was not established."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "forethought",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Tom Davidson lists Forethought; https://www.forethought.org/ describes a research nonprofit."
+    },
+    {
+      "record_id": "arxiv:2609.36054",
+      "institution_id": "ai-policy-institute",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.36054v2#page=1",
+      "evidence": "Daniel Eth lists AI Policy Institute; institutional type was not established from the retrieved primary material."
+    },
+    {
+      "record_id": "arxiv:2609.33295",
+      "institution_id": "bytedance-inc",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.33295v1#page=1",
+      "evidence": "Numbered affiliation 1: ByteDance Inc., USA."
+    },
+    {
+      "record_id": "arxiv:2609.33295",
+      "institution_id": "university-of-illinois-chicago",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.33295v1#page=1",
+      "evidence": "Numbered affiliation 2 is written University of Illinois at Chicago."
+    },
+    {
+      "record_id": "arxiv:2609.30652",
+      "institution_id": "meta-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2609.30652v1",
+      "evidence": "Author-affiliation block repeatedly lists Meta AI; the lead author's work-at-Meta note is explicit."
+    },
+    {
+      "record_id": "arxiv:2609.30652",
+      "institution_id": "university-of-california-riverside",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2609.30652v1",
+      "evidence": "Shangjian Yin and Zhouxing Shi list University of California, Riverside."
+    },
+    {
+      "record_id": "arxiv:2609.26457",
+      "institution_id": "weco-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2609.26457v1",
+      "evidence": "Dhruv Srikanth, Bingchen Zhao, Dixing Xu, Yuxiang Wu and Zhengyao Jiang all list Weco AI."
+    },
+    {
+      "record_id": "arxiv:2609.22086",
+      "institution_id": "adobe",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2609.22086v1",
+      "evidence": "Adobe is explicitly listed in the author-affiliation block."
+    },
+    {
+      "record_id": "arxiv:2609.22086",
+      "institution_id": "brown-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2609.22086v1",
+      "evidence": "Brown University is explicitly listed in the author-affiliation block."
+    },
+    {
+      "record_id": "arxiv:2609.14858",
+      "institution_id": "google",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.14858v2#page=1",
+      "evidence": "Numbered affiliation 1: Google."
+    },
+    {
+      "record_id": "arxiv:2609.14858",
+      "institution_id": "university-of-maryland-college-park",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.14858v2#page=1",
+      "evidence": "Numbered affiliation 2."
+    },
+    {
+      "record_id": "arxiv:2609.14858",
+      "institution_id": "google-deepmind",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.14858v2#page=1",
+      "evidence": "Numbered affiliation 3 is written Google Deepmind."
+    },
+    {
+      "record_id": "arxiv:2609.14858",
+      "institution_id": "university-of-virginia",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.14858v2#page=1",
+      "evidence": "Numbered affiliation 4."
+    },
+    {
+      "record_id": "arxiv:2609.15364",
+      "institution_id": "aether-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.15364v2#page=1",
+      "evidence": "Numbered affiliation 1: Aether AI; an internship note is also explicit. Institutional type was not established."
+    },
+    {
+      "record_id": "arxiv:2609.15364",
+      "institution_id": "university-of-california-san-diego",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.15364v2#page=1",
+      "evidence": "Numbered affiliation 2."
+    },
+    {
+      "record_id": "arxiv:2609.15364",
+      "institution_id": "university-of-illinois-chicago",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.15364v2#page=1",
+      "evidence": "Numbered affiliation 3."
+    },
+    {
+      "record_id": "arxiv:2609.11873",
+      "institution_id": "shanghai-jiao-tong-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.11873v3#page=1",
+      "evidence": "Numbered affiliation 1."
+    },
+    {
+      "record_id": "arxiv:2609.11873",
+      "institution_id": "theseus-labs",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.11873v3#page=1",
+      "evidence": "Numbered affiliation 2."
+    },
+    {
+      "record_id": "arxiv:2609.11873",
+      "institution_id": "tsinghua-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.11873v3#page=1",
+      "evidence": "Numbered affiliation 3."
+    },
+    {
+      "record_id": "arxiv:2609.11873",
+      "institution_id": "bytedance-inc",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.11873v3#page=1",
+      "evidence": "Numbered affiliation 4 is written ByteDance."
+    },
+    {
+      "record_id": "arxiv:2609.11873",
+      "institution_id": "modelbest",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.11873v3#page=1",
+      "evidence": "Numbered affiliation 5; entity type was not independently established."
+    },
+    {
+      "record_id": "arxiv:2609.11873",
+      "institution_id": "super-intelligence-team-xiaohongshu-inc",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.11873v3#page=1",
+      "evidence": "Numbered affiliation 6."
+    },
+    {
+      "record_id": "arxiv:2609.11873",
+      "institution_id": "shanghai-ai-lab",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.11873v3#page=1",
+      "evidence": "Numbered affiliation 7."
+    },
+    {
+      "record_id": "arxiv:2609.11873",
+      "institution_id": "humanlaya",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.11873v3#page=1",
+      "evidence": "Numbered affiliation 8; entity type was not established."
+    },
+    {
+      "record_id": "arxiv:2609.11873",
+      "institution_id": "agent-native-research-lab",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.11873v3#page=1",
+      "evidence": "Numbered affiliation 9."
+    },
+    {
+      "record_id": "arxiv:2609.11873",
+      "institution_id": "frontis-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.11873v3#page=1",
+      "evidence": "Numbered affiliation 10; entity type was not established."
+    },
+    {
+      "record_id": "arxiv:2609.06396",
+      "institution_id": "cosmosmind",
+      "relation": "publisher",
+      "source_url": "https://cosmosmind.ai/research/metarsi-v1",
+      "evidence": "Official project title, og:site_name and copyright footer identify CosmosMind; this is project-page publisher attribution, not an author-affiliation claim."
+    },
+    {
+      "record_id": "arxiv:2606.05922",
+      "institution_id": "city-university-of-hong-kong",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2606.05922v3",
+      "evidence": "Institution explicitly listed in the author-affiliation block."
+    },
+    {
+      "record_id": "arxiv:2606.05922",
+      "institution_id": "microsoft-research-asia",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2606.05922v3",
+      "evidence": "Institution explicitly listed; an internship-at-Microsoft-Research-Asia note is also present."
+    },
+    {
+      "record_id": "arxiv:2604.09297",
+      "institution_id": "king-s-college-london",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2604.09297v3",
+      "evidence": "Jingzhi Gong, Yazhuo Cao, Lukas Twist and Jie M. Zhang list King's College London."
+    },
+    {
+      "record_id": "arxiv:2604.09297",
+      "institution_id": "queen-s-university-belfast",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2604.09297v3",
+      "evidence": "Ruizhen Gu's listed affiliation."
+    },
+    {
+      "record_id": "arxiv:2604.09297",
+      "institution_id": "nanjing-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2604.09297v3",
+      "evidence": "Zhiwei Fei's listed affiliation."
+    },
+    {
+      "record_id": "arxiv:2604.09297",
+      "institution_id": "johannes-gutenberg-university-mainz",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2604.09297v3",
+      "evidence": "Alina Geiger's listed affiliation."
+    },
+    {
+      "record_id": "arxiv:2604.09297",
+      "institution_id": "university-college-london",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2604.09297v3",
+      "evidence": "Shuo Han and Federica Sarro list University College London."
+    },
+    {
+      "record_id": "arxiv:2604.09297",
+      "institution_id": "university-of-duisburg-essen",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2604.09297v3",
+      "evidence": "Dominik Sobania lists paluno, University of Duisburg-Essen."
+    },
+    {
+      "record_id": "arxiv:2604.25850",
+      "institution_id": "fudan-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2604.25850v4",
+      "evidence": "Multiple authors, including Jiahang Lin, Shichun Liu and Tao Gui, list Fudan University."
+    },
+    {
+      "record_id": "arxiv:2604.25850",
+      "institution_id": "peking-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2604.25850v4",
+      "evidence": "Chengjun Pan lists Peking University."
+    },
+    {
+      "record_id": "arxiv:2604.25850",
+      "institution_id": "shanghai-qiji-zhifeng-co-ltd",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2604.25850v4",
+      "evidence": "Lizhi Lin, Hang Yan and Zhenhua Han list Shanghai Qiji Zhifeng Co., Ltd."
+    },
+    {
+      "record_id": "arxiv:2410.10762",
+      "institution_id": "deepwisdom",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2410.10762v4",
+      "evidence": "Jiayi Zhang, Jinyu Xiang, Sirui Hong, Jinlin Wang and Chenglin Wu list DeepWisdom."
+    },
+    {
+      "record_id": "arxiv:2410.10762",
+      "institution_id": "the-hong-kong-university-of-science-and-technology-guangzhou",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2410.10762v4",
+      "evidence": "Jiayi Zhang and Yuyu Luo list the Guangzhou university."
+    },
+    {
+      "record_id": "arxiv:2410.10762",
+      "institution_id": "renmin-university-of-china",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2410.10762v4",
+      "evidence": "Zhaoyang Yu, Fengwei Teng and Xin Cheng list Renmin University of China."
+    },
+    {
+      "record_id": "arxiv:2410.10762",
+      "institution_id": "nanjing-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2410.10762v4",
+      "evidence": "Xiong-Hui Chen lists Nanjing University."
+    },
+    {
+      "record_id": "arxiv:2410.10762",
+      "institution_id": "fudan-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2410.10762v4",
+      "evidence": "Jiaqi Chen and Bingnan Zheng list Fudan University."
+    },
+    {
+      "record_id": "arxiv:2410.10762",
+      "institution_id": "king-abdullah-university-of-science-and-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2410.10762v4",
+      "evidence": "Mingchen Zhuge's listed affiliation."
+    },
+    {
+      "record_id": "arxiv:2410.10762",
+      "institution_id": "universite-de-montreal",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2410.10762v4",
+      "evidence": "Bang Liu lists Université de Montréal & Mila."
+    },
+    {
+      "record_id": "arxiv:2410.10762",
+      "institution_id": "mila",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2410.10762v4",
+      "evidence": "Bang Liu lists Université de Montréal & Mila."
+    },
+    {
+      "record_id": "arxiv:2410.10762",
+      "institution_id": "the-hong-kong-university-of-science-and-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2410.10762v4",
+      "evidence": "Yuyu Luo additionally lists The Hong Kong University of Science and Technology."
+    },
+    {
+      "record_id": "arxiv:1712.01815",
+      "institution_id": "deepmind",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/1712.01815v1#page=1",
+      "evidence": "All authors carry affiliation 1: DeepMind, 6 Pancras Square, London N1C 4AG."
+    },
+    {
+      "record_id": "arxiv:2203.14465",
+      "institution_id": "stanford-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2203.14465v1#page=1",
+      "evidence": "Affiliation 1: Department of Computer Science, Stanford University; shared by Eric Zelikman, Yuhuai Wu and Noah D. Goodman."
+    },
+    {
+      "record_id": "arxiv:2203.14465",
+      "institution_id": "google-research",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2203.14465v1#page=1",
+      "evidence": "Affiliation 2: Google Research; Yuhuai Wu carries affiliations 1 and 2."
+    },
+    {
+      "record_id": "arxiv:1901.01753",
+      "institution_id": "uber-ai-labs",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/1901.01753v1#page=1",
+      "evidence": "The shared author block beneath Rui Wang, Joel Lehman, Jeff Clune and Kenneth O. Stanley explicitly states Uber AI Labs."
+    },
+    {
+      "record_id": "arxiv:2310.03714",
+      "institution_id": "stanford-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2310.03714v1#page=1",
+      "evidence": "Numbered affiliation 1 in the first-page author block."
+    },
+    {
+      "record_id": "arxiv:2310.03714",
+      "institution_id": "university-of-california-berkeley",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2310.03714v1#page=1",
+      "evidence": "Numbered affiliation 2; historical abbreviated spelling preserved."
+    },
+    {
+      "record_id": "arxiv:2310.03714",
+      "institution_id": "carnegie-mellon-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2310.03714v1#page=1",
+      "evidence": "Numbered affiliation 3."
+    },
+    {
+      "record_id": "arxiv:2310.03714",
+      "institution_id": "amazon-alexa-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2310.03714v1#page=1",
+      "evidence": "Numbered affiliation 4."
+    },
+    {
+      "record_id": "arxiv:2310.03714",
+      "institution_id": "dashworks-technologies-inc",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2310.03714v1#page=1",
+      "evidence": "Explicitly declared as numbered affiliation 5; no matching author superscript 5 was established from the extracted first-page block."
+    },
+    {
+      "record_id": "arxiv:2310.03714",
+      "institution_id": "iit-bombay",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2310.03714v1#page=1",
+      "evidence": "Numbered affiliation 6; historical abbreviated spelling preserved."
+    },
+    {
+      "record_id": "arxiv:2310.03714",
+      "institution_id": "calera-capital",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2310.03714v1#page=1",
+      "evidence": "Numbered affiliation 7."
+    },
+    {
+      "record_id": "arxiv:2310.03714",
+      "institution_id": "microsoft",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2310.03714v1#page=1",
+      "evidence": "Numbered affiliation 8."
+    },
+    {
+      "record_id": "arxiv:2310.03714",
+      "institution_id": "two-sigma-investments",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2310.03714v1#page=1",
+      "evidence": "Numbered affiliation 9."
+    },
+    {
+      "record_id": "arxiv:2507.19457",
+      "institution_id": "university-of-california-berkeley",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2507.19457v1#page=1",
+      "evidence": "Numbered affiliation 1."
+    },
+    {
+      "record_id": "arxiv:2507.19457",
+      "institution_id": "stanford-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2507.19457v1#page=1",
+      "evidence": "Numbered affiliation 2."
+    },
+    {
+      "record_id": "arxiv:2507.19457",
+      "institution_id": "bespokelabs-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2507.19457v1#page=1",
+      "evidence": "Numbered affiliation 3; Alexandros G. Dimakis carries affiliations 1 and 3. Entity type is not established by this block."
+    },
+    {
+      "record_id": "arxiv:2507.19457",
+      "institution_id": "university-of-notre-dame",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2507.19457v1#page=1",
+      "evidence": "Numbered affiliation 4; historical abbreviated spelling preserved."
+    },
+    {
+      "record_id": "arxiv:2507.19457",
+      "institution_id": "databricks",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2507.19457v1#page=1",
+      "evidence": "Numbered affiliation 5."
+    },
+    {
+      "record_id": "arxiv:2507.19457",
+      "institution_id": "massachusetts-institute-of-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2507.19457v1#page=1",
+      "evidence": "Numbered affiliation 6, attached to Omar Khattab; historical abbreviated spelling preserved."
+    },
+    {
+      "record_id": "arxiv:2305.16291",
+      "institution_id": "nvidia",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2305.16291v1#page=1",
+      "evidence": "Numbered affiliation 1."
+    },
+    {
+      "record_id": "arxiv:2305.16291",
+      "institution_id": "california-institute-of-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2305.16291v1#page=1",
+      "evidence": "Numbered affiliation 2; spelling preserved."
+    },
+    {
+      "record_id": "arxiv:2305.16291",
+      "institution_id": "university-of-texas-at-austin",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2305.16291v1#page=1",
+      "evidence": "Numbered affiliation 3; spelling preserved."
+    },
+    {
+      "record_id": "arxiv:2305.16291",
+      "institution_id": "stanford-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2305.16291v1#page=1",
+      "evidence": "Numbered affiliation 4; spelling preserved."
+    },
+    {
+      "record_id": "arxiv:2305.16291",
+      "institution_id": "arizona-state-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2305.16291v1#page=1",
+      "evidence": "Numbered affiliation 5; spelling preserved."
+    },
+    {
+      "record_id": "arxiv:2505.22954",
+      "institution_id": "university-of-british-columbia",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2505.22954v1#page=1",
+      "evidence": "Numbered affiliation 1."
+    },
+    {
+      "record_id": "arxiv:2505.22954",
+      "institution_id": "vector-institute",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2505.22954v1#page=1",
+      "evidence": "Numbered affiliation 2."
+    },
+    {
+      "record_id": "arxiv:2505.22954",
+      "institution_id": "sakana-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2505.22954v1#page=1",
+      "evidence": "Numbered affiliation 3."
+    },
+    {
+      "record_id": "arxiv:2506.10943",
+      "institution_id": "massachusetts-institute-of-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2506.10943v1#page=1",
+      "evidence": "The shared institutional line beneath Adam Zweiger, Jyothish Pari, Han Guo, Ekin Akyürek, Yoon Kim and Pulkit Agrawal states Massachusetts Institute of Technology."
+    },
+    {
+      "record_id": "arxiv:2505.03335",
+      "institution_id": "tsinghua-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2505.03335v1#page=1",
+      "evidence": "Numbered affiliation 1."
+    },
+    {
+      "record_id": "arxiv:2505.03335",
+      "institution_id": "beijing-institute-for-general-artificial-intelligence",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2505.03335v1#page=1",
+      "evidence": "Numbered affiliation 2; the PDF text extraction renders the ij pair as a typographic ligature."
+    },
+    {
+      "record_id": "arxiv:2505.03335",
+      "institution_id": "pennsylvania-state-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2505.03335v1#page=1",
+      "evidence": "Numbered affiliation 3."
+    },
+    {
+      "record_id": "arxiv:2607.28568",
+      "institution_id": "horizon-research",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2607.28568v1#page=1",
+      "evidence": "Explicit collective credit in the first-page author block; corroborated by the HTML author block. No individual-author affiliation mapping or entity type was established."
+    },
+    {
+      "record_id": "arxiv:2607.28568",
+      "institution_id": "frontis-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2607.28568v1#page=1",
+      "evidence": "Explicit collective credit in the first-page author block; corroborated by the HTML author block. Entity type remains unknown."
+    },
+    {
+      "record_id": "arxiv:2607.28568",
+      "institution_id": "tsinghua-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2607.28568v1#page=1",
+      "evidence": "Explicit institutional credit in the first-page author block; corroborated by https://arxiv.org/html/2607.28568v1."
+    },
+    {
+      "record_id": "arxiv:2610.14224",
+      "institution_id": "northwestern-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.14224v1#page=1",
+      "evidence": "首页作者块将 Ruiyao Xu 标为 Northwestern University；脚注说明其在 Google Cloud AI Research 实习期间完成工作。"
+    },
+    {
+      "record_id": "arxiv:2610.14224",
+      "institution_id": "google-cloud-ai-research",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.14224v1#page=1",
+      "evidence": "首页机构编号 2 为 Google Cloud AI Research，对应 Yanfei Chen 等作者；并非依据 GitHub owner 推断。"
+    },
+    {
+      "record_id": "arxiv:2610.13025",
+      "institution_id": "google-deepmind",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.13025v1#page=1",
+      "evidence": "PDF 首页机构编号 1 为 Google DeepMind；Chejian Xu 的脚注说明工作在其担任该机构 student researcher 期间完成。"
+    },
+    {
+      "record_id": "arxiv:2610.13025",
+      "institution_id": "university-of-illinois-urbana-champaign",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.13025v1#page=1",
+      "evidence": "PDF 首页将 Chejian Xu、Bo Li 标为机构编号 2：University of Illinois, Urbana-Champaign。"
+    },
+    {
+      "record_id": "arxiv:2609.24972",
+      "institution_id": "google-cloud-ai-research",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.24972v3#page=1",
+      "evidence": "首页机构编号 1 为 Google Cloud AI Research；Peng Xia 同时标注 1、2，脚注说明其 student researcher 身份。"
+    },
+    {
+      "record_id": "arxiv:2609.24972",
+      "institution_id": "university-of-north-carolina-at-chapel-hill",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.24972v3#page=1",
+      "evidence": "首页机构编号 2 为 UNC-Chapel Hill，对应 Peng Xia、Huaxiu Yao。"
+    },
+    {
+      "record_id": "arxiv:2609.24972",
+      "institution_id": "stanford-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.24972v3#page=1",
+      "evidence": "首页将 Yoonho Lee 标注为机构编号 3：Stanford University。"
+    },
+    {
+      "record_id": "arxiv:2609.24972",
+      "institution_id": "washington-university-in-st-louis",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.24972v3#page=1",
+      "evidence": "首页将 Chengsong Huang 标注为机构编号 4：Washington University in St. Louis。"
+    },
+    {
+      "record_id": "arxiv:2610.28380",
+      "institution_id": "university-of-illinois-urbana-champaign",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.28380v1#page=1",
+      "evidence": "PDF 首页将 Gaotang Li、Hanghang Tong 标为机构编号 1：University of Illinois Urbana-Champaign。"
+    },
+    {
+      "record_id": "arxiv:2610.28380",
+      "institution_id": "google-cloud-ai-research",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.28380v1#page=1",
+      "evidence": "首页机构编号 2 为 Google Cloud AI Research；脚注说明 Gaotang Li 在该机构实习期间完成工作。"
+    },
+    {
+      "record_id": "arxiv:cs/0309048",
+      "institution_id": "idsia",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/cs/0309048v5#page=1",
+      "evidence": "Schmidhuber's author block lists IDSIA, Manno-Lugano, Switzerland."
+    },
+    {
+      "record_id": "arxiv:cs/0309048",
+      "institution_id": "tu-munchen",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/cs/0309048v5#page=1",
+      "evidence": "The same author block additionally lists TU München, Garching, Germany."
+    },
+    {
+      "record_id": "arxiv:2006.08381",
+      "institution_id": "massachusetts-institute-of-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2006.08381v1#page=1",
+      "evidence": "Numbered affiliation 1 is MIT."
+    },
+    {
+      "record_id": "arxiv:2006.08381",
+      "institution_id": "csail",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2006.08381v1#page=1",
+      "evidence": "Numbered affiliation 2 is CSAIL."
+    },
+    {
+      "record_id": "arxiv:2006.08381",
+      "institution_id": "neurospin",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2006.08381v1#page=1",
+      "evidence": "Numbered affiliation 3 is NeuroSpin; Sablé-Meyer carries this marker."
+    },
+    {
+      "record_id": "arxiv:2006.08381",
+      "institution_id": "center-for-brains-minds-and-machines",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2006.08381v1#page=1",
+      "evidence": "Numbered affiliation 4 explicitly names this center."
+    },
+    {
+      "record_id": "arxiv:2012.02096",
+      "institution_id": "university-of-california-berkeley",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2012.02096v2#page=1",
+      "evidence": "Author block states University of California Berkeley AI Research (BAIR)."
+    },
+    {
+      "record_id": "arxiv:2012.02096",
+      "institution_id": "berkeley-ai-research-bair",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2012.02096v2#page=1",
+      "evidence": "BAIR is explicitly named in the Berkeley author affiliation."
+    },
+    {
+      "record_id": "arxiv:2012.02096",
+      "institution_id": "google-research",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2012.02096v2#page=1",
+      "evidence": "Jaques's marker 2 maps to Google Research, Brain team."
+    },
+    {
+      "record_id": "arxiv:2212.08073",
+      "institution_id": "anthropic",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2212.08073v1#page=1",
+      "evidence": "Anthropic appears directly beneath the author list."
+    },
+    {
+      "record_id": "arxiv:2212.10560",
+      "institution_id": "university-of-washington",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2212.10560v2#page=1",
+      "evidence": "Author affiliation symbol ♣ maps to University of Washington."
+    },
+    {
+      "record_id": "arxiv:2212.10560",
+      "institution_id": "tehran-polytechnic",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2212.10560v2#page=1",
+      "evidence": "Kordi's symbol ♢ maps to Tehran Polytechnic."
+    },
+    {
+      "record_id": "arxiv:2212.10560",
+      "institution_id": "arizona-state-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2212.10560v2#page=1",
+      "evidence": "Mishra's symbol ♡ maps to Arizona State University."
+    },
+    {
+      "record_id": "arxiv:2212.10560",
+      "institution_id": "johns-hopkins-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2212.10560v2#page=1",
+      "evidence": "Khashabi's symbol ♠ maps to Johns Hopkins University."
+    },
+    {
+      "record_id": "arxiv:2212.10560",
+      "institution_id": "allen-institute-for-artificial-intelligence",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2212.10560v2#page=1",
+      "evidence": "Smith and Hajishirzi carry +, mapped to Allen Institute for AI."
+    },
+    {
+      "record_id": "arxiv:2303.11366",
+      "institution_id": "northeastern-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2303.11366v4#page=1",
+      "evidence": "Shinn, Cassano, and Berman each list Northeastern University."
+    },
+    {
+      "record_id": "arxiv:2303.11366",
+      "institution_id": "massachusetts-institute-of-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2303.11366v4#page=1",
+      "evidence": "Gopinath lists Massachusetts Institute of Technology."
+    },
+    {
+      "record_id": "arxiv:2303.11366",
+      "institution_id": "princeton-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2303.11366v4#page=1",
+      "evidence": "Narasimhan and Yao list Princeton University."
+    },
+    {
+      "record_id": "arxiv:2303.17651",
+      "institution_id": "carnegie-mellon-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2303.17651v2#page=1",
+      "evidence": "Affiliation 1 is Language Technologies Institute, Carnegie Mellon University."
+    },
+    {
+      "record_id": "arxiv:2303.17651",
+      "institution_id": "allen-institute-for-artificial-intelligence",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2303.17651v2#page=1",
+      "evidence": "Affiliation 2 explicitly names this institute."
+    },
+    {
+      "record_id": "arxiv:2303.17651",
+      "institution_id": "university-of-washington",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2303.17651v2#page=1",
+      "evidence": "Affiliation 3 is University of Washington."
+    },
+    {
+      "record_id": "arxiv:2303.17651",
+      "institution_id": "nvidia",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2303.17651v2#page=1",
+      "evidence": "Prabhumoye's affiliation 4 is NVIDIA."
+    },
+    {
+      "record_id": "arxiv:2303.17651",
+      "institution_id": "university-of-california-san-diego",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2303.17651v2#page=1",
+      "evidence": "Majumder's affiliation 5 is UC San Diego."
+    },
+    {
+      "record_id": "arxiv:2303.17651",
+      "institution_id": "google-research",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2303.17651v2#page=1",
+      "evidence": "Affiliation 6 is Google Research, Brain Team."
+    },
+    {
+      "record_id": "arxiv:2308.08998",
+      "institution_id": "google-deepmind",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2308.08998v2#page=1",
+      "evidence": "Numbered author affiliation 1 is Google DeepMind."
+    },
+    {
+      "record_id": "arxiv:2308.08998",
+      "institution_id": "google-research",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2308.08998v2#page=1",
+      "evidence": "Macherey's affiliation 2 is Google Research."
+    },
+    {
+      "record_id": "arxiv:2309.16797",
+      "institution_id": "google-deepmind",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2309.16797v1#page=1",
+      "evidence": "Google DeepMind appears directly below the five authors."
+    },
+    {
+      "record_id": "arxiv:2310.02304",
+      "institution_id": "stanford-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2310.02304v3#page=1",
+      "evidence": "Zelikman's author block lists Stanford University."
+    },
+    {
+      "record_id": "arxiv:2310.02304",
+      "institution_id": "microsoft-research",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2310.02304v3#page=1",
+      "evidence": "The Lorch/Mackey author block lists Microsoft Research."
+    },
+    {
+      "record_id": "arxiv:2310.02304",
+      "institution_id": "openai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2310.02304v3#page=1",
+      "evidence": "Kalai's author block lists OpenAI in this paper version."
+    },
+    {
+      "record_id": "arxiv:2312.06585",
+      "institution_id": "google-deepmind",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2312.06585v4#page=1",
+      "evidence": "Author affiliation 1 is Google DeepMind."
+    },
+    {
+      "record_id": "arxiv:2312.06585",
+      "institution_id": "mila",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2312.06585v4#page=1",
+      "evidence": "Agarwal carries affiliation 2, explicitly mapped to Mila."
+    },
+    {
+      "record_id": "arxiv:2401.01335",
+      "institution_id": "university-of-california-los-angeles",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2401.01335v3",
+      "evidence": "HTML author affiliation notices explicitly state Department of Computer Science, University of California, Los Angeles."
+    },
+    {
+      "record_id": "arxiv:2401.10020",
+      "institution_id": "meta",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2401.10020v3#page=1",
+      "evidence": "Numbered affiliation 1 is Meta."
+    },
+    {
+      "record_id": "arxiv:2401.10020",
+      "institution_id": "new-york-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2401.10020v3#page=1",
+      "evidence": "Numbered affiliation 2 is NYU."
+    },
+    {
+      "record_id": "arxiv:2406.07496",
+      "institution_id": "stanford-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2406.07496v1#page=1",
+      "evidence": "Affiliations 1 and 2 name Stanford University's computer science and biomedical data science departments."
+    },
+    {
+      "record_id": "arxiv:2406.07496",
+      "institution_id": "chan-zuckerberg-biohub",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2406.07496v1#page=1",
+      "evidence": "Affiliation 3 is Chan Zuckerberg Biohub; Guestrin and Zou carry this marker."
+    },
+    {
+      "record_id": "arxiv:2408.08435",
+      "institution_id": "university-of-british-columbia",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2408.08435v2#page=1",
+      "evidence": "Author affiliation 1 is University of British Columbia."
+    },
+    {
+      "record_id": "arxiv:2408.08435",
+      "institution_id": "vector-institute",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2408.08435v2#page=1",
+      "evidence": "Author affiliation 2 is Vector Institute."
+    },
+    {
+      "record_id": "arxiv:2502.05171",
+      "institution_id": "ellis-institute-tubingen",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2502.05171v2#page=1",
+      "evidence": "First-page affiliation 1 includes ELLIS Institute Tübingen."
+    },
+    {
+      "record_id": "arxiv:2502.05171",
+      "institution_id": "max-planck-institute-for-intelligent-systems",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2502.05171v2#page=1",
+      "evidence": "The same affiliation lists Max-Planck Institute for Intelligent Systems."
+    },
+    {
+      "record_id": "arxiv:2502.05171",
+      "institution_id": "tubingen-ai-center",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2502.05171v2#page=1",
+      "evidence": "Tübingen AI Center is explicitly included in affiliation 1."
+    },
+    {
+      "record_id": "arxiv:2502.05171",
+      "institution_id": "university-of-maryland-college-park",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2502.05171v2#page=1",
+      "evidence": "Affiliation 2 explicitly states University of Maryland, College Park."
+    },
+    {
+      "record_id": "arxiv:2502.05171",
+      "institution_id": "lawrence-livermore-national-laboratory",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2502.05171v2#page=1",
+      "evidence": "Affiliation 3 is Lawrence Livermore National Laboratory."
+    },
+    {
+      "record_id": "arxiv:2504.15228",
+      "institution_id": "university-of-bristol",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2504.15228v2#page=1",
+      "evidence": "Robeyns and Aitchison list University of Bristol."
+    },
+    {
+      "record_id": "arxiv:2504.15228",
+      "institution_id": "igent-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2504.15228v2#page=1",
+      "evidence": "Szummer explicitly lists iGent AI; its functional organizational type is not established by this author block."
+    },
+    {
+      "record_id": "arxiv:2504.16084",
+      "institution_id": "tsinghua-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2504.16084v3#page=1",
+      "evidence": "Numbered affiliation 1 is Tsinghua University."
+    },
+    {
+      "record_id": "arxiv:2504.16084",
+      "institution_id": "shanghai-ai-lab",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2504.16084v3#page=1",
+      "evidence": "Numbered affiliation 2 is Shanghai AI Lab."
+    },
+    {
+      "record_id": "arxiv:2506.13131",
+      "institution_id": "google-deepmind",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2506.13131v1#page=1",
+      "evidence": "Google DeepMind appears directly beneath the author list."
+    },
+    {
+      "record_id": "arxiv:2510.04871",
+      "institution_id": "samsung-sail-montreal",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2510.04871v1#page=1",
+      "evidence": "Jolicoeur-Martineau explicitly lists Samsung SAIL Montréal."
+    },
+    {
+      "record_id": "arxiv:2511.10395",
+      "institution_id": "tongyi-lab",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2511.10395v1#page=1",
+      "evidence": "The collective author affiliation names Tongyi Lab."
+    },
+    {
+      "record_id": "arxiv:2511.10395",
+      "institution_id": "alibaba-group",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2511.10395v1#page=1",
+      "evidence": "Alibaba Group is explicitly named in the same author affiliation."
+    },
+    {
+      "record_id": "arxiv:2511.13646",
+      "institution_id": "university-of-illinois-urbana-champaign",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2511.13646v3#page=1",
+      "evidence": "The author block lists this university; the first-page note also identifies Yang's internship there."
+    },
+    {
+      "record_id": "arxiv:2511.16043",
+      "institution_id": "university-of-north-carolina-at-chapel-hill",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2511.16043v2#page=1",
+      "evidence": "Affiliation 1 is UNC-Chapel Hill."
+    },
+    {
+      "record_id": "arxiv:2511.16043",
+      "institution_id": "google",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2511.16043v2#page=1",
+      "evidence": "Qin's affiliation 2 is Google."
+    },
+    {
+      "record_id": "arxiv:2511.16043",
+      "institution_id": "stanford-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2511.16043v2#page=1",
+      "evidence": "Wu's affiliation 3 is Stanford University."
+    },
+    {
+      "record_id": "arxiv:2511.16043",
+      "institution_id": "recursive-superintelligence",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2511.16043v2#page=1",
+      "evidence": "Xiong's affiliation 4 is explicitly Recursive Superintelligence; no identity merge with canonical Recursive is asserted."
+    },
+    {
+      "record_id": "arxiv:2512.05145",
+      "institution_id": "fair-at-meta",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2512.05145v1#page=1",
+      "evidence": "Numbered affiliation 1 is FAIR at Meta."
+    },
+    {
+      "record_id": "arxiv:2512.05145",
+      "institution_id": "university-of-washington",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2512.05145v1#page=1",
+      "evidence": "Numbered affiliation 2 is University of Washington."
+    },
+    {
+      "record_id": "arxiv:2512.17102",
+      "institution_id": "university-of-wisconsin-madison",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2512.17102v2#page=1",
+      "evidence": "Wang's affiliation 1 is University of Wisconsin–Madison."
+    },
+    {
+      "record_id": "arxiv:2512.17102",
+      "institution_id": "aws-agentic-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2512.17102v2#page=1",
+      "evidence": "Numbered affiliation 2 is AWS Agentic AI."
+    },
+    {
+      "record_id": "arxiv:2601.03192",
+      "institution_id": "shanghai-jiao-tong-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2601.03192v2#page=1",
+      "evidence": "First-page affiliation 1 explicitly names this university."
+    },
+    {
+      "record_id": "arxiv:2601.03192",
+      "institution_id": "xidian-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2601.03192v2#page=1",
+      "evidence": "Affiliation 2 is Xidian University, Xi'an."
+    },
+    {
+      "record_id": "arxiv:2601.03192",
+      "institution_id": "national-university-of-singapore",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2601.03192v2#page=1",
+      "evidence": "Affiliation 3 is National University of Singapore."
+    },
+    {
+      "record_id": "arxiv:2601.03192",
+      "institution_id": "shanghai-innovation-institute",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2601.03192v2#page=1",
+      "evidence": "Affiliation 4 is Shanghai Innovation Institute."
+    },
+    {
+      "record_id": "arxiv:2601.03192",
+      "institution_id": "memtensor-shanghai-technology-co-ltd",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2601.03192v2#page=1",
+      "evidence": "Affiliation 5 explicitly names this company."
+    },
+    {
+      "record_id": "arxiv:2601.03192",
+      "institution_id": "university-of-science-and-technology-of-china",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2601.03192v2#page=1",
+      "evidence": "Affiliation 6 explicitly names this university."
+    },
+    {
+      "record_id": "arxiv:2601.18226",
+      "institution_id": "yunjue-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2601.18226v2#page=1",
+      "evidence": "Affiliation 1 is Yunjue Technology; a note explicitly identifies internships there."
+    },
+    {
+      "record_id": "arxiv:2601.18226",
+      "institution_id": "harbin-institute-of-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2601.18226v2#page=1",
+      "evidence": "Affiliation 2 is Harbin Institute of Technology."
+    },
+    {
+      "record_id": "arxiv:2601.18226",
+      "institution_id": "university-of-science-and-technology-of-china",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2601.18226v2#page=1",
+      "evidence": "Affiliation 3 explicitly names this university."
+    },
+    {
+      "record_id": "arxiv:2602.02474",
+      "institution_id": "nanyang-technological-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2602.02474v2#page=1",
+      "evidence": "First-page affiliation 1 spells out Nanyang Technological University."
+    },
+    {
+      "record_id": "arxiv:2602.02474",
+      "institution_id": "university-of-illinois-urbana-champaign",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2602.02474v2#page=1",
+      "evidence": "Affiliation 2 explicitly names this university."
+    },
+    {
+      "record_id": "arxiv:2602.02474",
+      "institution_id": "university-of-illinois-chicago",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2602.02474v2#page=1",
+      "evidence": "Affiliation 3 is University of Illinois Chicago."
+    },
+    {
+      "record_id": "arxiv:2602.02474",
+      "institution_id": "tsinghua-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2602.02474v2#page=1",
+      "evidence": "Affiliation 4 is Tsinghua University."
+    },
+    {
+      "record_id": "arxiv:2603.06333",
+      "institution_id": "cambridge-ai-safety-hub-caish",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.06333v1#page=1",
+      "evidence": "Sahoo's author affiliation explicitly names Cambridge AI Safety Hub (CAISH)."
+    },
+    {
+      "record_id": "arxiv:2603.06333",
+      "institution_id": "university-of-cambridge",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.06333v1#page=1",
+      "evidence": "University of Cambridge is explicitly included in Sahoo's affiliation line."
+    },
+    {
+      "record_id": "arxiv:2603.06333",
+      "institution_id": "aws-generative-ai-innovation-center",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.06333v1#page=1",
+      "evidence": "Chadha's affiliation explicitly states AWS Generative AI Innovation Center, Amazon Web Services."
+    },
+    {
+      "record_id": "arxiv:2603.06333",
+      "institution_id": "google",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.06333v1#page=1",
+      "evidence": "Jain's diamond affiliation is Google, USA."
+    },
+    {
+      "record_id": "arxiv:2603.06333",
+      "institution_id": "stanford-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.06333v1#page=1",
+      "evidence": "The star affiliation, carried by Chadha and Jain, is Stanford University."
+    },
+    {
+      "record_id": "arxiv:2603.06333",
+      "institution_id": "northeastern-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.06333v1#page=1",
+      "evidence": "Chaudhary's club affiliation is Northeastern University, Seattle."
+    },
+    {
+      "record_id": "arxiv:2603.08640",
+      "institution_id": "ellis-institute-tubingen",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.08640v2#page=1",
+      "evidence": "First-page affiliation 1 is ELLIS Institute Tübingen."
+    },
+    {
+      "record_id": "arxiv:2603.08640",
+      "institution_id": "max-planck-institute-for-intelligent-systems",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.08640v2#page=1",
+      "evidence": "Affiliation 2 explicitly names this institute."
+    },
+    {
+      "record_id": "arxiv:2603.08640",
+      "institution_id": "tubingen-ai-center",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.08640v2#page=1",
+      "evidence": "Affiliation 3 is Tübingen AI Center."
+    },
+    {
+      "record_id": "arxiv:2603.08640",
+      "institution_id": "university-of-tubingen",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.08640v2#page=1",
+      "evidence": "Affiliation 4 is University of Tübingen."
+    },
+    {
+      "record_id": "arxiv:2603.08640",
+      "institution_id": "thoughtful-lab",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.08640v2#page=1",
+      "evidence": "Affiliation 5 is Thoughtful Lab; the note also identifies an internship there."
+    },
+    {
+      "record_id": "arxiv:2603.19461",
+      "institution_id": "university-of-british-columbia",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.19461v2#page=1",
+      "evidence": "Affiliation 1 is University of British Columbia."
+    },
+    {
+      "record_id": "arxiv:2603.19461",
+      "institution_id": "vector-institute",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.19461v2#page=1",
+      "evidence": "Affiliation 2 is Vector Institute."
+    },
+    {
+      "record_id": "arxiv:2603.19461",
+      "institution_id": "university-of-edinburgh",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.19461v2#page=1",
+      "evidence": "Zhao's affiliation 3 is University of Edinburgh."
+    },
+    {
+      "record_id": "arxiv:2603.19461",
+      "institution_id": "new-york-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.19461v2#page=1",
+      "evidence": "Yang's affiliation 4 is New York University."
+    },
+    {
+      "record_id": "arxiv:2603.19461",
+      "institution_id": "fair-at-meta",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.19461v2#page=1",
+      "evidence": "Affiliation 6 is FAIR at Meta."
+    },
+    {
+      "record_id": "arxiv:2603.19461",
+      "institution_id": "meta-superintelligence-labs",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2603.19461v2#page=1",
+      "evidence": "Devlin's affiliation 7 is Meta Superintelligence Labs."
+    },
+    {
+      "record_id": "arxiv:2604.00830",
+      "institution_id": "national-university-of-singapore",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2604.00830v4#page=1",
+      "evidence": "All authors carry affiliation 1, National University of Singapore."
+    },
+    {
+      "record_id": "arxiv:2604.17091",
+      "institution_id": "advantage-ai-agent-lab-a3-lab",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2604.17091v1#page=1",
+      "evidence": "The collective author is Advantage AI Agent Lab (A3 Lab); its first-page footnote calls it a joint research lab."
+    },
+    {
+      "record_id": "arxiv:2604.17091",
+      "institution_id": "shenzhen-aquaintelling-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2604.17091v1#page=1",
+      "evidence": "The first-page author footnote states the joint lab has members from Shenzhen Aquaintelling Technology."
+    },
+    {
+      "record_id": "arxiv:2604.17091",
+      "institution_id": "fudan-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2604.17091v1#page=1",
+      "evidence": "The same author footnote explicitly identifies members from Fudan University."
+    },
+    {
+      "record_id": "arxiv:2604.20987",
+      "institution_id": "university-of-maryland-college-park",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2604.20987v1#page=1",
+      "evidence": "Affiliation 1 is printed as University of Maryland."
+    },
+    {
+      "record_id": "arxiv:2604.20987",
+      "institution_id": "university-of-southern-california",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2604.20987v1#page=1",
+      "evidence": "Shi's affiliation 2 is University of Southern California."
+    },
+    {
+      "record_id": "arxiv:2604.20987",
+      "institution_id": "good-start-labs",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2604.20987v1#page=1",
+      "evidence": "Affiliation 3 explicitly names Good Start Labs; organizational type is not specified."
+    },
+    {
+      "record_id": "arxiv:2604.20987",
+      "institution_id": "mohamed-bin-zayed-university-of-artificial-intelligence",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2604.20987v1#page=1",
+      "evidence": "Zhou's affiliation 5 explicitly names this university."
+    },
+    {
+      "record_id": "arxiv:2605.06130",
+      "institution_id": "university-of-science-and-technology-of-china",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2605.06130v3#page=1",
+      "evidence": "Numbered affiliation 1 explicitly names this university."
+    },
+    {
+      "record_id": "arxiv:2605.06130",
+      "institution_id": "meituan",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2605.06130v3#page=1",
+      "evidence": "Numbered affiliation 2 is Meituan."
+    },
+    {
+      "record_id": "arxiv:2605.06130",
+      "institution_id": "national-university-of-singapore",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2605.06130v3#page=1",
+      "evidence": "Numbered affiliation 3 is National University of Singapore."
+    },
+    {
+      "record_id": "arxiv:2605.06130",
+      "institution_id": "zhejiang-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2605.06130v3#page=1",
+      "evidence": "Numbered affiliation 4 is Zhejiang University."
+    },
+    {
+      "record_id": "arxiv:2605.06130",
+      "institution_id": "wuhan-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2605.06130v3#page=1",
+      "evidence": "Numbered affiliation 5 is Wuhan University."
+    },
+    {
+      "record_id": "arxiv:2605.08703",
+      "institution_id": "university-of-british-columbia",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2605.08703v2#page=1",
+      "evidence": "Affiliation 1 is University of British Columbia."
+    },
+    {
+      "record_id": "arxiv:2605.08703",
+      "institution_id": "vector-institute",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2605.08703v2#page=1",
+      "evidence": "Affiliation 2 is Vector Institute."
+    },
+    {
+      "record_id": "arxiv:2605.08703",
+      "institution_id": "klingai-research",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2605.08703v2#page=1",
+      "evidence": "Affiliation 3 explicitly names KlingAI Research."
+    },
+    {
+      "record_id": "arxiv:2605.08703",
+      "institution_id": "university-of-waterloo",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2605.08703v2#page=1",
+      "evidence": "Affiliation 4 is University of Waterloo."
+    },
+    {
+      "record_id": "arxiv:2605.08703",
+      "institution_id": "etude-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2605.08703v2#page=1",
+      "evidence": "Affiliation 5 is Etude AI; organizational type is not specified."
+    },
+    {
+      "record_id": "arxiv:2605.08703",
+      "institution_id": "tsinghua-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2605.08703v2#page=1",
+      "evidence": "Affiliation 6 is Tsinghua University."
+    },
+    {
+      "record_id": "arxiv:2605.08703",
+      "institution_id": "georgia-institute-of-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2605.08703v2#page=1",
+      "evidence": "Affiliation 7 is Georgia Institute of Technology."
+    },
+    {
+      "record_id": "arxiv:2605.08703",
+      "institution_id": "carnegie-mellon-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2605.08703v2#page=1",
+      "evidence": "Affiliation 8 is Carnegie Mellon University."
+    },
+    {
+      "record_id": "arxiv:2606.01770",
+      "institution_id": "amazon",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2606.01770v3",
+      "evidence": "HTML author affiliation notices explicitly assign Amazon to Shi, Sang, He, Dumoulin, and Lu."
+    },
+    {
+      "record_id": "arxiv:2606.01770",
+      "institution_id": "pennsylvania-state-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2606.01770v3",
+      "evidence": "Lin's affiliation notice states The Pennsylvania State University."
+    },
+    {
+      "record_id": "arxiv:2606.01770",
+      "institution_id": "university-of-illinois-urbana-champaign",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2606.01770v3",
+      "evidence": "Wei's affiliation notice is UIUC."
+    },
+    {
+      "record_id": "arxiv:2606.01770",
+      "institution_id": "northeastern-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2606.01770v3",
+      "evidence": "Wang's affiliation notice explicitly names Northeastern University."
+    },
+    {
+      "record_id": "arxiv:2606.01770",
+      "institution_id": "emory-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/html/2606.01770v3",
+      "evidence": "Jin's affiliation notice explicitly names Emory University."
+    },
+    {
+      "record_id": "arxiv:2607.07663",
+      "institution_id": "deepgrounding",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2607.07663v2#page=1",
+      "evidence": "Chen's numbered affiliation 1 is DeepGrounding; organizational type is not specified."
+    },
+    {
+      "record_id": "arxiv:2607.07663",
+      "institution_id": "alphaavatar",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2607.07663v2#page=1",
+      "evidence": "Wang's numbered affiliation 2 is AlphaAvatar; organizational type is not specified."
+    },
+    {
+      "record_id": "arxiv:2607.07663",
+      "institution_id": "illinois-institute-of-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2607.07663v2#page=1",
+      "evidence": "Qu's affiliation 3 is Illinois Institute of Technology (IIT)."
+    },
+    {
+      "record_id": "arxiv:2607.25886",
+      "institution_id": "evolvent-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2607.25886v1#page=1",
+      "evidence": "Numbered affiliation 1 is Evolvent AI; organizational type is not specified."
+    },
+    {
+      "record_id": "arxiv:2607.25886",
+      "institution_id": "national-university-of-singapore",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2607.25886v1#page=1",
+      "evidence": "Numbered affiliation 2 is National University of Singapore."
+    },
+    {
+      "record_id": "arxiv:2608.31111",
+      "institution_id": "bytedance-seed",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2608.31111v1#page=1",
+      "evidence": "First-page numbered author affiliation 1 is ByteDance Seed."
+    },
+    {
+      "record_id": "arxiv:2608.31111",
+      "institution_id": "singapore-university-of-technology-and-design",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2608.31111v1#page=1",
+      "evidence": "Numbered author affiliation 2 explicitly names this university."
+    },
+    {
+      "record_id": "arxiv:2608.31111",
+      "institution_id": "m-a-p",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2608.31111v1#page=1",
+      "evidence": "Numbered author affiliation 3 is M-A-P; no organizational type is supplied."
+    },
+    {
+      "record_id": "arxiv:2608.31111",
+      "institution_id": "tokenwave-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2608.31111v1#page=1",
+      "evidence": "Numbered author affiliation 4 is TokenWave.AI; no organizational type is supplied."
+    },
+    {
+      "record_id": "arxiv:2608.31100",
+      "institution_id": "bytedance-seed",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2608.31100v1#page=1",
+      "evidence": "First-page numbered author affiliation 1 is ByteDance Seed."
+    },
+    {
+      "record_id": "arxiv:2608.31100",
+      "institution_id": "m-a-p",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2608.31100v1#page=1",
+      "evidence": "Numbered author affiliation 2 is M-A-P; no organizational type is supplied."
+    },
+    {
+      "record_id": "arxiv:2608.31100",
+      "institution_id": "tokenwave-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2608.31100v1#page=1",
+      "evidence": "Numbered author affiliation 3 is TokenWave.AI; no organizational type is supplied."
+    },
+    {
+      "record_id": "arxiv:2609.01437",
+      "institution_id": "bytedance-seed",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.01437v1#page=1",
+      "evidence": "First-page numbered author affiliation 1 is ByteDance Seed."
+    },
+    {
+      "record_id": "arxiv:2609.01437",
+      "institution_id": "singapore-university-of-technology-and-design",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.01437v1#page=1",
+      "evidence": "Numbered author affiliation 2 explicitly names this university."
+    },
+    {
+      "record_id": "arxiv:2609.01437",
+      "institution_id": "georgia-institute-of-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.01437v1#page=1",
+      "evidence": "Numbered author affiliation 3 is Georgia Institute of Technology."
+    },
+    {
+      "record_id": "arxiv:2609.01437",
+      "institution_id": "m-a-p",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.01437v1#page=1",
+      "evidence": "Numbered author affiliation 4 is M-A-P; no organizational type is supplied."
+    },
+    {
+      "record_id": "arxiv:2609.01437",
+      "institution_id": "tokenwave-ai",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.01437v1#page=1",
+      "evidence": "Numbered author affiliation 5 is TokenWave.AI; no organizational type is supplied."
+    },
+    {
+      "record_id": "arxiv:2609.04280",
+      "institution_id": "salesforce-research",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.04280v3#page=1",
+      "evidence": "Numbered affiliation 1 is Salesforce Research; affiliation 2 also specifies an internship there."
+    },
+    {
+      "record_id": "arxiv:2609.04280",
+      "institution_id": "university-of-north-carolina-at-chapel-hill",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.04280v3#page=1",
+      "evidence": "Numbered affiliations 2 and 3 explicitly name this university."
+    },
+    {
+      "record_id": "arxiv:2609.04280",
+      "institution_id": "university-of-wisconsin-madison",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.04280v3#page=1",
+      "evidence": "Wang's numbered affiliation 4 is University of Wisconsin–Madison."
+    },
+    {
+      "record_id": "arxiv:2609.20519",
+      "institution_id": "nvidia",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.20519v1#page=1",
+      "evidence": "Numbered author affiliation 1 is NVIDIA."
+    },
+    {
+      "record_id": "arxiv:2609.20519",
+      "institution_id": "ntu",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.20519v1#page=1",
+      "evidence": "Numbered author affiliation 2 is printed only as NTU; its expansion is not established."
+    },
+    {
+      "record_id": "arxiv:2609.20519",
+      "institution_id": "massachusetts-institute-of-technology",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.20519v1#page=1",
+      "evidence": "Han carries affiliation 3, printed as MIT."
+    },
+    {
+      "record_id": "arxiv:2609.33180",
+      "institution_id": "purdue-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2609.33180v2#page=1",
+      "evidence": "Sun, Zeng, She, and Wang each explicitly list Purdue University."
+    },
+    {
+      "record_id": "arxiv:2610.32026",
+      "institution_id": "purdue-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.32026v1#page=1",
+      "evidence": "Lu and Lin carry affiliation 1, Purdue University."
+    },
+    {
+      "record_id": "arxiv:2610.34386",
+      "institution_id": "university-of-illinois-urbana-champaign",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.34386v1#page=1",
+      "evidence": "Numbered affiliation 1 explicitly names this university."
+    },
+    {
+      "record_id": "arxiv:2610.34386",
+      "institution_id": "university-of-california-berkeley",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.34386v1#page=1",
+      "evidence": "Numbered affiliation 2 is University of California, Berkeley."
+    },
+    {
+      "record_id": "arxiv:2610.34386",
+      "institution_id": "the-ohio-state-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.34386v1#page=1",
+      "evidence": "Xie's affiliation 3 is The Ohio State University."
+    },
+    {
+      "record_id": "arxiv:2610.34386",
+      "institution_id": "university-of-washington",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.34386v1#page=1",
+      "evidence": "Ye's affiliation 4 is University of Washington."
+    },
+    {
+      "record_id": "arxiv:2610.34386",
+      "institution_id": "google",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2610.34386v1#page=1",
+      "evidence": "Meng's affiliation 5 is Google."
+    },
+    {
+      "record_id": "arxiv:2611.03698",
+      "institution_id": "the-chinese-university-of-hong-kong",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.03698v1#page=1",
+      "evidence": "Affiliation 1 explicitly names its Department of Computer Science and Engineering; Shenzhen is not stated."
+    },
+    {
+      "record_id": "arxiv:2611.03698",
+      "institution_id": "bytedance-inc",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.03698v1#page=1",
+      "evidence": "Numbered affiliation 2 is ByteDance."
+    },
+    {
+      "record_id": "arxiv:2611.03698",
+      "institution_id": "tsinghua-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.03698v1#page=1",
+      "evidence": "Yin's affiliation 3 is Tsinghua University."
+    },
+    {
+      "record_id": "arxiv:2611.03698",
+      "institution_id": "shanghai-jiao-tong-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.03698v1#page=1",
+      "evidence": "Shi's affiliation 4 is Shanghai Jiao Tong University."
+    },
+    {
+      "record_id": "arxiv:2611.02797",
+      "institution_id": "shanghai-jiao-tong-university",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.02797v1#page=1",
+      "evidence": "Numbered affiliation 1 is Shanghai Jiao Tong University."
+    },
+    {
+      "record_id": "arxiv:2611.02797",
+      "institution_id": "theseus-labs",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.02797v1#page=1",
+      "evidence": "Numbered affiliation 2 is Theseus Labs."
+    },
+    {
+      "record_id": "arxiv:2611.02797",
+      "institution_id": "humanlaya",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.02797v1#page=1",
+      "evidence": "Numbered affiliation 3 is Humanlaya; its existing unknown functional type is retained."
+    },
+    {
+      "record_id": "arxiv:2611.02797",
+      "institution_id": "shanghai-ai-lab",
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2611.02797v1#page=1",
+      "evidence": "Numbered affiliation 4 is Shanghai AI Lab."
+    }
+  ],
+  "attribution_reviews": [
+    {
+      "record_id": "arxiv:cs/0309048",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2006.08381",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only; university departments were not added as separate institutions."
+    },
+    {
+      "record_id": "arxiv:2012.02096",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2212.08073",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2212.10560",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2303.11366",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2303.17651",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2308.08998",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only; the DeepMind copyright footer was not substituted for the author affiliation."
+    },
+    {
+      "record_id": "arxiv:2309.16797",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2310.02304",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only; affiliations are version-specific."
+    },
+    {
+      "record_id": "arxiv:2312.06585",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2401.01335",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 checked; one alternative read of the same version's HTML author block resolved affiliations omitted by PDF text extraction."
+    },
+    {
+      "record_id": "arxiv:2401.10020",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2406.07496",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2408.08435",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only; Canada CIFAR AI Chair was excluded as a chair designation, not an additional institution."
+    },
+    {
+      "record_id": "arxiv:2502.05171",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author names and affiliation footnote only."
+    },
+    {
+      "record_id": "arxiv:2504.15228",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only; Robeyns's email domain was not treated as an additional affiliation."
+    },
+    {
+      "record_id": "arxiv:2504.16084",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2506.13131",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only; the referenced later Author information section was outside the reading bound."
+    },
+    {
+      "record_id": "arxiv:2510.04871",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2511.10395",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2511.13646",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block and internship footnote only."
+    },
+    {
+      "record_id": "arxiv:2511.16043",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only; affiliations are those printed in v2, not reconstructed from current employers."
+    },
+    {
+      "record_id": "arxiv:2512.05145",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block and work-location note only."
+    },
+    {
+      "record_id": "arxiv:2512.17102",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2601.03192",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author names and affiliation footnote only."
+    },
+    {
+      "record_id": "arxiv:2601.18226",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block and affiliation footnote only."
+    },
+    {
+      "record_id": "arxiv:2602.02474",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author names and affiliation footnote only."
+    },
+    {
+      "record_id": "arxiv:2603.06333",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only; MARS 4.0 Fellowship was not added as an institution."
+    },
+    {
+      "record_id": "arxiv:2603.08640",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author names and affiliation footnote only."
+    },
+    {
+      "record_id": "arxiv:2603.19461",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only; Canada CIFAR AI Chair was excluded as a chair designation."
+    },
+    {
+      "record_id": "arxiv:2604.00830",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2604.17091",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 collective author block and joint-lab footnote only; later individual contributions were not read."
+    },
+    {
+      "record_id": "arxiv:2604.20987",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only; Independent Researcher was not added as an institution."
+    },
+    {
+      "record_id": "arxiv:2605.06130",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2605.08703",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2606.01770",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 checked; one alternative read of the same version's HTML author block supplied explicit affiliation notices."
+    },
+    {
+      "record_id": "arxiv:2607.07663",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2607.25886",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2608.31111",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 institutional author block only; the full individual author list is deferred by the paper to Contributions and was not read."
+    },
+    {
+      "record_id": "arxiv:2608.31100",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 institutional author block only; the deferred individual Contributions list was not read."
+    },
+    {
+      "record_id": "arxiv:2609.01437",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 institutional author block only; the deferred individual Contributions list was not read."
+    },
+    {
+      "record_id": "arxiv:2609.04280",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block and affiliation footnote only; the Salesforce header was not used as a substitute for numbered affiliations."
+    },
+    {
+      "record_id": "arxiv:2609.20519",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block and project-link annotations; one alternative official project-page check at https://nvlabs.github.io/SoL-Pi/ for author and affiliation labels.",
+      "unresolved_reason": "The paper verifies the literal affiliation NTU, but not its expansion. The official project page supplied no expansion; NTU was therefore not merged with Nanyang Technological University or another institution."
+    },
+    {
+      "record_id": "arxiv:2609.33180",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2610.32026",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only; Sun's Independent Researcher designation was not added as an institution."
+    },
+    {
+      "record_id": "arxiv:2610.34386",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    },
+    {
+      "record_id": "arxiv:2611.03698",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only; CUHK was not conflated with the existing CUHK Shenzhen institution."
+    },
+    {
+      "record_id": "arxiv:2611.02797",
+      "affiliation_status": "primary_verified",
+      "reading_scope": "PDF page 1 author block only."
+    }
+  ],
+  "excluded_author_credits": [
+    {
+      "record_id": "arxiv:2505.22954",
+      "name": "Canada CIFAR AI Chair",
+      "type": null,
+      "relation": "author_affiliation",
+      "source_url": "https://arxiv.org/pdf/2505.22954v1#page=1",
+      "evidence": "Printed as numbered author credit 4, attached to Jeff Clune; this is a chair designation rather than an independently established institution.",
+      "reason": "Author credit/chair title, not a verified institutional entity; excluded from institutional counts."
+    }
+  ]
+}

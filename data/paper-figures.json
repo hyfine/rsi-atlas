@@ -379,6 +379,12 @@
       "status": "link_only_not_reviewed"
     },
     {
+      "id": "arxiv:2502.05171",
+      "method": "Recurrent Depth",
+      "primary_url": "https://arxiv.org/abs/2502.05171",
+      "status": "link_only_not_reviewed"
+    },
+    {
       "id": "arxiv:2504.15228",
       "method": "SICA",
       "primary_url": "https://arxiv.org/abs/2504.15228",
@@ -392,7 +398,7 @@
     },
     {
       "id": "arxiv:2505.03335",
-      "method": "Absolute Zero Reasoner (AZR)",
+      "method": "Absolute Zero",
       "primary_url": "https://arxiv.org/abs/2505.03335",
       "status": "included_cc_by",
       "figure_id": "absolute-zero",
@@ -400,7 +406,7 @@
     },
     {
       "id": "arxiv:2505.22954",
-      "method": "Darwin Godel Machine",
+      "method": "DGM",
       "primary_url": "https://arxiv.org/abs/2505.22954",
       "status": "link_only_not_reviewed"
     },
@@ -427,9 +433,57 @@
       "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
     },
     {
+      "id": "arxiv:2510.04871",
+      "method": "TRM",
+      "primary_url": "https://arxiv.org/abs/2510.04871",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2511.10395",
+      "method": "AgentEvolver",
+      "primary_url": "https://arxiv.org/abs/2511.10395",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2511.13646",
+      "method": "Live-SWE-agent",
+      "primary_url": "https://arxiv.org/abs/2511.13646",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2511.16043",
+      "method": "Agent0",
+      "primary_url": "https://arxiv.org/abs/2511.16043",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2512.05145",
+      "method": "Self-Improving VLM Judges",
+      "primary_url": "https://arxiv.org/abs/2512.05145",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2512.17102",
+      "method": "SAGE",
+      "primary_url": "https://arxiv.org/abs/2512.17102",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2601.03192",
+      "method": "MemRL",
+      "primary_url": "https://arxiv.org/abs/2601.03192",
+      "status": "link_only_not_reviewed"
+    },
+    {
       "id": "arxiv:2601.18226",
       "method": "Yunjue Agent",
       "primary_url": "https://arxiv.org/abs/2601.18226",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2602.02474",
+      "method": "MemSkill",
+      "primary_url": "https://arxiv.org/abs/2602.02474",
       "status": "link_only_not_reviewed"
     },
     {
@@ -448,6 +502,12 @@
       "id": "arxiv:2603.19461",
       "method": "Hyperagents / DGM-H",
       "primary_url": "https://arxiv.org/abs/2603.19461",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2604.00830",
+      "method": "Meta-TTL",
+      "primary_url": "https://arxiv.org/abs/2604.00830",
       "status": "link_only_not_reviewed"
     },
     {
@@ -472,7 +532,7 @@
     },
     {
       "id": "arxiv:2604.25850",
-      "method": "AHE",
+      "method": "Agentic Harness Engineering (AHE)",
       "primary_url": "https://arxiv.org/abs/2604.25850",
       "status": "link_only_not_reviewed"
     },
@@ -485,9 +545,27 @@
       "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
     },
     {
+      "id": "arxiv:2605.08703",
+      "method": "RewardHarness",
+      "primary_url": "https://arxiv.org/abs/2605.08703",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2606.01770",
+      "method": "Adaptive Auto-Harness",
+      "primary_url": "https://arxiv.org/abs/2606.01770",
+      "status": "link_only_not_reviewed"
+    },
+    {
       "id": "arxiv:2606.05922",
-      "method": "RHO",
+      "method": "Retrospective Harness Optimization (RHO)",
       "primary_url": "https://arxiv.org/abs/2606.05922",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2607.07663",
+      "method": "Bounded Refinement to Research Loops (survey)",
+      "primary_url": "https://arxiv.org/abs/2607.07663",
       "status": "link_only_not_reviewed"
     },
     {
@@ -498,7 +576,7 @@
     },
     {
       "id": "arxiv:2607.28568",
-      "method": "Frontis-MA1 / OpenMLE / OpenRSI",
+      "method": "Frontis-MA1",
       "primary_url": "https://arxiv.org/abs/2607.28568",
       "status": "link_only_not_reviewed"
     },
@@ -538,7 +616,7 @@
     },
     {
       "id": "arxiv:2609.11873",
-      "method": "RSI autonomy roadmap / HCI",
+      "method": "The Last AI Built by Humans",
       "primary_url": "https://arxiv.org/abs/2609.11873",
       "status": "link_only_not_reviewed"
     },
@@ -549,9 +627,21 @@
       "status": "link_only_not_reviewed"
     },
     {
+      "id": "arxiv:2609.15364",
+      "method": "RSIAgent",
+      "primary_url": "https://arxiv.org/abs/2609.15364",
+      "status": "link_only_not_reviewed"
+    },
+    {
       "id": "arxiv:2609.20519",
       "method": "SoL-Pi",
       "primary_url": "https://arxiv.org/abs/2609.20519",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2609.22086",
+      "method": "Designer-RSI",
+      "primary_url": "https://arxiv.org/abs/2609.22086",
       "status": "link_only_not_reviewed"
     },
     {
@@ -563,8 +653,14 @@
       "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
     },
     {
+      "id": "arxiv:2609.26457",
+      "method": "AIDE² (AIDE2)",
+      "primary_url": "https://arxiv.org/abs/2609.26457",
+      "status": "link_only_not_reviewed"
+    },
+    {
       "id": "arxiv:2609.30652",
-      "method": "Dynamic Co-Evolution (DCE) + Self-Refined Concise Learning (SRCL)",
+      "method": "On-Policy Distillation RSI (DCE + SRCL)",
       "primary_url": "https://arxiv.org/abs/2609.30652",
       "status": "link_only_not_reviewed"
     },
@@ -575,8 +671,14 @@
       "status": "link_only_not_reviewed"
     },
     {
+      "id": "arxiv:2609.33295",
+      "method": "TraceDance",
+      "primary_url": "https://arxiv.org/abs/2609.33295",
+      "status": "link_only_not_reviewed"
+    },
+    {
       "id": "arxiv:2609.36054",
-      "method": "AI R&D acceleration scenario and governance",
+      "method": "Intelligence-explosion scenario analysis",
       "primary_url": "https://arxiv.org/abs/2609.36054",
       "status": "link_only_not_reviewed"
     },
@@ -587,8 +689,20 @@
       "status": "link_only_not_reviewed"
     },
     {
+      "id": "arxiv:2610.12176",
+      "method": "Multi-Agent Self-Supervision (MASS)",
+      "primary_url": "https://arxiv.org/abs/2610.12176",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2610.13025",
+      "method": "Evo²",
+      "primary_url": "https://arxiv.org/abs/2610.13025",
+      "status": "link_only_not_reviewed"
+    },
+    {
       "id": "arxiv:2610.14224",
-      "method": "Harness^2",
+      "method": "Harness²",
       "primary_url": "https://arxiv.org/abs/2610.14224",
       "status": "link_only_not_reviewed"
     },
@@ -599,8 +713,14 @@
       "status": "link_only_not_reviewed"
     },
     {
+      "id": "arxiv:2610.20431",
+      "method": "SwarmRSI",
+      "primary_url": "https://arxiv.org/abs/2610.20431",
+      "status": "link_only_not_reviewed"
+    },
+    {
       "id": "arxiv:2610.22740",
-      "method": "R2Orch",
+      "method": "R²Orch (R2Orch)",
       "primary_url": "https://arxiv.org/abs/2610.22740",
       "status": "link_only_not_reviewed"
     },
@@ -611,12 +731,24 @@
       "status": "link_only_not_reviewed"
     },
     {
+      "id": "recursive:flint",
+      "method": "Recursive Flint",
+      "primary_url": "https://recursive.com/updates/introducing-recursive-flint",
+      "status": "link_only_not_reviewed"
+    },
+    {
       "id": "arxiv:2610.26770",
       "method": "HarnessPro",
       "primary_url": "https://arxiv.org/abs/2610.26770",
       "status": "included_cc_by",
       "figure_id": "harnesspro",
       "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "arxiv:2610.28380",
+      "method": "OO-Harness",
+      "primary_url": "https://arxiv.org/abs/2610.28380",
+      "status": "link_only_not_reviewed"
     },
     {
       "id": "arxiv:2610.32026",
@@ -638,7 +770,7 @@
     },
     {
       "id": "arxiv:2610.35193",
-      "method": "Trustworthy RSI evidence framework",
+      "method": "Trustworthy RSI",
       "primary_url": "https://arxiv.org/abs/2610.35193",
       "status": "link_only_not_reviewed"
     },

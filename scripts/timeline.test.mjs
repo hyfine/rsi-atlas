@@ -1,0 +1,85 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {root} from './validate-delivery.mjs';
+import {chromePath,connectBrowser} from './browser-test-utils.mjs';
+
+const atlas=JSON.parse(fs.readFileSync(path.join(root,'data/atlas-methods.json'),'utf8'));
+const sorted=values=>[...values].sort();
+const within=(start,end)=>atlas.methods.filter(record=>record.date>=start&&record.date<=end);
+
+test('real Chrome: bilingual actual focus methods, inclusive date ranges and institution timelines',{timeout:180000},async t=>{
+  if(!chromePath()){t.skip('Chrome absent; no timeline/browser pass claimed');return;}
+  const browser=await connectBrowser(t,pathToFileURL(path.join(root,'index.html')).href,'window.atlasReady === true');
+  const {evaluate,page,waitFor}=browser;
+  const change=(id,value,event='change')=>evaluate(`(()=>{const e=document.getElementById(${JSON.stringify(id)});e.value=${JSON.stringify(value)};e.dispatchEvent(new Event(${JSON.stringify(event)},{bubbles:true}));})()`);
+  const click=id=>evaluate(`document.getElementById(${JSON.stringify(id)}).click()`);
+  const ids=async()=>sorted(await evaluate(`Array.from(new Set(Array.from(document.querySelectorAll('#timeline-list .event [data-method],#timeline-list .event[data-method]'),e=>e.dataset.method)))`));
+  const range=async(start,end)=>{
+    await change('timeline-start',start,'input');
+    await change('timeline-end',end,'input');
+  };
+  assert.equal(await evaluate('document.documentElement.lang'),'en');
+  assert.deepEqual(await evaluate(`Array.from(document.querySelectorAll('#focus-list [data-method]'),e=>e.dataset.method)`),atlas.focus_ids);
+  for(const id of atlas.focus_ids){
+    await evaluate(`document.querySelector('#focus-list [data-method=${JSON.stringify(id)}]').click()`);
+    assert.equal(await evaluate(`document.getElementById('method-dialog').open`),true);
+    const record=atlas.methods.find(item=>item.id===id);
+    assert.ok(await evaluate(`Array.from(document.querySelectorAll('#method-dialog a'),a=>a.href).includes(${JSON.stringify(record.primary_url)})`),`Missing primary-source link for ${id}`);
+    await click('close-dialog');
+  }
+  await evaluate(`document.querySelector('#language [data-language="zh"]').click()`);
+  assert.match(await evaluate('document.documentElement.lang'),/^zh/);
+  await page('Page.reload',{ignoreCache:true});
+  await waitFor('window.atlasReady === true');
+  assert.match(await evaluate('document.documentElement.lang'),/^zh/);
+  await evaluate(`document.querySelector('#language [data-language="en"]').click();location.hash='timeline'`);
+  await waitFor(`!document.getElementById('timeline').hidden`);
+  await change('timeline-group','chronological');
+  await range('2026-10-09','2026-10-09');
+  assert.deepEqual(await ids(),sorted(within('2026-10-09','2026-10-09').map(record=>record.id)));
+  assert.ok((await ids()).includes('arxiv:2610.13025'));
+  assert.ok((await ids()).includes('arxiv:2610.14224'));
+  await range('2026-09-01','2026-10-31');
+  await click('timeline-latest');
+  assert.equal(await evaluate(`document.getElementById('timeline-start').value`),'2025-10-31');
+  assert.equal(await evaluate(`document.getElementById('timeline-end').value`),'2026-10-31');
+  assert.deepEqual(await ids(),sorted(within('2025-10-31','2026-10-31').map(record=>record.id)));
+  await range('2023-01-01','2024-02-29');
+  await click('timeline-latest');
+  assert.equal(await evaluate(`document.getElementById('timeline-start').value`),'2023-02-28');
+  assert.equal(await evaluate(`document.getElementById('timeline-end').value`),'2024-02-29');
+  await range('2026-11-01','2026-10-01');
+  assert.deepEqual(await ids(),[]);
+  assert.match(await evaluate(`document.getElementById('timeline').textContent`),/start.*end|end.*start|invalid/i);
+  await change('timeline-start','','input');
+  assert.deepEqual(await ids(),[]);
+  await range('1900-01-01',atlas.cutoff);
+  await change('timeline-group','family');
+  assert.deepEqual(await ids(),sorted(atlas.methods.map(record=>record.id)));
+  const familyEntries=atlas.methods.reduce((sum,record)=>sum+record.families.length,0);
+  assert.equal(await evaluate(`document.querySelectorAll('#timeline-list .event').length`),familyEntries);
+  await change('timeline-group','institution');
+  assert.deepEqual(await ids(),sorted(atlas.methods.map(record=>record.id)));
+  const institutionEntries=atlas.methods.reduce((sum,record)=>sum+Math.max(1,record.institution_ids.length),0);
+  assert.equal(await evaluate(`document.querySelectorAll('#timeline-list .event').length`),institutionEntries);
+  const entity=atlas.institutions.find(item=>item.type==='university'&&atlas.methods.some(record=>record.institution_ids.includes(item.id)));
+  assert.ok(entity,'Real affiliation data must be present in the integration test');
+  await change('timeline-institution',entity.id);
+  await change('timeline-org-type',entity.type);
+  assert.deepEqual(await ids(),sorted(atlas.methods.filter(record=>record.institution_ids.includes(entity.id)).map(record=>record.id)));
+  await change('timeline-org-type','company');
+  assert.deepEqual(await ids(),[],'Type and institution must match the same affiliation, not different coauthors');
+  await change('timeline-org-type','');
+  await change('timeline-institution','__unknown__');
+  assert.deepEqual(await ids(),sorted(atlas.methods.filter(record=>!record.institution_ids.length).map(record=>record.id)));
+  await change('timeline-institution','');
+  await change('timeline-group','chronological');
+  await range('2026-10-18','2026-10-18');
+  const flintText=await evaluate(`Array.from(document.querySelectorAll('#timeline-list .event')).find(e=>e.querySelector('[data-method="recursive:flint"]'))?.textContent`);
+  assert.ok(flintText?.includes('2026-11-02'));
+  assert.match(flintText,/not datePublished|Framer/);
+  assert.deepEqual(browser.exceptions,[]);
+});

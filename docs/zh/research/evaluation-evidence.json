@@ -7,15 +7,7 @@
     "repo_url": "https://github.com/seal-rg/recurrent-pretraining",
     "first_date": "2025-02-07",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "2: latent reasoning and relation to CoT",
-      "3.1 Macroscopic Design",
-      "3.3 Training Objective",
-      "5.3 Where does recurrence help most?",
-      "6.1 Zero-Shot Adaptive Compute at Test-Time",
-      "Potential Implications of This Work",
-      "https://arxiv.org/abs/2502.05171: Submission history"
-    ],
+    "sections_read": ["2: latent reasoning and relation to CoT", "3.1 Macroscopic Design", "3.3 Training Objective", "5.3 Where does recurrence help most?", "6.1 Zero-Shot Adaptive Compute at Test-Time", "Potential Implications of This Work", "https://arxiv.org/abs/2502.05171: Submission history"],
     "mechanism": "以固定推理权重反复更新潜状态；训练时随机采样循环深度并截断反传，推理时增加循环次数或使用 KL 早退。",
     "evidence": "原文直接给出 prelude/recurrent/coda 计算式，说明推理算力扩展；风险讨论承认非语言化推理给监督带来代价。",
     "limitations": "不是持久自我修改或改进器演化实验；v1 2025-02-07，所读 v2 2025-02-17；可与CoT互补，不能从闭源模型行为推断其采用此架构；仓库链接来自论文，尚未审计仓库。",
@@ -29,18 +21,7 @@
     "repo_url": null,
     "first_date": "2025-10-06",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "2.5 Adaptive computational time (ACT)",
-      "4.1 No fixed-point theorem required",
-      "4.2 Simpler reinterpretation of z_H and z_L",
-      "4.3 Single network",
-      "4.6 No additional forward pass needed with ACT",
-      "4.8 Optimal the number of recursions",
-      "Figure 3: Pseudocode of Tiny Recursion Models",
-      "5 Results",
-      "6 Conclusion",
-      "Hyper-parameters and setup"
-    ],
+    "sections_read": ["2.5 Adaptive computational time (ACT)", "4.1 No fixed-point theorem required", "4.2 Simpler reinterpretation of z_H and z_L", "4.3 Single network", "4.6 No additional forward pass needed with ACT", "4.8 Optimal the number of recursions", "Figure 3: Pseudocode of Tiny Recursion Models", "5 Results", "6 Conclusion", "Hyper-parameters and setup"],
     "mechanism": "单个小网络迭代候选答案与潜变量，使用任务监督、深度监督和 EMA；最后一段完整递归反传，其前 T-1 段可不保留梯度。",
     "evidence": "v1 HTML 日期为 2025-10-06；算法中训练更新与递归前向被明确区分；结果限定于监督式解谜任务。",
     "limitations": "不是 RSI 实验；训练期 opt.step 不代表部署期在线自我修改；参数量不能替代训练/推理总计算量比较。",
@@ -62,26 +43,7 @@
       "version_read": "v2, 2026-09-09"
     },
     "read_level": "primary_fulltext_sections_and_official_project",
-    "sections_read": [
-      "3 Preliminaries",
-      "4.1 The Loop Kernel: One Paradigm for Heterogeneous Operators",
-      "4.2 Three Base Operators",
-      "4.3 Operator Composition: Five Admissible Transitions",
-      "4.4 Two-Axis Scheduling",
-      "4.5 MetaRSI: Improving the Scheduler",
-      "4.6 Overall Operation: The Lifecycle of an Improvement Term",
-      "4.7 What the Framework Protects",
-      "5.1 Experimental Setup",
-      "5.2 Main Results",
-      "5.4 Improving the Improver",
-      "6.2 An Amplifier Is Not a Source",
-      "6.6 The Reusable Artifact",
-      "6.7 Five Laws of Recursive Self-Improvement",
-      "Appendix B Operator Cards and Optimization Contracts",
-      "Appendix F Run Layout and Accounting Conventions",
-      "https://arxiv.org/abs/2609.06396: Submission history",
-      "https://cosmosmind.ai/research/metarsi-v1: dated project heading and Abstract"
-    ],
+    "sections_read": ["3 Preliminaries", "4.1 The Loop Kernel: One Paradigm for Heterogeneous Operators", "4.2 Three Base Operators", "4.3 Operator Composition: Five Admissible Transitions", "4.4 Two-Axis Scheduling", "4.5 MetaRSI: Improving the Scheduler", "4.6 Overall Operation: The Lifecycle of an Improvement Term", "4.7 What the Framework Protects", "5.1 Experimental Setup", "5.2 Main Results", "5.4 Improving the Improver", "6.2 An Amplifier Is Not a Source", "6.6 The Reusable Artifact", "6.7 Five Laws of Recursive Self-Improvement", "Appendix B Operator Cards and Optimization Contracts", "Appendix F Run Layout and Accounting Conventions", "https://arxiv.org/abs/2609.06396: Submission history", "https://cosmosmind.ai/research/metarsi-v1: dated project heading and Abstract"],
     "mechanism": "统一受保护执行内核上的 Data/Harness/Model 算子；水平调度顺序、垂直改写提案策略、term 间更新调度策略。最外层 meta 参数固定；Model-RSI 从固定基座和累计数据重新训练候选。",
     "evidence": "项目页 2026-09-03；arXiv v1 2026-09-06、v2 2026-09-09。§5.4 从同一个后继系统分叉比较原与更新后 improver；作者报告 term-2 平均新增 4.9 与 7.2 个百分点。主实验五外层种子、固定组合对照、受保护评测及分账预算。",
     "limitations": "作者实验，未独立复现；五轮边际收益均递减；同一 sealed split 跨 term 复用，gate verdict 到 meta policy 的信息流需审计；元预算须纳入端到端成本；同模型盲解仍共享错误；五条规律是待反驳主张。公开仓库不含完整训练/评测实现。",
@@ -89,72 +51,15 @@
       "cutoff": "2026-11-05",
       "read_level": "primary_fulltext_sections_and_official_project",
       "sources_read": [
-        {
-          "url": "https://arxiv.org/html/2609.06396v2",
-          "version": "v2, 2026-09-09",
-          "sections": [
-            "3-4.7",
-            "5.1-5.4",
-            "6.2",
-            "6.7",
-            "Appendices B-F"
-          ],
-          "supports": [
-            "protected evaluation and typed write surfaces",
-            "fixed-base cumulative training",
-            "installed operator policy and scheduler reused in next term",
-            "matched-state improver continuation",
-            "shared sealed splits and gate-verdict exposure boundary"
-          ]
-        },
-        {
-          "url": "https://arxiv.org/abs/2609.06396",
-          "version": "v1/v2 history",
-          "sections": [
-            "Submission history"
-          ],
-          "supports": [
-            "v1 submitted 2026-09-06T05:15:31Z; v2 revised 2026-09-09"
-          ]
-        },
-        {
-          "url": "https://cosmosmind.ai/research/metarsi-v1",
-          "version": "dated project page",
-          "sections": [
-            "Publication heading",
-            "Abstract"
-          ],
-          "supports": [
-            "official project release 2026-09-03, distinct from arXiv v1"
-          ]
-        }
+        {"url": "https://arxiv.org/html/2609.06396v2", "version": "v2, 2026-09-09", "sections": ["3-4.7", "5.1-5.4", "6.2", "6.7", "Appendices B-F"], "supports": ["protected evaluation and typed write surfaces", "fixed-base cumulative training", "installed operator policy and scheduler reused in next term", "matched-state improver continuation", "shared sealed splits and gate-verdict exposure boundary"]},
+        {"url": "https://arxiv.org/abs/2609.06396", "version": "v1/v2 history", "sections": ["Submission history"], "supports": ["v1 submitted 2026-09-06T05:15:31Z; v2 revised 2026-09-09"]},
+        {"url": "https://cosmosmind.ai/research/metarsi-v1", "version": "dated project page", "sections": ["Publication heading", "Abstract"], "supports": ["official project release 2026-09-03, distinct from arXiv v1"]}
       ],
       "reported_results": [
-        {
-          "values": [
-            3.6
-          ],
-          "unit": "percentage_points",
-          "location": "v2 section 5.2, Table 3",
-          "claim": "Mean gain over strongest fixed composition across four benchmarks",
-          "origin": "author_reported_not_reproduced"
-        },
-        {
-          "values": [
-            4.9,
-            7.2
-          ],
-          "unit": "percentage_points",
-          "location": "v2 section 5.4, Figure 11(c)",
-          "claim": "Term-2 additional gain from original versus meta-updated improver on the same S1 and per-term budget",
-          "origin": "author_reported_not_reproduced"
-        }
+        {"values": [3.6], "unit": "percentage_points", "location": "v2 section 5.2, Table 3", "claim": "Mean gain over strongest fixed composition across four benchmarks", "origin": "author_reported_not_reproduced"},
+        {"values": [4.9, 7.2], "unit": "percentage_points", "location": "v2 section 5.4, Figure 11(c)", "claim": "Term-2 additional gain from original versus meta-updated improver on the same S1 and per-term budget", "origin": "author_reported_not_reproduced"}
       ],
-      "open_checks": [
-        "Trace exact sealed-result information in gate verdicts across terms",
-        "Include meta discovery and rejected candidates in end-to-end cost",
-        "Public repository implementation and reproduction not audited in this pass"
-      ]
+      "open_checks": ["Trace exact sealed-result information in gate verdicts across terms", "Include meta discovery and rejected candidates in end-to-end cost", "Public repository implementation and reproduction not audited in this pass"]
     },
     "source_doc": "00_RSI_overview.md: Update; CosmosMind / MetaRSI"
   },
@@ -166,14 +71,7 @@
     "repo_url": "https://github.com/CosmosMind-ai/RSI-Harness",
     "first_date": null,
     "read_level": "official_repository_readme_only",
-    "sections_read": [
-      "GEE: generating a Genome from your history",
-      "Why this design",
-      "Hand-writing a Genome",
-      "Mechanics",
-      "Current status",
-      "Development"
-    ],
+    "sections_read": ["GEE: generating a Genome from your history", "Why this design", "Hand-writing a Genome", "Mechanics", "Current status", "Development"],
     "mechanism": "在不 fork Pi 核心的前提下以十二组件 Genome 打包配置；harness-rsi 从使用历史生成其他 Genome；声明字段所有权及用户编辑保留规则。",
     "evidence": "README 明确区分 immutable Core、Genome adapter、harness-rsi；Development 明说不含 benchmark/data-generation/training/evaluation code。访问时页面显示 commit 7bf09774bbe205956ec5a46e5f934602224cc437，但阅读对象为可变 main README，未做 commit 固定审计。",
     "limitations": "不是完整 MetaRSI 可复现实验包；未执行测试或审计源代码；Current status 明说分享前脱敏 gate 尚未实现；首次仓库发布时间未核验，不能从 relative age 推断精确日期。",
@@ -187,20 +85,7 @@
     "repo_url": "https://github.com/theseus-labs-rsi/SelfImprove-Bench",
     "first_date": "2026-11-02",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "3.1 Evolution Protocol",
-      "3.2 Task Categorization",
-      "3.3 Generalization Ladder",
-      "3.4 Semantic Process Analysis",
-      "4.1 Experimental Setup",
-      "4.2 Main Results",
-      "4.3 RSI Trajectory Analysis",
-      "4.4.3 Exploratory Experiment: Directly Refining an Execution Harness",
-      "Appendix A.1 Task Configurations",
-      "Appendix A.4 Annotation Setup and Validation",
-      "Appendix B.1.3 References Calculation",
-      "https://arxiv.org/abs/2611.02797: Submission history"
-    ],
+    "sections_read": ["3.1 Evolution Protocol", "3.2 Task Categorization", "3.3 Generalization Ladder", "3.4 Semantic Process Analysis", "4.1 Experimental Setup", "4.2 Main Results", "4.3 RSI Trajectory Analysis", "4.4.3 Exploratory Experiment: Directly Refining an Execution Harness", "Appendix A.1 Task Configurations", "Appendix A.4 Annotation Setup and Validation", "Appendix B.1.3 References Calculation", "https://arxiv.org/abs/2611.02797: Submission history"],
     "mechanism": "固定 backbone，在 held-in 任务流演化 prompts/memory/harness；由基准接口在 held-in 任务上评候选，冻结状态后测试 G0 重放、G1 新实例、G2 新难度、G3 同类新任务、G4 跨能力任务；分析修改轨迹。",
     "evidence": "arXiv 搜索页面发现并经 abstract history 验证 v1 2026-11-02。正文给出 HCI=(s_a-s_b)/(s_r-s_b)。§4.3 主实验保留修改没有改进器修改；§4.4.3 专门的 HyperDSH 实验出现 meta 修改及 fixed-improver 对照。",
     "limitations": "游戏泛化不等于开放研究能力；候选方法初始 harness 不同；部分 reference 是启发式而非最优上界，分数/HCI 可超过 1；近零分母不稳定；描述哈希去重不保证底层游戏状态不同；附录 A.4 是看到机器标签后的复核一致性，不是盲评准确率；未运行仓库。",
@@ -213,18 +98,17 @@
     "primary_url": "https://arxiv.org/html/cs/0309048v5",
     "repo_url": null,
     "first_date": "2003-09-25",
+    "first_date_basis": "arxiv_v1_submission",
+    "record_kind": "conditional_theory",
+    "ef_review": {
+      "cutoff": "2026-11-05",
+      "read_level": "primary_abstract_and_history",
+      "inherits_prior_section_notes": true,
+      "sources_read": [{"url": "https://arxiv.org/abs/cs/0309048", "version": "v5 abstract and v1-v5 history", "sections": ["Abstract", "Submission history"], "supports": ["v1 2003-09-25T15:59:46Z; v5 2006-12-17", "conditional formal self-rewrite rather than modern empirical algorithm"]}],
+      "open_checks": ["v5 fulltext analysis is retained from the existing record, not reread in this E/F pass"]
+    },
     "read_level": "primary_fulltext_sections_theory",
-    "sections_read": [
-      "2.2 Basic Idea of Goedel Machine",
-      "2.3 Proof Techniques and an O()-Optimal Initial Proof Searcher",
-      "2.4 Limitations of Goedel Machines",
-      "4.1 Globally Optimal Self-Changes, Given u and A Encoded in p",
-      "4.3 Global Optimality and Recursive Meta-Levels",
-      "4.4 How Difficult is it to Prove Target Theorems?",
-      "5.1 Online Universal Search in Proof Space",
-      "6.7 Frequently Asked Questions",
-      "https://arxiv.org/abs/cs/0309048: Submission history"
-    ],
+    "sections_read": ["2.2 Basic Idea of Goedel Machine", "2.3 Proof Techniques and an O()-Optimal Initial Proof Searcher", "2.4 Limitations of Goedel Machines", "4.1 Globally Optimal Self-Changes, Given u and A Encoded in p", "4.3 Global Optimality and Recursive Meta-Levels", "4.4 How Difficult is it to Prove Target Theorems?", "5.1 Online Universal Search in Proof Space", "6.7 Frequently Asked Questions", "https://arxiv.org/abs/cs/0309048: Submission history"],
     "mechanism": "以形式化效用和公理描述自身及环境，搜索可证明优于继续搜索的自改写，允许改写证明搜索器。",
     "evidence": "Theorem 4.1 的最优性针对立即切换与当前搜索程序未来继续搜索的比较；§2.4 明确限制为可证明且资源允许的改进。v1 2003-09-25，所读 v5 2006-12-17。",
     "limitations": "条件理论而非现代大模型实证；公理正确性、目标规范和现实环境映射需另行论证；不可证明性及巨大常数开销仍存在；不是无条件安全或无限加速定理。",
@@ -237,14 +121,17 @@
     "primary_url": "https://arxiv.org/abs/2310.02304",
     "repo_url": "https://github.com/microsoft/STOP",
     "first_date": "2023-10-03",
+    "first_date_basis": "arxiv_v1_submission",
+    "record_kind": "empirical_improver_program",
+    "ef_review": {
+      "cutoff": "2026-11-05",
+      "read_level": "primary_abstract_and_history",
+      "inherits_prior_section_notes": true,
+      "sources_read": [{"url": "https://arxiv.org/abs/2310.02304", "version": "v3 abstract and v1-v3 history", "sections": ["Abstract", "Submission history", "Comments"], "supports": ["v1 2023-10-03T17:59:32Z; v3 2024-08-16; COLM 2024 is later publication", "seed improver improves itself while LM weights stay fixed"]}],
+      "open_checks": ["Fulltext access failures and official README notes belong to the earlier record; no new paper fulltext or implementation read in this pass"]
+    },
     "read_level": "primary_abstract_and_official_readme_fulltext_html_unavailable",
-    "sections_read": [
-      "arXiv Abstract",
-      "Submission history",
-      "Comments: COLM 2024",
-      "https://www.bing.com/search?q=%22Self-Taught%20Optimizer%22%20github: official repository discovery",
-      "https://github.com/microsoft/STOP: README and file listing"
-    ],
+    "sections_read": ["arXiv Abstract", "Submission history", "Comments: COLM 2024", "https://www.bing.com/search?q=%22Self-Taught%20Optimizer%22%20github: official repository discovery", "https://github.com/microsoft/STOP: README and file listing"],
     "mechanism": "摘要明确说明固定 LM 驱动的种子 improver 生成并选择程序，再以自身作为待改进程序；产物改变后续程序改进方式。",
     "evidence": "作者 Zelikman, Lorch, Mackey, Kalai；v1 2023-10-03，v3 2024-08-16；摘要明确说明 LM 不被修改，并以此限定其 full RSI 主张。",
     "limitations": "https://arxiv.org/html/2310.02304v1 和 v3 均 404；https://ar5iv.labs.arxiv.org/html/2310.02304 返回 fatal conversion error，无正文；OpenReview https://openreview.net/forum?id=46Zgqo4QIU 返回浏览器验证页；不据二手材料引用任务数、算法细节或实验表格；官方 README 已核对，但未审计或运行实现。",
@@ -257,22 +144,17 @@
     "primary_url": "https://arxiv.org/html/2505.22954v3",
     "repo_url": "https://github.com/jennyzzt/dgm",
     "first_date": "2025-05-29",
+    "first_date_basis": "arxiv_v1_submission",
+    "record_kind": "empirical_self_modifying_agent",
+    "ef_review": {
+      "cutoff": "2026-11-05",
+      "read_level": "primary_abstract_and_history",
+      "inherits_prior_section_notes": true,
+      "sources_read": [{"url": "https://arxiv.org/abs/2505.22954", "version": "v3 abstract and v1-v3 history", "sections": ["Abstract", "Submission history"], "supports": ["v1 2025-05-29T00:26:15Z; v3 2026-03-12", "archive of code-modifying agents and empirical validation"]}],
+      "open_checks": ["Subset, budget and private-test qualifications are retained from prior v3 sections, not re-audited experimentally"]
+    },
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "3 Darwin Goedel Machine",
-      "4.1 Experiment Setup",
-      "4.2 Benchmarks",
-      "4.3 Baselines",
-      "4.4 Results",
-      "5 Safety Discussion",
-      "6 Conclusion and Limitations",
-      "C.2 Parent Selection",
-      "C.3 Self-Improve Prompts",
-      "C.4 Pseudocode",
-      "E.1 Cost Estimate",
-      "H Case Study: Solving Hallucination",
-      "https://arxiv.org/abs/2505.22954: Submission history"
-    ],
+    "sections_read": ["3 Darwin Goedel Machine", "4.1 Experiment Setup", "4.2 Benchmarks", "4.3 Baselines", "4.4 Results", "5 Safety Discussion", "6 Conclusion and Limitations", "C.2 Parent Selection", "C.3 Self-Improve Prompts", "C.4 Pseudocode", "E.1 Cost Estimate", "H Case Study: Solving Hallucination", "https://arxiv.org/abs/2505.22954: Submission history"],
     "mechanism": "固定 FM 支持的编码 agent 自修改，更新后 agent 继续修改后继；档案保留可工作分支，兼顾表现与探索；外层父代选择和档案管理固定。",
     "evidence": "固定初始修改者、无档案和贪心父代消融；跨模型和跨基准迁移。附录 C.3 明确额外 o1 诊断及诊断阶段可见 private tests；E.1 估算主方法约 USD22000、主要消融约 USD10000。v1 2025-05-29；所读 v3 2026-03-12。",
     "limitations": "经验验证不继承形式化 Goedel 保证；主 SWE-bench 是选定子集；相同轮数不等成本，后继推理成本也变化；基础模型与部分外层机制固定；未运行代码；附录 H 的评分完整性失败仅作防御性分析，不转述操作细节。",
@@ -285,18 +167,17 @@
     "primary_url": "https://arxiv.org/html/2609.11873v3",
     "repo_url": "https://github.com/theseus-labs-rsi/awesome-rsi",
     "first_date": "2026-09-10",
+    "first_date_basis": "arxiv_v1_submission",
+    "record_kind": "survey_and_roadmap_not_algorithm",
+    "ef_review": {
+      "cutoff": "2026-11-05",
+      "read_level": "primary_abstract_and_history",
+      "inherits_prior_section_notes": true,
+      "sources_read": [{"url": "https://arxiv.org/abs/2609.11873", "version": "v3 abstract and v1-v3 history", "sections": ["Abstract", "Submission history"], "supports": ["v1 2026-09-10T17:44:23Z; v3 2026-09-22", "autonomy-centered roadmap and preliminary evidence, not a new empirical algorithm node"]}],
+      "open_checks": ["Detailed v3 roadmap and HCI analysis retained from existing section notes, not reread in this pass"]
+    },
     "read_level": "primary_fulltext_sections_survey",
-    "sections_read": [
-      "1.4 An Autonomy-Centered Framework",
-      "1.7 Differences from Existing Surveys",
-      "2.1 Uneven Capability Progress in Modern Foundation Models",
-      "2.2 Conceptual Foundations of Recursive Self-Improvement",
-      "3.1 B0: In-Task AI Improvement",
-      "3.6.1 Improving the Search Procedure",
-      "3.6.5 Evaluating L5 Recursive Improvement",
-      "6 Challenges and Future Directions",
-      "https://arxiv.org/abs/2609.11873: Submission history"
-    ],
+    "sections_read": ["1.4 An Autonomy-Centered Framework", "1.7 Differences from Existing Surveys", "2.1 Uneven Capability Progress in Modern Foundation Models", "2.2 Conceptual Foundations of Recursive Self-Improvement", "3.1 B0: In-Task AI Improvement", "3.6.1 Improving the Search Procedure", "3.6.5 Evaluating L5 Recursive Improvement", "6 Challenges and Future Directions", "https://arxiv.org/abs/2609.11873: Submission history"],
     "mechanism": "以自治责任划分 B0 和 L1-L5，区分修改机制的结构递归与同预算下产生更强后继的有效递归；HCI 描述归一化剩余空间闭合。",
     "evidence": "v1 2026-09-10，v2 09-15，v3 09-22；§3.6.5 要求改进器版本与使用证据、配对比较、资源及停止评测；§2.1 明确 post-2026 曲线为 illustrative extension。",
     "limitations": "作者 L1-L5 不等于本图谱 L0-L3；综述和公司初步案例不是全部独立复现；HCI 受基线和协议家族选择影响；示意未来值不能作为观测或预测置信区间。",
@@ -309,19 +190,17 @@
     "primary_url": "https://arxiv.org/html/2610.35193v1",
     "repo_url": "https://github.com/pujiayue/Trustworthy-RSI",
     "first_date": "2026-10-26",
+    "first_date_basis": "arxiv_v1_submission",
+    "record_kind": "survey_and_evidence_framework_not_algorithm",
+    "ef_review": {
+      "cutoff": "2026-11-05",
+      "read_level": "primary_abstract_and_history",
+      "inherits_prior_section_notes": true,
+      "sources_read": [{"url": "https://arxiv.org/abs/2610.35193", "version": "v1", "sections": ["Abstract", "Submission history"], "supports": ["v1 2026-10-26T10:46:03Z", "survey separates improvement validity, constraint preservation and effective oversight", "direct RSI findings are distinguished from adjacent-system evidence"]}],
+      "open_checks": ["Detailed section 7.2 paired-continuation protocol retained from prior fulltext notes; not an implemented algorithm by the survey"]
+    },
     "read_level": "primary_fulltext_sections_survey",
-    "sections_read": [
-      "2.1 Recursive Self-Improvement: Definition and Process",
-      "3.1.2 Claims for Individual Updates, Successors, and Meta-Improvement",
-      "3.3.3 Safeguards for Proposal Evaluation",
-      "5.2.3 Risks in Proposal Evaluation",
-      "5.3.4 Safeguards for Update Implementation",
-      "6.3.4 Safeguards for Update Implementation",
-      "7.1 What Do Existing Evaluations Cover?",
-      "7.2 How Should Successive Versions Be Compared?",
-      "7.3 What Supports Trustworthiness Claims?",
-      "A.4 Evidence Selection and Coding Protocol"
-    ],
+    "sections_read": ["2.1 Recursive Self-Improvement: Definition and Process", "3.1.2 Claims for Individual Updates, Successors, and Meta-Improvement", "3.3.3 Safeguards for Proposal Evaluation", "5.2.3 Risks in Proposal Evaluation", "5.3.4 Safeguards for Update Implementation", "6.3.4 Safeguards for Update Implementation", "7.1 What Do Existing Evaluations Cover?", "7.2 How Should Successive Versions Be Compared?", "7.3 What Supports Trustworthiness Claims?", "A.4 Evidence Selection and Coding Protocol"],
     "mechanism": "以 improvement validity、constraint preservation、effective oversight 三视角，审计单次更新、跨后继继承与改进器修改；要求 matched paired continuations 和独立报告评测。",
     "evidence": "§7.2 分离开发、接受与独立报告；新旧 updater 从相同持久状态、匹配后续预算启动且各自冻结；总发现成本另报。§7.3 要求同一轨迹全程满足强制约束；链接固定 audit commit 854de7b3fa6c018a0c1e3e83df8e08dd801369d1。",
     "limitations": "综述的直接 RSI、相邻系统与前瞻主张不可混同；未独立核查其全部 301 引用或 260 编码格；结构保护不等于已验证的纵向安全；长期联合能力/安全/干预证据仍有限。",
@@ -335,21 +214,7 @@
     "repo_url": "https://github.com/SubramanyamSahoo/SAHOO-Safeguarded-Alignment-for-High-Order-Optimization-Objectives-in-Recursive-Self-Improvement",
     "first_date": "2026-03-06",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "3 Experimental Framework and Design",
-      "4 Empirical Results",
-      "5 Discussion: Comparison to Naive Approaches",
-      "6 Risks, Limitations, and Existential Risk Mitigation",
-      "A.2 Recursive self-improvement process",
-      "B.6 Composite Goal Drift Index",
-      "B.7 Threshold calibration",
-      "C.2 Constraint Preservation Score",
-      "C.3 Constraint Violation Penalties",
-      "C.4 Constraint Preservation as Stopping Criterion",
-      "D.3 Regression probability calculation",
-      "D.5 Long-horizon stability bounds",
-      "F.2 Limitations of the Framework"
-    ],
+    "sections_read": ["3 Experimental Framework and Design", "4 Empirical Results", "5 Discussion: Comparison to Naive Approaches", "6 Risks, Limitations, and Existential Risk Mitigation", "A.2 Recursive self-improvement process", "B.6 Composite Goal Drift Index", "B.7 Threshold calibration", "C.2 Constraint Preservation Score", "C.3 Constraint Violation Penalties", "C.4 Constraint Preservation as Stopping Criterion", "D.3 Regression probability calculation", "D.5 Long-horizon stability bounds", "F.2 Limitations of the Framework"],
     "mechanism": "以语义、词汇、结构、分布漂移的加权 GDI，结合约束评分和回归风险触发停止；附录 A.2/C.3 描述用质量与漂移反馈构造下一轮改进提示。",
     "evidence": "189 任务、三个领域的有限循环研究；讨论明确 naive baseline 是隐含/概念比较。所读正文并未建立改进器自身更新并复用的 L3 证据。",
     "limitations": "校准量 §3 写六任务而摘要/§4 写十八任务；§4 同时出现 27.5% 与 173/189(约91.5%) 收敛口径；不复用这些冲突统计。GDI 测相对基线差异而非真正对齐；CPS 平均与仅零分停止不能代替逐条关键约束；高斯独立增量是假设，不是自适应闭环的无条件安全证明；未运行仓库。",
@@ -362,11 +227,17 @@
     "primary_url": "https://arxiv.org/abs/2609.36054",
     "repo_url": null,
     "first_date": "2026-09-28",
+    "first_date_basis": "arxiv_v1_submission",
+    "record_kind": "scenario_and_policy_discussion_not_algorithm",
+    "ef_review": {
+      "cutoff": "2026-11-05",
+      "read_level": "primary_abstract_and_history",
+      "inherits_prior_section_notes": true,
+      "sources_read": [{"url": "https://arxiv.org/abs/2609.36054", "version": "v2 abstract and v1-v2 history", "sections": ["Abstract", "Submission history"], "supports": ["v1 2026-09-28T18:13:31Z; v2 2026-10-26", "conditional intelligence-explosion scenario, uncertainty and policy proposals"]}],
+      "open_checks": ["No fulltext read or quantitative prediction verification; earlier HTML failure retained as historical access record"]
+    },
     "read_level": "primary_abstract_verified_fulltext_html_unavailable",
-    "sections_read": [
-      "arXiv Abstract",
-      "Submission history"
-    ],
+    "sections_read": ["arXiv Abstract", "Submission history"],
     "mechanism": "摘要分析研发自动化可能压缩进展时间的反馈情景及其治理后果，不是新的可执行 RSI 算法。",
     "evidence": "v1 2026-09-28；v2 2026-10-26；摘要强调 preliminary evidence、可能性与不确定性，并主张提高研发自动化可见性和治理能力。",
     "limitations": "https://arxiv.org/html/2609.36054v2 返回404；未读取全文，不归因具体章节、模型公式或量化预测；不是已经实现智能爆炸的实验证据。",
@@ -380,19 +251,7 @@
     "repo_url": null,
     "first_date": "2024-11-22",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "3.1 Design goals",
-      "3.2 Evaluation Description",
-      "3.3 Coverage of key AI R&D challenges",
-      "3.4 Comparison to human experts",
-      "4 Experiments and results",
-      "4.2 Agent performance by number of samples",
-      "5.1 Investigating agent successes",
-      "6.1-6.3 Discussion and limitations",
-      "A.1 Human evaluation details",
-      "A.2 Agent evaluation details",
-      "https://arxiv.org/abs/2411.15114: Submission history"
-    ],
+    "sections_read": ["3.1 Design goals", "3.2 Evaluation Description", "3.3 Coverage of key AI R&D challenges", "3.4 Comparison to human experts", "4 Experiments and results", "4.2 Agent performance by number of samples", "5.1 Investigating agent successes", "6.1-6.3 Discussion and limitations", "A.1 Human evaluation details", "A.2 Agent evaluation details", "https://arxiv.org/abs/2411.15114: Submission history"],
     "mechanism": "七个可评分 ML 研发工程环境，有限硬件和时间预算，与专家比较；通常取运行内最高分，再估计不同独立尝试分配下的 best-of-k。",
     "evidence": "61 位专家的 71 次八小时尝试；§4.2 明确重采样独立尝试而非跨代继承；§6.3 承认测试分数反馈和噪声选优风险。first_date 为 arXiv v1，不是正文标题中的 November 20。",
     "limitations": "短时、明确目标、七环境不覆盖完整研发；相同 GPU 配额/尝试时长不等价于全部资源相同；美元图排除环境 GPU；高分不是递归复利。未运行环境，未核验官方总仓库 URL。",
@@ -406,11 +265,7 @@
     "repo_url": "https://github.com/openai/mle-bench",
     "first_date": "2024-10-09",
     "read_level": "primary_abstract_and_metadata_only",
-    "sections_read": [
-      "Abstract",
-      "Submission history",
-      "Code link"
-    ],
+    "sections_read": ["Abstract", "Submission history", "Code link"],
     "mechanism": "以 75 个 Kaggle 竞赛衡量训练、数据准备和实验迭代等 ML 工程任务能力。",
     "evidence": "摘要和提交历史核验题名、任务范围、首发日期及官方代码入口；本章只使用这些事实。",
     "limitations": "未读论文全文或运行仓库；竞赛成绩不直接测研究者跨代继承、改进器演化或递归加速；不借其他论文的转述升级阅读层级。",
@@ -424,22 +279,7 @@
     "repo_url": "https://github.com/openai/preparedness",
     "first_date": "2025-04-02",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "2.1 Task",
-      "2.2 Reproduction",
-      "2.3 Grading",
-      "2.4 Requirement Types",
-      "2.5 Rules",
-      "2.6 PaperBench Code-Dev",
-      "3 Dataset",
-      "4.1 SimpleJudge Implementation",
-      "4.2 Evaluating Judges with JudgeEval",
-      "5.2 Main Experiment",
-      "7 Limitations",
-      "Appendix A Future Directions",
-      "Appendix D SimpleJudge Implementation",
-      "https://arxiv.org/abs/2504.01848: Submission history"
-    ],
+    "sections_read": ["2.1 Task", "2.2 Reproduction", "2.3 Grading", "2.4 Requirement Types", "2.5 Rules", "2.6 PaperBench Code-Dev", "3 Dataset", "4.1 SimpleJudge Implementation", "4.2 Evaluating Judges with JudgeEval", "5.2 Main Experiment", "7 Limitations", "Appendix A Future Directions", "Appendix D SimpleJudge Implementation", "https://arxiv.org/abs/2504.01848: Submission history"],
     "mechanism": "从 20 篇 ICML2024 论文独立重建代码，在新环境执行后按作者共同制定的 8316 叶节点 rubric 评分；区分代码、执行和结果匹配。",
     "evidence": "21.0% 指加权 replication score 而非完整复现论文比例；JudgeEval 的 o3-mini SimpleJudge F1=0.83；Code-Dev 不执行复现，不能等同完整 PaperBench。",
     "limitations": "复现研究不等于创新研究或递归复利；同论文叶节点不独立；LLM judge 存在误差、随机性与对抗稳健性问题；公开原始代码的预训练污染仍可能存在；未复现实验。",
@@ -453,19 +293,7 @@
     "repo_url": "https://github.com/aisa-group/PostTrainBench",
     "first_date": "2026-03-09",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "2 PostTrainBench: Setup",
-      "2.1 Agent Architecture",
-      "2.2 Evaluation Suite",
-      "3.2 When Can Agents Beat Instruct-Tuned Models?",
-      "5.2 Post-Training Method Selection",
-      "5.3 Reward Hacking Analysis",
-      "5.4 Synthetic Data Generation Analysis",
-      "7 Discussion: Limitations",
-      "Appendix B Agent Instructions",
-      "Appendix E Reward Hacking Judge Prompt",
-      "https://arxiv.org/abs/2603.08640: Submission history"
-    ],
+    "sections_read": ["2 PostTrainBench: Setup", "2.1 Agent Architecture", "2.2 Evaluation Suite", "3.2 When Can Agents Beat Instruct-Tuned Models?", "5.2 Post-Training Method Selection", "5.3 Reward Hacking Analysis", "5.4 Synthetic Data Generation Analysis", "7 Discussion: Limitations", "Appendix B Agent Instructions", "Appendix E Reward Hacking Judge Prompt", "https://arxiv.org/abs/2603.08640: Submission history"],
     "mechanism": "固定十小时单 H100 预算，研究 agent 为指定 base model 和目标 benchmark 自主选择数据与后训练方法，最终评 checkpoint；用另一个 LLM 检查污染和非法模型替换。",
     "evidence": "4 base models x 7 benchmarks；部分配置三独立运行，其他配置单运行；规则和论文记录显示提示约束不能取代强制隔离。",
     "limitations": "单目标专业化不等于通用后训练；官方 instruct 模型不是等预算对照；benchmark 可查询且审计允许查看题目，未训练于测试不等于自适应独立；judge 可误报/漏报；不证明后继接管研究；无运行复现。",
@@ -479,21 +307,7 @@
     "repo_url": "https://github.com/evolvent-ai/RSIBench-Data",
     "first_date": "2026-07-28",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "3.1 Problem Definition",
-      "3.2 Fixed Infrastructure",
-      "3.3 Agent Inputs and Data-Use Constraints",
-      "3.4 Closed-Loop Data-Synthesis Research",
-      "3.5 Final Checkpoint and Official Evaluation",
-      "4.2 Shared training pipeline",
-      "4.3 Benchmarks and evaluation",
-      "5.2 Iterative evolution and candidate selection",
-      "5.3 Budget utilization and search efficiency",
-      "5.5 Early Experiment of RSI",
-      "6 Discussion and Limitations",
-      "Appendix A Evaluation Suite",
-      "https://arxiv.org/abs/2607.25886: Submission history"
-    ],
+    "sections_read": ["3.1 Problem Definition", "3.2 Fixed Infrastructure", "3.3 Agent Inputs and Data-Use Constraints", "3.4 Closed-Loop Data-Synthesis Research", "3.5 Final Checkpoint and Official Evaluation", "4.2 Shared training pipeline", "4.3 Benchmarks and evaluation", "5.2 Iterative evolution and candidate selection", "5.3 Budget utilization and search efficiency", "5.5 Early Experiment of RSI", "6 Discussion and Limitations", "Appendix A Evaluation Suite", "https://arxiv.org/abs/2607.25886: Submission history"],
     "mechanism": "固定 base model、Tinker LoRA SFT、Harbor/E2B 评测与受限训练配置；研究者改数据策略，根据 selection feedback 选 checkpoint，再做 official evaluation。",
     "evidence": "14/24 设置的后续候选超越首个有效尝试；18/23 继续搜索的设置中最后尝试低于峰值，非最终提交退化。每设置代表性单运行；nominal 16h 和 USD500 Tinker 预算。",
     "limitations": "§6 明确 selection 与 official evaluation 复用同一任务子集，fresh environments 不代表独立 holdout；总成本不止 valid-candidate Tinker；§5.5 同族探索的所有适配 checkpoint 仍低于 unadapted reference；固定研究者/外部 rollout 支持不构成完整递归自举。",
@@ -507,19 +321,7 @@
     "repo_url": null,
     "first_date": "2026-08-31",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "3.1 Task Definition and Evolution Surfaces",
-      "3.2 A Hidden, Query-Limited Evaluation Set",
-      "3.3 A Minimal Interactive Environment with Safe Retention",
-      "4.1 Setup",
-      "4.3 RQ2: Self-Directed Weight Evolution from Vague Goals",
-      "4.4 RQ3: Harness Evolution",
-      "6 Conclusion",
-      "Appendix C.1 Outcome Accounting and Rollback",
-      "C.2 Feedback and Submission Protocol",
-      "C.6 Compute and Resource Accounting",
-      "https://arxiv.org/abs/2608.31111: Submission history"
-    ],
+    "sections_read": ["3.1 Task Definition and Evolution Surfaces", "3.2 A Hidden, Query-Limited Evaluation Set", "3.3 A Minimal Interactive Environment with Safe Retention", "4.1 Setup", "4.3 RQ2: Self-Directed Weight Evolution from Vague Goals", "4.4 RQ3: Harness Evolution", "6 Conclusion", "Appendix C.1 Outcome Accounting and Rollback", "C.2 Feedback and Submission Protocol", "C.6 Compute and Resource Accounting", "https://arxiv.org/abs/2608.31111: Submission history"],
     "mechanism": "模糊自然语言目标由 agent 转为数据、训练和验证策略；六目标520题由外部 evaluator 保管；区分 final-only 与 aggregate adaptive feedback；版本和 lineage gate 控制权重或 harness 提交。",
     "evidence": "§4.3 所有报告运行都固定初始 decision model；§4.4 仅 H0 到 H1，无 H1 到 H2；retained nonnegative gain 来自控制器回滚，不是每个候选都改善。",
     "limitations": "重复 aggregate feedback 不是 untouched test；adaptive-feedback 每单元单运行；三个 harness 执行重复不是三个演化重复；未测全部无关能力保留；HTML正文署9月1日但 arXiv v1 为8月31日；未核验官方仓库。",
@@ -532,19 +334,10 @@
     "primary_url": "https://arxiv.org/html/2608.31100v1",
     "repo_url": null,
     "first_date": "2026-08-31",
+    "first_date_basis": "arxiv_v1_submission",
+    "record_kind": "benchmark_and_diagnostic_study",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "4.1 Overview",
-      "4.2 Interaction Protocol and Formalization",
-      "4.3 Self-Judging and Experience Consolidation",
-      "4.4 Exploration and Evaluation Phases",
-      "4.5 Self-Improving Pathways",
-      "5.2 Experimental Setup",
-      "6.1 RQ1: Can Parameter Training Enable Self-Improvement?",
-      "6.2 RQ2: Is Agent Self-Judging Reliable?",
-      "Appendix A.1 Shared Interaction Protocol",
-      "https://arxiv.org/abs/2608.31100: Submission history"
-    ],
+    "sections_read": ["4.1 Overview", "4.2 Interaction Protocol and Formalization", "4.3 Self-Judging and Experience Consolidation", "4.4 Exploration and Evaluation Phases", "4.5 Self-Improving Pathways", "5.2 Experimental Setup", "6.1 RQ1: Can Parameter Training Enable Self-Improvement?", "6.2 RQ2: Is Agent Self-Judging Reliable?", "Appendix A.1 Shared Interaction Protocol", "https://arxiv.org/abs/2608.31100: Submission history"],
     "mechanism": "七类文本游戏中 Explore/Judge/Consolidate/Update/Evaluate；比较 History ICL、Summary Memory、SFT；主探索不提供 benchmark verifier 的步级或最终奖励；评测轨迹不写入经验。",
     "evidence": "探索与 strict evaluation 使用不同 seeds/configurations；每三次探索评一次，每 checkpoint 三个评测 episodes；分别报告自评可靠性、行为效果和负迁移。",
     "limitations": "相同交互预算不等于相同推理/训练成本；AUC+ 截断负收益且不可直接跨游戏原始量纲聚合；固定整合路径不证明 improver 改写；三个 episode 限制精度；未运行实现，未核验官方仓库。",
@@ -552,54 +345,13 @@
       "cutoff": "2026-11-05",
       "read_level": "primary_fulltext_sections",
       "sources_read": [
-        {
-          "url": "https://arxiv.org/html/2608.31100v1",
-          "version": "v1",
-          "sections": [
-            "4.1-4.5",
-            "5.2 Table 3 and Eq. 20",
-            "5.3 Table 4",
-            "6.1 Figure 7",
-            "6.2 Tables 5-6",
-            "6.3",
-            "Appendix A.1"
-          ],
-          "supports": [
-            "self-score and agent-visible observations separated from benchmark reward",
-            "reward and final score withheld during exploration",
-            "fixed History/Memory/SFT integration pathways",
-            "evaluation trajectories excluded from experience",
-            "local judge accuracy is not sufficient for next-checkpoint improvement"
-          ]
-        },
-        {
-          "url": "https://arxiv.org/abs/2608.31100",
-          "version": "v1 history",
-          "sections": [
-            "Submission history"
-          ],
-          "supports": [
-            "v1 submitted 2026-08-31T17:05:41Z"
-          ]
-        }
+        {"url": "https://arxiv.org/html/2608.31100v1", "version": "v1", "sections": ["4.1-4.5", "5.2 Table 3 and Eq. 20", "5.3 Table 4", "6.1 Figure 7", "6.2 Tables 5-6", "6.3", "Appendix A.1"], "supports": ["self-score and agent-visible observations separated from benchmark reward", "reward and final score withheld during exploration", "fixed History/Memory/SFT integration pathways", "evaluation trajectories excluded from experience", "local judge accuracy is not sufficient for next-checkpoint improvement"]},
+        {"url": "https://arxiv.org/abs/2608.31100", "version": "v1 history", "sections": ["Submission history"], "supports": ["v1 submitted 2026-08-31T17:05:41Z"]}
       ],
       "reported_results": [
-        {
-          "values": [
-            23,
-            6
-          ],
-          "unit": "game_score",
-          "location": "v1 section 6.1, Figure 7",
-          "claim": "Qwen3-8B Plants-vs-Zombies initial versus updated checkpoint scores in the reported training configuration",
-          "origin": "author_reported_not_reproduced"
-        }
+        {"values": [23, 6], "unit": "game_score", "location": "v1 section 6.1, Figure 7", "claim": "Qwen3-8B Plants-vs-Zombies initial versus updated checkpoint scores in the reported training configuration", "origin": "author_reported_not_reproduced"}
       ],
-      "open_checks": [
-        "Independent outer-loop repeats and uncertainty",
-        "Full context compression and training cost",
-        "No dedicated learned-evaluator intervention or improver-rewrite evidence"
-      ]
+      "open_checks": ["Independent outer-loop repeats and uncertainty", "Full context compression and training cost", "No dedicated learned-evaluator intervention or improver-rewrite evidence"]
     },
     "source_doc": "用户指定评测范围；一手 v1 正文"
   },
@@ -611,21 +363,7 @@
     "repo_url": null,
     "first_date": "2026-09-01",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "3.1 Overview",
-      "3.2 Development settings",
-      "3.3 Domains and downstream benchmarks",
-      "3.4 Evaluation protocol",
-      "3.5 Metrics",
-      "4.1 Experimental setup",
-      "4.2 Harness Creation",
-      "4.3 Harness Evolution",
-      "6.1 Limitations",
-      "6.2 Ethics statement",
-      "Appendix B.4 Evolution execution cost by frozen version",
-      "Appendix D Evaluation Settings and Roles in Full",
-      "https://arxiv.org/abs/2609.01437: Submission history"
-    ],
+    "sections_read": ["3.1 Overview", "3.2 Development settings", "3.3 Domains and downstream benchmarks", "3.4 Evaluation protocol", "3.5 Metrics", "4.1 Experimental setup", "4.2 Harness Creation", "4.3 Harness Evolution", "6.1 Limitations", "6.2 Ethics statement", "Appendix B.4 Evolution execution cost by frozen version", "Appendix D Evaluation Settings and Roles in Full", "https://arxiv.org/abs/2609.01437: Submission history"],
     "mechanism": "creator 在固定开发环境中从弱 seed 构建并演化可执行 harness；冻结后由 self 或统一 executor 执行；Evolution 的100 SWE-Pro与89 Terminal任务反馈和630 SWE-Pro heldout分开。",
     "evidence": "主研究6 creator、4域、5 benchmark共2207唯一任务；Evolution九条lineage、73 frozen versions；所有heldout结果在演化结束后获取，不返回creator。",
     "limitations": "§3.5 仅计 executor tokens，排除 creator/judge/probes；Evolution每单元一条轨迹；开发环境固定，演化产物接管改进仍是future work；人类工程参考是异构外部系统而非统一executor对照；容器用于复现不等于安全隔离；未核验发布仓库。",
@@ -639,16 +377,7 @@
     "repo_url": null,
     "first_date": "2026-09-03",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "3.1 Overview",
-      "3.2 Construction Pipeline",
-      "3.3 Axis-Specific Construction",
-      "3.4 Evaluation Protocol",
-      "4.4 Summary",
-      "5 Conclusion",
-      "Appendix D Metrics",
-      "https://arxiv.org/abs/2609.04280: Submission history"
-    ],
+    "sections_read": ["3.1 Overview", "3.2 Construction Pipeline", "3.3 Axis-Specific Construction", "3.4 Evaluation Protocol", "4.4 Summary", "5 Conclusion", "Appendix D Metrics", "https://arxiv.org/abs/2609.04280: Submission history"],
     "mechanism": "由基准提供单调扩张的工具/技能/专家池，外层harness演化与内层记忆/技能等状态适应分开；按阶段及任务cohort测保留、适应和成本。",
     "evidence": "17 streams，802 unique tasks、1510 axis-specific examples；deployment不传持久状态，self-evolving adaptation在adapt split更新状态；附录D给阶段-任务下三角矩阵。官方项目入口https://mas-orchestra.salesforceresearch.ai/evoharness/来自论文，未另审计。",
     "limitations": "外部供给增长不是 agent 自创工具库或改进器演化；当前不含能力删除/替换；技能必需性标注是启发式；不同轴的实例非独立任务副本；搜索页日期9月2日与abstract history不一致，采用权威v1 UTC提交日期9月3日；未运行。",
@@ -662,20 +391,7 @@
     "repo_url": null,
     "first_date": "2026-09-27",
     "read_level": "primary_fulltext_sections_theory_and_experiment",
-    "sections_read": [
-      "2.1 Setting and objective: Assumptions 1 and 2",
-      "2.2 REUSE: Algorithm 1 and Theorem 1",
-      "3.1 Experimental setup",
-      "3.2 Results",
-      "5 Discussion",
-      "A.1 A paired lower confidence bound for bounded scores",
-      "A.3 A lower confidence bound for pass/fail evaluation",
-      "A.4 Proof of the main guarantee",
-      "B.1 Protocol",
-      "B.2 Proposer and prompt templates",
-      "B.3 Compared methods",
-      "https://arxiv.org/abs/2609.33180: Submission history"
-    ],
+    "sections_read": ["2.1 Setting and objective: Assumptions 1 and 2", "2.2 REUSE: Algorithm 1 and Theorem 1", "3.1 Experimental setup", "3.2 Results", "5 Discussion", "A.1 A paired lower confidence bound for bounded scores", "A.3 A lower confidence bound for pass/fail evaluation", "A.4 Proof of the main guarantee", "B.1 Protocol", "B.2 Proposer and prompt templates", "B.3 Compared methods", "https://arxiv.org/abs/2609.33180: Submission history"],
     "mechanism": "以 decision-only 反馈约束样本对提案的影响，为所有可能的promotion histories、轮次和候选分配总错误预算；配对检验并保存不反馈给提案者的累计收益证书。",
     "evidence": "初始 i.i.d. holdout 与开发/初始系统/随机性独立；固定假想历史下候选独立于holdout；Theorem1在条件内控制全部晋级的总体增益，附录给有界分数扩展。Covertype管线实验证据，30 seeds/样本规模，未见false promotion的有限实验结果。",
     "limitations": "分数、证书或其他侧信道反馈不属于decision-only保证；有限holdout仍有检测能力限制；独立heldout对population gain只是估计；style baselines非原系统复现；未证明所有安全/成本指标的联合改善。本文示例Hoeffding LCB是另行标注的新鲜样本协议，不冒充REUSE公式。",
@@ -689,17 +405,7 @@
     "repo_url": null,
     "first_date": "2026-09-03",
     "read_level": "official_primary_report_sections",
-    "sections_read": [
-      "9: CoT monitorability and controllability",
-      "9.1.3: monitorability and trace-length analysis",
-      "9.3: UK AISI non-verbal capability evaluation",
-      "10: preparedness",
-      "10.1.3: AI Self-Improvement evaluations",
-      "10.1.3.4: PostTrainBench Lite",
-      "10.2.3.1: monitoring",
-      "10.2.3.2: activation classifiers",
-      "Changelog through 2026-10-30"
-    ],
+    "sections_read": ["9: CoT monitorability and controllability", "9.1.3: monitorability and trace-length analysis", "9.3: UK AISI non-verbal capability evaluation", "10: preparedness", "10.1.3: AI Self-Improvement evaluations", "10.1.3.4: PostTrainBench Lite", "10.2.3.1: monitoring", "10.2.3.2: activation classifiers", "Changelog through 2026-10-30"],
     "mechanism": "用CoT-only、action-only与full-context等不同输入评估监控，分开可控性、非语言能力及准备度；生产控制包含异步监控和特定用途activation classifiers。",
     "evidence": "§9明确CoT controllability变化并非由架构变化差异性解释；短轨迹是信息减少的主要解释之一，匹配长度后仍有部分下降；action-only可改善而full-context下降；AI Self-Improvement低于其High阈值。",
     "limitations": "公司自报，非本次独立复现；架构未由此披露；无CoT能力不等于已证明监控规避；API与异步监控覆盖/介入时间有限；特定activation分类器不代表一般latent监督已解决；动态网页按此次所读且截止日前更新范围引用。",
@@ -713,11 +419,7 @@
     "repo_url": null,
     "first_date": "2026-09-06",
     "read_level": "official_primary_article_sections",
-    "sections_read": [
-      "1-3: internal usage, research workflows, experiment activity and human involvement",
-      "4: restrictions and compute substitution",
-      "Discussion of limits and path to full RSI"
-    ],
+    "sections_read": ["1-3: internal usage, research workflows, experiment activity and human involvement", "4: restrictions and compute substitution", "Discussion of limits and path to full RSI"],
     "mechanism": "以内部agent使用、研究任务调查、实验数量及模型资源配置变化描述研发自动化；人类仍负责优先级和发布决策。",
     "evidence": "3.1 agent工作日/人类工作日是使用量；4-8小时成功任务超过半数有人干预，不确定结果排除；限制后Astra GPU allocation下降59.2%，其他模型上升17.2%，分析负载中替代约85%。",
     "limitations": "不是随机生产率实验；使用、实验次数和算力之间的相关性不能直接给科研加速倍率；成功样本口径不能代表所有任务；负载替代不能独立量化治理净效应或完整递归复利。",
@@ -731,12 +433,7 @@
     "repo_url": null,
     "first_date": "2026-09-06",
     "read_level": "official_primary_essay_main_sections",
-    "sections_read": [
-      "Main discussion of monitorability generalization",
-      "Three explanations for changing monitoring behavior",
-      "Pacing RSI",
-      "What is next"
-    ],
+    "sections_read": ["Main discussion of monitorability generalization", "Three explanations for changing monitoring behavior", "Pacing RSI", "What is next"],
     "mechanism": "Jakub Pachocki讨论有监督交互、推理控制和预训练非语言能力如何影响监督，并提出研发节奏与安全研究的判断。",
     "evidence": "原文列出三项而非四项解释；将CoT视作有用但不完整的监督信号，并讨论全RSI路径的不确定性。",
     "limitations": "署名观点和解释性论证，不是独立架构鉴定或因果实验；不能证明具体架构采用、固定加速倍率或监控全面失效。",
@@ -750,29 +447,10 @@
     "repo_url": "https://github.com/koanatakiyo/cogRSI",
     "first_date": "2026-10-31",
     "first_date_basis": "arxiv_v1_submission",
-    "date_evidence": {
-      "url": "https://arxiv.org/abs/2611.01113",
-      "location": "Submission history",
-      "v1_submitted_utc": "2026-10-31T16:59:29Z",
-      "version_read": "v1"
-    },
+    "date_evidence": {"url": "https://arxiv.org/abs/2611.01113", "location": "Submission history", "v1_submitted_utc": "2026-10-31T16:59:29Z", "version_read": "v1"},
     "record_kind": "empirical_method_and_audit",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "3 Task and Evaluation",
-      "4.1 Grounded Reader",
-      "4.2 Counterfactual-Guided Strategy Evolution",
-      "4.3 Semantic Audit",
-      "5.1-5.5 and Tables 1/3/5",
-      "6 Conclusion",
-      "Limitations",
-      "Appendices C.1-C.3",
-      "Appendix D including J105/J107",
-      "Appendices E.1-E.3",
-      "Appendix F Table 11",
-      "Appendix G.7",
-      "arXiv Abstract and Submission history"
-    ],
+    "sections_read": ["3 Task and Evaluation", "4.1 Grounded Reader", "4.2 Counterfactual-Guided Strategy Evolution", "4.3 Semantic Audit", "5.1-5.5 and Tables 1/3/5", "6 Conclusion", "Limitations", "Appendices C.1-C.3", "Appendix D including J105/J107", "Appendices E.1-E.3", "Appendix F Table 11", "Appendix G.7", "arXiv Abstract and Submission history"],
     "mechanism": "固定 reader/backbone 的 principle slot 接受由开发失败驱动的规则增删改；准确率校准 gate 与反事实成对 gate 选优。独立模型将规则盲译为代码，在限定感知和证言的形式环境中找共享反例。可变对象为策略/工具，E 贡献为评价和审计；未展示 builder 或选择机制自身改写。",
     "evidence": "作者在 Table 1 报告 gated library 的 BigToM-U pair validity 96.6% 对专家94.5%，Test Main则71.8%对73.1%。§5.4/Figure7/AppendixD审计573条规则，其中286 invalid、44 valid、84 ambiguous、159 vacuous；86.7%只针对可判定的330条。§6把语义审计接入registration列为后续工作，oracle gate为事后重放。",
     "limitations": "没有代码审计或复现。两个译码模型仍可共享误读；有限世界未找到反例不等于全称有效。附录D披露输出cap造成重编译偏离。BigToM-U新条件/配对来自已有场景；C.2新问题可能复用故事；C.3/E.1披露早期测试失败用于reader设计，confirmatory对设计独立不等于项目零暴露。token匹配主要是部署reader成本，未等价总发现/审计成本。",
@@ -780,73 +458,14 @@
       "cutoff": "2026-11-05",
       "read_level": "primary_fulltext_sections",
       "sources_read": [
-        {
-          "url": "https://arxiv.org/html/2611.01113v1",
-          "version": "v1",
-          "sections": [
-            "3-5",
-            "6",
-            "Limitations",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G.7"
-          ],
-          "supports": [
-            "strategy reuse without demonstrated improver rewriting",
-            "task usefulness separated from semantic validity",
-            "formal domain oracle separated from model translators",
-            "audit not yet deployed as online gate",
-            "test exposure and rule-audit denominator limitations"
-          ]
-        },
-        {
-          "url": "https://arxiv.org/abs/2611.01113",
-          "version": "v1",
-          "sections": [
-            "Abstract",
-            "Submission history"
-          ],
-          "supports": [
-            "2026-10-31 submission despite 2611 identifier"
-          ]
-        }
+        {"url": "https://arxiv.org/html/2611.01113v1", "version": "v1", "sections": ["3-5", "6", "Limitations", "C", "D", "E", "F", "G.7"], "supports": ["strategy reuse without demonstrated improver rewriting", "task usefulness separated from semantic validity", "formal domain oracle separated from model translators", "audit not yet deployed as online gate", "test exposure and rule-audit denominator limitations"]},
+        {"url": "https://arxiv.org/abs/2611.01113", "version": "v1", "sections": ["Abstract", "Submission history"], "supports": ["2026-10-31 submission despite 2611 identifier"]}
       ],
       "reported_results": [
-        {
-          "values": [
-            96.6,
-            94.5,
-            71.8,
-            73.1
-          ],
-          "unit": "percent",
-          "location": "v1 section 5.2, Table 1",
-          "claim": "Gated library versus expert on BigToM-U and Test Main respectively",
-          "origin": "author_reported_not_reproduced"
-        },
-        {
-          "values": [
-            573,
-            286,
-            44,
-            84,
-            159,
-            86.7
-          ],
-          "unit": "rule_counts_and_decided_invalid_percent",
-          "location": "v1 section 5.4, Figure 7, Appendix D J105",
-          "claim": "86.7% = 286/(286+44), not 286/573 and not system error rate",
-          "origin": "author_reported_not_reproduced"
-        }
+        {"values": [96.6, 94.5, 71.8, 73.1], "unit": "percent", "location": "v1 section 5.2, Table 1", "claim": "Gated library versus expert on BigToM-U and Test Main respectively", "origin": "author_reported_not_reproduced"},
+        {"values": [573, 286, 44, 84, 159, 86.7], "unit": "rule_counts_and_decided_invalid_percent", "location": "v1 section 5.4, Figure 7, Appendix D J105", "claim": "86.7% = 286/(286+44), not 286/573 and not system error rate", "origin": "author_reported_not_reproduced"}
       ],
-      "open_checks": [
-        "Translation fidelity against independent human readings",
-        "Prospective online audit-gated loop",
-        "New-scenario transfer and fully unexposed project-level test",
-        "Total search and semantic-audit resources"
-      ]
+      "open_checks": ["Translation fidelity against independent human readings", "Prospective online audit-gated loop", "New-scenario transfer and fully unexposed project-level test", "Total search and semantic-audit resources"]
     },
     "source_doc": "00_RSI_overview.md: Update / CogRSI; primary v1 HTML"
   },
@@ -858,25 +477,10 @@
     "repo_url": "https://github.com/DorothyDUUU/RSI-Master",
     "first_date": "2026-09-28",
     "first_date_basis": "arxiv_v1_submission",
-    "date_evidence": {
-      "url": "https://arxiv.org/abs/2609.35561",
-      "location": "Submission history",
-      "v1_submitted_utc": "2026-09-28T16:28:45Z",
-      "version_read": "v1 fulltext sections; v2 dated 2026-09-30 abstract/history only"
-    },
+    "date_evidence": {"url": "https://arxiv.org/abs/2609.35561", "location": "Submission history", "v1_submitted_utc": "2026-09-28T16:28:45Z", "version_read": "v1 fulltext sections; v2 dated 2026-09-30 abstract/history only"},
     "record_kind": "empirical_autonomous_research_framework",
     "read_level": "primary_fulltext_sections",
-    "sections_read": [
-      "2.1 Problem Formulation",
-      "2.2 Experiment OS",
-      "2.3 Reviewer-Guided Research Orchestration",
-      "3.1-3.6 and Tables 2-4/Figure 5",
-      "Appendices A.1-A.3",
-      "Appendix B tool inventory and conditional availability",
-      "Appendix E.1 Hacking Detection and Penalty",
-      "Appendix E.2 integrity rubric",
-      "arXiv Abstract and Submission history"
-    ],
+    "sections_read": ["2.1 Problem Formulation", "2.2 Experiment OS", "2.3 Reviewer-Guided Research Orchestration", "3.1-3.6 and Tables 2-4/Figure 5", "Appendices A.1-A.3", "Appendix B tool inventory and conditional availability", "Appendix E.1 Hacking Detection and Penalty", "Appendix E.2 integrity rubric", "arXiv Abstract and Submission history"],
     "mechanism": "ExpOS约束实验操作并保存checkpoint lineage和原始证据，Main Agent按Worker完成/Reviewer报告事件扩展研究DAG；Reviewer从原始记录审阅并回传去掉保护实例与答案的报告。固定Kimi-K3研究者改进Qwen目标模型，研究状态/实验反馈复用不等于研究者模型或改进算法被替换。",
     "evidence": "§3.2 Table2作者报告七任务宏平均54.49，对最强agent基线46.53；§3.4组件消融支持框架部件作用而非新旧improver配对比较。§3.5 Table4记录hacking rate 0.0%；E.1明确定义为实验提交及lineage的违规比例，外部LLM审计、人类复核识别到的违规。A.1为12h单次研究预算，4B单H100，35B八H20且可用指定外部API。",
     "limitations": "本次深读v1，v2只读abstract/history，未运行实现。目标Qwen没有接管Kimi-K3研究角色；未证实F/L3。最高评价分选优与重复聚合/诊断反馈需要额外独立报告层。0.0%不是零风险、独立盲评或已知漏报率；同lineage提交不独立；审计一致性尚未量化。各任务分别优化，不是同checkpoint零样本跨域。额外6-12h收益不证明改进效率增长；HorizonMath未核逐题发现/证明证书，不采信为发现新定理。",
@@ -884,63 +488,139 @@
       "cutoff": "2026-11-05",
       "read_level": "primary_fulltext_sections",
       "sources_read": [
-        {
-          "url": "https://arxiv.org/html/2609.35561v1",
-          "version": "v1",
-          "sections": [
-            "2-3",
-            "A.1-A.3",
-            "B",
-            "E.1-E.2"
-          ],
-          "supports": [
-            "two linked graphs and role-specific evidence permissions",
-            "researcher/target-model separation",
-            "submission-level integrity metric",
-            "resource and adaptive-feedback boundaries"
-          ]
-        },
-        {
-          "url": "https://arxiv.org/abs/2609.35561",
-          "version": "v1/v2 history and v2 abstract",
-          "sections": [
-            "Abstract",
-            "Submission history"
-          ],
-          "supports": [
-            "v1 2026-09-28; v2 2026-09-30, not fully compared"
-          ]
-        }
+        {"url": "https://arxiv.org/html/2609.35561v1", "version": "v1", "sections": ["2-3", "A.1-A.3", "B", "E.1-E.2"], "supports": ["two linked graphs and role-specific evidence permissions", "researcher/target-model separation", "submission-level integrity metric", "resource and adaptive-feedback boundaries"]},
+        {"url": "https://arxiv.org/abs/2609.35561", "version": "v1/v2 history and v2 abstract", "sections": ["Abstract", "Submission history"], "supports": ["v1 2026-09-28; v2 2026-09-30, not fully compared"]}
       ],
       "reported_results": [
-        {
-          "values": [
-            54.49,
-            46.53
-          ],
-          "unit": "macro_average_task_score",
-          "location": "v1 section 3.2, Table 2",
-          "claim": "RSI-Master versus strongest autonomous agent baseline under paper protocol",
-          "origin": "author_reported_not_reproduced"
-        },
-        {
-          "values": [
-            0
-          ],
-          "unit": "percent_flagged_experiment_submissions",
-          "location": "v1 section 3.5 Table 4 and Appendix E.1",
-          "claim": "Recorded hacking rate, not a population zero-risk guarantee",
-          "origin": "author_reported_not_reproduced"
-        }
+        {"values": [54.49, 46.53], "unit": "macro_average_task_score", "location": "v1 section 3.2, Table 2", "claim": "RSI-Master versus strongest autonomous agent baseline under paper protocol", "origin": "author_reported_not_reproduced"},
+        {"values": [0.0], "unit": "percent_flagged_experiment_submissions", "location": "v1 section 3.5 Table 4 and Appendix E.1", "claim": "Recorded hacking rate, not a population zero-risk guarantee", "origin": "author_reported_not_reproduced"}
       ],
-      "open_checks": [
-        "v2 fulltext changes",
-        "Fully independent final evaluation and exact query exposure",
-        "Outer-run replication and total API/teacher/reviewer cost",
-        "Audit negative cases and false-negative uncertainty",
-        "Actual researcher/improver handoff absent from read experiments"
-      ]
+      "open_checks": ["v2 fulltext changes", "Fully independent final evaluation and exact query exposure", "Outer-run replication and total API/teacher/reviewer cost", "Audit negative cases and false-negative uncertainty", "Actual researcher/improver handoff absent from read experiments"]
     },
     "source_doc": "00_RSI_overview.md: RSI-Master; primary v1 HTML"
+  },
+  {
+    "id": "alphaevolve-2506.13131",
+    "method": "AlphaEvolve",
+    "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+    "primary_url": "https://arxiv.org/abs/2506.13131",
+    "repo_url": null,
+    "first_date": "2025-06-16",
+    "first_date_basis": "arxiv_v1_submission",
+    "project_release_date": "2025-05-14",
+    "date_evidence": {"url": "https://arxiv.org/abs/2506.13131", "location": "Submission history", "v1_submitted_utc": "2025-06-16T06:37:18Z", "version_read": "v1 abstract; official article dated 2025-05-14"},
+    "record_kind": "empirical_algorithm_discovery_system",
+    "read_level": "primary_abstract_and_official_article_sections",
+    "sections_read": ["arXiv Abstract", "Submission history", "Official article: publication heading", "Designing better algorithms with large language models", "Enhancing AI training and inference", "The path forward"],
+    "mechanism": "LLM提出程序修改，自动评价器执行并打分，演化程序库为后续提示选取候选；产物可为搜索算法、计算内核等。官方文章声称产物改善支撑模型的训练基础设施，但未据此核定搜索控制器或后继模型的实际递归交接。",
+    "evidence": "原始论文v1为2025-06-16，官方文章为2025-05-14；两者分别记录。本轮支持自动算法研发和执行反馈前史，不以官方部署叙述替代改进器同起点继续实验。",
+    "limitations": "未读论文方法/实验全文，未运行官方结果notebook或下载PDF；不引用部署百分比作等成本排名；未核验基础模型更新后何时接管AlphaEvolve提案和选择。",
+    "ef_review": {
+      "cutoff": "2026-11-05",
+      "read_level": "primary_abstract_and_official_article_sections",
+      "sources_read": [
+        {"url": "https://arxiv.org/abs/2506.13131", "version": "v1", "sections": ["Abstract", "Submission history"], "supports": ["paper identity and v1 date", "evolutionary coding with automated evaluators"]},
+        {"url": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/", "version": "official article dated 2025-05-14", "sections": ["Publication heading", "Designing better algorithms with large language models", "Enhancing AI training and inference", "The path forward"], "supports": ["official release date", "program database feeds future proposals", "company-reported infrastructure feedback, not verified improver handoff"]}
+      ],
+      "reported_results": [],
+      "open_checks": ["Paper methodology, total discovery cost and controls", "Actual updated improver or model loading in subsequent research rounds"]
+    },
+    "source_doc": "catalog.json arxiv:2506.13131 metadata_only; primary abstract and official article"
+  },
+  {
+    "id": "aide2-2609.26457",
+    "method": "AIDE^2",
+    "title": "Recursive self-improvement of AI research agents",
+    "primary_url": "https://arxiv.org/abs/2609.26457",
+    "repo_url": null,
+    "first_date": "2026-09-22",
+    "first_date_basis": "arxiv_v1_submission",
+    "date_evidence": {"url": "https://arxiv.org/abs/2609.26457", "location": "Submission history", "v1_submitted_utc": "2026-09-22T14:12:13Z", "version_read": "v1 abstract"},
+    "record_kind": "empirical_research_agent_method",
+    "read_level": "primary_abstract_and_metadata_only",
+    "sections_read": ["Abstract", "Submission history"],
+    "mechanism": "作者摘要称AIDE^2提出自身研究代码的修改，在AI研发任务上评价后继并接受修改供后续迭代；发现的变化包括搜索策略和上下文记忆，报告未参与选择的跨任务/领域迁移。",
+    "evidence": "一手摘要直接讨论研究效率与研究agent自改代码，是F相关机制声明；具体下一轮提案者身份、改进效率定义和配对对照未由摘要核实。",
+    "limitations": "仅摘要，不引用运行时长、版本数、收益或hacking比例为已核实结果；未读全文/运行代码，尚不能独立确认F/L3因果效应、完整成本或长期加速。",
+    "ef_review": {
+      "cutoff": "2026-11-05",
+      "read_level": "primary_abstract_and_metadata_only",
+      "sources_read": [{"url": "https://arxiv.org/abs/2609.26457", "version": "v1", "sections": ["Abstract", "Submission history"], "supports": ["source-code self-modification and search-policy/memory changes claimed", "held-out research-task transfer claimed", "v1 submission date"]}],
+      "reported_results": [],
+      "open_checks": ["Fulltext methods and results", "Which successor actually proposes and selects next-round modifications", "Fixed-improver paired continuation, all discovery/diagnostic/evaluation costs", "Hidden evaluation exposure and hacking-audit denominator"]
+    },
+    "source_doc": "00_RSI_overview.md Update; catalog metadata_only; primary abstract"
+  },
+  {
+    "id": "areal-rsi-2610.18083",
+    "method": "AReaL-RSI",
+    "title": "AReaL-RSI: Adaptive Scaling and Coordination of Recursive Self-Improvement",
+    "primary_url": "https://arxiv.org/abs/2610.18083",
+    "repo_url": null,
+    "first_date": "2026-10-13",
+    "first_date_basis": "arxiv_v1_submission",
+    "date_evidence": {"url": "https://arxiv.org/abs/2610.18083", "location": "Submission history", "v1_submitted_utc": "2026-10-13T10:05:16Z", "version_read": "v1 abstract"},
+    "record_kind": "empirical_research_team_framework",
+    "read_level": "primary_abstract_and_metadata_only",
+    "sections_read": ["Abstract", "Submission history"],
+    "mechanism": "固定backbone权重的持久研究团队，leader选择研究方向；条件化共享记忆区分未解决问题与有支持的发现，campaign之后依据证据修订研究者方向、知识和技能供后续campaign使用。",
+    "evidence": "摘要明确whole-system resource expenditure，并称在harness、GPU kernel和AI研究任务上比较团队组织、经验共享与研究角色；未据此认定已严格匹配完整成本或证明improver本身更新。",
+    "limitations": "只读摘要与日期；下游结果与角色扩容效应不能直接换算为跨轮改进效率增长；不转引摘要中的百分点、加速比或延迟区间。",
+    "ef_review": {
+      "cutoff": "2026-11-05",
+      "read_level": "primary_abstract_and_metadata_only",
+      "sources_read": [{"url": "https://arxiv.org/abs/2610.18083", "version": "v1", "sections": ["Abstract", "Submission history"], "supports": ["fixed backbone and persistent research team", "conditional memory sharing and post-campaign revision", "whole-system resource formulation claimed", "v1 submission date"]}],
+      "reported_results": [],
+      "open_checks": ["Researcher-role/version diffs and actual next-campaign loading", "Same-start fixed-researcher ablation", "All parallel-worker, reviewer, search and deployment resource accounts", "Evaluation/selection split exposure and negative transfer"]
+    },
+    "source_doc": "00_RSI_overview.md Update; catalog metadata_only; primary abstract"
+  },
+  {
+    "id": "swarmrsi-2610.20431",
+    "method": "SwarmRSI",
+    "title": "SwarmRSI: Recursive Self-Improvement through Evolving Scientific Agent Swarm",
+    "primary_url": "https://arxiv.org/abs/2610.20431",
+    "repo_url": null,
+    "first_date": "2026-10-14",
+    "first_date_basis": "arxiv_v1_submission",
+    "date_evidence": {"url": "https://arxiv.org/abs/2610.20431", "location": "Submission history", "v1_submitted_utc": "2026-10-14T16:21:45Z", "version_read": "v3 abstract, 2026-11-02; v2 history 2026-10-19"},
+    "record_kind": "empirical_scientific_swarm_method",
+    "read_level": "primary_abstract_and_metadata_only",
+    "sections_read": ["v3 Abstract", "Submission history"],
+    "mechanism": "Feedback-Guided Swarm Mutation用其他agent实验反馈修订假设及实现；Complementary Swarm Recombination复用保留假设和互补程序部件；Recursive Swarm Evolution把新实验结果带入后续研究。",
+    "evidence": "摘要声称在OpenProblems、NatureBench和MLE-Bench Lite的表现、未参与选择的任务迁移及生物学家程序重运行；本章只记录这些作者机制/验证声明，不用来认定变异器或选择器自身演化。",
+    "limitations": "未读v3方法/实验正文，未独立复现；总程序分数无法直接归因局部组件贡献；研究假设/实现/研究者机制的变更面仍需分开；不转引未经表格核验的SOTA量化结果。",
+    "ef_review": {
+      "cutoff": "2026-11-05",
+      "read_level": "primary_abstract_and_metadata_only",
+      "sources_read": [{"url": "https://arxiv.org/abs/2610.20431", "version": "v3 abstract; v1-v3 history", "sections": ["Abstract", "Submission history"], "supports": ["feedback-guided mutation and complementary recombination", "new experimental evidence guides subsequent research claimed", "v1 2026-10-14 distinct from v3 2026-11-02"]}],
+      "reported_results": [],
+      "open_checks": ["Actual evolving researcher/improver surfaces and invocation traces", "Equal whole-swarm compute and memory-sharing controls", "Held-out selection boundary and task overlap", "Independent reproduction provenance and component-level causal attribution"]
+    },
+    "source_doc": "00_RSI_overview.md Update / SwarmRSI; catalog metadata_only; primary v3 abstract"
+  },
+  {
+    "id": "rsihub-2610.32253",
+    "method": "RSIHub",
+    "title": "RSIHub: A Composable Framework for Agent-Evolution Methods",
+    "primary_url": "https://arxiv.org/abs/2610.32253",
+    "repo_url": null,
+    "first_date": "2026-10-23",
+    "first_date_basis": "arxiv_v1_submission",
+    "date_evidence": {"url": "https://arxiv.org/abs/2610.32253", "location": "Submission history", "v1_submitted_utc": "2026-10-23T07:06:07Z", "version_read": "v1 abstract"},
+    "record_kind": "composable_comparison_framework_not_single_algorithm",
+    "read_level": "primary_abstract_and_metadata_only",
+    "sections_read": ["Abstract", "Submission history"],
+    "mechanism": "recipes组合可复用operators并声明mutable resources；框架提供执行、评价、恢复和lineage，评价置于可写面外。摘要称在不改core的条件下实例化AHE、Hyperagents、A-Evolve、GEPA进行比较。",
+    "evidence": "摘要明确固定model/evaluator配置下比较，并承认方法排序依设置而变且优化收益未必迁移到held-out任务；支持共同实验基础设施的意义，不是单一新递归算法或所有接入方法的L3证明。",
+    "limitations": "未审阅接口实现、recipes或正文实验；overview给出的官方站点/仓库本轮未打开，因此repo_url保留null；不使用摘要最大收益值作平均效果或通用排名。",
+    "ef_review": {
+      "cutoff": "2026-11-05",
+      "read_level": "primary_abstract_and_metadata_only",
+      "sources_read": [{"url": "https://arxiv.org/abs/2610.32253", "version": "v1", "sections": ["Abstract", "Submission history"], "supports": ["composable evolution recipes and protected evaluation", "comparison rather than new monolithic algorithm", "ranking and held-out transfer limitations", "v1 submission date"]}],
+      "reported_results": [],
+      "open_checks": ["Actual recipe write permissions and protected evaluator enforcement", "Full cost matching including proposals and retries", "Candidate lineage, split exposure and independent repeats", "Improver recursion must be checked per recipe"]
+    },
+    "source_doc": "00_RSI_overview.md RSIHub; catalog metadata_only; primary abstract"
   }
 ]

@@ -4,13 +4,14 @@ import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 
 export const root = fileURLToPath(new URL('../', import.meta.url));
-const dataNames = ['method-map.json', 'method-map.csv', 'atlas-methods.json', 'atlas-methods.csv', 'atlas-source-notes.json', 'dynamic-scenes.json', 'family-architectures.json', 'paper-figures.json', 'primary-verification.json', 'delivery-audit.json'];
-const scriptNames = ['build-atlas.mjs', 'build-repo-deepdives.mjs', 'build-family-diagrams.mjs', 'validate-delivery.mjs', 'validate-repo-deepdives.mjs', 'viewer.test.mjs', 'implementation.test.mjs', 'family.test.mjs', 'browser-test-utils.mjs', 'viewer.template.html', 'implementation.template.html', 'family.template.html', 'package.json', 'package-lock.json', 'CORPUS.md'];
+const dataNames = ['method-map.json', 'method-map.csv', 'atlas-methods.json', 'atlas-methods.csv', 'atlas-source-notes.json', 'dynamic-scenes.json', 'family-architectures.json', 'paper-figures.json', 'collection.json', 'research-updates.json', 'focus-methods.json', 'institutions.json', 'ui-translations.json', 'primary-verification.json', 'delivery-audit.json'];
+const scriptNames = ['build-atlas.mjs', 'build-repo-deepdives.mjs', 'build-family-diagrams.mjs', 'build-research-docs.mjs', 'build-project-presentation.mjs', 'validate-delivery.mjs', 'validate-repo-deepdives.mjs', 'viewer.test.mjs', 'implementation.test.mjs', 'family.test.mjs', 'consolidation.test.mjs', 'timeline.test.mjs', 'browser-test-utils.mjs', 'viewer.template.html', 'implementation.template.html', 'family.template.html', 'package.json', 'package-lock.json', 'CORPUS.md'];
 const walk = directory => fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => entry.isDirectory() ? walk(path.join(directory, entry.name)) : [path.join(directory, entry.name)]);
 
 export function publicationFiles() {
   return [
-    ...['README.md', '.gitignore', '.nojekyll', 'THIRD_PARTY_NOTICES.md', 'index.html'].map(name => path.join(root, name)),
+    ...['README.md', 'README.zh-CN.md', 'CONTRIBUTING.md', '.gitignore', '.nojekyll', 'THIRD_PARTY_NOTICES.md', 'index.html'].map(name => path.join(root, name)),
+    ...(fs.existsSync(path.join(root,'.github'))?walk(path.join(root,'.github')):[]),
     ...['docs', 'catalog', 'licenses'].flatMap(name => walk(path.join(root, name))).filter(file => !file.endsWith('.DS_Store')),
     ...walk(path.join(root, 'pics')).filter(file => /\.(?:svg|html|architecture\.json)$/.test(file) && !file.includes('.visual-check.')),
     ...JSON.parse(fs.readFileSync(path.join(root,'data/paper-figures.json'),'utf8')).figures.map(figure=>{
@@ -38,7 +39,7 @@ export function validateDelivery() {
   for (const method of atlas.methods) {
     assert.ok(method.mechanism && method.reading_scope && method.limitations.length, `Incomplete explanation: ${method.id}`);
     assert.ok(Array.isArray(method.limitations)&&method.limitations.every(value=>typeof value==='string'&&value.trim()),`Unrenderable limitations: ${method.id}`);
-    assert.ok(['method', 'benchmark', 'framework', 'theory'].includes(method.kind));
+    assert.ok(['method', 'benchmark', 'framework', 'theory','survey','boundary','announcement'].includes(method.kind));
     assert.equal(method.in_recent_window, method.date >= atlas.window_start && method.date <= atlas.cutoff);
     assert.ok(fs.existsSync(path.join(root, method.chapter)), `Missing explanation: ${method.id}`);
   }
@@ -61,6 +62,12 @@ export function validateDelivery() {
     }
   }
   const files = publicationFiles();
+  const published=new Set(files.map(file=>path.resolve(file)));
+  assert.equal(atlas.source_overview_ids.length,35);
+  for(const id of atlas.source_overview_ids)assert.ok(ids.has(id),`Original overview item missing: ${id}`);
+  const institutionIds=new Set(atlas.institutions.map(entity=>entity.id));
+  assert.equal(institutionIds.size,atlas.institutions.length);
+  for(const method of atlas.methods)for(const id of method.institution_ids)assert.ok(institutionIds.has(id),`Unknown institution ID ${id}`);
   const errors = [];
   let localLinks = 0;
   function checkLink(file, target) {
@@ -73,8 +80,10 @@ export function validateDelivery() {
     const relative = path.relative(root, resolved);
     localLinks++;
     if (relative.startsWith('..') || path.isAbsolute(relative) || !fs.existsSync(resolved)) errors.push(`${path.relative(root, file)}: broken/nonportable link ${target}`);
+    else if(relative==='.local'||relative.startsWith('.local/')||fs.statSync(resolved).isFile()&&!published.has(resolved))errors.push(`${path.relative(root,file)}: link targets unpublished local-only content ${target}`);
   }
   for (const file of files) {
+    assert.ok(!fs.lstatSync(file).isSymbolicLink(),'Public export must not follow symlinks');
     if(file.endsWith('.png')){
       assert.equal(fs.readFileSync(file).subarray(0,8).toString('hex'),'89504e470d0a1a0a','Invalid licensed figure PNG');
       continue;

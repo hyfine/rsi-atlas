@@ -101,47 +101,69 @@
 | TextGrad | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2406.07496) |
 | ADAS / Meta Agent Search | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2408.08435) |
 | AFlow | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2410.10762) |
+| Recurrent Depth | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2502.05171) |
 | SICA | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2504.15228) |
 | TTRL | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2504.16084) |
-| Absolute Zero Reasoner (AZR) | 已嵌入授权原图/明确局部 | [原文](https://arxiv.org/abs/2505.03335) · [所查许可](https://creativecommons.org/licenses/by/4.0/) |
-| Darwin Godel Machine | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2505.22954) |
+| Absolute Zero | 已嵌入授权原图/明确局部 | [原文](https://arxiv.org/abs/2505.03335) · [所查许可](https://creativecommons.org/licenses/by/4.0/) |
+| DGM | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2505.22954) |
 | SEAL | 已嵌入授权原图/明确局部 | [原文](https://arxiv.org/abs/2506.10943) · [所查许可](https://creativecommons.org/licenses/by/4.0/) |
 | AlphaEvolve | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2506.13131) |
 | GEPA | 所查版本未提供再分发许可，仅链接 | [原文](https://arxiv.org/abs/2507.19457) · [所查许可](https://arxiv.org/licenses/nonexclusive-distrib/1.0/) |
+| TRM | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2510.04871) |
+| AgentEvolver | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2511.10395) |
+| Live-SWE-agent | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2511.13646) |
+| Agent0 | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2511.16043) |
+| Self-Improving VLM Judges | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2512.05145) |
+| SAGE | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2512.17102) |
+| MemRL | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2601.03192) |
 | Yunjue Agent | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2601.18226) |
+| MemSkill | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2602.02474) |
 | SAHOO | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2603.06333) |
 | PostTrainBench | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2603.08640) |
 | Hyperagents / DGM-H | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2603.19461) |
+| Meta-TTL | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2604.00830) |
 | SkillMOO | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2604.09297) |
 | GenericAgent | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2604.17091) |
 | COS-PLAY | 已嵌入授权原图/明确局部 | [原文](https://arxiv.org/abs/2604.20987) · [所查许可](https://creativecommons.org/licenses/by/4.0/) |
-| AHE | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2604.25850) |
+| Agentic Harness Engineering (AHE) | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2604.25850) |
 | Skill1 | 所查版本未提供再分发许可，仅链接 | [原文](https://arxiv.org/abs/2605.06130) · [所查许可](https://arxiv.org/licenses/nonexclusive-distrib/1.0/) |
-| RHO | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2606.05922) |
+| RewardHarness | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2605.08703) |
+| Adaptive Auto-Harness | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2606.01770) |
+| Retrospective Harness Optimization (RHO) | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2606.05922) |
+| Bounded Refinement to Research Loops (survey) | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2607.07663) |
 | RSIBench-Data | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2607.25886) |
-| Frontis-MA1 / OpenMLE / OpenRSI | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2607.28568) |
+| Frontis-MA1 | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2607.28568) |
 | Aspire | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2608.31111) |
 | S3Gym | 已嵌入授权原图/明确局部 | [原文](https://arxiv.org/abs/2608.31100) · [所查许可](https://creativecommons.org/licenses/by/4.0/) |
 | HarnessDev | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.01437) |
 | EvoHarnessBench | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.04280) |
 | MetaRSI / RSI2 | 已嵌入授权原图/明确局部 | [原文](https://arxiv.org/abs/2609.06396) · [所查许可](https://creativecommons.org/licenses/by/4.0/) |
-| RSI autonomy roadmap / HCI | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.11873) |
+| The Last AI Built by Humans | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.11873) |
 | Dream-RSI | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.14858) |
+| RSIAgent | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.15364) |
 | SoL-Pi | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.20519) |
+| Designer-RSI | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.22086) |
 | RRSI | 所查版本未提供再分发许可，仅链接 | [原文](https://arxiv.org/abs/2609.24972) · [所查许可](https://arxiv.org/licenses/nonexclusive-distrib/1.0/) |
-| Dynamic Co-Evolution (DCE) + Self-Refined Concise Learning (SRCL) | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.30652) |
+| AIDE² (AIDE2) | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.26457) |
+| On-Policy Distillation RSI (DCE + SRCL) | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.30652) |
 | REUSE: Risk-controlled Evaluation Under Sequential Evolution | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.33180) |
-| AI R&D acceleration scenario and governance | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.36054) |
+| TraceDance | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.33295) |
+| Intelligence-explosion scenario analysis | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.36054) |
 | RSI-Master | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2609.35561) |
-| Harness^2 | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.14224) |
+| Multi-Agent Self-Supervision (MASS) | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.12176) |
+| Evo² | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.13025) |
+| Harness² | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.14224) |
 | AReaL-RSI | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.18083) |
-| R2Orch | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.22740) |
+| SwarmRSI | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.20431) |
+| R²Orch (R2Orch) | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.22740) |
 | CoEvo-RSI | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.25078) |
+| Recursive Flint | 尚未逐图核验，仅链接 | [原文](https://recursive.com/updates/introducing-recursive-flint) |
 | HarnessPro | 已嵌入授权原图/明确局部 | [原文](https://arxiv.org/abs/2610.26770) · [所查许可](https://creativecommons.org/licenses/by/4.0/) |
+| OO-Harness | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.28380) |
 | RSI-Opt | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.32026) |
 | RSIHub | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.32253) |
 | ParetoRSI-Gym | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.34386) |
-| Trustworthy RSI evidence framework | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.35193) |
+| Trustworthy RSI | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2610.35193) |
 | RSI-Dojo / RSI-Craft | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2611.03698) |
 | CogRSI | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2611.01113) |
 | CoworkOS | 尚未逐图核验，仅链接 | [原文](https://arxiv.org/abs/2611.03178) |

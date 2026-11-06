@@ -1,17 +1,17 @@
 {
   "as_of": "2026-11-05",
-  "status": "chapter_written_with_explicit_primary_access_gaps",
-  "scope": "Chinese RSI Atlas chapter; only chapter 05 and this evidence file are owned by this task",
+  "status": "chapter_written_with_complete_overview_link_dispositions_and_explicit_primary_access_gaps",
+  "scope": "Current coverage pass owns chapter 05, this evidence file, project data/recent-methods.json and data/overview-coverage.json; other chapters, overview, main documents, scripts, catalog and download policy remain outside write scope",
   "read_level_policy": "whole_local_note is not whole_primary_article; tool-returned excerpts are recorded as excerpts; discovery pools are not independent corroboration",
   "chapter": "../chapters/05_Surveys_Industry_and_Frontiers.md",
   "date_policy": "first_date is the earliest explicitly verified date for the specified artifact, not necessarily global priority; publication, revision, product release, catalogue addition and snapshot dates are distinct; relative GitHub dates are not converted into absolute dates",
   "verification": {
     "experiments_reproduced": false,
-    "terminal_used": false,
+    "terminal_used": true,
     "execution_agents_used": false,
     "whole_corpus_read": false,
     "source_claims_independently_replicated": false,
-    "method": "read_file, fetch_webpage, apply_patch and get_errors only; source interpretation and editor diagnostics, not runtime reproduction",
+    "method": "Legacy stage used read_file, fetch_webpage, apply_patch and get_errors. Current coverage pass additionally used read-only Node parsing, explicitly authorized text backups, marked link checks and build-method-map.mjs --check; no paper experiment, installation, acquisition or Git operation. See recent_coverage_update for current-pass evidence rather than inheriting legacy primary-reading claims.",
     "html_caveat": "Primary HTML bodies and returned appendices were read as delivered by the fetch tool; some tables, formulas, figures and folded appendix content were abbreviated or unavailable. No claim of page-image completeness."
   },
   "records": [
@@ -1461,7 +1461,7 @@
     {
       "topic": "Requested OpenReview hash",
       "status": "unresolved",
-      "detail": "No proven mapping to CGO1hDTHNe; exact hash retained separately"
+      "detail": "Overview title matches Lee1003-lee companion title and its I3fKQbRUGy forum link, but forum HTML is blocked and exact hash-to-attachment mapping is unverified. CGO1hDTHNe is the differently titled Reliable survey, not a replacement. No PDF requested in the current coverage pass."
     },
     {
       "topic": "AI4AI author-blog DOI",
@@ -1501,7 +1501,7 @@
     "GAIR801 report.pdf unread; exact first release date not established; base weights still described as coming soon",
     "No complete traversal or full reading of all papers linked by seven root catalogues; acquisition inventory is separate and not silently marked complete",
     "Some sources referenced by industry blogs remain discovery leads, including individual negative-result papers;2610.27610 audit and2609.26457 AIDE2 have now been read directly but their underlying corpora have not",
-    "No independent experimental replication, installation, browser rendering, runtime link checker or machine line-count validation performed in this terminal-free role"
+    "No independent experimental replication, installation or browser rendering. The legacy stage was terminal-free; the current pass has separately validated local links, unique headings, catalog identity/date references and complete overview dispositions with read-only Node checks."
   ],
   "strongest_conclusions": [
     "Taxonomies measure different axes and sometimes use incompatible RSI definitions; equal-looking level numbers are not interchangeable",
@@ -1511,5 +1511,808 @@
     "Z.ai explicitly does not claim achieved RSI; Flint model/engine release and801 local-loop pretraining account cannot establish full self-acceleration",
     "MASS role transfer and Harness2 improvement-library ablations are informative but retain role, budget, statistical and fixed-outer-rule limitations",
     "Trustworthy RSI requires capability, constraint preservation and intervention effectiveness measured along the same evolving lineage"
-  ]
+  ],
+  "recent_coverage_update": {
+    "as_of": "2026-11-05",
+    "window": {
+      "start": "2025-11-05",
+      "end": "2026-11-05",
+      "inclusive": true
+    },
+    "source_overview": "../00_RSI_overview.md",
+    "project": "private-evidence/rsi-atlas",
+    "method_mapping": "private-evidence/rsi-atlas/data/recent-methods.json",
+    "complete_url_ledger": "private-evidence/rsi-atlas/data/overview-coverage.json",
+    "backup_directory": "private-evidence/rsi-atlas/data/section-backups/surveys-coverage-20261105-1793874689676",
+    "read_scope": {
+      "local_files_read_completely_before_edit": [
+        "../00_RSI_overview.md",
+        "../chapters/05_Surveys_Industry_and_Frontiers.md",
+        "surveys-evidence.json",
+        "private-evidence/rsi-atlas/data/recent-methods.json"
+      ],
+      "legacy_note_reading_not_repeated": [
+        "../AI4AI-Survey-Deep-Dive.md",
+        "../recursive-self-improvement-survey-guide.md"
+      ],
+      "primary_abstracts": "Complete existing catalog abstracts, first-public date_source and versions for all 35 overview arXiv IDs plus 12 selected additions; catalog is a saved primary-metadata snapshot, not a fresh full-paper fetch.",
+      "primary_bodies": "Only returned portions of official HTML, READMEs, model card and transcript identified in web_reads. No selected paper's body was newly read in this pass.",
+      "legacy_records": "All original records remain as prior-stage evidence. Their full-body claims and performance numbers are not re-labelled as newly read or independently replicated.",
+      "numeric_policy": "New chapter section reports only locally validated coverage counts and source-verified dates, not newly copied benchmark scores. Existing author-reported results remain under their original versions, sections and caveats."
+    },
+    "catalog_snapshot": {
+      "records": 6465,
+      "sha256": "43c6f62fdf48121fb2052ba9a1999884090f05e2a0b5e035dd9e5259141ee109",
+      "date_rule": "Every selected ID already has day precision and a primary date_source; no new date/title/primary_url override inserted into recent-methods.json.",
+      "abstract_version_rule": "Each abstract_version is catalog.resolved_version. Current-version mechanisms are not asserted to have been present in v1. First-public date is not inferred from the version date, identifier month or discovery page."
+    },
+    "coverage": {
+      "overview_unique_urls": 69,
+      "overview_required_arxiv_ids": 35,
+      "overview_mapped_arxiv_ids": 35,
+      "missing_paper_ids": [],
+      "overview_first_public_in_window": 32,
+      "overview_outside_window": [
+        "arxiv:2410.10762",
+        "arxiv:2502.05171",
+        "arxiv:2510.04871"
+      ],
+      "base_map_overlap": [
+        "arxiv:2410.10762",
+        "arxiv:2607.28568",
+        "arxiv:2609.14858"
+      ],
+      "additional_ids_count": 12,
+      "additional_month_counts": {
+        "2025-11": 3,
+        "2025-12": 2,
+        "2026-01": 1,
+        "2026-02": 1,
+        "2026-03": 1,
+        "2026-04": 1,
+        "2026-05": 1,
+        "2026-06": 1,
+        "2026-07": 1
+      },
+      "recent_methods_entries": 47,
+      "recent_methods_first_public_in_window": 44,
+      "deduplicated_map_check_entries": 74,
+      "url_dispositions": {
+        "paper_framework": 11,
+        "paper_method": 16,
+        "survey": 2,
+        "theory": 1,
+        "related_non_rsi": 3,
+        "paper_benchmark": 3,
+        "resource_repository": 20,
+        "unverifiable": 2,
+        "industry_product": 6,
+        "research_companion": 5
+      },
+      "boundary": "Complete overview dispositions, not 69 full-text readings and not all RSI work published in the year. The two blocked manuscript entries remain explicitly unresolved."
+    },
+    "paper_abstract_reads": [
+      {
+        "id": "arxiv:2410.10762",
+        "first_public_date": "2024-10-14",
+        "abstract_version": "v4",
+        "source": "https://export.arxiv.org/api/query?id_list=2410.10762",
+        "primary_url": "https://arxiv.org/abs/2410.10762",
+        "kind": "method",
+        "note": "Historical AFlow; April 2025 revision is not a recent first publication. Date source is the existing catalog's Atom metadata endpoint, kept distinct from the readable abstract page."
+      },
+      {
+        "id": "arxiv:2502.05171",
+        "first_public_date": "2025-02-07",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2502.05171",
+        "kind": "boundary",
+        "note": "Internal recurrent inference computation, not cross-task persistent RSI."
+      },
+      {
+        "id": "arxiv:2510.04871",
+        "first_public_date": "2025-10-06",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2510.04871",
+        "kind": "boundary",
+        "note": "TRM internal recursion; outside the stated window."
+      },
+      {
+        "id": "arxiv:2601.18226",
+        "first_public_date": "2026-01-26",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2601.18226",
+        "kind": "framework",
+        "note": "Yunjue: sequential experience and tool evolution; binary tool feedback does not cover all open-ended truth."
+      },
+      {
+        "id": "arxiv:2604.09297",
+        "first_public_date": "2026-04-10",
+        "abstract_version": "v3",
+        "source": "https://arxiv.org/abs/2604.09297",
+        "kind": "method",
+        "note": "SkillMOO: LLM edits plus NSGA-II Pareto selection of skills; August 5 is revision."
+      },
+      {
+        "id": "arxiv:2604.17091",
+        "first_public_date": "2026-04-18",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2604.17091",
+        "kind": "framework",
+        "note": "GenericAgent: on-demand memory, SOP/code extraction and context density."
+      },
+      {
+        "id": "arxiv:2604.20987",
+        "first_public_date": "2026-04-22",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2604.20987",
+        "kind": "method",
+        "note": "COSPLAY: decision-agent and skill-bank co-evolution, with game-domain limits."
+      },
+      {
+        "id": "arxiv:2604.25850",
+        "first_public_date": "2026-04-28",
+        "abstract_version": "v4",
+        "source": "https://arxiv.org/abs/2604.25850",
+        "kind": "method",
+        "note": "AHE: component, experience and decision observability; May 18 is revision."
+      },
+      {
+        "id": "arxiv:2605.06130",
+        "first_public_date": "2026-05-07",
+        "abstract_version": "v3",
+        "source": "https://arxiv.org/abs/2605.06130",
+        "kind": "method",
+        "note": "Skill1: shared outcome objective for selection, utilization and distillation."
+      },
+      {
+        "id": "arxiv:2606.05922",
+        "first_public_date": "2026-06-04",
+        "abstract_version": "v3",
+        "source": "https://arxiv.org/abs/2606.05922",
+        "kind": "method",
+        "note": "RHO: retrospective task coreset and pairwise self-preference; August 29 is revision."
+      },
+      {
+        "id": "arxiv:2607.28568",
+        "first_public_date": "2026-07-30",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2607.28568",
+        "kind": "framework",
+        "note": "Frontis-MA1/OpenRSI: executable MLE tasks, operator post-training and search; base-map overlap."
+      },
+      {
+        "id": "arxiv:2608.31111",
+        "first_public_date": "2026-08-31",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2608.31111",
+        "kind": "benchmark",
+        "note": "ASPIRE: vague goals and hidden evaluation; not an algorithm."
+      },
+      {
+        "id": "arxiv:2608.31100",
+        "first_public_date": "2026-08-31",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2608.31100",
+        "kind": "benchmark",
+        "note": "S3Gym: self-testing, judging and improvement pathways under held-out execution checks."
+      },
+      {
+        "id": "arxiv:2609.01437",
+        "first_public_date": "2026-09-01",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2609.01437",
+        "kind": "benchmark",
+        "note": "HarnessDev: runnable creation/evolution, held-out evaluation and executor dependence."
+      },
+      {
+        "id": "arxiv:2609.06396",
+        "first_public_date": "2026-09-06",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2609.06396",
+        "kind": "framework",
+        "note": "MetaRSI: composed operators and scheduling; legacy detailed body evidence is v1, not this v2 abstract."
+      },
+      {
+        "id": "arxiv:2609.11873",
+        "first_public_date": "2026-09-10",
+        "abstract_version": "v3",
+        "source": "https://arxiv.org/abs/2609.11873",
+        "kind": "survey",
+        "note": "Responsibility roadmap and preliminary cases, not an algorithm or ranking."
+      },
+      {
+        "id": "arxiv:2609.14858",
+        "first_public_date": "2026-09-14",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2609.14858",
+        "kind": "method",
+        "note": "Dream-RSI: discovery-tree replay for exploration policy; base agent unchanged; base-map overlap."
+      },
+      {
+        "id": "arxiv:2609.15364",
+        "first_public_date": "2026-09-14",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2609.15364",
+        "kind": "framework",
+        "note": "RSIAgent: broad/deep environment exploration and frozen downstream memory."
+      },
+      {
+        "id": "arxiv:2609.20519",
+        "first_public_date": "2026-09-17",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2609.20519",
+        "kind": "method",
+        "note": "SoL-Pi: retained efficient mechanisms; overview abstract and legacy body record remain distinguishable."
+      },
+      {
+        "id": "arxiv:2609.22086",
+        "first_public_date": "2026-09-18",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2609.22086",
+        "kind": "method",
+        "note": "Designer-RSI: procedural memory widening/deepening under matched replay and noisy grading."
+      },
+      {
+        "id": "arxiv:2609.24972",
+        "first_public_date": "2026-09-21",
+        "abstract_version": "v3",
+        "source": "https://arxiv.org/abs/2609.24972",
+        "kind": "method",
+        "note": "RRSI: regularized proposer and critic/pruner selection, not monotonicity guarantee."
+      },
+      {
+        "id": "arxiv:2609.26457",
+        "first_public_date": "2026-09-22",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2609.26457",
+        "kind": "method",
+        "note": "AIDE2: accepted code rewrites; legacy ignition body evidence kept separately."
+      },
+      {
+        "id": "arxiv:2609.30652",
+        "first_public_date": "2026-09-25",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2609.30652",
+        "kind": "method",
+        "note": "DCE + SRCL: privileged teacher evolves and verified concise responses train student; ground truth remains supervision."
+      },
+      {
+        "id": "arxiv:2609.35561",
+        "first_public_date": "2026-09-28",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2609.35561",
+        "kind": "framework",
+        "note": "RSI-Master: Experiment OS plus worker/reviewer DAG; protocol-dependent outcomes."
+      },
+      {
+        "id": "arxiv:2609.36054",
+        "first_public_date": "2026-09-28",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2609.36054",
+        "kind": "theory",
+        "note": "Intelligence-explosion scenario and policy analysis, not a measured recursive algorithm."
+      },
+      {
+        "id": "arxiv:2610.12176",
+        "first_public_date": "2026-10-08",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2610.12176",
+        "kind": "method",
+        "note": "MASS: workflow evolution/shared SFT; October 12 announcement remains a separate date."
+      },
+      {
+        "id": "arxiv:2610.18083",
+        "first_public_date": "2026-10-13",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2610.18083",
+        "kind": "framework",
+        "note": "AReaL-RSI: persistent team and conditional memory; overview 20226 is an explicit user typo."
+      },
+      {
+        "id": "arxiv:2610.20431",
+        "first_public_date": "2026-10-14",
+        "abstract_version": "v3",
+        "source": "https://arxiv.org/abs/2610.20431",
+        "kind": "framework",
+        "note": "SwarmRSI: feedback-guided mutation/complementary recombination; November 2 revision not first date."
+      },
+      {
+        "id": "arxiv:2610.22740",
+        "first_public_date": "2026-10-15",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2610.22740",
+        "kind": "method",
+        "note": "Current R2Orch title differs from overview alias Orch; self-play, internalization and controlled withdrawal."
+      },
+      {
+        "id": "arxiv:2610.25078",
+        "first_public_date": "2026-10-18",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2610.25078",
+        "kind": "framework",
+        "note": "CoEvo-RSI: bidirectional model/harness inheritance and adaptation; components need cross-frozen attribution."
+      },
+      {
+        "id": "arxiv:2610.26770",
+        "first_public_date": "2026-10-19",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2610.26770",
+        "kind": "method",
+        "note": "HarnessPro: self-generated tests and cost/performance selection; independent truth not established."
+      },
+      {
+        "id": "arxiv:2610.32253",
+        "first_public_date": "2026-10-23",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2610.32253",
+        "kind": "framework",
+        "note": "RSIHub: shared recipes/operators/evaluation/lineage; held-out transfer not automatic."
+      },
+      {
+        "id": "arxiv:2610.35193",
+        "first_public_date": "2026-10-26",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2610.35193",
+        "kind": "survey",
+        "note": "Trustworthy RSI operational definition, risks and evidence responsibilities; not a new algorithm."
+      },
+      {
+        "id": "arxiv:2611.01113",
+        "first_public_date": "2026-10-31",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2611.01113",
+        "kind": "method",
+        "note": "CogRSI: learned principles can improve accuracy and still fail executable rule audits; submission date overrides ID prefix."
+      },
+      {
+        "id": "arxiv:2611.03178",
+        "first_public_date": "2026-11-02",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2611.03178",
+        "kind": "framework",
+        "note": "CoworkOS: persistent runtime and delegation, with post-training case rather than demonstrated runtime self-evolution."
+      },
+      {
+        "id": "arxiv:2511.10395",
+        "first_public_date": "2025-11-13",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2511.10395",
+        "kind": "framework",
+        "note": "AgentEvolver: self-questioning, experience-guided navigation and contribution-based reward; preliminary evidence."
+      },
+      {
+        "id": "arxiv:2511.13646",
+        "first_public_date": "2025-11-17",
+        "abstract_version": "v3",
+        "source": "https://arxiv.org/abs/2511.13646",
+        "kind": "method",
+        "note": "Live-SWE-agent: on-the-fly scaffold modification; cross-task persistence not established from abstract."
+      },
+      {
+        "id": "arxiv:2511.16043",
+        "first_public_date": "2025-11-20",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2511.16043",
+        "kind": "method",
+        "note": "Agent0: tool-integrated curriculum/executor co-evolution; zero data is not zero prior knowledge or environment."
+      },
+      {
+        "id": "arxiv:2512.05145",
+        "first_public_date": "2025-12-02",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2512.05145",
+        "kind": "method",
+        "note": "VLM judge self-training on synthetic quality levels and filtered reasoning; expected levels are not independent truth."
+      },
+      {
+        "id": "arxiv:2512.17102",
+        "first_public_date": "2025-12-18",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2512.17102",
+        "kind": "method",
+        "note": "SAGE: sequential rollout carries skills across tasks; skill-integrated reward complements outcomes; expert-experience SFT starting point retained."
+      },
+      {
+        "id": "arxiv:2601.03192",
+        "first_public_date": "2026-01-06",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2601.03192",
+        "kind": "method",
+        "note": "MemRL: utility learning over episodic memory and two-phase retrieval, no model-weight update."
+      },
+      {
+        "id": "arxiv:2602.02474",
+        "first_public_date": "2026-02-02",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2602.02474",
+        "kind": "method",
+        "note": "MemSkill: learned controller and designer-evolved memory operations; designer-improvement causality not established by abstract."
+      },
+      {
+        "id": "arxiv:2603.06333",
+        "first_public_date": "2026-03-06",
+        "abstract_version": "v1",
+        "source": "https://arxiv.org/abs/2603.06333",
+        "kind": "framework",
+        "note": "SAHOO: drift, constraints and regression-risk checks; finite calibration/task scope is not long-term alignment guarantee."
+      },
+      {
+        "id": "arxiv:2604.00830",
+        "first_public_date": "2026-04-01",
+        "abstract_version": "v4",
+        "source": "https://arxiv.org/abs/2604.00830",
+        "kind": "method",
+        "note": "Meta-TTL: inner sequential-episode TTL and outer reflective meta-training with balanced improvement score; fixed outer process remains distinct."
+      },
+      {
+        "id": "arxiv:2605.08703",
+        "first_public_date": "2026-05-09",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2605.08703",
+        "kind": "framework",
+        "note": "RewardHarness: preference-grounded context/tool/skill evolution for reward scoring; training-free scorer is not annotation-free."
+      },
+      {
+        "id": "arxiv:2606.01770",
+        "first_public_date": "2026-06-01",
+        "abstract_version": "v3",
+        "source": "https://arxiv.org/abs/2606.01770",
+        "kind": "framework",
+        "note": "Adaptive Auto-Harness: persistent workspace separate from deployment, continued revision under drift; accumulation alone insufficient."
+      },
+      {
+        "id": "arxiv:2607.07663",
+        "first_public_date": "2026-07-08",
+        "abstract_version": "v2",
+        "source": "https://arxiv.org/abs/2607.07663",
+        "kind": "survey",
+        "note": "Bounded-to-research survey, separate evaluator design space; qualitative verification hierarchy not a universal measured law."
+      }
+    ],
+    "additional_selection": {
+      "limit": 12,
+      "criterion": "Distinct mechanisms and earlier publication months, rather than selecting another cluster of October papers. All twelve already exist in catalog; arXiv IDs used to avoid counting DOI aliases twice.",
+      "ids": [
+        "arxiv:2511.10395",
+        "arxiv:2511.13646",
+        "arxiv:2511.16043",
+        "arxiv:2512.05145",
+        "arxiv:2512.17102",
+        "arxiv:2601.03192",
+        "arxiv:2602.02474",
+        "arxiv:2603.06333",
+        "arxiv:2604.00830",
+        "arxiv:2605.08703",
+        "arxiv:2606.01770",
+        "arxiv:2607.07663"
+      ],
+      "window_coverage_not_exhaustiveness": "Three November and two December entries, plus one in each month January-July. No claim every recent RSI paper has been found or read; complete required-overview coverage is the checkable guarantee."
+    },
+    "web_reads": [
+      {
+        "id": "coverage-hf-query",
+        "url": "https://huggingface.co/papers/date/2026-11-05?q=recursive+self-improvement",
+        "read_level": "search_page_discovery_only",
+        "sections_read": [
+          "Returned paper cards and abstracts"
+        ],
+        "observed_paper_ids": [
+          "arxiv:2603.06333",
+          "arxiv:2607.07663",
+          "arxiv:2607.28568"
+        ],
+        "mechanism": "Discovery of SAHOO and bounded-to-research survey; Frontis already in required overview.",
+        "date": null,
+        "limitations": [
+          "Date in search path is not publication date",
+          "HF card dates were not used instead of catalog.date_source",
+          "No claim returned cards exhaust the field"
+        ]
+      },
+      {
+        "id": "coverage-flint-announcement",
+        "url": "https://recursive.com/updates/introducing-recursive-flint",
+        "read_level": "primary_html_partial",
+        "sections_read": [
+          "Introducing Flint",
+          "How we built Flint with automated research",
+          "Running Flint",
+          "What's next",
+          "Visible heading date and page metadata",
+          "Evaluation setup footnotes"
+        ],
+        "mechanism": "Company attributes model-stack research to Eureka proposals, implementations, experiments and reuse; concrete release is model and inference engine.",
+        "date": null,
+        "observed_dates": {
+          "visible": "2026-10-18",
+          "metadata_published": "2026-11-02",
+          "overview_annotation": "2026-10-21"
+        },
+        "limitations": [
+          "Dates are conflicting artifact observations, not inferred paper first publication",
+          "Future stronger-model feedback into Eureka is a stated bet",
+          "Model/engine availability does not establish Eureka release or paired improver gains",
+          "Short-context speed and prefill-excluded plots not promoted to universal performance claims"
+        ]
+      },
+      {
+        "id": "coverage-flint-model-card",
+        "url": "https://huggingface.co/RecursiveSI/flint",
+        "read_level": "primary_html_partial",
+        "sections_read": [
+          "Introduction and repository contents",
+          "Evaluation",
+          "Model specifications",
+          "Training",
+          "Limitations and responsible use",
+          "License and reporting"
+        ],
+        "mechanism": "Card documents checkpoint, configuration, tokenizer, chat template and serving kit; evaluations depend on harness, retrieval treatment, precision and runtime.",
+        "date": null,
+        "limitations": [
+          "No day-level release established from returned model card",
+          "No weights, serving code or container executed",
+          "Architecture capacity in announcement differs in scope from actual documented card configuration",
+          "Weight license and hosted API terms remain separate",
+          "No Eureka implementation or full research-loop reproduction established"
+        ]
+      },
+      {
+        "id": "coverage-glm-infrastructure",
+        "url": "https://z.ai/blog/glm-built-its-inference-infrastructure",
+        "read_level": "primary_html_partial",
+        "sections_read": [
+          "Opening RSI limitation",
+          "From End-to-End Metrics to Attributable Feedback",
+          "Correctness Feedback",
+          "System Behavior Feedback",
+          "Performance Feedback",
+          "Let Feedback Drive Action, and Experiments Test Hypotheses"
+        ],
+        "mechanism": "Human-defined objectives/constraints plus agent hypotheses and code changes; local numerical tests, concurrency traces and end-to-end gates; reusable optimization skeletons carry applicability and evidence.",
+        "page_display_date": "2026-09-17",
+        "date_kind": "explicit_official_article_label_not_paper_first_date",
+        "limitations": [
+          "Author explicitly says recursive self-improvement has not yet been reached",
+          "Engineering outcomes are company reports, not independent replication",
+          "Humans retain objectives, boundaries, numerical/concurrency and production-risk review",
+          "Linked FLA PR not audited in this coverage pass"
+        ]
+      },
+      {
+        "id": "coverage-gair-801",
+        "url": "https://github.com/GAIR-NLP/801-30B",
+        "read_level": "primary_html_partial",
+        "version": "visible commit 8b5dc7dc50abf1b896afa8e0488dc081006e243b",
+        "sections_read": [
+          "Why RSI Is Different in Pre-training",
+          "Three Types of Loops, Six Practical Loops",
+          "Context Infrastructure paragraph",
+          "Results comparison caveats",
+          "Release",
+          "Citation"
+        ],
+        "mechanism": "Cheap rerunnable debugging, headroom and experience-to-metric loops within a single pretraining run; cross-team evidence and negative results persist in shared context.",
+        "date": null,
+        "limitations": [
+          "README explicitly says an unrepeated full run cannot close an end-to-end loop",
+          "Relative yesterday not used for first date",
+          "Only README read; report PDF was not requested",
+          "Base weights still coming soon; Tiny-SFT dataset and report links visible",
+          "Tiny-SFT versus fully post-trained comparisons are not like-for-like",
+          "Combined recipe/data/diagnosis changes do not isolate agent causal contribution"
+        ]
+      },
+      {
+        "id": "coverage-reef",
+        "url": "https://github.com/Human-Agent-Society/reef",
+        "read_level": "primary_html_partial",
+        "version": "visible commit 76e384037cb86b17c4d4f082e1b27c2210861746",
+        "sections_read": [
+          "Infrastructure for continually self-improving agents",
+          "How it works",
+          "Weight-training deployment",
+          "Harness-evolving deployment",
+          "Recipes and examples",
+          "Architecture",
+          "Citation"
+        ],
+        "mechanism": "Serve/Observe/Grow/Commit associates feedback with interaction receipts, derives samples, proposes training or harness updates and publishes candidates accepted by configured evaluation/selection.",
+        "date": null,
+        "limitations": [
+          "Infrastructure and recipe interfaces do not prove sustained gains or improving the updater",
+          "No install, Git LFS initialization, clone, weight fetch or examples run",
+          "Relative dates not converted into release day",
+          "Benchmark result links not opened or adopted as verified results"
+        ]
+      },
+      {
+        "id": "coverage-seed-self-developing",
+        "url": "https://self-developing-agents.github.io/",
+        "read_level": "primary_html_partial",
+        "sections_read": [
+          "Three questions for self-evolving agents",
+          "Where self-evolution breaks",
+          "Three gaps break the loop",
+          "Evidence boundary notes",
+          "Which changes should persist",
+          "Our research goal"
+        ],
+        "paper_ids": [
+          "arxiv:2608.31111",
+          "arxiv:2608.31100",
+          "arxiv:2609.01437"
+        ],
+        "mechanism": "Companion diagnostics separate target operationalization, experience integration and harness generalization/fixed-executor evolution; code-declared state mechanisms can remain inactive at runtime.",
+        "page_display_date": "2026-09-01",
+        "date_kind": "ByteDance Seed and TokenWave project-page label; not either August paper's first date",
+        "limitations": [
+          "Returned chart text not converted into new quantitative chapter claims",
+          "Descriptive matched comparisons are not isolated prompt-only causal effects",
+          "Memory rankings depend on normalization; parameter study separate from context methods",
+          "Benchmark failures do not establish their causal mechanism without further controls",
+          "No benchmark execution or full paper-body reading"
+        ]
+      },
+      {
+        "id": "coverage-openreview-candidate",
+        "requested_pdf_url": "https://openreview.net/pdf/31dec7fbd91569b094bab29e73f62a44cf28094c.pdf",
+        "overview_title": "Towards AI That Improves Itself: A Survey of Recursive Self-Improvement",
+        "author_companion_url": "https://github.com/Lee1003-lee/Awesome-RSI-Research",
+        "author_companion_version": "visible commit 27512254db318eea140c4bb0e9b1a1a60d9bfa61",
+        "candidate_forum_url": "https://openreview.net/forum?id=I3fKQbRUGy",
+        "read_level": "author_readme_partial_and_forum_access_blocked; pdf_not_requested",
+        "sections_read": [
+          "README title and introductory definition",
+          "Paper hyperlink",
+          "RSI Framework",
+          "Taxonomy is not certification",
+          "Forum browser-verification response"
+        ],
+        "mechanism": "Companion distinguishes accepted-state inheritance from the stronger improver-progress claim.",
+        "date": null,
+        "identity_status": "exact_hash_to_forum_unresolved",
+        "limitations": [
+          "Matching title and author link do not prove exact PDF bytes or attachment identity",
+          "Forum HTML returned verification; no login or bypass attempted",
+          "Overview September 28 annotation not promoted to a primary date",
+          "CGO1hDTHNe / Diving into Reliable Self-Evolving Agents is a different survey, not a substitute",
+          "Previous exact-PDF attempt remains a legacy record, not a current request"
+        ]
+      },
+      {
+        "id": "coverage-ai4ai-publication",
+        "url": "https://www.preprints.org/manuscript/202608.2108",
+        "read_level": "access_blocked_no_primary_manuscript_text",
+        "sections_read": [
+          "Akamai protection response only"
+        ],
+        "date": null,
+        "legacy_companion_records": [
+          "survey-ai4ai",
+          "discovery-kaiwu5"
+        ],
+        "limitations": [
+          "No PDF requested",
+          "No new body-reading or publication-day claim",
+          "URL month is not a day-level date",
+          "Prior author-site and EVIDENCE audit remain lower-scope legacy sources, not fresh manuscript reading",
+          "Legacy live-catalogue denominator conflict not recomputed"
+        ]
+      },
+      {
+        "id": "coverage-sequoia",
+        "url": "https://sequoiacap.com/podcast/continual-learning-how-ai-agents-get-better-with-every-use",
+        "read_level": "primary_html_partial",
+        "sections_read": [
+          "Transcript on traceability and model spec",
+          "Production-distribution replay and real-harness evaluation",
+          "Model/harness/context update routing",
+          "Delayed feedback examples",
+          "Privacy and episodic-memory Q&A",
+          "Page publication metadata"
+        ],
+        "page_publication_date": "2026-11-04",
+        "date_source_detail": "returned published metadata: Nov 4, 2026, 7:38 PM UTC",
+        "mechanism": "Trajectory product/research thesis: retain complete traces, derive specifications/rewards and route updates to weights, harness or context by relevance.",
+        "limitations": [
+          "Interview and beta-product claims, not a controlled learning-curve experiment",
+          "Publisher Sequoia is not experimental method author",
+          "Synthetic customer-distribution data is not a demonstrated privacy or consent guarantee",
+          "Audio/video not fetched; some transcript excerpts truncated by page tool"
+        ]
+      }
+    ],
+    "not_reverified_web_entries": "Other overview repositories/project pages have explicit per-URL dispositions in overview-coverage.json, using overview-link-only or named legacy records. Checking HTTP-cache presence was not counted as reading its body. No directory, cache, clone or download status is treated as close reading.",
+    "date_corrections": [
+      {
+        "subject": "AReaL-RSI",
+        "overview": "20226.10.13",
+        "status": "user_typo",
+        "verified_first_public": "2026-10-13",
+        "source": "https://arxiv.org/abs/2610.18083",
+        "original_overview_edited": false
+      },
+      {
+        "subject": "AFlow",
+        "first_public": "2024-10-14",
+        "v4_revision": "2025-04-15",
+        "interpretation": "Historical method outside window, not a recent new paper."
+      },
+      {
+        "subject": "CogRSI",
+        "id": "arxiv:2611.01113",
+        "first_public": "2026-10-31",
+        "interpretation": "Use stored primary submission history, not identifier month."
+      },
+      {
+        "subject": "MASS",
+        "paper_first_public": "2026-10-08",
+        "legacy_official_announcement": "2026-10-12",
+        "interpretation": "Both dates retained for different artifacts."
+      },
+      {
+        "subject": "RHO, SkillMOO, AHE, SwarmRSI",
+        "revision_dates": [
+          "2026-08-29",
+          "2026-08-05",
+          "2026-05-18",
+          "2026-11-02"
+        ],
+        "interpretation": "Do not replace the first-public dates in paper_abstract_reads."
+      },
+      {
+        "subject": "Orch",
+        "current_title_alias": "R2Orch v2",
+        "first_public": "2026-10-15",
+        "revision": "2026-10-22",
+        "interpretation": "Overview alias retained; version scope explicit."
+      },
+      {
+        "subject": "Flint",
+        "visible_date": "2026-10-18",
+        "metadata_date": "2026-11-02",
+        "overview_date": "2026-10-21",
+        "interpretation": "Conflict preserved; no single first-public day synthesized."
+      },
+      {
+        "subject": "GAIR, Reef, AI4AI manuscript and exact OpenReview PDF",
+        "first_public_date": null,
+        "interpretation": "No newly verified day; relative dates, URL months and overview annotations not substituted."
+      }
+    ],
+    "validation_results": {
+      "required_mapping": "Passed independent JSON parse and 35/35 arXiv set comparison; missing IDs empty; TRM and Recurrent Depth boundary assertions passed.",
+      "supplement_budget": "Passed: 12 non-overview IDs, all existing catalog entries with complete abstracts, primary date_source and day precision inside the window.",
+      "url_coverage": "Passed: marked code masking plus existing extractLinks/paperIdentity recovered exactly 69 unique overview URLs; one ledger row per URL; 35 first dates and resolved versions match catalog.",
+      "markdown_regression": "Passed a fenced-code fixture containing namespace[\"method\"](\"https://example.invalid/in-code\"); only real prose paper link was extracted.",
+      "chapter_integrity": "Passed: one primary heading, one new section 11, 47 arXiv IDs via marked tokens, 8 local links with zero missing targets; sections 2, 4, 5, 7 and 8 byte-equal to text backup.",
+      "validator_correction": "Initial chapter counter included candidate OpenReview forum as a 48th paper. Corrected validation to count only arXiv identities from marked links; forum remains unresolved, not promoted to selected papers. Bare-URL fallback can merge adjacent Markdown links, so chapter link checks use marked tokens.",
+      "build_command": "node private-evidence/rsi-atlas/scripts/build-method-map.mjs --check",
+      "build_result": {
+        "checked": 74,
+        "retained_pdfs": 27,
+        "link_only_extensions": 47,
+        "recent_methods": 44,
+        "unique_ids": true,
+        "exact_dates": true,
+        "downloads": "paused"
+      },
+      "no_full_text_or_experiment_claim": true
+    },
+    "permissions_and_storage": {
+      "pdf_downloads": 0,
+      "model_weight_downloads": 0,
+      "repository_clones": 0,
+      "execution_subagents": 0,
+      "git_operations": 0,
+      "catalog_modified": false,
+      "download_policy_modified": false,
+      "credentials_modified": false,
+      "download_policy_baseline_sha256": "1875353d3ed814eb79f8ed3d957e4567248d844aa8e1a83b8f6ebb85a34c3cd1",
+      "backup_policy": "Only three existing owned UTF-8 text files copied to the explicitly authorized section-backups directory before first edit. No PDF or cache tree copied.",
+      "build_invocation": "--check only; no generated main document, timeline, diagram, mirror or script write"
+    }
+  }
 }

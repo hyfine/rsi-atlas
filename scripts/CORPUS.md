@@ -2,6 +2,8 @@
 
 The public repository ships an offline atlas builder and validator, not the historical acquisition pipeline. Corpus scripts, HTTP logs, snapshots, downloads, source clones, and operational backups remain private and are excluded from Git. The Markdown catalog is a broad, metadata-only discovery index, not a verified set of RSI algorithms.
 
+The single-source migration archived these original tools and outputs under the ignored local area. Historical paths below describe the earlier pipeline, not active public inputs or a second maintained notebook tree.
+
 ## Commands
 
 From the project directory:
@@ -9,7 +11,7 @@ From the project directory:
 ```sh
 node scripts/build-atlas.mjs
 node scripts/validate-delivery.mjs
-node --test scripts/viewer.test.mjs
+node --test scripts/*.test.mjs
 ```
 
 The historical download policy is paused. Twenty-seven foundational and representative papers were retained privately; public entries link to primary sources. This is a storage decision, not a claim of full-text review. No public build downloads PDFs or executes research code.
@@ -50,7 +52,7 @@ Validation checks PDF magic, minimum 4096 bytes, a final EOF marker, and SHA256.
 - `data/links.json`, `parsed-sources.json`, and `source-manifest.json`: provenance.
 - `data/legacy-pdf-mapping.json`: original PDFs preserved, exact-hash mappings only.
 - `data/runs.jsonl` and `data/logs`: execution and HTTP evidence.
-- `catalog/`: paginated full Markdown catalog, mirrored to local RSI documentation.
+- `catalog/`: paginated full Markdown catalog; any former notebook copy is now an immutable local archive, not a maintained mirror.
 - Local PDFs: private paper storage; never in this public project.
 
 The root ignore rules exclude historical outputs. Do not run acquisition commands from this public checkout: their implementations and required inputs are intentionally absent. Published JSON consists of curated method notes, primary verification, dynamics, and delivery evidence. Original full-text review records and catalog metadata have separate denominators.

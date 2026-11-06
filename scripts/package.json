@@ -5,7 +5,7 @@
   "scripts": {
     "build": "node build-atlas.mjs",
     "validate": "node validate-delivery.mjs",
-    "test": "node --test viewer.test.mjs implementation.test.mjs family.test.mjs"
+    "test": "node --test *.test.mjs"
   },
   "engines": {
     "node": ">=22"

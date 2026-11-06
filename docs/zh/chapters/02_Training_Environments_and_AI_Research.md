@@ -1,6 +1,6 @@
 # 训练、环境与 AI 研究：递归发生在何处
 
-> 整合说明：本章继承此前作者的版本化阅读与审计记录，不表示本次监督重新阅读全文。先前笔记原稿不公开，链接指向[来源说明](../Reading_Notes_Provenance.md)。本次直接核验新增内容另见[近期研究](../06_Latest_Year_Research.md)。
+> 阅读范围说明：本章保留专题作者截至 2026-11-05 的版本化阅读与审计记录；正文中的“本次／本轮”指该来源记录，不表示本次公开同步重新精读论文或独立复现。私有笔记原稿不公开，见[来源说明](../Reading_Notes_Provenance.md)；日期、近期入口与未决来源见[近期研究](../06_Latest_Year_Research.md)。
 
 [返回 RSI 技术全景](../01_RSI_Technical_Panorama.md) · [方法地图与时间线](../03_Method_Map_and_Timeline.md)
 
@@ -42,6 +42,7 @@ S_{t+1}=\operatorname{Accept}_{J_{\mathrm{ext}}}(S_t,\widehat S_{t+1}).
 $$
 
 $B_t$ 是预算向量，包含推理、训练、候选执行与验证成本；$J_{\mathrm{ext}}$ 是预先约定的外部验收协议。接受规则可能回滚候选，不能默认为每次更新都算进步。
+$t$ 是外层迭代编号，$\widehat S_{t+1}$ 是候选状态，$\operatorname{Accept}$ 是依据外部协议选择旧状态或候选状态的规则。这里的验收表示本章建议的分析接口，不是声称每篇论文都实现独立确认集。
 
 如果只有 $\theta_t$ 变化，应先报告权重适应；如果新 $\theta_{t+1}$ 生成下一批训练任务，可讨论 L2；只有当改进机制 $U_t$ 的变化及其后续使用有证据时，才讨论 L3。
 
@@ -64,15 +65,9 @@ $B_t$ 是预算向量，包含推理、训练、候选执行与验证成本；$J
 [交互架构](../../../pics/family-a-architecture.html) · [六家族说明](../08_Family_Architectures.md)。把可用反馈转成跨轮保留的模型能力；关键是参数或训练配方真的变化，而不是本次答案被修改。 这是家族级原创架构；下方流程图是代表方法或参考协议，二者不互相替代。
 <!-- family-a-architecture:end -->
 
-<!-- paper-figure-seal:start -->
-![SEAL 原论文 Figure 1](../../../pics/papers/seal-v1-fig1.png)
-
-原论文 Figure 1（v1），[作者原文及图注](https://arxiv.org/html/2506.10943v1#S1.F1)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。Zweiger, Adam；Pari, Jyothish；Guo, Han；Akyürek, Ekin；Kim, Yoon；Agrawal, Pulkit。裁取原论文 HTML 图形区域并转换为 PNG，未重绘或改写图内内容；完整图注另见原文。自编辑生成、内层参数适应和下游评价连接成外层学习环；不把每种模型训练方法都等同于 SEAL。
-<!-- paper-figure-seal:end -->
-
 ![A 家族模型与训练参考闭环](../../../pics/family-a-flow.svg)
 
-[A 家族动态图与 repository 入口](../../../index.html?scene=selftrain#loops)。图是本家族的分析性参考闭环，用来区分生成、反馈、参数更新和下一轮使用；其中的独立验收、冻结评测或回滚是审计建议，不表示本章每篇论文都实现了这些步骤，也不表示各仓库具有相同接口。
+[A 家族动态图与 repository 入口](../../../pics/family-a-flow.html)。图是本家族的分析性参考闭环，用来区分生成、反馈、参数更新和下一轮使用；其中的独立验收、冻结评测或回滚是审计建议，不表示本章每篇论文都实现了这些步骤，也不表示各仓库具有相同接口。
 
 | 要素 | 最低要求 | 不能省略的归因问题 |
 |---|---|---|
@@ -132,7 +127,11 @@ $$
 对照应同时看固定规模人工数据、同量自生成数据和更强教师重写的数据；最后一种是额外教师蒸馏，不应并入“纯自举”结果。
 其[官方代码与数据](https://github.com/yizhongw/self-instruct)可核查生成流水线；原始 API 模型和微调服务的历史可用性仍限制今天的逐项复现。
 
-### 2.3 ReST-EM：把采样与优化解耦
+### 2.3 ReST 与 ReST-EM：把采样与优化解耦
+
+原始 [ReST，v2 §3、算法 1](https://arxiv.org/html/2308.08998v2#S3) 有两个不同频率的循环：Grow 从当前策略为给定输入生成多份输出；Improve 对这批输出评分、过滤并离线训练，可在不重新生成的情况下提高阈值、重复更新，然后才再次 Grow。给定输入 $x$ 与候选 $y$，过滤条件为 $R(x,y)>\tau$，其中 $R$ 是奖励模型，$\tau$ 是本次 Improve 的阈值。原始数据仍混入生成池，内层策略从前一个策略继续微调；数据复用摊薄了生成成本，但没有使训练和评分免费。
+
+[§4、§6 与附录 A.4](https://arxiv.org/html/2308.08998v2#S4) 的主要实证是机器翻译，采用学习得到的、无需参考译文的 Metric X 奖励模型，而非数学答案的二元验证器。论文比较离线损失、Grow/Improve 次数、Best-of-N 和 PPO；报告的奖励模型排名与人工偏好排名并不一致，重复 Grow 可能越来越迎合奖励模型。因此“验证集奖励持续提高”不能直接写为“人类评价持续提高”。比较应同时控制生成量、离线更新量、奖励模型和推理候选数，不把复用数据等同于全系统等算力。
 
 [Beyond Human Data: Scaling Self-Training for Problem-Solving with Language Models](https://arxiv.org/abs/2312.06585) 将方法命名为 ReST-EM；不要与原始 ReST 的具体训练调度混淆。
 [§3](https://arxiv.org/html/2312.06585v4#S3) 的 E-step 在给定题目上采样，并用二元奖励筛选；M-step 对保留响应做监督训练，随后重新生成。
@@ -187,6 +186,68 @@ R1 正式流水线还包括冷启动、推理 RL、拒绝采样生成 SFT 数据
 R1-Zero 的直接 RL 子过程主要是 A/L1；R1 的模型输出回流为训练数据可形成有界 L2 连接，但训练配方仍由研究者定义。
 可验证任务的提升也不能外推到无确定答案的科研品味、目标形成或长期自治；[论文 §5](https://arxiv.org/html/2501.12948v1#S5) 另列一般能力和工程任务上的限制。
 
+### 2.7 SEAL：奖励的是“编辑后学会多少”，不是编辑文本看起来多好
+
+<!-- paper-figure-seal:start -->
+![SEAL 原论文 Figure 1](../../../pics/papers/seal-v1-fig1.png)
+
+原论文 Figure 1（v1），[作者原文及图注](https://arxiv.org/html/2506.10943v1#S1.F1)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。Zweiger, Adam；Pari, Jyothish；Guo, Han；Akyürek, Ekin；Kim, Yoon；Agrawal, Pulkit。裁取原论文 HTML 图形区域并转换为 PNG，未重绘或改写图内内容；完整图注另见原文。自编辑生成、内层参数适应和下游评价连接成外层学习环；不把每种模型训练方法都等同于 SEAL。
+<!-- paper-figure-seal:end -->
+
+[Self-Adapting Language Models / SEAL](https://arxiv.org/abs/2506.10943) 首次提交于 2025-06-12；采用 2025-09-18 的 [v2 §3–5](https://arxiv.org/html/2506.10943v2#S3)。它把数据生成与参数适应嵌套起来：模型读取新上下文，生成 self-edit，内层以该编辑提供的数据或工具配置做 SFT，外层用**更新后的模型**在对应任务上的表现训练编辑生成策略。知识任务的编辑是可学习的推论或重述；few-shot 任务的编辑还可指定预定义数据增强、学习率和训练设置。
+
+必要输入不只是一段无标签文本，还包括基座、允许调用的更新工具、每次适应预算，以及训练编辑策略时与上下文配对的评测问题和答案。以下是对原式 (1)–(4) 的本文分析性重记：
+
+$$
+	heta'(e)=\operatorname{SFT}(\theta,e),\qquad
+J_{\mathrm{edit}}(\theta)=\mathbb E_{(C,\tau)\sim\mathcal D,\,e\sim\pi_\theta(\cdot\mid C)}[R(\theta'(e),\tau)].
+$$
+
+$\theta$ 是编辑生成前的模型参数，$C$ 是新上下文，$\tau$ 是配对下游评测，$\mathcal D$ 是这类配对的训练集合，$e$ 是生成的编辑，$\pi_\theta$ 是编辑生成分布，$\theta'(e)$ 是内层适应结果，$R$ 是适应后的评测奖励，$J_{\mathrm{edit}}$ 是期望奖励。实际外层采用 ReST-EM 式筛选行为克隆，并对依赖当前参数的奖励停止梯度，不是穿过全部内层训练做端到端元梯度。模型改变后，旧 self-edit 的收益也可能改变，所以论文强调在当前模型上重新生成并评估。
+
+```text
+for context, training_evaluation in adaptation_tasks:
+	edits = current_model.generate_self_edits(context)
+	for edit in edits:
+		adapted = inner_sft(copy_of_current_model, edit)
+		reward[edit] = evaluate(adapted, training_evaluation)
+	retained = select_by_domain_protocol(edits, reward)
+	current_model = reinforce_edit_generation(current_model, retained)
+```
+
+伪代码是本文归纳。各候选内层适应分开评估，不能把它们误写成全部合并到同一条连续知识更新链；知识实验附录 B.2 按多 seed 平均后的最佳编辑筛选，也不等同于笼统保留全部正奖励样本。跨时间保留知识的连续编辑是另一个实验，§5 报告仍有灾难性遗忘。
+
+| 作者报告的结果 | 版本、基准与预算 | 解释边界 |
+|---|---|---|
+| 单段知识吸收：原文训练 33.5%，未训练编辑生成器的合成数据 39.7%，SEAL 47.0% | [v2 §4.2、表 2；附录 B.2/B.4/B.5](https://arxiv.org/html/2506.10943v2#S4.SS2)；Qwen2.5-7B；200 段、974 道 no-context SQuAD 问题；外层两轮，每轮 50 段、每段五编辑、各三 seed；每轮 750 次内层更新，约六小时、两张 H100 | 测的是更新后不带原文的问答，不是无外部文本学习；GPT-4.1 同时用于答案评分，完整成本不只包含模型训练 |
+| ARC 子集：未训练编辑策略 20%，SEAL 72.5% | [v2 §4.1、表 1；附录 A.1–A.4](https://arxiv.org/html/2506.10943v2#S4.SS1)；Llama-3.2-1B-Instruct；训练 11 题、每题 15 编辑；八个预筛选保留任务各五编辑，共 40 配置；剔除超过 375 训练步的配置 | 分母是配置，不是完整 ARC；题目已按基座能否在合适 TTT 配置下解决筛选；单 GPU 类型为 A100/H100/H200 之一，不是统一硬件总成本对照 |
+
+SEAL 改变了 A，也训练了如何构造 B 与局部更新指令；但工具集合、外层训练规则和目标仍由人规定。它比只按文本表面质量筛选更接近“测量实际学习收益”，同时付出每个编辑都需训练及评测的开销。[§5](https://arxiv.org/html/2506.10943v2#S5) 明确指出显式下游监督限制了向无标签语料扩展；不能将这些有限适应实验写成无监督无限自改进。
+
+### 2.8 TTT-Discover：为当前发现任务训练，不以通用后继模型为交付物
+
+[Learning to Discover at Test Time / TTT-Discover](https://arxiv.org/abs/2601.16175) 首次提交于 2026-01-22；采用 2026-02-05 的 [v2 §2–3](https://arxiv.org/html/2601.16175v2#S3)。它与 Dream-RSI 的关键区别是确实用当前任务的执行结果更新策略适配器。必要输入是单个问题描述、初始策略、候选解或空起点、有效性检查和连续奖励；经验档案保存已有解，PUCT 式状态复用决定从哪条解继续生成，新的执行结果既更新档案又形成在线训练信号。
+
+目标不是所有输出的平均质量，而是在有限发现预算内得到一个最优候选。§3.2 的 entropic objective 对高奖励结果做指数倾斜，按初始状态自适应控制权重集中程度；附录 A.1 的 KL 预算约束的是这种样本重加权，不能误读为每次实际神经网络更新都获得相同强度的全局保证。状态复用使用子结果的最大分数并保留探索奖励，不是只沿当前最高分路径贪心修改。
+
+[§3.3、§4、§4.5](https://arxiv.org/html/2601.16175v2#S3.SS3) 报告 gpt-oss-120b、rank-32 LoRA、50 次训练更新、每次 512 rollouts；正文据此与 Best-of-25,600 和同采样量的 OpenEvolve 比较，并分别冻结训练或状态复用做消融。生成次数相同仍不等于总成本相同，OpenEvolve 还受到长提示截断影响。约 500 美元是作者基于特定平均输入/输出长度估算的 Tinker 费用，不包含所有候选执行、硬件评测和研究成本。HTML 图 4 图注的总样本数多写了一个零，与正文和乘积不一致，本章采用 §3.3/§4 的明示预算，不据错误图注扩大预算。
+
+论文明确目标是解决这个问题而不是向其他问题泛化；数学构造、内核运行时、竞赛隐藏测试和单细胞去噪分别需要不同验证。部分领域得到新结果并不等于所有尝试都突破旧纪录，§4.1 对未突破的情形也有报告。§6 将稀疏、二元和不可验证奖励列为后续方向。这是任务内 A 与经验档案回流的证据，不是已经产生通用、持续更强的自主研究者。[作者代码](https://github.com/test-time-training/discover)在本次未执行。
+
+### 2.9 从 OPSD 到 DCE：特权上下文与教师刷新是两个设计轴
+
+[Self-Distilled Reasoner: On-Policy Self-Distillation for Large Language Models](https://arxiv.org/abs/2601.18734v1) 的 v1 提交于 2026-01-26。本节读历史初版 [§3–4、§7、§8.1](https://arxiv.org/html/2601.18734v1#S4.SS1)，用于解释本章 §6.1 的前驱，不声称已核验三月后的全部修订。学生只看问题并生成自己的前缀；同基座的教师分支另看参考解，在这些相同前缀上给出下一 token 分布；逐 token 散度只对学生分支回传梯度。数据仍需要经验证的题解，教师自身也必须足以理解参考解。
+
+需要把概念与配置分开：§3 用共享模型的两种条件分布形式化，§4.1 的实际实验明确把教师固定为**初始策略**以稳定训练。原始配置默认采用完整词表的 JSD，而九月 DCE/SRCL 论文主要采用 Forward KL 并刷新教师；“on-policy”首先指轨迹由当前学生产生，不自动意味着教师同步更新。完整 logits 与只在采样 token 上给 log-ratio 信号也不是同一种损失或显存开销。
+
+原始 [§4.2、图 3，§8.1 表 5–6](https://arxiv.org/html/2601.18734v1#S4.SS2) 的 4–8 倍效率表述指特定 Qwen3-4B 对照中的生成 token 预算：OPSD 每题一条 rollout、训练生成上限 2,048；GRPO 每题八条、图 3 上限 16,384。其评测使用 thinking、Average@16 和 38,912 输出上限，训练为八张 A100、LoRA。它不能与九月论文非 thinking、Average@12、32K 的主表直接相减，更不能把抽样效率等同于总 FLOPs 节约。九月论文中的 OPSD 数值是该文自身协议的基线，而不是这里原论文表 2 的数字。
+
+### 2.10 分类边界：TRM 与 recurrent depth 的递归主要发生在一次推理内
+
+原 overview 中的 [TRM / Less is More，v1](https://arxiv.org/abs/2510.04871v1) 和 [Recurrent Depth，v2](https://arxiv.org/abs/2502.05171v2) 本次只读原始摘要与 submission history，未精读方法或复核其基准数字。摘要分别研究小网络的递归推理，以及通过重复 recurrent block 增加潜在空间计算；这与本章的跨轮持久改进是不同轴。
+
+本文可用 $h_{j+1}=f_\theta(x,h_j)$ 示意网络内迭代：$x$ 是当前输入，$h_j$ 是第 $j$ 次迭代的隐状态，$f_\theta$ 是参数为 $\theta$ 的共享计算模块。该式是分析示意，不是两篇论文的原公式。即使更深迭代改善当前答案，也没有据此证明跨任务更新了权重、训练分布、评价器或改进程序。架构可以通过常规训练获得能力，也可能被未来 RSI 系统采用；**仅有 recurrent depth、重复前向或 recursive 名称，不能直接计为 RSI**。两条记录以边界资料单列，不混入本章机制时间线。
+
 ## 3. B 家族：数据、任务与环境，谁产生下一轮挑战
 
 ### 3.0 核心机制、必要输入与分析性目标
@@ -199,7 +260,7 @@ R1-Zero 的直接 RL 子过程主要是 A/L1；R1 的模型输出回流为训练
 
 ![B 家族数据、任务与环境参考闭环](../../../pics/family-b-flow.svg)
 
-[B 家族动态图与 repository 入口](../../../index.html?scene=selfplay#loops)。图是本家族的分析性参考闭环，不是所有论文共同实现的流水线；独立盲测、回滚、反作弊和数据隔离节点表示建议的审计边界，不能据图声称某方法已经完成这些验证。
+[B 家族动态图与 repository 入口](../../../pics/family-b-flow.html)。图是本家族的分析性参考闭环，不是所有论文共同实现的流水线；独立盲测、回滚、反作弊和数据隔离节点表示建议的审计边界，不能据图声称某方法已经完成这些验证。
 
 B 的持久状态可以是筛选后的数据池、带来源的任务档案、课程采样权重、生成器参数或环境程序。只有它改变了后续训练或探索的实际分布，才构成持久回流；一次对话临时出题不够。生成器可以是固定模型，学习者也可以不更新权重，所以 B 不必伴随 A。
 
@@ -238,6 +299,22 @@ for round in generation_budget:
 [§5](https://arxiv.org/html/1901.01753v3#S5) 明确承认环境参数上界和固定身体限制；“open-ended”在这里是研究方向与有限实验性质，不是已证明无限增长。
 POET 提供 B 与 A 的有界 L2 例子，也提醒 LLM 训练研究：只保留当前最强策略可能丢掉未来有用的多样性。
 
+#### 3.1.1 PAIRED：找“另一个策略能做、当前策略还不会”的环境
+
+[PAIRED，v2 §3–4](https://arxiv.org/html/2012.02096v2#S4) 的输入是人定义但参数尚未指定的环境族。环境 adversary 产生障碍、目标位置或外力等参数；protagonist 是要训练的学习者，antagonist 提供该环境可达到的回报参照。生成器追求两者的 regret 差，而非单纯让 protagonist 失败，从而减少把课程推向双方都做不到的区域。
+
+将 §4 的有限采样近似改记为：
+
+$$
+\widehat r_{\mathrm{adv}}(e)=\max_{\xi\in\mathcal T_A(e)}G(\xi)-\frac{1}{|\mathcal T_P(e)|}\sum_{\xi\in\mathcal T_P(e)}G(\xi).
+$$
+
+$e$ 是一次生成的环境参数配置，$\mathcal T_A(e)$ 与 $\mathcal T_P(e)$ 是 antagonist 和 protagonist 在同一配置中的非空轨迹集合，$\xi$ 是轨迹，$G(\xi)$ 是其折扣回报，$\widehat r_{\mathrm{adv}}$ 是环境生成器的样本奖励。它是“已采到的最佳对手”减“学习者均值”，不是已知全局最优策略减当前策略；双方都失败时的零差也不能证明环境不可解。
+
+算法顺序为生成环境、两策略分别 rollout、估计 regret、更新生成器与求解策略，再生成下一批环境。持久变化包含 B 的生成分布与 A 的策略；三方优化程序仍固定。§4 的 minimax-regret 理论需要 Nash 均衡及对手与生成器的联合最佳响应，不能推出有限 PPO 训练必然收敛或每个样本都有可解性证明。
+
+[§5.1 与附录 E/F](https://arxiv.org/html/2012.02096v2#S5.SS1) 比较随机环境、minimax、群体 minimax 和 PAIRED，并在未用于训练的手工迷宫测试迁移；共享超参数按相同搜索方式调优，但没有据此证明三方训练与两方基线总算力完全相等。群体 minimax 只是作者在导航域对 POET 的近似参照，不是原版 POET 的直接复现。复杂度实验与迁移实验采用的 agent 奖励和选参规则也不同，不能把所有消融拼成一条单调曲线。[作者实现入口](https://github.com/google-research/google-research/tree/master/social_rl/)由论文直接给出，本次未运行。
+
 ### 3.2 Absolute Zero：任务分布也由学习者产生
 
 <!-- paper-figure-absolute-zero:start -->
@@ -260,7 +337,7 @@ r_{\mathrm{propose}}(\tau)=
 \end{cases}
 $$
 
-$\hat p_{\mathrm{solve}}$ 是有限 solver 采样的成功比例；它奖励仍可偶尔解出的困难任务，不是直接测量训练后的真实泛化增益。
+$\tau$ 是 proposer 产生的候选任务，$r_{\mathrm{propose}}$ 是该任务的提案奖励，$\hat p_{\mathrm{solve}}$ 是有限 solver 采样的成功比例；它奖励仍可偶尔解出的困难任务，不是直接测量训练后的真实泛化增益。
 有限采样的全失败不能证明任务不可解，全成功也不能证明没有任何学习价值；这个奖励只是可计算课程信号。
 任务格式、确定性检查、执行权限和资源边界仍由实现者规定，代码执行环境不能因为“可验证”就被当成安全沙箱证明。
 “零外部数据”应限于该自博弈后训练阶段不用人工策划任务集，不能抹去预训练基座、提示模板、任务模式与初始化先验。
@@ -278,6 +355,7 @@ AZR 的 A↔B 回流比固定题库 RL 更明显，但环境语义和训练机�
 | R1-Zero | 任务内推理与响应 | 任务分布、答案或测试 | 无前置 SFT 不等于无数据 |
 | AZR | 课程任务与解答 | 预训练知识、程序语义、验证器 | 后训练零数据不等于从零知识起步 |
 | POET | 环境参数与配对策略 | 环境编码、奖励与优化器 | 有界多样化不等于无限开放式增长 |
+| PAIRED | 面向当前学习者的环境分布 | 未指定参数的环境族、可执行反馈与对手策略 | 样本 regret 不是全局可解性证明 |
 
 共同的检查不是“有没有循环”，而是新任务是否可验证、是否覆盖新能力、是否比固定课程在同预算下更有价值。
 真正扩展训练分布应同时报告成功任务覆盖、失败类型、生成任务退化率与独立目标分布表现，而非只展示越来越复杂的字符串或代码。
@@ -320,6 +398,35 @@ $$
 “最多 162 倍更少调用”来自与使用不同 backbone 的 SimpleTES 的比较，不能替代上表同 backbone 的固定探索对照。发现调用不包含全部策略开发、回放、提示和基础模型成本。§5 的全历史与仅当前历史对照也使用不同调用量，不能据此认定纯历史容量的等算力因果收益。
 
 核心局限是回放支持集：策略只能重排已发生的结果，不能知道从未探索的候选会怎样；在线顺序变化还可能改变基础 agent 的上下文和生成分布。这是本章根据 §3 接口提出的外推风险，不是假称论文给出了无偏离线估计证明。该方法确实把可修改的探索控制器接回在线执行，但固定外层开发者与评分器的边界仍在；更完整的 D/F 归因见[技能与 Harness](03_Agent_Skills_and_Harness.md)和[元 RSI、评测与安全](04_Meta_RSI_Evaluation_and_Safety.md)。[作者仓库](https://github.com/zhengkid/Dream-RSI)仅作实现入口，本次未运行。
+
+### 3.5 RSIAgent：目标相关课程生成，最终冻结的是记忆
+
+[RSIAgent](https://arxiv.org/abs/2609.15364) 首次提交于 2026-09-14；采用 2026-09-18 的 [v2 §2–4、§7–10](https://arxiv.org/html/2609.15364v2#S3)。它明确不更新模型参数：B 是 curriculum agent 生成的练习分布，C 是 actor 写入的持久知识、程序与失败经验，D 是固定的 actor–verifier 执行框架。把 broad-then-deep 类比为预训练/后训练，只是阶段组织的类比，不应变成“模型经历了两阶段训练”的事实陈述。
+
+必要输入是目标 query、可重置软件环境、可执行动作、固定角色模型、初始记忆和停止协议。BRS 并行开展不同方向的练习，每波共享不可变的起始记忆；verifier 检查真实产物后，原 actor 上下文按顺序整合到最新记忆，避免并行覆盖。DRS 先尝试**目标本身**，再围绕失败、隐含条件或不确定成功生成顺序练习；必要时重置环境后重试目标。最终冻结记忆、禁用 curriculum 与宿主写回，重新执行目标并由官方 evaluator 评分，见 [§8.2–8.3](https://arxiv.org/html/2609.15364v2#S8.SS3)。
+
+局部 verifier 看不到 actor 的私有推理和记忆，但共享模型先验仍可能造成相关错误。失败经验也可进入记忆，只是不能被记录为成功；因果叙述需保留证据范围，不能把一次 PASS 当成可靠因果发现。§4.6 的实际失败包括不完整验证将缺失信息错误固化为可重复使用规则。
+
+| 作者报告的变化 | v2 协议和分母 | 不能直接推出的结论 |
+|---|---|---|
+| OSWorld partial：71.97% → 78.98%；binary：37.80% → 42.68% | [§4.2、§10.1–10.4](https://arxiv.org/html/2609.15364v2#S10.SS4)；0808 offline 的 82 任务，41 个已报告非诊断 RSI 结果替换原分，其余保留基线；基础设施失败按约计零 | 不是全部 82 任务各自完成同预算 RSI 的平均效应，也不是未知目标上的零样本迁移 |
+| ALE partial：83.75% → 84.82%；binary：49.25% → 50.75% | 同上；67 个 Near-term 任务，19 个 RSI 栏结果与 48 个基线分组合；包含更正评分、特定迁移和 no-BRS 变体 | 不是统一协议对外部排行榜的比较；partial 的领先不代表 binary 也领先 |
+
+[§4.1、§10.2](https://arxiv.org/html/2609.15364v2#S10.SS2) 的参考配置为 GLM-5.3 actor、分上下文的 Kimi-K3 verifier/curriculum。BRS 名义预算八项目、最多四并发，但只在整波完成后检查，实际可超过八；DRS 由课程判断停止。单次目标执行的十小时 watchdog **不是整条探索谱系十小时上限**。选择未满分任务、历史重试、不同停止策略和额外练习计算都要计入比较。
+
+§10.5 的四任务阶段消融来自已观察到改善的探索队列，单阶段与完整 RSI 的重复数及练习预算不同，不能当作普遍且等成本的“先广后深必胜”证明。可保留的结论是：环境内主动练习、验证和记忆回用能改善部分目标执行；权重递归、严格新任务泛化与长期无退化仍未建立。实现入口为[作者仓库](https://github.com/AetherLabsAI/RSIAgent)，记忆工程详见[技能与 Harness](03_Agent_Skills_and_Harness.md)。
+
+### 3.6 RLVE：人工定义环境族，课程难度随学习者移动
+
+[RLVE](https://arxiv.org/abs/2511.07317) 首次提交于 2025-11-10；采用 2026-06-06 的 [v2 §2–4](https://arxiv.org/html/2511.07317v2#S2)。环境由输入模板、程序化题目生成器和算法验证器组成；模型答题、环境验答案，而不允许模型直接调用环境的求解程序。持续变化的是每个环境的难度窗口和模型策略，不是模型自动写出新环境语义：RLVE-Gym 的 400 个环境由作者人工工程化。
+
+核心步骤是均匀选环境、在该环境当前难度窗口采样题目、执行策略 rollout 并验证、累积最高难度层的正确率；样本足够且达到掌握阈值后，将难度上界提高并滑动下界，再继续训练。每个环境维护独立统计，检查后重置计数。§2.3 使用 DAPO，对同题全部回报相同的组做动态过滤；课程尽量在生成之前减少过易或过难样本，过滤则在生成之后丢弃无相对信号的组，二者不能混为同一操作。
+
+[§4.1–4.2](https://arxiv.org/html/2511.07317v2#S4.SS1) 的静态/自适应难度对照与环境数量扩展试验分别回答“课程是否匹配能力”和“任务族覆盖是否重要”，并保留未见环境评估。不要将 §5 全部环境上的训练与 §4 排除保留环境的训练混写为一个实验。
+
+作者在 [v2 §5.1、图 6，附录 C/D](https://arxiv.org/html/2511.07317v2#S5.SS1) 报告：从 ProRL-1.5B-v2 出发，RLVE 约用 1,100 H100 GPU-hours 在六项推理基准汇总中改善 3.37 个百分点，而继续原 ProRL 数据训练约用 3,600 GPU-hours 改善 0.49 个百分点。范围含 AIME 2024/2025、OMEGA-500、OlympiadBench、LiveCodeBench v6 与 BBEH；各自采用不同采样指标，不能把这个均值当统一题集准确率。对照更换了训练来源，也不包含人工环境开发成本，因此不是“只改难度控制器”的单变量等算力实验。
+
+[§7](https://arxiv.org/html/2511.07317v2#S7) 将可靠的自动环境工程和不可验证任务扩展留作未来工作。问题实例可持续生成，不等于任务族无限创新；难度级别没有预设上限，也不证明有限模型会一直学会更高一级。它是晚 2025 的 B→A 课程适应参照，连接 POET/PAIRED 的能力匹配思想与 LLM 的可验证 RL，不应被改写成“全自动环境自造”。
 
 ## 4. OpenRSI：把可执行搜索经验接回训练
 
@@ -413,13 +520,14 @@ Agent 接收宽泛能力目标，自选数据、训练方案与内部验证；�
 ### 5.2 回滚是选择机制，不是能力保证
 
 依照 [§3.3](https://arxiv.org/html/2608.31111v1#S3.SS3)，候选的原始变化是 $\Delta_{\mathrm{raw}}=\hat s(M')-\hat s(M_0)$；不合格或未超过基线的候选被回滚。
+$M'$ 是候选模型，$M_0$ 是本轮基线，$\hat s$ 是同一固定评价协议给出的估计分数，$\Delta_{\mathrm{raw}}$ 是回滚之前的分数变化。
 因此在同一评分记录上，保留变化非负是接受规则的性质，并不保证新的随机种子、另一批题目或其他能力也不退化。
 还要区分最佳已评分候选、满足完成规则的候选、正式提交候选与回滚后模型；这些分母不同。
 
 | 协议 | 关键证据 | 条件与出处 | 不能推出什么 |
 |---|---|---|---|
 | Final-only | 24 次终局运行中 3 次高于各自 base，其余 21 次回滚 | [§4.3；附录 C.3、表 4](https://arxiv.org/html/2608.31111v1#S4.SS3)；Qwen3.5-4B/9B Self、六目标、每组合两次运行、每次至多 40 训练 GPU-hours；只提交一个终局 checkpoint | 不能据此比较未知中间 checkpoint，也不能声称全程单调退化 |
-| Adaptive-feedback | 30 个配置–目标单元中 28 个可评测、21 个合格、1 个留存改进 | [§4.3、图 7；附录 C.4](https://arxiv.org/html/2608.31111v1#S4.SS3)；每单元一次运行；两个 Self 与三个外部决策配置；在同一隐藏目标切片上有限查询 | 唯一留存增益不是独立确认集上的复现结果 |
+| Adaptive-feedback | 30 个配置–目标单元中 28 个可评测、21 个合格、1 个留存改进 | [§4.3、图 7；附录 C.4/C.6](https://arxiv.org/html/2608.31111v1#S4.SS3)；每单元一次运行、40 训练 GPU-hours 及十小时墙钟上限；两个 Self 与三个外部决策配置；在同一隐藏目标切片上有限查询 | 唯一留存增益不是独立确认集上的复现结果 |
 
 隐藏题目但返回聚合分，只阻断内容直读，不能消除适应性选择：分数仍会指导下一次数据、训练与停止决策。
 论文的 OOD 是相对 agent 训练数据与自建验证数据的操作性定义，不保证与基座预训练分布不相交。
@@ -442,7 +550,7 @@ Agent 联合生成动作和即时奖励估计 $s_i$，环境另计算真值 $r_i
 | 局部判断与下次增益的相关为 −0.010 与 −0.018 | [§6.2，表 6](https://arxiv.org/html/2608.31100v1#S6.SS2)；分别为事件一致性、负校准误差与后续严格模式分数变化的块级相关；七模型、七游戏、两种上下文路径 | 观察相关，既不是判断无用的因果证明，也不代表所有环境 |
 | 参数更新在 PvZ 从初始 23 降至 6，所有 19 个更新 checkpoint 都未恢复 | [§6.1，图 7](https://arxiv.org/html/2608.31100v1#S6.SS1)；Qwen3-8B 单独的二十 checkpoint 研究；严格配置，推理时不用历史或摘要 | 负迁移原因未被识别；与上下文方法不是匹配训练成本的对照 |
 
-正面积指标可概括为 $\mathrm{AUC}^{+}=\int\max(0,y(b)-y(0))\,\mathrm db$，其中 $b$ 是实验采用的探索或训练进度，不同实验的横轴不能混用。
+正面积指标可概括为 $\mathrm{AUC}^{+}=\int\max(0,y(b)-y(0))\,\mathrm db$，其中 $b$ 是实验采用的探索或训练进度，$y(b)$ 是该进度的严格评测分数，$y(0)$ 是初始分数，$\mathrm{AUC}^{+}$ 只积累高于基线的面积；不同实验的横轴不能混用。
 正面积丢弃低于基线的部分，不能单独表示稳定性；应同时报告负面积、终局变化和全程均值。
 不同游戏的原始面积量纲不同；用 NABA 或游戏内排序会改变汇总结论，须公开归一化规则而不是只报“哪个路径获胜”。
 论文与 [项目页的证据边界](https://self-developing-agents.github.io/#evidence) 支持“没有跨环境一致的经验路径赢家”，不支持“所有摘要都有效”或“参数训练必然更好”。
@@ -541,11 +649,81 @@ Director 学习构造 agent graph，Workers 固定；Proposer 从候选任务中
 [§4.2，式 (8)](https://arxiv.org/html/2610.22740v2#S4.SS2) 定义 $\ell_{\mathrm{rec}}(x)=4p_-(1-p_-)$，其中 $p_-$ 是隐藏待测技能后的成功概率。
 这个量偏好有成功也有失败的任务，避免只在“有技能时容易、撤除后全错”的任务上训练；实际 proposer 奖励另有收缩估计、失败惩罚和成本修正。
 [§4.3，式 (11)](https://arxiv.org/html/2610.22740v2#S4.SS3) 在同任务组内随机决定部分 rollout 看见技能，比较 $z_x=\bar y_{\mathrm{visible}}-\bar y_{\mathrm{hidden}}$，再累积技能版本的后验效应。
+$x$ 是当前任务，两个 $\bar y$ 分别是技能可见组与隐藏组的平均成功结果，$z_x$ 是该组内的样本差；它不同于跨代训练效果。
 撤除依据是预计正向收益已足够小，而非总体成功率越过任意阈值；技能更新后需新谱系，旧证据不能无条件混合。
 这给 A、B、C、D 的 L2 耦合提供具体机制，但技能撤除规则本身仍是人设计的固定程序。
 初始技能按数据集人工定制，任务也来自既有训练池；“zero-skill deployment”不是“zero-data training”。
 理论依赖小信赖域、受控策略与上下文；[附录 A.2](https://arxiv.org/html/2610.22740v2#A1.SS2) 进一步区分结果方差与编排者可控制的方差，随机 Workers 的输出波动不必然是可学收益。
 随机组内对照能识别当时任务上的平均技能效应，但跨轮分布漂移和技能交互仍会影响外推；不能把局部后验门槛当作终身无退化保证。
+
+### 6.6 Skill1：一个终局信号，三段可训练行为
+
+[Skill1](https://arxiv.org/abs/2605.06130) 首次提交于 2026-05-07；采用 2026-05-12 的 [v3 §3](https://arxiv.org/html/2605.06130v3#S3)。它的主要耦合是 A 的统一策略与 C 的持久技能库，不是自动生成全新环境。固定环境和任务划分提供终局成败；同一策略生成检索 query、重排技能、带技能执行，再从轨迹提炼策略和适用情境。冻结的向量编码器只负责候选召回，query 和重排本身可学习；库从空库开始，成功轨迹的新技能才允许入库。
+
+按 [§3.2，式 (5)、(7)](https://arxiv.org/html/2605.06130v3#S3.SS2)，采用原记号的关键更新是：
+
+$$
+U(s)\leftarrow(1-\alpha)U(s)+\alpha r(\tau_i),\quad s\in\mathcal B_{K,i},\qquad
+R_i^{\mathrm{distill}}=r(\tau_i)-\max_{s\in\mathcal B_{K,i}}U(s).
+$$
+
+$i$ 表示 rollout，$\tau_i$ 是完整轨迹，$r(\tau_i)\in\{0,1\}$ 为终局结果，$s$ 为技能，$\mathcal B_{K,i}$ 为召回的 $K$ 个技能，$U(s)$ 是滑动效用，$\alpha$ 是 EMA 更新率，$R_i^{\mathrm{distill}}$ 为提炼奖励。上述涉及最大值的表达适用于有召回候选的情形；空库启动需按实现处理，不能对空集合直接取最大值。这里“低频”指历史滑动趋势，“高频”指当前结果的残差，不是额外的神经频域模块。
+
+有两处归因尤其重要。第一，式 (5) 更新**所有召回候选**，不只更新最终采用的技能；共同召回只提供相关性，不能证明每个技能都造成了当前成功。第二，式 (7) 没有真的插入新技能后在未来任务做反事实测量，它只是未来价值的代理。query 与行动按任务结果学习；重排按效用排序的 NDCG 使用 REINFORCE 式更新，不能因论文总称 GRPO 就把重排也写成同组相对优势；技能提炼的 GRPO 优势另行归一化，见 §3.3。
+
+作者在 [v3 §4.1–4.2、表 1](https://arxiv.org/html/2605.06130v3#S4.SS2) 报告：Qwen2.5-7B-Instruct 的 ALFWorld 平均成功率为 97.5%，复现的 RetroAgent 为 94.9%；WebShop 成功率为 82.9% 对 82.3%，不能把 WebShop 的 Score 列当成功率。Skill1 结果平均三次运行，训练每任务 16 rollouts；附录 C 报八张 H800-80GB、约 100–150 steps、ALFWorld 约三十小时，技能库最多 5,000 条。主表多数其他基线借用既有论文，只有对应复现与预算证据充分的行才适合做严格机制比较。
+
+[§4.3.1](https://arxiv.org/html/2605.06130v3#S4.SS3.SSS1) 的同基座、同训练预算消融更接近“选择和提炼是否有用”的问题；但不能把共享信号的代理量上涨当作独立技能质量真值。附录 C 的“150 epochs”与同附录“100–150 steps”口径未解释一致，表 6 的 UCB/greedy 与正文学习式重排接口也需代码核对；本章不擅自统一。§5 仅验证两类文本环境，未证明视觉任务迁移。技能结构与使用层面的讨论交叉见[技能与 Harness](03_Agent_Skills_and_Harness.md)；[作者代码](https://github.com/AlphaLab-USTC/Skill1)仅作入口，未执行。
+
+### 6.7 COSPLAY：策略适配器与可验证技能契约共同更新
+
+[COSPLAY / COS-PLAY](https://arxiv.org/abs/2604.20987) 的 [v1 §3–4](https://arxiv.org/html/2604.20987v1#S4) 把长期技能保存为含前提、计划、成功/中止条件和预期状态变化的契约。决策 agent 按当前意图检索或延续技能并执行原子动作；技能库 agent 从轨迹提出边界、分段标注、聚合状态谓词变化，并在证据支持后细化、实体化、合并、拆分或淘汰技能。不是看到一次高分轨迹就把全文永久塞入库。
+
+从 A/B 角度，必要输入是文本化游戏状态、可执行动作、环境反馈、初始策略与技能更新规则。循环是“当前决策策略生成轨迹 → 技能管线整理和验证 → 更新技能库与适配器 → 新策略使用新库”；持续变化包括 A 的适配器、B 的轨迹池及 C 的技能库。主实验的两种 agent 使用共享冷启动模型，但有五个分功能 LoRA：决策侧的行动与检索，以及技能侧的分段、契约与维护，见 [§4.3](https://arxiv.org/html/2604.20987v1#S4.SS3)。不能描述为只改外部记忆、权重完全冻结。
+
+与 Skill1 不同，[附录 F](https://arxiv.org/html/2604.20987v1#A6) 的奖励不是一个终局成败信号的统一分解：行动奖励合并环境进展、技能契约满足的 shaping 与切换成本；检索侧考虑完成、效率和中止；技能侧另外衡量分段一致性、契约效果的支持率与维护决策质量。观察状态变化支持的契约也不是形式化程序规格，更不能自动解释为因果效果。
+
+作者在 [v1 §5.1、表 1 图注](https://arxiv.org/html/2604.20987v1#S5.SS1) 报告单人游戏相对 GPT-5.4 平均奖励改善 25.1%。范围是四个单人游戏、每个 16 次评测 rollout；另两项多人任务分别报 Avalon 胜率和 Diplomacy supply centers，不能把六环境合成“胜率提高 25.1%”。预算与外部信息包括 Qwen3-8B、每游戏由 GPT-5.4 生成 60 条冷启动轨迹、最多 25 次共演化迭代、八张 A100；多人训练与评测按 §5/附录 A 分别使用 GPT-5-mini 与 GPT-5.4 对手。这里不是无教师、等总算力的大小模型比较。
+
+这次 HTML 提取缺少主表数值单元，25.1% 仅作为可定位的作者正文报告，不独立重算。更有归因价值的是 §5.2 的无技能、固定初始库、固定最终库和完整共演化比较，以及附录 E 的分功能/合并 LoRA 对照。仍需核实两处版本内部差异：§4.3 将检索奖励写为 episode 末结算，附录 F.1 写为技能切换时；§5/附录 A 的外部训练对手与附录 H 的全体同模型 self-play 描述不一致。文本状态摘要会丢失视觉和时间信息，跨游戏有效不等于任意新环境零样本迁移。更完整的技能机制见[技能与 Harness](03_Agent_Skills_and_Harness.md)；[作者仓库](https://github.com/wuxiyang1996/COS-PLAY)未运行。
+
+### 6.8 MASS：把多智能体工作流的执行经验蒸馏给下一轮改进者
+
+[Recursive Self-Improvement through Multi-Agent Self-Supervision / MASS，v1](https://arxiv.org/abs/2610.12176) 首次提交于 2026-10-08。[§2–3、附录 A/B](https://arxiv.org/html/2610.12176v1#S3) 中，同代的执行者、工作流优化者和评价者共用同一模型；内层先冻结权重，修改描述角色、调用次序与输出契约的 workflow prompt，并比较执行后的工作区。选定工作流再生成多个轨迹，模型自行做两两比较，Bradley–Terry 排序筛选训练与验证轨迹；SFT 后的模型接管下一轮三种角色。固定的 qwen-code 工具及运行框架没有随 workflow prompt 一起改写。
+
+它需要初始模型、明确的研究任务、可执行工具和产物、工作流约束、成对评价提示、轨迹采样与 SFT 预算。训练任务本身由外部模型生成，不是所有外部信息都已撤除；环内同源监督也不等于三个独立知识来源。不同角色和信息流可暴露互补视角，但不能保证纠正同源错误。
+
+```text
+model = initial_model
+for generation in mass_cycles:
+	workflows = self_optimize_workflows(model, training_tasks)
+	traces = execute_many(model, workflows)
+	ranked = self_judge_and_rank_workspaces(model, traces)
+	train_traces, validation_traces = split_ranked_traces(ranked)
+	targets = remove_orchestrator_workflow_and_mask_nonassistant_tokens(train_traces)
+	model = sft_then_select_by_validation_loss(model, targets, validation_traces)
+	executor = optimizer = evaluator = model
+```
+
+这是本文对算法 1–3 的伪代码简写。原方法 §3 的 SFT 目标是带掩码的逐窗口似然：
+
+$$
+\mathcal L_{\mathrm{SFT}}(\theta)=-\mathbb E_{z\sim q}\left[\frac{\sum_{\ell=1}^{|z|}\mu_\ell\log p_\theta(z_\ell\mid z_{<\ell})}{\sum_{\ell=1}^{|z|}\mu_\ell}\right].
+$$
+
+$\theta$ 是共享模型参数，$z$ 是含至少一个监督 token 的训练窗口，$q$ 是窗口采样分布，$\ell$ 是 token 位置，$p_\theta$ 是下一 token 分布，$\mu_\ell\in\{0,1\}$ 标记 assistant 监督目标，$\mathcal L_{\mathrm{SFT}}$ 是训练损失。系统/用户消息、工具返回和重叠上下文不承受损失；orchestrator 输入去掉优化工作流与收集指令，worker 的真实任务分配保留。因此方法是在学习协作执行，不是把自评文本直接当作正确答案的证明。
+
+| 作者报告的证据 | v1 范围、版本与预算 | 归因边界 |
+|---|---|---|
+| 两轮后四个研究基准的 score/output-token 比值为基座的 1.2–1.6 倍 | [§4.1–4.2、图 2；附录 C.5](https://arxiv.org/html/2610.12176v1#A3.SS5)；Qwen3.6-27B、qwen-code 0.20.0；ScienceAgentBench 102 任务×三轮、MLR-Bench 子集 12×五轮、AstaBench 40×三轮、DSBench 74×三轮；各自时间上限分别为半小时、两小时、两小时、一小时 | 不同基准得分量纲不同，倍数按各自基座归一；不是统一准确率，也不是单位总算力的增益 |
+| 第一代所生成工作流由基座执行时，相对基座生成工作流获 64% 平均胜出份额 | [§4.2、表 1；附录 C.3](https://arxiv.org/html/2610.12176v1#A3.SS3)；12 任务、11 次工作流迭代，每任务每迭代一次执行，每对产物六次外部判断 | 固定了最终执行权重，支持改进者产物质量变化；发现工作流时的执行者和评价者仍各随代变化，不是仅替换优化器的单变量干预 |
+| 多智能体学生 68.3% / 28.82M 已处理监督 tokens；单智能体大数据对照 64.0% / 42M | [§4.4、图 6；附录 D.1–D.2](https://arxiv.org/html/2610.12176v1#A4.SS2)；均对基座计胜率，评测混合四个训练任务和一个测试任务 | 不是两学生直接对打；训练任务覆盖、采样器与 checkpoint 选择不同，不能把差异全部归因数据组织形式 |
+
+[附录 B.1–B.2](https://arxiv.org/html/2610.12176v1#A2.SS2) 的第一轮最终使用八个任务的 119 条轨迹、2,435 个窗口；训练使用六张 H100，约十九小时，仅指 SFT。工作流搜索、轨迹生成、自评与外部评价不在这项时长中。主 MASS checkpoint 由验证 loss 选择，外部 GPT-5.5 / Claude Opus 4.8 的判断不回流；但数据组成消融另有外部判断选点协议，须分开报告。六次判决是两位裁判各三 seed 对**同一对产物**打分，不是六次独立研究复现。
+
+同一 [附录 C.5](https://arxiv.org/html/2610.12176v1#A3.SS5) 还报告 Terminal-Bench 均值 37.5% → 35.2%、SWE-bench Verified 62.6% → 61.1%，均为三次运行且按三模型共同有评分的任务取分母。MLR-Bench/AstaBench 的整体上涨伴随更多报告完成，不能自动解释为已完成报告的质量普遍上升；公开 MLR-Bench 执行中甚至没有调用 delegation 工具。评价器更符合外部模型判断也不等于更接近科学真值，附录 G.3 给出改变模拟任务含义仍获得较高偏好的案例。
+
+MASS 的权重后继确实接回了提出与评价下一轮改进的角色，比“模型训练完成但研究控制器始终冻结”更强。相对“哪一个模型决定工作流”这个组件边界，可讨论局部 L3 交接；相对外层搜索、SFT 与验收程序，仍未展示自主重写或无限持续增长。完整 F/E 论证见[元 RSI、评测与安全](04_Meta_RSI_Evaluation_and_Safety.md)，[作者实现](https://github.com/SakanaAI/mass)在本次仅作为引用入口。
 
 ## 7. AI 研究系统：产物、研究策略与元改进不能混算
 
@@ -648,6 +826,11 @@ Pareto 改进要求所有领域不差且至少一域更好；等权均值上涨�
 | AI Scientist 系列 | F 工作流、C 档案 | 实验内反馈与部分档案回用 | 不经人工择优的运行分布、研究者自身改进 |
 | AlphaEvolve、ShinkaEvolve | 程序、C、D 及局部提案策略 | 程序库、元提示或经验提示 | 与自适应但固定规则基线区分，持久跨任务收益 |
 | ParetoRSI-Gym | A、B、C，受约束训练配置 | 数据与 checkpoint 谱系 | 同一交付模型的跨域保留和独立确认 |
+| SEAL、TTT-Discover | A；编辑数据或解档案另有 B/C | 适应效果训练编辑者，或单任务执行反馈更新策略 | 单次适应/发现不等于长期无遗忘或通用后继 |
+| RLVE、PAIRED | A、B | 能力变化调整课程难度或环境分布 | 人定义的环境族、有限采样代理与环境工程成本 |
+| Skill1、COSPLAY | A、C；后者含轨迹池 B | 训练策略与技能库共同影响后续执行 | 代理 credit、教师冷启动、协议差异与视觉迁移 |
+| Dream-RSI、RSIAgent | B、C、D；前者触及局部探索控制器 F | 历史回放改探索代码，或目标条件化练习改记忆 | 不训练基础模型；支持集或已见目标上的选择偏差 |
+| MASS | A、D、E、F 中的共享模型角色 | SFT 后模型接管下轮执行、优化与评价 | 两轮证据、同源裁判偏差、训练与推理成本、其他能力退化 |
 
 L3 必须相对于明确的组件边界判断：存在固定外层验收规则，不能单独否定内层改进策略已经变化；反之，内层提示变化也不能证明整套研究系统无界自演化。
 一个更强的实验问题是，在相同初始状态 $S$、资源约束 $B$ 和未参与选择的测试协议 $Q_{\mathrm{test}}$ 下比较改进程序：
@@ -668,11 +851,13 @@ $U_t$ 是更新后的改进者，$U_{\mathrm{ref}}$ 是冻结的参照改进者�
 
 ### 10.1 原始材料与一手阅读范围
 
+以下两项是本专题既有阅读记录，本轮保留，不表示本次重新全文阅读：
+
 - [OpenRSI_详解.md](../Reading_Notes_Provenance.md)：全文 1–1046 行已分段读取；覆盖总览、Gym、SFT/RL、Evo、实验、附录和引用，原文未修改。
 - [Self-Developing-Agents-技术详细讲解.md](../Reading_Notes_Provenance.md)：全文 1–1780 行已分段读取；覆盖第 0–6 章及渲染附录，原文未修改。
 
 两篇笔记的直接一手论文入口按 Frontis-MA1、Aspire、S3Gym、HarnessDev 去重核验；项目主页与作者仓库用于确认身份和发布范围，不作为独立重复实验。
-核心阅读为 Frontis-MA1 v1 §2–8、附录 A–E；Aspire v1 §3–4、附录 A–D；S3Gym v1 §4–6、附录 A；HarnessDev v1 §3–4、§6.1 及相关附录。
+既有核心阅读记录为 Frontis-MA1 v1 §2–8、附录 A–E；Aspire v1 §3–4、附录 A–D；S3Gym v1 §4–6、附录 A；HarnessDev v1 §3–4、§6.1 及相关附录。
 其余方法的确切版本、所读正文和附录片段逐项列在 [training-evidence.json](../research/training-evidence.json)；HTML 返回片段不等于整篇全文精读，所有机制解释限于实际取回内容。
 STaR 与 Self-Instruct 使用原论文的 ar5iv HTML 转换；元数据页用于标题和首次提交时间，不用摘要补写未读算法。
 本批未下载或执行源码、未复现实验，也未验证原笔记所谓“忠实、可运行实现”；作者链接确认与完整仓库审计是不同阅读等级。
@@ -691,9 +876,9 @@ STaR 与 Self-Instruct 使用原论文的 ar5iv HTML 转换；元数据页用于
 
 ### 10.3 公开检索记录
 
-以下检索于 2026-11-05 通过网页读取工具进行；查询是发现入口，不作为论文结果的证据。
+以下保留本专题既有的 2026-11-05 网页检索记录；本轮未重新运行这些搜索。查询是发现入口，不作为论文结果的证据。
 
-| 入口 | 查询 | 本次可访问性与用途 |
+| 入口 | 查询 | 既有记录的可访问性与用途 |
 |---|---|---|
 | Bing | `"recursive self-improvement" "training" "2026"` | 结果可读取但噪声较多，含生成式综述；未将生成式回答当一手证据 |
 | Google | `"STaR" "Self-Instruct" "SPIN" self improvement` | 重定向至香港站，本次未取得后续可用结果；不计有效证据 |
@@ -705,17 +890,40 @@ STaR 与 Self-Instruct 使用原论文的 ar5iv HTML 转换；元数据页用于
 HTML 提取偶有公式符号、表格单元和脚注缺失；没有可靠正文支持的数字不补猜，论文内部不一致保留为未解决问题。
 未核实的官方仓库记为 JSON `null`，含义是本次没有确认，不是断言不存在；所有数值均为作者报告，不是本章独立复现。
 
+### 10.4 本轮 A/B 补充：覆盖、阅读层级与未决项
+
+研究截点仍为 **2026-11-05**；“近一年”指 2025-11-05 至该日，传统参照另行保留。本次完整读取既有 02 专题和证据数组、原 overview 的 A/B 相关条目，并读取 catalog 的相关标题、摘要、日期、版本及来源字段。用户笔记与聚合仓库只用于定位线索，不作为机制或实验的一手证明。
+
+本次实际取回并核对了 **14 篇**原始 HTML 的方法与实验片段：Frontis-MA1、DCE/SRCL、Aspire、Dream-RSI、ReST、SEAL、PAIRED、Skill1、COSPLAY、RSIAgent、MASS、RLVE、TTT-Discover、OPSD。这里没有把带省略号的网页提取称为整篇全文精读；其余既有方法沿用原证据等级。TRM 与 recurrent depth **仅核对原始摘要和版本**，只用于术语边界。原始 OPSD 的 v1 已读，截止前的 v2/v3 未读，不能将初版结论自动扩展到后续版。
+
+| 原 overview 的 A/B 相关线索 | 本章位置与处理 |
+|---|---|
+| OpenRSI / Frontis-MA1 | §4；模型、Gym 与搜索分别归因 |
+| Self-Developing Agents：Aspire / S3Gym | §5；目标选择、训练留存与经验反馈，HarnessDev 只作边界对照 |
+| On-policy distillation | §2.9、§6.1；早期 OPSD 与 DCE/SRCL 分版本、分协议 |
+| Skill1 / COSPLAY | §6.6–6.7；保留 A↔C 训练接口，技能使用细节交叉引用 03 专题 |
+| Dream-RSI / RSIAgent | §3.4–3.5；明确为回放/课程及控制器/记忆，不当作基础模型训练 |
+| Multi-agent self-supervision | §6.8；MASS 的两轮共享模型交接，完整 E/F 讨论交叉引用 04 专题 |
+| CoEvo-RSI / R2Orch / RSI-Master / AReaL-RSI | §6.2–6.5；保留已有机制和归因边界 |
+| TRM / recurrent depth | §2.10；仅作非充分 RSI 证据的边界资料 |
+
+待核实来源或实现细节包括：Skill1 的 steps/epochs 和 UCB/重排口径；COSPLAY 的检索奖励时机、多人训练对手及缺失主表单元；TTT-Discover 的图注样本数不一致；原 OPSD 的后续版本；未确认的官方 repo。Dream-RSI 的未探索分支、RSIAgent 的目标条件化选择、MASS 的共享裁判与跨能力退化属于已识别的证据边界，不能以更多引用消除。逐条 URL、版本、章节、数值和限制写在 [training-evidence.json](../research/training-evidence.json) 的 `sources`、`numeric_claims`、`limitations` 中。
+
+本次公开同步不新增 PDF 或模型，不采集 corpus、不安装依赖、不执行远端代码或论文实验；已有文件未被当作独立复现结果。A/B 的 SVG 和 HTML 图已作为公开配套文件提供；图示表达分析框架，不提升论文证据等级。
+
 ## 11. 时间线记录与参考索引
 
-下表为 25 项精选方法、系统或环境记录，日期均已核对 arXiv submission history，统一使用首次提交日，不代表最早公开日期或产品发布日。
+下表为 36 项精选方法、系统或环境记录，统一使用首次 arXiv 提交日，不代表最早公开日期或产品发布日；日期依据既有一手元数据与本次 submission history 核对，阅读等级并不因此自动提升。另两条 TRM/recurrent depth 边界资料只在证据数组中保留。
 例如 AI Scientist-v2 与 AlphaEvolve 的机构公告早于 arXiv；Frontis 仓库发布晚于 arXiv。索引不按最新修订时间重排历史。
 完整英文标题、官方链接、阅读等级、机制、证据与局限见 [training-evidence.json](../research/training-evidence.json)，可按 `first_date` 排序导入 Atlas。
 
 | 首次 arXiv 提交 | 方法或环境 | 时间线应记录的技术节点 |
 |---|---|---|
 | 2019-01-07 | [POET](https://arxiv.org/abs/1901.01753) | 环境–策略配对、可解性筛选与跨环境迁移 |
+| 2020-12-03 | [PAIRED](https://arxiv.org/abs/2012.02096) | 对手与学习者回报差驱动环境课程 |
 | 2022-03-28 | [STaR](https://arxiv.org/abs/2203.14465) | 答案校验、rationalization 与迭代训练 |
 | 2022-12-20 | [Self-Instruct](https://arxiv.org/abs/2212.10560) | 自生成指令池及过滤后微调 |
+| 2023-08-17 | [ReST](https://arxiv.org/abs/2308.08998) | Grow 生成与多次离线 Improve、奖励模型过滤 |
 | 2023-12-11 | [ReST-EM](https://arxiv.org/abs/2312.06585) | 奖励筛选采样与监督更新交替 |
 | 2024-01-02 | [SPIN](https://arxiv.org/abs/2401.01335) | 固定正例对比上一轮模型响应 |
 | 2024-01-18 | [Self-Rewarding LMs](https://arxiv.org/abs/2401.10020) | 响应生成与自评分共同参与迭代 DPO |
@@ -724,15 +932,24 @@ HTML 提取偶有公式符号、表格单元和脚注缺失；没有可靠正文
 | 2025-01-22 | [DeepSeek-R1 / R1-Zero](https://arxiv.org/abs/2501.12948) | 可验证奖励 RL 与分阶段后训练 |
 | 2025-04-10 | [AI Scientist-v2](https://arxiv.org/abs/2504.08066) | 分阶段实验树与 VLM 反馈 |
 | 2025-05-06 | [Absolute Zero](https://arxiv.org/abs/2505.03335) | 程序执行支撑的任务–解答自博弈 |
+| 2025-06-12 | [SEAL](https://arxiv.org/abs/2506.10943) | 实际适应收益训练 self-edit 生成策略 |
 | 2025-06-16 | [AlphaEvolve](https://arxiv.org/abs/2506.13131) | 程序库、评价级联与局部元提示演化 |
 | 2025-09-17 | [ShinkaEvolve](https://arxiv.org/abs/2509.19349) | 新颖度拒绝、模型组合选择与经验提示 |
+| 2025-11-10 | [RLVE](https://arxiv.org/abs/2511.07317) | 人工工程化环境族中的自适应难度课程 |
+| 2026-01-22 | [TTT-Discover](https://arxiv.org/abs/2601.16175) | 单个发现任务上的在线策略训练与状态复用 |
+| 2026-01-26 | [OPSD](https://arxiv.org/abs/2601.18734) | 冻结特权教师在学生前缀上提供逐 token 监督 |
 | 2026-03-09 | [PostTrainBench](https://arxiv.org/abs/2603.08640) | 受限资源下自主后训练评测 |
+| 2026-04-22 | [COSPLAY](https://arxiv.org/abs/2604.20987) | 分功能 LoRA 与技能契约共同更新 |
+| 2026-05-07 | [Skill1](https://arxiv.org/abs/2605.06130) | 统一任务信号训练技能选择、使用与提炼 |
 | 2026-07-30 | [Frontis-MA1 / OpenMLE](https://arxiv.org/abs/2607.28568) | 可执行 Gym、程序算子后训练与经验搜索 |
 | 2026-08-31 | [Aspire](https://arxiv.org/abs/2608.31111) | 模糊目标的操作化与权重更新审计 |
 | 2026-08-31 | [S3Gym](https://arxiv.org/abs/2608.31100) | 自我测试、自我判断与严格迁移评价 |
 | 2026-09-01 | [HarnessDev](https://arxiv.org/abs/2609.01437) | 创建与演化 harness 的归因基准 |
+| 2026-09-14 | [Dream-RSI](https://arxiv.org/abs/2609.14858) | 历史回放池改进探索策略代码，基础 agent 固定 |
+| 2026-09-14 | [RSIAgent](https://arxiv.org/abs/2609.15364) | 目标相关 broad-then-deep 练习与冻结记忆回用 |
 | 2026-09-25 | [DCE + SRCL](https://arxiv.org/abs/2609.30652) | 当前模型特权分支的 on-policy 蒸馏 |
 | 2026-09-28 | [RSI-Master](https://arxiv.org/abs/2609.35561) | 结构化实验与审查驱动研究图 |
+| 2026-10-08 | [MASS](https://arxiv.org/abs/2610.12176) | 工作流搜索与轨迹 SFT 交替，后继接管三种角色 |
 | 2026-10-13 | [AReaL-RSI](https://arxiv.org/abs/2610.18083) | 持续研究团队与带条件的经验共享 |
 | 2026-10-15 | [R2Orch](https://arxiv.org/abs/2610.22740) | 可学习编排与随机技能撤除检验 |
 | 2026-10-18 | [CoEvo-RSI](https://arxiv.org/abs/2610.25078) | 独立模型继承、harness 配对与轨迹适配 |
