@@ -4,8 +4,8 @@ import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 
 export const root = fileURLToPath(new URL('../', import.meta.url));
-const dataNames = ['method-map.json', 'method-map.csv', 'atlas-methods.json', 'atlas-methods.csv', 'atlas-source-notes.json', 'dynamic-scenes.json', 'family-architectures.json', 'paper-figures.json', 'collection.json', 'research-updates.json', 'focus-methods.json', 'institutions.json', 'ui-translations.json', 'primary-verification.json', 'delivery-audit.json'];
-const scriptNames = ['build-atlas.mjs', 'build-repo-deepdives.mjs', 'build-family-diagrams.mjs', 'build-research-docs.mjs', 'build-project-presentation.mjs', 'validate-delivery.mjs', 'validate-repo-deepdives.mjs', 'viewer.test.mjs', 'implementation.test.mjs', 'family.test.mjs', 'consolidation.test.mjs', 'timeline.test.mjs', 'math.test.mjs', 'browser-test-utils.mjs', 'viewer.template.html', 'implementation.template.html', 'family.template.html', 'package.json', 'package-lock.json', 'CORPUS.md'];
+const dataNames = ['method-map.json', 'method-map.csv', 'atlas-methods.json', 'atlas-methods.csv', 'atlas-source-notes.json', 'dynamic-scenes.json', 'family-architectures.json', 'paper-figures.json', 'collection.json', 'research-updates.json', 'focus-methods.json', 'institutions.json', 'ui-translations.json', 'survey-guide.json', 'primary-verification.json', 'delivery-audit.json'];
+const scriptNames = ['build-atlas.mjs', 'build-repo-deepdives.mjs', 'build-family-diagrams.mjs', 'build-research-docs.mjs', 'build-project-presentation.mjs', 'validate-delivery.mjs', 'validate-repo-deepdives.mjs', 'viewer.test.mjs', 'implementation.test.mjs', 'family.test.mjs', 'consolidation.test.mjs', 'timeline.test.mjs', 'math.test.mjs', 'survey.test.mjs', 'browser-test-utils.mjs', 'viewer.template.html', 'implementation.template.html', 'family.template.html', 'package.json', 'package-lock.json', 'CORPUS.md'];
 const walk = directory => fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => entry.isDirectory() ? walk(path.join(directory, entry.name)) : [path.join(directory, entry.name)]);
 
 export function publicationFiles() {

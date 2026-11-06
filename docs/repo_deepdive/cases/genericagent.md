@@ -55,6 +55,10 @@ README 的 self-evolving 定位不能替代代码中的统一 Skill 学习、评
 
 真实入口：[module entrypoint (no top-level def/class symbol matched)](https://github.com/lsdefine/GenericAgent/blob/73f71a49874700f85e9d92126cb8d9531abde54a/frontends/tui_v3.py#L1)。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。
 
+![GenericAgent：把重复推理沉淀成技能与执行路径：源码架构图](../../../pics/implementations/genericagent-architecture.svg)
+
+[交互架构：点击节点查看模块与源码](../implementation-atlas.html?repo=genericagent) · [下载原生 SVG](../../../pics/implementations/genericagent-architecture.svg)。青色为控制/调用，金色为数据/状态，紫色虚线为可选路径；这是固定源码快照，不是模型实跑轨迹。全部 12 个模块仍列在下方表中。
+
 ```mermaid
 flowchart LR
   GA_1["GA-1 执行循环"]

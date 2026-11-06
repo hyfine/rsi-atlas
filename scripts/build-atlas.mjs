@@ -17,6 +17,10 @@ assert.ok(Array.isArray(institutionData.attribution_reviews),'Missing attributio
 const attributionReviews=new Map(institutionData.attribution_reviews.map(review=>[review.record_id,review]));
 assert.equal(attributionReviews.size,institutionData.attribution_reviews.length,'Duplicate attribution review');
 const translations = read('data/ui-translations.json');
+const survey = read('data/survey-guide.json');
+assert.ok(survey.chapter_href&&survey.executive_summary.en&&survey.executive_summary.zh);
+assert.ok(survey.cards.length>=8&&survey.cards.length<=12);
+assert.equal(new Set(survey.cards.map(card=>card.id)).size,survey.cards.length);
 const dynamics = read('data/dynamic-scenes.json');
 const familyArchitectures = read('data/family-architectures.json');
 const paperFigures = read('data/paper-figures.json');
@@ -83,6 +87,7 @@ const payload = {
   ui_translations: translations,
   focus_ids: updates.focus_ids,
   unresolved_sources: updates.unresolved_sources,
+  survey,
 };
 const priorFigureStatuses=new Map(paperFigures.papers.map(paper=>[paper.id,paper]));
 paperFigures.papers=payload.methods.map(method=>({...priorFigureStatuses.get(method.id),id:method.id,method:method.method,primary_url:method.primary_url,status:priorFigureStatuses.get(method.id)?.status??'link_only_not_reviewed'}));

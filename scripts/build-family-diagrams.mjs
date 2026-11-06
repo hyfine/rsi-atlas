@@ -7,40 +7,54 @@ export const root=fileURLToPath(new URL('../',import.meta.url));
 const read=name=>JSON.parse(fs.readFileSync(path.join(root,name),'utf8'));
 const xml=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[char]));
 const markdown=value=>String(value).replaceAll('|','\\|').replace(/[\r\n]+/g,' ');
-const positions=[[150,228],[450,228],[750,228],[1050,228],[1050,508],[750,508],[450,508],[150,508]];
-const nodeWidth=240,nodeHeight=116;
-
 function architectureSVG(family){
   const marker=`architecture-arrow-${family.id}`;
-  const edge=(d,label,x,y,advice=false)=>`<path class="edge${advice?' advice':''}" d="${d}" marker-end="url(#${marker})"/><text class="edge-label" x="${x}" y="${y}" text-anchor="middle">${xml(label)}</text>`;
-  const nodes=family.nodes.map((node,index)=>{
-    const [x,y]=positions[index];
-    return `<g class="architecture-node" data-node="${index}"><rect class="node ${node.type}" x="${x-nodeWidth/2}" y="${y-nodeHeight/2}" width="${nodeWidth}" height="${nodeHeight}" rx="15"/><text class="node-label" x="${x}" y="${y-22}" text-anchor="middle">${xml(node.label)}</text>${node.detail.map((line,i)=>`<text class="node-detail" x="${x}" y="${y+8+i*23}" text-anchor="middle">${xml(line)}</text>`).join('')}</g>`;
+  const map=new Map(family.nodes.map(node=>[node.id,node]));
+  const port=(node,side)=>{
+    const[x,y,w,h]=node.box;
+    const ports={left:[x,y+h/2],right:[x+w,y+h/2],top:[x+w/2,y],bottom:[x+w/2,y+h]};
+    assert.ok(Object.hasOwn(ports,side),`Unknown family port ${side}`);
+    return ports[side];
+  };
+  const edges=family.diagram.edges.map(edge=>{
+    assert.ok(map.has(edge.from)&&map.has(edge.to),`Unknown family edge ${family.id}`);
+    const [from,to]=edge.ports.split('-');
+    const points=[port(map.get(edge.from),from),...(edge.via??[]),port(map.get(edge.to),to)];
+    const pathData=points.map(([x,y],index)=>(index?'L':'M')+x+' '+y).join('');
+    let label='';
+    if(edge.label){
+      assert.ok(edge.at?.length===2,`Missing family edge label position ${family.id}`);
+      const [x,y]=edge.at,width=Array.from(edge.label).reduce((n,c)=>n+(/[^\x00-\x7F]/.test(c)?13:7),14);
+      label=`<g class="edge-caption"><rect x="${x-width/2}" y="${y-15}" width="${width}" height="22" rx="5"/><text class="edge-label" x="${x}" y="${y}" text-anchor="middle">${xml(edge.label)}</text></g>`;
+    }
+    return `<path class="edge${edge.optional?' advice':''}" data-from="${edge.from}" data-to="${edge.to}" d="${pathData}" marker-end="url(#${marker})"/>${label}`;
   }).join('');
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="architecture-title-${family.id} architecture-desc-${family.id}">
+  const nodes=family.nodes.map((node,index)=>{
+    const [x,y,w,h]=node.box;
+    let shape=`<rect class="node ${node.type}" x="${x}" y="${y}" width="${w}" height="${h}" rx="15"/>`;
+    if(node.shape==='database')shape=`<path class="node ${node.type}" d="M${x} ${y+17}C${x} ${y-4} ${x+w} ${y-4} ${x+w} ${y+17}V${y+h-17}C${x+w} ${y+h+4} ${x} ${y+h+4} ${x} ${y+h-17}Z"/><ellipse class="database-cap" cx="${x+w/2}" cy="${y+17}" rx="${w/2}" ry="16"/>`;
+    if(node.shape==='gate')shape=`<path class="node ${node.type}" d="M${x+24} ${y}H${x+w-24}L${x+w} ${y+h/2}L${x+w-24} ${y+h}H${x+24}L${x} ${y+h/2}Z"/>`;
+    const labelY=y+(h<=80?27:node.shape==='database'?48:33),detailY=labelY+27;
+    const detail=node.detail.map((line,i)=>`<text class="node-detail" x="${x+w/2}" y="${detailY+i*22}" text-anchor="middle">${xml(line)}</text>`).join('');
+    const stack=node.shape==='stack'?`<path class="stack-mark" d="M${x+14} ${y+14}H${x+38}M${x+14} ${y+20}H${x+38}M${x+14} ${y+26}H${x+38}"/>`:'';
+    return `<g class="architecture-node" data-node="${index}" data-component="${node.id}">${shape}${stack}<text class="node-label" x="${x+w/2}" y="${labelY}" text-anchor="middle">${xml(node.label)}</text>${detail}</g>`;
+  }).join('');
+  const regions=family.diagram.regions.map(region=>{const[x,y,w,h]=region.box;return `<g class="architecture-region"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="20"/><text x="${x+16}" y="${y+23}">${xml(region.label)}</text></g>`;}).join('');
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" data-topology="${family.diagram.kind}" role="img" aria-labelledby="architecture-title-${family.id} architecture-desc-${family.id}">
 <title id="architecture-title-${family.id}">${family.code} 家族：${xml(family.title)}整体思想架构</title>
 <desc id="architecture-desc-${family.id}">本文原创分类架构，不是某篇论文原图。${xml(family.idea)} ${xml(family.distinction)}</desc>
-<style>.node{fill:var(--node,#152b43);stroke:var(--line,#43647f);stroke-width:1.6}.state,.candidate{stroke:var(--accent,#69d8c8);stroke-width:2.5}.gate{stroke:var(--gold,#ffd08a);stroke-dasharray:6 4}.edge{fill:none;stroke:var(--accent,#69d8c8);stroke-width:2}.advice{stroke:var(--gold,#ffd08a);stroke-dasharray:6 4}.node-label{fill:var(--text,#edf5ff);font:19px system-ui,sans-serif;font-weight:650}.node-detail{fill:var(--muted,#b8cadb);font:14px system-ui,sans-serif}.edge-label{fill:var(--muted,#b8cadb);font:13px system-ui,sans-serif}.selected .node{stroke:var(--focus,#fff);stroke-width:3.5}</style>
-<rect width="1200" height="760" rx="20" fill="var(--bg,#0b1727)"/>
+<style>.node{fill:var(--node,#152b43);stroke:var(--line,#43647f);stroke-width:1.6}.state,.candidate{stroke:var(--accent,#69d8c8);stroke-width:2.5}.gate{stroke:var(--gold,#ffd08a)}.edge{fill:none;stroke:var(--accent,#69d8c8);stroke-width:2}.advice{stroke:var(--gold,#ffd08a);stroke-dasharray:6 4}.node-label{fill:var(--text,#edf5ff);font:20px system-ui,sans-serif;font-weight:650}.node-detail{fill:var(--muted,#b8cadb);font:14px system-ui,sans-serif}.edge-label{fill:var(--muted,#b8cadb);font:13px system-ui,sans-serif}.edge-caption rect{fill:var(--bg,#0b1727)}.selected .node{stroke:var(--focus,#fff);stroke-width:3.5}.database-cap{fill:none;stroke:var(--accent,#69d8c8);stroke-width:1.5}.stack-mark{stroke:var(--accent,#69d8c8);stroke-width:2}.architecture-region rect{fill:var(--panel,#102238);fill-opacity:.6;stroke:var(--line,#43647f);stroke-dasharray:5 6}.architecture-region text{fill:var(--muted,#b8cadb);font:14px system-ui,sans-serif}</style>
+<rect width="1200" height="900" rx="20" fill="var(--bg,#0b1727)"/>
 <defs><marker id="${marker}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--accent,#69d8c8)"/></marker></defs>
-<text x="600" y="40" text-anchor="middle" fill="var(--text,#edf5ff)" font-family="system-ui,sans-serif" font-size="27" font-weight="700">${family.code} 家族 · ${xml(family.title)}整体思想架构</text>
-<text x="600" y="68" text-anchor="middle" fill="var(--muted,#b8cadb)" font-family="system-ui,sans-serif" font-size="14">分类层面的组件与持久状态关系；不是某篇论文算法，也不声称所有方法都实现虚线审计。</text>
-${edge('M150 170V130H750V170','任务输入',690,119)}
-${edge('M570 228H630','读取',600,214)}
-${edge('M870 228H930','反馈',900,214)}
-${edge('M1050 286V450',family.id==='e'?'拟更新 V 时':'改进信号',1110,372,family.id==='e')}
-${edge('M930 508H870','提案',900,494)}
-${edge('M630 508H570','评价',600,494)}
-${edge('M330 508H270','接受',300,494)}
-${edge('M30 508H15V98H450V170','持久产物回流：必须真正被下一轮读取',700,88)}
-${edge('M450 450V286','拒绝时保留旧版',522,372,true)}
-<path d="M438 130H462" fill="none" stroke="var(--bg,#0b1727)" stroke-width="10"/>
-<path d="M438 130H462" fill="none" stroke="var(--accent,#69d8c8)" stroke-width="2"/>
+<text x="600" y="39" text-anchor="middle" fill="var(--text,#edf5ff)" font-family="system-ui,sans-serif" font-size="26" font-weight="700">${family.code} · ${xml(family.archetype)}</text>
+<text x="600" y="69" text-anchor="middle" fill="var(--muted,#b8cadb)" font-family="system-ui,sans-serif" font-size="14">${xml(family.diagram.caption)}</text>
+${regions}
+${edges}
 ${nodes}
-<rect x="30" y="623" width="1140" height="109" rx="14" fill="var(--panel,#102238)" stroke="var(--line,#43647f)"/>
-<text x="52" y="652" fill="var(--accent,#69d8c8)" font-family="system-ui,sans-serif" font-size="16" font-weight="650">持久状态与边界</text>
-<text x="52" y="680" fill="var(--text,#edf5ff)" font-family="system-ui,sans-serif" font-size="14">${xml(family.persistent)}</text>
-<text x="52" y="708" fill="var(--muted,#b8cadb)" font-family="system-ui,sans-serif" font-size="13">${xml(family.boundary)}</text>
+<rect x="30" y="790" width="1140" height="86" rx="14" fill="var(--panel,#102238)" stroke="var(--line,#43647f)"/>
+<text x="52" y="817" fill="var(--text,#edf5ff)" font-family="system-ui,sans-serif" font-size="14">持久对象：${xml(family.persistent)}</text>
+<text x="52" y="844" fill="var(--muted,#b8cadb)" font-family="system-ui,sans-serif" font-size="13">${xml(family.boundary)}</text>
+<text x="600" y="895" text-anchor="middle" fill="var(--muted,#b8cadb)" font-family="system-ui,sans-serif" font-size="12">原创家族架构，不是某篇论文原图；虚线表示可选更新或建议审计，不保证所有方法实现。</text>
 </svg>\n`;
 }
 
@@ -51,7 +65,17 @@ function flowSVG(family,scene){
 }
 
 function guide(families,prefix,figureGuide){
-  return `# A–F 家族整体思想架构\n\n本页的六张图是本图谱原创的**家族级架构**：说明改进对象、执行组件、反馈、更新、版本管理和下一轮使用，不用 STaR、HarnessPro 等某个代表方法代替整个家族。\n\n家族架构、代表方法流程和论文原图是三种层次。虚线审计表示应检查的边界，不声称每篇论文已经实现；[论文原图与许可](${figureGuide})单列。\n\n${families.map(family=>`## ${family.code}. ${family.title}\n\n${family.idea}\n\n![${family.code} 家族整体思想架构](${prefix}pics/family-${family.id}-architecture.svg)\n\n[交互架构](${prefix}pics/family-${family.id}-architecture.html) · [代表流程](${prefix}pics/family-${family.id}-flow.html)\n\n- **持久对象：**${family.persistent}。\n- **方法边界：**${family.distinction}\n- **验证重点：**${family.evidence}\n- **固定与外部依赖：**${family.boundary}\n\n原始来源：${family.sources.map(source=>`[${source.name}](${source.url})`).join(' · ')}。\n`).join('\n')}`;
+  return `# A–F 家族整体思想架构
+
+六张图不再复用同一种八节点循环。每种拓扑突出该类真正改变的资产与反馈结构；它们是原创分析视图，不冒充领域统一分类、论文原图或已完成复现实验。
+
+| 家族 | 一眼识别的结构 | 持久对象 |
+|---|---|---|
+${families.map(family=>`| ${family.code} · ${family.title} | ${family.archetype} | ${markdown(family.persistent)} |`).join('\n')}
+
+家族架构、代表方法流程和论文原图是三种层次。虚线表示可选更新或建议审计，不声称每篇论文均实现。[论文原图与许可](${figureGuide})单列。
+
+${families.map(family=>`## ${family.code}. ${family.title}\n\n**图的读法：${family.archetype}。** ${family.diagram.caption}\n\n${family.idea}\n\n![${family.code} 家族整体思想架构](${prefix}pics/family-${family.id}-architecture.svg)\n\n[交互架构](${prefix}pics/family-${family.id}-architecture.html) · [代表流程](${prefix}pics/family-${family.id}-flow.html)\n\n- **持久对象：**${family.persistent}。\n- **方法边界：**${family.distinction}\n- **验证重点：**${family.evidence}\n- **固定与外部依赖：**${family.boundary}\n\n原始来源：${family.sources.map(source=>`[${source.name}](${source.url})`).join(' · ')}。\n`).join('\n')}`;
 }
 
 function paperGuide(manifest,prefix){
@@ -111,7 +135,9 @@ export function buildFamilyDiagrams(){
   const template=fs.readFileSync(path.join(root,'scripts/family.template.html'),'utf8');
   assert.equal(template.split('__FAMILY_DATA__').length,2);
   for(const family of catalog.families){
-    assert.equal(family.nodes.length,8);
+    assert.ok(family.nodes.length>=7&&family.nodes.length<=10);
+    assert.equal(new Set(family.nodes.map(node=>node.id)).size,family.nodes.length);
+    assert.ok(family.archetype&&family.diagram.kind&&family.diagram.edges.length>=family.nodes.length-1);
     const scene=scenes.scenes.find(item=>item.id===family.scene);
     assert.ok(scene);
     const architecture=architectureSVG(family),flow=flowSVG(family,scene);

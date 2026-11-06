@@ -55,6 +55,10 @@
 
 真实入口：[solPiExtension](https://github.com/NVlabs/SoL-Pi/blob/219568034fa54ed121ede80961655e33dfb9d0e3/src/sol-pi/index.ts#L49)。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。
 
+![SoL-Pi：把自动研究成果固化成可恢复的 Harness 扩展：源码架构图](../../../pics/implementations/sol-pi-architecture.svg)
+
+[交互架构：点击节点查看模块与源码](../implementation-atlas.html?repo=sol-pi) · [下载原生 SVG](../../../pics/implementations/sol-pi-architecture.svg)。青色为控制/调用，金色为数据/状态，紫色虚线为可选路径；这是固定源码快照，不是模型实跑轨迹。全部 12 个模块仍列在下方表中。
+
 ```mermaid
 flowchart LR
   S_1["S-1 扩展入口"]

@@ -48,6 +48,10 @@ H_t、S_t、C_t、历史最高 S*、候选 diff/commit、组件新颖性、journ
 
 真实入口：[drive](https://github.com/google-research/rrsi/blob/be50316e1db05914068a973f322770ef08ed7ba1/rrsi/driver.py#L54)。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。
 
+![RRSI：以正则化约束 Harness 演化与选择偏差：源码架构图](../../../pics/implementations/rrsi-architecture.svg)
+
+[交互架构：点击节点查看模块与源码](../implementation-atlas.html?repo=rrsi) · [下载原生 SVG](../../../pics/implementations/rrsi-architecture.svg)。青色为控制/调用，金色为数据/状态，紫色虚线为可选路径；这是固定源码快照，不是模型实跑轨迹。全部 12 个模块仍列在下方表中。
+
 ```mermaid
 flowchart LR
   RR_1["RR-1 轮次控制"]

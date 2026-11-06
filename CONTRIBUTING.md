@@ -9,6 +9,7 @@
 - `data/research-updates.json`, `data/focus-methods.json`: primary-source updates, four focus methods and unresolved references.
 - `data/institutions.json`: cited author affiliations / release publishers, not ownership or current employment.
 - `data/ui-translations.json`: English summaries and bilingual UI metadata.
+- `data/survey-guide.json`: bilingual cross-survey entry points, analytical questions and evidence scope; the full research synthesis is maintained in the Chinese chapters.
 - `data/family-architectures.json`, `data/dynamic-scenes.json`, `data/paper-figures.json`: original category diagrams, mechanism paths and licensed paper figures.
 - `scripts/*.template.html`: standalone viewers.
 
@@ -40,6 +41,8 @@ Use `\lt` instead of a literal less-than character inside formulas: GitHub's add
 Prefer fenced `math` blocks and GitHub's code-style inline math delimiters to protect stars, underscores and TeX escapes from Markdown processing. Keep a whitespace boundary before ordinary inline dollar math adjacent to prose, including Chinese punctuation. Local TeX rendering alone does not prove GitHub compatibility: CI checks both one-to-one recognition and the exact decoded TeX payload through GitHub's Markdown API. Run the same check locally with an authenticated `gh` CLI and `RSI_GITHUB_MATH_CHECK=1 node --test scripts/math.test.mjs`.
 
 Family architecture is an author-created analytical view, representative flow is a specific mechanism, and a paper figure is a separately attributed original. Do not mix these layers. Original figures require explicit reusable licensing or permission, exact version/figure attribution, crop disclosure and an asset hash.
+
+Family diagrams must differ in their mechanism topology, not only colors or labels. Preserve the distinct parameter loop, task–policy co-evolution, memory read/write, harness candidate search, independent evaluation tracks and meta-improver hierarchy. Public implementation previews must correspond to the pinned module/edge audit and remain visible in the portal and case chapters.
 
 ## Changes and evidence
 

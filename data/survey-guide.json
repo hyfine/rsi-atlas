@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-11-06",
+  "chapter_href": "docs/zh/12_RSI_Research_Synthesis.md",
+  "title": {"en":"From Retained Changes to Testable Improvement Capability","zh":"从可保留的改变到可检验的改进能力"},
+  "executive_summary": {
+    "en":"Recursive self-improvement should be studied as an evidence-bearing transition between persistent systems, not as repeated prompting or a rising benchmark curve. This chapter synthesizes three secondary readings while citing their underlying primary literature. It distinguishes broad self-improvement research from narrow recursion, structural mechanism reuse from effective improvement, and saved artifacts from assets actually consumed by successors.\n\nThe synthesis compares the AI4AI survey’s ownership, grounding and reliability axes; the Genuine RSI paper’s responsibility and inheritance framework; and the Self-Developing Agents project’s target, experience and system integration problems. None maps directly onto the Atlas’s operational A–F families.\n\nA common state–update–feedback–successor model connects self-training, reinforcement learning, self-play, distillation, curricula, memory, harness search, Pareto retention, evaluator evolution and meta-coevolution. Twenty-nine methods are compared by update target, feedback, persistent asset, frozen boundary, evidence and cost.\n\nFour recent works illustrate distinct advances: Harness² accumulates evidence-backed improvement experience; Evo² trains the evolver while freezing the executor; RRSI regularizes search; and OO-Harness combines specialization, inheritance and protected routing. Their reported gains are not independent replications or universal recursion claims.\n\nPractical guidance prioritizes feedback availability, total lifecycle cost, transfer, negative results and paired continuation experiments. The central open question is whether inherited mechanisms produce better future successors under comparable resources and independent evaluation.",
+    "zh":"RSI 不是重复提示或一条上涨曲线，而是有证据的持久状态转移。本综述综合三份完整研读材料，把更新对象、改进责任、反馈依据、实际继承与后继效用分开讨论；AI4AI、Genuine RSI、Self-Developing Agents 的原有坐标不与 A–F 家族强行一一对应。\n\n通过十类算法模板与二十九项方法矩阵，比较训练、课程、记忆、技能、Harness、评价器和元改进如何利用不同反馈，更新何种资产，保留哪些冻结层。四项近期重点工作分别展示经验积累、改进器训练、正则化搜索以及特化继承与回退，不能拼成通用排行榜。\n\n选路从瓶颈、可用反馈与可撤回的最小更新开始；评价要包含研发和部署的完整成本、负结果、迁移以及同起点、同信息、同预算的配对继续实验。文中作者报告不冒充独立复现。"
+  },
+  "evidence_scope":{"secondary_documents_read_in_full":3,"methods_compared":29,"independent_results_reproduced":false},
+  "sources":[
+    {"name":"AI4AI Survey","url":"https://doi.org/10.20944/preprints202608.2108.v1"},
+    {"name":"Toward Genuine Recursive Self-Improvement","url":"https://arxiv.org/abs/2609.11873v3"},
+    {"name":"Self-Developing Agents","url":"https://self-developing-agents.github.io/"}
+  ],
+  "taxonomy_semantics": "Operational analytical families, not a field standard or a paper's native taxonomy.",
+  "cards": [
+    {
+      "id": "scope-and-successors",
+      "title": {
+        "zh": "什么才算递归改进",
+        "en": "What Counts as Recursive Improvement?"
+      },
+      "summary": {
+        "zh": "区分输出修订、持久自我改进与元机制递归。后继者必须实际使用已接受的改变，文件保存与代码可编辑都不足以证明继承。",
+        "en": "Separate output revision, persistent adaptation and recursive mechanism changes. Successors must actually consume accepted updates; saved files and editable code alone do not establish inheritance."
+      },
+      "question": {
+        "zh": "下一轮读取了什么，又因此改变了什么决定？",
+        "en": "What does the next round consume, and which decision changes because of it?"
+      },
+      "families": ["A", "B", "C", "D", "E", "F"],
+      "chapter_href": "docs/zh/12_RSI_Research_Synthesis.md",
+      "section": "1",
+      "primary_urls": ["https://arxiv.org/abs/2609.11873v3"]
+    },
+    {
+      "id": "frameworks-without-forced-mappings",
+      "title": {
+        "zh": "四套坐标，不做强行映射",
+        "en": "Four Coordinates, No Forced Mapping"
+      },
+      "summary": {
+        "zh": "AI4AI 分解对象、所有权与证据；Genuine RSI 追踪责任与继承；Self-Developing Agents 拆解目标、经验和系统。A–F 只帮助定位更新载体。",
+        "en": "AI4AI separates targets, ownership and evidence; Genuine RSI tracks responsibility and inheritance; Self-Developing Agents examines targets, experience and systems. A–F locates update surfaces, not autonomy levels."
+      },
+      "question": {
+        "zh": "改什么、谁决定、凭什么相信，是否被混成一个标签？",
+        "en": "Are update targets, decision ownership and evidence being collapsed into one label?"
+      },
+      "families": ["A", "B", "C", "D", "E", "F"],
+      "chapter_href": "docs/zh/12_RSI_Research_Synthesis.md",
+      "section": "2",
+      "primary_urls": [
+        "https://doi.org/10.20944/preprints202608.2108.v1",
+        "https://arxiv.org/abs/2609.11873v3",
+        "https://self-developing-agents.github.io/"
+      ]
+    },
+    {
+      "id": "training-and-information-boundaries",
+      "title": {
+        "zh": "训练回路与信息边界",
+        "en": "Training Loops and Information Boundaries"
+      },
+      "summary": {
+        "zh": "比较自训练、RL、自博弈与蒸馏：成功样本、奖励、对手和教师分别从哪里获得信息？同模型教师看到答案，仍然属于特权监督。",
+        "en": "Compare self-training, RL, self-play and distillation by their information sources. A same-model teacher with answer access still supplies privileged supervision."
+      },
+      "question": {
+        "zh": "收益来自学习机制，还是额外样本、答案或计算？",
+        "en": "Does the gain come from learning, or from extra samples, answers or compute?"
+      },
+      "families": ["A", "B", "E"],
+      "chapter_href": "docs/zh/12_RSI_Research_Synthesis.md",
+      "section": "4.1–4.4",
+      "primary_urls": [
+        "https://arxiv.org/abs/2203.14465",
+        "https://arxiv.org/abs/2312.06585",
+        "https://arxiv.org/abs/2609.30652"
+      ]
+    },
+    {
+      "id": "learning-agendas",
+      "title": {
+        "zh": "让课程响应学习者",
+        "en": "Learner-Conditioned Experience"
+      },
+      "summary": {
+        "zh": "任务正确、当前困难与未来有学习价值是三个变量。环境或课程的难度上升，不能代替能力覆盖和独立迁移。",
+        "en": "Task correctness, current difficulty and future learning value are distinct. Increasing curriculum difficulty does not establish broader capability or independent transfer."
+      },
+      "question": {
+        "zh": "生成器是否利用当前能力，选择值得获取的下一批经验？",
+        "en": "Does the generator use current capability to select valuable future experience?"
+      },
+      "families": ["A", "B", "E", "F"],
+      "chapter_href": "docs/zh/12_RSI_Research_Synthesis.md",
+      "section": "4.5",
+      "primary_urls": [
+        "https://arxiv.org/abs/1901.01753",
+        "https://arxiv.org/abs/2012.02096",
+        "https://arxiv.org/abs/2505.03335"
+      ]
+    },
+    {
+      "id": "memory-that-changes-action",
+      "title": {
+        "zh": "记忆必须改变行动",
+        "en": "Memory Must Change Action"
+      },
+      "summary": {
+        "zh": "历史、摘要、程序技能与参数适应有不同失真方式。可读摘要不一定保留精确状态，检索命中与机制触发也不等于因果收益。",
+        "en": "History, summaries, executable skills and parameter adaptation fail differently. Readable summaries may discard critical state; retrieval and activation do not by themselves establish causal benefit."
+      },
+      "question": {
+        "zh": "资产是否经过读取、激活、执行和独立效果检查？",
+        "en": "Was the asset retrieved, activated, executed and independently evaluated?"
+      },
+      "families": ["A", "C", "D", "E"],
+      "chapter_href": "docs/zh/12_RSI_Research_Synthesis.md",
+      "section": "4.6",
+      "primary_urls": [
+        "https://arxiv.org/abs/2303.11366",
+        "https://arxiv.org/abs/2305.16291",
+        "https://arxiv.org/abs/2608.31100"
+      ]
+    },
+    {
+      "id": "harness-search-and-diversity",
+      "title": {
+        "zh": "运行时搜索与多样性",
+        "en": "Harness Search and Diversity"
+      },
+      "summary": {
+        "zh": "提示、工作流、完整代码和特化类需要不同验证。多谱系或 Pareto 保留提供选择权，却增加搜索、兼容性与路由成本。",
+        "en": "Prompts, workflows, full code and specialized classes require different validation. Archives and Pareto retention preserve options while adding search, compatibility and routing costs."
+      },
+      "question": {
+        "zh": "保留的是互补机制，还是同一代理指标上的多个幸运赢家？",
+        "en": "Are retained candidates complementary mechanisms or merely lucky proxy winners?"
+      },
+      "families": ["C", "D", "E", "F"],
+      "chapter_href": "docs/zh/12_RSI_Research_Synthesis.md",
+      "section": "4.7–4.8",
+      "primary_urls": [
+        "https://arxiv.org/abs/2408.08435",
+        "https://arxiv.org/abs/2507.19457",
+        "https://arxiv.org/abs/2610.28380v1"
+      ]
+    },
+    {
+      "id": "evolving-evaluators",
+      "title": {
+        "zh": "评价器可以变，比较尺度不能丢",
+        "en": "Evolving Evaluators, Preserving Comparability"
+      },
+      "summary": {
+        "zh": "内部裁判可更新，但必须保留外层锚点、轮内冻结和换尺后的重评。反复返回聚合分，也会产生适应性选择信息。",
+        "en": "Internal evaluators may evolve, but require protected anchors, within-round freezing and rescoring after replacement. Repeated aggregate scores also provide adaptive selection information."
+      },
+      "question": {
+        "zh": "跨代增长来自能力提高，还是评价标准漂移？",
+        "en": "Does cross-generation growth reflect capability or a moving evaluator?"
+      },
+      "families": ["E", "F"],
+      "chapter_href": "docs/zh/12_RSI_Research_Synthesis.md",
+      "section": "4.9；9.1",
+      "primary_urls": [
+        "https://arxiv.org/abs/2609.11873v3",
+        "https://arxiv.org/abs/2608.31111"
+      ]
+    },
+    {
+      "id": "four-focus-works",
+      "title": {
+        "zh": "四项新作，四种不同落点",
+        "en": "Four Focus Works, Four Different Levers"
+      },
+      "summary": {
+        "zh": "Harness² 积累改进经验；Evo² 训练改进者并冻结执行器；RRSI 约束搜索路径；OO-Harness 组织特化与回退。不能合成一张通用排行榜。",
+        "en": "Harness² accumulates improvement experience; Evo² trains the evolver with a frozen executor; RRSI regularizes search; OO-Harness organizes specialization and fallback. They do not form a universal leaderboard."
+      },
+      "question": {
+        "zh": "各自更新什么、冻结什么，反馈何时可见？",
+        "en": "What changes, what stays frozen, and when is feedback visible?"
+      },
+      "families": ["A", "C", "D", "E", "F"],
+      "chapter_href": "docs/zh/12_RSI_Research_Synthesis.md",
+      "section": "7",
+      "primary_urls": [
+        "https://arxiv.org/abs/2610.14224v1",
+        "https://arxiv.org/abs/2610.13025v1",
+        "https://arxiv.org/abs/2609.24972v3",
+        "https://arxiv.org/abs/2610.28380v1"
+      ]
+    },
+    {
+      "id": "route-selection-and-cost",
+      "title": {
+        "zh": "按反馈制度选路线",
+        "en": "Choose Routes by Feedback Regime"
+      },
+      "summary": {
+        "zh": "先判断瓶颈和反馈可得性，再选择参数、记忆、技能或运行时。研发成本、部署成本、并行延迟与摊销假设必须分别报告。",
+        "en": "Locate the bottleneck and available feedback before choosing parameters, memory, skills or runtime edits. Separate development cost, deployment cost, parallel latency and amortization assumptions."
+      },
+      "question": {
+        "zh": "哪一种最小、可撤回的改变足以检验当前假设？",
+        "en": "What is the smallest reversible change that tests the current hypothesis?"
+      },
+      "families": ["A", "B", "C", "D", "E", "F"],
+      "chapter_href": "docs/zh/12_RSI_Research_Synthesis.md",
+      "section": "8；9.3",
+      "primary_urls": [
+        "https://arxiv.org/abs/2609.24972v3",
+        "https://arxiv.org/abs/2609.01437"
+      ]
+    },
+    {
+      "id": "paired-continuation-and-negative-results",
+      "title": {
+        "zh": "用继续实验检验递归",
+        "en": "Test Recursion Through Paired Continuation"
+      },
+      "summary": {
+        "zh": "让新旧改进器从共同起点、相同信息与总预算继续工作，独立评价后继者。负结果、回滚、基线回退和最佳—最终差距都是核心证据。",
+        "en": "Run old and new improvers from common starts with matched information and total budgets, then independently evaluate successors. Failures, rollback, fallback and best–final gaps are central evidence."
+      },
+      "question": {
+        "zh": "更强的是当前产物，还是产生未来改进的能力？",
+        "en": "Is the current artifact better, or is the ability to improve future artifacts better?"
+      },
+      "families": ["E", "F"],
+      "chapter_href": "docs/zh/12_RSI_Research_Synthesis.md",
+      "section": "9.5–11",
+      "primary_urls": [
+        "https://arxiv.org/abs/2310.02304",
+        "https://arxiv.org/abs/2603.19461",
+        "https://arxiv.org/abs/2610.13025v1"
+      ]
+    }
+  ]
+}

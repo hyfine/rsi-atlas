@@ -7,6 +7,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const directory = path.join(root, 'docs/repo_deepdive');
 const metadata = JSON.parse(fs.readFileSync(path.join(directory, 'repositories.json'), 'utf8'));
 const audits = JSON.parse(fs.readFileSync(path.join(directory, 'source-audits.json'), 'utf8'));
+const layouts = JSON.parse(fs.readFileSync(path.join(directory, 'architecture-layouts.json'), 'utf8'));
 const labels = {
   genericagent:['执行循环','Agent 初始化','工具 schema','系统提示','模型会话','流式请求与重试','Claude 可选路由','浏览器执行底座','工具分发','历史压缩','CLI 包入口','兼容旧入口'],
   gepa:['经典优化 API','通用文本 API','搜索引擎','候选与前沿状态','评估适配接口','通用API引擎分派','反思变异','反思模型','候选合并','候选选择','状态初始化','结果对象'],
@@ -120,6 +121,50 @@ const url = (repo,item) => `https://github.com/${repo.name}/blob/${repo.commit}/
 const sourceLink = (repo,item,label=`${item.path}:${item.line}`) => `[${label}](${url(repo,item)})`;
 const mermaidId = value => value.replaceAll('-','_');
 const safeLabel = value => String(value).replaceAll('"',"'").replaceAll('\n',' ');
+const xml = value => String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[char]));
+function architectureSvg(repo) {
+  const layout=layouts[repo.id];
+  assert.ok(layout,`Missing architecture layout ${repo.id}`);
+  const modules=new Map(repo.modules.map(module=>[module.id,module]));
+  const visible=new Set(layout.nodes.map(node=>node[0]));
+  assert.equal(visible.size,layout.nodes.length);
+  const groups=layout.groups.map(([x,y,w,h,label])=>`<g class="boundary"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="16"/><text x="${x+18}" y="${y+28}">${xml(label)}</text></g>`).join('');
+  const edges=layout.edges.map(([from,to,points,label,x,y,kind])=>{
+    const audit=repo.edges.find(edge=>edge.from===from&&edge.to===to);
+    assert.ok(audit&&visible.has(from)&&visible.has(to),`Unaudited architecture edge ${repo.id}: ${from} → ${to}`);
+    assert.ok(['control','state','optional'].includes(kind));
+    const route=points.map(([px,py],index)=>`${index?'L':'M'}${px},${py}`).join(' ');
+    return `<g class="connection ${kind}" data-from="${from}" data-to="${to}" data-edge-label="${xml(audit.label)}"><title>${xml(from+' → '+to+' · '+audit.label)}</title><path d="${route}" marker-end="url(#${repo.id}-${kind})"/>${label?`<text x="${x}" y="${y}" text-anchor="middle">${xml(label)}</text>`:''}</g>`;
+  }).join('');
+  const nodes=layout.nodes.map(([id,x,y,w,h,label,caption])=>{
+    const module=modules.get(id);
+    assert.ok(module,`Unknown architecture module ${repo.id}: ${id}`);
+    return `<g class="architecture-node" data-module="${id}" role="button" tabindex="0" aria-label="${xml(id+' · '+label+'；查看模块详情')}" transform="translate(${x} ${y})"><title>${xml(module.role+' · '+module.path+':'+module.line)}</title><rect width="${w}" height="${h}" rx="12"/><text class="node-label" x="16" y="29">${xml(label)}</text>${caption?`<text class="node-caption" x="16" y="51">${xml(caption)}</text>`:''}<text class="node-id" x="16" y="${h-12}">${id}</text><a href="${xml(module.source)}" target="_blank" rel="noopener" aria-label="${xml(id+' 固定源码 '+module.path+':'+module.line)}"><text class="node-source" x="${w-16}" y="${h-12}" text-anchor="end">源码 ↗</text></a></g>`;
+  }).join('');
+  const notes=layout.notes.map(([x,y,lines,id])=>{
+    assert.ok(modules.has(id),`Unknown note source ${repo.id}: ${id}`);
+    return `<g class="annotation" data-note-source="${id}">${lines.map((line,index)=>`<text x="${x}" y="${y+index*26}">${xml(line)}</text>`).join('')}<a href="${xml(modules.get(id).source)}" target="_blank" rel="noopener"><text x="${x}" y="${y+lines.length*26}">${id} · 相关源码 ↗</text></a></g>`;
+  }).join('');
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="${repo.id}-title ${repo.id}-description" data-repo="${repo.id}">
+<title id="${repo.id}-title">${xml(layout.title)}</title><desc id="${repo.id}-description">${xml(layout.subtitle)} 固定源码快照 ${metadata.snapshot_date}；未运行模型或 benchmark。节点可查看模块，源码链接固定到 commit。</desc>
+<defs>${['control','state','optional'].map(kind=>`<marker id="${repo.id}-${kind}" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="${kind==='state'?'#ffcf88':kind==='optional'?'#afabf4':'#70d9cb'}"/></marker>`).join('')}</defs>
+<style>
+svg{max-width:100%;height:auto;background:#0b1524;color:#edf5ff;font-family:system-ui,-apple-system,sans-serif}
+.canvas{fill:#0b1524}.heading{fill:#edf5ff;font-size:27px;font-weight:700}.subtitle,.legend,.snapshot{fill:#b3c5da;font-size:16px}
+.boundary rect{fill:#102035;stroke:#35506d;stroke-width:1.5}.boundary text{fill:#bed3ea;font-size:18px;font-weight:600}
+.connection path{fill:none;stroke:#70d9cb;stroke-width:2}.connection.state path{stroke:#ffcf88}.connection.optional path{stroke:#afabf4;stroke-dasharray:7 5}
+.connection text{fill:#c9d8e9;font-size:16px;paint-order:stroke;stroke:#102035;stroke-width:7;stroke-linejoin:round}
+.architecture-node{cursor:pointer;outline:none}.architecture-node rect{fill:#193047;stroke:#54738e;stroke-width:1.5}.architecture-node:hover rect,.architecture-node:focus-visible rect,.architecture-node.active rect{fill:#21455a;stroke:#70d9cb;stroke-width:3}
+.node-label{fill:#edf5ff;font-size:20px;font-weight:650}.node-caption{fill:#c3d4e6;font-size:15px}.node-id{fill:#ffcf88;font-size:14px}.node-source{fill:#70d9cb;font-size:14px}
+.annotation text{fill:#c3d4e6;font-size:16px}.annotation a text{fill:#70d9cb}a:focus-visible text{fill:white;text-decoration:underline}
+</style>
+<rect class="canvas" width="1200" height="820" rx="18"/>
+<text class="heading" x="28" y="43">${xml(layout.title)}</text><text class="subtitle" x="28" y="76">${xml(layout.subtitle)}</text>
+<g class="legend"><path d="M30 106 H70" stroke="#70d9cb" stroke-width="2"/><text x="80" y="111">控制 / 调用</text><path d="M230 106 H270" stroke="#ffcf88" stroke-width="2"/><text x="280" y="111">数据 / 状态</text><path d="M435 106 H475" stroke="#afabf4" stroke-width="2" stroke-dasharray="7 5"/><text x="485" y="111">可选 / 按开关</text><text x="815" y="111">节点可点击 · 源码固定到 commit</text></g>
+${groups}${edges}${nodes}${notes}
+<text class="snapshot" x="28" y="753">${xml(layout.footer)}</text><text class="snapshot" x="28" y="785">源码快照 ${metadata.snapshot_date} · ${repo.commit.slice(0,12)} · 静态源码审计；未运行模型 / benchmark</text>
+</svg>\n`;
+}
 const repos = metadata.repos.map(repo => {
   const audit = audits.repos.find(record => record.id === `${repo.audit_name}@${repo.commit}`);
   assert.ok(audit, `Missing pinned audit ${repo.id}`);
@@ -132,7 +177,12 @@ const repos = metadata.repos.map(repo => {
     return {module,label,detail:item.role,source:item.source};
   });
   for(const edge of audit.architecture_edges)assert.ok(map.has(edge.from)&&map.has(edge.to),`Unknown architecture endpoint ${repo.id}`);
-  return {...repo,setup:setups[repo.id],entry:{...audit.entry,source:url(repo,audit.entry)},modules,walk,flow:audit.flow.map(step=>({...step,source:url(repo,step)})),edges:audit.architecture_edges,frozen:array(audit.frozen),mutable:array(audit.mutable),limitations:array(audit.limitations),commands:audit.commands.map(command=>({...command,source:url(repo,command)}))};
+  const result={...repo,setup:setups[repo.id],entry:{...audit.entry,source:url(repo,audit.entry)},modules,walk,flow:audit.flow.map(step=>({...step,source:url(repo,step)})),edges:audit.architecture_edges,frozen:array(audit.frozen),mutable:array(audit.mutable),limitations:array(audit.limitations),commands:audit.commands.map(command=>({...command,source:url(repo,command)}))};
+  result.architecture_asset=`pics/implementations/${repo.id}-architecture.svg`;
+  result.architecture_svg=architectureSvg(result);
+  fs.mkdirSync(path.join(root,'pics/implementations'),{recursive:true});
+  fs.writeFileSync(path.join(root,result.architecture_asset),result.architecture_svg);
+  return result;
 });
 fs.mkdirSync(path.join(directory,'cases'),{recursive:true});
 for(const repo of repos){
@@ -191,6 +241,10 @@ ${repo.api_boundary?`### 2.3 实际 API 与引擎选择\n\n${repo.api_boundary}\
 ## 3. 运行架构与核心模块
 
 真实入口：[${repo.entry.symbol}](${repo.entry.source})。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。
+
+![${repo.title}：源码架构图](../../../${repo.architecture_asset})
+
+[交互架构：点击节点查看模块与源码](../implementation-atlas.html?repo=${repo.id}) · [下载原生 SVG](../../../${repo.architecture_asset})。青色为控制/调用，金色为数据/状态，紫色虚线为可选路径；这是固定源码快照，不是模型实跑轨迹。全部 12 个模块仍列在下方表中。
 
 \`\`\`mermaid
 ${diagram}

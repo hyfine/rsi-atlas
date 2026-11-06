@@ -17,6 +17,7 @@ data/*
 !data/focus-methods.json
 !data/institutions.json
 !data/ui-translations.json
+!data/survey-guide.json
 !data/primary-verification.json
 !data/delivery-audit.json
 scripts/*
@@ -33,6 +34,7 @@ scripts/*
 !scripts/consolidation.test.mjs
 !scripts/timeline.test.mjs
 !scripts/math.test.mjs
+!scripts/survey.test.mjs
 !scripts/browser-test-utils.mjs
 !scripts/viewer.template.html
 !scripts/implementation.template.html

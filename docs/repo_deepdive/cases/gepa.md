@@ -58,6 +58,10 @@
 
 真实入口：[optimize](https://github.com/gepa-ai/gepa/blob/3d34469165f0d604df3b48f1d5c776e9080f3da0/src/gepa/api.py#L53)。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。
 
+![GEPA：执行反馈驱动的反思与互补候选选择：源码架构图](../../../pics/implementations/gepa-architecture.svg)
+
+[交互架构：点击节点查看模块与源码](../implementation-atlas.html?repo=gepa) · [下载原生 SVG](../../../pics/implementations/gepa-architecture.svg)。青色为控制/调用，金色为数据/状态，紫色虚线为可选路径；这是固定源码快照，不是模型实跑轨迹。全部 12 个模块仍列在下方表中。
+
 ```mermaid
 flowchart LR
   G_1["G-1 经典优化 API"]

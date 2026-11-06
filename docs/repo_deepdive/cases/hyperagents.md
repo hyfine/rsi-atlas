@@ -48,6 +48,10 @@
 
 真实入口：[__main__](https://github.com/facebookresearch/HyperAgents/blob/59a68f672dfb92c74aeb7e61535d776fb36e172d/generate_loop.py#L1025)。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。
 
+![HyperAgents：将任务代理与元代理纳入同一可编辑系统：源码架构图](../../../pics/implementations/hyperagents-architecture.svg)
+
+[交互架构：点击节点查看模块与源码](../implementation-atlas.html?repo=hyperagents) · [下载原生 SVG](../../../pics/implementations/hyperagents-architecture.svg)。青色为控制/调用，金色为数据/状态，紫色虚线为可选路径；这是固定源码快照，不是模型实跑轨迹。全部 12 个模块仍列在下方表中。
+
 ```mermaid
 flowchart LR
   HA_1["HA-1 演化主循环"]

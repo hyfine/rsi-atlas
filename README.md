@@ -8,6 +8,14 @@
 
 [Explore the live atlas](https://hyfine.github.io/rsi-atlas/) · [Family timeline](https://hyfine.github.io/rsi-atlas/#timeline) · [Institutions](https://hyfine.github.io/rsi-atlas/#institutions) · [中文切换](README.zh-CN.md)
 
+## Start with a real research synthesis
+
+[Read the cross-survey synthesis · Chinese](docs/zh/12_RSI_Research_Synthesis.md) · [Explore the survey portal](https://hyfine.github.io/rsi-atlas/#survey)
+
+A problem-driven synthesis of AI4AI, Genuine RSI and Self-Developing Agents: definitions, ten algorithm templates, 29 comparative methods, feedback assumptions, frozen layers, negative results, lifecycle cost and open research questions. The A–F object families are not autonomy rankings.
+
+![Independent survey coordinates](pics/rsi-survey-map-en.svg)
+
 ## Start with the questions that matter
 
 What changes? What persists? Does the successor actually participate in the next improvement? Who independently checks the result?

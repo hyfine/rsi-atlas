@@ -90,7 +90,7 @@ test('real Chrome: filters, modal, ten animated scenes, themes and responsive co
     fs.mkdirSync(path.join(root, '.delivery-check'), { recursive: true });
     for (const [width, height] of [[360,780],[390,844],[1440,900],[1600,1000],[1920,1080],[2048,1320]]) {
       await page('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: width < 600 });
-      for (const view of ['panorama', 'methods', 'loops', 'timeline', 'institutions', 'implementations', 'evidence', 'reading']) {
+      for (const view of ['panorama', 'survey', 'methods', 'loops', 'timeline', 'institutions', 'implementations', 'evidence', 'reading']) {
         await evaluate(`location.hash=${JSON.stringify(view)}`);
         await waitFor(`document.getElementById(${JSON.stringify(view)}).hidden === false`);
         const metrics = await evaluate(`({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,view:location.hash})`);

@@ -48,6 +48,10 @@ Evo 持久状态是解代码、父节点/经验、Journal、SolutionsDatabase �
 
 真实入口：[main](https://github.com/FrontisAI/OpenRSI/blob/71ae803a035d5e3b78c19fa49ed9f67d0550cbaa/OpenMLE-Evo/scripts/evaluate_airaevo.py#L295)。以下连线来自本次固定源码审计；未连入主图的兼容入口、接口对象或辅助模块仍列在源码表，不能推断它们是每次必经路径。
 
+![OpenRSI：工程任务、算子学习与长时搜索的分层实现：源码架构图](../../../pics/implementations/openrsi-architecture.svg)
+
+[交互架构：点击节点查看模块与源码](../implementation-atlas.html?repo=openrsi) · [下载原生 SVG](../../../pics/implementations/openrsi-architecture.svg)。青色为控制/调用，金色为数据/状态，紫色虚线为可选路径；这是固定源码快照，不是模型实跑轨迹。全部 12 个模块仍列在下方表中。
+
 ```mermaid
 flowchart LR
   OR_1["OR-1 MLE-Bench 入口"]

@@ -59,7 +59,55 @@ export function validateImplementations(sourceRoot) {
   const embedded=JSON.parse(match[1]);
   assert.equal(embedded.repos.length,6);
   assert.equal(embedded.repos.reduce((n,repo)=>n+repo.modules.length,0),modules);
-  return {ok:true,repositories:6,modules,source_flow_steps:flowSteps,source_anchors_checked:anchors,source_verified:Boolean(sourceRoot),paid_or_research_code_executed:false};
+  const layouts=JSON.parse(fs.readFileSync(path.join(directory,'architecture-layouts.json'),'utf8'));
+  let diagramNodes=0,diagramEdges=0;
+  for(const repo of embedded.repos){
+    const audit=audits.repos.find(record=>record.id===`${repo.audit_name}@${repo.commit}`);
+    const layout=layouts[repo.id];
+    assert.ok(layout,`Missing native layout ${repo.id}`);
+    assert.equal(repo.architecture_asset,`pics/implementations/${repo.id}-architecture.svg`);
+    const svg=fs.readFileSync(path.join(root,repo.architecture_asset),'utf8');
+    assert.equal(repo.architecture_svg,svg,`Inline/download asset mismatch ${repo.id}`);
+    assert.match(svg,/viewBox="0 0 1200 820"/);
+    assert.ok(!/<(?:script|image|foreignObject)\b|@import|url\(["']?https?:/i.test(svg),`External or non-vector content ${repo.id}`);
+    assert.ok(svg.includes('静态源码审计；未运行模型 / benchmark'));
+    const visible=new Set(layout.nodes.map(node=>node[0]));
+    assert.equal(visible.size,layout.nodes.length);
+    const renderedIds=Array.from(svg.matchAll(/class="architecture-node" data-module="([^"]+)"/g),match=>match[1]);
+    assert.deepEqual(renderedIds,Array.from(visible));
+    for(const [id,x,y,w,h]of layout.nodes){
+      const module=audit.modules.find(item=>item.id===id);
+      assert.ok(module,`Unverified SVG node ${repo.id}/${id}`);
+      assert.ok(x>=0&&y>=0&&x+w<=1200&&y+h<=720,`Out-of-bounds node ${repo.id}/${id}`);
+      assert.ok(svg.includes(`https://github.com/${repo.name}/blob/${repo.commit}/${module.path}#L${module.line}`));
+      for(const [other,ox,oy,ow,oh]of layout.nodes){
+        if(id===other)continue;
+        assert.ok(x+w<=ox||ox+ow<=x||y+h<=oy||oy+oh<=y,`Overlapping nodes ${repo.id}/${id}/${other}`);
+      }
+    }
+    assert.equal((svg.match(/class="connection /g)??[]).length,layout.edges.length);
+    for(const [from,to,points]of layout.edges){
+      const edge=audit.architecture_edges.find(item=>item.from===from&&item.to===to);
+      assert.ok(edge&&visible.has(from)&&visible.has(to),`Unverified SVG edge ${repo.id}/${from}/${to}`);
+      const escaped=edge.label.replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[char]));
+      assert.ok(svg.includes(`data-from="${from}" data-to="${to}" data-edge-label="${escaped}"`));
+      for(let index=1;index<points.length;index++){
+        const [ax,ay]=points[index-1], [bx,by]=points[index];
+        assert.ok(ax===bx||ay===by,`Non-orthogonal route ${repo.id}/${from}/${to}`);
+        for(const [id,x,y,w,h]of layout.nodes){
+          const crosses=ax===bx?ax>x&&ax<x+w&&Math.max(ay,by)>y&&Math.min(ay,by)<y+h:ay>y&&ay<y+h&&Math.max(ax,bx)>x&&Math.min(ax,bx)<x+w;
+          assert.ok(!crosses,`Edge crosses node ${repo.id}/${from}→${to}/${id}`);
+        }
+      }
+    }
+    const chapter=fs.readFileSync(path.join(directory,'cases',`${repo.id}.md`),'utf8');
+    const image=chapter.indexOf(`](../../../${repo.architecture_asset})`);
+    assert.ok(image>=0&&image<chapter.indexOf('```mermaid'),`Missing early static preview ${repo.id}`);
+    assert.ok(chapter.includes(`../implementation-atlas.html?repo=${repo.id}`));
+    diagramNodes+=visible.size;diagramEdges+=layout.edges.length;
+  }
+  assert.ok(html.includes('id="architecture-frame"')&&html.includes('id="architecture-download"'));
+  return {ok:true,repositories:6,modules,native_svg_diagrams:6,diagram_nodes:diagramNodes,diagram_edges:diagramEdges,source_flow_steps:flowSteps,source_anchors_checked:anchors,source_verified:Boolean(sourceRoot),paid_or_research_code_executed:false};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   const i=process.argv.indexOf('--source-root');

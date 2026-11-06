@@ -1,10 +1,10 @@
 {
   "status": "passed",
-  "checked_at": "2026-11-06T05:05:13.256Z",
+  "checked_at": "2026-11-06T06:05:14.184Z",
   "schema_and_links": {
     "ok": true,
-    "publication_files": 151,
-    "local_links_checked": 491,
+    "publication_files": 163,
+    "local_links_checked": 522,
     "methods": 88,
     "recent_methods": 58,
     "dynamic_scenes": 10,
@@ -19,6 +19,12 @@
       "width": 360,
       "height": 780,
       "view": "panorama",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 360,
+      "height": 780,
+      "view": "survey",
       "horizontal_overflow": false
     },
     {
@@ -67,6 +73,12 @@
       "width": 390,
       "height": 844,
       "view": "panorama",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "view": "survey",
       "horizontal_overflow": false
     },
     {
@@ -115,6 +127,12 @@
       "width": 1440,
       "height": 900,
       "view": "panorama",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "view": "survey",
       "horizontal_overflow": false
     },
     {
@@ -163,6 +181,12 @@
       "width": 1600,
       "height": 1000,
       "view": "panorama",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1600,
+      "height": 1000,
+      "view": "survey",
       "horizontal_overflow": false
     },
     {
@@ -211,6 +235,12 @@
       "width": 1920,
       "height": 1080,
       "view": "panorama",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "view": "survey",
       "horizontal_overflow": false
     },
     {
@@ -259,6 +289,12 @@
       "width": 2048,
       "height": 1320,
       "view": "panorama",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 2048,
+      "height": 1320,
+      "view": "survey",
       "horizontal_overflow": false
     },
     {
