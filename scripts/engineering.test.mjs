@@ -40,6 +40,7 @@ test('engineering guide and composition chart are complete and deterministic',()
   assert.deepEqual(names.map(name=>digest(fs.readFileSync(path.join(root,name)))),before);
   const text=fs.readFileSync(path.join(root,names[0]),'utf8');
   assert.equal((text.match(/^<details>/gm)??[]).length,data.projects.length);
+  for(const summary of text.matchAll(/<summary>([\s\S]*?)<\/summary>/g))assert.ok(!/\\[_*`]/.test(summary[1]),'HTML summary text must not contain literal Markdown escape slashes');
   for(const project of [...data.projects,...data.excluded])assert.ok(text.includes(project.url),`Missing source URL ${project.repository}`);
   assert.ok(text.includes('不提交原 Excel 文件')&&text.includes('不是本次'));
   assert.ok(text.includes('近似')&&text.includes('未声明')&&text.includes('相对'));

@@ -811,7 +811,7 @@ AFlow：自动生成与优化 Agentic 工作流
 </details>
 
 <details>
-<summary><strong>MaximeRobeyns/self\_improving\_coding\_agent</strong> · ★ 414 · MIT · 低</summary>
+<summary><strong>MaximeRobeyns/self_improving_coding_agent</strong> · ★ 414 · MIT · 低</summary>
 
 [仓库](https://github.com/MaximeRobeyns/self_improving_coding_agent)
 
@@ -861,7 +861,7 @@ SICA：在自身代码库上工作的自我改进编码智能体
 </details>
 
 <details>
-<summary><strong>Arvid-pku/Godel\_Agent</strong> · ★ 239 · MIT · 低</summary>
+<summary><strong>Arvid-pku/Godel_Agent</strong> · ★ 239 · MIT · 低</summary>
 
 [仓库](https://github.com/Arvid-pku/Godel_Agent)
 
@@ -1095,7 +1095,7 @@ LLM4AD：大模型驱动的自动算法设计平台
 </details>
 
 <details>
-<summary><strong>Optima-CityU/LLM4AD\_Next</strong> · ★ 691 · BSD-3-Clause · 活跃</summary>
+<summary><strong>Optima-CityU/LLM4AD_Next</strong> · ★ 691 · BSD-3-Clause · 活跃</summary>
 
 [仓库](https://github.com/Optima-CityU/LLM4AD_Next)
 
@@ -3624,7 +3624,7 @@ MLAgentBench：评估语言智能体的机器学习实验能力
 </details>
 
 <details>
-<summary><strong>Danielxu0208/rsi\_eval</strong> · ★ 210 · 见 LICENSE 文件 · 未知</summary>
+<summary><strong>Danielxu0208/rsi_eval</strong> · ★ 210 · 见 LICENSE 文件 · 未知</summary>
 
 [仓库](https://github.com/Danielxu0208/rsi_eval)
 
