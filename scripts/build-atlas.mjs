@@ -11,6 +11,8 @@ const base = read('data/method-map.json');
 const notes = read('data/atlas-source-notes.json');
 const verification = read('data/primary-verification.json');
 const dynamics = read('data/dynamic-scenes.json');
+const familyArchitectures = read('data/family-architectures.json');
+const paperFigures = read('data/paper-figures.json');
 const checked = new Map(verification.papers.map(paper => [paper.id, paper]));
 const methods = new Map(base.methods.map(method => [method.id, {
   ...method, kind: method.id === 'arxiv:cs/0309048' ? 'theory' : method.kind ?? 'method',
@@ -23,7 +25,14 @@ for (const note of notes.methods) {
   const existing = methods.get(note.id);
   methods.set(note.id, { ...existing, ...note });
 }
+let normalizedLimitations=0;
 for (const method of methods.values()) {
+  if(typeof method.limitations==='string'){
+    assert.ok(method.limitations.trim(),`Empty limitations: ${method.id}`);
+    method.limitations=[method.limitations];
+    normalizedLimitations++;
+  }
+  assert.ok(Array.isArray(method.limitations)&&method.limitations.length&&method.limitations.every(value=>typeof value==='string'&&value.trim()),`Invalid limitations list: ${method.id}`);
   assert.ok(method.id && method.method && method.title, 'Missing method identity');
   assert.match(method.date, /^\d{4}-\d{2}-\d{2}$/);
   assert.equal(new Date(`${method.date}T00:00:00Z`).toISOString().slice(0, 10), method.date);
@@ -42,6 +51,9 @@ const payload = {
   families: base.families,
   methods: [...methods.values()].sort((a, b) => a.date.localeCompare(b.date) || a.method.localeCompare(b.method)),
   dynamics, verification,
+  family_architectures: familyArchitectures.families,
+  paper_figures: paperFigures.figures,
+  paper_figure_statuses: paperFigures.papers,
 };
 const json = JSON.stringify(payload, null, 2) + '\n';
 fs.writeFileSync(path.join(root, 'data/atlas-methods.json'), json);
@@ -55,16 +67,7 @@ const csv = [fields.map(csvCell).join(','), ...payload.methods.map(method => fie
 fs.writeFileSync(path.join(root, 'data/atlas-methods.csv'), '\ufeff' + csv + '\r\n');
 const md = value => String(value).replaceAll('|', '\\|').replace(/[\r\n]+/g, ' ');
 const kinds = { method: '方法', benchmark: '基准/环境', framework: '框架', theory: '理论/议程' };
-const xml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[char]));
-const references = { a: 'selftrain', b: 'selfplay', c: 'skills', d: 'harness', e: 'evaluation', f: 'meta' };
-for (const [family, sceneId] of Object.entries(references)) {
-  const scene = dynamics.scenes.find(candidate => candidate.id === sceneId);
-  assert.ok(scene);
-  const coords = [[150,130],[460,130],[770,130],[770,300],[460,300],[150,300]];
-  const lines = ['M265 130 H345','M575 130 H655','M770 175 V255','M655 300 H575','M345 300 H265'];
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" role="img" aria-labelledby="title desc"><title id="title">${family.toUpperCase()} 家族参考闭环：${xml(scene.title)}</title><desc id="desc">${xml(scene.note)} 六步：${scene.steps.map(step => xml(step.label)).join('，')}。</desc><rect width="920" height="480" rx="20" fill="#101c2d"/><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#63d4ca"/></marker></defs><text x="460" y="42" text-anchor="middle" fill="#edf5ff" font-family="system-ui,sans-serif" font-size="25">${xml(scene.title)}</text><text x="460" y="71" text-anchor="middle" fill="#b0c1d5" font-family="system-ui,sans-serif" font-size="14">家族代表结构 / 分析性协议 · 不是所有论文共同算法 · 虚线仅表示回流</text>${lines.map(d => `<path d="${d}" fill="none" stroke="#63d4ca" stroke-width="2" marker-end="url(#arrow)"/>`).join('')}<path d="M35 300 H14 V130 H35" fill="none" stroke="#ffcb78" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>${scene.steps.map((step, index) => { const [x,y] = coords[index]; return `<rect x="${x-115}" y="${y-45}" width="230" height="90" rx="14" fill="#17283e" stroke="#36516c"/><text x="${x}" y="${y-12}" text-anchor="middle" fill="#63d4ca" font-family="system-ui,sans-serif" font-size="13">STEP ${index+1}</text><text x="${x}" y="${y+20}" text-anchor="middle" fill="#edf5ff" font-family="system-ui,sans-serif" font-size="18">${xml(step.label)}</text>`; }).join('')}<text x="460" y="395" text-anchor="middle" fill="#b0c1d5" font-family="system-ui,sans-serif" font-size="15">变化：${xml(scene.object)}</text><text x="460" y="426" text-anchor="middle" fill="#ffcb78" font-family="system-ui,sans-serif" font-size="14">请在 HTML 中查看冻结边界、逐步解释与原始证据。</text><text x="460" y="454" text-anchor="middle" fill="#b0c1d5" font-family="system-ui,sans-serif" font-size="13">示意图不保证每轮改善，不是实验轨迹。</text></svg>`;
-  fs.writeFileSync(path.join(root, `pics/family-${family}-flow.svg`), svg + '\n');
-}
+execFileSync(process.execPath,[path.join(root,'scripts/build-family-diagrams.mjs')],{cwd:root,stdio:'inherit'});
 const rows = payload.methods.map(method => `| ${method.date} | [${md(method.method)}](${method.primary_url}) | ${method.families.join(', ')} | ${kinds[method.kind]} | ${md(method.mechanism)} | [详解](${method.chapter.replace('docs/zh/', '')}) |`);
 fs.writeFileSync(path.join(root, 'docs/zh/03_Method_Map_and_Timeline.md'), `# RSI 方法时间索引与机制地图
 
@@ -94,6 +97,7 @@ console.log(JSON.stringify({
   methods: payload.methods.length,
   recent: payload.methods.filter(method => method.in_recent_window).length,
   direct_primary_checks: checked.size,
+  normalized_limitations_records: normalizedLimitations,
   dynamic_scenes: dynamics.scenes.length,
   network_requests: 0,
 }));

@@ -1,10 +1,10 @@
 {
   "status": "passed",
-  "checked_at": "2026-11-05T11:19:54.148Z",
+  "checked_at": "2026-11-06T01:48:38.412Z",
   "schema_and_links": {
     "ok": true,
-    "publication_files": 102,
-    "local_links_checked": 376,
+    "publication_files": 133,
+    "local_links_checked": 433,
     "methods": 66,
     "recent_methods": 38,
     "dynamic_scenes": 10,
@@ -269,14 +269,20 @@
     }
   ],
   "runtime_exceptions": [],
-  "visual_review": "public_implementation_screenshots_inspected_at_390_and_1440; main_viewer_geometry_previously_reviewed",
-  "implementation_deepdive": {
-    "public_repositories": 6,
-    "pinned_source_modules": 72,
-    "source_flow_steps": 59,
-    "source_anchors_verified": 170,
-    "research_code_or_paid_models_executed": false,
-    "browser_walkthroughs": "all_six_passed"
+  "visual_review": "all_six_family_architecture_screenshots_inspected; six_licensed_paper_captures_inspected; theme_toggle_tested",
+  "family_diagrams": {
+    "checked_on": "2026-11-06",
+    "family_architectures": 6,
+    "standalone_architecture_html": 6,
+    "representative_flow_svgs": 6,
+    "standalone_flow_html": 6,
+    "licensed_paper_figures_or_labelled_details": 6,
+    "paper_figure_status_entries": 66,
+    "exact_missing_notes_reference_fixed": "../pics/family-e-flow.svg",
+    "local_mirror_byte_identity": "30_assets_verified",
+    "combined_document_and_browser_checks": "15_passed_0_failed_0_skipped",
+    "svg_text_bounds": "all_six_families_passed",
+    "rebuild_idempotency": "passed"
   },
   "screenshot_files": [
     ".delivery-check/panorama-390.png",

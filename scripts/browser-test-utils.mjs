@@ -14,7 +14,7 @@ export async function connectBrowser(t,url,readyExpression){
   t.after(async()=>{
     if(running()){chrome.kill('SIGTERM');await Promise.race([once(chrome,'exit'),new Promise(resolve=>setTimeout(resolve,5000))]);}
     if(running()){chrome.kill('SIGKILL');await once(chrome,'exit');}
-    fs.rmSync(profile,{recursive:true,force:true});
+    fs.rmSync(profile,{recursive:true,force:true,maxRetries:5,retryDelay:100});
   });
   const endpoint=await new Promise((resolve,reject)=>{
     let output='';

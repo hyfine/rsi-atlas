@@ -58,6 +58,18 @@ $B_t$ 是预算向量，包含推理、训练、候选执行与验证成本；$J
 
 ### 2.0 核心机制、必要输入与分析性目标
 
+<!-- family-a-architecture:start -->
+![A 家族整体思想架构](../../../pics/family-a-architecture.svg)
+
+[交互架构](../../../pics/family-a-architecture.html) · [六家族说明](../08_Family_Architectures.md)。把可用反馈转成跨轮保留的模型能力；关键是参数或训练配方真的变化，而不是本次答案被修改。 这是家族级原创架构；下方流程图是代表方法或参考协议，二者不互相替代。
+<!-- family-a-architecture:end -->
+
+<!-- paper-figure-seal:start -->
+![SEAL 原论文 Figure 1](../../../pics/papers/seal-v1-fig1.png)
+
+原论文 Figure 1（v1），[作者原文及图注](https://arxiv.org/html/2506.10943v1#S1.F1)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。Zweiger, Adam；Pari, Jyothish；Guo, Han；Akyürek, Ekin；Kim, Yoon；Agrawal, Pulkit。裁取原论文 HTML 图形区域并转换为 PNG，未重绘或改写图内内容；完整图注另见原文。自编辑生成、内层参数适应和下游评价连接成外层学习环；不把每种模型训练方法都等同于 SEAL。
+<!-- paper-figure-seal:end -->
+
 ![A 家族模型与训练参考闭环](../../../pics/family-a-flow.svg)
 
 [A 家族动态图与 repository 入口](../../../index.html?scene=selftrain#loops)。图是本家族的分析性参考闭环，用来区分生成、反馈、参数更新和下一轮使用；其中的独立验收、冻结评测或回滚是审计建议，不表示本章每篇论文都实现了这些步骤，也不表示各仓库具有相同接口。
@@ -179,6 +191,12 @@ R1-Zero 的直接 RL 子过程主要是 A/L1；R1 的模型输出回流为训练
 
 ### 3.0 核心机制、必要输入与分析性目标
 
+<!-- family-b-architecture:start -->
+![B 家族整体思想架构](../../../pics/family-b-architecture.svg)
+
+[交互架构](../../../pics/family-b-architecture.html) · [六家族说明](../08_Family_Architectures.md)。让下一轮的学习分布也成为可改进对象；同时维持可解性、覆盖与反馈可靠性，而非只把题目变难。 这是家族级原创架构；下方流程图是代表方法或参考协议，二者不互相替代。
+<!-- family-b-architecture:end -->
+
 ![B 家族数据、任务与环境参考闭环](../../../pics/family-b-flow.svg)
 
 [B 家族动态图与 repository 入口](../../../index.html?scene=selfplay#loops)。图是本家族的分析性参考闭环，不是所有论文共同实现的流水线；独立盲测、回滚、反作弊和数据隔离节点表示建议的审计边界，不能据图声称某方法已经完成这些验证。
@@ -221,6 +239,12 @@ for round in generation_budget:
 POET 提供 B 与 A 的有界 L2 例子，也提醒 LLM 训练研究：只保留当前最强策略可能丢掉未来有用的多样性。
 
 ### 3.2 Absolute Zero：任务分布也由学习者产生
+
+<!-- paper-figure-absolute-zero:start -->
+![Absolute Zero 原论文 Figure 3](../../../pics/papers/absolute-zero-v2-fig3.png)
+
+原论文 Figure 3（v2），[作者原文及图注](https://arxiv.org/html/2505.03335v2#S2.F3)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。Zhao, Andrew；Wu, Yiran；Yue, Yang；Wu, Tong；Xu, Quentin；Yue, Yang；Lin, Matthieu；Wang, Shenzhi；Wu, Qingyun；Zheng, Zilong；Huang, Gao。裁取原论文 HTML 图形区域并转换为 PNG，未重绘或改写图内内容；完整图注另见原文。任务提案经环境校验后产生可求解问题，提案与求解两种角色共同学习；它是任务自博弈的具体实现，不代表全部环境生成方法。
+<!-- paper-figure-absolute-zero:end -->
 
 [Absolute Zero: Reinforced Self-play Reasoning with Zero Data](https://arxiv.org/abs/2505.03335) 的首次提交日为 2025-05-06，训练系统称 Absolute Zero Reasoner，简称 AZR。
 [§2–3](https://arxiv.org/html/2505.03335v1#S3) 用同一模型承担 proposer 和 solver；Python 执行器验证任务并提供解答判据。

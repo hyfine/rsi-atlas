@@ -11,6 +11,8 @@
 | 想解决的问题 | 入口 |
 |---|---|
 | 先看清领域如何发展、各路线如何连接 | [技术全景](docs/zh/01_RSI_Technical_Panorama.md) · [动态全景站](https://hyfine.github.io/rsi-atlas/) |
+| 各 family 的整体思想与组件架构 | [A–F 六张独立架构图](docs/zh/08_Family_Architectures.md) |
+| 论文内部已有架构图与复用许可 | [原论文图、作者署名与图像状态](docs/zh/09_Paper_Figures.md) |
 | 各算法究竟更新什么、如何实现、怎样选型 | [算法手册](docs/zh/04_Algorithm_Handbook.md) |
 | 热门公开实现怎样把机制落到代码 | [六仓库源码深读](docs/repo_deepdive/README.md) · [架构与动态路径](docs/repo_deepdive/implementation-atlas.html) |
 | 最近一年有哪些方法，最新论文是什么 | [近一年研究与最新方法](docs/zh/06_Latest_Year_Research.md) |
@@ -66,9 +68,18 @@ node scripts/validate-delivery.mjs
 node --test scripts/viewer.test.mjs
 ```
 
+本地笔记另有自己的相对图片路径时，显式同步并核验，不只更新公开仓库：
+
+```sh
+node scripts/build-family-diagrams.mjs --notes-root /path/to/RSI-notes
+RSI_NOTES_ROOT=/path/to/RSI-notes node --test scripts/family.test.mjs
+```
+
+目标笔记根目录需要含 `chapters/`。脚本同步六家族的架构/流程 SVG 与独立 HTML、获准论文图，并只更新对应图块；不会用公开旧章节覆盖本地新增正文。
+
 浏览器实测需要本机 Chrome/Chromium；测试找不到浏览器时明确标记 skipped，不能当成视觉通过。公开构建不调用模型、不下载论文、不执行研究仓库源码。
 
-原始语料采集工具及日志只保留在作者工作区，不进入公开 Git；[语料说明](scripts/CORPUS.md)解释其边界。论文 PDF、第三方论文原图、模型权重、下载缓存和个人路径不公开再分发。图谱中的 SVG/HTML 图由本项目重绘。
+原始语料采集工具及日志只保留在作者工作区，不进入公开 Git；[语料说明](scripts/CORPUS.md)解释其边界。论文 PDF、模型权重、下载缓存和个人路径不公开再分发。家族 SVG/HTML 是本项目原创；另外收录六幅明确 CC BY 4.0 的论文图或标记局部，逐图注明作者、版本、图号、裁取范围和来源；其余原图未经授权不复制。
 
 ## 最重要的结论
 

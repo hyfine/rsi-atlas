@@ -68,6 +68,12 @@ E 家族关心的是反馈如何变得更有用、更可信，而不是把所有
 这里的“自评共谋风险”包括非蓄意的共同偏差和奖励投机，并不意味着已证明每篇系统发生了有意串通。
 S3Gym 提供“自评是否对得上外部结果”的诊断；MetaRSI 的最终评分不在可写面内，不能因此把它宣称为已实现评价规则自演化。
 
+<!-- family-e-architecture:start -->
+![E 家族整体思想架构](../../../pics/family-e-architecture.svg)
+
+[交互架构](../../../pics/family-e-architecture.html) · [六家族说明](../08_Family_Architectures.md)。研究反馈从哪里来、是否更接近任务目标，以及评价过程能否被改进；不能把自评分上涨当成真值改善。 这是家族级原创架构；下方流程图是代表方法或参考协议，二者不互相替代。
+<!-- family-e-architecture:end -->
+
 ![E 家族参考闭环：反馈、评价器更新与独立验收](../../../pics/family-e-flow.svg)
 
 [打开 E 家族动态流程](../../../index.html?scene=evaluation#loops)。这是**本文家族参考闭环**，不是任一论文的原图。
@@ -105,12 +111,24 @@ $V^\star$ 是受保护的验收参照；$\mathcal A^\star$ 是安装或拒绝候
 结构事实仍不等于收益事实：第 6 节用同起点、冻结新旧改进器、匹配后续预算的继续实验检验其贡献。
 任务得分上升、累计收益扩大和单位资源改进速度增长必须分开报告；发现新改进器的成本也不能从端到端账目删掉。
 
+<!-- family-f-architecture:start -->
+![F 家族整体思想架构](../../../pics/family-f-architecture.svg)
+
+[交互架构](../../../pics/family-f-architecture.html) · [六家族说明](../08_Family_Architectures.md)。把研究、搜索、提案、选择或预算机制也当作候选对象；关键证据是新改进器实际接管下一轮，而非只多生成一份程序。 这是家族级原创架构；下方流程图是代表方法或参考协议，二者不互相替代。
+<!-- family-f-architecture:end -->
+
 ![F 家族参考闭环：研究者更新、安装与下一轮改进](../../../pics/family-f-flow.svg)
 
 [打开 F 家族动态流程](../../../index.html?scene=meta#loops)。这是**本文家族参考闭环**，不是把所有 F 方法画成同一个已实现算法。
 独立继续实验、审计、停止和回滚属于本文建议；某篇论文是否实现，须按下文原文证据分别判断。
 
 ## 2. MetaRSI：改进对象与改进规则分开建模
+
+<!-- paper-figure-metarsi:start -->
+![MetaRSI 原论文 Figure 2（下方三算子与双轴局部）](../../../pics/papers/metarsi-v2-fig2.png)
+
+原论文 Figure 2（下方三算子与双轴局部）（v2），[作者原文及图注](https://arxiv.org/pdf/2609.06396v2#page=2)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。Tan, Zihan；Sun, Leixin；Shi, Zitong；Liu, Yitao；Wu, Jiajun；Brooks, Nathaniel；Qian, Jiaru；Shang, Xiaoran；Huang, Suyuan；Ding, Yi；Liao, Yangxu；Li, Mukai；Sun, Qiushi；Liu, Shudong；Rong, Xuankun；Yu, Xiaohang；Chen, Zhuo；Geng, Hejia；Li, Chenxin；Wang, Aozhou；Tu, Zengji；Tang, Robert；Zhan, Yuxin；Jiang, Eric；Wu, Yuxin；Zhang, Jianqing；Liang, Xiao；Wu, Fang；Zhang, Haochi；Marlow, Alexander；Wan, Guancheng。从 PDF 第2页截取坐标(56,317)-(556,494)点的图2下方架构，3倍渲染；省略摄影背景、页眉与图注，未改写图内内容。此处展示 Data/Harness/Model 三算子及水平顺序、垂直提案策略优化；不是完整 Figure 2，也不等同于 A–F 分类或无限层递归。
+<!-- paper-figure-metarsi:end -->
 
 ### 2.1 三个算子不是本图谱的三个等级
 
@@ -288,6 +306,12 @@ EvoHarnessBench §3.2 的外层能力集只增不减，§3.4 分别测无持久�
 以上局限不是取消基准价值，而是确定它们在完整 RSI 证据链中的位置。
 
 ### 4.4 E 深读一：S3Gym 如何把自评与外部结果拆开
+
+<!-- paper-figure-s3gym:start -->
+![S3Gym 原论文 Figure 2（自测、自评与评估局部）](../../../pics/papers/s3gym-v1-fig2.png)
+
+原论文 Figure 2（自测、自评与评估局部）（v1），[作者原文及图注](https://arxiv.org/html/2608.31100v1#S4.F2)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。Shi, Jiajun；Tao, Siyuan；Wu, Yuhao；Wang, Zexuan；Zhang, Jingyuan；Liu, Jiaheng；Lei, Xinping；Zhang, Xinrong；Fang, Siyuan；Tan, Zhewen；Cai, Tianle；Fang, Junhao；Huang, Jiameng；Wang, Yueyang；Liu, Jinkai；Zhang, Yuxuan；Yang, Jian；Li, Zhoujun；Yan, Shen；Huang, Wenhao；Zhang, Ge。原图 y=145..494 像素下方局部，省略游戏美术示例；未改写局部图内内容。此处展示自测、自评与周期性独立评价，省略上方游戏示例和经验吸收选项；完整框架见原文。它用于诊断自改进能力，不意味着所有评价器都在自动改变。
+<!-- paper-figure-s3gym:end -->
 
 本节依据 [S3Gym v1 §4-§6、附录 A.1](https://arxiv.org/html/2608.31100v1)；[提交历史](https://arxiv.org/abs/2608.31100) 确认 v1 为 **2026-08-31**。
 一次交互中，模型同时产生动作和对该动作即时奖励的自评，随后环境执行动作。

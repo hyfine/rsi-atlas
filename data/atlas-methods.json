@@ -404,7 +404,9 @@
       "evidence": "existing_primary_metadata_and_method_summary",
       "kind": "method",
       "mechanism": "摘要明确说明固定 LM 驱动的种子 improver 生成并选择程序，再以自身作为待改进程序；产物改变后续程序改进方式。",
-      "limitations": "https://arxiv.org/html/2310.02304v1 和 v3 均 404；https://ar5iv.labs.arxiv.org/html/2310.02304 返回 fatal conversion error，无正文；OpenReview https://openreview.net/forum?id=46Zgqo4QIU 返回浏览器验证页；不据二手材料引用任务数、算法细节或实验表格；官方 README 已核对，但未审计或运行实现。",
+      "limitations": [
+        "https://arxiv.org/html/2310.02304v1 和 v3 均 404；https://ar5iv.labs.arxiv.org/html/2310.02304 返回 fatal conversion error，无正文；OpenReview https://openreview.net/forum?id=46Zgqo4QIU 返回浏览器验证页；不据二手材料引用任务数、算法细节或实验表格；官方 README 已核对，但未审计或运行实现。"
+      ],
       "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
       "reading_scope": "继承既有专题记录：primary_abstract_and_official_readme_fulltext_html_unavailable；本次不重复声明全文阅读",
       "source_doc": "用户指定编号；Bing 实际搜索；The Last AI Built by Humans §3.6.1 仅作线索而非原文替代",
@@ -867,7 +869,9 @@
       ],
       "kind": "method",
       "mechanism": "以语义、词汇、结构、分布漂移的加权 GDI，结合约束评分和回归风险触发停止；附录 A.2/C.3 描述用质量与漂移反馈构造下一轮改进提示。",
-      "limitations": "校准量 §3 写六任务而摘要/§4 写十八任务；§4 同时出现 27.5% 与 173/189(约91.5%) 收敛口径；不复用这些冲突统计。GDI 测相对基线差异而非真正对齐；CPS 平均与仅零分停止不能代替逐条关键约束；高斯独立增量是假设，不是自适应闭环的无条件安全证明；未运行仓库。",
+      "limitations": [
+        "校准量 §3 写六任务而摘要/§4 写十八任务；§4 同时出现 27.5% 与 173/189(约91.5%) 收敛口径；不复用这些冲突统计。GDI 测相对基线差异而非真正对齐；CPS 平均与仅零分停止不能代替逐条关键约束；高斯独立增量是假设，不是自适应闭环的无条件安全证明；未运行仓库。"
+      ],
       "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
       "reading_scope": "继承既有专题记录：primary_fulltext_sections；本次不重复声明全文阅读",
       "source_doc": "用户指定核心源；Trustworthy RSI 引用仅作发现线索",
@@ -1115,7 +1119,9 @@
       ],
       "kind": "benchmark",
       "mechanism": "固定 base model、Tinker LoRA SFT、Harbor/E2B 评测与受限训练配置；研究者改数据策略，根据 selection feedback 选 checkpoint，再做 official evaluation。",
-      "limitations": "§6 明确 selection 与 official evaluation 复用同一任务子集，fresh environments 不代表独立 holdout；总成本不止 valid-candidate Tinker；§5.5 同族探索的所有适配 checkpoint 仍低于 unadapted reference；固定研究者/外部 rollout 支持不构成完整递归自举。",
+      "limitations": [
+        "§6 明确 selection 与 official evaluation 复用同一任务子集，fresh environments 不代表独立 holdout；总成本不止 valid-candidate Tinker；§5.5 同族探索的所有适配 checkpoint 仍低于 unadapted reference；固定研究者/外部 rollout 支持不构成完整递归自举。"
+      ],
       "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
       "reading_scope": "继承既有专题记录：primary_fulltext_sections；本次不重复声明全文阅读",
       "source_doc": "用户指定评测范围；一手 v1 正文，特别是摘要不能替代的 §6 限制",
@@ -1267,7 +1273,9 @@
       ],
       "kind": "benchmark",
       "mechanism": "由基准提供单调扩张的工具/技能/专家池，外层harness演化与内层记忆/技能等状态适应分开；按阶段及任务cohort测保留、适应和成本。",
-      "limitations": "外部供给增长不是 agent 自创工具库或改进器演化；当前不含能力删除/替换；技能必需性标注是启发式；不同轴的实例非独立任务副本；搜索页日期9月2日与abstract history不一致，采用权威v1 UTC提交日期9月3日；未运行。",
+      "limitations": [
+        "外部供给增长不是 agent 自创工具库或改进器演化；当前不含能力删除/替换；技能必需性标注是启发式；不同轴的实例非独立任务副本；搜索页日期9月2日与abstract history不一致，采用权威v1 UTC提交日期9月3日；未运行。"
+      ],
       "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
       "reading_scope": "继承既有专题记录：primary_fulltext_sections；本次不重复声明全文阅读",
       "source_doc": "用户指定评测范围；一手 abstract history 与 v3 正文",
@@ -1293,7 +1301,9 @@
       ],
       "kind": "method",
       "mechanism": "统一受保护执行内核上的 Data/Harness/Model 算子；水平调度顺序、垂直改写提案策略、term 间更新调度策略。最外层 meta 参数固定；Model-RSI 从固定基座和累计数据重新训练候选。",
-      "limitations": "作者实验，未独立复现；五轮边际收益均递减；同一 sealed split 跨 term 复用，gate verdict 到 meta policy 的信息流需审计；元预算须纳入端到端成本；同模型盲解仍共享错误；五条规律是待反驳主张。公开仓库不含完整训练/评测实现。",
+      "limitations": [
+        "作者实验，未独立复现；五轮边际收益均递减；同一 sealed split 跨 term 复用，gate verdict 到 meta policy 的信息流需审计；元预算须纳入端到端成本；同模型盲解仍共享错误；五条规律是待反驳主张。公开仓库不含完整训练/评测实现。"
+      ],
       "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
       "reading_scope": "继承既有专题记录：primary_fulltext_sections_and_official_project；本次不重复声明全文阅读",
       "source_doc": "00_RSI_overview.md: Update; CosmosMind / MetaRSI",
@@ -1315,7 +1325,9 @@
       ],
       "kind": "theory",
       "mechanism": "以自治责任划分 B0 和 L1-L5，区分修改机制的结构递归与同预算下产生更强后继的有效递归；HCI 描述归一化剩余空间闭合。",
-      "limitations": "作者 L1-L5 不等于本图谱 L0-L3；综述和公司初步案例不是全部独立复现；HCI 受基线和协议家族选择影响；示意未来值不能作为观测或预测置信区间。",
+      "limitations": [
+        "作者 L1-L5 不等于本图谱 L0-L3；综述和公司初步案例不是全部独立复现；HCI 受基线和协议家族选择影响；示意未来值不能作为观测或预测置信区间。"
+      ],
       "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
       "reading_scope": "继承既有专题记录：primary_fulltext_sections_survey；本次不重复声明全文阅读",
       "source_doc": "00_RSI_overview.md: Theseus Lab; Update",
@@ -1459,7 +1471,9 @@
       ],
       "kind": "method",
       "mechanism": "以 decision-only 反馈约束样本对提案的影响，为所有可能的promotion histories、轮次和候选分配总错误预算；配对检验并保存不反馈给提案者的累计收益证书。",
-      "limitations": "分数、证书或其他侧信道反馈不属于decision-only保证；有限holdout仍有检测能力限制；独立heldout对population gain只是估计；style baselines非原系统复现；未证明所有安全/成本指标的联合改善。本文示例Hoeffding LCB是另行标注的新鲜样本协议，不冒充REUSE公式。",
+      "limitations": [
+        "分数、证书或其他侧信道反馈不属于decision-only保证；有限holdout仍有检测能力限制；独立heldout对population gain只是估计；style baselines非原系统复现；未证明所有安全/成本指标的联合改善。本文示例Hoeffding LCB是另行标注的新鲜样本协议，不冒充REUSE公式。"
+      ],
       "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
       "reading_scope": "继承既有专题记录：primary_fulltext_sections_theory_and_experiment；本次不重复声明全文阅读",
       "source_doc": "自主发现：Trustworthy RSI参考文献；一手摘要与 v2 正文",
@@ -1481,7 +1495,9 @@
       ],
       "kind": "theory",
       "mechanism": "摘要分析研发自动化可能压缩进展时间的反馈情景及其治理后果，不是新的可执行 RSI 算法。",
-      "limitations": "https://arxiv.org/html/2609.36054v2 返回404；未读取全文，不归因具体章节、模型公式或量化预测；不是已经实现智能爆炸的实验证据。",
+      "limitations": [
+        "https://arxiv.org/html/2609.36054v2 返回404；未读取全文，不归因具体章节、模型公式或量化预测；不是已经实现智能爆炸的实验证据。"
+      ],
       "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
       "reading_scope": "继承既有专题记录：primary_abstract_verified_fulltext_html_unavailable；本次不重复声明全文阅读",
       "source_doc": "00_RSI_overview.md: Update 2026.9.28",
@@ -1773,7 +1789,9 @@
       ],
       "kind": "theory",
       "mechanism": "以 improvement validity、constraint preservation、effective oversight 三视角，审计单次更新、跨后继继承与改进器修改；要求 matched paired continuations 和独立报告评测。",
-      "limitations": "综述的直接 RSI、相邻系统与前瞻主张不可混同；未独立核查其全部 301 引用或 260 编码格；结构保护不等于已验证的纵向安全；长期联合能力/安全/干预证据仍有限。",
+      "limitations": [
+        "综述的直接 RSI、相邻系统与前瞻主张不可混同；未独立核查其全部 301 引用或 260 编码格；结构保护不等于已验证的纵向安全；长期联合能力/安全/干预证据仍有限。"
+      ],
       "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
       "reading_scope": "继承既有专题记录：primary_fulltext_sections_survey；本次不重复声明全文阅读",
       "source_doc": "00_RSI_overview.md: Update 2026.10.26",
@@ -1888,7 +1906,9 @@
       ],
       "kind": "benchmark",
       "mechanism": "固定 backbone，在 held-in 任务流演化 prompts/memory/harness；由基准接口在 held-in 任务上评候选，冻结状态后测试 G0 重放、G1 新实例、G2 新难度、G3 同类新任务、G4 跨能力任务；分析修改轨迹。",
-      "limitations": "游戏泛化不等于开放研究能力；候选方法初始 harness 不同；部分 reference 是启发式而非最优上界，分数/HCI 可超过 1；近零分母不稳定；描述哈希去重不保证底层游戏状态不同；附录 A.4 是看到机器标签后的复核一致性，不是盲评准确率；未运行仓库。",
+      "limitations": [
+        "游戏泛化不等于开放研究能力；候选方法初始 harness 不同；部分 reference 是启发式而非最优上界，分数/HCI 可超过 1；近零分母不稳定；描述哈希去重不保证底层游戏状态不同；附录 A.4 是看到机器标签后的复核一致性，不是盲评准确率；未运行仓库。"
+      ],
       "chapter": "docs/zh/chapters/04_Meta_RSI_Evaluation_and_Safety.md",
       "reading_scope": "继承既有专题记录：primary_fulltext_sections；本次不重复声明全文阅读",
       "source_doc": "自主发现: https://arxiv.org/search/?query=SelfImprove-Bench&searchtype=all&abstracts=show&order=-announced_date_first&size=50; Google 搜索跳转，发现依据为 arXiv 搜索与一手正文",
@@ -2370,5 +2390,1218 @@
       "Failure to discover later papers is not evidence that no such papers exist.",
       "Inherited full-text reading notes retain their original scope and are not counted as new full-text reviews."
     ]
-  }
+  },
+  "family_architectures": [
+    {
+      "id": "a",
+      "code": "A",
+      "title": "模型与训练",
+      "scene": "selftrain",
+      "idea": "把可用反馈转成跨轮保留的模型能力；关键是参数或训练配方真的变化，而不是本次答案被修改。",
+      "persistent": "模型权重 θ、adapter、训练配置和训练数据版本",
+      "boundary": "题目/数据来源、验证口径与预算要声明；教师或答案监督不能被隐藏。",
+      "distinction": "自训练、自博弈、RL、蒸馏和测试时适应是不同子路线；每轮初始化与参数继承方式按具体论文核验。",
+      "evidence": "检查真实更新、数据回流、固定任务评价与遗忘；参数变化不自动证明泛化收益。",
+      "nodes": [
+        {
+          "label": "任务、数据与监督",
+          "detail": [
+            "人工/合成输入与外部约束",
+            "正确答案、执行器或奖励来源"
+          ],
+          "type": "input"
+        },
+        {
+          "label": "当前模型与配置",
+          "detail": [
+            "θ_t / adapter / 训练配方",
+            "跨轮保留的能力载体"
+          ],
+          "type": "state"
+        },
+        {
+          "label": "生成与交互组件",
+          "detail": [
+            "采样回答、程序或轨迹",
+            "记录实际生成预算"
+          ],
+          "type": "execution"
+        },
+        {
+          "label": "筛选与反馈组件",
+          "detail": [
+            "答案、执行奖励或偏好",
+            "正确输出不保证推理忠实"
+          ],
+          "type": "feedback"
+        },
+        {
+          "label": "训练 / 更新组件",
+          "detail": [
+            "SFT、RL、蒸馏或内循环",
+            "不能忽略基座重置与教师"
+          ],
+          "type": "updater"
+        },
+        {
+          "label": "候选模型产物",
+          "detail": [
+            "θ'、adapter 与训练证据",
+            "不是仅保存一份新回答"
+          ],
+          "type": "candidate"
+        },
+        {
+          "label": "评价与版本选择",
+          "detail": [
+            "检查质量、成本与遗忘",
+            "独立留出/回滚是审计要求"
+          ],
+          "type": "gate"
+        },
+        {
+          "label": "后继模型实际使用",
+          "detail": [
+            "新模型求解或生成新数据",
+            "回流路径需有版本证据"
+          ],
+          "type": "reuse"
+        }
+      ],
+      "sources": [
+        {
+          "name": "STaR",
+          "url": "https://arxiv.org/abs/2203.14465"
+        },
+        {
+          "name": "ReST-EM",
+          "url": "https://arxiv.org/abs/2312.06585"
+        },
+        {
+          "name": "SEAL",
+          "url": "https://arxiv.org/abs/2506.10943"
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "code": "B",
+      "title": "数据、任务与环境",
+      "scene": "selfplay",
+      "idea": "让下一轮的学习分布也成为可改进对象；同时维持可解性、覆盖与反馈可靠性，而非只把题目变难。",
+      "persistent": "任务池、课程、环境生成器、模拟器与发现历史",
+      "boundary": "环境规则、可执行反馈和任务权限必须明确；内部得分不能替代外部分布测量。",
+      "distinction": "环境生成、任务自博弈和历史回放不同；Dream-RSI 的历史世界不等于训练一个神经世界模型。",
+      "evidence": "检查覆盖、可解性、难度、分布塌缩及迁移；题量增加不是能力增长。",
+      "nodes": [
+        {
+          "label": "初始任务与环境规则",
+          "detail": [
+            "种子任务、模拟器与接口",
+            "先定义可解性与有效性"
+          ],
+          "type": "input"
+        },
+        {
+          "label": "持久任务 / 环境状态",
+          "detail": [
+            "任务池、课程与历史存档",
+            "或可学习的任务生成器"
+          ],
+          "type": "state"
+        },
+        {
+          "label": "求解与环境交互",
+          "detail": [
+            "策略尝试新挑战",
+            "保留成功与失败轨迹"
+          ],
+          "type": "execution"
+        },
+        {
+          "label": "难度与覆盖反馈",
+          "detail": [
+            "执行结果、regret、多样性",
+            "不能只奖励更容易的题"
+          ],
+          "type": "feedback"
+        },
+        {
+          "label": "分布改进组件",
+          "detail": [
+            "生成、变异、筛选或回放",
+            "与求解策略更新分开测"
+          ],
+          "type": "updater"
+        },
+        {
+          "label": "候选任务 / 环境",
+          "detail": [
+            "新课程、挑战或回放配置",
+            "记录与父分布的关系"
+          ],
+          "type": "candidate"
+        },
+        {
+          "label": "准入与覆盖检查",
+          "detail": [
+            "有效、可解、不过度收缩",
+            "独立迁移是额外证据"
+          ],
+          "type": "gate"
+        },
+        {
+          "label": "进入后续学习 / 发现",
+          "detail": [
+            "新分布被真正消费",
+            "不只把候选存入目录"
+          ],
+          "type": "reuse"
+        }
+      ],
+      "sources": [
+        {
+          "name": "POET",
+          "url": "https://arxiv.org/abs/1901.01753"
+        },
+        {
+          "name": "Absolute Zero",
+          "url": "https://arxiv.org/abs/2505.03335"
+        },
+        {
+          "name": "Dream-RSI",
+          "url": "https://arxiv.org/abs/2609.14858"
+        }
+      ]
+    },
+    {
+      "id": "c",
+      "code": "C",
+      "title": "Agent 记忆与技能",
+      "scene": "skills",
+      "idea": "把一次执行的经验转成以后可检索、可组合、可验证的资产，减少重复探索；记忆变多并不等于记忆正确。",
+      "persistent": "反思、经验原则、技能库、可执行工具与检索索引",
+      "boundary": "常见配置固定模型与执行框架；Skill1/COS-PLAY 等 A+C 方法还包含参数学习，需单独标注。",
+      "distinction": "反思文本、抽象原则和可执行技能不是同一更新；本次上下文修订不自动成为跨任务记忆。",
+      "evidence": "检查技能适用条件、版本、语义正确性、负迁移和检索成本；能运行不等于业务正确。",
+      "nodes": [
+        {
+          "label": "任务与环境反馈入口",
+          "detail": [
+            "新任务、工具与原始轨迹",
+            "记录真实失败原因"
+          ],
+          "type": "input"
+        },
+        {
+          "label": "持久记忆 / 技能库",
+          "detail": [
+            "经验、原则、工具程序",
+            "含来源与适用条件"
+          ],
+          "type": "state"
+        },
+        {
+          "label": "检索与 Agent 执行",
+          "detail": [
+            "读取旧资产并组合操作",
+            "必要时调用外部工具"
+          ],
+          "type": "execution"
+        },
+        {
+          "label": "执行与任务反馈",
+          "detail": [
+            "异常、功能结果与目标检查",
+            "三种成功语义不能混用"
+          ],
+          "type": "feedback"
+        },
+        {
+          "label": "提炼 / 生成 / 整合",
+          "detail": [
+            "反思、技能生成与去重",
+            "不是任意错误都要加工具"
+          ],
+          "type": "updater"
+        },
+        {
+          "label": "候选记忆与技能",
+          "detail": [
+            "文本、程序与索引更新",
+            "错误资产也可能被生成"
+          ],
+          "type": "candidate"
+        },
+        {
+          "label": "校验与资产版本化",
+          "detail": [
+            "功能、适用性与回归检查",
+            "保留拒绝、删除与负例"
+          ],
+          "type": "gate"
+        },
+        {
+          "label": "后续任务实际复用",
+          "detail": [
+            "跨任务检索与技能组合",
+            "是否助力新改进另需举证"
+          ],
+          "type": "reuse"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Reflexion",
+          "url": "https://arxiv.org/abs/2303.11366"
+        },
+        {
+          "name": "Voyager",
+          "url": "https://arxiv.org/abs/2305.16291"
+        },
+        {
+          "name": "COS-PLAY",
+          "url": "https://arxiv.org/abs/2604.20987"
+        }
+      ]
+    },
+    {
+      "id": "d",
+      "code": "D",
+      "title": "Harness 与工作流",
+      "scene": "harness",
+      "idea": "优化模型外的执行结构：提示、工具、路由、上下文与控制代码；把轨迹诊断转成可评价的系统版本。",
+      "persistent": "提示、工具接口、上下文策略、控制图、执行代码与候选谱系",
+      "boundary": "常见配置冻结基础模型；评价器、任务与搜索预算必须声明，不应让候选顺手改分数定义。",
+      "distinction": "提示编辑、图结构搜索、源代码自修改和生产扩展不同；固定外层优化器不自动是元递归。",
+      "evidence": "检查组件贡献、等预算搜索、跨模型迁移与部署成本；多跑候选不是结构本身变强的证明。",
+      "nodes": [
+        {
+          "label": "任务、工具与运行约束",
+          "detail": [
+            "开发任务、权限与预算",
+            "分清开发集和最终测试"
+          ],
+          "type": "input"
+        },
+        {
+          "label": "当前 Harness 版本",
+          "detail": [
+            "提示、路由、上下文与代码",
+            "H_t 与固定 backbone 配对"
+          ],
+          "type": "state"
+        },
+        {
+          "label": "模型—工具执行器",
+          "detail": [
+            "按当前控制结构运行",
+            "记录实际工具与模型调用"
+          ],
+          "type": "execution"
+        },
+        {
+          "label": "轨迹与性能 / 成本",
+          "detail": [
+            "任务结果、错误与冗余",
+            "自偏好/生成测试各有局限"
+          ],
+          "type": "feedback"
+        },
+        {
+          "label": "诊断与结构提案",
+          "detail": [
+            "编辑提示、工作流或代码",
+            "修改范围与理由显式化"
+          ],
+          "type": "updater"
+        },
+        {
+          "label": "候选 Harness 集",
+          "detail": [
+            "H'、diff、配置与执行证据",
+            "可包含互补或低成本方案"
+          ],
+          "type": "candidate"
+        },
+        {
+          "label": "候选选择与版本管理",
+          "detail": [
+            "可用 Pareto、正则或门槛",
+            "最终独立验收不是默认保障"
+          ],
+          "type": "gate"
+        },
+        {
+          "label": "部署并参与后续运行",
+          "detail": [
+            "新 H 被真实加载使用",
+            "还要检查是否进入改进路径"
+          ],
+          "type": "reuse"
+        }
+      ],
+      "sources": [
+        {
+          "name": "AFlow",
+          "url": "https://arxiv.org/abs/2410.10762"
+        },
+        {
+          "name": "GEPA",
+          "url": "https://arxiv.org/abs/2507.19457"
+        },
+        {
+          "name": "HarnessPro",
+          "url": "https://arxiv.org/abs/2610.26770"
+        }
+      ]
+    },
+    {
+      "id": "e",
+      "code": "E",
+      "title": "评价器与验证过程",
+      "scene": "evaluation",
+      "idea": "研究反馈从哪里来、是否更接近任务目标，以及评价过程能否被改进；不能把自评分上涨当成真值改善。",
+      "persistent": "judge 参数/提示、测试、校准集、rubric 与评价版本；仅使用反馈时 V 可以完全不变",
+      "boundary": "外部锚点、最终报告集与发布权限需要隔离；规格、执行器和人工判断也可能有误差。",
+      "distinction": "使用反馈、学习评价器、修改评价规则是三种行为，不是必然依次升级。只使用 V 的方法不走图中的评价器更新支路。",
+      "evidence": "检查误差、覆盖、校准、分歧及后继效用；同模型一致不等于独立正确，规则变更需重新标定。",
+      "nodes": [
+        {
+          "label": "目标与外部锚点",
+          "detail": [
+            "规格、执行真值或独立观测",
+            "开放任务仍需承认不确定性"
+          ],
+          "type": "input"
+        },
+        {
+          "label": "当前评价状态 V_t",
+          "detail": [
+            "judge、测试与反馈接口",
+            "使用反馈时可以始终固定"
+          ],
+          "type": "state"
+        },
+        {
+          "label": "被评系统与任务执行",
+          "detail": [
+            "候选回答、程序或真实产物",
+            "生成权与最终发布权分开"
+          ],
+          "type": "execution"
+        },
+        {
+          "label": "判决与观测差异",
+          "detail": [
+            "自评/外评、错误与分歧",
+            "高一致性不等于高真实性"
+          ],
+          "type": "feedback"
+        },
+        {
+          "label": "反馈构造或校准提案",
+          "detail": [
+            "仅学习评价器/改规则时进入",
+            "不能为新候选重定义成功"
+          ],
+          "type": "updater"
+        },
+        {
+          "label": "候选评价配置 V'",
+          "detail": [
+            "奖励、测试、judge 或 rubric",
+            "明确哪一项实际发生变化"
+          ],
+          "type": "candidate"
+        },
+        {
+          "label": "独立校准与准入",
+          "detail": [
+            "误差、覆盖与偏差检查",
+            "受保护审计是建议协议"
+          ],
+          "type": "gate"
+        },
+        {
+          "label": "后继评分与再审计",
+          "detail": [
+            "获准 V' 用于允许的反馈",
+            "最终报告集不反复暴露"
+          ],
+          "type": "reuse"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Constitutional AI",
+          "url": "https://arxiv.org/abs/2212.08073"
+        },
+        {
+          "name": "Self-Rewarding LMs",
+          "url": "https://arxiv.org/abs/2401.10020"
+        },
+        {
+          "name": "S3Gym",
+          "url": "https://arxiv.org/abs/2608.31100"
+        }
+      ]
+    },
+    {
+      "id": "f",
+      "code": "F",
+      "title": "AI 研发与元改进",
+      "scene": "meta",
+      "idea": "把研究、搜索、提案、选择或预算机制也当作候选对象；关键证据是新改进器实际接管下一轮，而非只多生成一份程序。",
+      "persistent": "目标系统 S、改进器 I、实验策略、调度、算子、证据与谱系",
+      "boundary": "最外层控制、评价或基础模型常仍固定；理论可证明自修改与经验搜索不是同一种保证。",
+      "distinction": "自动研发、系统递归、改进器递归分开；若 I 不变，可以有系统反馈，但不能称 I 已自我演化。",
+      "evidence": "从同起点、同后续预算比较旧新改进器，计入发现成本；任务分数不替代改进效率。",
+      "nodes": [
+        {
+          "label": "目标系统与研究问题",
+          "detail": [
+            "S_t、任务与可写对象",
+            "提出可反驳的改进目标"
+          ],
+          "type": "input"
+        },
+        {
+          "label": "当前研究 / 改进器 I_t",
+          "detail": [
+            "提案、实验、选择与预算策略",
+            "区分固定与允许编辑部分"
+          ],
+          "type": "state"
+        },
+        {
+          "label": "受控实验与候选执行",
+          "detail": [
+            "研究代理调用工具和环境",
+            "保存源码、条件与成本"
+          ],
+          "type": "execution"
+        },
+        {
+          "label": "可核验证据与失败",
+          "detail": [
+            "外部任务结果与独立观测",
+            "保留低分、失败和未知"
+          ],
+          "type": "feedback"
+        },
+        {
+          "label": "元提案 / 调度改进",
+          "detail": [
+            "修改产生后续改进的机制",
+            "自动研发也可能保持 I 固定"
+          ],
+          "type": "updater"
+        },
+        {
+          "label": "候选 S' 与 I'",
+          "detail": [
+            "目标产物和改进器分别版本化",
+            "代码存在不等于交接完成"
+          ],
+          "type": "candidate"
+        },
+        {
+          "label": "继续实验与安装判定",
+          "detail": [
+            "同起点/同预算的贡献审计",
+            "拒绝时保留旧系统与机制"
+          ],
+          "type": "gate"
+        },
+        {
+          "label": "新改进器实际接管",
+          "detail": [
+            "I' 进入下一次改进调用",
+            "结构交接与收益分别举证"
+          ],
+          "type": "reuse"
+        }
+      ],
+      "sources": [
+        {
+          "name": "STOP",
+          "url": "https://arxiv.org/abs/2310.02304"
+        },
+        {
+          "name": "Hyperagents",
+          "url": "https://arxiv.org/abs/2603.19461"
+        },
+        {
+          "name": "MetaRSI",
+          "url": "https://arxiv.org/abs/2609.06396"
+        }
+      ]
+    }
+  ],
+  "paper_figures": [
+    {
+      "id": "seal",
+      "paper": "SEAL",
+      "family": "a",
+      "identifier": "2506.10943",
+      "version": "v1",
+      "figure": "Figure 1",
+      "figure_id": "S1.F1",
+      "heading_pattern": "SEAL|Self-Adapting",
+      "explanation": "自编辑生成、内层参数适应和下游评价连接成外层学习环；不把每种模型训练方法都等同于 SEAL。",
+      "title": "Self-Adapting Language Models",
+      "authors": [
+        "Zweiger, Adam",
+        "Pari, Jyothish",
+        "Guo, Han",
+        "Akyürek, Ekin",
+        "Kim, Yoon",
+        "Agrawal, Pulkit"
+      ],
+      "asset": "pics/papers/seal-v1-fig1.png",
+      "source_url": "https://arxiv.org/html/2506.10943v1#S1.F1",
+      "license_page": "https://arxiv.org/abs/2506.10943v1",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_checked_on": "2026-11-06",
+      "status": "included_cc_by",
+      "changes": "裁取原论文 HTML 图形区域并转换为 PNG，未重绘或改写图内内容；完整图注另见原文",
+      "sha256": "f78d02c9f2bb2797c7284efd61773b5011761900137392580ed14ff5fb2d3d6f",
+      "bytes": 11774,
+      "width": 574,
+      "height": 143
+    },
+    {
+      "id": "absolute-zero",
+      "paper": "Absolute Zero",
+      "family": "b",
+      "identifier": "2505.03335",
+      "version": "v2",
+      "figure": "Figure 3",
+      "figure_id": "S2.F3",
+      "heading_pattern": "Absolute Zero",
+      "explanation": "任务提案经环境校验后产生可求解问题，提案与求解两种角色共同学习；它是任务自博弈的具体实现，不代表全部环境生成方法。",
+      "title": "Absolute Zero: Reinforced Self-play Reasoning with Zero Data",
+      "authors": [
+        "Zhao, Andrew",
+        "Wu, Yiran",
+        "Yue, Yang",
+        "Wu, Tong",
+        "Xu, Quentin",
+        "Yue, Yang",
+        "Lin, Matthieu",
+        "Wang, Shenzhi",
+        "Wu, Qingyun",
+        "Zheng, Zilong",
+        "Huang, Gao"
+      ],
+      "asset": "pics/papers/absolute-zero-v2-fig3.png",
+      "source_url": "https://arxiv.org/html/2505.03335v2#S2.F3",
+      "license_page": "https://arxiv.org/abs/2505.03335v2",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_checked_on": "2026-11-06",
+      "status": "included_cc_by",
+      "changes": "裁取原论文 HTML 图形区域并转换为 PNG，未重绘或改写图内内容；完整图注另见原文",
+      "sha256": "82b1f0a54988d85df82f907650d9eea9af7dd0698a77c4cad531b6daed2465b5",
+      "bytes": 29634,
+      "width": 512,
+      "height": 196
+    },
+    {
+      "id": "cosplay",
+      "paper": "COS-PLAY",
+      "family": "c",
+      "identifier": "2604.20987",
+      "version": "v1",
+      "figure": "Figure 1（右侧技能库 Agent 局部）",
+      "figure_id": "S3.F1",
+      "heading_pattern": "COS-PLAY",
+      "explanation": "此处只展示技能库 Agent 的边界提案、轨迹分段、技能契约学习与维护；完整的决策 Agent/技能库/技能库 Agent 架构见原图。该方法还含参数训练，不应把 C 家族一概解释为固定权重。",
+      "crop": "原图右侧 x=512..800、y=0..400 像素局部，避开游戏美术示例；未改写局部图内内容",
+      "title": "Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Tasks",
+      "authors": [
+        "Wu, Xiyang",
+        "Li, Zongxia",
+        "Shi, Guangyao",
+        "Duffy, Alexander",
+        "Marques, Tyler",
+        "Olson, Matthew Lyle",
+        "Zhou, Tianyi",
+        "Manocha, Dinesh"
+      ],
+      "asset": "pics/papers/cosplay-v1-fig1.png",
+      "source_url": "https://arxiv.org/html/2604.20987v1#S3.F1",
+      "license_page": "https://arxiv.org/abs/2604.20987v1",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_checked_on": "2026-11-06",
+      "status": "included_cc_by",
+      "changes": "原图右侧 x=512..800、y=0..400 像素局部，避开游戏美术示例；未改写局部图内内容",
+      "sha256": "bef8376175a4fc4e927deca1230f0d8be5515bcc4a0f8ab1423f7255cda67074",
+      "bytes": 34483,
+      "width": 288,
+      "height": 400
+    },
+    {
+      "id": "harnesspro",
+      "paper": "HarnessPro",
+      "family": "d",
+      "identifier": "2610.26770",
+      "version": "v2",
+      "figure": "Figure 1",
+      "figure_id": "S4.F1",
+      "heading_pattern": "HarnessPro",
+      "explanation": "轨迹分析、候选 Harness 生成和性能—成本选择；生成测试与最终官方评价仍需区分。",
+      "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
+      "authors": [
+        "Pan, Zhuoshi",
+        "Feng, ZhiYuan",
+        "Cen, Yukuo",
+        "Lin, Honglin",
+        "Lu, Junru",
+        "Chen, Zhongxia",
+        "Yang, Shuo",
+        "Zhao, H. Vicky",
+        "Tang, Jie"
+      ],
+      "asset": "pics/papers/harnesspro-v2-fig1.png",
+      "source_url": "https://arxiv.org/html/2610.26770v2#S4.F1",
+      "license_page": "https://arxiv.org/abs/2610.26770v2",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_checked_on": "2026-11-06",
+      "status": "included_cc_by",
+      "changes": "裁取原论文 HTML 图形区域并转换为 PNG，未重绘或改写图内内容；完整图注另见原文",
+      "sha256": "ca5c2bd1a7886ccf2f156662715bf1565d34edf5bbbaf86b9549b112ba5a6879",
+      "bytes": 49889,
+      "width": 800,
+      "height": 282
+    },
+    {
+      "id": "s3gym",
+      "paper": "S3Gym",
+      "family": "e",
+      "identifier": "2608.31100",
+      "version": "v1",
+      "figure": "Figure 2（自测、自评与评估局部）",
+      "figure_id": "S4.F2",
+      "heading_pattern": "S3Gym",
+      "explanation": "此处展示自测、自评与周期性独立评价，省略上方游戏示例和经验吸收选项；完整框架见原文。它用于诊断自改进能力，不意味着所有评价器都在自动改变。",
+      "crop": "原图 y=145..494 像素下方局部，省略游戏美术示例；未改写局部图内内容",
+      "title": "S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?",
+      "authors": [
+        "Shi, Jiajun",
+        "Tao, Siyuan",
+        "Wu, Yuhao",
+        "Wang, Zexuan",
+        "Zhang, Jingyuan",
+        "Liu, Jiaheng",
+        "Lei, Xinping",
+        "Zhang, Xinrong",
+        "Fang, Siyuan",
+        "Tan, Zhewen",
+        "Cai, Tianle",
+        "Fang, Junhao",
+        "Huang, Jiameng",
+        "Wang, Yueyang",
+        "Liu, Jinkai",
+        "Zhang, Yuxuan",
+        "Yang, Jian",
+        "Li, Zhoujun",
+        "Yan, Shen",
+        "Huang, Wenhao",
+        "Zhang, Ge"
+      ],
+      "asset": "pics/papers/s3gym-v1-fig2.png",
+      "source_url": "https://arxiv.org/html/2608.31100v1#S4.F2",
+      "license_page": "https://arxiv.org/abs/2608.31100v1",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_checked_on": "2026-11-06",
+      "status": "included_cc_by",
+      "changes": "原图 y=145..494 像素下方局部，省略游戏美术示例；未改写局部图内内容",
+      "sha256": "22d6bf3560f02a8e143172fb32615f696a4c37c8c79e7606ca5a8ec7dbf64fd2",
+      "bytes": 96244,
+      "width": 800,
+      "height": 349
+    },
+    {
+      "id": "metarsi",
+      "paper": "MetaRSI",
+      "family": "f",
+      "identifier": "2609.06396",
+      "version": "v2",
+      "figure": "Figure 2（下方三算子与双轴局部）",
+      "figure_id": "S0.F2",
+      "heading_pattern": "MetaRSI",
+      "explanation": "此处展示 Data/Harness/Model 三算子及水平顺序、垂直提案策略优化；不是完整 Figure 2，也不等同于 A–F 分类或无限层递归。",
+      "crop": "从 PDF 第2页截取坐标(56,317)-(556,494)点的图2下方架构，3倍渲染；省略摄影背景、页眉与图注，未改写图内内容",
+      "title": "MetaRSI / RSI2: A Meta-Recursive Self-Improving System for Recursive Self-Improving Systems Themselves",
+      "authors": [
+        "Tan, Zihan",
+        "Sun, Leixin",
+        "Shi, Zitong",
+        "Liu, Yitao",
+        "Wu, Jiajun",
+        "Brooks, Nathaniel",
+        "Qian, Jiaru",
+        "Shang, Xiaoran",
+        "Huang, Suyuan",
+        "Ding, Yi",
+        "Liao, Yangxu",
+        "Li, Mukai",
+        "Sun, Qiushi",
+        "Liu, Shudong",
+        "Rong, Xuankun",
+        "Yu, Xiaohang",
+        "Chen, Zhuo",
+        "Geng, Hejia",
+        "Li, Chenxin",
+        "Wang, Aozhou",
+        "Tu, Zengji",
+        "Tang, Robert",
+        "Zhan, Yuxin",
+        "Jiang, Eric",
+        "Wu, Yuxin",
+        "Zhang, Jianqing",
+        "Liang, Xiao",
+        "Wu, Fang",
+        "Zhang, Haochi",
+        "Marlow, Alexander",
+        "Wan, Guancheng"
+      ],
+      "asset": "pics/papers/metarsi-v2-fig2.png",
+      "source_url": "https://arxiv.org/pdf/2609.06396v2#page=2",
+      "license_page": "https://arxiv.org/abs/2609.06396v2",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_checked_on": "2026-11-06",
+      "status": "included_cc_by",
+      "changes": "从 PDF 第2页截取坐标(56,317)-(556,494)点的图2下方架构，3倍渲染；省略摄影背景、页眉与图注，未改写图内内容",
+      "sha256": "224797e1f1a2e3e4defbbd12b0bf88a07a10fd9661ccef7f4e477f4f7b07e9ef",
+      "bytes": 123820,
+      "width": 1500,
+      "height": 531
+    }
+  ],
+  "paper_figure_statuses": [
+    {
+      "id": "arxiv:cs/0309048",
+      "method": "Goedel Machine",
+      "primary_url": "https://arxiv.org/abs/cs/0309048",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:1712.01815",
+      "method": "AlphaZero",
+      "primary_url": "https://arxiv.org/abs/1712.01815",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:1901.01753",
+      "method": "POET",
+      "primary_url": "https://arxiv.org/abs/1901.01753",
+      "status": "link_only_license_not_granted",
+      "checked_version": "v1",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "id": "arxiv:2006.08381",
+      "method": "DreamCoder",
+      "primary_url": "https://arxiv.org/abs/2006.08381",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2012.02096",
+      "method": "PAIRED",
+      "primary_url": "https://arxiv.org/abs/2012.02096",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2203.14465",
+      "method": "STaR",
+      "primary_url": "https://arxiv.org/abs/2203.14465",
+      "status": "link_only_license_not_granted",
+      "checked_version": "v2",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "id": "arxiv:2212.08073",
+      "method": "Constitutional AI",
+      "primary_url": "https://arxiv.org/abs/2212.08073",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2212.10560",
+      "method": "Self-Instruct",
+      "primary_url": "https://arxiv.org/abs/2212.10560",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2303.11366",
+      "method": "Reflexion",
+      "primary_url": "https://arxiv.org/abs/2303.11366",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2303.17651",
+      "method": "Self-Refine",
+      "primary_url": "https://arxiv.org/abs/2303.17651",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2305.16291",
+      "method": "Voyager",
+      "primary_url": "https://arxiv.org/abs/2305.16291",
+      "status": "link_only_license_not_granted",
+      "checked_version": "v2",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "id": "arxiv:2308.08998",
+      "method": "ReST",
+      "primary_url": "https://arxiv.org/abs/2308.08998",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2309.16797",
+      "method": "Promptbreeder",
+      "primary_url": "https://arxiv.org/abs/2309.16797",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2310.02304",
+      "method": "Self-Taught Optimizer (STOP)",
+      "primary_url": "https://arxiv.org/abs/2310.02304",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2310.03714",
+      "method": "DSPy",
+      "primary_url": "https://arxiv.org/abs/2310.03714",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2312.06585",
+      "method": "ReST-EM",
+      "primary_url": "https://arxiv.org/abs/2312.06585",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2401.01335",
+      "method": "SPIN",
+      "primary_url": "https://arxiv.org/abs/2401.01335",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2401.10020",
+      "method": "Self-Rewarding Language Models",
+      "primary_url": "https://arxiv.org/abs/2401.10020",
+      "status": "link_only_license_not_granted",
+      "checked_version": "v1",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "id": "arxiv:2406.07496",
+      "method": "TextGrad",
+      "primary_url": "https://arxiv.org/abs/2406.07496",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2408.08435",
+      "method": "ADAS / Meta Agent Search",
+      "primary_url": "https://arxiv.org/abs/2408.08435",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2410.10762",
+      "method": "AFlow",
+      "primary_url": "https://arxiv.org/abs/2410.10762",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2504.15228",
+      "method": "SICA",
+      "primary_url": "https://arxiv.org/abs/2504.15228",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2504.16084",
+      "method": "TTRL",
+      "primary_url": "https://arxiv.org/abs/2504.16084",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2505.03335",
+      "method": "Absolute Zero Reasoner (AZR)",
+      "primary_url": "https://arxiv.org/abs/2505.03335",
+      "status": "included_cc_by",
+      "figure_id": "absolute-zero",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "arxiv:2505.22954",
+      "method": "Darwin Godel Machine",
+      "primary_url": "https://arxiv.org/abs/2505.22954",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2506.10943",
+      "method": "SEAL",
+      "primary_url": "https://arxiv.org/abs/2506.10943",
+      "status": "included_cc_by",
+      "figure_id": "seal",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "arxiv:2506.13131",
+      "method": "AlphaEvolve",
+      "primary_url": "https://arxiv.org/abs/2506.13131",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2507.19457",
+      "method": "GEPA",
+      "primary_url": "https://arxiv.org/abs/2507.19457",
+      "status": "link_only_license_not_granted",
+      "checked_version": "v2",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "id": "arxiv:2601.18226",
+      "method": "Yunjue Agent",
+      "primary_url": "https://arxiv.org/abs/2601.18226",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2603.06333",
+      "method": "SAHOO",
+      "primary_url": "https://arxiv.org/abs/2603.06333",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2603.08640",
+      "method": "PostTrainBench",
+      "primary_url": "https://arxiv.org/abs/2603.08640",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2603.19461",
+      "method": "Hyperagents / DGM-H",
+      "primary_url": "https://arxiv.org/abs/2603.19461",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2604.09297",
+      "method": "SkillMOO",
+      "primary_url": "https://arxiv.org/abs/2604.09297",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2604.17091",
+      "method": "GenericAgent",
+      "primary_url": "https://arxiv.org/abs/2604.17091",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2604.20987",
+      "method": "COS-PLAY",
+      "primary_url": "https://arxiv.org/abs/2604.20987",
+      "status": "included_cc_by",
+      "figure_id": "cosplay",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "arxiv:2604.25850",
+      "method": "AHE",
+      "primary_url": "https://arxiv.org/abs/2604.25850",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2605.06130",
+      "method": "Skill1",
+      "primary_url": "https://arxiv.org/abs/2605.06130",
+      "status": "link_only_license_not_granted",
+      "checked_version": "v3",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "id": "arxiv:2606.05922",
+      "method": "RHO",
+      "primary_url": "https://arxiv.org/abs/2606.05922",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2607.25886",
+      "method": "RSIBench-Data",
+      "primary_url": "https://arxiv.org/abs/2607.25886",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2607.28568",
+      "method": "Frontis-MA1 / OpenMLE / OpenRSI",
+      "primary_url": "https://arxiv.org/abs/2607.28568",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2608.31111",
+      "method": "Aspire",
+      "primary_url": "https://arxiv.org/abs/2608.31111",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2608.31100",
+      "method": "S3Gym",
+      "primary_url": "https://arxiv.org/abs/2608.31100",
+      "status": "included_cc_by",
+      "figure_id": "s3gym",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "arxiv:2609.01437",
+      "method": "HarnessDev",
+      "primary_url": "https://arxiv.org/abs/2609.01437",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2609.04280",
+      "method": "EvoHarnessBench",
+      "primary_url": "https://arxiv.org/abs/2609.04280",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2609.06396",
+      "method": "MetaRSI / RSI2",
+      "primary_url": "https://arxiv.org/abs/2609.06396",
+      "status": "included_cc_by",
+      "figure_id": "metarsi",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "arxiv:2609.11873",
+      "method": "RSI autonomy roadmap / HCI",
+      "primary_url": "https://arxiv.org/abs/2609.11873",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2609.14858",
+      "method": "Dream-RSI",
+      "primary_url": "https://arxiv.org/abs/2609.14858",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2609.20519",
+      "method": "SoL-Pi",
+      "primary_url": "https://arxiv.org/abs/2609.20519",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2609.24972",
+      "method": "RRSI",
+      "primary_url": "https://arxiv.org/abs/2609.24972",
+      "status": "link_only_license_not_granted",
+      "checked_version": "v3",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    },
+    {
+      "id": "arxiv:2609.30652",
+      "method": "Dynamic Co-Evolution (DCE) + Self-Refined Concise Learning (SRCL)",
+      "primary_url": "https://arxiv.org/abs/2609.30652",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2609.33180",
+      "method": "REUSE: Risk-controlled Evaluation Under Sequential Evolution",
+      "primary_url": "https://arxiv.org/abs/2609.33180",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2609.36054",
+      "method": "AI R&D acceleration scenario and governance",
+      "primary_url": "https://arxiv.org/abs/2609.36054",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2609.35561",
+      "method": "RSI-Master",
+      "primary_url": "https://arxiv.org/abs/2609.35561",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2610.14224",
+      "method": "Harness^2",
+      "primary_url": "https://arxiv.org/abs/2610.14224",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2610.18083",
+      "method": "AReaL-RSI",
+      "primary_url": "https://arxiv.org/abs/2610.18083",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2610.22740",
+      "method": "R2Orch",
+      "primary_url": "https://arxiv.org/abs/2610.22740",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2610.25078",
+      "method": "CoEvo-RSI",
+      "primary_url": "https://arxiv.org/abs/2610.25078",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2610.26770",
+      "method": "HarnessPro",
+      "primary_url": "https://arxiv.org/abs/2610.26770",
+      "status": "included_cc_by",
+      "figure_id": "harnesspro",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "arxiv:2610.32026",
+      "method": "RSI-Opt",
+      "primary_url": "https://arxiv.org/abs/2610.32026",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2610.32253",
+      "method": "RSIHub",
+      "primary_url": "https://arxiv.org/abs/2610.32253",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2610.34386",
+      "method": "ParetoRSI-Gym",
+      "primary_url": "https://arxiv.org/abs/2610.34386",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2610.35193",
+      "method": "Trustworthy RSI evidence framework",
+      "primary_url": "https://arxiv.org/abs/2610.35193",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2611.03698",
+      "method": "RSI-Dojo / RSI-Craft",
+      "primary_url": "https://arxiv.org/abs/2611.03698",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2611.01113",
+      "method": "CogRSI",
+      "primary_url": "https://arxiv.org/abs/2611.01113",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2611.03178",
+      "method": "CoworkOS",
+      "primary_url": "https://arxiv.org/abs/2611.03178",
+      "status": "link_only_not_reviewed"
+    },
+    {
+      "id": "arxiv:2611.02797",
+      "method": "SelfImprove-Bench",
+      "primary_url": "https://arxiv.org/abs/2611.02797",
+      "status": "link_only_not_reviewed"
+    }
+  ]
 }

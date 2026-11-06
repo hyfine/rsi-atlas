@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "scope": "author_created_family_level_architecture_not_a_paper_figure_or_universal_algorithm",
+  "checked_on": "2026-11-06",
+  "families": [
+    {
+      "id": "a", "code": "A", "title": "模型与训练", "scene": "selftrain",
+      "idea": "把可用反馈转成跨轮保留的模型能力；关键是参数或训练配方真的变化，而不是本次答案被修改。",
+      "persistent": "模型权重 θ、adapter、训练配置和训练数据版本",
+      "boundary": "题目/数据来源、验证口径与预算要声明；教师或答案监督不能被隐藏。",
+      "distinction": "自训练、自博弈、RL、蒸馏和测试时适应是不同子路线；每轮初始化与参数继承方式按具体论文核验。",
+      "evidence": "检查真实更新、数据回流、固定任务评价与遗忘；参数变化不自动证明泛化收益。",
+      "nodes": [
+        {"label":"任务、数据与监督","detail":["人工/合成输入与外部约束","正确答案、执行器或奖励来源"],"type":"input"},
+        {"label":"当前模型与配置","detail":["θ_t / adapter / 训练配方","跨轮保留的能力载体"],"type":"state"},
+        {"label":"生成与交互组件","detail":["采样回答、程序或轨迹","记录实际生成预算"],"type":"execution"},
+        {"label":"筛选与反馈组件","detail":["答案、执行奖励或偏好","正确输出不保证推理忠实"],"type":"feedback"},
+        {"label":"训练 / 更新组件","detail":["SFT、RL、蒸馏或内循环","不能忽略基座重置与教师"],"type":"updater"},
+        {"label":"候选模型产物","detail":["θ'、adapter 与训练证据","不是仅保存一份新回答"],"type":"candidate"},
+        {"label":"评价与版本选择","detail":["检查质量、成本与遗忘","独立留出/回滚是审计要求"],"type":"gate"},
+        {"label":"后继模型实际使用","detail":["新模型求解或生成新数据","回流路径需有版本证据"],"type":"reuse"}
+      ],
+      "sources":[
+        {"name":"STaR","url":"https://arxiv.org/abs/2203.14465"},
+        {"name":"ReST-EM","url":"https://arxiv.org/abs/2312.06585"},
+        {"name":"SEAL","url":"https://arxiv.org/abs/2506.10943"}
+      ]
+    },
+    {
+      "id": "b", "code": "B", "title": "数据、任务与环境", "scene": "selfplay",
+      "idea": "让下一轮的学习分布也成为可改进对象；同时维持可解性、覆盖与反馈可靠性，而非只把题目变难。",
+      "persistent": "任务池、课程、环境生成器、模拟器与发现历史",
+      "boundary": "环境规则、可执行反馈和任务权限必须明确；内部得分不能替代外部分布测量。",
+      "distinction": "环境生成、任务自博弈和历史回放不同；Dream-RSI 的历史世界不等于训练一个神经世界模型。",
+      "evidence": "检查覆盖、可解性、难度、分布塌缩及迁移；题量增加不是能力增长。",
+      "nodes": [
+        {"label":"初始任务与环境规则","detail":["种子任务、模拟器与接口","先定义可解性与有效性"],"type":"input"},
+        {"label":"持久任务 / 环境状态","detail":["任务池、课程与历史存档","或可学习的任务生成器"],"type":"state"},
+        {"label":"求解与环境交互","detail":["策略尝试新挑战","保留成功与失败轨迹"],"type":"execution"},
+        {"label":"难度与覆盖反馈","detail":["执行结果、regret、多样性","不能只奖励更容易的题"],"type":"feedback"},
+        {"label":"分布改进组件","detail":["生成、变异、筛选或回放","与求解策略更新分开测"],"type":"updater"},
+        {"label":"候选任务 / 环境","detail":["新课程、挑战或回放配置","记录与父分布的关系"],"type":"candidate"},
+        {"label":"准入与覆盖检查","detail":["有效、可解、不过度收缩","独立迁移是额外证据"],"type":"gate"},
+        {"label":"进入后续学习 / 发现","detail":["新分布被真正消费","不只把候选存入目录"],"type":"reuse"}
+      ],
+      "sources":[
+        {"name":"POET","url":"https://arxiv.org/abs/1901.01753"},
+        {"name":"Absolute Zero","url":"https://arxiv.org/abs/2505.03335"},
+        {"name":"Dream-RSI","url":"https://arxiv.org/abs/2609.14858"}
+      ]
+    },
+    {
+      "id": "c", "code": "C", "title": "Agent 记忆与技能", "scene": "skills",
+      "idea": "把一次执行的经验转成以后可检索、可组合、可验证的资产，减少重复探索；记忆变多并不等于记忆正确。",
+      "persistent": "反思、经验原则、技能库、可执行工具与检索索引",
+      "boundary": "常见配置固定模型与执行框架；Skill1/COS-PLAY 等 A+C 方法还包含参数学习，需单独标注。",
+      "distinction": "反思文本、抽象原则和可执行技能不是同一更新；本次上下文修订不自动成为跨任务记忆。",
+      "evidence": "检查技能适用条件、版本、语义正确性、负迁移和检索成本；能运行不等于业务正确。",
+      "nodes": [
+        {"label":"任务与环境反馈入口","detail":["新任务、工具与原始轨迹","记录真实失败原因"],"type":"input"},
+        {"label":"持久记忆 / 技能库","detail":["经验、原则、工具程序","含来源与适用条件"],"type":"state"},
+        {"label":"检索与 Agent 执行","detail":["读取旧资产并组合操作","必要时调用外部工具"],"type":"execution"},
+        {"label":"执行与任务反馈","detail":["异常、功能结果与目标检查","三种成功语义不能混用"],"type":"feedback"},
+        {"label":"提炼 / 生成 / 整合","detail":["反思、技能生成与去重","不是任意错误都要加工具"],"type":"updater"},
+        {"label":"候选记忆与技能","detail":["文本、程序与索引更新","错误资产也可能被生成"],"type":"candidate"},
+        {"label":"校验与资产版本化","detail":["功能、适用性与回归检查","保留拒绝、删除与负例"],"type":"gate"},
+        {"label":"后续任务实际复用","detail":["跨任务检索与技能组合","是否助力新改进另需举证"],"type":"reuse"}
+      ],
+      "sources":[
+        {"name":"Reflexion","url":"https://arxiv.org/abs/2303.11366"},
+        {"name":"Voyager","url":"https://arxiv.org/abs/2305.16291"},
+        {"name":"COS-PLAY","url":"https://arxiv.org/abs/2604.20987"}
+      ]
+    },
+    {
+      "id": "d", "code": "D", "title": "Harness 与工作流", "scene": "harness",
+      "idea": "优化模型外的执行结构：提示、工具、路由、上下文与控制代码；把轨迹诊断转成可评价的系统版本。",
+      "persistent": "提示、工具接口、上下文策略、控制图、执行代码与候选谱系",
+      "boundary": "常见配置冻结基础模型；评价器、任务与搜索预算必须声明，不应让候选顺手改分数定义。",
+      "distinction": "提示编辑、图结构搜索、源代码自修改和生产扩展不同；固定外层优化器不自动是元递归。",
+      "evidence": "检查组件贡献、等预算搜索、跨模型迁移与部署成本；多跑候选不是结构本身变强的证明。",
+      "nodes": [
+        {"label":"任务、工具与运行约束","detail":["开发任务、权限与预算","分清开发集和最终测试"],"type":"input"},
+        {"label":"当前 Harness 版本","detail":["提示、路由、上下文与代码","H_t 与固定 backbone 配对"],"type":"state"},
+        {"label":"模型—工具执行器","detail":["按当前控制结构运行","记录实际工具与模型调用"],"type":"execution"},
+        {"label":"轨迹与性能 / 成本","detail":["任务结果、错误与冗余","自偏好/生成测试各有局限"],"type":"feedback"},
+        {"label":"诊断与结构提案","detail":["编辑提示、工作流或代码","修改范围与理由显式化"],"type":"updater"},
+        {"label":"候选 Harness 集","detail":["H'、diff、配置与执行证据","可包含互补或低成本方案"],"type":"candidate"},
+        {"label":"候选选择与版本管理","detail":["可用 Pareto、正则或门槛","最终独立验收不是默认保障"],"type":"gate"},
+        {"label":"部署并参与后续运行","detail":["新 H 被真实加载使用","还要检查是否进入改进路径"],"type":"reuse"}
+      ],
+      "sources":[
+        {"name":"AFlow","url":"https://arxiv.org/abs/2410.10762"},
+        {"name":"GEPA","url":"https://arxiv.org/abs/2507.19457"},
+        {"name":"HarnessPro","url":"https://arxiv.org/abs/2610.26770"}
+      ]
+    },
+    {
+      "id": "e", "code": "E", "title": "评价器与验证过程", "scene": "evaluation",
+      "idea": "研究反馈从哪里来、是否更接近任务目标，以及评价过程能否被改进；不能把自评分上涨当成真值改善。",
+      "persistent": "judge 参数/提示、测试、校准集、rubric 与评价版本；仅使用反馈时 V 可以完全不变",
+      "boundary": "外部锚点、最终报告集与发布权限需要隔离；规格、执行器和人工判断也可能有误差。",
+      "distinction": "使用反馈、学习评价器、修改评价规则是三种行为，不是必然依次升级。只使用 V 的方法不走图中的评价器更新支路。",
+      "evidence": "检查误差、覆盖、校准、分歧及后继效用；同模型一致不等于独立正确，规则变更需重新标定。",
+      "nodes": [
+        {"label":"目标与外部锚点","detail":["规格、执行真值或独立观测","开放任务仍需承认不确定性"],"type":"input"},
+        {"label":"当前评价状态 V_t","detail":["judge、测试与反馈接口","使用反馈时可以始终固定"],"type":"state"},
+        {"label":"被评系统与任务执行","detail":["候选回答、程序或真实产物","生成权与最终发布权分开"],"type":"execution"},
+        {"label":"判决与观测差异","detail":["自评/外评、错误与分歧","高一致性不等于高真实性"],"type":"feedback"},
+        {"label":"反馈构造或校准提案","detail":["仅学习评价器/改规则时进入","不能为新候选重定义成功"],"type":"updater"},
+        {"label":"候选评价配置 V'","detail":["奖励、测试、judge 或 rubric","明确哪一项实际发生变化"],"type":"candidate"},
+        {"label":"独立校准与准入","detail":["误差、覆盖与偏差检查","受保护审计是建议协议"],"type":"gate"},
+        {"label":"后继评分与再审计","detail":["获准 V' 用于允许的反馈","最终报告集不反复暴露"],"type":"reuse"}
+      ],
+      "sources":[
+        {"name":"Constitutional AI","url":"https://arxiv.org/abs/2212.08073"},
+        {"name":"Self-Rewarding LMs","url":"https://arxiv.org/abs/2401.10020"},
+        {"name":"S3Gym","url":"https://arxiv.org/abs/2608.31100"}
+      ]
+    },
+    {
+      "id": "f", "code": "F", "title": "AI 研发与元改进", "scene": "meta",
+      "idea": "把研究、搜索、提案、选择或预算机制也当作候选对象；关键证据是新改进器实际接管下一轮，而非只多生成一份程序。",
+      "persistent": "目标系统 S、改进器 I、实验策略、调度、算子、证据与谱系",
+      "boundary": "最外层控制、评价或基础模型常仍固定；理论可证明自修改与经验搜索不是同一种保证。",
+      "distinction": "自动研发、系统递归、改进器递归分开；若 I 不变，可以有系统反馈，但不能称 I 已自我演化。",
+      "evidence": "从同起点、同后续预算比较旧新改进器，计入发现成本；任务分数不替代改进效率。",
+      "nodes": [
+        {"label":"目标系统与研究问题","detail":["S_t、任务与可写对象","提出可反驳的改进目标"],"type":"input"},
+        {"label":"当前研究 / 改进器 I_t","detail":["提案、实验、选择与预算策略","区分固定与允许编辑部分"],"type":"state"},
+        {"label":"受控实验与候选执行","detail":["研究代理调用工具和环境","保存源码、条件与成本"],"type":"execution"},
+        {"label":"可核验证据与失败","detail":["外部任务结果与独立观测","保留低分、失败和未知"],"type":"feedback"},
+        {"label":"元提案 / 调度改进","detail":["修改产生后续改进的机制","自动研发也可能保持 I 固定"],"type":"updater"},
+        {"label":"候选 S' 与 I'","detail":["目标产物和改进器分别版本化","代码存在不等于交接完成"],"type":"candidate"},
+        {"label":"继续实验与安装判定","detail":["同起点/同预算的贡献审计","拒绝时保留旧系统与机制"],"type":"gate"},
+        {"label":"新改进器实际接管","detail":["I' 进入下一次改进调用","结构交接与收益分别举证"],"type":"reuse"}
+      ],
+      "sources":[
+        {"name":"STOP","url":"https://arxiv.org/abs/2310.02304"},
+        {"name":"Hyperagents","url":"https://arxiv.org/abs/2603.19461"},
+        {"name":"MetaRSI","url":"https://arxiv.org/abs/2609.06396"}
+      ]
+    }
+  ]
+}

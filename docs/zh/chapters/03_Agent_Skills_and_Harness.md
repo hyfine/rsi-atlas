@@ -93,6 +93,12 @@ Yunjue 通过 LLM Aggregator 和 Merger 做语义聚类与工具合并，不能�
 
 ### 3.0 C 家族参考流程：从执行经历到可迁移资产
 
+<!-- family-c-architecture:start -->
+![C 家族整体思想架构](../../../pics/family-c-architecture.svg)
+
+[交互架构](../../../pics/family-c-architecture.html) · [六家族说明](../08_Family_Architectures.md)。把一次执行的经验转成以后可检索、可组合、可验证的资产，减少重复探索；记忆变多并不等于记忆正确。 这是家族级原创架构；下方流程图是代表方法或参考协议，二者不互相替代。
+<!-- family-c-architecture:end -->
+
 ![C 家族分析性参考流程：经验筛选、技能更新、持久保存与后续复用](../../../pics/family-c-flow.svg)
 
 [打开 C 家族动态流程](../../../index.html?scene=skills#loops)。这是本文的分析性家族参考流程，不是任何单篇论文的算法复刻；图中的检查、版本保留和回退是分析接口，不声称每个实现都有独立验收或回滚。
@@ -183,6 +189,12 @@ ALFWorld 训练约需八张 H800 运行 30 小时；单步 387 至 494 秒高于
 
 ### 3.4 COS-PLAY：决策策略与技能管理者一起训练
 
+<!-- paper-figure-cosplay:start -->
+![COS-PLAY 原论文 Figure 1（右侧技能库 Agent 局部）](../../../pics/papers/cosplay-v1-fig1.png)
+
+原论文 Figure 1（右侧技能库 Agent 局部）（v1），[作者原文及图注](https://arxiv.org/html/2604.20987v1#S3.F1)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。Wu, Xiyang；Li, Zongxia；Shi, Guangyao；Duffy, Alexander；Marques, Tyler；Olson, Matthew Lyle；Zhou, Tianyi；Manocha, Dinesh。原图右侧 x=512..800、y=0..400 像素局部，避开游戏美术示例；未改写局部图内内容。此处只展示技能库 Agent 的边界提案、轨迹分段、技能契约学习与维护；完整的决策 Agent/技能库/技能库 Agent 架构见原图。该方法还含参数训练，不应把 C 家族一概解释为固定权重。
+<!-- paper-figure-cosplay:end -->
+
 [COS-PLAY v1](https://arxiv.org/html/2604.20987v1) 同时更新决策 agent、技能库 agent 和库内容，主体同样属于 A+C/L2。
 每项技能不只是一个名字，而包含摘要、前置条件、行动计划、成功或中止条件，以及对状态变化的 effect contract。
 决策 agent 保留当前意图和活跃技能，根据状态继续执行或检索切换技能，再生成环境中的原子动作。
@@ -202,6 +214,12 @@ ALFWorld 训练约需八张 H800 运行 30 小时；单步 387 至 494 秒高于
 ## 4. 工作流与自修改程序：谁执行下一次改进
 
 ### 4.0 D 家族参考流程：变异搜索与可部署选择
+
+<!-- family-d-architecture:start -->
+![D 家族整体思想架构](../../../pics/family-d-architecture.svg)
+
+[交互架构](../../../pics/family-d-architecture.html) · [六家族说明](../08_Family_Architectures.md)。优化模型外的执行结构：提示、工具、路由、上下文与控制代码；把轨迹诊断转成可评价的系统版本。 这是家族级原创架构；下方流程图是代表方法或参考协议，二者不互相替代。
+<!-- family-d-architecture:end -->
 
 ![D 家族分析性参考流程：轨迹诊断、结构变异、评价选择与版本部署](../../../pics/family-d-flow.svg)
 
@@ -415,6 +433,12 @@ NSGA-II 通过非支配排序与拥挤距离保留候选，让高成功率和低
 [实现与复现记录](https://github.com/gjz78910/SkillMOO)使其适合研究 C 类技能维护，但固定 optimizer 与固定 NSGA-II 不构成 L3。
 
 ### 6.3 HarnessPro：一次生成测试，多轮保持同一把尺子
+
+<!-- paper-figure-harnesspro:start -->
+![HarnessPro 原论文 Figure 1](../../../pics/papers/harnesspro-v2-fig1.png)
+
+原论文 Figure 1（v2），[作者原文及图注](https://arxiv.org/html/2610.26770v2#S4.F1)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。Pan, Zhuoshi；Feng, ZhiYuan；Cen, Yukuo；Lin, Honglin；Lu, Junru；Chen, Zhongxia；Yang, Shuo；Zhao, H. Vicky；Tang, Jie。裁取原论文 HTML 图形区域并转换为 PNG，未重绘或改写图内内容；完整图注另见原文。轨迹分析、候选 Harness 生成和性能—成本选择；生成测试与最终官方评价仍需区分。
+<!-- paper-figure-harnesspro:end -->
 
 [HarnessPro v2 第 3-4 节](https://arxiv.org/html/2610.26770v2)使用训练、验证、测试三部分：训练轨迹驱动修改，验证指标选候选，最终产物在留出测试集上评估。第 5.4 节也展示中间轮次的测试曲线，但图 4 明确这些结果仅作可视化，不参与过滤与选择，不能把“存在曲线”误写成“用测试集选优”。
 它同样用 DPP 选 10 个训练任务，每候选每训练任务执行 3 次；Analyzer 提炼可定位到轨迹事件的诊断。
