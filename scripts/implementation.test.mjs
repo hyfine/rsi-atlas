@@ -31,11 +31,6 @@ test('implementation chapters and offline diagrams rebuild deterministically',()
 });
 test('real Chrome: all six source walkthroughs, playback and responsive layouts',{timeout:120000},async t=>{
   if(!chromePath()){t.skip('Chrome/Chromium unavailable; no browser pass claimed');return;}
-  const profiles=path.join(root,'.delivery-check/browser-profiles');
-  fs.mkdirSync(profiles,{recursive:true});
-  const previousTmp=process.env.TMPDIR;
-  process.env.TMPDIR=profiles;
-  t.after(()=>{if(previousTmp===undefined)delete process.env.TMPDIR;else process.env.TMPDIR=previousTmp;});
   const browser=await connectBrowser(t,pathToFileURL(output).href+'?repo=rrsi','window.implementationsReady === true');
   const {page,evaluate,waitFor}=browser;
   assert.equal(await evaluate(`document.getElementById('repo').value`),'rrsi');
