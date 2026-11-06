@@ -67,7 +67,7 @@
 | arxiv:2602.17100 | AgentConductor: Topology Evolution for Multi-Agent Competition-Level Code Generation | 2026-02-19 (day) | AgentConductor | agents | [主来源](https://arxiv.org/abs/2602.17100) | 仅链接（不保存 PDF） |
 | arxiv:2602.17497 | Retrospective In-Context Learning for Temporal Credit Assignment with Large Language Models | 2026-02-19 (day) | RCLTCA | training | [主来源](https://arxiv.org/abs/2602.17497) | 仅链接（不保存 PDF） |
 | arxiv:2602.17913 | From Lossy to Verified: A Provenance-Aware Tiered Memory for Agents | 2026-02-20 (day) | From-Lossy-to-Verified | agents, harness, evaluation, training, foundations | [主来源](https://arxiv.org/abs/2602.17913) | 仅链接（不保存 PDF） |
-| arxiv:2602.18813 | Habilis-$\beta$: A Fast-Motion and Long-Lasting On-Device Vision-Language-Action Model | 2026-02-21 (day) | HBFMLL | metarsi | [主来源](https://arxiv.org/abs/2602.18813) | 仅链接（不保存 PDF） |
+| arxiv:2602.18813 | Habilis- $`\beta`$: A Fast-Motion and Long-Lasting On-Device Vision-Language-Action Model | 2026-02-21 (day) | HBFMLL | metarsi | [主来源](https://arxiv.org/abs/2602.18813) | 仅链接（不保存 PDF） |
 | arxiv:2602.18874 | Disentangle to create: Architecture-level disentangled diffusion model for few-shot Chinese font generation | 2026-02-21 (day) | Disentangle-to-create | adjacent | [主来源](https://arxiv.org/abs/2602.18874) | 仅链接（不保存 PDF） |
 | arxiv:2602.18920 | DeepInnovator: Triggering the Innovative Capabilities of LLMs | 2026-02-21 (day) | DeepInnovator | metarsi | [主来源](https://arxiv.org/abs/2602.18920) | 仅链接（不保存 PDF） |
 | arxiv:2602.19313 | TOPReward: Token Probabilities as Hidden Zero-Shot Rewards for Robotics | 2026-02-22 (day) | TOPReward | training | [主来源](https://arxiv.org/abs/2602.19313) | 仅链接（不保存 PDF） |
@@ -96,7 +96,7 @@
 | arxiv:2602.23866 | SWE-rebench V2: Language-Agnostic SWE Task Collection at Scale | 2026-02-27 (day) | SWE-rebench-V2 | evaluation, training, agents | [主来源](https://arxiv.org/abs/2602.23866) | 仅链接（不保存 PDF） |
 | arxiv:2602.23876 | RF-Agent: Automated Reward Function Design via Language Agent Tree Search | 2026-02-27 (day) | RF-Agent | training, agents | [主来源](https://arxiv.org/abs/2602.23876) | 仅链接（不保存 PDF） |
 | arxiv:2602.24286 | CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation | 2026-02-27 (day) | CUDA-Agent | training, agents, environments, evaluation | [主来源](https://arxiv.org/abs/2602.24286) | 仅链接（不保存 PDF） |
-| arxiv:2603.00064 | The minimal width of universal $p$-adic ReLU neural networks | 2026-02-10 (day) | MWUPAR | adjacent | [主来源](https://arxiv.org/abs/2603.00064) | 仅链接（不保存 PDF） |
+| arxiv:2603.00064 | The minimal width of universal $`p`$-adic ReLU neural networks | 2026-02-10 (day) | MWUPAR | adjacent | [主来源](https://arxiv.org/abs/2603.00064) | 仅链接（不保存 PDF） |
 | arxiv:2603.00195 | Formal Analysis and Supply Chain Security for Agentic AI Skills | 2026-02-27 (day) | FASCSA | agents, harness | [主来源](https://arxiv.org/abs/2603.00195) | 仅链接（不保存 PDF） |
 | arxiv:2603.00724 | RLAR: An Agentic Reward System for Multi-task Reinforcement Learning on Large Language Models | 2026-02-28 (day) | RLAR | training, agents | [主来源](https://arxiv.org/abs/2603.00724) | 仅链接（不保存 PDF） |
 | arxiv:2603.01145 | AutoSkill: Experience-Driven Lifelong Learning via Skill Self-Evolution | 2026-03-01 (day) | AutoSkill | harness, agents, training, metarsi, foundations | [主来源](https://arxiv.org/abs/2603.01145) | 仅链接（不保存 PDF） |
@@ -129,7 +129,7 @@
 | arxiv:2603.04029 | Self-adapting Robotic Agents through Online Continual Reinforcement Learning with World Model Feedback | 2026-03-04 (day) | SARATO | training, agents, environments, evaluation | [主来源](https://arxiv.org/abs/2603.04029) | 仅链接（不保存 PDF） |
 | arxiv:2603.04177 | CodeTaste: Can LLMs Generate Human-Level Code Refactorings? | 2026-03-04 (day) | CodeTaste | agents, harness, evaluation | [主来源](https://arxiv.org/abs/2603.04177) | 仅链接（不保存 PDF） |
 | arxiv:2603.04257 | Memex(RL): Scaling Long-Horizon LLM Agents via Indexed Experience Memory | 2026-03-04 (day) | MRSLHL | training, agents, harness, evaluation | [主来源](https://arxiv.org/abs/2603.04257) | 仅链接（不保存 PDF） |
-| arxiv:2603.04304 | $V_1$: Unifying Generation and Self-Verification for Parallel Reasoners | 2026-03-04 (day) | V1UGSV | metarsi, evaluation | [主来源](https://arxiv.org/abs/2603.04304) | 仅链接（不保存 PDF） |
+| arxiv:2603.04304 | $`V_1`$: Unifying Generation and Self-Verification for Parallel Reasoners | 2026-03-04 (day) | V1UGSV | metarsi, evaluation | [主来源](https://arxiv.org/abs/2603.04304) | 仅链接（不保存 PDF） |
 | arxiv:2603.04364 | Dual-Modality Multi-Stage Adversarial Safety Training: Robustifying Multimodal Web Agents Against Cross-Modal Attacks | 2026-03-04 (day) | DMMSAS | training, agents, metarsi, evaluation | [主来源](https://arxiv.org/abs/2603.04364) | 仅链接（不保存 PDF） |
 | arxiv:2603.04448 | SkillNet: Create, Evaluate, and Connect AI Skills | 2026-02-26 (day) | SkillNet | harness, evaluation, training, agents, metarsi, foundations | [主来源](https://arxiv.org/abs/2603.04448) | 仅链接（不保存 PDF） |
 | arxiv:2603.04549 | Adaptive Memory Admission Control for LLM Agents | 2026-03-04 (day) | AMACLA | agents, harness, training, foundations | [主来源](https://arxiv.org/abs/2603.04549) | 仅链接（不保存 PDF） |

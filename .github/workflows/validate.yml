@@ -22,5 +22,10 @@ jobs:
           node scripts/validate-delivery.mjs
       - name: Regression and real browser tests
         run: node --test scripts/*.test.mjs
+      - name: Verify actual GitHub Markdown math recognition
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RSI_GITHUB_MATH_CHECK: '1'
+        run: node --test scripts/math.test.mjs
       - name: Generated output remains current
         run: git diff --exit-code -- . ':!data/delivery-audit.json'

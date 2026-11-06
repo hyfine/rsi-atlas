@@ -203,7 +203,7 @@ flowchart TD
 
 ## Evo²
 
-**Evo$^2$: Evolving the Evolver through Weight-Harness Co-Evolution**。[原论文](https://arxiv.org/abs/2610.13025)；首发 2026-10-09；所读版本 v1，版本日期 2026-10-09。
+**Evo²: Evolving the Evolver through Weight-Harness Co-Evolution**。[原论文](https://arxiv.org/abs/2610.13025)；首发 2026-10-09；所读版本 v1，版本日期 2026-10-09。
 
 ### 目标与核心机制
 

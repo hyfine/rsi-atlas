@@ -55,7 +55,7 @@
 | arxiv:2611.03223 | Do Agents Still Follow the Rules? Benchmarking Rule Compliance under Agent Context Compaction | 2026-11-02 (day) | DASFRB | agents, evaluation, training, environments | [主来源](https://arxiv.org/abs/2611.03223) | 仅链接（不保存 PDF） |
 | arxiv:2611.03233 | Axion 1.0: Open Agent Foundation Models, Simplified | 2026-11-02 (day) | Axion-1.0 | agents, foundations, training, metarsi | [主来源](https://arxiv.org/abs/2611.03233) | 仅链接（不保存 PDF） |
 | arxiv:2611.03238 | ScienceCUA: Resource-to-Skill Construction and Execution-Guided Skill Evolution for Scientific Computer Use Agents | 2026-11-02 (day) | ScienceCUA | agents, harness, evaluation, training, metarsi | [主来源](https://arxiv.org/abs/2611.03238) | 仅链接（不保存 PDF） |
-| arxiv:2611.03289 | Top-$k$ Retrieval Leaves Memory Value Undetermined | 2026-11-02 (day) | TKRLMV | harness, evaluation, training, agents | [主来源](https://arxiv.org/abs/2611.03289) | 仅链接（不保存 PDF） |
+| arxiv:2611.03289 | Top- $`k`$ Retrieval Leaves Memory Value Undetermined | 2026-11-02 (day) | TKRLMV | harness, evaluation, training, agents | [主来源](https://arxiv.org/abs/2611.03289) | 仅链接（不保存 PDF） |
 | arxiv:2611.03352 | Neural Actor--Critic Learning with Minimax Critics and Reflected Langevin Sampling | 2026-11-02 (day) | NACLMC | adjacent | [主来源](https://arxiv.org/abs/2611.03352) | 仅链接（不保存 PDF） |
 | arxiv:2611.03384 | Can We Stop the Backtest Yet? Anytime-Valid Promotion Tests for Adaptive Financial Research Agents | 2026-11-02 (day) | CWSBYA | agents, evaluation, harness, training | [主来源](https://arxiv.org/abs/2611.03384) | 仅链接（不保存 PDF） |
 | arxiv:2611.03412 | DeliverBench: Benchmarking AI Agents on Delivering Realistic Multi-Stage Professional Projects | 2026-11-02 (day) | DeliverBench | agents, evaluation, training | [主来源](https://arxiv.org/abs/2611.03412) | 仅链接（不保存 PDF） |
@@ -164,7 +164,7 @@
 | arxiv:2611.05609 | On the Generalization Limitation of On-Policy Distillation for Post-RL Consolidation | 2026-11-03 (day) | GLPDPR | training | [主来源](https://arxiv.org/abs/2611.05609) | 仅链接（不保存 PDF） |
 | arxiv:2611.05611 | Hybrid Spark: Adaptive Speculative Decoding That Lets the Content Choose the Drafter | 2026-11-03 (day) | Hybrid-Spark | agents | [主来源](https://arxiv.org/abs/2611.05611) | 仅链接（不保存 PDF） |
 | arxiv:2611.05612 | Whiel: A Neurosymbolic Platform for Certified Relational Program Verification | 2026-11-03 (day) | Whiel | evaluation | [主来源](https://arxiv.org/abs/2611.05612) | 仅链接（不保存 PDF） |
-| arxiv:2611.05615 | $\mathcal{C}^\infty$ Smooth Trajectory Planning with Application to Soft Robots | 2026-11-03 (day) | MCISTP | adjacent | [主来源](https://arxiv.org/abs/2611.05615) | 仅链接（不保存 PDF） |
+| arxiv:2611.05615 | $`\mathcal{C}^\infty`$ Smooth Trajectory Planning with Application to Soft Robots | 2026-11-03 (day) | MCISTP | adjacent | [主来源](https://arxiv.org/abs/2611.05615) | 仅链接（不保存 PDF） |
 | arxiv:2611.05616 | LACS: Distribution-Sensitive Label-Agnostic Confidence Selection for Dynamic Data Pruning | 2026-11-03 (day) | LACS | adjacent | [主来源](https://arxiv.org/abs/2611.05616) | 仅链接（不保存 PDF） |
 | arxiv:2611.05620 | ViBench 2.0: A Benchmark for Long-Horizon Software Building | 2026-11-03 (day) | ViBench-2.0 | agents, evaluation | [主来源](https://arxiv.org/abs/2611.05620) | 仅链接（不保存 PDF） |
 | arxiv:2611.05632 | Assurance-Conditioned Continuous Authorization for Autonomous AI Agents | 2026-11-03 (day) | ACCAAA | agents | [主来源](https://arxiv.org/abs/2611.05632) | 仅链接（不保存 PDF） |

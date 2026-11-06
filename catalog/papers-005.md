@@ -9,7 +9,7 @@
 | arxiv:2412.13178 | SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents | 2024-12-17 (day) | SafeAgentBench | agents, evaluation, training, harness | [主来源](https://arxiv.org/abs/2412.13178) | 仅链接（不保存 PDF） |
 | arxiv:2412.13492 | Efficient Language-instructed Skill Acquisition via Reward-Policy Co-Evolution | 2024-12-18 (day) | ELISAR | training, harness | [主来源](https://arxiv.org/abs/2412.13492) | 仅链接（不保存 PDF） |
 | arxiv:2412.14161 | TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks | 2024-12-18 (day) | TheAgentCompany | agents, evaluation, training, environments, harness, foundations | [主来源](https://arxiv.org/abs/2412.14161) | 仅链接（不保存 PDF） |
-| arxiv:2412.14186 | Towards AI-$45^{\circ}$ Law: A Roadmap to Trustworthy AGI | 2024-12-08 (day) | TA4CLR | training, evaluation, agents, harness, foundations | [主来源](https://arxiv.org/abs/2412.14186) | 仅链接（不保存 PDF） |
+| arxiv:2412.14186 | Towards AI- $`45^{\circ}`$ Law: A Roadmap to Trustworthy AGI | 2024-12-08 (day) | TA4CLR | training, evaluation, agents, harness, foundations | [主来源](https://arxiv.org/abs/2412.14186) | 仅链接（不保存 PDF） |
 | arxiv:2412.14352 | A Survey on LLM Inference-Time Self-Improvement | 2024-12-18 (day) | SLITSI | foundations, agents | [主来源](https://arxiv.org/abs/2412.14352) | 仅链接（不保存 PDF） |
 | arxiv:2412.14470 | Agent-SafetyBench: Evaluating the Safety of LLM Agents | 2024-12-19 (day) | Agent-SafetyBench | agents, evaluation, training, harness, foundations | [主来源](https://arxiv.org/abs/2412.14470) | 仅链接（不保存 PDF） |
 | arxiv:2412.14841 | Helping LLMs Improve Code Generation Using Feedback from Testing and Static Analysis | 2024-12-19 (day) | HLICGU | agents, training, harness, evaluation | [主来源](https://arxiv.org/abs/2412.14841) | 仅链接（不保存 PDF） |
@@ -50,7 +50,7 @@
 | arxiv:2501.11425 | Agent-R: Training Language Model Agents to Reflect via Iterative Self-Training | 2025-01-20 (day) | Agent-R | training, agents, evaluation | [主来源](https://arxiv.org/abs/2501.11425) | 仅链接（不保存 PDF） |
 | arxiv:2501.11733 | Mobile-Agent-E: Self-Evolving Mobile Assistant for Complex Tasks | 2025-01-20 (day) | Mobile-Agent-E | agents | [主来源](https://arxiv.org/abs/2501.11733) | 仅链接（不保存 PDF） |
 | arxiv:2501.11873 | Demons in the Detail: On Implementing Load Balancing Loss for Training Specialized Mixture-of-Expert Models | 2025-01-21 (day) | Demons-in-the-Detail | training | [主来源](https://arxiv.org/abs/2501.11873) | 仅链接（不保存 PDF） |
-| arxiv:2501.12051 | MedS$^3$: Towards Medical Slow Thinking with Self-Evolved Soft Dual-sided Process Supervision | 2025-01-21 (day) | M3TMST | training, agents | [主来源](https://arxiv.org/abs/2501.12051) | 仅链接（不保存 PDF） |
+| arxiv:2501.12051 | MedS $`^3`$: Towards Medical Slow Thinking with Self-Evolved Soft Dual-sided Process Supervision | 2025-01-21 (day) | M3TMST | training, agents | [主来源](https://arxiv.org/abs/2501.12051) | 仅链接（不保存 PDF） |
 | arxiv:2501.12326 | UI-TARS: Pioneering Automated GUI Interaction with Native Agents | 2025-01-21 (day) | UI-TARS | agents, evaluation, training, foundations | [主来源](https://arxiv.org/abs/2501.12326) | 仅链接（不保存 PDF） |
 | arxiv:2501.12948 | DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning | 2025-01-22 (day) | DeepSeek-R1 | training, agents, harness | [主来源](https://arxiv.org/abs/2501.12948) | 仅链接（不保存 PDF） |
 | arxiv:2501.13699 | DI-BENCH: Benchmarking Large Language Models on Dependency Inference with Testable Repositories at Scale | 2025-01-23 (day) | DI-BENCH | evaluation, training, agents | [主来源](https://arxiv.org/abs/2501.13699) | 仅链接（不保存 PDF） |
@@ -202,5 +202,5 @@
 | arxiv:2504.15257 | FlowReasoner: Reinforcing Query-Level Meta-Agents | 2025-04-21 (day) | FlowReasoner | agents, training, harness, foundations | [主来源](https://arxiv.org/abs/2504.15257) | 仅链接（不保存 PDF） |
 | arxiv:2504.15416 | Bare Minimum Mitigations for Autonomous AI Development | 2025-04-21 (day) | BMMAAD | evaluation, training, agents | [主来源](https://arxiv.org/abs/2504.15416) | 仅链接（不保存 PDF） |
 | arxiv:2504.15965 | From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs | 2025-04-22 (day) | HMAMSM | harness, foundations, training, agents | [主来源](https://arxiv.org/abs/2504.15965) | 仅链接（不保存 PDF） |
-| arxiv:2504.16054 | $\pi_{0.5}$: a Vision-Language-Action Model with Open-World Generalization | 2025-04-22 (day) | P05VLA | adjacent | [主来源](https://arxiv.org/abs/2504.16054) | 仅链接（不保存 PDF） |
+| arxiv:2504.16054 | $`\pi_{0.5}`$: a Vision-Language-Action Model with Open-World Generalization | 2025-04-22 (day) | P05VLA | adjacent | [主来源](https://arxiv.org/abs/2504.16054) | 仅链接（不保存 PDF） |
 | arxiv:2504.16078 | LLMs are Greedy Agents: Effects of RL Fine-tuning on Decision-Making Abilities | 2025-04-22 (day) | LLMs-are-Greedy-Agents | foundations, training, agents, environments, evaluation | [主来源](https://arxiv.org/abs/2504.16078) | 仅链接（不保存 PDF） |

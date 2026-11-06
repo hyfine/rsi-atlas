@@ -86,7 +86,7 @@
 | arxiv:2609.33439 | Raven: The Harness of Harnesses for Composable Agentic Intelligence | 2026-09-27 (day) | Raven | agents, harness, training, foundations | [主来源](https://arxiv.org/abs/2609.33439) | 仅链接（不保存 PDF） |
 | arxiv:2609.33822 | Vestrum: Improving Agent Harnesses by Adapting Their Verification, Structure and Memory | 2026-09-27 (day) | Vestrum | agents, metarsi, harness, evaluation | [主来源](https://arxiv.org/abs/2609.33822) | 仅链接（不保存 PDF） |
 | arxiv:2609.33855 | Program-Verified Self-Evolution for Vision-Language Models | 2026-09-27 (day) | PVSEVL | agents, evaluation, training | [主来源](https://arxiv.org/abs/2609.33855) | 仅链接（不保存 PDF） |
-| arxiv:2609.33867 | R$^2$ Flow: Recursive Self-Improvement via Recursive Skill Evolution | 2026-09-27 (day) | R2FRSI | harness, agents, metarsi, training, evaluation | [主来源](https://arxiv.org/abs/2609.33867) | 仅链接（不保存 PDF） |
+| arxiv:2609.33867 | R $`^2`$ Flow: Recursive Self-Improvement via Recursive Skill Evolution | 2026-09-27 (day) | R2FRSI | harness, agents, metarsi, training, evaluation | [主来源](https://arxiv.org/abs/2609.33867) | 仅链接（不保存 PDF） |
 | arxiv:2609.34249 | Evolving Support Priorities in Empathetic Reinforcement Learning | 2026-09-28 (day) | ESPERL | training | [主来源](https://arxiv.org/abs/2609.34249) | 仅链接（不保存 PDF） |
 | arxiv:2609.34276 | NavHarness: Towards Lifelong Embodied Navigation | 2026-09-28 (day) | NavHarness | harness, agents, evaluation | [主来源](https://arxiv.org/abs/2609.34276) | 仅链接（不保存 PDF） |
 | arxiv:2609.34458 | Understanding Generalization Requires Universal Induction | 2026-09-28 (day) | UGRUI | adjacent | [主来源](https://arxiv.org/abs/2609.34458) | 仅链接（不保存 PDF） |
@@ -166,7 +166,7 @@
 | arxiv:2610.02911 | Probe the Harness: Setup Checks for Stale-Data RL Comparisons in Language Models | 2026-10-02 (day) | Probe-the-Harness | training, harness, evaluation, agents, environments | [主来源](https://arxiv.org/abs/2610.02911) | 仅链接（不保存 PDF） |
 | arxiv:2610.02920 | HASTE: Evolving Agent Harnesses Against Emerging Attacks Using Sparse Evidence | 2026-10-02 (day) | HASTE | harness, evaluation, training, agents, metarsi, foundations | [主来源](https://arxiv.org/abs/2610.02920) | 仅链接（不保存 PDF） |
 | arxiv:2610.03153 | EvoRiskBench: An Evolving Benchmark for Runtime Security Risks in Workspace Agents | 2026-10-02 (day) | EvoRiskBench | evaluation, agents | [主来源](https://arxiv.org/abs/2610.03153) | 仅链接（不保存 PDF） |
-| arxiv:2610.03303 | S$^{2}$-PINN: Stochastic Separable Physics-Informed Neural Networks | 2026-10-02 (day) | S2PSSP | adjacent | [主来源](https://arxiv.org/abs/2610.03303) | 仅链接（不保存 PDF） |
+| arxiv:2610.03303 | S $`^{2}`$-PINN: Stochastic Separable Physics-Informed Neural Networks | 2026-10-02 (day) | S2PSSP | adjacent | [主来源](https://arxiv.org/abs/2610.03303) | 仅链接（不保存 PDF） |
 | arxiv:2610.03356 | ReFract: Benchmarking Perspective Awareness in Language Model Agents with Text World Models | 2026-10-02 (day) | ReFract | agents, environments, evaluation, training, harness | [主来源](https://arxiv.org/abs/2610.03356) | 仅链接（不保存 PDF） |
 | arxiv:2610.03548 | Recursive Harness Self-Improvement for Frontier Reasoning Data Synthesis | 2026-10-02 (day) | RHSIFR | agents, harness, metarsi, training, evaluation, foundations | [主来源](https://arxiv.org/abs/2610.03548) | 仅链接（不保存 PDF） |
 | arxiv:2610.04008 | SkillScriptBench: Benchmarking Self-Evolution of Executable Agent Skill Packages Beyond Markdown | 2026-10-02 (day) | SkillScriptBench | agents, harness, evaluation | [主来源](https://arxiv.org/abs/2610.04008) | 仅链接（不保存 PDF） |

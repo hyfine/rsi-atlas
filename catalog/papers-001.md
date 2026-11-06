@@ -27,7 +27,7 @@
 | arxiv:1603.05106 | One-Shot Generalization in Deep Generative Models | 2016-03-16 (day) | OSGDGM | adjacent | [主来源](https://arxiv.org/abs/1603.05106) | 仅链接（不保存 PDF） |
 | arxiv:1603.06560 | Hyperband: A Novel Bandit-Based Approach to Hyperparameter Optimization | 2016-03-21 (day) | Hyperband | adjacent | [主来源](https://arxiv.org/abs/1603.06560) | 仅链接（不保存 PDF） |
 | arxiv:1605.03142 | Self-Modification of Policy and Utility Function in Rational Agents | 2016-05-10 (day) | SMPUFR | agents, evaluation, foundations, training, metarsi | [主来源](https://arxiv.org/abs/1605.03142) | 仅链接（不保存 PDF） |
-| arxiv:1605.09223 | On large subsets of $F_q^n$ with no three-term arithmetic progression | 2016-05-30 (day) | LSFQNN | adjacent | [主来源](https://arxiv.org/abs/1605.09223) | 仅链接（不保存 PDF） |
+| arxiv:1605.09223 | On large subsets of $`F_q^n`$ with no three-term arithmetic progression | 2016-05-30 (day) | LSFQNN | adjacent | [主来源](https://arxiv.org/abs/1605.09223) | 仅链接（不保存 PDF） |
 | arxiv:1606.01540 | OpenAI Gym | 2016-06-05 (day) | OpenAI-Gym | training, harness, environments, foundations | [主来源](https://arxiv.org/abs/1606.01540) | 仅链接（不保存 PDF） |
 | arxiv:1606.01885 | Learning to Optimize | 2016-06-06 (day) | Learning-to-Optimize | training, metarsi | [主来源](https://arxiv.org/abs/1606.01885) | 仅链接（不保存 PDF） |
 | arxiv:1606.02819 | Low-shot Visual Recognition by Shrinking and Hallucinating Features | 2016-06-09 (day) | LSVRSH | adjacent | [主来源](https://arxiv.org/abs/1606.02819) | 仅链接（不保存 PDF） |
@@ -39,7 +39,7 @@
 | arxiv:1609.03543 | Logical Induction | 2016-09-12 (day) | Logical-Induction | training | [主来源](https://arxiv.org/abs/1609.03543) | 仅链接（不保存 PDF） |
 | arxiv:1611.01578 | Neural Architecture Search with Reinforcement Learning | 2016-11-05 (day) | NASRL | training | [主来源](https://arxiv.org/abs/1611.01578) | 仅链接（不保存 PDF） |
 | arxiv:1611.02167 | Designing Neural Network Architectures using Reinforcement Learning | 2016-11-07 (day) | DNNAUR | training | [主来源](https://arxiv.org/abs/1611.02167) | 仅链接（不保存 PDF） |
-| arxiv:1611.02779 | RL$^2$: Fast Reinforcement Learning via Slow Reinforcement Learning | 2016-11-09 (day) | R2FRLS | metarsi, training | [主来源](https://arxiv.org/abs/1611.02779) | 仅链接（不保存 PDF） |
+| arxiv:1611.02779 | RL $`^2`$: Fast Reinforcement Learning via Slow Reinforcement Learning | 2016-11-09 (day) | R2FRLS | metarsi, training | [主来源](https://arxiv.org/abs/1611.02779) | 仅链接（不保存 PDF） |
 | arxiv:1611.04201 | CAD2RL: Real Single-Image Flight without a Single Real Image | 2016-11-13 (day) | CAD2RL | training | [主来源](https://arxiv.org/abs/1611.04201) | 仅链接（不保存 PDF） |
 | arxiv:1611.05763 | Learning to reinforcement learn | 2016-11-17 (day) | Learning-to-reinforcement-learn | training | [主来源](https://arxiv.org/abs/1611.05763) | 仅链接（不保存 PDF） |
 | arxiv:1612.00796 | Overcoming catastrophic forgetting in neural networks | 2016-12-02 (day) | OCFNN | training, harness, agents, foundations | [主来源](https://arxiv.org/abs/1612.00796) | 仅链接（不保存 PDF） |

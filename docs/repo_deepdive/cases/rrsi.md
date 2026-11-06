@@ -28,7 +28,7 @@
 
 H_t、S_t、C_t、历史最高 S*、候选 diff/commit、组件新颖性、journal/history。候选先过资格，再在 admissible 集合中选分数最高者。
 
-选择规则的解释性记号：$\Delta S=S'-S_t$，$\Delta C=(C'-C_t)/C_t$。显著改进时费用约束使用 $\beta_0+\beta_1\Delta S$；小改进还考虑分数、成本与 novelty，并保护 $S'\ge S^*-\delta$。最终仍在 admissible 候选中选分数最高者。精确条件以 `cost_rule/judge/select_round` 固定源码为准。
+选择规则的解释性记号： $`\Delta S=S'-S_t`$， $`\Delta C=(C'-C_t)/C_t`$。显著改进时费用约束使用 $`\beta_0+\beta_1\Delta S`$；小改进还考虑分数、成本与 novelty，并保护 $`S'\ge S^*-\delta`$。最终仍在 admissible 候选中选分数最高者。精确条件以 `cost_rule/judge/select_round` 固定源码为准。
 
 
 ### 2.2 实际更新与冻结对象

@@ -184,19 +184,19 @@ overview 将其标为 *Towards AI That Improves Itself: A Survey of Recursive Se
 
 来源：[2610.35193v1](https://arxiv.org/html/2610.35193v1)、[固定版本审计材料](https://github.com/pujiayue/Trustworthy-RSI/tree/854de7b3fa6c018a0c1e3e83df8e08dd801369d1/audit)。
 首发 2026-10-26；已读正文 §§1–8 和附录 A。
-作者用 policy $h$、inductive bias $B$、bias updater $U$ 表示功能角色，而非强行按文件类型区分层次。
+作者用 policy $`h`$、inductive bias $`B`$、bias updater $`U`$ 表示功能角色，而非强行按文件类型区分层次。
 
-$$
+```math
 h_{t+1}=A_{B_t}(h_t,E_{t+1}),\qquad
 (B_{t+1},U_{t+1})=U_t(B_t,h_{t+1},F_{t+1}).
-$$
+```
 
-诊断、提案、评估、实施是四阶段；递归改进把这些操作进一步施加到 $U$。
+诊断、提案、评估、实施是四阶段；递归改进把这些操作进一步施加到 $`U`$。
 同一个提示文件若只指导解题，可能属于执行策略；若决定下一轮怎么诊断和选更新，则承担改进器角色。
 四个主题归入三个证据责任：真实持续收益对应 Improvement Validity；行为约束与安全隐私对应 Constraint Preservation；透明可控对应 Effective Oversight。
 这不是“先提升能力、最后补做一次安全测试”的流程。
 
-§7.2 要求从相同 $h/B$ 与持久状态分叉，用旧、新 updater 分别继续，保持后续预算一致。
+§7.2 要求从相同 $`h/B`$ 与持久状态分叉，用旧、新 updater 分别继续，保持后续预算一致。
 此外另报发现和验证新 updater 的总成本；“后续执行更省”不能抹去为得到它付出的搜索费用。
 §7.3 要求同一 successor trajectory 的每个预定检查点都满足必须条件；安全的终点不能消除中途发生的越权。
 “有日志”“有停止按钮”也不等于监督有效，应实际测出能否发现、阻断和恢复。
@@ -456,15 +456,15 @@ Arjun Karanam 讨论将完整交互轨迹转成 specification、reward，并把�
 后续使用成本与发现成本必须分开报告，再合并判断投资是否值得。
 以下是本章推导的简化会计关系，不是任何综述声称测得的 scaling law。
 
-$$
+```math
 C_{\mathrm{total}}=C_{\mathrm{discover}}+C_{\mathrm{validate}}+C_{\mathrm{train}}+C_{\mathrm{review}}+N C_{\mathrm{serve}}.
-$$
+```
 
-若质量、风险与服务条件相当，单次节省为 $\Delta c>0$，则回本需要：
+若质量、风险与服务条件相当，单次节省为 $`\Delta c>0`$，则回本需要：
 
-$$
+```math
 N\Delta c>C_{\mathrm{discover}}+C_{\mathrm{validate}}+C_{\mathrm{train}}+C_{\mathrm{review}}.
-$$
+```
 
 SoL-Pi 的运行账单下降不能单独证明已收回数千次搜索；MASS 的监督 token 优势也不能填补未统计的采集费。
 Frontis 的 sandbox GPU-hour、远程模型 serving、token 成本和墙钟时间并非同一种资源，不能互相代替。

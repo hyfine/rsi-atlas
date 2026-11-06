@@ -134,7 +134,7 @@
 | arxiv:2511.14460 | Agent-R1: A Unified and Modular Framework for Agentic Reinforcement Learning | 2025-11-18 (day) | Agent-R1 | training, agents, harness | [主来源](https://arxiv.org/abs/2511.14460) | 仅链接（不保存 PDF） |
 | arxiv:2511.14581 | Online learning of subgrid-scale models for quasi-geostrophic turbulence in planetary interiors | 2025-11-18 (day) | OLSSMQ | adjacent | [主来源](https://arxiv.org/abs/2511.14581) | 仅链接（不保存 PDF） |
 | arxiv:2511.14650 | AutoTool: Efficient Tool Selection for Large Language Model Agents | 2025-11-18 (day) | AutoTool | agents, environments, evaluation, foundations | [主来源](https://arxiv.org/abs/2511.14650) | 仅链接（不保存 PDF） |
-| arxiv:2511.14759 | $\pi^{*}_{0.6}$: a VLA That Learns From Experience | 2025-11-18 (day) | P06VTL | adjacent | [主来源](https://arxiv.org/abs/2511.14759) | 仅链接（不保存 PDF） |
+| arxiv:2511.14759 | $`\pi^{*}_{0.6}`$: a VLA That Learns From Experience | 2025-11-18 (day) | P06VTL | adjacent | [主来源](https://arxiv.org/abs/2511.14759) | 仅链接（不保存 PDF） |
 | arxiv:2511.15080 | Anthropic Economic Index report: Uneven geographic and enterprise AI adoption | 2025-11-19 (day) | Anthropic-Economic-Index-report | adjacent | [主来源](https://arxiv.org/abs/2511.15080) | 仅链接（不保存 PDF） |
 | arxiv:2511.15605 | SRPO: Self-Referential Policy Optimization for Vision-Language-Action Models | 2025-11-19 (day) | SRPO | training, metarsi, foundations | [主来源](https://arxiv.org/abs/2511.15605) | 仅链接（不保存 PDF） |
 | arxiv:2511.15661 | VisPlay: Self-Evolving Vision-Language Models from Images | 2025-11-19 (day) | VisPlay | training, agents, evaluation | [主来源](https://arxiv.org/abs/2511.15661) | 仅链接（不保存 PDF） |

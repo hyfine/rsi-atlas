@@ -2,9 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import {execFileSync} from 'node:child_process';
 import MarkdownIt from 'markdown-it';
 import texmath from 'markdown-it-texmath';
 import katex from 'katex';
+import {decodeHTML} from 'entities';
 import {publicationFiles,root} from './validate-delivery.mjs';
 
 const parser=new MarkdownIt().use(texmath,{engine:katex,delimiters:['gitlab','dollars']});
@@ -57,6 +59,10 @@ test('math parsing covers GitHub delimiters without treating code or currency as
   assert.equal(result.expressions.length,4);
   assert.equal(result.expressions.filter(expression=>expression.display).length,2);
   assert.ok(result.expressions.some(expression=>expression.tex==='z+1'));
+  const protectedTex=[String.raw`S^*`,String.raw`\{x\}`,String.raw`\mathcal D_{\mathrm{probe}}`,String.raw`[a]_+=\max(a,0)`];
+  const protectedResult=inspectMath('相邻中文'+protectedTex.map(tex=>'$`'+tex+'`$').join('，')+'结束');
+  assert.deepEqual(protectedResult.errors,[]);
+  assert.deepEqual(protectedResult.expressions.map(expression=>expression.tex),protectedTex);
 });
 
 test('math checks reject the reported macro, lost escapes and invalid TeX',()=>{
@@ -73,18 +79,35 @@ test('math checks reject the reported macro, lost escapes and invalid TeX',()=>{
 
 test('every public Markdown formula renders and obeys GitHub macro restrictions',t=>{
   const findings=[];
-  let filesWithMath=0,expressions=0,display=0;
+  let filesWithMath=0,expressions=0,display=0,githubRecognized=0;
   for(const file of publicationFiles().filter(file=>file.endsWith('.md'))){
-    const result=inspectMath(fs.readFileSync(file,'utf8'));
+    const text=fs.readFileSync(file,'utf8');
+    const result=inspectMath(text);
     if(result.expressions.length)filesWithMath++;
     expressions+=result.expressions.length;
     display+=result.expressions.filter(expression=>expression.display).length;
     findings.push(...result.errors.map(error=>`${path.relative(root,file)}:${error}`));
+    if(process.env.RSI_GITHUB_MATH_CHECK==='1'&&result.expressions.length){
+      const html=execFileSync('gh',['api','--method','POST','markdown','--input','-'],{
+        input:JSON.stringify({text,mode:'gfm',context:'hyfine/rsi-atlas'}),encoding:'utf8',maxBuffer:20*1024*1024,timeout:30000,
+      });
+      const recognized=(html.match(/<math-renderer\b/g)??[]).length;
+      assert.equal(recognized,result.expressions.length,`GitHub did not recognize every formula in ${path.relative(root,file)}; check inline boundaries and Markdown formatting`);
+      const actual=Array.from(html.matchAll(/<math-renderer\b[^>]*>([\s\S]*?)<\/math-renderer>/g),match=>{
+        const content=decodeHTML(decodeHTML(match[1])).trim(),delimiter=content.startsWith('$$')?'$$':'$';
+        assert.ok(content.startsWith(delimiter)&&content.endsWith(delimiter),'Missing GitHub math delimiters');
+        return content.slice(delimiter.length,-delimiter.length).trim();
+      });
+      // GitHub adds a control-space escape after TeX row breaks in fenced math.
+      const normalizeRowBreaks=value=>value.replace(/(\\\\)\\\n/g,'$1\n');
+      assert.deepEqual(actual.map(normalizeRowBreaks),result.expressions.map(expression=>normalizeRowBreaks(expression.tex.trim())),`GitHub changed TeX content in ${path.relative(root,file)}; protect Markdown-sensitive math with code-style math delimiters`);
+      githubRecognized+=recognized;
+    }
   }
   assert.deepEqual(findings,[],findings.join('\n'));
   assert.ok(expressions>=400,'Formula coverage unexpectedly regressed');
   assert.ok(display>=49,'Display-formula coverage unexpectedly regressed');
-  t.diagnostic(JSON.stringify({files_with_math:filesWithMath,formulas_rendered:expressions,display_formulas:display}));
+  t.diagnostic(JSON.stringify({files_with_math:filesWithMath,formulas_rendered:expressions,display_formulas:display,...(process.env.RSI_GITHUB_MATH_CHECK==='1'?{github_formulas_recognized:githubRecognized}:{})}));
 });
 
 test('SEAL adaptation keeps its theta parameter and paired meta-evaluation keeps valid stars',()=>{

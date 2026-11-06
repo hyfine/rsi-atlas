@@ -141,7 +141,8 @@ for(const repo of repos){
   const walkRows=repo.walk.map((step,index)=>`### ${index+1}. ${step.label}\n\n${step.detail}。定位模块：\`${step.module}\`。[固定源码](${step.source})。\n\n${index===0?'输入必须先固定版本、配置和评价预算；下面说明的是源码路径，不是本次实际模型运行记录。':index===repo.walk.length-1?'输出与持久状态应与原始执行条件一起保留；过程结束不等于获得泛化或部署收益。':'观察真实输出、条件分支和失败，而不是仅依据调用是否返回。具体分支见后面的源码定位表。'}\n`).join('\n');
   const flowTable=repo.flow.map(step=>`| ${step.label} | ${md(step.detail)} | ${sourceLink(repo,step)} |`).join('\n');
   const flowDiagram=flowDiagrams[repo.id];
-  const extraTheory=repo.id==='rrsi'?`选择规则的解释性记号：$\\Delta S=S'-S_t$，$\\Delta C=(C'-C_t)/C_t$。显著改进时费用约束使用 $\\beta_0+\\beta_1\\Delta S$；小改进还考虑分数、成本与 novelty，并保护 $S'\\ge S^*-\\delta$。最终仍在 admissible 候选中选分数最高者。精确条件以 \`cost_rule/judge/select_round\` 固定源码为准。\n`:repo.id==='gepa'?`不要把样本级前沿自动解释成性能—成本前沿。不同候选在不同任务上占优，可以同时留在搜索状态；这是一种搜索多样性机制，不提供未见任务不退化的保证。\n`:repo.id==='hyperagents'?`特别纠偏：默认 parent-selection 参数为 \`score_prop\`。可选 \`select_next_parent.py\` 中的 \`random.choice\` 不是默认循环行为；同样，可编辑选择器的配置路径不等于每代都会修改它。\n`:repo.id==='sol-pi'?`四个机制是分支，不是每次工具调用依次经过四级处理。Reducer 失败保留原始结果属于明确的证据保全语义；不要在自己的复用中把错误吞成“摘要成功”。\n`:repo.id==='openrsi'?`本文执行深读主要覆盖 Evo 的 launcher、模式/并发、sandbox、程序状态与指导接口；不是 ERL 全部训练模块的逐行复审。公开 Gym/ERL/Evo 目录、论文中的算子训练结果和本次实际执行是三个不同范围。\n`:`文件化记忆与压缩后的会话历史不是同一种资产。README 的 Skill 结晶声明不意味着这里已经找到统一的学习—评分—晋级事务；没有证据的学习能力保持未确认。\n`;
+  const extraTheory=repo.id==='rrsi'?`选择规则的解释性记号： $\\Delta S=S'-S_t$， $\\Delta C=(C'-C_t)/C_t$。显著改进时费用约束使用 $\\beta_0+\\beta_1\\Delta S$；小改进还考虑分数、成本与 novelty，并保护 $S'\\ge S^*-\\delta$。最终仍在 admissible 候选中选分数最高者。精确条件以 \`cost_rule/judge/select_round\` 固定源码为准。\n`:repo.id==='gepa'?`不要把样本级前沿自动解释成性能—成本前沿。不同候选在不同任务上占优，可以同时留在搜索状态；这是一种搜索多样性机制，不提供未见任务不退化的保证。\n`:repo.id==='hyperagents'?`特别纠偏：默认 parent-selection 参数为 \`score_prop\`。可选 \`select_next_parent.py\` 中的 \`random.choice\` 不是默认循环行为；同样，可编辑选择器的配置路径不等于每代都会修改它。\n`:repo.id==='sol-pi'?`四个机制是分支，不是每次工具调用依次经过四级处理。Reducer 失败保留原始结果属于明确的证据保全语义；不要在自己的复用中把错误吞成“摘要成功”。\n`:repo.id==='openrsi'?`本文执行深读主要覆盖 Evo 的 launcher、模式/并发、sandbox、程序状态与指导接口；不是 ERL 全部训练模块的逐行复审。公开 Gym/ERL/Evo 目录、论文中的算子训练结果和本次实际执行是三个不同范围。\n`:`文件化记忆与压缩后的会话历史不是同一种资产。README 的 Skill 结晶声明不意味着这里已经找到统一的学习—评分—晋级事务；没有证据的学习能力保持未确认。\n`;
+  const protectedTheory=extraTheory.replace(/\$([^$\n]+)\$/g,(_,formula)=>'$`'+formula+'`$');
   const text=`# ${repo.title}
 
 [返回索引](../README.md) · [交互架构与动态路径](../implementation-atlas.html?repo=${repo.id}) · [横向比较](../overview.md)
@@ -172,7 +173,7 @@ ${repo.theory}
 
 ${repo.state}
 
-${extraTheory}
+${protectedTheory}
 
 ### 2.2 实际更新与冻结对象
 

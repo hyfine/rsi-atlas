@@ -77,7 +77,7 @@
 | arxiv:2505.17616 | Runaway is Ashamed, But Helpful: On the Early-Exit Behavior of Large Language Model-based Agents in Embodied Environments | 2025-05-23 (day) | RIABHE | agents, harness, environments | [主来源](https://arxiv.org/abs/2505.17616) | 仅链接（不保存 PDF） |
 | arxiv:2505.17653 | GeoGramBench: Benchmarking the Geometric Program Reasoning in Modern LLMs | 2025-05-23 (day) | GeoGramBench | environments, evaluation | [主来源](https://arxiv.org/abs/2505.17653) | 仅链接（不保存 PDF） |
 | arxiv:2505.17716 | Get Experience from Practice: LLM Agents with Record & Replay | 2025-05-23 (day) | Get-Experience-from-Practice | agents, harness | [主来源](https://arxiv.org/abs/2505.17716) | 仅链接（不保存 PDF） |
-| arxiv:2505.18458 | A Survey of LLM $\times$ DATA | 2025-05-24 (day) | SLTD | foundations, training | [主来源](https://arxiv.org/abs/2505.18458) | 仅链接（不保存 PDF） |
+| arxiv:2505.18458 | A Survey of LLM $`\times`$ DATA | 2025-05-24 (day) | SLTD | foundations, training | [主来源](https://arxiv.org/abs/2505.18458) | 仅链接（不保存 PDF） |
 | arxiv:2505.18524 | metaTextGrad: Automatically optimizing language model optimizers | 2025-05-24 (day) | metaTextGrad | harness, training, agents, foundations | [主来源](https://arxiv.org/abs/2505.18524) | 仅链接（不保存 PDF） |
 | arxiv:2505.18646 | SEW: Self-Evolving Agentic Workflows for Automated Code Generation | 2025-05-24 (day) | SEW | agents, harness, training | [主来源](https://arxiv.org/abs/2505.18646) | 仅链接（不保存 PDF） |
 | arxiv:2505.18705 | AI-Researcher: Autonomous Scientific Innovation | 2025-05-24 (day) | AI-Researcher | training, agents, evaluation, foundations | [主来源](https://arxiv.org/abs/2505.18705) | 仅链接（不保存 PDF） |
