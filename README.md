@@ -60,6 +60,12 @@ Evo² here is **weight–harness co-evolution of an evolver**, not the genomic E
 
 Family diagrams are **project-authored conceptual architectures**, not universal algorithms or copied paper figures. [Six family explanations](docs/zh/08_Family_Architectures.md) and [six explicitly licensed paper figures/details](docs/zh/09_Paper_Figures.md) are kept separate.
 
+## Engineering navigation from the workbook
+
+[Explore 147 engineering projects](https://hyfine.github.io/rsi-atlas/#implementations) · [Full comparison guide](docs/zh/13_Open_Source_Engineering.md)
+
+10 purpose categories, 44 retained exclusion decisions, bilingual summaries and search/filter controls. This 2026-11-06 workbook snapshot is separate from the six source-pinned reviews; counts, popularity and completeness claims are not new code audits or replications.
+
 ## From papers to code
 
 [Six implementation deep dives](docs/repo_deepdive/README.md) · [Interactive source walkthroughs](docs/repo_deepdive/implementation-atlas.html)

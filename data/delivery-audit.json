@@ -1,10 +1,10 @@
 {
   "status": "passed",
-  "checked_at": "2026-11-06T06:13:23.210Z",
+  "checked_at": "2026-11-06T08:16:46.358Z",
   "schema_and_links": {
     "ok": true,
-    "publication_files": 163,
-    "local_links_checked": 522,
+    "publication_files": 170,
+    "local_links_checked": 537,
     "methods": 88,
     "recent_methods": 58,
     "dynamic_scenes": 10,

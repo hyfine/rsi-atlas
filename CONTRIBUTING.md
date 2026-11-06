@@ -10,6 +10,7 @@
 - `data/institutions.json`: cited author affiliations / release publishers, not ownership or current employment.
 - `data/ui-translations.json`: English summaries and bilingual UI metadata.
 - `data/survey-guide.json`: bilingual cross-survey entry points, analytical questions and evidence scope; the full research synthesis is maintained in the Chinese chapters.
+- `data/engineering-projects.json`: curated workbook engineering entries, ten source categories, explicit source rows and retained exclusion reasons. Snapshot estimates and source claims are not new code audits.
 - `data/family-architectures.json`, `data/dynamic-scenes.json`, `data/paper-figures.json`: original category diagrams, mechanism paths and licensed paper figures.
 - `scripts/*.template.html`: standalone viewers.
 
@@ -45,6 +46,8 @@ Prefer fenced `math` blocks and GitHub's code-style inline math delimiters to pr
 Family architecture is an author-created analytical view, representative flow is a specific mechanism, and a paper figure is a separately attributed original. Do not mix these layers. Original figures require explicit reusable licensing or permission, exact version/figure attribution, crop disclosure and an asset hash.
 
 Family diagrams must differ in their mechanism topology, not only colors or labels. Preserve the distinct parameter loop, task–policy co-evolution, memory read/write, harness candidate search, independent evaluation tracks and meta-improver hierarchy. Public implementation previews must correspond to the pinned module/edge audit and remain visible in the portal and case chapters.
+
+Engineering navigation is built from structured data, not the original spreadsheet. Preserve all included/excluded rows, explicit nulls, approximate stars and the snapshot date. The ten workbook purpose groups and A–F object families are separate taxonomies; keep six source-pinned implementation reviews distinct from the broader workbook catalog.
 
 ## Changes and evidence
 

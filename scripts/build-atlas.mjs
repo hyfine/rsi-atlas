@@ -18,6 +18,9 @@ const attributionReviews=new Map(institutionData.attribution_reviews.map(review=
 assert.equal(attributionReviews.size,institutionData.attribution_reviews.length,'Duplicate attribution review');
 const translations = read('data/ui-translations.json');
 const survey = read('data/survey-guide.json');
+const engineeringProjects = read('data/engineering-projects.json');
+const {validateEngineering,buildEngineeringGuide}=await import('./build-engineering-guide.mjs');
+validateEngineering(engineeringProjects);
 assert.ok(survey.chapter_href&&survey.executive_summary.en&&survey.executive_summary.zh);
 assert.ok(survey.cards.length>=8&&survey.cards.length<=12);
 assert.equal(new Set(survey.cards.map(card=>card.id)).size,survey.cards.length);
@@ -88,6 +91,7 @@ const payload = {
   focus_ids: updates.focus_ids,
   unresolved_sources: updates.unresolved_sources,
   survey,
+  engineering_projects: engineeringProjects,
 };
 const priorFigureStatuses=new Map(paperFigures.papers.map(paper=>[paper.id,paper]));
 paperFigures.papers=payload.methods.map(method=>({...priorFigureStatuses.get(method.id),id:method.id,method:method.method,primary_url:method.primary_url,status:priorFigureStatuses.get(method.id)?.status??'link_only_not_reviewed'}));
@@ -98,7 +102,13 @@ fs.writeFileSync(path.join(root, 'data/atlas-methods.json'), json);
 const embedded = JSON.stringify(payload).replaceAll('<', '\\u003c').replaceAll('\u2028', '\\u2028').replaceAll('\u2029', '\\u2029');
 const template = fs.readFileSync(path.join(root, 'scripts/viewer.template.html'), 'utf8');
 assert.equal(template.split('__ATLAS_DATA__').length, 2, 'Template needs exactly one data placeholder');
-fs.writeFileSync(path.join(root, 'index.html'), template.replace('__ATLAS_DATA__',()=>embedded));
+assert.equal(template.split('__ENGINEERING_MARKUP__').length,2);
+assert.equal(template.split('__ENGINEERING_SCRIPT__').length,2);
+const viewer=template
+  .replace('__ATLAS_DATA__',()=>embedded)
+  .replace('__ENGINEERING_MARKUP__',()=>fs.readFileSync(path.join(root,'scripts/engineering-panel.html'),'utf8'))
+  .replace('__ENGINEERING_SCRIPT__',()=>fs.readFileSync(path.join(root,'scripts/engineering-panel.js'),'utf8'));
+fs.writeFileSync(path.join(root, 'index.html'),viewer);
 const csvCell = value => `"${String(value).replaceAll('"', '""')}"`;
 const fields = ['id','method','title','date','first_public_date','date_basis','revision_date','latest_version','kind','families','institution_ids','institution_names','affiliation_status','date_warning','date_warning_en','date_warning_zh','mechanism','primary_url','chapter','reading_scope','supervision_verification'];
 const institutionNames=new Map(institutionData.institutions.map(entity=>[entity.id,entity.name]));
@@ -156,3 +166,4 @@ const {buildResearchDocs}=await import('./build-research-docs.mjs');
 console.log(JSON.stringify(buildResearchDocs(payload)));
 const {buildProjectPresentation}=await import('./build-project-presentation.mjs');
 console.log(JSON.stringify(buildProjectPresentation(payload)));
+console.log(JSON.stringify(buildEngineeringGuide(engineeringProjects)));

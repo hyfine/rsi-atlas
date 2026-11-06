@@ -131,14 +131,15 @@ test('real Chrome: all six source walkthroughs, playback and responsive layouts'
   fs.mkdirSync(downloads,{recursive:true});
   await page('Browser.setDownloadBehavior',{behavior:'allow',downloadPath:downloads});
   const download=path.join(downloads,'openrsi-architecture.svg');
+  const expectedDownload=fs.readFileSync(path.join(root,'pics/implementations/openrsi-architecture.svg'),'utf8');
   fs.rmSync(download,{force:true});
   const downloadPoint=await evaluate(`(()=>{const a=document.getElementById('architecture-download');a.scrollIntoView({block:'center'});const b=a.getBoundingClientRect();return{x:b.x+b.width/2,y:b.y+b.height/2};})()`);
   await page('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...downloadPoint});
   await page('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,...downloadPoint});
   const deadline=Date.now()+10000;
-  while(!fs.existsSync(download)&&Date.now()<deadline)await new Promise(resolve=>setTimeout(resolve,50));
+  while((!fs.existsSync(download)||fs.statSync(download).size<Buffer.byteLength(expectedDownload))&&Date.now()<deadline)await new Promise(resolve=>setTimeout(resolve,50));
   assert.ok(fs.existsSync(download),'Native SVG download did not complete');
-  assert.equal(fs.readFileSync(download,'utf8'),fs.readFileSync(path.join(root,'pics/implementations/openrsi-architecture.svg'),'utf8'));
+  assert.equal(fs.readFileSync(download,'utf8'),expectedDownload);
   fs.rmSync(download);
   fs.rmdirSync(downloads);
   for(const [width,height]of [[390,844],[1440,1000],[2048,1320]]){

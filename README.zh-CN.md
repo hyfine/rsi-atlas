@@ -33,6 +33,12 @@
 
 ![真实的非互斥家族计数](pics/project-charts.svg)
 
+## 工作簿工程导航
+
+[147 个工程的可筛选入口](https://hyfine.github.io/rsi-atlas/#implementations) · [完整对照指南](docs/zh/13_Open_Source_Engineering.md)
+
+保留 10 类目的与 44 个排除候选，新增双语卡片、检索与筛选。2026-11-06 工作簿快照与六个固定源码深读分别呈现，不把数量、Star 或完整度主张当作新源码审计或复现。
+
 ## 阅读入口
 
 - [技术全景](docs/zh/01_RSI_Technical_Panorama.md)与[算法手册](docs/zh/04_Algorithm_Handbook.md)。

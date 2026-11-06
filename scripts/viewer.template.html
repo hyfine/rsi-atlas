@@ -126,7 +126,8 @@ html{scroll-behavior:auto}
 </section>
 <section id="implementations" class="view" hidden>
   <div class="page-head"><div class="eyebrow" data-en="From paper to execution" data-zh="从论文走向执行">From paper to execution</div><h1 data-en="Read the implementation." data-zh="进入实现，核对细节。">Read the implementation.</h1><p data-en="Six public implementations with source-pinned architecture and execution guides. Popularity is a dated snapshot, not an RSI ranking. Non-commercial licenses are not presented as uniformly OSI open source." data-zh="六个公开实现，配有固定源码版本的架构与执行指南。关注度是带日期的快照，不是 RSI 排名；非商业许可不冒充统一 OSI 开源。">Six public implementations with source-pinned architecture and execution guides. Popularity is a dated snapshot, not an RSI ranking. Non-commercial licenses are not presented as uniformly OSI open source.</p></div>
-  <div id="implementation-grid" class="grid"></div><div class="boundary-note" id="implementation-note"></div>
+  <div id="engineering-shortcut"></div><div id="implementation-grid" class="grid"></div><div class="boundary-note" id="implementation-note"></div>
+  __ENGINEERING_MARKUP__
 </section>
 <section id="evidence" class="view" hidden>
   <div class="page-head"><div class="eyebrow" data-en="Claims need boundaries" data-zh="结论需要边界">Claims need boundaries</div><h1 data-en="Better feedback. Stronger evidence." data-zh="更可靠的反馈，更扎实的证据。">Better feedback. Stronger evidence.</h1><p data-en="Author-reported results are not independent replications. No record here establishes unlimited open-world recursive acceleration. Inspect what was read, what was tested and what remains uncertain." data-zh="作者报告不等于独立复现。这里的条目不证明开放世界无限递归加速已经实现。请核对阅读范围、测试范围和不确定性。">Author-reported results are not independent replications. No record here establishes unlimited open-world recursive acceleration. Inspect what was read, what was tested and what remains uncertain.</p></div>
@@ -407,6 +408,7 @@ function renderSurvey(){
   $('survey-topics').innerHTML=survey.cards.map(card=>'<article class="card survey-card" data-survey-topic="'+esc(card.id)+'"><h3>'+esc(card.title[language])+'</h3><p>'+esc(card.summary[language])+'</p><p class="survey-question">'+esc(card.question[language])+'</p><p class="meta">'+card.families.map(code=>esc(code+' · '+familyName(code))).join(' / ')+'</p><div class="card-links">'+link(card.chapter_href,t('Read sections ','阅读章节 ')+card.section+' ↗')+card.primary_urls.map((url,index)=>link(url,t('Primary source ','原始来源 ')+(index+1),true)).join('')+'</div></article>').join('');
   $('survey-sources').innerHTML='<span>'+t('Frameworks are compared, not forced into an autonomy ranking. ','不同框架用于互补分析，不强行换算成自治等级。 ')+survey.sources.map(source=>link(source.url,source.name,true)).join(' · ')+'</span>';
 }
+__ENGINEERING_SCRIPT__
 function renderImplementations(){
   const entries=[
     ['genericagent','GenericAgent','14,395','Minimal model–tool loop and file-based experience assets. A self-evolving label is not proof of meta-recursion.','最小模型—工具循环与文件化经验资产；self-evolving 标签不是元递归证明。'],
@@ -418,6 +420,7 @@ function renderImplementations(){
   ];
   $('implementation-grid').innerHTML=entries.map(([id,name,stars,en,zh])=>'<article class="card implementation" data-implementation="'+id+'"><div class="implementation-copy"><span class="eyebrow">'+t('PUBLIC IMPLEMENTATION','公开实现')+'</span><h3 style="margin-top:14px">'+name+'</h3><span class="stars">'+stars+' ★ / 2026-11-05 '+t('snapshot','快照')+'</span><p>'+esc(t(en,zh))+'</p><div class="card-links">'+link('docs/repo_deepdive/implementation-atlas.html?repo='+id,t('Architecture & dynamic paths ↗','架构与动态路径 ↗'))+link('docs/repo_deepdive/cases/'+id+'.md',t('Detailed guide · Chinese','详细讲解 · 中文'))+'</div></div><figure class="implementation-preview"><a href="'+esc(safe('docs/repo_deepdive/implementation-atlas.html?repo='+id))+'"><img src="'+esc(safe('pics/implementations/'+id+'-architecture.svg'))+'" width="1200" height="820" alt="'+esc(name+' · '+t('source-pinned architecture, Chinese labels','固定源码架构图'))+'" loading="eager" decoding="async"></a><figcaption>'+t('Architecture preview · select to explore modules, source links and execution branches.','直接展示架构；点击进入模块、源码定位与执行分支。')+'</figcaption></figure></article>').join('');
   $('implementation-note').innerHTML='<span>'+t('These guides inspect pinned source, documentation and diagrams. This portal does not claim to have run the research repositories or reproduced their benchmarks. ','这些指南检查固定源码、文档和图，不声称运行研究仓库或复现其基准。 ')+link('docs/repo_deepdive/README.md',t('Full implementation index · Chinese','完整实现索引 · 中文'))+' · '+link('docs/repo_deepdive/overview.md',t('Cross-implementation guide · Chinese','横向选型指南 · 中文'))+'</span>';
+  renderEngineering();
 }
 function paperCard(f){
   const en=tr.figures?.[f.id],figureName=language==='en'?(f.figure.match(/Figure\s+\d+/)?.[0]||'Paper figure')+(f.crop?' · cropped detail':''):f.figure;
