@@ -138,7 +138,7 @@ test('public tracked files are allowlisted and local-only material is ignored',t
   validateDelivery();
 });
 
-test('local migration preserves every original notebook hash and retires the former live path',t=>{
+test('local migration preserves original hashes and respects an explicitly restored notebook directory',t=>{
   const manifestFile=path.join(root,'.local/migration-manifest.json');
   if(!fs.existsSync(manifestFile)){t.skip('Local-only migration evidence is not published or required by public builds');return;}
   const manifest=JSON.parse(fs.readFileSync(manifestFile,'utf8'));
@@ -150,7 +150,17 @@ test('local migration preserves every original notebook hash and retires the for
     const bytes=fs.readFileSync(path.join(manifest.original_notes_archive,entry.path));
     assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),entry.sha256,`Changed historical file ${entry.path}`);
   }
-  assert.equal(fs.existsSync(manifest.former_notes_root),false);
+  assert.equal(typeof manifest.old_notes_path_removed,'boolean');
+  if(manifest.old_notes_path_removed)assert.equal(fs.existsSync(manifest.former_notes_root),false);
+  else{
+    assert.ok(manifest.notes_restored_on_request_at&&manifest.restoration_receipt);
+    const restored=fs.lstatSync(manifest.former_notes_root);
+    assert.ok(restored.isDirectory()&&!restored.isSymbolicLink());
+    const receipt=JSON.parse(fs.readFileSync(manifest.restoration_receipt,'utf8'));
+    assert.equal(receipt.files,manifest.original_notes_files);
+    assert.equal(receipt.bytes,manifest.original_notes_bytes);
+    assert.equal(receipt.sha256_all_match,true);
+  }
   assert.equal(path.resolve(manifest.canonical_repository),path.resolve(root));
   assert.ok(fs.statSync(manifest.active_private_case).isDirectory());
 });

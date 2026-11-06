@@ -86,15 +86,15 @@ $$
 其中 $\theta$ 是模型参数，$H$ 是 Harness，$M$ 是记忆与技能，$D$ 是数据，$E$ 是环境与任务分布，$V$ 是评价器，$I$ 是改进机制。一次循环可以写成：
 
 $$
-\mathcal C_t=\operatorname{Propose}(S_t,I_t,B_t),\qquad
-\widehat S_{t+1}=\operatorname{Select}(\mathcal C_t;V_t,\mathcal D_{\mathrm{dev}}).
+\mathcal C_t=\mathrm{Propose}(S_t,I_t,B_t),\qquad
+\widehat S_{t+1}=\mathrm{Select}(\mathcal C_t;V_t,\mathcal D_{\mathrm{dev}}).
 $$
 
 只有独立验收通过，才激活候选：
 
 $$
 S_{t+1}=\begin{cases}
-\widehat S_{t+1}, & \operatorname{Gate}(\widehat S_{t+1},S_t;\mathcal D_{\mathrm{holdout}})=1,\\
+\widehat S_{t+1}, & \mathrm{Gate}(\widehat S_{t+1},S_t;\mathcal D_{\mathrm{holdout}})=1,\\
 S_t, & \text{otherwise}.
 \end{cases}
 $$

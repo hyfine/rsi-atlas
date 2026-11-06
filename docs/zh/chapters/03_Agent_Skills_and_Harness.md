@@ -36,7 +36,7 @@ L3 是产生改进的机制本身发生更新，并作为下一轮改进器运�
 下面是本文统一记号，不是任何单篇论文的原公式：
 
 $$
-\tau_t=\operatorname{Run}(M_\theta,H_t,K_t,x_t),\qquad
+\tau_t=\mathrm{Run}(M_\theta,H_t,K_t,x_t),\qquad
 z_t=E(\tau_t),\qquad
 (H_{t+1},K_{t+1})=I_t(H_t,K_t,\tau_t,z_t).
 $$
@@ -107,11 +107,11 @@ Yunjue 通过 LLM Aggregator 和 Merger 做语义聚类与工具合并，不能�
 
 $$
 \mathcal E_{t+1}=\mathcal E_t\cup\{(x_t,\tau_t,z_t)\},\qquad
-\widetilde K_{t+1}=\operatorname{Propose}_C(K_t,\mathcal E_{t+1}),\qquad
-K_{t+1}=\operatorname{Maintain}_C(K_t,\widetilde K_{t+1};F_t).
+\widetilde K_{t+1}=\mathrm{Propose}_C(K_t,\mathcal E_{t+1}),\qquad
+K_{t+1}=\mathrm{Maintain}_C(K_t,\widetilde K_{t+1};F_t).
 $$
 
-$x_t$ 为任务，$\tau_t$ 为执行轨迹，$z_t$ 为观测结果，$F_t$ 为维护所依据的反馈，可能是执行异常、环境奖励、模型判断或人工审核，不能默认都是正确性真值。$\operatorname{Maintain}_C$ 可以接纳、改写、合并、拆分、退休或不更新，不要求库单调增大。
+$x_t$ 为任务，$\tau_t$ 为执行轨迹，$z_t$ 为观测结果，$F_t$ 为维护所依据的反馈，可能是执行异常、环境奖励、模型判断或人工审核，不能默认都是正确性真值。$\mathrm{Maintain}_C$ 可以接纳、改写、合并、拆分、退休或不更新，不要求库单调增大。
 
 1. 在任务中识别能力缺口，并区分工具失败、计划失败与最终答案失败。
 2. 从经历提出事实、带适用条件的策略、工具代码或 SOP，不把整段轨迹机械升级成通用知识。
@@ -171,7 +171,7 @@ R_i^{\mathrm{util}}=r_i,\qquad
 U(s)\leftarrow(1-\alpha)U(s)+\alpha r_i\quad\forall s\in\mathcal B_K^i,
 $$
 $$
-R_i^{\mathrm{rerank}}=\operatorname{NDCG}\!\left(\sigma_i,\operatorname{argsort}[-U(\mathcal B_K^i)]\right),\qquad
+R_i^{\mathrm{rerank}}=\mathrm{NDCG}\!\left(\sigma_i,\mathrm{argsort}[-U(\mathcal B_K^i)]\right),\qquad
 R_i^{\mathrm{distill}}=r_i-\max_{s\in\mathcal B_K^i}U(s).
 $$
 
@@ -237,8 +237,8 @@ ALFWorld 训练约需八张 H800 运行 30 小时；单步 387 至 494 秒高于
 将可变 Harness 写成 $H_t=(p_t,G_t,T_t,Q_t)$：$p_t$ 是提示与指令，$G_t$ 是角色、调用依赖、分支和协作拓扑，$T_t$ 是工具接口，$Q_t$ 是上下文与预算控制规则。技能内容 $K_t$ 属于 C，什么时候加载、如何调用和由谁协作属于 D，两类可在同一系统联动。本文用以下抽象表达一次搜索：
 
 $$
-\mathcal H_t'=\operatorname{Mutate}_D(H_t,K_t,\mathcal L_t,F_t),\qquad
-H_{t+1}=\operatorname{Select}_D(\{H_t\}\cup\mathcal H_t';\widehat P,\widehat C,\mathcal G),
+\mathcal H_t'=\mathrm{Mutate}_D(H_t,K_t,\mathcal L_t,F_t),\qquad
+H_{t+1}=\mathrm{Select}_D(\{H_t\}\cup\mathcal H_t';\widehat P,\widehat C,\mathcal G),
 $$
 
 $\mathcal L_t$ 是带版本的编辑历史，$F_t$ 是轨迹诊断，$\widehat P$ 与 $\widehat C$ 是当前评估协议下的性能和成本估计，$\mathcal G$ 是适用的接纳约束。这里保留当前版本用于表达“不更新”的选择；具体论文是否保留父代、使用档案或独立门控，要逐篇核对。
@@ -358,8 +358,8 @@ RSIHub 的 Hyperagents recipe 是另一篇论文中的接口适配，不能拿�
 
 $$
 S_j=\frac{1}{|\mathcal D_{\mathrm{core}}|}\sum_{x\in\mathcal D_{\mathrm{core}}}
-\operatorname{rank}(x,\tau_x^{(j)},\tau_x^{(0)}),\qquad
-j^*=\arg\max_j S_j,\qquad \operatorname{accept}\iff S_{j^*}>0.
+\mathrm{rank}(x,\tau_x^{(j)},\tau_x^{(0)}),\qquad
+j^*=\arg\max_j S_j,\qquad \mathrm{accept}\iff S_{j^*}>0.
 $$
 
 评价器仍是模型偏好，整数区间为 $[-10,10]$；解析或执行失败记零，无有效候选或最优分不大于零时保留旧 harness。
@@ -438,7 +438,7 @@ $$
 
 ### 6.2 SkillMOO：优化技能组合，删除也是进步
 
-[SkillMOO v3](https://arxiv.org/html/2604.09297v3)把 task-specific skill bundle 视作搜索个体，目标正是 $\min_b[-\operatorname{pass}(b),\operatorname{cost}(b)]$。
+[SkillMOO v3](https://arxiv.org/html/2604.09297v3)把 task-specific skill bundle 视作搜索个体，目标正是 $\min_b[-\mathrm{pass}(b),\mathrm{cost}(b)]$。
 初始化从可用技能池抽取不同子集；solver 执行任务，记录成功、费用、时间和失败轨迹；optimizer 依据这些证据产生子代。
 变异包括删除、替换、添加、重排与重写，不必假定每轮都是增加新技能，更不能无证据地补写固定的遗传交叉算子。
 NSGA-II 通过非支配排序与拥挤距离保留候选，让高成功率和低成本的不同解都能进入下一代。
@@ -600,7 +600,7 @@ Compose 可以合并、修订冲突、选一个整体或保留当前版本；一
 并行模式的 $k$ 控制每类候选与组合的宽度，一次人口更新不应写成 $k$ 代递归；顺序模式才把前一步的 harness 与证据接到下一步。
 当 $k>1$，最终 selector 只比较匿名交付物与任务材料，返回已有输出，不额外生成新答案；$k=1$ 绕过此选择。
 任务结束后反思完整改进记录，保留有执行对照支持的经验；证据不足时允许不写经验条目。
-论文原式 $\mathcal R_{t+1}=\operatorname{Update}(\mathcal R_t,\mathcal H_t^*,\mathcal D_t)$ 的星号表示采用，不表示验证过的最优。
+论文原式 $\mathcal R_{t+1}=\mathrm{Update}(\mathcal R_t,\mathcal H_t^*,\mathcal D_t)$ 的星号表示采用，不表示验证过的最优。
 库中既有可执行组件，也有适用条件和证据说明；下次 Propose、Probe、Compose 读取更新后的库，构成明确的 C+D+F、L2。
 若把改进器的经验状态也计入“改进器变化”，它接近 L3 边界；本章仍区分这种状态更新与 Hyperagents 式改写改进程序，因为原文明确阶段指令和决策规则固定。
 第 4 节库消融在 Gemini 3.5 Flash/OpenCode、$k=1$ 下将 WorkBuddy 从 77.5 降至 74.4、JobBench 从 36.0 降至 34.2，为经验回流提供了直接支持。

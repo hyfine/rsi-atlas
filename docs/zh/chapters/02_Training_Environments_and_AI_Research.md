@@ -38,11 +38,11 @@ A 家族的持久产物是可继续训练或部署的权重；B 家族的持久�
 
 $$
 \widehat S_{t+1}=U_t(S_t;B_t),\qquad
-S_{t+1}=\operatorname{Accept}_{J_{\mathrm{ext}}}(S_t,\widehat S_{t+1}).
+S_{t+1}=\mathrm{Accept}_{J_{\mathrm{ext}}}(S_t,\widehat S_{t+1}).
 $$
 
 $B_t$ 是预算向量，包含推理、训练、候选执行与验证成本；$J_{\mathrm{ext}}$ 是预先约定的外部验收协议。接受规则可能回滚候选，不能默认为每次更新都算进步。
-$t$ 是外层迭代编号，$\widehat S_{t+1}$ 是候选状态，$\operatorname{Accept}$ 是依据外部协议选择旧状态或候选状态的规则。这里的验收表示本章建议的分析接口，不是声称每篇论文都实现独立确认集。
+$t$ 是外层迭代编号，$\widehat S_{t+1}$ 是候选状态，$\mathrm{Accept}$ 是依据外部协议选择旧状态或候选状态的规则。这里的验收表示本章建议的分析接口，不是声称每篇论文都实现独立确认集。
 
 如果只有 $\theta_t$ 变化，应先报告权重适应；如果新 $\theta_{t+1}$ 生成下一批训练任务，可讨论 L2；只有当改进机制 $U_t$ 的变化及其后续使用有证据时，才讨论 L3。
 
@@ -179,7 +179,7 @@ EFT 的解释与分数不是直接全由人工书写，而是模型生成后按�
 
 [DeepSeek-R1](https://arxiv.org/abs/2501.12948) 的原始报告中，R1-Zero 从 DeepSeek-V3-Base 直接进行 RL，省去作为前置步骤的推理 SFT。
 其[§2.2](https://arxiv.org/html/2501.12948v1#S2.SS2) 仍依赖任务分布、最终答案或预定义测试，以及人为规定的格式奖励。
-GRPO 通过同题候选奖励估计相对优势 $A_i=(r_i-\bar r)/\operatorname{std}(r)$，其中 $r_i$ 是候选奖励、$\bar r$ 与标准差在同题组内计算；再结合策略比率裁剪与 KL 约束更新。这是非零方差组的优势简写，不是完整损失。
+GRPO 通过同题候选奖励估计相对优势 $A_i=(r_i-\bar r)/\mathrm{std}(r)$，其中 $r_i$ 是候选奖励、$\bar r$ 与标准差在同题组内计算；再结合策略比率裁剪与 KL 约束更新。这是非零方差组的优势简写，不是完整损失。
 组内全对或全错可能使任务缺乏相对信号，这为后续主动任务生成提供动机；并不说明所有 RL 实现都在这些组上有相同处理方式。
 R1 正式流水线还包括冷启动、推理 RL、拒绝采样生成 SFT 数据以及更广任务上的后续 RL，不能用 R1-Zero 概括全部。
 蒸馏版本在原报告中主要接受教师生成数据的 SFT，不能把蒸馏成绩称为小模型从零自主研究的成果。
@@ -199,7 +199,7 @@ R1-Zero 的直接 RL 子过程主要是 A/L1；R1 的模型输出回流为训练
 必要输入不只是一段无标签文本，还包括基座、允许调用的更新工具、每次适应预算，以及训练编辑策略时与上下文配对的评测问题和答案。以下是对原式 (1)–(4) 的本文分析性重记：
 
 $$
-	heta'(e)=\operatorname{SFT}(\theta,e),\qquad
+\theta'(e)=\mathrm{SFT}(\theta,e),\qquad
 J_{\mathrm{edit}}(\theta)=\mathbb E_{(C,\tau)\sim\mathcal D,\,e\sim\pi_\theta(\cdot\mid C)}[R(\theta'(e),\tau)].
 $$
 
@@ -269,10 +269,10 @@ B 的持久状态可以是筛选后的数据池、带来源的任务档案、课
 理想上应选择能改善学习者而不只是让它失败的任务。以下双层目标是本文分析抽象，不是这些方法都求解的论文公式：
 
 $$
-J_B(\phi;\theta)=\mathbb E_{\tau\sim q_\phi}\!\left[Q_{\mathrm{val}}\!\left(\operatorname{Update}(\theta,\tau)\right)-Q_{\mathrm{val}}(\theta)-\lambda C(\tau)\right].
+J_B(\phi;\theta)=\mathbb E_{\tau\sim q_\phi}\!\left[Q_{\mathrm{val}}\!\left(\mathrm{Update}(\theta,\tau)\right)-Q_{\mathrm{val}}(\theta)-\lambda C(\tau)\right].
 $$
 
-$\phi$ 是任务生成或采样器的状态，$q_\phi$ 是其任务分布，$\tau$ 是任务，$\theta$ 是当前学习者参数，$\operatorname{Update}$ 是给定预算的训练操作，$Q_{\mathrm{val}}$ 是开发验证分数，$C$ 是生成、执行与学习的成本，$\lambda\geq0$ 是成本权重，$J_B$ 表示期望净学习收益。若每次更新后重测代价过高，实际方法使用成功率、regret、新颖度或奖励差等代理；这些代理不等于已测得真实学习增益。最终确认集不能再充当这里的开发验证器。
+$\phi$ 是任务生成或采样器的状态，$q_\phi$ 是其任务分布，$\tau$ 是任务，$\theta$ 是当前学习者参数，$\mathrm{Update}$ 是给定预算的训练操作，$Q_{\mathrm{val}}$ 是开发验证分数，$C$ 是生成、执行与学习的成本，$\lambda\geq0$ 是成本权重，$J_B$ 表示期望净学习收益。若每次更新后重测代价过高，实际方法使用成功率、regret、新颖度或奖励差等代理；这些代理不等于已测得真实学习增益。最终确认集不能再充当这里的开发验证器。
 
 ```text
 archive = seed_tasks_or_environments
@@ -470,7 +470,7 @@ SFT 保留经过执行筛选的完整解和有用修订；RL 再使用在线生�
 论文 [§4.3，式 (1)，附录 B.5](https://arxiv.org/html/2607.28568v1#S4.SS3) 的基础奖励可写为：
 
 $$
-r_{\mathrm{base}}(z;B,W)=\left[\operatorname{clip}\left(\frac{z-W}{B-W},0,1\right)\right]^\alpha,\quad B>W,\quad\alpha>0.
+r_{\mathrm{base}}(z;B,W)=\left[\mathrm{clip}\left(\frac{z-W}{B-W},0,1\right)\right]^\alpha,\quad B>W,\quad\alpha>0.
 $$
 
 $z$ 是方向统一后的分数，$B,W$ 是上下界，$\alpha$ 调整形状；这里先裁剪再取幂，与原笔记的运算顺序不同。
@@ -574,7 +574,7 @@ OPSD 的学生仅看问题，冻结的教师副本另看正确解答；DCE 将�
 依照 [§3.1，式 (3)–(4)](https://arxiv.org/html/2609.30652v1#S3.SS1)，在同一个学生生成前缀上：
 
 $$
-q_{k,t}=\operatorname{stopgrad}\pi_{\theta_k}(\cdot\mid x,g,\tau,y_{<t}),\quad
+q_{k,t}=\mathrm{stopgrad}\pi_{\theta_k}(\cdot\mid x,g,\tau,y_{<t}),\quad
 p_{k,t}=\pi_{\theta_k}(\cdot\mid x,y_{<t}),\quad
 \mathcal L_G=\mathbb E\frac1m\sum_{t=1}^{m}D_{\mathrm{KL}}(q_{k,t}\Vert p_{k,t}).
 $$

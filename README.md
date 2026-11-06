@@ -78,6 +78,7 @@ The interface and summaries are bilingual; the comprehensive technical chapters 
 ```sh
 node scripts/build-atlas.mjs
 node scripts/validate-delivery.mjs
+npm --prefix scripts ci --ignore-scripts
 node --test scripts/*.test.mjs
 ```
 
@@ -91,3 +92,5 @@ Node.js 22+; Chrome/Chromium enables real-browser checks. Builds use local sourc
 - Better output, persistent adaptation, recursive reuse and a more effective improver are different claims. An upward score curve is not proof of open-ended acceleration.
 - [Third-party notices](THIRD_PARTY_NOTICES.md) preserve runtime/icon terms and six CC BY 4.0 figure attributions. Paper links do not grant redistribution rights.
 - All method-level reading scopes, source URLs and caveats are inspectable in [the public dataset](data/atlas-methods.json).
+
+The offline build has no package dependencies; test-only Markdown/TeX tools validate all published formulas.

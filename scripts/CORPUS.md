@@ -11,6 +11,7 @@ From the project directory:
 ```sh
 node scripts/build-atlas.mjs
 node scripts/validate-delivery.mjs
+npm --prefix scripts ci --ignore-scripts
 node --test scripts/*.test.mjs
 ```
 

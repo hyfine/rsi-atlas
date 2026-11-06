@@ -32,6 +32,7 @@ scripts/*
 !scripts/family.test.mjs
 !scripts/consolidation.test.mjs
 !scripts/timeline.test.mjs
+!scripts/math.test.mjs
 !scripts/browser-test-utils.mjs
 !scripts/viewer.template.html
 !scripts/implementation.template.html

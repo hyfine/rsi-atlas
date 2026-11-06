@@ -38,9 +38,12 @@
 ```sh
 node scripts/build-atlas.mjs
 node scripts/validate-delivery.mjs
+npm --prefix scripts ci --ignore-scripts
 node --test scripts/*.test.mjs
 ```
 
 只维护当前仓库，不再同步外部笔记目录。旧笔记完整移动到本地忽略的不可变归档，公开正文已经融合；PDF、内部工程案例、原始日志和旧采集工具不进入公开 Git。[迁移与验证说明](docs/maintenance/CONSOLIDATION.md)。
 
 微信正文及指定OpenReview来源访问验证受限，未绕过或替换引用。Flint显示日期/站点发布注释存在口径差异，已明确标记。架构动画是机制示意，作者结果不是本项目复现；[第三方署名与复用许可](THIRD_PARTY_NOTICES.md)单列。
+
+离线构建不依赖 npm 包；测试专用的 Markdown/TeX 工具逐条解析并渲染公开公式。

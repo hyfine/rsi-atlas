@@ -1,9 +1,9 @@
 {
   "status": "passed",
-  "checked_at": "2026-11-06T03:36:01.903Z",
+  "checked_at": "2026-11-06T04:41:03.168Z",
   "schema_and_links": {
     "ok": true,
-    "publication_files": 150,
+    "publication_files": 151,
     "local_links_checked": 491,
     "methods": 88,
     "recent_methods": 58,

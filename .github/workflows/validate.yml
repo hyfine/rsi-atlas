@@ -14,6 +14,8 @@ jobs:
           node-version: '22'
       - name: Require browser
         run: google-chrome --version
+      - name: Install test-only Markdown and TeX tools
+        run: npm --prefix scripts ci --ignore-scripts --no-audit --no-fund
       - name: Build and validate
         run: |
           node scripts/build-atlas.mjs

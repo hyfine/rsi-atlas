@@ -8,6 +8,8 @@ RSI Atlas is the sole active repository for documentation, diagrams, curated dat
 
 The migration preserved all **183 original notebook files**, **183,557,345 bytes**, with pre-move and post-move SHA-256 identity. A full local backup of the notebooks and the previous dirty draft was created before changes. The dirty Git draft was also retained in a local stash; it was not discarded.
 
+At the user's subsequent request, the original notebook directory was restored as a real local copy, not a symlink. All 183 restored file hashes matched the original inventory. The canonical repository, immutable archive and backups were preserved. Restoration does not enable automatic mirroring or publish any private content.
+
 The canonical repository starts from the latest published content and integrates the richer draft's four chapters, expanded original-overview mapping and versioned public evidence. Current builders regenerate the method map, architecture/flow assets, licensed figure catalog, English/Chinese entry pages and website.
 
 ## Active versus archived content
@@ -32,6 +34,6 @@ The earlier implementation worktree was moved into the local backup area and loc
 - Public chapter differences were compared before integration; richer content and explicit reading scopes were preserved.
 - Local engineering references were rebased and their source hashes and browser walkthroughs rechecked without running training.
 - Public export checks reject private paths and links to unpublished local-only files.
-- The old live notebook path is retired. New work happens in this repository only.
+- An explicitly restored local notebook copy is permitted; it is not a public build input or an automatically synchronized mirror.
 
 The full per-file manifest and backup locations are local-only because they contain machine paths and private material. Public metadata intentionally reports aggregate preservation facts, not those confidential details.

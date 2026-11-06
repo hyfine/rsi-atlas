@@ -21,16 +21,19 @@ Both CSV exports are generated: `method-map.csv` mirrors the foundational input,
 ```sh
 node scripts/build-atlas.mjs
 node scripts/validate-delivery.mjs
+npm --prefix scripts ci --ignore-scripts
 node --test scripts/*.test.mjs
 ```
 
-The public build needs no packages, network, private files or models. Browser tests require Chrome/Chromium; a skip is explicit. Source-pinned implementation checks may additionally use `--source-root ../review-sources`.
+The public build needs no packages, network, private files or models. Tests use development-only Markdown/TeX tools to parse and render every public formula. Browser tests require Chrome/Chromium; a skip is explicit. Source-pinned implementation checks may additionally use `--source-root ../review-sources`.
 
 Before publishing, verify that every tracked file belongs to the public export set. `.local/` is intentionally ignored and must never be force-added. Private engineering reports, archived originals, raw PDFs, logs, caches and backups are not publication inputs.
 
 ## Documentation and figures
 
 Detailed technical chapters remain in Chinese; the homepage and README default to English and offer a visible Chinese switch. Keep meaning and evidence scope consistent when translating.
+
+Use GitHub-compatible math: named functions use `\mathrm{...}`, not the rejected `\operatorname` macro; stars use `^*` or `^\star`, not `^\*`. Keep TeX backslashes literal and reject control characters inside formulas. The math regression parses Markdown before rendering so inline code, fenced examples and currency are not mistaken for equations.
 
 Family architecture is an author-created analytical view, representative flow is a specific mechanism, and a paper figure is a separately attributed original. Do not mix these layers. Original figures require explicit reusable licensing or permission, exact version/figure attribution, crop disclosure and an asset hash.
 
