@@ -11,10 +11,23 @@ export async function connectBrowser(t,url,readyExpression){
   const profile=fs.mkdtempSync(path.join(os.tmpdir(),'rsi-atlas-browser-'));
   const chrome=spawn(chromePath(),['--headless=new','--no-first-run','--no-default-browser-check','--disable-background-networking','--disable-component-update','--disable-sync','--remote-debugging-port=0',`--user-data-dir=${profile}`,'about:blank'],{stdio:['ignore','ignore','pipe']});
   const running=()=>chrome.exitCode===null&&chrome.signalCode===null;
+  let didClose=false,closeGracefully,closeSocket;
+  const closed=new Promise(resolve=>chrome.once('close',()=>{didClose=true;resolve();}));
+  async function waitForClosure(timeout){
+    if(didClose)return;
+    let timer;
+    try{await Promise.race([closed,new Promise(resolve=>{timer=setTimeout(resolve,timeout);})]);}
+    finally{clearTimeout(timer);}
+  }
   t.after(async()=>{
-    if(running()){chrome.kill('SIGTERM');await Promise.race([once(chrome,'exit'),new Promise(resolve=>setTimeout(resolve,5000))]);}
-    if(running()){chrome.kill('SIGKILL');await once(chrome,'exit');}
-    fs.rmSync(profile,{recursive:true,force:true,maxRetries:5,retryDelay:100});
+    if(running()){if(closeGracefully)closeGracefully();else chrome.kill('SIGTERM');}
+    await waitForClosure(5000);
+    if(running()){chrome.kill('SIGTERM');await waitForClosure(3000);}
+    if(running()){chrome.kill('SIGKILL');await waitForClosure(3000);}
+    closeSocket?.();
+    // Child processes can still flush the profile after the parent emits exit.
+    if(!didClose)throw new Error(`Chrome did not finish closing its profile: ${profile}`);
+    fs.rmSync(profile,{recursive:true,force:true,maxRetries:10,retryDelay:100});
   });
   const endpoint=await new Promise((resolve,reject)=>{
     let output='';
@@ -24,9 +37,13 @@ export async function connectBrowser(t,url,readyExpression){
     chrome.stderr.on('data',chunk=>{output+=chunk.toString();const match=output.match(/DevTools listening on (ws:\/\/\S+)/);if(match){clearTimeout(timeout);resolve(match[1]);}});
   });
   const socket=new WebSocket(endpoint);
+  closeSocket=()=>socket.close();
   await once(socket,'open');
-  t.after(()=>socket.close());
   let counter=0;
+  closeGracefully=()=>{
+    if(socket.readyState===WebSocket.OPEN)socket.send(JSON.stringify({id:++counter,method:'Browser.close'}));
+    else chrome.kill('SIGTERM');
+  };
   const pending=new Map(),exceptions=[];
   socket.addEventListener('message',event=>{
     const message=JSON.parse(event.data);
