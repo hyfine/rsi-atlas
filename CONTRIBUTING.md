@@ -39,3 +39,13 @@ Family architecture is an author-created analytical view, representative flow is
 Add a source URL and reading scope for factual claims. Tie institution labels to the cited paper version or official release, retain multiple affiliations and mark missing/unknown types. Do not turn announcement copy or a leaderboard number into a claim of recursive acceleration.
 
 Generated files must rebuild deterministically. Keep failed attempts, uncertainty and unresolved sources; never backfill invented dates, affiliations, code links or experimental results.
+
+## Publishing
+
+Verify the intended GitHub account before pushing, and use an already-authorized repository identity. HTTPS credentials also need `workflow` permission when creating or changing Actions workflows. Never weaken access controls or include credentials in a remote URL.
+
+After deployment, compare the remote commit and served HTML bytes with the verified checkout. The actual bilingual/focus/timeline browser regression can also target the live site:
+
+```sh
+RSI_ATLAS_TEST_URL=https://hyfine.github.io/rsi-atlas/ node --test scripts/timeline.test.mjs
+```

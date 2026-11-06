@@ -12,7 +12,8 @@ const within=(start,end)=>atlas.methods.filter(record=>record.date>=start&&recor
 
 test('real Chrome: bilingual actual focus methods, inclusive date ranges and institution timelines',{timeout:180000},async t=>{
   if(!chromePath()){t.skip('Chrome absent; no timeline/browser pass claimed');return;}
-  const browser=await connectBrowser(t,pathToFileURL(path.join(root,'index.html')).href,'window.atlasReady === true');
+  const url=process.env.RSI_ATLAS_TEST_URL??pathToFileURL(path.join(root,'index.html')).href;
+  const browser=await connectBrowser(t,url,'window.atlasReady === true');
   const {evaluate,page,waitFor}=browser;
   const change=(id,value,event='change')=>evaluate(`(()=>{const e=document.getElementById(${JSON.stringify(id)});e.value=${JSON.stringify(value)};e.dispatchEvent(new Event(${JSON.stringify(event)},{bubbles:true}));})()`);
   const click=id=>evaluate(`document.getElementById(${JSON.stringify(id)}).click()`);
