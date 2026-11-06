@@ -12,7 +12,7 @@ From the project directory:
 node scripts/build-atlas.mjs
 node scripts/validate-delivery.mjs
 npm --prefix scripts ci --ignore-scripts
-node --test scripts/*.test.mjs
+node --test --test-concurrency=2 scripts/*.test.mjs
 ```
 
 The historical download policy is paused. Twenty-seven foundational and representative papers were retained privately; public entries link to primary sources. This is a storage decision, not a claim of full-text review. No public build downloads PDFs or executes research code.

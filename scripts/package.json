@@ -5,7 +5,7 @@
   "scripts": {
     "build": "node build-atlas.mjs",
     "validate": "node validate-delivery.mjs",
-    "test": "node --test *.test.mjs"
+    "test": "node --test --test-concurrency=2 *.test.mjs"
   },
   "engines": {
     "node": ">=22"

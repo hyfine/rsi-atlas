@@ -23,10 +23,12 @@ Both CSV exports are generated: `method-map.csv` mirrors the foundational input,
 node scripts/build-atlas.mjs
 node scripts/validate-delivery.mjs
 npm --prefix scripts ci --ignore-scripts
-node --test scripts/*.test.mjs
+node --test --test-concurrency=2 scripts/*.test.mjs
 ```
 
 The public build needs no packages, network, private files or models. Tests use development-only Markdown/TeX tools to parse and render every public formula. Browser tests require Chrome/Chromium; a skip is explicit. Source-pinned implementation checks may additionally use `--source-root ../review-sources`.
+
+The full runner limits file concurrency to two so separate isolated Chrome instances do not compete for excessive process/thread resources.
 
 Before publishing, verify that every tracked file belongs to the public export set. `.local/` is intentionally ignored and must never be force-added. Private engineering reports, archived originals, raw PDFs, logs, caches and backups are not publication inputs.
 

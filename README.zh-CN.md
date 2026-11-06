@@ -47,7 +47,7 @@
 node scripts/build-atlas.mjs
 node scripts/validate-delivery.mjs
 npm --prefix scripts ci --ignore-scripts
-node --test scripts/*.test.mjs
+node --test --test-concurrency=2 scripts/*.test.mjs
 ```
 
 只维护当前仓库，不再同步外部笔记目录。旧笔记完整移动到本地忽略的不可变归档，公开正文已经融合；PDF、内部工程案例、原始日志和旧采集工具不进入公开 Git。[迁移与验证说明](docs/maintenance/CONSOLIDATION.md)。

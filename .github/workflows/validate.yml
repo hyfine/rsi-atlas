@@ -21,7 +21,7 @@ jobs:
           node scripts/build-atlas.mjs
           node scripts/validate-delivery.mjs
       - name: Regression and real browser tests
-        run: node --test scripts/*.test.mjs
+        run: node --test --test-concurrency=2 scripts/*.test.mjs
       - name: Verify actual GitHub Markdown math recognition
         env:
           GH_TOKEN: ${{ github.token }}

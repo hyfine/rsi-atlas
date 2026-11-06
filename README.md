@@ -87,7 +87,7 @@ The interface and summaries are bilingual; the comprehensive technical chapters 
 node scripts/build-atlas.mjs
 node scripts/validate-delivery.mjs
 npm --prefix scripts ci --ignore-scripts
-node --test scripts/*.test.mjs
+node --test --test-concurrency=2 scripts/*.test.mjs
 ```
 
 Node.js 22+; Chrome/Chromium enables real-browser checks. Builds use local source data: no CDN, telemetry, translation requests, model calls or paper downloads. The standalone HTML views can be opened offline. Skipped browser checks are never called a visual pass.

@@ -38,7 +38,7 @@ export async function connectBrowser(t,url,readyExpression){
     let output='';
     const timeout=setTimeout(()=>reject(new Error('Chrome debugging endpoint did not start')),20000);
     chrome.on('error',error=>{clearTimeout(timeout);reject(error);});
-    chrome.on('exit',code=>{clearTimeout(timeout);reject(new Error(`Chrome exited before readiness (${code})`));});
+    chrome.on('exit',(code,signal)=>{clearTimeout(timeout);reject(new Error(`Chrome exited before readiness (${code??signal}); stderr: ${output.slice(-2000)}`));});
     chrome.stderr.on('data',chunk=>{output+=chunk.toString();const match=output.match(/DevTools listening on (ws:\/\/\S+)/);if(match){clearTimeout(timeout);resolve(match[1]);}});
   });
   const socket=new WebSocket(endpoint);
