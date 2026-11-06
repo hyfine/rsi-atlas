@@ -92,7 +92,7 @@ S3Gym 提供“自评是否对得上外部结果”的诊断；MetaRSI 的最终
 
 ```math
 (\widetilde S_{t+1},\widetilde I_{t+1},\mathcal E_t,\mathbf c_t)
-=I_t(S_t,\mathcal E_{<t};\mathbf B_t),\qquad \mathbf c_t\preceq\mathbf B_t,
+=I_t(S_t,\mathcal E_{\lt t};\mathbf B_t),\qquad \mathbf c_t\preceq\mathbf B_t,
 ```
 
 ```math
@@ -101,7 +101,7 @@ S3Gym 提供“自评是否对得上外部结果”的诊断；MetaRSI 的最终
 
 $`t`$ 是外层改进轮次； $`S_t`$ 是已安装的任务系统及持久状态； $`I_t`$ 是本轮实际调用的改进机制，包含提案、实验、选择和预算策略。
 带波浪号的是候选，不带波浪号的是按验收规则保留的版本；候选可以不改变 $`I_t`$。
-$`\mathcal E_t`$ 是本轮可供开发使用的证据， $`\mathcal E_{<t}`$ 是之前各轮的证据历史；独立报告集不属于该输入。
+$`\mathcal E_t`$ 是本轮可供开发使用的证据， $`\mathcal E_{\lt t}`$ 是之前各轮的证据历史；独立报告集不属于该输入。
 $`\mathbf B_t`$ 与 $`\mathbf c_t`$ 分别是资源上限和实际支出向量， $`\preceq`$ 表示逐项不超限，不假设 tokens、GPU 时间和验证查询可以自由折算。
 $`V^\star`$ 是受保护的验收参照； $`\mathcal A^\star`$ 是安装或拒绝候选的受保护规则，拒绝时可保留旧版本；星号表示权限边界，不表示参照没有误差。
 

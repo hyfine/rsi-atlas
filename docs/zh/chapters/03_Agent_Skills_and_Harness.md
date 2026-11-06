@@ -429,7 +429,7 @@ v1 摘要报告 Creation 覆盖六个创建模型、四个领域、五个下游�
 
 ```math
 h_a\succ h_b\iff P(h_a)\ge P(h_b)\land C(h_a)\le C(h_b)
-\land\big(P(h_a)>P(h_b)\lor C(h_a)<C(h_b)\big).
+\land\big(P(h_a)>P(h_b)\lor C(h_a)\lt C(h_b)\big).
 ```
 
 例如成功率相同但更便宜的候选支配原版；成功率更高且更贵的候选通常互不支配。

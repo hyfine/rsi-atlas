@@ -22,6 +22,7 @@ function inspectMath(text){
         const expression={line,tex,display:token.block||token.type.includes('double')};
         expressions.push(expression);
         if(/\\operatorname\b/.test(tex))errors.push(`${line}: GitHub rejects the operatorname macro`);
+        if(tex.includes('<'))errors.push(`${line}: HTML-sensitive less-than token; use the TeX lt command`);
         if(/[\x00-\x09\x0B-\x1F]/.test(tex))errors.push(`${line}: Control character or tab in formula`);
         try{
           // Unicode prose in text commands is intentional; unknown TeX commands still throw.
@@ -72,6 +73,7 @@ test('math checks reject the reported macro, lost escapes and invalid TeX',()=>{
     [String.raw`$S^\*$`,/Undefined control sequence/],
     [String.raw`$\frac{a}{b$`,/expected.*\}/i],
     [String.raw`$\notARealCommand{x}$`,/Undefined control sequence/],
+    [String.raw`$y_{<t}$`,/HTML-sensitive/],
     ['$$\n\\theta = x\rho\n$$',/source control character/],
   ];
   for(const [source,expected]of cases)assert.match(inspectMath(source).errors.join('\n'),expected,source);

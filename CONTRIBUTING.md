@@ -35,6 +35,8 @@ Detailed technical chapters remain in Chinese; the homepage and README default t
 
 Use GitHub-compatible math: named functions use `\mathrm{...}`, not the rejected `\operatorname` macro; stars use `^*` or `^\star`, not `^\*`. Keep TeX backslashes literal and reject control characters inside formulas. The math regression parses Markdown before rendering so inline code, fenced examples and currency are not mistaken for equations.
 
+Use `\lt` instead of a literal less-than character inside formulas: GitHub's additional HTML decoding can otherwise treat a following variable as a tag and silently remove part of the expression.
+
 Prefer fenced `math` blocks and GitHub's code-style inline math delimiters to protect stars, underscores and TeX escapes from Markdown processing. Keep a whitespace boundary before ordinary inline dollar math adjacent to prose, including Chinese punctuation. Local TeX rendering alone does not prove GitHub compatibility: CI checks both one-to-one recognition and the exact decoded TeX payload through GitHub's Markdown API. Run the same check locally with an authenticated `gh` CLI and `RSI_GITHUB_MATH_CHECK=1 node --test scripts/math.test.mjs`.
 
 Family architecture is an author-created analytical view, representative flow is a specific mechanism, and a paper figure is a separately attributed original. Do not mix these layers. Original figures require explicit reusable licensing or permission, exact version/figure attribution, crop disclosure and an asset hash.

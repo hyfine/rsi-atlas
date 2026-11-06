@@ -333,7 +333,7 @@ $`e`$ 是一次生成的环境参数配置， $`\mathcal T_A(e)`$ 与 $`\mathcal
 r_{\mathrm{propose}}(\tau)=
 \begin{cases}
 0,&\hat p_{\mathrm{solve}}\in\{0,1\},\\
-1-\hat p_{\mathrm{solve}},&0<\hat p_{\mathrm{solve}}<1.
+1-\hat p_{\mathrm{solve}},&0\lt \hat p_{\mathrm{solve}}\lt 1.
 \end{cases}
 ```
 
@@ -574,12 +574,12 @@ OPSD 的学生仅看问题，冻结的教师副本另看正确解答；DCE 将�
 依照 [§3.1，式 (3)–(4)](https://arxiv.org/html/2609.30652v1#S3.SS1)，在同一个学生生成前缀上：
 
 ```math
-q_{k,t}=\mathrm{stopgrad}\pi_{\theta_k}(\cdot\mid x,g,\tau,y_{<t}),\quad
-p_{k,t}=\pi_{\theta_k}(\cdot\mid x,y_{<t}),\quad
+q_{k,t}=\mathrm{stopgrad}\pi_{\theta_k}(\cdot\mid x,g,\tau,y_{\lt t}),\quad
+p_{k,t}=\pi_{\theta_k}(\cdot\mid x,y_{\lt t}),\quad
 \mathcal L_G=\mathbb E\frac1m\sum_{t=1}^{m}D_{\mathrm{KL}}(q_{k,t}\Vert p_{k,t}).
 ```
 
-$`k`$ 是更新步， $`t`$ 是 token 位置， $`m`$ 是参与指导损失的保留序列长度， $`x`$ 是问题， $`g`$ 是经验证的参考解， $`\tau`$ 是转接指令， $`y_{<t}`$ 是同一保留序列的前缀， $`\theta_k`$ 是当前参数， $`q_{k,t}`$ 与 $`p_{k,t}`$ 分别为教师和学生的下一 token 分布， $`\mathcal L_G`$ 为指导损失；期望取训练题解对及学生采样。公式省略角色消息序列化，真实排列是实验变量。主配置为 Forward KL，不是 Reverse KL。
+$`k`$ 是更新步， $`t`$ 是 token 位置， $`m`$ 是参与指导损失的保留序列长度， $`x`$ 是问题， $`g`$ 是经验证的参考解， $`\tau`$ 是转接指令， $`y_{\lt t}`$ 是同一保留序列的前缀， $`\theta_k`$ 是当前参数， $`q_{k,t}`$ 与 $`p_{k,t}`$ 分别为教师和学生的下一 token 分布， $`\mathcal L_G`$ 为指导损失；期望取训练题解对及学生采样。公式省略角色消息序列化，真实排列是实验变量。主配置为 Forward KL，不是 Reverse KL。
 SRCL 在不展示参考解的条件下改写自身响应，只保留更短、自然终止、结构有效且答案正确的结果，再加自回归交叉熵损失。
 原始 rollout 的特权指导与筛选后的简洁目标使用不同上下文；“改写时不看答案”不意味着训练全过程没有答案监督。
 相对 OPSD，完整方案还改变正确解的提示位置，故归因教师刷新必须读 [§5.6–5.7 的匹配消融](https://arxiv.org/html/2609.30652v1#S5.SS6)，不能仅看主表差值。
@@ -708,7 +708,7 @@ for generation in mass_cycles:
 这是本文对算法 1–3 的伪代码简写。原方法 §3 的 SFT 目标是带掩码的逐窗口似然：
 
 ```math
-\mathcal L_{\mathrm{SFT}}(\theta)=-\mathbb E_{z\sim q}\left[\frac{\sum_{\ell=1}^{|z|}\mu_\ell\log p_\theta(z_\ell\mid z_{<\ell})}{\sum_{\ell=1}^{|z|}\mu_\ell}\right].
+\mathcal L_{\mathrm{SFT}}(\theta)=-\mathbb E_{z\sim q}\left[\frac{\sum_{\ell=1}^{|z|}\mu_\ell\log p_\theta(z_\ell\mid z_{\lt \ell})}{\sum_{\ell=1}^{|z|}\mu_\ell}\right].
 ```
 
 $`\theta`$ 是共享模型参数， $`z`$ 是含至少一个监督 token 的训练窗口， $`q`$ 是窗口采样分布， $`\ell`$ 是 token 位置， $`p_\theta`$ 是下一 token 分布， $`\mu_\ell\in\{0,1\}`$ 标记 assistant 监督目标， $`\mathcal L_{\mathrm{SFT}}`$ 是训练损失。系统/用户消息、工具返回和重叠上下文不承受损失；orchestrator 输入去掉优化工作流与收集指令，worker 的真实任务分配保留。因此方法是在学习协作执行，不是把自评文本直接当作正确答案的证明。

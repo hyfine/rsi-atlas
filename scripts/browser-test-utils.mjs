@@ -24,6 +24,11 @@ export async function connectBrowser(t,url,readyExpression){
     await waitForClosure(5000);
     if(running()){chrome.kill('SIGTERM');await waitForClosure(3000);}
     if(running()){chrome.kill('SIGKILL');await waitForClosure(3000);}
+    if(!didClose&&!running()){
+      // An exited browser's descendants can retain our stderr pipe.
+      chrome.stderr.destroy();
+      await waitForClosure(1000);
+    }
     closeSocket?.();
     // Child processes can still flush the profile after the parent emits exit.
     if(!didClose)throw new Error(`Chrome did not finish closing its profile: ${profile}`);
