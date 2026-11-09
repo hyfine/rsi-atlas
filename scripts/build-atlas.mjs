@@ -18,8 +18,11 @@ const attributionReviews=new Map(institutionData.attribution_reviews.map(review=
 assert.equal(attributionReviews.size,institutionData.attribution_reviews.length,'Duplicate attribution review');
 const translations = read('data/ui-translations.json');
 const survey = read('data/survey-guide.json');
+const surveyEvidence=read('data/survey-fulltext-evidence.json');
+assert.ok(surveyEvidence.papers.length>=6&&surveyEvidence.entire_fulltext_papers.length===6);
 const engineeringProjects = read('data/engineering-projects.json');
 const {validateEngineering,buildEngineeringGuide}=await import('./build-engineering-guide.mjs');
+const {buildDevelopmentVisuals}=await import('./build-development-visuals.mjs');
 validateEngineering(engineeringProjects);
 assert.ok(survey.chapter_href&&survey.executive_summary.en&&survey.executive_summary.zh);
 assert.ok(survey.cards.length>=8&&survey.cards.length<=12);
@@ -91,6 +94,7 @@ const payload = {
   focus_ids: updates.focus_ids,
   unresolved_sources: updates.unresolved_sources,
   survey,
+  survey_evidence: surveyEvidence,
   engineering_projects: engineeringProjects,
 };
 const priorFigureStatuses=new Map(paperFigures.papers.map(paper=>[paper.id,paper]));
@@ -107,7 +111,13 @@ assert.equal(template.split('__ENGINEERING_SCRIPT__').length,2);
 const viewer=template
   .replace('__ATLAS_DATA__',()=>embedded)
   .replace('__ENGINEERING_MARKUP__',()=>fs.readFileSync(path.join(root,'scripts/engineering-panel.html'),'utf8'))
-  .replace('__ENGINEERING_SCRIPT__',()=>fs.readFileSync(path.join(root,'scripts/engineering-panel.js'),'utf8'));
+  .replace('__ENGINEERING_SCRIPT__',()=>fs.readFileSync(path.join(root,'scripts/engineering-panel.js'),'utf8'))
+  .replace('__METHOD_FAN_MARKUP__',()=>fs.readFileSync(path.join(root,'scripts/method-fan.html'),'utf8'))
+  .replace('__METHOD_FAN_DRAWING__',()=>fs.readFileSync(path.join(root,'scripts/method-fan-drawing.js'),'utf8'))
+  .replace('__METHOD_FAN_SCRIPT__',()=>fs.readFileSync(path.join(root,'scripts/method-fan.js'),'utf8'))
+  .replace('__GROWTH_TREE_MARKUP__',()=>fs.readFileSync(path.join(root,'scripts/growth-tree.html'),'utf8'))
+  .replace('__GROWTH_TREE_SCRIPT__',()=>fs.readFileSync(path.join(root,'scripts/growth-tree.js'),'utf8'));
+assert.ok(!/__GROWTH_TREE_|__METHOD_FAN_/.test(viewer),'Unresolved development visualization placeholders');
 fs.writeFileSync(path.join(root, 'index.html'),viewer);
 const csvCell = value => `"${String(value).replaceAll('"', '""')}"`;
 const fields = ['id','method','title','date','first_public_date','date_basis','revision_date','latest_version','kind','families','institution_ids','institution_names','affiliation_status','date_warning','date_warning_en','date_warning_zh','mechanism','primary_url','chapter','reading_scope','supervision_verification'];
@@ -167,3 +177,4 @@ console.log(JSON.stringify(buildResearchDocs(payload)));
 const {buildProjectPresentation}=await import('./build-project-presentation.mjs');
 console.log(JSON.stringify(buildProjectPresentation(payload)));
 console.log(JSON.stringify(buildEngineeringGuide(engineeringProjects)));
+console.log(JSON.stringify(buildDevelopmentVisuals(payload)));

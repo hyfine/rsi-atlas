@@ -46,6 +46,7 @@ html{scroll-behavior:auto}
 </nav></div>
 <main id="main" class="shell" tabindex="-1">
 <section id="panorama" class="view">
+  __GROWTH_TREE_MARKUP__
   <div class="hero">
     <div>
       <div class="eyebrow" data-en="A field guide to recursive self-improvement" data-zh="递归自我改进 · 研究图谱">A field guide to recursive self-improvement</div>
@@ -62,10 +63,6 @@ html{scroll-behavior:auto}
     <div class="stat"><strong id="family-count"></strong><span data-en="families of persistent change" data-zh="持久变化对象家族">families of persistent change</span></div>
     <div class="stat"><strong id="scene-count"></strong><span data-en="interactive mechanism walkthroughs" data-zh="可逐步阅读的机制闭环">interactive mechanism walkthroughs</span></div>
   </div>
-  <section id="focus-spotlight" class="section-space focus-spotlight" aria-labelledby="focus-title" hidden>
-    <div class="section-head"><div><span class="section-no" data-en="FOCUS / SPOTLIGHT" data-zh="重点 / 聚焦">FOCUS / SPOTLIGHT</span><h2 id="focus-title" data-en="Harness improvement, in focus." data-zh="聚焦 Harness 改进。">Harness improvement, in focus.</h2><p data-en="Selected for closer reading—not a latest-date ranking. Compare mechanisms, mutable state and evidence limits across these focus records." data-zh="这些条目供重点阅读，不按最新日期排名。请对照机制、可变状态和证据限制。">Selected for closer reading—not a latest-date ranking. Compare mechanisms, mutable state and evidence limits across these focus records.</p></div><a class="section-link" href="docs/zh/10_Harness_Focus.md" data-en="Read the focus guide · Chinese ↗" data-zh="阅读 Harness 重点专题 · 中文 ↗">Read the focus guide · Chinese ↗</a></div>
-    <div id="focus-list" class="focus-grid"></div>
-  </section>
   <div id="research-landscape" class="section-space">
     <div class="section-head"><div><span class="section-no" data-en="01 / THE RESEARCH LANDSCAPE" data-zh="01 / 研究分布">01 / THE RESEARCH LANDSCAPE</span><h2 data-en="A map, not a leaderboard." data-zh="这是地图，不是排行榜。">A map, not a leaderboard.</h2><p data-en="Every chart is calculated from this public snapshot. Publication activity is not a measure of capability, quality or independent replication." data-zh="图表均由本次公开快照实时计算。首发数量不代表能力、质量或独立复现程度。">Every chart is calculated from this public snapshot. Publication activity is not a measure of capability, quality or independent replication.</p></div><a class="section-link" href="#evidence" data-en="How to read the evidence ↗" data-zh="如何阅读证据 ↗">How to read the evidence ↗</a></div>
     <div class="chart-grid"><div class="panel"><div class="chart-title"><h3 data-en="Dated public research activity" data-zh="带公开日期的研究活动">Dated public research activity</h3><span class="chip" data-en="12 monthly bins" data-zh="十二个月份">12 monthly bins</span></div><div id="activity-chart"></div></div><div class="panel"><div class="chart-title"><h3 data-en="What is being improved?" data-zh="究竟在改进什么？">What is being improved?</h3><span class="chip" data-en="non-exclusive" data-zh="非互斥归类">non-exclusive</span></div><div id="family-chart"></div></div></div>
@@ -77,6 +74,10 @@ html{scroll-behavior:auto}
   <div class="section-space"><div class="section-head"><div><span class="section-no" data-en="03 / COMPONENTS & BOUNDARIES" data-zh="03 / 组件与边界">03 / COMPONENTS & BOUNDARIES</span><h2 data-en="Architecture before abstraction." data-zh="先看架构，再谈抽象。">Architecture before abstraction.</h2><p data-en="Author-created family-level diagrams explain the idea. Representative flows explain one route. Licensed paper figures remain separate and versioned." data-zh="作者绘制的家族架构解释整体思想，代表流程解释具体路线；论文原图独立列出并保留版本与许可。">Author-created family-level diagrams explain the idea. Representative flows explain one route. Licensed paper figures remain separate and versioned.</p></div></div><div id="family-architecture-gallery" class="grid"></div></div>
   <div class="section-space"><div class="section-head"><div><span class="section-no" data-en="04 / THE DEPTH QUESTION" data-zh="04 / 闭环深度">04 / THE DEPTH QUESTION</span><h2 data-en="Follow the feedback. Not the hype." data-zh="沿着回流看，不跟着标题走。">Follow the feedback. Not the hype.</h2><p data-en="More iterations do not automatically mean deeper recursion. These levels describe evidence to look for, not scores assigned to papers." data-zh="迭代更多不等于递归更深。这些层次是核验证据的框架，不是给论文打分。">More iterations do not automatically mean deeper recursion. These levels describe evidence to look for, not scores assigned to papers.</p></div></div><div id="depths" class="depths"></div></div>
   <div class="section-space"><div class="section-head"><div><span class="section-no" data-en="05 / LATEST IN THE SNAPSHOT" data-zh="05 / 快照内最新公开记录">05 / LATEST IN THE SNAPSHOT</span><h2 data-en="New work. Open questions." data-zh="新研究，未闭合的问题。">New work. Open questions.</h2><p data-en="Latest dated public records, with release-date caveats retained. Revisions never replace first-public dates. Read each mechanism with its limits." data-zh="按公开日期排列，保留发布日期的不确定性。修订不替代首发日期，机制与限制一起读。">Latest dated public records, with release-date caveats retained. Revisions never replace first-public dates. Read each mechanism with its limits.</p></div><a class="section-link" href="#methods" data-en="Browse all methods →" data-zh="查看全部方法 →">Browse all methods →</a></div><div id="latest-highlights" class="grid"></div></div>
+  <section id="focus-spotlight" class="section-space focus-spotlight" aria-labelledby="focus-title" hidden>
+    <div class="section-head"><div><span class="section-no" data-en="FOCUS / SPOTLIGHT" data-zh="重点 / 聚焦">FOCUS / SPOTLIGHT</span><h2 id="focus-title" data-en="Harness improvement, in focus." data-zh="聚焦 Harness 改进。">Harness improvement, in focus.</h2><p data-en="Selected for closer reading—not a latest-date ranking. Compare mechanisms, mutable state and evidence limits across these focus records." data-zh="这些条目供重点阅读，不按最新日期排名。请对照机制、可变状态和证据限制。">Selected for closer reading—not a latest-date ranking. Compare mechanisms, mutable state and evidence limits across these focus records.</p></div><a class="section-link" href="docs/zh/10_Harness_Focus.md" data-en="Read the focus guide · Chinese ↗" data-zh="阅读 Harness 重点专题 · 中文 ↗">Read the focus guide · Chinese ↗</a></div>
+    <div id="focus-list" class="focus-grid"></div>
+  </section>
 </section>
 <section id="timeline" class="view" hidden>
   <div class="page-head"><div class="eyebrow" data-en="Chronology / taxonomy / institutions" data-zh="时间 / 家族 / 机构">Chronology / taxonomy / institutions</div><h1 data-en="Trace the public record." data-zh="沿着公开记录，观察变化。">Trace the public record.</h1><p data-en="Paper v1 or explicitly labeled release/display dates; unresolved conflicts stay visible. Revision dates remain separate. Switch to non-exclusive family or institution lanes. Equal spacing is not a time scale." data-zh="采用论文 v1 或明确标注的发布 / 页面显示日，保留日期冲突，修订日独立展示。可切换非互斥家族与机构泳道；节点等距，不是时间比例尺。">Paper v1 or explicitly labeled release/display dates; unresolved conflicts stay visible. Revision dates remain separate. Switch to non-exclusive family or institution lanes. Equal spacing is not a time scale.</p></div>
@@ -119,10 +120,11 @@ html{scroll-behavior:auto}
 </section>
 <section id="survey" class="view" hidden>
   <div class="page-head"><div class="eyebrow" data-en="Mechanisms / assumptions / evidence" data-zh="机制 / 假设 / 证据">Mechanisms / assumptions / evidence</div><h1 data-en="Understand the field, not just the papers." data-zh="理解技术体系，不只是收集论文。">Understand the field, not just the papers.</h1><p data-en="A cross-survey synthesis of improvement targets, responsibility, feedback, inheritance and future improvement capability." data-zh="跨综述综合更新对象、改进责任、反馈、继承与后续改进能力。">A cross-survey synthesis of improvement targets, responsibility, feedback, inheritance and future improvement capability.</p></div>
+  __METHOD_FAN_MARKUP__
   <div class="survey-reading-route" id="survey-reading-route"></div><div class="panel survey-intro" id="survey-intro"></div>
   <div class="panel"><h2 data-en="Six families, six different mechanisms" data-zh="六个家族，六种不同机制">Six families, six different mechanisms</h2><div class="table-wrap" id="survey-families"></div></div>
   <div class="section-head"><h2 data-en="Questions that organize the literature" data-zh="以关键问题组织研究文献">Questions that organize the literature</h2></div>
-  <div class="grid" id="survey-topics"></div><div class="boundary-note" id="survey-sources"></div>
+  <div class="grid" id="survey-topics"></div><div class="boundary-note" id="survey-sources"></div><div class="panel" id="survey-fulltext-sources"></div>
 </section>
 <section id="implementations" class="view" hidden>
   <div class="page-head"><div class="eyebrow" data-en="From paper to execution" data-zh="从论文走向执行">From paper to execution</div><h1 data-en="Read the implementation." data-zh="进入实现，核对细节。">Read the implementation.</h1><p data-en="Six public implementations with source-pinned architecture and execution guides. Popularity is a dated snapshot, not an RSI ranking. Non-commercial licenses are not presented as uniformly OSI open source." data-zh="六个公开实现，配有固定源码版本的架构与执行指南。关注度是带日期的快照，不是 RSI 排名；非商业许可不冒充统一 OSI 开源。">Six public implementations with source-pinned architecture and execution guides. Popularity is a dated snapshot, not an RSI ranking. Non-commercial licenses are not presented as uniformly OSI open source.</p></div>
@@ -403,10 +405,12 @@ function renderSurvey(){
   const survey=atlas.survey;
   if(!survey?.executive_summary||!Array.isArray(survey.cards))throw new Error('Missing research survey content');
   $('survey-intro').innerHTML='<h2>'+esc(survey.title[language])+'</h2>'+survey.executive_summary[language].split('\n\n').map(paragraph=>'<p>'+esc(paragraph)+'</p>').join('')+'<p class="meta">'+t('Full secondary readings: ','完整材料研读：')+survey.evidence_scope.secondary_documents_read_in_full+' · '+t('Compared methods: ','比较方法：')+survey.evidence_scope.methods_compared+' · '+t('no independent replication.','不冒充独立复现。')+'</p><figure class="survey-map"><img src="'+esc(safe('pics/rsi-survey-map-'+language+'.svg'))+'" width="1200" height="820" alt="'+esc(t('Independent RSI survey coordinates','独立的 RSI 综述分析坐标'))+'"><figcaption>'+t('Object families, responsibility, feedback, inheritance and evidence are independent coordinates.','对象、责任、反馈、继承和证据分别分析，不换算为单一等级。')+'</figcaption></figure>';
-  $('survey-reading-route').innerHTML=link(survey.chapter_href,t('Full research synthesis · Chinese ↗','完整 RSI 研究综述 ↗'))+link('docs/zh/04_Algorithm_Handbook.md',t('Algorithm templates ↗','算法模板 ↗'))+link('docs/repo_deepdive/README.md',t('Implementation anatomy ↗','实现机制 ↗'));
+  $('survey-reading-route').innerHTML=link('docs/zh/14_RSI_Survey_Fulltext_Update.md',t('Fulltext survey review · 2026-11-09 ↗','综述全文复核 · 2026-11-09 ↗'))+link(survey.chapter_href,t('Full research synthesis · Chinese ↗','完整 RSI 研究综述 ↗'))+link('docs/zh/04_Algorithm_Handbook.md',t('Algorithm templates ↗','算法模板 ↗'))+link('docs/repo_deepdive/README.md',t('Implementation anatomy ↗','实现机制 ↗'));
   $('survey-families').innerHTML='<table><thead><tr><th>'+t('Family','家族')+'</th><th>'+t('Characteristic architecture','特色架构')+'</th><th>'+t('Persistent update surface','持久更新对象')+'</th></tr></thead><tbody>'+architectures.map(f=>'<tr><td>'+esc(f.code+' / '+familyName(f.code))+'</td><td>'+link('pics/family-'+f.id+'-architecture.html',language==='zh'?f.archetype:f.archetype_en)+'</td><td>'+esc(familyState(f.code))+'</td></tr>').join('')+'</tbody></table>';
   $('survey-topics').innerHTML=survey.cards.map(card=>'<article class="card survey-card" data-survey-topic="'+esc(card.id)+'"><h3>'+esc(card.title[language])+'</h3><p>'+esc(card.summary[language])+'</p><p class="survey-question">'+esc(card.question[language])+'</p><p class="meta">'+card.families.map(code=>esc(code+' · '+familyName(code))).join(' / ')+'</p><div class="card-links">'+link(card.chapter_href,t('Read sections ','阅读章节 ')+card.section+' ↗')+card.primary_urls.map((url,index)=>link(url,t('Primary source ','原始来源 ')+(index+1),true)).join('')+'</div></article>').join('');
   $('survey-sources').innerHTML='<span>'+t('Frameworks are compared, not forced into an autonomy ranking. ','不同框架用于互补分析，不强行换算成自治等级。 ')+survey.sources.map(source=>link(source.url,source.name,true)).join(' · ')+'</span>';
+  const evidence=atlas.survey_evidence;
+  $('survey-fulltext-sources').innerHTML='<h2>'+t('Fulltext review: six surveys, distinct frameworks','全文复核：六篇综述，不同分析坐标')+'</h2><p>'+t('Research checked on ','检索截止 ')+esc(evidence.as_of)+' · '+evidence.entire_fulltext_total_pages+' '+t('physical PDF pages. Fulltext reading, metadata discovery and experiments remain separate.','个物理 PDF 页。全文阅读、元数据发现和实验验证分别报告。')+'</p><div class="table-wrap"><table><thead><tr><th>'+t('Survey / primary source','综述 / 原始来源')+'</th><th>'+t('Version actually read','实际阅读版本')+'</th><th>'+t('Pages','页数')+'</th></tr></thead><tbody>'+evidence.papers.map(paper=>'<tr><td>'+link(paper.source_urls[0],paper.title,true)+'</td><td>'+esc(paper.version_read)+'</td><td>'+paper.fulltext_access.pages+'</td></tr>').join('')+'</tbody></table></div><p>'+t('Some November-modified survey records remain metadata-only because fulltexts were access-challenged. Date/version conflicts are preserved; this is a bounded review, not a guarantee of exhaustive newest coverage.','部分十一月修改稿因访问验证而仅核验元数据；日期和版本冲突保留。本次是有界复核，不承诺穷尽全球最新研究。')+'</p><div class="card-links">'+link('docs/zh/14_RSI_Survey_Fulltext_Update.md',t('Detailed comparison & limitations ↗','详细框架比较与限制 ↗'))+link('data/survey-fulltext-evidence.json',t('Versioned reading evidence','版本化阅读证据'))+'</div>';
 }
 __ENGINEERING_SCRIPT__
 function renderImplementations(){
@@ -450,6 +454,7 @@ function renderEvidence(){
 }
 function renderReading(){
   const entries=[
+    ['Fulltext survey review','综述全文复核','Six full reviews,387 physical pages; access failures, cited versions and November metadata leads remain explicit.','六篇全文，387 个物理页；版本、访问失败和十一月元数据线索分别交代。',[['docs/zh/14_RSI_Survey_Fulltext_Update.md','Read the fulltext comparison','阅读全文比较'],['data/survey-fulltext-evidence.json','Versioned source evidence','版本化来源证据']]],
     ['RSI research synthesis','RSI 技术研究综合','A survey-level comparison of mechanisms, assumptions, evidence, negative results and open problems.','综述级比较机制、假设、证据、负结果与开放问题。',[[atlas.survey.chapter_href,'Read the full synthesis','阅读完整综合综述']]],
     ['Panorama & algorithms','全景与算法','Objects, loops, formulas and pseudocode: decide what should change.','对象轴、闭环轴、公式与伪代码，先确定要改哪里。',[['docs/zh/01_RSI_Technical_Panorama.md','Technical panorama','技术全景'],['docs/zh/04_Algorithm_Handbook.md','Algorithm handbook','算法手册']]],
     ['Training, environments & research','训练、环境与研究','Self-training, curricula, post-training agents and experimental budgets.','自训练、课程、后训练 Agent 与实验预算。',[['docs/zh/chapters/02_Training_Environments_and_AI_Research.md','Read the chapter','阅读专题']]],
@@ -482,11 +487,16 @@ function showMethod(id,reopen=true){
   $('dialog-links').innerHTML=sourceLinks(m);
   if(reopen&&!$('method-dialog').open)$('method-dialog').showModal();
 }
+__METHOD_FAN_DRAWING__
+__METHOD_FAN_SCRIPT__
+__GROWTH_TREE_SCRIPT__
 function changeView(view){
   if(!views.includes(view))view='panorama';currentView=view;
   for(const name of views)$(name).hidden=name!==view;
   document.querySelectorAll('nav [data-view]').forEach(button=>button.setAttribute('aria-current',button.dataset.view===view?'page':'false'));
   if(view!=='loops')stopPlayback();
+  if(view!=='panorama')stopGrowthTree();else activateGrowthTree();
+  if(view!=='survey')stopMethodFan();else activateMethodFan();
 }
 function setTheme(theme){
   document.documentElement.dataset.theme=theme==='light'?'light':'dark';
@@ -495,6 +505,7 @@ function setTheme(theme){
 }
 function renderAll(){
   renderStatic();renderHero();renderCharts();renderTaxonomy();renderFocus();renderMethods();renderTimeline();renderInstitutions();renderScene(false);renderSurvey();renderImplementations();renderEvidence();renderReading();
+  renderGrowthTree();renderMethodFan();
   $('next').innerHTML=icon('next')+t('Next step','下一步');$('reset').innerHTML=icon('reset')+t('Reset','复位');
   if(dialogMethod&&$('method-dialog').open)showMethod(dialogMethod,false);
   document.querySelectorAll('a[href]').forEach(a=>{const href=safe(a.getAttribute('href'));if(href)a.setAttribute('href',href);else a.removeAttribute('href');});

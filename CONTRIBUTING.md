@@ -13,6 +13,7 @@
 - `data/engineering-projects.json`: curated workbook engineering entries, ten source categories, explicit source rows and retained exclusion reasons. Snapshot estimates and source claims are not new code audits.
 - `data/family-architectures.json`, `data/dynamic-scenes.json`, `data/paper-figures.json`: original category diagrams, mechanism paths and licensed paper figures.
 - `scripts/*.template.html`: standalone viewers.
+- `scripts/growth-tree.*`, `scripts/method-fan*`: native SVG growth-tree and folding-fan views; explanatory playback is separate from first-public-date chronology.
 
 Preserve first dates, revision dates and publication-display dates separately. Unknown facts stay unknown. A named author credit or funding chair is not automatically an institution.
 
@@ -44,6 +45,8 @@ Use `\lt` instead of a literal less-than character inside formulas: GitHub's add
 Prefer fenced `math` blocks and GitHub's code-style inline math delimiters to protect stars, underscores and TeX escapes from Markdown processing. Keep a whitespace boundary before ordinary inline dollar math adjacent to prose, including Chinese punctuation. Local TeX rendering alone does not prove GitHub compatibility: CI checks both one-to-one recognition and the exact decoded TeX payload through GitHub's Markdown API. Run the same check locally with an authenticated `gh` CLI and `RSI_GITHUB_MATH_CHECK=1 node --test scripts/math.test.mjs`.
 
 Family architecture is an author-created analytical view, representative flow is a specific mechanism, and a paper figure is a separately attributed original. Do not mix these layers. Original figures require explicit reusable licensing or permission, exact version/figure attribution, crop disclosure and an asset hash.
+
+Development branches represent analytical membership, not proven technical ancestry. A first-public-date timeline must preserve irregular calendar intervals, revision/display-date caveats and support-record types. Keep root-to-branch-to-leaf playback finite, pause it when hidden, preserve replay/pan/zoom controls and display the complete diagrams for reduced-motion users. Never turn decorative growth or fan unfolding into claims of measured progress.
 
 Family diagrams must differ in their mechanism topology, not only colors or labels. Preserve the distinct parameter loop, task–policy co-evolution, memory read/write, harness candidate search, independent evaluation tracks and meta-improver hierarchy. Public implementation previews must correspond to the pinned module/edge audit and remain visible in the portal and case chapters.
 

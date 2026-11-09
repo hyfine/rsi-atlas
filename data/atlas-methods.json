@@ -13430,6 +13430,1564 @@
       }
     ]
   },
+  "survey_evidence": {
+    "schema_version": "1.0",
+    "as_of": "2026-11-09",
+    "language": "zh-CN",
+    "page_convention": "1-based physical PDF page, including preprint cover pages",
+    "research_boundary": "Three supplied public PDFs plus three selected recent accessible full reviews on RSI trustworthiness/evolutionary safety; no private corporate material searched or transmitted.",
+    "selection_policy": "Prioritize recent dedicated RSI and persistent-inheritance trustworthiness reviews, not arbitrary recent method papers. Modified record dates are not first submission dates. This is a bounded narrative update, not an exhaustive newest-paper guarantee.",
+    "entire_fulltext_papers": [
+      "A",
+      "B",
+      "C",
+      "T",
+      "E",
+      "S"
+    ],
+    "entire_fulltext_total_pages": 387,
+    "papers": [
+      {
+        "key": "A",
+        "title": "AI4AI Survey: From Long-Horizon Agents to Recursive Self-Improvement—Definitions, Reliable Horizons, and Open Problems",
+        "identifiers": {
+          "doi": "10.20944/preprints202608.2108.v1",
+          "arxiv": null
+        },
+        "version_read": "Preprints.org v1",
+        "first_public_posting": "2026-08-28",
+        "first_submission": null,
+        "revision_history": [],
+        "latest_version_check": "PDF cover and Crossref confirm v1 posting; publisher HTTP 403 prevents establishing whether later versions exist.",
+        "source_urls": [
+          "https://doi.org/10.20944/preprints202608.2108.v1",
+          "https://www.preprints.org/manuscript/202608.2108/v1",
+          "https://api.crossref.org/works/10.20944/preprints202608.2108.v1"
+        ],
+        "fulltext_access": {
+          "status": "entire_user_supplied_public_pdf_read",
+          "pages": 63,
+          "remote_publisher_access": "HTTP 403",
+          "peer_review_status": "PDF explicitly says not peer reviewed"
+        },
+        "sections": [
+          {
+            "title": "1. Introduction",
+            "physical_pdf_pages": [
+              2,
+              6
+            ]
+          },
+          {
+            "title": "2. What Is AI4AI? A Taxonomy",
+            "physical_pdf_pages": [
+              6,
+              12
+            ]
+          },
+          {
+            "title": "3. Evaluation: From Components to Integrated AI4AI",
+            "physical_pdf_pages": [
+              12,
+              16
+            ]
+          },
+          {
+            "title": "4. Model Design: From Policy Improvement to Weight-Layer AI4AI",
+            "physical_pdf_pages": [
+              16,
+              18
+            ]
+          },
+          {
+            "title": "5. Harness Design: Runtime Functions Outside the Weights",
+            "physical_pdf_pages": [
+              19,
+              21
+            ]
+          },
+          {
+            "title": "6. Open Problems: Four Scales of Failure",
+            "physical_pdf_pages": [
+              21,
+              25
+            ]
+          },
+          {
+            "title": "7. Conclusion: How Far Can AI Improve AI?",
+            "physical_pdf_pages": [
+              25,
+              25
+            ]
+          },
+          {
+            "title": "Appendices A–E",
+            "physical_pdf_pages": [
+              25,
+              47
+            ]
+          },
+          {
+            "title": "References",
+            "physical_pdf_pages": [
+              47,
+              63
+            ]
+          }
+        ],
+        "framework_axes": [
+          {
+            "summary": "D1 target; D2 self-reference; D3 stage ownership; D4 signal grounding; D5 measured gain/retention/human comparison/held-out transfer.",
+            "locator": {
+              "section": "2.1",
+              "physical_pdf_pages": [
+                6,
+                7
+              ]
+            }
+          },
+          {
+            "summary": "Separate pressure, closure, evidence. Six pressure coordinates: human-effort time, interaction length, context/memory, grounding, planning dependency, verification observability.",
+            "locator": {
+              "section": "2.3",
+              "physical_pdf_pages": [
+                9,
+                11
+              ]
+            }
+          }
+        ],
+        "what_mutates": {
+          "summary": "Data/tasks, weights, computational substrate, harness, evaluators, research processes. Improving a different AI artifact is AI4AI but need not be self-improvement.",
+          "locator": {
+            "section": "2.1",
+            "physical_pdf_pages": [
+              6,
+              7
+            ]
+          }
+        },
+        "feedback": {
+          "summary": "Grounding strength and observability are separate: formal/executable checks, holdouts, learned rewards, model judges, introspection; no source is universally complete.",
+          "locator": {
+            "section": "2.3",
+            "physical_pdf_pages": [
+              10,
+              11
+            ]
+          }
+        },
+        "ownership": {
+          "summary": "Goal/plan/execute/feedback/repair coded HUM/MIX/SYS per version and protocol. Under strict design-time coding, all 35 sampled goals are human-owned and no feedback stage is fully system-owned.",
+          "locator": {
+            "section": "2.2–2.3; Appendix B",
+            "physical_pdf_pages": [
+              8,
+              11,
+              27,
+              28
+            ]
+          }
+        },
+        "recursion": {
+          "summary": "Self-reference, editable successor-producing process, runtime closure and boundedness are separate properties; recursive structure need not imply full autonomous control.",
+          "locator": {
+            "section": "2.4; 5.4",
+            "physical_pdf_pages": [
+              11,
+              12,
+              21
+            ]
+          }
+        },
+        "evaluation": {
+          "summary": "G/R/H/T are independent fields. Retention can include further within-pass/round improvement and is not a universal no-forgetting test. Component versus integrated benchmarks, repeated-run consistency, matched budgets, model–harness attribution and held-out transfer.",
+          "locator": {
+            "section": "3; Appendix B–C",
+            "physical_pdf_pages": [
+              12,
+              16,
+              27,
+              30
+            ]
+          }
+        },
+        "limits": [
+          {
+            "summary": "Composition gap; weak causal judgment, independent research direction and compounding evidence. Audit sample is purposive, capped search incomplete, no two completed human annotations.",
+            "locator": {
+              "section": "1; Appendix A",
+              "physical_pdf_pages": [
+                5,
+                6,
+                25,
+                27
+              ]
+            }
+          },
+          {
+            "summary": "Corpus systematic freeze 2026-08-04, targeted verification through 2026-08-13; publication date does not extend the review window.",
+            "locator": {
+              "section": "Appendix A–B",
+              "physical_pdf_pages": [
+                25,
+                27
+              ]
+            }
+          }
+        ],
+        "negative_evidence": [
+          {
+            "summary": "RSIBench-Data: 58.33% of settings improve versus first valid attempt; among searches continuing beyond their best checkpoint, 78.26% finish below that peak. Different denominators.",
+            "locator": {
+              "section": "3.3; Table A15",
+              "physical_pdf_pages": [
+                15,
+                47
+              ]
+            }
+          },
+          {
+            "summary": "Harness-evolution advantages over inference scaling are not consistent under matched feedback and inference budgets; held-out transfer limited.",
+            "locator": {
+              "section": "5.4",
+              "physical_pdf_pages": [
+                21,
+                21
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "key": "B",
+        "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+        "identifiers": {
+          "arxiv": "2609.11873",
+          "doi": "10.48550/arXiv.2609.11873"
+        },
+        "version_read": "arXiv:2609.11873v3",
+        "first_submission": "2026-09-10T17:44:23Z",
+        "revision_history": [
+          {
+            "version": "v1",
+            "date": "2026-09-10T17:44:23Z"
+          },
+          {
+            "version": "v2",
+            "date": "2026-09-15T08:48:28Z"
+          },
+          {
+            "version": "v3",
+            "date": "2026-09-22T12:08:36Z"
+          }
+        ],
+        "latest_version_check": "Local PDF first-page margin says v3, 22 Sep 2026; official abstract history shows v3 as latest retrieved version.",
+        "source_urls": [
+          "https://arxiv.org/abs/2609.11873v3",
+          "https://arxiv.org/pdf/2609.11873v3",
+          "https://theseus-labs-rsi.github.io/"
+        ],
+        "fulltext_access": {
+          "status": "entire_user_supplied_public_pdf_read",
+          "pages": 79,
+          "peer_review_status": "arXiv report; no peer-review acceptance established in this task"
+        },
+        "sections": [
+          {
+            "title": "1 Introduction",
+            "physical_pdf_pages": [
+              3,
+              7
+            ]
+          },
+          {
+            "title": "2 Background and Preliminaries",
+            "physical_pdf_pages": [
+              7,
+              12
+            ]
+          },
+          {
+            "title": "3 RSI Across Autonomy Levels",
+            "physical_pdf_pages": [
+              12,
+              35
+            ]
+          },
+          {
+            "title": "4 RSI Across Applications",
+            "physical_pdf_pages": [
+              36,
+              37
+            ]
+          },
+          {
+            "title": "5 Industry Landscape and Preliminary Practices",
+            "physical_pdf_pages": [
+              37,
+              46
+            ]
+          },
+          {
+            "title": "6 Challenges and Future Directions",
+            "physical_pdf_pages": [
+              46,
+              49
+            ]
+          },
+          {
+            "title": "7 Conclusion",
+            "physical_pdf_pages": [
+              49,
+              49
+            ]
+          },
+          {
+            "title": "References",
+            "physical_pdf_pages": [
+              50,
+              62
+            ]
+          },
+          {
+            "title": "Appendix A: RSI Landscape",
+            "physical_pdf_pages": [
+              63,
+              65
+            ]
+          },
+          {
+            "title": "Appendix B: Industry Landscape",
+            "physical_pdf_pages": [
+              66,
+              71
+            ]
+          },
+          {
+            "title": "Appendix C: RSI Across Applications",
+            "physical_pdf_pages": [
+              72,
+              79
+            ]
+          }
+        ],
+        "framework_axes": [
+          {
+            "summary": "B0 output-only reference; L1 prescribed improvement execution; L2 strategy selection; L3 learner-conditioned experience acquisition; L4 persistent deployment adaptation; L5 retained/reused improvement-mechanism revision.",
+            "locator": {
+              "section": "1.4; 3",
+              "physical_pdf_pages": [
+                5,
+                5,
+                12,
+                35
+              ]
+            }
+          },
+          {
+            "summary": "Autonomy responsibility is separate from performance, reliability, efficiency, transfer and evidence quality.",
+            "locator": {
+              "section": "3.7",
+              "physical_pdf_pages": [
+                35,
+                35
+              ]
+            }
+          }
+        ],
+        "what_mutates": {
+          "summary": "Model/data/trainer/platform/evaluator/deployment/application systems; persistent memory, skill, harness and research policies. Classification is for a particular loop, not company or algorithm name.",
+          "locator": {
+            "section": "3; Appendix A",
+            "physical_pdf_pages": [
+              12,
+              35,
+              63,
+              65
+            ]
+          }
+        },
+        "feedback": {
+          "summary": "Learner-conditioned tasks, environment outcomes, executable/formal checks, reward judgments, human corrections; correctness, difficulty and marginal learning value are distinct.",
+          "locator": {
+            "section": "3.4",
+            "physical_pdf_pages": [
+              22,
+              26
+            ]
+          }
+        },
+        "ownership": {
+          "summary": "Hierarchy tracks transferred improvement decisions; high-level mission, protected evaluation, permissions and consequential release authority can remain human-controlled even at L5.",
+          "locator": {
+            "section": "3.6–3.7",
+            "physical_pdf_pages": [
+              31,
+              35
+            ]
+          }
+        },
+        "recursion": {
+          "summary": "Structural L5 identifies retained mechanism revision used for a later improvement; effective L5 requires stronger successors under comparable budgets and independent assessment.",
+          "locator": {
+            "section": "3.6",
+            "physical_pdf_pages": [
+              31,
+              35
+            ]
+          }
+        },
+        "evaluation": {
+          "summary": "Mechanism audit plus matched starting-agent/evidence tests; held-out transfer and trajectories; HCI only normalizes benchmark headroom, not RSI maturity.",
+          "locator": {
+            "section": "2.1; 3.6.5",
+            "physical_pdf_pages": [
+              7,
+              9,
+              34,
+              35
+            ]
+          }
+        },
+        "limits": [
+          {
+            "summary": "HCI Figure 3 post-2026 extension is explicitly illustrative: modeled remaining-headroom closure is not an observed RSI result or prediction established by experiments.",
+            "locator": {
+              "section": "2.1; Figure 3",
+              "physical_pdf_pages": [
+                8,
+                9
+              ]
+            }
+          },
+          {
+            "summary": "Industry reports are preliminary or company-provided evidence, not independent replication; several broad co-evolution loops only have component-level pilots.",
+            "locator": {
+              "section": "5",
+              "physical_pdf_pages": [
+                37,
+                46
+              ]
+            }
+          }
+        ],
+        "negative_evidence": [
+          {
+            "summary": "Gödel Agent 14/100 MGSM trials ended below initial performance; longer Hyperagents continuation did not establish significant final transfer advantage.",
+            "locator": {
+              "section": "1.3; 3.6.1",
+              "physical_pdf_pages": [
+                4,
+                4,
+                33,
+                33
+              ]
+            }
+          },
+          {
+            "summary": "AIDE2 evolved outer-improver efficiency advantage was not statistically significant in the reported disclosure.",
+            "locator": {
+              "section": "3.6.4–3.6.5",
+              "physical_pdf_pages": [
+                34,
+                35
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "key": "C",
+        "title": "Recursive Self-Improvement in AI: A Survey",
+        "identifiers": {
+          "doi": "10.20944/preprints202609.2680.v1",
+          "arxiv": null
+        },
+        "version_read": "Preprints.org v1",
+        "first_public_posting": "2026-09-30",
+        "first_submission": null,
+        "revision_history": [],
+        "latest_version_check": "PDF cover and Crossref verify DOI v1 and posting date; current publisher access blocked, later versions unknown.",
+        "source_urls": [
+          "https://doi.org/10.20944/preprints202609.2680.v1",
+          "https://www.preprints.org/manuscript/202609.2680/v1",
+          "https://api.crossref.org/works/10.20944/preprints202609.2680.v1"
+        ],
+        "fulltext_access": {
+          "status": "entire_user_supplied_public_pdf_read",
+          "pages": 58,
+          "remote_publisher_access": "HTTP 403",
+          "peer_review_status": "PDF explicitly says not peer reviewed"
+        },
+        "sections": [
+          {
+            "title": "1. Introduction",
+            "physical_pdf_pages": [
+              3,
+              6
+            ]
+          },
+          {
+            "title": "2. Scope and Review Methodology",
+            "physical_pdf_pages": [
+              6,
+              10
+            ]
+          },
+          {
+            "title": "3. Foundations and Problem Formulation",
+            "physical_pdf_pages": [
+              10,
+              16
+            ]
+          },
+          {
+            "title": "4. A Taxonomy of Recursive Self-Improvement",
+            "physical_pdf_pages": [
+              16,
+              18
+            ]
+          },
+          {
+            "title": "5. Automated Design of AI Infrastructure",
+            "physical_pdf_pages": [
+              18,
+              21
+            ]
+          },
+          {
+            "title": "6. Repair and Optimization of Existing Systems",
+            "physical_pdf_pages": [
+              21,
+              26
+            ]
+          },
+          {
+            "title": "7. Benchmarks and Evaluation",
+            "physical_pdf_pages": [
+              26,
+              33
+            ]
+          },
+          {
+            "title": "8. Challenges and Future Directions",
+            "physical_pdf_pages": [
+              33,
+              36
+            ]
+          },
+          {
+            "title": "9. Conclusion",
+            "physical_pdf_pages": [
+              36,
+              37
+            ]
+          },
+          {
+            "title": "References",
+            "physical_pdf_pages": [
+              37,
+              58
+            ]
+          }
+        ],
+        "framework_axes": [
+          {
+            "summary": "Two overlapping engineering goals: infrastructure design; repair/optimization of existing systems. Six target sectors: weights, tasks, memory, programs, feedback, improver.",
+            "locator": {
+              "section": "Figures 3–4; 4.1–4.2",
+              "physical_pdf_pages": [
+                5,
+                6,
+                16,
+                17
+              ]
+            }
+          },
+          {
+            "summary": "Functional retained solver S and improver I; task gain, retention/transfer, improver gain require different probes.",
+            "locator": {
+              "section": "3.3–3.4",
+              "physical_pdf_pages": [
+                12,
+                15
+              ]
+            }
+          }
+        ],
+        "what_mutates": {
+          "summary": "Data and parameters, memories and skills, prompts/programs/harnesses, judges, update processes or recursive context; functional roles can share implementation.",
+          "locator": {
+            "section": "4.2; 6.5",
+            "physical_pdf_pages": [
+              17,
+              17,
+              23,
+              24
+            ]
+          }
+        },
+        "feedback": {
+          "summary": "Answers, execution, environmental outcomes, model judgments and human input differentiated by use in generation, training and selection; new external information is part of the mechanism.",
+          "locator": {
+            "section": "4.1; 8.1",
+            "physical_pdf_pages": [
+              17,
+              17,
+              33,
+              34
+            ]
+          }
+        },
+        "ownership": {
+          "summary": "Editable scope and externally fixed anchors recorded at configuration level; no universal capability ladder or method maturity ranking.",
+          "locator": {
+            "section": "2.1; 4.3",
+            "physical_pdf_pages": [
+              7,
+              7,
+              17,
+              18
+            ]
+          }
+        },
+        "recursion": {
+          "summary": "Structural return path is distinct from useful improver improvement. Metan uses a fixed operator with evolving recursive context; deeper calls do not establish changing the operator or increasing gains.",
+          "locator": {
+            "section": "3.1; 6.5",
+            "physical_pdf_pages": [
+              10,
+              11,
+              23,
+              24
+            ]
+          }
+        },
+        "evaluation": {
+          "summary": "Sealed audit after all runs; full-budget frozen-improver/no-update controls; paired held-out starting solver probes; archive-best/deployed/final distinctions.",
+          "locator": {
+            "section": "7; Figure 7",
+            "physical_pdf_pages": [
+              26,
+              33
+            ]
+          }
+        },
+        "limits": [
+          {
+            "summary": "Narrative review, not exhaustive systematic review or meta-analysis. Bibliographic/abstract screening differs from full-text protocol coding. Main discovery cutoff Sep 12, historical supplement Sep 20.",
+            "locator": {
+              "section": "2.2",
+              "physical_pdf_pages": [
+                7,
+                7
+              ]
+            }
+          },
+          {
+            "summary": "Figures encode thematic routes, not ancestry. Survey comparison table partly based on selected passages and two abstract-only surveys.",
+            "locator": {
+              "section": "Figures 4–5; Table 2",
+              "physical_pdf_pages": [
+                6,
+                10
+              ]
+            }
+          }
+        ],
+        "negative_evidence": [
+          {
+            "summary": "STOP weaker-model configurations regress; Hyperagents transfer changes starting task-agent state and formatting; some source-domain differences not statistically significant.",
+            "locator": {
+              "section": "7.6",
+              "physical_pdf_pages": [
+                32,
+                33
+              ]
+            }
+          },
+          {
+            "summary": "Metan archive-best can exceed best single chain; partial budget parity and mixed split/unsplit evidence do not establish global advantage.",
+            "locator": {
+              "section": "7.6",
+              "physical_pdf_pages": [
+                32,
+                33
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "key": "T",
+        "title": "Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
+        "identifiers": {
+          "arxiv": "2610.35193",
+          "doi": "10.48550/arXiv.2610.35193"
+        },
+        "version_read": "arXiv:2610.35193v1",
+        "first_submission": "2026-10-26T10:46:03Z",
+        "revision_history": [
+          {
+            "version": "v1",
+            "date": "2026-10-26T10:46:03Z"
+          }
+        ],
+        "latest_version_check": "Official abstract and downloaded PDF margin agree on v1, 26 Oct 2026; no newer version in retrieved history.",
+        "source_urls": [
+          "https://arxiv.org/abs/2610.35193v1",
+          "https://arxiv.org/pdf/2610.35193v1",
+          "https://arxiv.org/html/2610.35193v1",
+          "https://github.com/pujiayue/Trustworthy-RSI"
+        ],
+        "fulltext_access": {
+          "status": "entire_official_pdf_read",
+          "pages": 82,
+          "download_status": 200,
+          "peer_review_status": "arXiv preprint"
+        },
+        "sections": [
+          {
+            "title": "1. Introduction",
+            "physical_pdf_pages": [
+              4,
+              8
+            ]
+          },
+          {
+            "title": "2. Preliminaries",
+            "physical_pdf_pages": [
+              8,
+              15
+            ]
+          },
+          {
+            "title": "3. Genuine and Sustained Improvement",
+            "physical_pdf_pages": [
+              15,
+              23
+            ]
+          },
+          {
+            "title": "4. Behavioral Constraints, Alignment, and Fairness",
+            "physical_pdf_pages": [
+              23,
+              30
+            ]
+          },
+          {
+            "title": "5. System Security, Resilience, Privacy, and Data Governance",
+            "physical_pdf_pages": [
+              30,
+              36
+            ]
+          },
+          {
+            "title": "6. Transparency and Controllability",
+            "physical_pdf_pages": [
+              36,
+              43
+            ]
+          },
+          {
+            "title": "7. Evaluating Trustworthy RSI",
+            "physical_pdf_pages": [
+              43,
+              49
+            ]
+          },
+          {
+            "title": "8. Applications, Open Problems, and Conclusions",
+            "physical_pdf_pages": [
+              49,
+              56
+            ]
+          },
+          {
+            "title": "References",
+            "physical_pdf_pages": [
+              56,
+              79
+            ]
+          },
+          {
+            "title": "A. Literature Coverage and Citation Scope",
+            "physical_pdf_pages": [
+              80,
+              82
+            ]
+          }
+        ],
+        "framework_axes": [
+          {
+            "summary": "Functional policy h, inductive bias B, bias-update function U; diagnosis/proposal/evaluation/implementation S1–S4 and recursive application to U (RI).",
+            "locator": {
+              "section": "2.1",
+              "physical_pdf_pages": [
+                9,
+                12
+              ]
+            }
+          },
+          {
+            "summary": "Four themes under Improvement Validity, Constraint Preservation, Effective Oversight; update/successor/meta-improvement claim levels; eight requirement groups.",
+            "locator": {
+              "section": "2.2–2.3",
+              "physical_pdf_pages": [
+                13,
+                15
+              ]
+            }
+          }
+        ],
+        "what_mutates": {
+          "summary": "Policy weights/prompts/memory/skills; bias governing data selection, objectives or learning; updater governing revisions of bias. A shared module can have multiple roles.",
+          "locator": {
+            "section": "2.1.1",
+            "physical_pdf_pages": [
+              10,
+              11
+            ]
+          }
+        },
+        "feedback": {
+          "summary": "Experience E and performance/improvement feedback F; independent reporting separated from acceptance feedback reused for improvement.",
+          "locator": {
+            "section": "2.1; 7.2",
+            "physical_pdf_pages": [
+              10,
+              12,
+              46,
+              47
+            ]
+          }
+        },
+        "ownership": {
+          "summary": "Human approval may remain. Changed goals/requirements require authorization; candidate cannot be sole approval authority over safeguards or control roots.",
+          "locator": {
+            "section": "1.2; 5.3.5; 6",
+            "physical_pdf_pages": [
+              6,
+              6,
+              34,
+              34,
+              36,
+              43
+            ]
+          }
+        },
+        "recursion": {
+          "summary": "Strict RSI revises and reuses U, not merely policy h or learned bias B. Promptbreeder illustrates changing B under fixed U in this functional boundary.",
+          "locator": {
+            "section": "2.1.1",
+            "physical_pdf_pages": [
+              10,
+              11
+            ]
+          }
+        },
+        "evaluation": {
+          "summary": "Paired fixed-updater continuations from equal h/B/persistent state; same reporting tests and continuation budget; discovery/validation cost separately included in total-cost efficiency; joint criteria must hold on aligned trajectories.",
+          "locator": {
+            "section": "7.2–7.3",
+            "physical_pdf_pages": [
+              46,
+              49
+            ]
+          }
+        },
+        "limits": [
+          {
+            "summary": "Direct RI, general persistent evolution and related fixed-system risk evidence are distinct. Study-level coverage is not joint evidence from the same trajectory.",
+            "locator": {
+              "section": "1.2; 7.3; Appendix A.4",
+              "physical_pdf_pages": [
+                6,
+                6,
+                48,
+                49,
+                81,
+                81
+              ]
+            }
+          },
+          {
+            "summary": "Search through Oct 26; 301 works and 260 evidence cells are stated corpus counts, not field prevalence.",
+            "locator": {
+              "section": "Appendix A",
+              "physical_pdf_pages": [
+                80,
+                82
+              ]
+            }
+          }
+        ],
+        "negative_evidence": [
+          {
+            "summary": "Self-authored tests can remain favorable while protected deployment performance worsens; grader drift or shared errors can inflate gains.",
+            "locator": {
+              "section": "3.2; 7.2",
+              "physical_pdf_pages": [
+                18,
+                18,
+                46,
+                46
+              ]
+            }
+          },
+          {
+            "summary": "Poisoned Hyperagents benchmark leads to inherited insecure task instructions; clean further evolution does not necessarily remove them. Demonstrated target edits do not isolate U revision.",
+            "locator": {
+              "section": "5.4.1",
+              "physical_pdf_pages": [
+                35,
+                35
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "key": "E",
+        "title": "Evolutionary Safety of Recursive Self-Improving AI: Taxonomy, Risk Discovery, and Evaluation",
+        "identifiers": {
+          "arxiv": "2609.31186",
+          "doi": "10.48550/arXiv.2609.31186"
+        },
+        "version_read": "arXiv:2609.31186v2",
+        "first_submission": "2026-09-25T12:17:10Z",
+        "revision_history": [
+          {
+            "version": "v1",
+            "date": "2026-09-25T12:17:10Z"
+          },
+          {
+            "version": "v2",
+            "date": "2026-10-16T15:06:32Z"
+          }
+        ],
+        "latest_version_check": "Official history and PDF margin agree on v2 revision date; first submission kept separate.",
+        "source_urls": [
+          "https://arxiv.org/abs/2609.31186v2",
+          "https://arxiv.org/pdf/2609.31186v2",
+          "https://arxiv.org/html/2609.31186v2"
+        ],
+        "fulltext_access": {
+          "status": "entire_official_pdf_read",
+          "pages": 25,
+          "download_status": 200,
+          "peer_review_status": "arXiv preprint"
+        },
+        "sections": [
+          {
+            "title": "1 Introduction",
+            "physical_pdf_pages": [
+              2,
+              2
+            ]
+          },
+          {
+            "title": "2 Foundations of Recursive Self-Improving AI and Evolutionary Safety",
+            "physical_pdf_pages": [
+              3,
+              7
+            ]
+          },
+          {
+            "title": "3 A Taxonomy of Evolutionary Safety",
+            "physical_pdf_pages": [
+              7,
+              12
+            ]
+          },
+          {
+            "title": "4 Discovering and Evaluating Evolutionary Risk",
+            "physical_pdf_pages": [
+              12,
+              16
+            ]
+          },
+          {
+            "title": "5 Evolutionary Safety Across Application Domains",
+            "physical_pdf_pages": [
+              16,
+              17
+            ]
+          },
+          {
+            "title": "6 Control and Governance Implications",
+            "physical_pdf_pages": [
+              17,
+              18
+            ]
+          },
+          {
+            "title": "7 Open Problems",
+            "physical_pdf_pages": [
+              18,
+              19
+            ]
+          },
+          {
+            "title": "8 Conclusion",
+            "physical_pdf_pages": [
+              19,
+              19
+            ]
+          },
+          {
+            "title": "References",
+            "physical_pdf_pages": [
+              19,
+              25
+            ]
+          }
+        ],
+        "framework_axes": [
+          {
+            "summary": "Persistence, mutable scope, loop closure are independent; variation/selection/inheritance motivate evolutionary risk.",
+            "locator": {
+              "section": "2.1–2.2",
+              "physical_pdf_pages": [
+                3,
+                5
+              ]
+            }
+          },
+          {
+            "summary": "Five domains: persistent agent state; model state; evaluation/environmental feedback; computational substrate; meta-level updates/co-evolution.",
+            "locator": {
+              "section": "3",
+              "physical_pdf_pages": [
+                7,
+                12
+              ]
+            }
+          },
+          {
+            "summary": "Six manifestations: intent drift, error accumulation/amplification, experience contamination, safety erosion, evaluator drift/selection distortion, risk inheritance/propagation.",
+            "locator": {
+              "section": "2.3",
+              "physical_pdf_pages": [
+                5,
+                7
+              ]
+            }
+          }
+        ],
+        "what_mutates": {
+          "summary": "Agent artifacts, learned parameters, execution substrate, evaluator/updater and reciprocal learning conditions. Reciprocal adaptation need not modify individual update rules.",
+          "locator": {
+            "section": "3",
+            "physical_pdf_pages": [
+              7,
+              12
+            ]
+          }
+        },
+        "feedback": {
+          "summary": "Environmental experience and candidate selection feedback distinguished; frozen references and overlapping evaluator versions preserve comparability.",
+          "locator": {
+            "section": "3.3; 4.4",
+            "physical_pdf_pages": [
+              9,
+              11,
+              15,
+              16
+            ]
+          }
+        },
+        "ownership": {
+          "summary": "Modifications, verification and authorization must have enforceable boundaries; proposing a change is not authority to approve it.",
+          "locator": {
+            "section": "6",
+            "physical_pdf_pages": [
+              17,
+              18
+            ]
+          }
+        },
+        "recursion": {
+          "summary": "Persistent system adaptation need not revise the update procedure. Updater revision and reciprocal adaptation are different meta-level mechanisms.",
+          "locator": {
+            "section": "2.1; 3.5",
+            "physical_pdf_pages": [
+              3,
+              4,
+              11,
+              12
+            ]
+          }
+        },
+        "evaluation": {
+          "summary": "State/update/trajectory/lineage units; exposure-aware risk, source removal, repaired-state continuation, frozen-channel causal comparisons, candidate selection risk shift.",
+          "locator": {
+            "section": "4",
+            "physical_pdf_pages": [
+              12,
+              16
+            ]
+          }
+        },
+        "limits": [
+          {
+            "summary": "Shared descendant failures alone do not demonstrate transmission; provenance gives possible routes, interventions/descendant tests stronger evidence. Newly discovered failure need not be newly caused.",
+            "locator": {
+              "section": "2.3; 4.1–4.3",
+              "physical_pdf_pages": [
+                6,
+                7,
+                13,
+                15
+              ]
+            }
+          },
+          {
+            "summary": "Governance and composition guarantees remain conditional; restoration of software state does not undo physical effects.",
+            "locator": {
+              "section": "6–7",
+              "physical_pdf_pages": [
+                17,
+                19
+              ]
+            }
+          }
+        ],
+        "negative_evidence": [
+          {
+            "summary": "Capability can improve while safety erodes; evaluator drift can mimic improvement. Risk accumulation must distinguish extra exposure from per-opportunity degradation.",
+            "locator": {
+              "section": "2.3; 4.1",
+              "physical_pdf_pages": [
+                6,
+                7,
+                13,
+                14
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "key": "S",
+        "title": "Safety in Self-Evolving Agents: A Survey",
+        "identifiers": {
+          "arxiv": "2610.00093",
+          "doi": "10.48550/arXiv.2610.00093"
+        },
+        "version_read": "arXiv:2610.00093v1",
+        "first_submission": "2026-09-08T05:04:40Z",
+        "revision_history": [
+          {
+            "version": "v1",
+            "date": "2026-09-08T05:04:40Z"
+          }
+        ],
+        "latest_version_check": "Official abstract and PDF margin say v1, 8 Sep 2026; PDF body separately says Date: October 2, 2026. Unresolved inconsistency; identifier month is not used to overwrite either date.",
+        "date_conflicts": [
+          {
+            "official_history_and_pdf_margin": "2026-09-08",
+            "pdf_body_date": "2026-10-02",
+            "locator": {
+              "physical_pdf_pages": [
+                1,
+                1
+              ]
+            },
+            "resolution": "unresolved"
+          }
+        ],
+        "source_urls": [
+          "https://arxiv.org/abs/2610.00093v1",
+          "https://arxiv.org/pdf/2610.00093v1",
+          "https://arxiv.org/html/2610.00093v1",
+          "https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/"
+        ],
+        "fulltext_access": {
+          "status": "entire_official_pdf_read",
+          "pages": 80,
+          "download_status": 200,
+          "peer_review_status": "arXiv preprint"
+        },
+        "sections": [
+          {
+            "title": "1 Introduction",
+            "physical_pdf_pages": [
+              2,
+              5
+            ]
+          },
+          {
+            "title": "2 Adaptive State Safety",
+            "physical_pdf_pages": [
+              5,
+              12
+            ]
+          },
+          {
+            "title": "3 Substrate: Safety-Bearing State Carriers",
+            "physical_pdf_pages": [
+              12,
+              19
+            ]
+          },
+          {
+            "title": "4 Adaptation: State-Change and Activation Operations",
+            "physical_pdf_pages": [
+              20,
+              25
+            ]
+          },
+          {
+            "title": "5 Violation: Safety Attribute Failures",
+            "physical_pdf_pages": [
+              25,
+              29
+            ]
+          },
+          {
+            "title": "6 Exposure: Surfaces and Manifestations",
+            "physical_pdf_pages": [
+              29,
+              35
+            ]
+          },
+          {
+            "title": "7 Response: Governance, Monitoring, and Recovery",
+            "physical_pdf_pages": [
+              36,
+              43
+            ]
+          },
+          {
+            "title": "8 Evaluation and Benchmarks",
+            "physical_pdf_pages": [
+              43,
+              51
+            ]
+          },
+          {
+            "title": "9 Open Challenges",
+            "physical_pdf_pages": [
+              52,
+              56
+            ]
+          },
+          {
+            "title": "10 Conclusion",
+            "physical_pdf_pages": [
+              56,
+              56
+            ]
+          },
+          {
+            "title": "Appendices A–E",
+            "physical_pdf_pages": [
+              57,
+              62
+            ]
+          },
+          {
+            "title": "References",
+            "physical_pdf_pages": [
+              63,
+              80
+            ]
+          }
+        ],
+        "framework_axes": [
+          {
+            "summary": "SAVER pairs Substrate × Adaptation then traces Violation, Exposure, Response; ordering is analytical, not mandatory chronology or required delay before prevention.",
+            "locator": {
+              "section": "2.4; Figure 2",
+              "physical_pdf_pages": [
+                4,
+                4,
+                8,
+                9
+              ]
+            }
+          },
+          {
+            "summary": "Seven operations: add, abstract, activate, modify, forget, propagate, migrate; selection before commitment and response feedback beyond the transition.",
+            "locator": {
+              "section": "2; 4",
+              "physical_pdf_pages": [
+                6,
+                9,
+                20,
+                25
+              ]
+            }
+          }
+        ],
+        "what_mutates": {
+          "summary": "Reusable memory/context, skills/tools, workflow/routing, shared artifacts and agent-loop model-side state. Same content can change authority, scope and persistence when moved between carriers.",
+          "locator": {
+            "section": "3",
+            "physical_pdf_pages": [
+              12,
+              19
+            ]
+          }
+        },
+        "feedback": {
+          "summary": "Utility is distinct from authorization. Legitimate local experience can lose source/use constraints during abstraction; adversarial and endogenous drift tracks should be separate.",
+          "locator": {
+            "section": "2.2–2.3; 8.1",
+            "physical_pdf_pages": [
+              6,
+              7,
+              44,
+              45
+            ]
+          }
+        },
+        "ownership": {
+          "summary": "Storage permission is not activation authority; grants depend on current user/task/effect/context. Governance state also needs protected lineage and renewed authorization.",
+          "locator": {
+            "section": "2.3; 7.2",
+            "physical_pdf_pages": [
+              7,
+              7,
+              38,
+              40
+            ]
+          }
+        },
+        "recursion": {
+          "summary": "Scope broader than strict RSI: reusable influence evolving inside the agent loop matters even if updater fixed; context accumulation without persistent update is a different mechanism.",
+          "locator": {
+            "section": "2.1; 9.3",
+            "physical_pdf_pages": [
+              5,
+              6,
+              53,
+              54
+            ]
+          }
+        },
+        "evaluation": {
+          "summary": "Stage-specific opportunity sets; containment != repair. Seed/adapt/delay/trigger/expose/repair/probe/continue contract; descendants and resumed adaptation define spatial/temporal scope of recovery.",
+          "locator": {
+            "section": "8; Table 7",
+            "physical_pdf_pages": [
+              43,
+              51
+            ]
+          }
+        },
+        "limits": [
+          {
+            "summary": "Frozen coding pool 683 papers, 549 low-confidence placements; scoping survey not preregistered, no independent dual screening. Counts not prevalence and corpus freeze Sep 4 distinct from later prose evidence.",
+            "locator": {
+              "section": "Appendix A",
+              "physical_pdf_pages": [
+                57,
+                60
+              ]
+            }
+          },
+          {
+            "summary": "Missing triggers do not establish safe retained state; connected trace or merged coverage table does not establish joint repair or permanent protection.",
+            "locator": {
+              "section": "5.6; 8.2–8.4",
+              "physical_pdf_pages": [
+                29,
+                29,
+                45,
+                50
+              ]
+            }
+          }
+        ],
+        "negative_evidence": [
+          {
+            "summary": "SkillMisevo/SafeEvolve: online benign utility 58.44→58.00%, carryover utility 53.33→40.67%; immediate utility cost differs from reuse cost.",
+            "locator": {
+              "section": "8.3",
+              "physical_pdf_pages": [
+                47,
+                47
+              ]
+            }
+          },
+          {
+            "summary": "PASB 45.0 vs 71.9% observed downstream failure groups are not randomized memory-disabled controls; group contrast not causal effect of memory.",
+            "locator": {
+              "section": "8.3",
+              "physical_pdf_pages": [
+                47,
+                47
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "metadata_only_candidates": [
+      {
+        "title": "A Survey on the Self-Evolution of Large Language Models: From Self-Improvement to Recursive Self-Improvement",
+        "identifiers": {
+          "openreview": "tykR0clBMa",
+          "submission_number": "5658"
+        },
+        "source_urls": [
+          "https://openreview.net/forum?id=tykR0clBMa",
+          "https://openreview.net/pdf?id=tykR0clBMa",
+          "https://api2.openreview.net/notes?id=tykR0clBMa"
+        ],
+        "first_submission": "2026-10-12",
+        "latest_record_modification": "2026-11-05",
+        "pdf_revision_version": null,
+        "verification_level": "Search-index rendering of official forum metadata/abstract; direct forum/PDF/API blocked. Exact PDF version and revision content not verified.",
+        "fulltext_access": "metadata_abstract_only_browser_challenge_and_HTTP_403",
+        "scope_from_abstract": "Eight object domains: prompts/programs, data, memory, model weights/inference, environment, evaluation, swarms/research processes, system-level RSI; evaluation/reproducibility/risks also discussed.",
+        "selection": "Relevant newest modification signal, excluded from fulltext framework assertions because access blocked; no challenge bypass or substitute document used."
+      },
+      {
+        "title": "Diving into Reliable Self-Evolving Agents: A Survey",
+        "identifiers": {
+          "openreview": "CGO1hDTHNe"
+        },
+        "source_urls": [
+          "https://openreview.net/forum?id=CGO1hDTHNe",
+          "https://openreview.net/pdf?id=CGO1hDTHNe",
+          "https://api2.openreview.net/notes?id=CGO1hDTHNe"
+        ],
+        "first_submission": null,
+        "pdf_revision_version": null,
+        "verification_level": "Title supported by surveyed-paper reference; direct primary forum/PDF/API blocked; current official metadata unverified.",
+        "fulltext_access": "metadata_reference_only_browser_challenge_and_HTTP_403",
+        "selection": "Not replaced with possible same-title Preprints.org counterpart; no fulltext or section-level claims."
+      },
+      {
+        "title": "Auditing the Product, Not the Recursion: The Evaluation Evidence Behind Recursive Self-Improvement Claims",
+        "identifiers": {
+          "arxiv": "2610.27610"
+        },
+        "source_urls": [
+          "https://arxiv.org/abs/2610.27610"
+        ],
+        "official_submission_history": "Submission history From: Zihan Chen [ view email ] [v1] Tue, 20 Oct 2026 04:23:05 UTC (145 KB)",
+        "fulltext_access": "official_metadata_abstract_only_not_selected",
+        "selection": "Empirical full-text-coded literature audit, not a broad survey; official abstract/history only under the three-additional-full-review bound."
+      },
+      {
+        "title": "Evolutionary Computation for Trustworthy AI: From Attacks and Defenses to Self-Evolving Era",
+        "identifiers": {
+          "arxiv": "2610.02996"
+        },
+        "source_urls": [
+          "https://arxiv.org/abs/2610.02996"
+        ],
+        "official_submission_history": "Submission history From: Junhao Dong [ view email ] [v1] Fri, 2 Oct 2026 08:29:15 UTC (1,808 KB)",
+        "fulltext_access": "official_metadata_abstract_only_not_selected",
+        "selection": "Broader EC-for-trustworthy-AI survey; adjacent methodological scope, not selected for the three RSI-centered full reviews."
+      },
+      {
+        "title": "Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops",
+        "identifiers": {
+          "arxiv": "2607.07663"
+        },
+        "source_urls": [
+          "https://arxiv.org/abs/2607.07663"
+        ],
+        "official_submission_history": "Submission history From: Mingguang Chen [ view email ] [v1] Wed, 8 Jul 2026 17:19:50 UTC (5,164 KB) [v2] Sun, 6 Sep 2026 11:44:06 UTC (5,189 KB)",
+        "fulltext_access": "official_metadata_abstract_only_not_selected",
+        "selection": "Older dedicated RSI survey, latest retrieved revision Sep 6; official abstract/history only, not substituted for blocked November review."
+      },
+      {
+        "title": "Self-Improvement of Large Language Models: A Technical Overview and Future Outlook",
+        "identifiers": {
+          "arxiv": "2603.25681"
+        },
+        "source_urls": [
+          "https://arxiv.org/abs/2603.25681"
+        ],
+        "official_submission_history": "Submission history From: Haoyan Yang [ view email ] [v1] Thu, 26 Mar 2026 17:32:37 UTC (3,179 KB) [v2] Tue, 18 Aug 2026 21:18:44 UTC (5,622 KB) [v3] Mon, 7 Sep 2026 05:55:40 UTC (5,638 KB)",
+        "fulltext_access": "official_metadata_abstract_only_not_selected",
+        "selection": "Older lifecycle survey, latest retrieved revision Sep 7; official abstract/history only."
+      },
+      {
+        "title": "Autonomous AI agents and recursive self-improvement: a comprehensive survey of contemporary architectures, capabilities, and safety frameworks",
+        "identifiers": {
+          "doi": "10.1007/s10586-026-06537-4"
+        },
+        "source_urls": [
+          "https://link.springer.com/article/10.1007/s10586-026-06537-4",
+          "https://api.crossref.org/works/10.1007/s10586-026-06537-4"
+        ],
+        "published_online": "2026-09-18",
+        "fulltext_access": "official_Crossref_metadata_only",
+        "selection": "Publisher landing fetch HTTP 406; PDF link redirects to HTML rather than a PDF. Not counted as fulltext reading."
+      }
+    ],
+    "search_discovery_notes": [
+      "Repeated natural-language searches across arXiv, OpenReview, Preprints.org and publisher records, including exact titles, trustworthiness ID, early-November date terms, 2611 identifiers, and citation chasing from the October trustworthiness review.",
+      "Early-November search returned RSI-Env (2611.01736), Recursa (2611.04035), and workflow/edge-AI methods, not verified new comprehensive RSI reviews. Their snippets were not promoted to fulltext evidence.",
+      "Newest directly relevant November review signal is an Oct-12 OpenReview submission modified Nov-5; direct access failed. No assertion that November has no other reviews.",
+      "Preprints cover posting dates differ from DOI-registration creation dates; Crossref creation date is not first publication."
+    ],
+    "cross_survey_findings": [
+      {
+        "claim": "Targets, ownership, retained state, recursive dependency, effect and evaluation must be reported separately.",
+        "sources": [
+          "A §2",
+          "B §3.6–3.7",
+          "C §3–4",
+          "T §2"
+        ]
+      },
+      {
+        "claim": "Functional mappings are not identical: Promptbreeder may count as mutable improver machinery in C, whereas T places mutation prompts in B under fixed U.",
+        "sources": [
+          "C §4.2 p17; §6.5 p23",
+          "T §2.1.1 p11"
+        ]
+      },
+      {
+        "claim": "Historical routes are thematic mechanism families, not demonstrated technical ancestry; first-public and revision dates must be separated.",
+        "sources": [
+          "C Figure 4 p6; §3.1 p11",
+          "A Figure 2 p4"
+        ]
+      },
+      {
+        "claim": "Independent and longitudinal assessment must jointly align capability, constraint preservation and effective intervention on the same trajectory.",
+        "sources": [
+          "T §7.2–7.3 p46–49",
+          "E §4 p12–16",
+          "S §8 p43–51"
+        ]
+      },
+      {
+        "claim": "Retention, source removal, containment, descendant repair and post-repair continued adaptation are distinct evidence burdens.",
+        "sources": [
+          "T §5.4 p35",
+          "E §4.3 p14–15",
+          "S §7.4 p40–41; §8.4 p48–50"
+        ]
+      }
+    ],
+    "method_version_gaps": [
+      {
+        "title": "Hyperagents",
+        "arxiv": "2603.19461",
+        "official_latest": "v2, 2026-11-01T21:28:39Z",
+        "survey_evidence": "C records v1; experiments summarized in the addendum are attributed to inspected survey versions.",
+        "method_reading": "official abstract and history only; v2 fulltext not read",
+        "source_url": "https://arxiv.org/abs/2603.19461"
+      }
+    ],
+    "limitations": [
+      "Survey synthesis and source reading are not independent experimental replication.",
+      "Only six selected key original PDF pages were visually checked; all pages were text-read, but every reference-paper fulltext and every graphical pixel was not inspected.",
+      "OpenReview direct metadata/fulltext inaccessible; dates/scope for tykR0clBMa remain index-rendered official-page evidence.",
+      "Publisher latest versions for A/C and S's conflicting date remain unresolved."
+    ]
+  },
   "engineering_projects": {
     "schema_version": 1,
     "source": {

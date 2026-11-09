@@ -18,6 +18,7 @@ data/*
 !data/institutions.json
 !data/ui-translations.json
 !data/survey-guide.json
+!data/survey-fulltext-evidence.json
 !data/engineering-projects.json
 !data/primary-verification.json
 !data/delivery-audit.json
@@ -40,6 +41,13 @@ scripts/*
 !scripts/engineering-panel.html
 !scripts/engineering-panel.js
 !scripts/engineering.test.mjs
+!scripts/build-development-visuals.mjs
+!scripts/growth-tree.html
+!scripts/growth-tree.js
+!scripts/method-fan.html
+!scripts/method-fan-drawing.js
+!scripts/method-fan.js
+!scripts/development.test.mjs
 !scripts/browser-test-utils.mjs
 !scripts/viewer.template.html
 !scripts/implementation.template.html

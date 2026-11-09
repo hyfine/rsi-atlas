@@ -16,6 +16,14 @@ A problem-driven synthesis of AI4AI, Genuine RSI and Self-Developing Agents: def
 
 ![Independent survey coordinates](pics/rsi-survey-map-en.svg)
 
+## See the whole field grow
+
+[Grow the RSI development tree](https://hyfine.github.io/rsi-atlas/#panorama) · [Unfold the method-family fan](https://hyfine.github.io/rsi-atlas/#survey) · [Survey fulltext review](docs/zh/14_RSI_Survey_Fulltext_Update.md)
+
+Pan, zoom and replay an organic tree of theoretical roots, family routes and dated method leaves. The horizontal timeline distinguishes first-public evidence from its explicitly compressed early-history segment. The six-sector fan opens to180° and compares classics with recent methods. Branches express analytical membership, not verified technical ancestry; animation is explanatory, not experimental traffic.
+
+![RSI development tree · complete explanatory canopy](pics/rsi-growth-tree.svg)
+
 ## Start with the questions that matter
 
 What changes? What persists? Does the successor actually participate in the next improvement? Who independently checks the result?

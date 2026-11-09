@@ -1,0 +1,25 @@
+function drawMethodFan(records,families,lang){
+  const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
+  const colors=['#b0803e','#588c7c','#5e849e','#b57766','#94779e','#497e82'];
+  const names=lang==='zh'?['模型与训练','数据与环境','记忆与技能','Harness 与代码','反馈与评价','研究与元改进']:['Models & training','Tasks & worlds','Memory & skills','Harness & code','Feedback & judges','Meta-improvement'];
+  const cx=600,cy=650,radius=540,inner=78;
+  const point=(r,angle)=>[cx+r*Math.cos(angle*Math.PI/180),cy+r*Math.sin(angle*Math.PI/180)];
+  const path=(start,end,r=radius)=>{
+    const a=point(r,start),b=point(r,end),c=point(inner,end),d=point(inner,start);
+    return `M${a}A${r} ${r} 0 0 1 ${b}L${c}A${inner} ${inner} 0 0 0 ${d}Z`;
+  };
+  const sectors='ABCDEF'.split('').map((code,index)=>{
+    const start=-180+index*30,end=start+30,mid=start+15;
+    const eligible=records.filter(record=>(record.families??[]).includes(code)&&['method','framework','theory'].includes(record.kind)).sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id));
+    const representatives=[...new Map([...eligible.slice(0,2),...eligible.slice(-2)].map(record=>[record.id,record])).values()];
+    const title=point(470,mid),titleAngle=mid+90;
+    const nodes=representatives.map((record,row)=>{
+      const r=380-row*58,xy=point(r,mid),width=Math.min(160,r*.45),limit=Math.floor((width-14)/6.6);
+      const label=record.method.length>limit?record.method.slice(0,limit-1)+'…':record.method;
+      return `<g class="fan-method" data-fan-method="${escape(record.id)}" role="button" tabindex="0" aria-label="${escape(record.method+' '+record.date)}" transform="translate(${xy}) rotate(${titleAngle})"><rect x="${-width/2}" y="-18" width="${width}" height="35" rx="8" fill="#fffaf0" fill-opacity=".82"/><text x="0" y="-1" text-anchor="middle" fill="#253b39" font-size="12" font-family="system-ui,sans-serif">${escape(label)}</text><text x="0" y="11" text-anchor="middle" fill="#63736d" font-size="8" font-family="ui-monospace,monospace">${record.date}</text><title>${escape(record.method+' · '+record.title+' · '+record.date)}</title></g>`;
+    }).join('');
+    const rib=point(528,end);
+    return `<g class="fan-sector" data-fan-sector="${code}" data-fold-angle="${-index*30}" style="--fan-color:${colors[index]}"><path d="${path(start,end)}" fill="url(#fan-paper-${code})" stroke="${colors[index]}" stroke-width="1.4"/><path d="${path(start+1,end-1,515)}" fill="none" stroke="${colors[index]}" stroke-opacity=".35" stroke-dasharray="3 4"/><path d="M${cx} ${cy}L${rib}" stroke="#9f7546" stroke-width="7" stroke-linecap="round"/><path d="M${cx} ${cy}L${rib}" stroke="#ebd4aa" stroke-width="2"/><g role="button" tabindex="0" class="fan-family-label" data-fan-family="${code}" aria-label="${code+' '+escape(names[index])}" transform="translate(${title}) rotate(${titleAngle})"><rect x="-92" y="-30" width="184" height="58" rx="12" fill="#fff8e8" fill-opacity=".5"/><text text-anchor="middle" fill="${colors[index]}" font-family="Georgia,serif" font-size="26" y="-2">${code}</text><text text-anchor="middle" fill="#273d39" font-family="system-ui,sans-serif" font-size="${lang==='zh'?18:14}" y="20">${escape(names[index])}</text></g>${nodes}</g>`;
+  }).join('');
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="group" aria-labelledby="fan-svg-title"><title id="fan-svg-title">${lang==='zh'?'六脉同扇：RSI 方法家族':'One fan, six routes to self-improvement'}</title><defs>${colors.map((color,index)=>`<linearGradient id="fan-paper-${'ABCDEF'[index]}" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#eadac0"/><stop offset=".65" stop-color="#f7efd9"/><stop offset="1" stop-color="${color}" stop-opacity=".2"/></linearGradient>`).join('')}<filter id="fan-soft-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="11" stdDeviation="9" flood-color="#283e34" flood-opacity=".18"/></filter><radialGradient id="fan-ambient"><stop stop-color="#d1d9b8" stop-opacity=".6"/><stop offset="1" stop-color="#f8f3e8" stop-opacity="0"/></radialGradient></defs><ellipse cx="600" cy="615" rx="535" ry="88" fill="url(#fan-ambient)"/><g id="fan-leaves" filter="url(#fan-soft-shadow)">${sectors}</g><path d="M600 650L527 713Q600 746 673 713Z" fill="#784a2a" stroke="#d9ba84" stroke-width="3"/><path d="M600 657L600 702" stroke="#e0c69c" stroke-width="4"/><circle cx="600" cy="650" r="18" fill="#b59254" stroke="#fbefd5" stroke-width="4"/><circle cx="600" cy="650" r="6" fill="#8b3d2e"/><path d="M600 731Q610 769 589 775Q584 789 609 790" fill="none" stroke="#9b3f31" stroke-width="4"/><text x="600" y="86" text-anchor="middle" fill="#5f7769" font-family="Georgia,serif" font-size="15">${lang==='zh'?'每片扇页是一类更新对象；同一方法可以跨类。':'Each leaf is an update family; methods may span several families.'}</text><text x="600" y="764" text-anchor="middle" fill="#76806b" font-family="system-ui,sans-serif" font-size="13">${lang==='zh'?'原生 SVG · 机制示意，非实验运行或标准分类':'Native SVG · explanatory, not an experimental trace or standard taxonomy'}</text></svg>`;
+}
