@@ -38,6 +38,8 @@ Before publishing, verify that every tracked file belongs to the public export s
 
 Detailed technical chapters remain in Chinese; the homepage and README default to English and offer a visible Chinese switch. Keep meaning and evidence scope consistent when translating.
 
+The default standalone growth-tree image is English. Chinese README previews use the separate `rsi-growth-tree-zh.svg`; keep both generated from the same bilingual source and preserve XML escaping in translated labels.
+
 Use GitHub-compatible math: named functions use `\mathrm{...}`, not the rejected `\operatorname` macro; stars use `^*` or `^\star`, not `^\*`. Keep TeX backslashes literal and reject control characters inside formulas. The math regression parses Markdown before rendering so inline code, fenced examples and currency are not mistaken for equations.
 
 Use `\lt` instead of a literal less-than character inside formulas: GitHub's additional HTML decoding can otherwise treat a following variable as a tag and silently remove part of the expression.

@@ -22,10 +22,17 @@ test('standalone tree SVG is generated from the corrected embedded source',()=>{
   const svg=markup.match(/<svg\b[^>]*\bid="grt-svg"[\s\S]*?<\/svg>/)?.[0];
   assert.ok(svg);
   const before=fs.readFileSync(path.join(root,'pics/rsi-growth-tree.svg'),'utf8');
-  assert.equal(before,svg.replace('<svg ','<svg width="1920" height="896" ')+'\n');
+  assert.ok(before.includes('xml:lang="en"')&&before.includes('width="1920" height="896"'));
+  assert.ok(before.includes('>Memory &amp; skills</tspan>'));
+  assert.ok(before.includes('>Co-evolving environments &amp; solvers</text>'));
+  const chinese=fs.readFileSync(path.join(root,'pics/rsi-growth-tree-zh.svg'),'utf8');
+  assert.ok(chinese.includes('xml:lang="zh-CN"')&&chinese.includes('>记忆与技能</tspan>'));
+  assert.ok(fs.readFileSync(path.join(root,'README.md'),'utf8').includes('(pics/rsi-growth-tree.svg)'));
+  assert.ok(fs.readFileSync(path.join(root,'README.zh-CN.md'),'utf8').includes('(pics/rsi-growth-tree-zh.svg)'));
   assert.ok(before.includes('Co-evolving environments &amp; solvers'));
   buildDevelopmentVisuals(JSON.parse(fs.readFileSync(path.join(root,'data/atlas-methods.json'),'utf8')));
   assert.equal(fs.readFileSync(path.join(root,'pics/rsi-growth-tree.svg'),'utf8'),before);
+  assert.equal(fs.readFileSync(path.join(root,'pics/rsi-growth-tree-zh.svg'),'utf8'),chinese);
 });
 
 test('real Chrome: every published SVG parses as standalone XML and README images actually load',{timeout:120000},async t=>{
@@ -59,6 +66,12 @@ test('real Chrome: every published SVG parses as standalone XML and README image
   assert.equal(await evaluate('document.querySelectorAll("parsererror").length'),0);
   assert.equal(await evaluate('document.documentElement.localName'),'svg');
   assert.equal(await evaluate('document.querySelectorAll(".grt-method").length'),88);
+  assert.equal(await evaluate('document.documentElement.getAttribute("xml:lang")'),'en');
+  assert.ok(await evaluate(`Array.from(document.querySelectorAll('text,title')).every(node=>!/[\\u3400-\\u9fff]/.test(node.textContent))`),'Default tree image has non-English visible labels');
+  await page('Page.navigate',{url:pathToFileURL(path.join(root,'pics/rsi-growth-tree-zh.svg')).href});
+  await waitFor('document.readyState === "complete"');
+  assert.equal(await evaluate('document.documentElement.getAttribute("xml:lang")'),'zh-CN');
+  assert.ok(await evaluate(`Array.from(document.querySelectorAll('text')).some(node=>node.textContent.includes('记忆与技能'))`));
   assert.deepEqual(browser.exceptions,[]);
   t.diagnostic(JSON.stringify({standalone_svgs_parsed:files.length,readme_images_loaded:loaded.length}));
 });
