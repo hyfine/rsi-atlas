@@ -4,8 +4,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 import crypto from 'node:crypto';
-import {root} from './validate-delivery.mjs';
+import {root,publicationFiles} from './validate-delivery.mjs';
 import {chromePath,connectBrowser} from './browser-test-utils.mjs';
+import {buildDevelopmentVisuals} from './build-development-visuals.mjs';
 
 test('development panorama precedes narrow focus and includes offline fan/tree fallbacks',()=>{
   const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
@@ -14,6 +15,52 @@ test('development panorama precedes narrow focus and includes offline fan/tree f
   assert.ok(html.includes('id="rsi-method-fan"'));
   assert.ok(fs.existsSync(path.join(root,'pics/rsi-method-fan.svg')));
   assert.equal((fs.readFileSync(path.join(root,'pics/rsi-method-fan.svg'),'utf8').match(/data-fan-sector=/g)??[]).length,6);
+});
+
+test('standalone tree SVG is generated from the corrected embedded source',()=>{
+  const markup=fs.readFileSync(path.join(root,'scripts/growth-tree.html'),'utf8');
+  const svg=markup.match(/<svg\b[^>]*\bid="grt-svg"[\s\S]*?<\/svg>/)?.[0];
+  assert.ok(svg);
+  const before=fs.readFileSync(path.join(root,'pics/rsi-growth-tree.svg'),'utf8');
+  assert.equal(before,svg.replace('<svg ','<svg width="1920" height="896" ')+'\n');
+  assert.ok(before.includes('Co-evolving environments &amp; solvers'));
+  buildDevelopmentVisuals(JSON.parse(fs.readFileSync(path.join(root,'data/atlas-methods.json'),'utf8')));
+  assert.equal(fs.readFileSync(path.join(root,'pics/rsi-growth-tree.svg'),'utf8'),before);
+});
+
+test('real Chrome: every published SVG parses as standalone XML and README images actually load',{timeout:120000},async t=>{
+  if(!chromePath()){t.skip('Chrome unavailable; no standalone SVG/image pass claimed');return;}
+  const directory=path.join(root,'.delivery-check');
+  fs.mkdirSync(directory,{recursive:true});
+  const preview=path.join(directory,'standalone-svg-images.html');
+  t.after(()=>fs.rmSync(preview,{force:true}));
+  const images=new Set();
+  for(const file of ['README.md','README.zh-CN.md']){
+    const text=fs.readFileSync(path.join(root,file),'utf8');
+    for(const match of text.matchAll(/!\[[^\]]*\]\(([^)\s]+)\)|<img\b[^>]*\bsrc="([^"]+)"/g))images.add(match[1]??match[2]);
+  }
+  const imagePaths=[...images];
+  assert.ok(imagePaths.includes('pics/rsi-growth-tree.svg'));
+  fs.writeFileSync(preview,`<!doctype html><html><head><meta charset="utf-8"><base href="${pathToFileURL(root).href}"><style>img{display:block;max-width:100%;height:auto}</style></head><body>${imagePaths.map((src,index)=>`<img id="image-${index}" src="${src}" alt="README image ${index}">`).join('')}</body></html>`);
+  const browser=await connectBrowser(t,pathToFileURL(preview).href,'document.readyState === "complete"');
+  const {evaluate,page,waitFor}=browser;
+  const files=publicationFiles().filter(file=>file.endsWith('.svg'));
+  for(const file of files){
+    const text=fs.readFileSync(file,'utf8');
+    const error=await evaluate(`(()=>{const doc=new DOMParser().parseFromString(${JSON.stringify(text)},"image/svg+xml");return doc.querySelector("parsererror")?.textContent??null;})()`);
+    assert.equal(error,null,`Invalid standalone SVG: ${path.relative(root,file)}\n${error}`);
+  }
+  await waitFor('Array.from(document.images).every(image=>image.complete)');
+  const loaded=await evaluate('Array.from(document.images,image=>({src:image.getAttribute("src"),width:image.naturalWidth,height:image.naturalHeight}))');
+  for(const image of loaded)assert.ok(image.width>0&&image.height>0,`README image refused: ${image.src}`);
+  assert.deepEqual(loaded.find(image=>image.src==='pics/rsi-growth-tree.svg'),{src:'pics/rsi-growth-tree.svg',width:1920,height:896});
+  await page('Page.navigate',{url:pathToFileURL(path.join(root,'pics/rsi-growth-tree.svg')).href});
+  await waitFor('document.readyState === "complete"');
+  assert.equal(await evaluate('document.querySelectorAll("parsererror").length'),0);
+  assert.equal(await evaluate('document.documentElement.localName'),'svg');
+  assert.equal(await evaluate('document.querySelectorAll(".grt-method").length'),88);
+  assert.deepEqual(browser.exceptions,[]);
+  t.diagnostic(JSON.stringify({standalone_svgs_parsed:files.length,readme_images_loaded:loaded.length}));
 });
 
 test('survey fulltext claims preserve exact page coverage, access limits and versioned evidence',t=>{

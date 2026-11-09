@@ -48,6 +48,8 @@ Family architecture is an author-created analytical view, representative flow is
 
 Development branches represent analytical membership, not proven technical ancestry. A first-public-date timeline must preserve irregular calendar intervals, revision/display-date caveats and support-record types. Keep root-to-branch-to-leaf playback finite, pause it when hidden, preserve replay/pan/zoom controls and display the complete diagrams for reduced-motion users. Never turn decorative growth or fan unfolding into claims of measured progress.
 
+SVGs embedded in HTML must also be valid standalone XML when exported. Escape attribute ampersands as `&amp;`; an HTML preview can tolerate malformed entities that a README image rejects. The build derives the standalone growth-tree SVG from its embedded source, and browser regressions parse every published SVG as XML and load the actual README image URLs.
+
 Family diagrams must differ in their mechanism topology, not only colors or labels. Preserve the distinct parameter loop, task–policy co-evolution, memory read/write, harness candidate search, independent evaluation tracks and meta-improver hierarchy. Public implementation previews must correspond to the pinned module/edge audit and remain visible in the portal and case chapters.
 
 Engineering navigation is built from structured data, not the original spreadsheet. Preserve all included/excluded rows, explicit nulls, approximate stars and the snapshot date. The ten workbook purpose groups and A–F object families are separate taxonomies; keep six source-pinned implementation reviews distinct from the broader workbook catalog.
